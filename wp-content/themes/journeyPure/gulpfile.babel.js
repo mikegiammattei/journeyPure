@@ -62,6 +62,10 @@ const remember = require( 'gulp-remember' ); //  Adds all the files it has ever 
 const plumber = require( 'gulp-plumber' ); // Prevent pipe breaking caused by errors from gulp plugins.
 const beep = require( 'beepbeep' );
 
+
+// Html compression plugins
+const htmlmin = require('gulp-htmlmin');
+
 /**
  * Custom Error Handler.
  *
@@ -313,6 +317,25 @@ gulp.task( 'images', () => {
 });
 
 /**
+ * html min Tasks.
+ *
+ * Minify html working files.
+ */
+
+gulp.task('minify', () => {
+	return gulp.src(config.minifySRC)
+		.pipe( htmlmin({
+			collapseWhitespace: true,
+			removeComments: true,
+			collapseInlineTagWhitespace:true ,
+			removeEmptyElements: true,
+			removeTagWhitespace: true
+		}))
+		.pipe( gulp.dest(config.minifyDST))
+		.pipe( notify({ message: '\n\n✅  ===> html Minify — completed!\n', onLast: true }) );
+});
+
+/**
  * Task: `clear-images-cache`.
  *
  * Deletes the images cache. By running the next "images" task,
@@ -348,6 +371,8 @@ gulp.task( 'translate', () => {
 		.pipe( notify({ message: '\n\n✅  ===> TRANSLATE — completed!\n', onLast: true }) );
 });
 
+
+
 /**
  * Watch Tasks.
  *
@@ -355,11 +380,13 @@ gulp.task( 'translate', () => {
  */
 gulp.task(
 	'default',
-	gulp.parallel( 'styles', 'vendorsJS', 'customJS', 'images', browsersync, () => {
+	gulp.parallel( 'styles', 'vendorsJS', 'customJS', 'minify', 'images', browsersync, () => {
 		gulp.watch( config.watchPhp, reload ); // Reload on PHP file changes.
+		gulp.watch( config.watchPhp, gulp.parallel( 'minify' ) ); // Reload on minify file changes.
 		gulp.watch( config.watchStyles, gulp.parallel( 'styles' ) ); // Reload on SCSS file changes.
 		gulp.watch( config.watchJsVendor, gulp.series( 'vendorsJS', reload ) ); // Reload on vendorsJS file changes.
 		gulp.watch( config.watchJsCustom, gulp.series( 'customJS', reload ) ); // Reload on customJS file changes.
 		gulp.watch( config.imgSRC, gulp.series( 'images', reload ) ); // Reload on customJS file changes.
+
 	})
 );

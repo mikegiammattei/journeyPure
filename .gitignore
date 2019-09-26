@@ -17,3 +17,4 @@ wp-trackback.php
 wp-comments-post.php
 wp-content/themes/journeyPure/node_modules/
 wp-config.php
+/wp-content/themes/journeyPure/header.php
