@@ -328,7 +328,7 @@ gulp.task('minify', () => {
 			collapseWhitespace: true,
 			removeComments: true,
 			collapseInlineTagWhitespace:true ,
-			removeEmptyElements: true,
+			//removeEmptyElements: true,
 			removeTagWhitespace: true
 		}))
 		.pipe( gulp.dest(config.minifyDST))

@@ -24,4 +24,3 @@
 
 </head>
 <body <?php body_class(); ?>>
-Did it!
