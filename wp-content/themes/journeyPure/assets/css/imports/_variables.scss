@@ -1,0 +1,25 @@
+/***************************\
+/ 		Font Awesome        \
+/***************************/
+$fa-font-path: "/wp-content/themes/journeyPure/fonts/webfonts";
+
+/***************************\
+/ 		 Bootstrap          \
+/***************************/
+
+// Grid
+$container-max-widths: (
+		sm: 540px,
+		md: 720px,
+		lg: 960px,
+		xl: 1366px
+) !default;
+
+// Colors
+$primary: #0032A3;
+$secondary: #019339;
+
+// Section Spacing
+$lg-space: 25px;
+$md-space: 15px;
+$md-space: 5px;

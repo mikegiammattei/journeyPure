@@ -18,7 +18,7 @@ module.exports = {
 	// Style options.
 	styleSRC: './assets/css/style.scss', // Path to main .scss file.
 	styleDestination: './', // Path to place the compiled CSS file. Default set to root folder.
-	outputStyle: 'compact', // Available options → 'compact' or 'compressed' or 'nested' or 'expanded'
+	outputStyle: 'compressed', // Available options → 'compact' or 'compressed' or 'nested' or 'expanded'
 	errLogToConsole: true,
 	precision: 10,
 
@@ -44,7 +44,7 @@ module.exports = {
 	watchStyles: './assets/css/**/*.scss', // Path to all *.scss files inside css folder and inside them.
 	watchJsVendor: './assets/js/vendor/*.js', // Path to all vendor JS files.
 	watchJsCustom: './assets/js/custom/*.js', // Path to all custom JS files.
-	watchPhp: './assets/src/*.php', // Path to all PHP files.
+	watchPhp: './assets/src/**.php', // Path to all PHP files.
 
 	// Translation options.
 	textDomain: 'journeypure', // Your textdomain here.

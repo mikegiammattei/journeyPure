@@ -18,3 +18,10 @@ wp-comments-post.php
 wp-content/themes/journeyPure/node_modules/
 wp-config.php
 /wp-content/themes/journeyPure/header.php
+/wp-content/themes/journeyPure/head.php
+/wp-content/themes/journeyPure/footer.php
+/wp-content/themes/journeyPure/sidebar.php
+/wp-content/themes/journeyPure/page.php
+/wp-content/themes/journeyPure/style.css
+/wp-content/plugins/jp-site-config/
+/wp-content/plugins/advanced-custom-fields-pro/

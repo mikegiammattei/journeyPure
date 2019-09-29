@@ -1,26 +1,44 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" <?php language_attributes(); ?>> <![endif]-->
-<!--[if gt IE 8]><!--> <html <?php language_attributes(); ?>> <!--<![endif]-->
-<head>
+<?php require_once(get_stylesheet_directory() . "/head.php"); ?>
+<header>
+	<div class="container ">
+		<div class="row align-items-center">
+			<div class="col-md-6 ">
+				<a href="/">
+					<img class="logo" src="/wp-content/themes/journeyPure/assets/img/logo.png" alt="JourneyPure">
+				</a>
+			</div>
+			<div class="col-md-6 ">
+				<nav>
+					<ul>
+						<li>
+							<a class="has-child" href="<?php the_permalink(25); ?>"><?php echo get_the_title(25); ?></a>
+							<ul>
+								<?php
+								$request  = new WP_REST_Request( 'GET', '/wp/v2/locations-api' );
+								$response = rest_do_request( $request );
+								$data     = rest_get_server()->response_to_data( $response, true );
 
-	<!--=== META TAGS ===-->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta charset="<?php bloginfo( 'charset' ); ?>" />
-	<meta name="description" content="Keywords">
-	<meta name="author" content="Name">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+								if($data){
+									foreach ($data as $location): ?>
+									<li>
+										<a href="<?php the_permalink($location['id']); ?>"><?php echo get_the_title($location['id']); ?></a>
+									</li>
+									<?php endforeach;
+								}
+								?>
+							</ul>
+						</li>
 
-	<!--=== LINK TAGS ===-->
-	<link rel="shortcut icon" href="<?php echo THEME_DIR; ?>/path/favicon.ico" />
-	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS2 Feed" href="<?php bloginfo('rss2_url'); ?>" />
-	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+						<li>
+							<a href="<?php the_permalink(52); ?>"><?php echo get_the_title(52); ?></a>
+						</li>
+						<li>
+							<a href="<?php the_permalink(27); ?>"><?php echo get_the_title(27); ?></a>
+						</li>
 
-	<!--=== TITLE ===-->
-	<title><?php wp_title(); ?> - <?php bloginfo( 'name' ); ?></title>
-
-	<?php wp_head(); ?>
-
-</head>
-<body <?php body_class(); ?>>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</header>
