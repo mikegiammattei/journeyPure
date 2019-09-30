@@ -1,31 +1,31 @@
 <?php
 
-function create_reviews() {
+function create_FAQ() {
 
-	register_post_type( 'reviews',
+	register_post_type( 'faq',
 		// CPT Options
 		array(
 			'labels' => array(
-				'name' => __( 'Reviews' ),
-				'singular_name' => __( 'Review' )
+				'name' => __( 'FAQ' ),
+				'singular_name' => __( 'FAQ' )
 			),
 			'public'             => true,
 			'publicly_queryable' => true,
 			'show_ui'            => true,
 			'show_in_menu'       => true,
 			'query_var'          => true,
-			'rewrite' => array('slug' => 'reviews'),
-			'menu_icon' => 'dashicons-groups',
+			'rewrite' => array('slug' => 'faq'),
+			'menu_icon' => 'dashicons-text-page',
 			'capability_type'    => 'post',
 			'has_archive'        => true,
 			'hierarchical'       => false,
 			'menu_position'      => null,
 			'show_in_rest'       => true,
-			'rest_base'          => 'reviews-api',
+			'rest_base'          => 'faq-api',
 			'rest_controller_class' => 'WP_REST_Posts_Controller',
 			'supports'           => array( 'title', 'author', 'thumbnail', 'excerpt')
 		)
 	);
 }
 // Hooking up our function to theme setup
-add_action( 'init', 'create_reviews' );
+add_action( 'init', 'create_FAQ' );

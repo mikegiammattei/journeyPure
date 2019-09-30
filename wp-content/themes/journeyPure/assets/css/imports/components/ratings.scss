@@ -1,0 +1,30 @@
+.ratings{
+  &.default{
+	background: white;
+	display: inline-block;
+	padding: $md-space;
+	border-top: 8px solid $secondary;
+	box-shadow: 2px 3px 3px rgba(99, 99, 99, 0.27);
+	margin-bottom: 10px;
+
+	&.block{
+	  display: block;
+	}
+
+	img{
+	  display: block;
+	  width:100%;
+	  max-width: 60px;
+	}
+	.content{
+	  p{
+		margin-bottom: 0;
+		line-height: 22px;
+
+		&.sub{
+		  color: $gray-500;
+		}
+	  }
+	}
+  }
+}

@@ -12,18 +12,8 @@
 class ErrorHandler
 {
 	public static function  get($arr){
-		$retStr = '<ul>';
-		if (is_array($arr)){
-			foreach ($arr as $key=>$val){
-				if (is_array($val)){
-					$retStr .= '<li>' . $key . ' => ' . self::get($val) . '</li>';
-				}else{
-					$retStr .= '<li>' . $key . ' => ' . $val . '</li>';
-				}
-			}
-		}
-		$retStr .= '</ul>';
-		echo $retStr;
-		return null;
+		echo '<pre>';
+		print_r($arr);
+		echo '</pre>';
 	}
 }

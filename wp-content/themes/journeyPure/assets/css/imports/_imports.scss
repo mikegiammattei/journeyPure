@@ -8,6 +8,13 @@
 // Bootstrap
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
+@import "extends";
+
 // Components
 @import "./default";
 @import "components/header";
+@import "components/ratings";
+
+// Pages
+@import "pages/single-locations";
+

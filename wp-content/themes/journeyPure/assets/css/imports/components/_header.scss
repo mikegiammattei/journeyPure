@@ -1,12 +1,13 @@
 header{
 
   .logo{
-	padding: $md-space 0;
+	padding: $sm-space 0;
 	width: 100%;
 	max-width: 300px;
   }
 
   nav{
+
 	 ul{
 	  	list-style: none;
 		padding: 0;
@@ -15,8 +16,21 @@ header{
 	  li{
 		display: inline-block;
 
+		button{
+		  position: relative;
+		  top:-2px;
+		  margin-left: 15px;
+		  display: inline-block;
+		  i{
+			display: inline-block;
+			margin-right:5px;
+		  }
+		}
+
 		a{
 		  padding: 10px;
+		  font-weight: bold;
+		  color: $gray-600;
 
 		  &.has-child{
 			position:relative;
@@ -90,6 +104,15 @@ header{
 			   font-size: 14px;
 			   line-height: 18px;
 			   background: none transparent;
+			   -webkit-transition: all 0.4s;
+			   -moz-transition: all 0.4s;
+			   -ms-transition: all 0.4s;
+			   -o-transition: all 0.4s;
+			   transition: all 0.4s;
+
+			   &:hover{
+				 background: $gray-200;
+			   }
 			 }
 		   }
 		}
@@ -105,5 +128,30 @@ header{
 		}
 	  }
 	}
+  }
+  .contact{
+	border-left: 2px solid black;
+	padding-left: 25px ;
+	a{
+	  display: block;
+	  color: $gray-800;
+	  font-weight: bold;
+
+	  &.contact-link{
+		&:before{
+		  @extend .font-awesome;
+		  content: '\f0c0';
+		  display: inline-block;
+		  margin-right: 5px;
+		}
+	  }
+	  &.phone{
+
+		@media (max-width: 769px) {
+		  cursor: text;
+		}
+	  }
+	}
+
   }
 }
