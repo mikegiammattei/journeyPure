@@ -1,16 +1,146 @@
+// Local variables
+
+//Headings
+.page-heading{
+  color: $main-font;
+  font-family: $heading-font;
+  font-size: 45px;
+  line-height : 1.25;
+  font-weight: bold;
+  font-style: italic;
+}
+h1,.h1{
+  color: $main-font;
+  font-family: $heading-style-1;
+  font-size: 25px;
+  line-height : 1.5;
+}
+h2,.h2{
+  color: $main-font;
+  font-family: $heading-style-1;
+  Size : 17px;
+  line-height : 1.5;
+  font-weight: bold;
+}
+h3,.h3{
+  color: $main-font;
+  font-family:$heading-style-1;
+  Size : 17px;
+  line-height : 1.5;
+  font-style: italic;
+}
+h3,.h3{
+  color: $main-font;
+  font-family: $heading-style-2;
+  Size : 18px;
+  line-height : 1.5;
+  font-style: italic;
+}
+p{
+  color: $main-font;
+  font-family: $heading-style-1;
+  size : 17px;
+  margin: 0;
+  line-height : 1.5;
+  font-weight : 400;
+  Padding : 0 0 17px 0;
+
+
+  &.other{
+	color: $main-gray;
+	font-family: $heading-style-2;
+	Size : 15px;
+  }
+}
+small{
+  color: $main-gray;
+  font-family: $heading-style-2;
+  Size : 13px;
+  line-height : 1.5;
+}
 a{
   display: inline-block;
+  color: $primary;
+  font-weight:bold;
 
   &:hover{
 	text-decoration: none;
   }
 }
-
+// Buttons
 .btn{
-  border-radius:0;
+  background: $primary;
+  color: white;
+  /** Seems Really Large */
+  //padding: 15px 30px;
+  border-radius: 5px;
+  font-family: $heading-style-2;
+  font-size: 18px;
+  line-height: 1.5;
+  display:inline-block;
+  font-weight:bold;
+}
+.btn-outline-secondary{
+  color: $secondary;
+  /** Seems Really Large */
+  //padding: 12px 25px;
+  border-radius: 5px;
+  font-family: $heading-style-2;
+  display:inline-block;
+  border:2px solid #00953B;
+  background: white;
 }
 
-// Colors
+// Text Colors
 .text-orange{
-  color:#E7711F;
+  color:$orange;
+}
+.text-accent{
+  color:$accent;
+}
+.text-main{
+  color:$main-font;
+}
+
+// hr Styles
+hr{
+  &.dotted{
+	border:none;
+	border-bottom:2px dotted $border-color;
+	background-color: transparent;
+  }
+}
+
+// Cards
+.card{
+  &.default{
+	//margin: $lg-space 0;
+	border-color: $border-color;
+
+
+	.card-header{
+	  background: $background-color;
+	}
+  }
+}
+.card-col{
+  @media (max-width: 767px) {
+	margin-bottom: $lg-space;
+	&:last-child{
+	  margin-bottom: 0;
+	}
+  }
+}
+
+// Content Sections
+.content-section{
+  &.top-xl{
+	margin: $xl-space 0 0 0;
+  }
+  &.bottom-xl{
+	margin: 0 0 $xl-space 0;
+  }
+  &.top-lg{
+	margin: $lg-space 0 0 0;
+  }
 }

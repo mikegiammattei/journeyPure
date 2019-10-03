@@ -1,1 +1,3 @@
-<?php get_header() ?> <div class="container"><h1>Hi</h1><i class="fas fa-angle-right"></i></div>
+<?php get_header(); ?> <div class="container"> <?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+			echo $post->post_content;
+		endwhile; endif; ?> </div> <?php get_footer(); ?>

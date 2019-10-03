@@ -38,7 +38,7 @@
 									<a href="<?php the_permalink(27); ?>"><?php echo get_the_title(27); ?></a>
 								</li>
 								<li>
-									<button type="button" data-toggle="modal" data-target="#main-insurance-form" class="btn btn-secondary"><i class="fas fa-id-card"></i> Check Insurance</button>
+									<button type="button" data-toggle="modal" data-target="#main-insurance-form" class="btn btn-outline-secondary"><i class="fas fa-id-card"></i> Check Insurance</button>
 								</li>
 
 							</ul>

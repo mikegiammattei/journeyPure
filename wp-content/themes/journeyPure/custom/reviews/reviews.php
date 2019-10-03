@@ -23,6 +23,7 @@ function create_reviews() {
 			'show_in_rest'       => true,
 			'rest_base'          => 'reviews-api',
 			'rest_controller_class' => 'WP_REST_Posts_Controller',
+			'taxonomies' => array('post_tag','category'),
 			'supports'           => array( 'title', 'author', 'thumbnail', 'excerpt')
 		)
 	);

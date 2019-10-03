@@ -16,11 +16,16 @@ $container-max-widths: (
 ) !default;
 
 // Colors
-$primary: #0032A3;
-$secondary: #019339;
+$primary: #0033A1;
+$secondary: #00953B;
+$accent: #95005A;
 $orange: #E7711F;
+$main-font: #333333;
+$main-gray: #9A9C99;
+$border-color:  #CBCCCB;
+$background-color: #EEEEED;
 
-// Section Spacing
+  // Section Spacing
 $xl-space: 50px;
 $lg-space: 25px;
 $md-space: 15px;
@@ -29,3 +34,8 @@ $sm-space: 5px;
 // Section Widths
 $lg-width: 900px;
 $md-width: 700px;
+
+// Fonts
+$heading-font: "Playfair Display", sans-serif;
+$heading-style-1: Georgia, "Times New Roman", Times, serif;
+$heading-style-2: Helvetica, Arial, serif;

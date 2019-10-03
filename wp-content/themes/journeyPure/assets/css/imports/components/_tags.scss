@@ -1,0 +1,21 @@
+.tag-list{
+  .heading{
+	font-weight: bold;
+	display: block;
+	margin-bottom: $md-space;
+  }
+  .tag{
+	&.default{
+	  width: auto;
+	  background: $background-color;
+	  border:$border-color 1px solid;
+	  display:block;
+	  vertical-align: middle;
+	  text-align: center;
+	  padding: 15px 0;
+	  margin-bottom: 15px;
+	  margin-right: 15px;
+	}
+  }
+  margin-bottom: $lg-space;
+}

@@ -20,10 +20,14 @@
 	  p{
 		margin-bottom: 0;
 		line-height: 22px;
+		padding-bottom: 0;
 
 		&.sub{
 		  color: $gray-500;
 		}
+	  }
+	  i,.text-value{
+		color:$accent;
 	  }
 	}
   }

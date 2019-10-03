@@ -1,31 +1,32 @@
 <?php
 
-function create_Staff() {
+function create_ratings() {
 
-	register_post_type( 'Staff',
+	register_post_type( 'ratings',
 		// CPT Options
 		array(
 			'labels' => array(
-				'name' => __( 'Staff' ),
-				'singular_name' => __( 'Staff' )
+				'name' => __( 'Ratings' ),
+				'singular_name' => __( 'Rating' )
 			),
 			'public'             => true,
 			'publicly_queryable' => true,
 			'show_ui'            => true,
 			'show_in_menu'       => true,
 			'query_var'          => true,
-			'rewrite' => array('slug' => 'staff'),
-			'menu_icon' => 'dashicons-admin-users',
+			'rewrite' => array('slug' => 'rating'),
+			'menu_icon' => 'dashicons-star-filled',
 			'capability_type'    => 'post',
 			'has_archive'        => true,
 			'hierarchical'       => false,
 			'menu_position'      => null,
 			'show_in_rest'       => true,
-			'rest_base'          => 'staff-api',
+			'rest_base'          => 'ratings-api',
 			'rest_controller_class' => 'WP_REST_Posts_Controller',
+			'taxonomies' => array('post_tag','category'),
 			'supports'           => array( 'title', 'author', 'thumbnail', 'excerpt')
 		)
 	);
 }
 // Hooking up our function to theme setup
-add_action( 'init', 'create_Staff' );
+add_action( 'init', 'create_ratings' );

@@ -11,6 +11,7 @@
 	  background-size: cover;
 	  height: 500px;
 	  border-radius: 0 0 50% 50%;
+	  box-shadow: -25px 6px 0px $secondary;
 	}
 
 	.heading{
@@ -42,5 +43,85 @@
 	  line-height: 27px;
 	  margin-right: 5px;
 	}
+  }
+  .block-3{
+
+	.heading{
+	  text-align: center;
+	  @extend .page-heading;
+	  display: block;
+	  margin-bottom: $lg-space;
+	}
+	img{
+	  &.featured{
+		display: block;
+		margin: $lg-space auto;
+		width: 100%;
+		max-width: 500px;
+	  }
+	}
+	.mid-content{
+	  .box{
+		&.default{
+		  padding: $xl-space;
+
+		}
+	  }
+	}
+  }
+  .image-gallery{
+	opacity: 0;
+	margin-top: $xl-space;
+	visibility: hidden;
+	transition: opacity 1s ease;
+	-webkit-transition: opacity 1s ease;
+
+	&.slick-initialized {
+	  visibility: visible;
+	  opacity: 1;
+	}
+
+	img{
+	  width:100%;
+	}
+  }
+  .bio-section{
+	margin-top: $lg-space;
+
+	.card-col{
+
+	}
+	.heading,.subheading{
+	  text-align: center;
+	  max-width: $lg-width;
+	  margin: auto;
+	}
+
+	.bios{
+	  .img{
+		background:  no-repeat center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		width:100px;
+		height:100px;
+		border-radius: 50%;
+		display: block;
+		margin: 5px auto $lg-space ;
+	  }
+	  .text{
+		padding-bottom: 0;
+	  }
+
+	  .fa-ul{
+		margin-top: $lg-space;
+		margin-left:25px;
+		i{
+		  color: $secondary;
+		}
+	  }
+	}
+
   }
 }
