@@ -144,3 +144,10 @@ hr{
 	margin: $lg-space 0 0 0;
   }
 }
+// Links
+.link{
+  @extend p;
+  color: $primary;
+  font-weight: bold;
+  cursor: pointer;
+}

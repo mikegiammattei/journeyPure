@@ -12,7 +12,7 @@
 		<div style="background-image: url('<?php echo ($Location->aboveFold->image) ? : ''; ?>')" class="img-container">
 		</div>
 		<?php if($Location->ratings): ?>
-		<div class="review-section">
+		<div class="rating-section">
 			<?php foreach ($Location->ratings as $rating) : ?>
 				<div class="ratings default block">
 					<div class="row no-gutters align-items-center">
@@ -169,11 +169,79 @@
 					</div>
 				<?php endforeach; ?>
 			</div>
-			<h6 class="see-less-btn">Previous</h6>
-			<h6 class="see-more-btn has-more"><data value="">5</data> More</h6>
+			<p class="link see-less-btn">Previous</p>
+			<p class="link see-more-btn has-more"><data>Data Generated Via Script</data> More</p>
 		</div>
 	</section>
 	<?php endif; ?>
+	<?php if(isset($Location->reviews)): ?>
+	<section class="review-section">
+		<div class="container">
+			<div class="parent">
+				<div class="content-container-left">
+					<div class="details">
+						<h3 class="h2 heading">Reviews</h3>
+						<div class="tallies">
+							<data class="avg display-4" value="4.8">4.8</data>,
+							<data class="cap" value="5"> 5</data>
+						</div>
+						<div class="stars">
+							<?php for($i=0; $i < 5; $i++): ?>
+								<i class="fas fa-star"></i>
+							<?php endfor; ?>
+						</div>
+						<div class="sub-text">
+							<p>Average Rating</p>
+							<p class="review-count">
+								<data value="10">10</data>  reviews
+							</p>
+							<p class="link post-review-link">Leave a review</p>
+						</div>
+					</div>
+
+				</div>
+				<div class="content-container-right">
+					<div class="review-slide-container">
+						<div class="review-slide" data-slick='{"slidesToShow": 1}' role="toolbar">
+							<?php foreach ($Location->reviews as $reviews) : ?>
+								<div class="card">
+									<div class="card-body">
+										<div class="author-info">
+											<div class="row">
+												<div class="col-auto align-self-center">
+													<img src="<?php echo $reviews->photo['image']; ?>" alt="<?php echo $reviews->photo['alt']; ?>">
+												</div>
+												<div class="col-auto align-self-center">
+													<h5 class="card-title"><?php echo $reviews->heading; ?></h5>
+													<div class="stars">
+														<?php for($i=0; $i < $reviews->star_rating; $i++): ?>
+															<i class="fas fa-star"></i>
+														<?php endfor; ?>
+													</div>
+
+												</div>
+											</div>
+										</div>
+										<div class="review-text">
+											<?php echo $reviews->review_text; ?>
+										</div>
+									</div>
+								</div>
+							<?php endforeach; ?>
+						</div>
+
+						<div class="review-nav">
+							<p class="link see-less-btn">Previous</p>
+							<p class="link see-more-btn has-more"><data>Data Generated Via Script</data> More</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<?php endif; ?>
+
 </div>
 
 <?php get_footer(); ?>

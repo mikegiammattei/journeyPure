@@ -22,6 +22,7 @@ class Location
 	public $gallery;
 	private $fields;
 	public $bios;
+	public $reviews;
 
 	public function __construct(){
 		$this->fields = get_fields();
@@ -30,6 +31,7 @@ class Location
 		$this->setBlock3();
 		$this->setGallery();
 		$this->setBios();
+		$this->setReviews();
 	}
 	private function setRatings(){
 		require_once(get_stylesheet_directory() . '/classes/Ratings.php');
@@ -99,6 +101,20 @@ class Location
 				'subheading' => $this->fields['bios']['subheading'],
 				'bios' => $this->bios
 			);
+		endif;
+	}
+	private function setReviews(){
+		if(isset($this->fields['reviews'])):
+
+			require_once(get_stylesheet_directory() . '/classes/Reviews.php');
+			$Reviews = new \Reviews\Reviews();
+
+			// Send the reviews id to the the reviews class to set the bios array object
+			$ReviewsCategoryIDs =$this->fields['reviews'];
+			$Reviews->setPostByCategoryId($ReviewsCategoryIDs);
+
+			$this->reviews = $Reviews->reviews;
+
 		endif;
 	}
 
