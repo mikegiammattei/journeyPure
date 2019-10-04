@@ -90,7 +90,9 @@
 
 	.see-more-btn,.see-less-btn{
 	  margin-top: 10px;
-
+	  &.slick-disabled{
+		opacity: 0;
+	  }
 	  &.has-more{
 		cursor: pointer;
 		color: $primary;
@@ -119,9 +121,6 @@
 	  }
 	}
 	.see-less-btn{
-	  &.slick-disabled{
-		opacity: 0;
-	  }
 	  float: left;
 	  &.has-more{
 		display: block;
@@ -138,33 +137,34 @@
 	}
 	.bio-slider{
 	  margin-top: $lg-space;
-	  .bios{
-		.img{
-		  background:  no-repeat center;
-		  -webkit-background-size: cover;
-		  -moz-background-size: cover;
-		  -o-background-size: cover;
-		  background-size: cover;
-		  width:100px;
-		  height:100px;
-		  border-radius: 50%;
-		  display: block;
-		  margin: 5px auto $lg-space ;
-		}
-		.text{
-		  padding-bottom: 0;
-		}
+	  .card{
+		margin: auto;
+		.bios{
+		  .img{
+			background:  no-repeat center;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			width:100px;
+			height:100px;
+			border-radius: 50%;
+			display: block;
+			margin: 5px auto $lg-space ;
+		  }
+		  .text{
+			padding-bottom: 0;
+		  }
 
-		.fa-ul{
-		  margin-top: $lg-space;
-		  margin-left:25px;
-		  i{
-			color: $secondary;
+		  .fa-ul{
+			margin-top: $lg-space;
+			margin-left:25px;
+			i{
+			  color: $secondary;
+			}
 		  }
 		}
 	  }
 	}
-
-
   }
 }

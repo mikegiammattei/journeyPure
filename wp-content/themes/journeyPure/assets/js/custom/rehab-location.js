@@ -35,8 +35,15 @@ $(document).ready(function () {
 
 		setTimeout(function () {
 			$(SLIDER).on('init', function(event, slick){
-				console.log(slick);
-				slidesLeft = slick.slideCount - slick.originalSettings.slidesToShow;
+				let OriginalSlideTOShow;
+
+				if( slick.originalSettings.responsive[0].settings.slidesToShow && $(window).width() < 768){
+					OriginalSlideTOShow = slick.originalSettings.responsive[0].settings.slidesToShow;
+				}else{
+					OriginalSlideTOShow = slick.originalSettings.slidesToShow
+				}
+
+				slidesLeft = slick.slideCount - OriginalSlideTOShow;
 				$(NEXT_BTN).find('data').val(slidesLeft).text(slidesLeft);
 			});
 			$(SLIDER).slick({

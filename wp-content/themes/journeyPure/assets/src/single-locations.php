@@ -148,6 +148,7 @@
 			<div class="subheading">
 				<p><?php echo $Location->bios->subheading; ?></p>
 			</div>
+
 			<div class="bio-slider" data-slick='{"slidesToShow": 4}' >
 				<?php foreach ($Location->bios->bios as $bio): ?>
 					<div class="d-flex align-items-stretch card-col">
