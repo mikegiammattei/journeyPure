@@ -88,40 +88,83 @@
   .bio-section{
 	margin-top: $lg-space;
 
-	.card-col{
+	.see-more-btn,.see-less-btn{
+	  margin-top: 10px;
 
+	  &.has-more{
+		cursor: pointer;
+		color: $primary;
+
+	  	&:after,&:before{
+		  @extend .font-awesome;
+		  display: inline-block;
+		  position: relative;
+		  top: -1px;
+		  font-size: 10px;
+		}
+	  }
+	}
+	.see-more-btn{
+	  float: right;
+	  &.has-more{
+
+	  	&:after{
+		  content: '\f054';
+		  margin-left: 5px;
+		}
+	  }
+	  data{
+		display: inline-block;
+		margin-right: 3px;
+	  }
+	}
+	.see-less-btn{
+	  &.slick-disabled{
+		opacity: 0;
+	  }
+	  float: left;
+	  &.has-more{
+		display: block;
+	  	&:before{
+		  content: '\f104';
+		  margin-right: 5px;
+		}
+	  }
 	}
 	.heading,.subheading{
 	  text-align: center;
 	  max-width: $lg-width;
 	  margin: auto;
 	}
+	.bio-slider{
+	  margin-top: $lg-space;
+	  .bios{
+		.img{
+		  background:  no-repeat center;
+		  -webkit-background-size: cover;
+		  -moz-background-size: cover;
+		  -o-background-size: cover;
+		  background-size: cover;
+		  width:100px;
+		  height:100px;
+		  border-radius: 50%;
+		  display: block;
+		  margin: 5px auto $lg-space ;
+		}
+		.text{
+		  padding-bottom: 0;
+		}
 
-	.bios{
-	  .img{
-		background:  no-repeat center;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-		width:100px;
-		height:100px;
-		border-radius: 50%;
-		display: block;
-		margin: 5px auto $lg-space ;
-	  }
-	  .text{
-		padding-bottom: 0;
-	  }
-
-	  .fa-ul{
-		margin-top: $lg-space;
-		margin-left:25px;
-		i{
-		  color: $secondary;
+		.fa-ul{
+		  margin-top: $lg-space;
+		  margin-left:25px;
+		  i{
+			color: $secondary;
+		  }
 		}
 	  }
 	}
+
 
   }
 }

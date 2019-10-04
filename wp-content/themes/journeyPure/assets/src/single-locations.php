@@ -148,29 +148,28 @@
 			<div class="subheading">
 				<p><?php echo $Location->bios->subheading; ?></p>
 			</div>
-			<div class="content-section top-xl">
-				<div class="row row-eq-height">
-					<?php foreach ($Location->bios->bios as $bio): ?>
-						<div class="col-md-4 d-flex align-items-stretch card-col">
-							<div class="card default border-0">
-								<div class="card-body  bios">
-									<div class="img" style='background-image: url("<?php echo $bio->photo['image']; ?>");'></div>
-									<p class="text font-weight-bold"><?php echo $bio->name; ?></p>
-									<p class="text"><?php echo $bio->credentials; ?></p>
-									<p class="text"><?php echo $bio->title; ?></p>
-									<ul class="fa-ul">
-										<?php echo ($bio->education) ? '<li><span class="fa-li"><i class="fas fa-check"></i></span>' . $bio->education . '</li>': ''; ?>
-										<?php echo ($bio->specialty) ? '<li><span class="fa-li"><i class="fas fa-check"></i></span>' . $bio->specialty . '</li>': ''; ?>
-										<?php echo ($bio->years) ? '<li><span class="fa-li"><i class="fas fa-check"></i></span>' . $bio->years . ' years in the field</li>': ''; ?>
-										<?php echo ($bio->in_recovery) == "Yes" ? '<li><span class="fa-li"><i class="fas fa-check"></i></span>In Recovery</li>': ''; ?>
-									</ul>
-
-								</div>
+			<div class="bio-slider" data-slick='{"slidesToShow": 4}' >
+				<?php foreach ($Location->bios->bios as $bio): ?>
+					<div class="d-flex align-items-stretch card-col">
+						<div class="card default border-0">
+							<div class="card-body  bios">
+								<div class="img" style='background-image: url("<?php echo $bio->photo['image']; ?>");'></div>
+								<p class="text font-weight-bold"><?php echo $bio->name; ?></p>
+								<p class="text"><?php echo $bio->credentials; ?></p>
+								<p class="text"><?php echo $bio->title; ?></p>
+								<ul class="fa-ul">
+									<?php echo ($bio->education) ? '<li><span class="fa-li"><i class="fas fa-check"></i></span>' . $bio->education . '</li>': ''; ?>
+									<?php echo ($bio->specialty) ? '<li><span class="fa-li"><i class="fas fa-check"></i></span>' . $bio->specialty . '</li>': ''; ?>
+									<?php echo ($bio->years) ? '<li><span class="fa-li"><i class="fas fa-check"></i></span>' . $bio->years . ' years in the field</li>': ''; ?>
+									<?php echo ($bio->in_recovery) == "Yes" ? '<li><span class="fa-li"><i class="fas fa-check"></i></span>In Recovery</li>': ''; ?>
+								</ul>
 							</div>
 						</div>
-					<?php endforeach; ?>
-				</div>
+					</div>
+				<?php endforeach; ?>
 			</div>
+			<h6 class="see-less-btn">Previous</h6>
+			<h6 class="see-more-btn has-more"><data value="">5</data> More</h6>
 		</div>
 	</section>
 	<?php endif; ?>
