@@ -1,10 +1,17 @@
 <?php
 define("THEME_DIR", get_template_directory_uri());
+define("THEME_PATH", get_template_directory());
+
 /*--- REMOVE GENERATOR META TAG ---*/
 remove_action('wp_head', 'wp_generator');
 
-// ENQUEUE STYLES
 
+// Include component class
+require_once(THEME_PATH . '/classes/Inc.php');
+$_inc = new \Includes\Inc();
+
+
+// ENQUEUE STYLES
 function enqueue_styles() {
 
 	/** REGISTER css/styles.css **/

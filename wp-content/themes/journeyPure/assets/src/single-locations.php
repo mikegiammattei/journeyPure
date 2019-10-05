@@ -242,6 +242,12 @@
 	</section>
 	<?php endif; ?>
 
+	<section class="insurance-section">
+		<div class="container">
+			<?php $_inc->get_insurance_banner(); ?>
+		</div>
+	</section>
+	
 </div>
 
 <?php get_footer(); ?>
