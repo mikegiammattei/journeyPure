@@ -24,12 +24,17 @@ function create_reviews() {
 			'rest_base'          => 'reviews-api',
 			'rest_controller_class' => 'WP_REST_Posts_Controller',
 			'taxonomies' => array('post_tag','category'),
-			'supports'           => array( 'author', 'thumbnail', 'excerpt')
+			'supports'           => array( 'title','author', 'thumbnail', 'excerpt')
 		)
 	);
 }
 
-function add_review_post_title( $post_id ) {
+/*function add_review_post_title( $post_id ) {
+
+	global $post;
+	if ($post->post_type != 'reviews'){
+		return;
+	}
 
 	// unhook this function so it doesn't loop infinitely
 	remove_action( 'save_post', 'add_review_post_title' );
@@ -44,7 +49,7 @@ function add_review_post_title( $post_id ) {
 	// re-hook this function
 	add_action( 'save_post', 'add_review_post_title' );
 }
-add_action( 'save_post', 'add_review_post_title' );
+add_action( 'save_post', 'add_review_post_title' );*/
 
 // Hooking up our function to theme setup
 add_action( 'init', 'create_reviews' );

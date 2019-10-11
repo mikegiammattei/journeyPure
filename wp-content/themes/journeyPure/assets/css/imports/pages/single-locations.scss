@@ -92,12 +92,12 @@
 	  text-align: center;
 	  @extend .page-heading;
 	  display: block;
-	  margin-bottom: $lg-space;
+	  margin-bottom: $xl-space;
 	}
 	img{
 	  &.featured{
 		display: block;
-		margin: $lg-space auto;
+		margin: $xl-space auto;
 		width: 100%;
 		max-width: 500px;
 	  }
@@ -241,5 +241,79 @@
   }
   .insurance-section{
 	margin: $lg-space 0;
+  }
+  .block-4{
+	.heading{
+	  margin: auto;
+	  text-align: center;
+	  .lead{
+		margin: auto;
+		display:block;
+		max-width: $lg-width;
+	  }
+	}
+
+	.faqs{
+	  .card{
+		border:none;
+
+		.card-header{
+		  margin-bottom: 0;
+		  cursor: pointer;
+		  background-color: white;
+		  padding-top: 22px;
+
+		  .card-title{
+		   &:before{
+			 content: '\f068';
+			 @extend .font-awesome;
+			 display: inline-block;
+			 position: relative;
+			 left: -15px;
+		   }
+		 }
+
+		  &.collapsed{
+			.card-title{
+
+			  &:before{
+				content: '\f067';
+				color: $secondary;
+			  }
+			}
+		  }
+		}
+	  }
+	}
+
+	.location-information{
+	  .capacity{
+		border-left: 8px $secondary solid;
+
+		@extend .h1;
+		margin: $lg-space 0;
+		padding: $sm-space $md-space;
+		background: $primary;
+		color: white;
+		margin-bottom: 0;
+
+		i{
+		  display: inline-block;
+		  margin-right: 5px;
+		}
+		span{
+		  display: block;
+		  font-size: 18px;
+		  margin-left: 35px;
+		}
+	  }
+
+	  .details{
+		margin-top: $md-space;
+		p{
+		  padding-bottom: 0;
+		}
+	  }
+	}
   }
 }

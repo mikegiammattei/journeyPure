@@ -20,9 +20,11 @@
 // Components
 @import "./default";
 @import "components/header";
+@import "components/footer";
 @import "components/ratings";
 @import "components/tags";
 @import "components/insurance-banner";
+@import "components/call-back-input";
 
 // Pages
 @import "pages/single-locations";

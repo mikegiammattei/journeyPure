@@ -26,12 +26,12 @@ function create_bios() {
 			'rest_base'          => 'bio-api',
 			'taxonomies' => array('post_tag','category'),
 			'rest_controller_class' => 'WP_REST_Posts_Controller',
-			'supports'           => array( 'author', 'thumbnail', 'excerpt')
+			'supports'           => array('title','author', 'thumbnail', 'excerpt')
 		)
 	);
 }
 
-function add_bio_post_title( $post_id ) {
+/*function add_bio_post_title( $post_id ) {
 
 	// unhook this function so it doesn't loop infinitely
 	remove_action( 'save_post', 'add_bio_post_title' );
@@ -41,12 +41,13 @@ function add_bio_post_title( $post_id ) {
 		'ID'           => $post_id,
 		'post_title'   => get_field('name', $post_id)
 	);
-	wp_update_post( $ThePost );
+
+	print_r($post_id);
 
 	// re-hook this function
 	add_action( 'save_post', 'add_bio_post_title' );
 }
-add_action( 'save_post', 'add_bio_post_title' );
+add_action( 'save_post', 'add_bio_post_title' );*/
 
 // Hooking up our function to theme setup
 add_action( 'init', 'create_bios' );

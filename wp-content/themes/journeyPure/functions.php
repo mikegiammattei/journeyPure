@@ -59,6 +59,7 @@ function enqueue_scripts() {
 	wp_register_script( 'fancybox-script', '/wp-content/themes/journeyPure/plug-libs/fancybox/jquery.fancybox.js', array( 'jquery' ), '6', true );
 	wp_enqueue_script( 'fancybox-script' );
 
+
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_scripts' );
 

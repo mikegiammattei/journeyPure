@@ -23,8 +23,12 @@ class Location
 	private $fields;
 	public $bios;
 	public $reviews;
+	public $block4;
+	private $post;
 
 	public function __construct(){
+		global $post;
+		$this->post = $post;
 		$this->fields = get_fields();
 		$this->setAboveFold();
 		$this->setBlock2();
@@ -32,6 +36,8 @@ class Location
 		$this->setGallery();
 		$this->setBios();
 		$this->setReviews();
+		$this->setBlock4();
+
 	}
 	private function setRatings(){
 		require_once(get_stylesheet_directory() . '/classes/Ratings.php');
@@ -116,6 +122,41 @@ class Location
 			$this->reviews = $Reviews->reviews;
 
 		endif;
+	}
+	private function setBlock4(){
+		if(isset($this->fields['block_4'])):
+			$this->block4 = (object) array(
+				'heading' => $this->fields['block_4']['heading'],
+				'subheading' => $this->fields['block_4']['subheading'],
+			);
+		endif;
+		if(isset($this->fields['block_4']['faq'])):
+			require_once(get_stylesheet_directory() . '/classes/FAQs.php');
+			$Faqs = new \FAQs\FAQs();
+
+			// Send the reviews id to the the reviews class to set the bios array object
+			$faqsCategoryIDs = $this->fields['block_4']['faq'];
+			$Faqs->setFAQs($faqsCategoryIDs);
+
+			$this->block4->faqs = $Faqs->faqs;
+		endif;
+		if(isset($this->fields['block_4']['location'])):
+			$this->block4->location = (object)array();
+			$this->block4->location->name = ($this->fields['block_4']['location']['name']) ? : null;
+			$this->block4->location->street_address = ($this->fields['block_4']['location']['street_address']) ? : null;
+			$this->block4->location->city = ($this->fields['block_4']['location']['city']) ? : null;
+			$this->block4->location->state = ($this->fields['block_4']['location']['state']) ? : null;
+			$this->block4->location->zip = ($this->fields['block_4']['location']['zip']) ? : null;
+			$this->block4->location->description = ($this->fields['block_4']['location']['description']) ? : null;
+		endif;
+
+		if(isset($this->fields['block_4']['location'])):
+			require_once(get_stylesheet_directory() . '/classes/LocationStatus.php');
+
+			$LocationStatus = new \Status\LocationStatus($this->post->ID);
+			$this->block4->location->status = ($LocationStatus);
+		endif;
+
 	}
 
 }

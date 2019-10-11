@@ -26,11 +26,11 @@ function create_FAQ() {
 			'rest_base'          => 'faq-api',
 			'rest_controller_class' => 'WP_REST_Posts_Controller',
 			'taxonomies' => array('post_tag','category'),
-			'supports'           => array( 'title' => "test1",'author', 'thumbnail', 'excerpt')
+			'supports'           => array( 'title','author', 'thumbnail', 'excerpt')
 		)
 	);
 }
-
+/*
 function add_faq_post_title( $post_id ) {
 
 	// unhook this function so it doesn't loop infinitely
@@ -46,7 +46,7 @@ function add_faq_post_title( $post_id ) {
 	// re-hook this function
 	add_action( 'save_post', 'add_faq_post_title' );
 }
-add_action( 'save_post', 'add_faq_post_title' );
+add_action( 'save_post', 'add_faq_post_title' );*/
 
 // Hooking up our function to theme setup
 add_action( 'init', 'create_FAQ' );

@@ -1,5 +1,7 @@
 header{
-
+  position: relative;
+  z-index: 1;
+  border-bottom: $border-color 1px solid;
   .logo{
 	padding: $sm-space 0;
 	width: 100%;

@@ -1,6 +1,6 @@
 <?php
 	//wp_reset_postdata();
-	require_once(get_stylesheet_directory() . '/classes/Location.php');
+	include_once(get_stylesheet_directory() . '/classes/Location.php');
 	$Location = new Locations\Location();
 
 	get_header();
@@ -8,6 +8,7 @@
  ?>
 
 <div id="single-location">
+	<?php if(isset($Location->aboveFold)): ?>
 	<section class="above-fold">
 		<div style="background-image: url('<?php echo ($Location->aboveFold->image) ? : ''; ?>')" class="img-container">
 		</div>
@@ -52,6 +53,8 @@
 			</div>
 		</div>
 	</section>
+	<?php endif; ?>
+	<?php if(isset($Location->block2)): ?>
 	<section class="container block-2">
 		<div class="row">
 			<div class="col-md-8">
@@ -96,8 +99,10 @@
 			</div>
 		</div>
 	</section>
+	<?php endif; ?>
+	<?php if(isset($Location->block3)): ?>
 	<section class="container block-3">
-		<?php if(is_object($Location->aboveFold->heading)): ?>
+		<?php if(isset($Location->aboveFold->heading)): ?>
 			<h4 class="heading"><?php echo $Location->block3->heading; ?></h4>
 		<?php endif; ?>
 
@@ -130,6 +135,7 @@
 			</div>
 		<?php endif; ?>
 	</section>
+	<?php endif; ?>
 	<?php if(isset($Location->gallery)): ?>
 	<div class="image-gallery" data-slick='{"slidesToShow": 4}' role="toolbar">
 		<?php foreach ($Location->gallery as $gallery) : ?>
@@ -241,13 +247,87 @@
 		</div>
 	</section>
 	<?php endif; ?>
-
 	<section class="insurance-section">
 		<div class="container">
 			<?php $_inc->get_insurance_banner(); ?>
 		</div>
 	</section>
-	
-</div>
 
+	<?php if(isset($Location->block4)): ?>
+	<section class="block-4">
+		<div class="container">
+			<?php if(isset($Location->block4->heading) || isset($Location->block4->subheading)): ?>
+			<div class="heading">
+				<h3><?php echo $Location->block4->heading; ?>
+					<?php if(isset($Location->block4->subheading)): ?>
+					<span class="lead"><?php echo $Location->block4->subheading; ?></span>
+					<?php endif; ?>
+				</h3>
+				<?php endif; ?>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<?php if( isset($Location->block4->faqs)): ?>
+						<div class="faqs">
+							<div class="accordion" id="location-faq-rehab">
+								<?php foreach ( $Location->block4->faqs as $index => $faq) : ?>
+									<div class="card">
+										<div class="card-header  <?php echo ($index != 0) ? "collapsed" : ""; ?>" data-toggle="collapse" data-target="#l-faq-<?php echo $index; ?>" aria-expanded="true" aria-controls="l-faq-<?php echo $index; ?>" id="l-faq-heading-<?php echo $index; ?>">
+											<h5 class="card-title"><?php echo $faq->question; ?></h5>
+										</div>
+
+										<div id="l-faq-<?php echo $index; ?>" class="collapse <?php echo ($index == 0) ? "show" : ""; ?>" aria-labelledby="l-faq-heading-<?php echo $index; ?>" data-parent="#location-faq-rehab">
+											<div class="card-body">
+												<?php echo $faq->answer; ?>
+											</div>
+										</div>
+									</div>
+								<?php endforeach; ?>
+							</div>
+						</div>
+					<?php endif; ?>
+				</div>
+				<div class="col-md-5 offset-md-1">
+					<div class="location-information">
+						<div class="capacity">
+							<?php
+							$location_status_data = 'Only ' . $Location->block4->location->status->availableRoomCount . ' ';
+							$location_status_data .= ($Location->block4->location->status->availableRoomCount == 1) ? ' spot' : ' spots';
+							$location_status_data .= ' available </b><span> &#8212; ' . $Location->block4->location->status->activeVisitorCount . ' people on this page now.</span>';
+
+							?>
+							<i class="fa fa-info-circle"></i> <b><?php echo $location_status_data; ?></b>
+						</div>
+						<?php $address = urlencode("100 S. Harbor City Boulevard Melbourne, FL 32901"); ?>
+						<div class="embed-responsive embed-responsive-16by9">
+							<iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDwoQ63Mff3mW9-u2fQUhnlMBmX752RKds
+    &q=1<?php echo $address; ?>" allowfullscreen>
+							</iframe>
+						</div>
+						<div class="details">
+							<?php if($Location->block4->location->name): ?>
+							<h4><?php echo $Location->block4->location->name; ?></h4>
+							<?php endif; ?>
+							<?php if($Location->block4->location->street_address): ?>
+								<p><?php echo $Location->block4->location->street_address; ?></p>
+							<?php endif; ?>
+
+								<p><?php echo $Location->block4->location->city; ?>,
+									<?php echo $Location->block4->location->state; ?>,
+									<?php echo $Location->block4->location->zip; ?></p>
+
+							<?php if($Location->block4->location->description): ?>
+							<hr class="dotted">
+								<p><?php echo $Location->block4->location->description; ?></p>
+							<?php endif; ?>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<?php endif; ?>
+</div>
 <?php get_footer(); ?>

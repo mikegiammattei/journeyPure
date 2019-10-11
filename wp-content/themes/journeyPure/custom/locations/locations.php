@@ -24,7 +24,7 @@ function create_locations() {
 			'rest_base'          => 'locations-api',
 			'rest_controller_class' => 'WP_REST_Posts_Controller',
 			'taxonomies' => array('post_tag','category'),
-			'supports'           => array( 'title', 'author', 'thumbnail', 'excerpt')
+			'supports'           => array( 'title', 'author', 'excerpt')
 		)
 	);
 }
