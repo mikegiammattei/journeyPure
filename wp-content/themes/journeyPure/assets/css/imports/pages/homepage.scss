@@ -1,0 +1,146 @@
+#homepage{
+  .feature{
+	margin: $xl-space 0;
+	text-align: left;
+
+	.rating-section{
+	  .col-md-6{
+		&:nth-child(even){
+		  .ratings{
+			margin-left: 10px;
+		  }
+		}
+	  }
+	}
+	#homepage-above-fold-slider{
+	  opacity: 0;
+	  visibility: hidden;
+	  transition: opacity 1s ease;
+	  -webkit-transition: opacity 1s ease;
+
+	  &.slick-initialized {
+		visibility: visible;
+		opacity: 1;
+	  }
+	  .slide-item{
+
+		.slide-img{
+		  background:  no-repeat center;
+		  -webkit-background-size: cover;
+		  -moz-background-size: cover;
+		  -o-background-size: cover;
+		  background-size: cover;
+		  height: 400px;
+		  width: 600px;
+		  opacity: 0;
+		  -webkit-transition: all 1s ease;
+		  -moz-transition: all 1s ease;
+		  -ms-transition: all 1s ease;
+		  -o-transition: all 1s ease;
+		  transition: all 1s ease;
+		}
+		.slide-tag{
+		  position: absolute;
+		  z-index: 3;
+		  color: $main-font;
+		  line-height: 18px;
+		  bottom: 41px;
+		  width: 100%;
+
+		  .item-info-container{
+			padding: $md-space ;
+			background-color: white;
+
+			.item-info{
+			  display: block;
+
+			  .name{
+				display: block;
+				font-weight: bold;
+			  }
+			}
+		  }
+		  .item-mark-container{
+			padding: $md-space;
+			width: 100%;
+			background-color: rgba(0,0,0,.7);
+			text-align: right;
+			color: white;
+
+			.item-mark{
+			  width: 100%;
+
+			  .mark-item{
+				display: block;
+				font-weight: bold;
+			  }
+			  .see-more-link{
+				color: $gray-500;
+				cursor: pointer;
+
+				i{
+				  display: inline-block;
+				  margin-left: 4px;
+				  position: relative;
+				  top: 2px;
+
+				}
+			  }
+			}
+
+		  }
+		}
+	  }
+	}
+  }
+  .insurance-section{
+	padding: $lg-space 0;
+  }
+  .block-1{
+	padding: $lg-space 0;
+	text-align: center;
+	background: $background-color;
+	border-top: $border-color 1px solid;
+	border-bottom: $border-color 1px solid;
+
+	.header{
+	  margin: 0 auto $xl-space auto;
+	  width: $lg-width;
+	  .heading{
+		@extend .page-heading;
+	  }
+	  .lead{
+		@extend .h1;
+	  }
+	}
+
+	.media{
+	  @extend .h5;
+	  text-align: left;
+	  img{
+		width: 75px;
+		height: 75px;
+		border-radius:50%;
+	  }
+	  a.btn{
+		display: inline-block;
+		margin-right: 5px;
+	  }
+	}
+  }
+  .block-2{
+	padding: $xl-space 0;
+	.details{
+	  .heading{
+		margin-bottom: $md-space;
+	  }
+	}
+	.featured-on{
+
+	  .badge{
+		margin-right: $sm-space;
+		margin-bottom: $sm-space;
+	  }
+	}
+  }
+}

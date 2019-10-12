@@ -1,20 +1,17 @@
 .ratings{
   &.default{
 	background: white;
-	display: inline-block;
 	padding: $md-space;
 	border-top: 8px solid $secondary;
 	box-shadow: 2px 3px 3px rgba(99, 99, 99, 0.27);
 	margin-bottom: 10px;
+	display: block;
 
-	&.block{
-	  display: block;
-	}
 
 	img{
 	  display: block;
 	  width:100%;
-	  max-width: 60px;
+	  max-width: 45px;
 	}
 	.content{
 	  p{
@@ -30,5 +27,8 @@
 		color:$accent;
 	  }
 	}
+  }
+  &.inline{
+	height: 100%;
   }
 }
