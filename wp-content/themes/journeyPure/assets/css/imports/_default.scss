@@ -18,28 +18,28 @@ h1,.h1{
 h2,.h2{
   color: $main-font;
   font-family: $heading-style-1;
-  Size : 17px;
+  font-size : 17px;
   line-height : 1.5;
   font-weight: bold;
 }
 h3,.h3{
   color: $main-font;
   font-family:$heading-style-1;
-  Size : 17px;
+  font-size : 17px;
   line-height : 1.5;
   font-style: italic;
 }
 h3,.h3{
   color: $main-font;
   font-family: $heading-style-2;
-  Size : 18px;
+  font-size : 18px;
   line-height : 1.5;
   font-style: italic;
 }
 p{
   color: $main-font;
   font-family: $heading-style-1;
-  size : 17px;
+  font-size : 17px;
   margin: 0;
   line-height : 1.5;
   font-weight : 400;
@@ -49,13 +49,13 @@ p{
   &.other{
 	color: $main-gray;
 	font-family: $heading-style-2;
-	Size : 15px;
+	font-size : 15px;
   }
 }
 small{
   color: $main-gray;
   font-family: $heading-style-2;
-  Size : 13px;
+  font-size : 13px;
   line-height : 1.5;
 }
 a{

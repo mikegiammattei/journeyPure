@@ -14,7 +14,10 @@
 					</div>
 					<div class="col-sm-6">
 						<div class="phone-action">
-							<?php global $_inc; $_inc->get_call_back_input(); ?>
+							<script defer async src="https://dv36c15u2wg3n.cloudfront.net/assets/form_reactors.js"></script>
+							<div class="ctm-call-widget-container">
+								<iframe class="ctm-call-widget" src="https://app.calltrackingmetrics.com/form_reactors/FRT472ABB2C5B9B141A95E7A133293232FB64726C81D4381AEFF2617EDD86B68F50" style="width:100%;height:300px;border:none"></iframe>
+							</div>
 							<?php if(!isset($Footer->controls->hide_not_ready_link)): ?>
 							<span class="not-ready-link"><i class="fas fa-question"></i> Not Ready? Click here.</span>
 							<?php endif;?>

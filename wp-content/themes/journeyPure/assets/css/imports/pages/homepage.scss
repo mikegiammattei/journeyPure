@@ -142,5 +142,18 @@
 		margin-bottom: $sm-space;
 	  }
 	}
+	#homepage-multi-gallery {
+	  max-width: 96%;
+	  @media (max-width: 767px) {
+		max-width: 100%;
+		margin-top: $xl-space;
+
+	  }
+	  margin: auto;
+
+	  .slick-prev:before, .slick-next:before, .slick-prev:after, .slick-next:after {
+		color: $primary;
+	  }
+	}
   }
 }

@@ -27,11 +27,16 @@
 @import "components/insurance-banner";
 @import "components/call-back-input";
 
-// Pages
-@import "pages/single-locations";
-@import "pages/homepage";
-
 // Global Override
 @import "migrate-styles";
 
+// Sliders
+/** Pages using the slider: homepage */
+@import "components/sliders/multi-gallery";
 
+/** Pages using the slider: homepage, single-location */
+@import "components/sliders/review-default";
+
+// Pages
+@import "pages/single-locations";
+@import "pages/homepage";

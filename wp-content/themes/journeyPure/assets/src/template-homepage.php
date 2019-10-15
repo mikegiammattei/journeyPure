@@ -92,7 +92,7 @@ get_header();
 													</div>
 												</div>
 												<div class="slide-item">
-													<div class="slide-img" data-base-img="https://via.placeholder.com/600x400">
+													<div class="slide-img" data-base-img="/wp-content/themes/journeyPure/assets/img/journeyPure333.png">
 														<div class="slide-tag">
 															<div class="row justify-content-between no-gutters">
 																<div class="col-6 d-flex align-items-stretch item-info-container">
@@ -201,6 +201,183 @@ get_header();
 						</div>
 					</div>
 					<div class="col-md-6">
+						<div id="homepage-multi-gallery" class="multi-gallery default">
+							<div class="slide">
+								<div class="row no-gutters">
+									<div class="col-12">
+										<a data-fancybox="gallery" href="/wp-content/themes/journeyPure/assets/img/journeyPure333.png">
+											<div class="slide-img top-img" style="background-image: url('/wp-content/themes/journeyPure/assets/img/journeyPure333.png');">
+												<div class="img-text">
+													<span class="heading h3">Outpatient</span>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-6">
+										<a data-fancybox="gallery" href="/wp-content/themes/journeyPure/assets/img/jp-cta-img-1920x628-wg.jpg">
+											<div class="slide-img left-img" style="background-image: url('/wp-content/themes/journeyPure/assets/img/jp-cta-img-1920x628-wg.jpg');">
+												<div class="img-text">
+													<span class="heading h3">Beta</span>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-6">
+										<a data-fancybox="gallery" href="/wp-content/themes/journeyPure/assets/img/jp-header-1920x1080.jpg">
+											<div class="slide-img right-img" style="background-image: url('/wp-content/themes/journeyPure/assets/img/jp-header-1920x1080.jpg');">
+											</div>
+										</a>
+									</div>
+									<div class="col-12">
+										<a data-fancybox="gallery" href="/wp-content/themes/journeyPure/assets/img/treatment1.jpg">
+											<div class="slide-img bottom-img" style="background-image: url('/wp-content/themes/journeyPure/assets/img/treatment1.jpg');">
+												<div class="img-text">
+													<span class="heading h3">Other Text</span>
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="slide">
+								<div class="row no-gutters">
+									<div class="col-12">
+										<a data-fancybox="gallery" href="/wp-content/themes/journeyPure/assets/img/journeyPure333.png">
+											<div class="slide-img top-img" style="background-image: url('/wp-content/themes/journeyPure/assets/img/journeyPure333.png');">
+												<div class="img-text">
+													<span class="heading h3">Outpatient</span>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-6">
+										<a data-fancybox="gallery" href="/wp-content/themes/journeyPure/assets/img/jp-cta-img-1920x628-wg.jpg">
+											<div class="slide-img left-img" style="background-image: url('/wp-content/themes/journeyPure/assets/img/jp-cta-img-1920x628-wg.jpg');">
+												<div class="img-text">
+													<span class="heading h3">Beta</span>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-6">
+										<a data-fancybox="gallery" href="/wp-content/themes/journeyPure/assets/img/jp-header-1920x1080.jpg">
+											<div class="slide-img right-img" style="background-image: url('/wp-content/themes/journeyPure/assets/img/jp-header-1920x1080.jpg');">
+											</div>
+										</a>
+									</div>
+									<div class="col-12">
+										<a data-fancybox="gallery" href="/wp-content/themes/journeyPure/assets/img/treatment1.jpg">
+											<div class="slide-img bottom-img" style="background-image: url('/wp-content/themes/journeyPure/assets/img/treatment1.jpg');">
+												<div class="img-text">
+													<span class="heading h3">Other Text</span>
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="slide">
+								<div class="row no-gutters">
+									<div class="col-12">
+										<a data-fancybox="gallery" href="/wp-content/themes/journeyPure/assets/img/journeyPure333.png">
+											<div class="slide-img top-img" style="background-image: url('/wp-content/themes/journeyPure/assets/img/journeyPure333.png');">
+												<div class="img-text">
+													<span class="heading h3">Outpatient</span>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-6">
+										<a data-fancybox="gallery" href="/wp-content/themes/journeyPure/assets/img/jp-cta-img-1920x628-wg.jpg">
+											<div class="slide-img left-img" style="background-image: url('/wp-content/themes/journeyPure/assets/img/jp-cta-img-1920x628-wg.jpg');">
+												<div class="img-text">
+													<span class="heading h3">Beta</span>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-6">
+										<a data-fancybox="gallery" href="/wp-content/themes/journeyPure/assets/img/jp-header-1920x1080.jpg">
+											<div class="slide-img right-img" style="background-image: url('/wp-content/themes/journeyPure/assets/img/jp-header-1920x1080.jpg');">
+											</div>
+										</a>
+									</div>
+									<div class="col-12">
+										<a data-fancybox="gallery" href="/wp-content/themes/journeyPure/assets/img/treatment1.jpg">
+											<div class="slide-img bottom-img" style="background-image: url('/wp-content/themes/journeyPure/assets/img/treatment1.jpg');">
+												<div class="img-text">
+													<span class="heading h3">Other Text</span>
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="review-section">
+			<div class="container">
+				<div class="parent">
+					<div class="content-container-left">
+						<div class="details">
+							<h3 class="h2 heading">Reviews</h3>
+							<div class="tallies">
+								<data class="avg display-4" value="4.8">4.8</data>,
+								<data class="cap" value="5"> 5</data>
+							</div>
+							<div class="stars">
+								<?php for($i=0; $i < 5; $i++): ?>
+									<i class="fas fa-star"></i>
+								<?php endfor; ?>
+							</div>
+							<div class="sub-text">
+								<p>Average Rating</p>
+								<p class="review-count">
+									<data value="10">10</data>  reviews
+								</p>
+								<p class="link post-review-link">Leave a review</p>
+							</div>
+						</div>
+
+					</div>
+					<div class="content-container-right">
+						<div class="review-slide-container">
+							<div class="review-slide" data-slick='{"slidesToShow": 1}' role="toolbar">
+								<?php foreach ($Homepage->reviews as $reviews) : ?>
+									<div class="card">
+										<div class="card-body">
+											<div class="author-info">
+												<div class="row">
+													<div class="col-auto align-self-center">
+														<img src="<?php echo $reviews->photo['image']; ?>" alt="<?php echo $reviews->photo['alt']; ?>">
+													</div>
+													<div class="col-auto align-self-center">
+														<h5 class="card-title"><?php echo $reviews->heading; ?></h5>
+														<div class="stars">
+															<?php for($i=0; $i < $reviews->star_rating; $i++): ?>
+																<i class="fas fa-star"></i>
+															<?php endfor; ?>
+														</div>
+
+													</div>
+												</div>
+											</div>
+											<div class="review-text">
+												<?php echo $reviews->review_text; ?>
+											</div>
+										</div>
+									</div>
+								<?php endforeach; ?>
+							</div>
+
+							<div class="review-nav">
+								<p class="link see-less-btn">Previous</p>
+								<p class="link see-more-btn has-more"><data>Data Generated Via Script</data> More</p>
+							</div>
+						</div>
 
 					</div>
 				</div>

@@ -28,6 +28,7 @@ module.exports = function(grunt){
         watch: {
             options: {
                 livereload: true,
+				forever: true
             },
             css: {
                 files: ['./assets/**'],
@@ -38,8 +39,8 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-htmlclean');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-keepalive');
+	grunt.loadNpmTasks('grunt-forever');
 
     // Do the Task
-    grunt.registerInitTask('default', ['sass','htmlclean','watch','keepalive']);
+    grunt.registerInitTask('default', ['sass','htmlclean','watch']);
 };
