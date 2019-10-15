@@ -3,13 +3,22 @@ header{
   z-index: 4;
   border-bottom: $border-color 1px solid;
   .logo{
-	padding: $sm-space 0;
-	width: 100%;
-	max-width: 300px;
+
+	@media (max-width: 767px) {
+	  display: block;
+	  text-align: center;
+	}
+	img{
+	  padding: $sm-space 0;
+	  width: 100%;
+	  max-width: 300px;
+	}
   }
 
   nav{
-
+	@media (max-width: 1220px) {
+	  display: none;
+	}
 	 ul{
 	  	list-style: none;
 		padding: 0;
@@ -17,6 +26,10 @@ header{
 
 	  li{
 		display: inline-block;
+		
+		@media (max-width: 767px) {
+		  display: block;
+		}
 
 		button{
 		  position: relative;
@@ -132,6 +145,9 @@ header{
 	}
   }
   .contact{
+	@media (max-width: 767px) {
+	  display: none;
+	}
 	border-left: 2px solid black;
 	padding-left: 25px ;
 	a{

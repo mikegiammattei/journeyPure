@@ -54,6 +54,10 @@
 	  height: 500px;
 	  border-radius: 0 0 50% 50%;
 	  box-shadow: -25px 6px 0px $secondary;
+
+	  @media (max-width: 767px) {
+		height: 400px;
+	  }
 	}
 
 	.heading{
@@ -68,6 +72,13 @@
 	  position: absolute;
 	  right: 100px;
 	  margin-top: -200px;
+
+	  @media (max-width: 767px) {
+		right: 0;
+		left: 0;
+		width: 90%;
+		margin: -200px auto;
+	  }
 	}
   }
   .block-2{
@@ -184,6 +195,12 @@
 	  .content-container-left{
 		width: 30%;
 		float: left;
+		@media (max-width: 767px) {
+		  width: 100%;
+		  float: none;
+		  margin-bottom: $md-space;
+		}
+
 		.details{
 		  text-align: center;
 		  margin-right: 5px;
@@ -215,6 +232,12 @@
 	  .content-container-right{
 		width: 70%;
 		float: right;
+
+		@media (max-width: 767px) {
+		  width: 100%;
+		  float: none;
+
+		}
 
 		.card{
 		  .card-body{

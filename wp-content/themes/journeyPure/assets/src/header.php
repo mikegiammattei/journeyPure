@@ -2,9 +2,9 @@
 <header>
 	<div class="container ">
 		<div class="row align-items-center justify-content-between">
-			<div class="col-auto">
-				<a href="/">
-					<img class="logo" src="/wp-content/themes/journeyPure/assets/img/logo.png" alt="JourneyPure">
+			<div class="col-sm-auto">
+				<a class="logo" href="/">
+					<img src="/wp-content/themes/journeyPure/assets/img/logo.png" alt="JourneyPure">
 				</a>
 			</div>
 			<div class="col-auto text-right">
