@@ -59,7 +59,7 @@
 		<div class="row">
 			<div class="col-md-8">
 				<?php if($Location->block2->heading): ?>
-				<h4 class="h1"><?php echo $Location->block2->heading; ?></h4>
+				<h3 class="h1"><?php echo $Location->block2->heading; ?></h3>
 				<?php endif; ?>
 				<?php if($Location->block2->list): ?>
 					<?php foreach ( $Location->block2->list as $index => $item) : ?>
@@ -94,16 +94,13 @@
 				<?php endforeach; ?>
 				<?php endif; ?>
 			</div>
-			<div class="col-md-12">
-				<hr class="dotted">
-			</div>
 		</div>
 	</section>
 	<?php endif; ?>
 	<?php if(isset($Location->block3)): ?>
 	<section class="container block-3">
 		<?php if(isset($Location->aboveFold->heading)): ?>
-			<h4 class="heading"><?php echo $Location->block3->heading; ?></h4>
+			<h3 class="h1"><?php echo $Location->block3->heading; ?></h3>
 		<?php endif; ?>
 
 		<?php if(isset($Location->block3->image)): ?>
@@ -148,7 +145,7 @@
 		<div class="container">
 			<?php if(isset($Location->bios->heading)): ?>
 			<div class="heading">
-				<h3 class="h2"><?php echo $Location->bios->heading; ?></h3>
+				<h3 class="h1"><?php echo $Location->bios->heading; ?></h3>
 			</div>
 			<?php endif; ?>
 			<div class="subheading">
@@ -186,9 +183,9 @@
 			<div class="parent">
 				<div class="content-container-left">
 					<div class="details">
-						<h3 class="h2 heading">Reviews</h3>
+						<h3 class="h1 heading">Reviews</h3>
 						<div class="tallies">
-							<data class="avg display-4" value="4.8">4.8</data>,
+							<data class="avg display-4" value="4.8">4.8</data> /
 							<data class="cap" value="5"> 5</data>
 						</div>
 						<div class="stars">
@@ -201,7 +198,7 @@
 							<p class="review-count">
 								<data value="10">10</data>  reviews
 							</p>
-							<p class="link post-review-link">Leave a review</p>
+							<p class="link post-review-link">Leave a Review</p>
 						</div>
 					</div>
 
@@ -258,11 +255,11 @@
 		<div class="container">
 			<?php if(isset($Location->block4->heading) || isset($Location->block4->subheading)): ?>
 			<div class="heading">
-				<h3><?php echo $Location->block4->heading; ?>
+				<span class="h1"><?php echo $Location->block4->heading; ?>
 					<?php if(isset($Location->block4->subheading)): ?>
-					<span class="lead"><?php echo $Location->block4->subheading; ?></span>
+					<h2 class="lead"><?php echo $Location->block4->subheading; ?></h2>
 					<?php endif; ?>
-				</h3>
+				</span>
 				<?php endif; ?>
 			</div>
 			<div class="row">
@@ -293,7 +290,7 @@
 							<?php
 							$location_status_data = 'Only ' . $Location->block4->location->status->availableRoomCount . ' ';
 							$location_status_data .= ($Location->block4->location->status->availableRoomCount == 1) ? ' spot' : ' spots';
-							$location_status_data .= ' available </b><span> &#8212; ' . $Location->block4->location->status->activeVisitorCount . ' people on this page now.</span>';
+							$location_status_data .= ' available </b>';
 
 							?>
 							<i class="fa fa-info-circle"></i> <b><?php echo $location_status_data; ?></b>

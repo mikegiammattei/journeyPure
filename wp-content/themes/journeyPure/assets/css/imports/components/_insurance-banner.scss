@@ -1,8 +1,14 @@
 .insurance-banner{
+    max-width: $lg-width;
+    width: 100%;
+    margin: 0 auto;
   img{
 	float: left;
 	width: 50%;
 	-webkit-filter: grayscale(100%);
 	filter: grayscale(100%);
+  }
+  p {
+  font-family: $heading-style-2;
   }
 }

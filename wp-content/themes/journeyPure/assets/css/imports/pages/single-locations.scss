@@ -2,6 +2,8 @@
   // Page Globals
   .see-more-btn,.see-less-btn{
 	margin-top: 10px;
+	font-family:$heading-style-2;
+	padding-bottom:0;
 	&.slick-disabled{
 	  opacity: 0;
 	}
@@ -13,7 +15,8 @@
 		@extend .font-awesome;
 		display: inline-block;
 		position: relative;
-		font-size: 10px;
+        font-size: 28px;
+        vertical-align: middle;
 	  }
 	}
   }
@@ -41,6 +44,12 @@
 	  }
 	}
   }
+
+  .h1 {
+  font-style: normal;
+  margin-bottom:15px;
+  }
+
   .above-fold{
 	background-color: $primary;
 
@@ -66,6 +75,10 @@
 	  color: white;
 	  text-align: center;
 	  max-width: $lg-width;
+	  .lead {
+	  color: hsl(221,50%,92%);
+	  font-size: 20px;
+	  }
 	}
 
 	.rating-section{
@@ -96,12 +109,16 @@
 	  line-height: 27px;
 	  margin-right: 5px;
 	}
+	h5 {
+	  font-size: 18px;
+	}
   }
   .block-3{
+    background-image: url(/wp-content/themes/journeyPure/assets/img/background-diagmonds.png);
+	padding: $xl-space;
 
-	.heading{
+	.h1{
 	  text-align: center;
-	  @extend .page-heading;
 	  display: block;
 	  margin-bottom: $xl-space;
 	}
@@ -110,7 +127,6 @@
 		display: block;
 		margin: $xl-space auto;
 		width: 100%;
-		max-width: 500px;
 	  }
 	}
 	.mid-content{
@@ -121,10 +137,22 @@
 		}
 	  }
 	}
+	.top-lg {
+	   display:none;
+	}
+	.card-header {
+	   font-size: 18px;
+       font-family: $heading-style-2;
+       padding: 26px;
+       font-weight: bold;
+	}
+	.card {
+	   box-shadow: 0 2px 6px 0 hsla(0,0%,0%,0.2);
+	   border:none;
+	}
   }
   .image-gallery{
 	opacity: 0;
-	margin-top: $xl-space;
 	visibility: hidden;
 	transition: opacity 1s ease;
 	-webkit-transition: opacity 1s ease;
@@ -184,11 +212,98 @@
 	  }
 	}
   }
-  // Review Section Defaults Set In Components Sliders "_review-default.scss"
+  .review-section{
+	background: $background-color;
+	margin-top: $xl-space;
+	padding: $xl-space 0;
+
+	.parent{
+	  overflow: auto;
+
+	  .content-container-left{
+		width: 30%;
+		float: left;
+		@media (max-width: 767px) {
+		  width: 100%;
+		  float: none;
+		  margin-bottom: $md-space;
+		}
+
+		.details{
+		  text-align: center;
+		  margin-right: 5px;
+		  p{
+			padding: 0;
+			font-family: $heading-style-2;
+		  }
+		  .heading{
+			margin-top: 3px;
+			padding-bottom: 0;
+			line-height: 22px;
+		  }
+		  .stars{
+			color: $stars;
+		  }
+
+		}
+		.sub-text{
+		  .review-count{
+			data{
+			  font-weight: bold;
+			  display: inline-block;
+			  margin-right: 3px;
+			}
+		  }
+		}
+	  }
+
+	  .card-title {
+		  font-size:18px;
+		  margin-bottom:0;
+		  }
+
+	  .content-container-right{
+		width: 70%;
+		float: right;
+
+		@media (max-width: 767px) {
+		  width: 100%;
+		  float: none;
+
+		}
+
+		.card{
+		  .card-body{
+			.author-info{
+			  margin-bottom: $lg-space;
+			  img{
+				width: 100px;
+				height: 100px;
+				border-radius: 50%;
+			  }
+			}
+			.stars{
+			  color: $stars;
+			}
+		  }
+		}
+		.review-nav{
+		  text-align: right;
+		}
+	  }
+	}
+
+
+  }
   .insurance-section{
-	margin: $lg-space 0;
+	padding: $lg-space 0;
+	background:white;
+	background-image: url(/wp-content/themes/journeyPure/assets/img/background-diagmonds.png);
+    border-bottom: 1px solid $border-color;
+    border-top: 1px solid $border-color;
   }
   .block-4{
+  	margin: $xl-space 0;
 	.heading{
 	  margin: auto;
 	  text-align: center;
@@ -196,6 +311,9 @@
 		margin: auto;
 		display:block;
 		max-width: $lg-width;
+		font-family: $heading-style-2;
+    font-size: 18px;
+    color: #9A9C99;
 	  }
 	}
 
@@ -234,11 +352,11 @@
 
 	.location-information{
 	  .capacity{
-		border-left: 8px $secondary solid;
+		border-left: 6px $secondary solid;
 
 		@extend .h1;
 		margin: $lg-space 0;
-		padding: $sm-space $md-space;
+		padding: $lg-space $md-space;
 		background: $primary;
 		color: white;
 		margin-bottom: 0;

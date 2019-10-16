@@ -3,9 +3,10 @@
 	background: white;
 	padding: $md-space;
 	border-top: 8px solid $secondary;
-	box-shadow: 2px 3px 3px rgba(99, 99, 99, 0.27);
+	box-shadow: 0px 2px 4px rgba(0,0,0,0.18);
 	margin-bottom: 10px;
 	display: block;
+	border-radius: 0 0 3px 3px;
 
 
 	img{
@@ -20,11 +21,17 @@
 		padding-bottom: 0;
 
 		&.sub{
-		  color: $gray-500;
+		  color: $main-gray;
+		  font-family: $heading-style-2;
+		  font-size: 14px;
 		}
 	  }
-	  i,.text-value{
-		color:$accent;
+	  i{
+	  color:$stars;
+	  }
+	  .text-value{
+		color:$primary;
+		font-weight:bold;
 	  }
 	}
   }
