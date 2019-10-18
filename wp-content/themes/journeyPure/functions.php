@@ -1,10 +1,11 @@
 <?php
 define("THEME_DIR", get_template_directory_uri());
 define("THEME_PATH", get_template_directory());
+define("GOOGLE_API", 'AIzaSyDwoQ63Mff3mW9-u2fQUhnlMBmX752RKds');
+
 
 /*--- REMOVE GENERATOR META TAG ---*/
 remove_action('wp_head', 'wp_generator');
-
 
 // Include component class
 require_once(THEME_PATH . '/classes/Inc.php');

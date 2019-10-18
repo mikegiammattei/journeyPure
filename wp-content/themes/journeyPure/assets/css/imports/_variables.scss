@@ -12,8 +12,12 @@ $container-max-widths: (
 		sm: 540px,
 		md: 720px,
 		lg: 960px,
-		xl: 1366px
+		//xl: 1366px
+		xl: 1341px
 ) !default;
+
+// Breakpoints
+$mid-point-break :  1480px;
 
 // Colors
 $primary: #0033A1;

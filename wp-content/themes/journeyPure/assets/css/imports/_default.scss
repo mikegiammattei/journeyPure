@@ -71,6 +71,12 @@ main,section{
   position: relative;
   z-index: 2;
 }
+// Text Colors
+.star-txt-color{
+  color: $stars;
+}
+
+
 // Images
 img{
   width: 100%;

@@ -55,6 +55,8 @@ class Location
 			'image' => $this->fields['above_fold']['feature_image']['url'],
 			'heading' => $this->fields['above_fold']['heading'],
 			'subheading' => $this->fields['above_fold']['sub_heading'],
+			'h1' => ($this->fields['above_fold']['location_text_overlay']['h1_heading']) ? : null,
+			'h2' => ($this->fields['above_fold']['location_text_overlay']['h2_heading']) ? : null,
 		);
 	}
 	private function setBlock2(){
@@ -76,11 +78,12 @@ class Location
 				'bottomContent' => $this->fields['block_3']['bottom_content'],
 
 			);
+
 		}
 
 	}
 	private function setGallery(){
-		if(isset($this->fields['photo_gallery'])):
+		if(isset($this->fields['photo_gallery']) && is_array($this->fields['photo_gallery']) ):
 			foreach ($this->fields['photo_gallery'] as $gallery):
 				$this->gallery[] = (object) array(
 					'medium' => $gallery['sizes']['medium_large'],
@@ -115,9 +118,10 @@ class Location
 			require_once(get_stylesheet_directory() . '/classes/Reviews.php');
 			$Reviews = new \Reviews\Reviews();
 
-			// Send the reviews id to the the reviews class to set the bios array object
+			// Send the reviews id to the the reviews class to set the review array object
 			$ReviewsCategoryIDs =$this->fields['reviews'];
-			$Reviews->setPostByCategoryId($ReviewsCategoryIDs);
+
+			$Reviews->setPostByPostId($ReviewsCategoryIDs);
 
 			$this->reviews = $Reviews->reviews;
 
@@ -148,6 +152,12 @@ class Location
 			$this->block4->location->state = ($this->fields['block_4']['location']['state']) ? : null;
 			$this->block4->location->zip = ($this->fields['block_4']['location']['zip']) ? : null;
 			$this->block4->location->description = ($this->fields['block_4']['location']['description']) ? : null;
+			$this->block4->location->full_address = ($this->fields['block_4']['location']['street_address']) ?
+				$this->fields['block_4']['location']['street_address'] . ' ' .
+				$this->fields['block_4']['location']['city'] . ' ' .
+				$this->fields['block_4']['location']['state'] . ' ' .
+				$this->fields['block_4']['location']['zip']
+				: null;
 		endif;
 
 		if(isset($this->fields['block_4']['location'])):

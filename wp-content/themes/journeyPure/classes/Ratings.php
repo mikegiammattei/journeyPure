@@ -27,17 +27,27 @@ class Ratings
 	}
 	private function setRatings(){
 
-		foreach ($this->ratingPostsIds as $ratingPostsId){
+		foreach ($this->ratingPostsIds as $index => $ratingPostsId){
 			$rating = get_fields($ratingPostsId);
-			@$this->ratings[] = (object) array(
+			@$this->ratings[$index] = (object) array(
 				'image' => $rating['image'],
 				'line_1' => $rating['line_1'],
 				'controller' => $rating['line_2'],
 				'line_2_text' => ($rating['line_2_text']) ? : null,
 				'stars' => $rating['line_2_stars'],
+				'number_rating' => null,
 				'line_3' => $rating['line_3'],
 			);
+			if(isset($rating['line_2']) && $rating['line_2'] == 'stars' ){
+
+				if(isset($rating['number_rating'])){
+					$this->ratings[$index]->number_rating = $rating['number_rating'];
+				}else{
+					$this->ratings[$index]->number_rating = 4.9;
+				}
+			}
 		}
+
 
 	}
 	public function setPostByCategoryId($categoryIDs){

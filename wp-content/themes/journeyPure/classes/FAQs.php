@@ -25,15 +25,15 @@ class FAQs
 	}
 	public function setFAQs($faqsCategoryIDs){
 
-		foreach ($faqsCategoryIDs as $faqPostsId){
-			$faq = get_fields($faqPostsId);
+		if(is_array($this->fields['photo_gallery'])):
+			foreach ($faqsCategoryIDs as $faqPostsId){
+				$faq = get_fields($faqPostsId);
 
-			$this->faqs[] = (object) array(
-				'question' => $faq['question'],
-				'answer' => $faq['answer']
-
-			);
-		}
-
+				$this->faqs[] = (object) array(
+					'question' => $faq['question'],
+					'answer' => $faq['answer']
+				);
+			}
+		endif;
 	}
 }

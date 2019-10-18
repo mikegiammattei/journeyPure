@@ -8,48 +8,77 @@
  ?>
 
 <div id="single-location">
+
 	<?php if(isset($Location->aboveFold)): ?>
 	<section class="above-fold">
-		<div style="background-image: url('<?php echo ($Location->aboveFold->image) ? : ''; ?>')" class="img-container">
-		</div>
-		<?php if($Location->ratings): ?>
-		<div class="rating-section">
-			<?php foreach ($Location->ratings as $rating) : ?>
-				<div class="ratings default block">
-					<div class="row no-gutters align-items-center">
-						<div class="col-auto mr-2">
-							<img src="<?php echo $rating->image['sizes']['medium']; ?>" alt="<?php echo get_post_meta( $rating->image['ID'], '_wp_attachment_image_alt', true ); ?>">
-						</div>
-						<div class="col-auto">
-							<div class="content">
-								<?php if($rating->line_1): ?>
-								<p><?php echo $rating->line_1; ?></p>
+
+		<div class="row no-gutters">
+			<div class="col-12 order-md-1 order-2">
+				<div style="background-image: url('<?php echo ($Location->aboveFold->image) ? : ''; ?>')" class="img-container">
+				</div>
+				<div class="top-content">
+					<div class="container">
+						<div class="row justify-content-between">
+							<div class="col-md-6 order-xl-1 order-lg-1 order-md-1 order-sm-2 order-last align-self-md-center">
+								<?php if($Location->aboveFold->h1 || $Location->aboveFold->h2): ?>
+									<div class="headers">
+										<?php if($Location->aboveFold->h1): ?>
+											<h1 class="heading-1"><?php echo $Location->aboveFold->h1; ?></h1>
+										<?php endif; ?>
+										<?php if($Location->aboveFold->h2): ?>
+											<h2 class="heading-2"><?php echo $Location->aboveFold->h2; ?></h2>
+										<?php endif; ?>
+									</div>
 								<?php endif; ?>
-								<?php if($rating->controller == 'stars'): ?>
-									<?php for($i=0; $i < $rating->stars; $i++): ?>
-										<i class="fas fa-star"></i>
-									<?php endfor; ?>
-								<?php else: ?>
-									<p class="text-value"><?php echo $rating->line_2_text; ?></p>
-								<?php endif; ?>
-								<?php if($rating->line_3): ?>
-								<p class="sub"><?php echo $rating->line_3; ?></p>
+							</div>
+							<div class="col-md-6 order-md-2 order-sm-1">
+								<?php if(isset($Location->ratings)): ?>
+									<div class="rating-section">
+										<?php foreach ($Location->ratings as $rating) : ?>
+											<div class="ratings default block">
+												<div class="row no-gutters align-items-center">
+													<div class="col-auto mr-2">
+														<img src="<?php echo $rating->image['sizes']['medium']; ?>" alt="<?php echo get_post_meta( $rating->image['ID'], '_wp_attachment_image_alt', true ); ?>">
+													</div>
+													<div class="col-auto">
+														<div class="content">
+															<?php if($rating->line_1): ?>
+																<p><?php echo $rating->line_1; ?></p>
+															<?php endif; ?>
+															<?php if($rating->controller == 'stars'): ?>
+																<?php for($i=0; $i < $rating->stars; $i++): ?>
+																	<i class="fas fa-star"></i>
+																<?php endfor; ?>
+																<span class="star-txt-color"><?php echo $rating->number_rating; ?></span>
+															<?php else: ?>
+																<p class="text-value"><?php echo $rating->line_2_text; ?></p>
+															<?php endif; ?>
+															<?php if($rating->line_3): ?>
+																<p class="sub"><?php echo $rating->line_3; ?></p>
+															<?php endif; ?>
+														</div>
+													</div>
+												</div>
+											</div>
+										<?php endforeach; ?>
+									</div>
 								<?php endif; ?>
 							</div>
 						</div>
 					</div>
 				</div>
-			<?php endforeach; ?>
-		</div>
-		<?php endif; ?>
-		<div class="container">
-			<div class="heading">
-				<?php if($Location->aboveFold->heading): ?>
-				<p class="page-heading text-white"><?php echo $Location->aboveFold->heading; ?></p>
-				<?php endif; ?>
-				<?php if($Location->aboveFold->heading): ?>
-				<span class="lead"><?php echo $Location->aboveFold->subheading; ?></span>
-				<?php endif; ?>
+			</div>
+			<div class="col-12 order-md-2 order-1">
+				<div class="container">
+					<div class="heading">
+						<?php if($Location->aboveFold->heading): ?>
+							<p class="page-heading text-white"><?php echo $Location->aboveFold->heading; ?></p>
+						<?php endif; ?>
+						<?php if($Location->aboveFold->heading): ?>
+							<span class="lead"><?php echo $Location->aboveFold->subheading; ?></span>
+						<?php endif; ?>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -64,7 +93,7 @@
 				<?php if($Location->block2->list): ?>
 					<?php foreach ( $Location->block2->list as $index => $item) : ?>
 						<?php if($item['heading']): ?>
-						<h5><span class="list-number"><?php echo ++$index; ?></span><?php echo $item['heading']; ?></h5>
+						<h5><span class="list-number"><i class="fas fa-check"></i></span><?php echo $item['heading']; ?></h5>
 						<?php endif; ?>
 						<?php if($item['content']): ?>
 						<div><?php echo $item['content']; ?></div>
@@ -81,8 +110,9 @@
 					<?php endif; ?>
 					<?php if($section['tags']): ?>
 					<div class="row no-gutters">
-						<?php foreach ($section['tags'] as $tag): ?>
-						<div class="col-6">
+						<?php foreach ($section['tags'] as $index => $tag): ?>
+						<?php $tagCount = count($section['tags']); ?>
+						<div class="col-6 <?php echo (($index + 1) == $tagCount && $tagCount % 2 !=  0) ? '  col-12' : ''; ?>">
 							<div class="tag default">
 								<?php echo $tag['value']; ?>
 							</div>
@@ -98,49 +128,57 @@
 	</section>
 	<?php endif; ?>
 	<?php if(isset($Location->block3)): ?>
-	<section class="container block-3">
-		<?php if(isset($Location->aboveFold->heading)): ?>
-			<h3 class="h1"><?php echo $Location->block3->heading; ?></h3>
-		<?php endif; ?>
+	<section class="block-3">
+		<div class="container">
+			<?php if(isset($Location->aboveFold->heading)): ?>
+				<h3 class="h1 heading"><?php echo $Location->block3->heading; ?></h3>
+			<?php endif; ?>
 
-		<?php if(isset($Location->block3->image)): ?>
-			<img class="featured" src="<?php echo $Location->block3->image['url'] ?>" alt="<?php echo $Location->block3->image['alt'] ?>">
-		<?php endif; ?>
-		<?php if(isset($Location->block3->midContent)): ?>
-			<div class="content-section top-xl">
-				<div class="row row-eq-height">
-					<?php foreach ($Location->block3->midContent as $contentBox): ?>
-						<div class="col-md-6 d-flex align-items-stretch card-col">
-							<div class="card default">
-								<h5 class="card-header text-center h4 bg-primary text-white"><?php echo $contentBox['heading']; ?></h5>
-								<div class="card-body">
-									<p class="card-text"><?php echo $contentBox['body']; ?></p>
+			<?php if(isset($Location->block3->image['url'])): ?>
+				<img class="featured" src="<?php echo $Location->block3->image['url'] ?>" alt="<?php echo $Location->block3->image['alt'] ?>">
+			<?php endif; ?>
+			<?php if(isset($Location->block3->midContent) && is_array($Location->block3->midContent)): ?>
+				<div class="content-section top-xl">
+					<div class="row row-eq-height">
+						<?php foreach ($Location->block3->midContent as $contentBox): ?>
+							<div class="col-md-6 d-flex align-items-stretch card-col">
+								<div class="card default">
+									<h5 class="card-header text-center h4 bg-primary text-white"><?php echo $contentBox['heading']; ?></h5>
+									<div class="card-body">
+										<p class="card-text">
+											<?php if($contentBox['use_image'] != 'img'):
+												echo $contentBox['body'];
+											else: ?>
+												<img class="featured" src="<?php echo $contentBox['image']['sizes']['large'] ?>" alt="<?php echo $contentBox['image']['alt'] ?>">
+											<?php endif; ?>
+										</p>
+									</div>
 								</div>
 							</div>
-						</div>
-					<?php endforeach; ?>
-				</div>
-			</div>
-		<?php endif; ?>
-		<?php if(isset($Location->block3->bottomContent)): ?>
-			<div class="content-section top-lg">
-				<div class="card default">
-					<div class="card-body">
-						<?php echo $Location->block3->bottomContent; ?>
+						<?php endforeach; ?>
 					</div>
 				</div>
-			</div>
-		<?php endif; ?>
+			<?php endif; ?>
+			<?php if(isset($Location->block3->bottomContent)): ?>
+				<div class="content-section top-lg">
+					<div class="card default">
+						<div class="card-body">
+							<?php echo $Location->block3->bottomContent; ?>
+						</div>
+					</div>
+				</div>
+			<?php endif; ?>
+		</div>
 	</section>
 	<?php endif; ?>
 	<?php if(isset($Location->gallery)): ?>
-	<div class="image-gallery" data-slick='{"slidesToShow": 4}' role="toolbar">
+	<div class="image-gallery" data-slick='{"slidesToShow": <?php echo count($Location->gallery); ?>}' role="toolbar">
 		<?php foreach ($Location->gallery as $gallery) : ?>
-			<a data-fancybox="gallery" href="<?php echo $gallery->large; ?>"><img src="<?php echo $gallery->medium; ?>"></a>
+			<div class="img-box" style="background-image: url('<?php echo $gallery->medium; ?>');"></div>
 		<?php endforeach; ?>
 	</div>
 	<?php endif; ?>
-	<?php if(isset($Location->bios)): ?>
+	<?php if(isset($Location->bios) && is_array($Location->bios->bios)): ?>
 	<section class="bio-section">
 		<div class="container">
 			<?php if(isset($Location->bios->heading)): ?>
@@ -210,19 +248,28 @@
 								<div class="card">
 									<div class="card-body">
 										<div class="author-info">
-											<div class="row">
-												<div class="col-auto align-self-center">
-													<img src="<?php echo $reviews->photo['image']; ?>" alt="<?php echo $reviews->photo['alt']; ?>">
-												</div>
-												<div class="col-auto align-self-center">
-													<h5 class="card-title"><?php echo $reviews->heading; ?></h5>
-													<div class="stars">
-														<?php for($i=0; $i < $reviews->star_rating; $i++): ?>
-															<i class="fas fa-star"></i>
-														<?php endfor; ?>
-													</div>
+											<div class="row justify-content-between">
+												<div class="col-md-9 col-8">
+													<div class="row">
+														<div class="col-lg-auto col-md-3 col-4 align-self-center">
+															<img src="<?php echo $reviews->photo['image']; ?>" alt="<?php echo $reviews->photo['alt']; ?>">
+														</div>
+														<div class="col-lg-auto col-md-9 col-8 align-self-center">
+															<h5 class="card-title"><?php echo $reviews->heading; ?></h5>
+															<div class="stars">
+																<?php for($i=0; $i < $reviews->star_rating; $i++): ?>
+																	<i class="fas fa-star"></i>
+																<?php endfor; ?>
+															</div>
 
+														</div>
+													</div>
 												</div>
+												<?php if(isset($reviews->source_image['image'])): ?>
+												<div class="col-md-3 col-4 align-self-center">
+													<img class="source-img" src="<?php echo $reviews->source_image['image']; ?>" alt="<?php echo $reviews->source_image['alt']; ?>">
+												</div>
+												<?php endif; ?>
 											</div>
 										</div>
 										<div class="review-text">
@@ -281,6 +328,9 @@
 									</div>
 								<?php endforeach; ?>
 							</div>
+							<div class="ask-a-question">
+								<span class="link">Ask a question</span>
+							</div>
 						</div>
 					<?php endif; ?>
 				</div>
@@ -295,9 +345,9 @@
 							?>
 							<i class="fa fa-info-circle"></i> <b><?php echo $location_status_data; ?></b>
 						</div>
-						<?php $address = urlencode("100 S. Harbor City Boulevard Melbourne, FL 32901"); ?>
+						<?php $address = urlencode($Location->block4->location->full_address); ?>
 						<div class="embed-responsive embed-responsive-16by9">
-							<iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDwoQ63Mff3mW9-u2fQUhnlMBmX752RKds
+							<iframe src="https://www.google.com/maps/embed/v1/place?key=<?php echo GOOGLE_API; ?>
     &q=1<?php echo $address; ?>" allowfullscreen>
 							</iframe>
 						</div>

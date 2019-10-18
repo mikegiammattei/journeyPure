@@ -7,6 +7,11 @@
 	width: 50%;
 	-webkit-filter: grayscale(100%);
 	filter: grayscale(100%);
+
+	// Mikes Change
+	@media (max-width: 767px) {
+	  width: 100%;
+	}
   }
   p {
   font-family: $heading-style-2;

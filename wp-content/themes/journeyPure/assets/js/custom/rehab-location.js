@@ -7,16 +7,16 @@ $(document).ready(function () {
 				dots: false,
 				centerMode: false,
 				arrows: false,
-				infinite: true,
+				infinite: false,
 				adaptiveHeight: true,
-				speed: 300,
-				autoplay: true,
-				autoplaySpeed: 2000,
+				//speed: 300,
+				autoplay: false,
+				//autoplaySpeed: 2000,
 				responsive: [
 					{
 						breakpoint: 768,
 						settings: {
-							slidesToShow: 2,
+							slidesToShow: 1,
 						}
 					}
 				],

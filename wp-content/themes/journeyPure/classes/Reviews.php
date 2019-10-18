@@ -26,7 +26,7 @@ class Reviews
 	}
 	private function setReviews(){
 
-		foreach ($this->reviewPostsIds as $reviewPostsId){
+		foreach ($this->reviewPostsIds as $index => $reviewPostsId){
 			$review = get_fields($reviewPostsId);
 
 			$this->reviews[] = (object) array(
@@ -34,10 +34,18 @@ class Reviews
 					'image' => $review['image']['sizes']['medium'],
 					'alt' => $review['image']['alt']
 				),
+				'source_image' => null,
 				'heading' => $review['heading'],
 				'star_rating' => $review['star_rating'],
 				'review_text' => $review['review_text']
 			);
+
+			if(isset($review['source_image'])){
+				$this->reviews[$index]->source_image = array(
+					'image' => ($review['source_image']['sizes']['thumbnail']) ? : null,
+					'alt' => ($review['source_image']['alt']) ? : null
+				);
+			}
 		}
 	}
 	public function setPostByCategoryId($categoryIDs){
@@ -58,5 +66,10 @@ class Reviews
 			$this->setReviews();
 		}
 
+	}
+	public function setPostByPostId($posts){
+		$this->reviewPostsIds = wp_list_pluck( $posts, 'ID' );
+
+		$this->setReviews();
 	}
 }
