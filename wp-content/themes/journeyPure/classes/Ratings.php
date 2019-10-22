@@ -10,7 +10,7 @@
  */
 
 namespace Ratings;
-
+error_reporting(0);
 
 class Ratings
 {

@@ -7,6 +7,9 @@
 					<img src="/wp-content/themes/journeyPure/assets/img/logo.png" alt="JourneyPure">
 				</a>
 			</div>
+			<div class="col-sm-6 d-block d-md-block d-lg-none">
+				Test
+			</div>
 			<div class="col-auto text-right">
 				<div class="row align-items-center justify-content-end">
 					<div class="col-auto">

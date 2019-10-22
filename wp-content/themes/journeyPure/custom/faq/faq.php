@@ -1,6 +1,10 @@
 <?php
 
+require(__DIR__ . '/class.user-question.php');
+require(__DIR__ . '/class.user-question-type.php');
+
 function create_FAQ() {
+
 
 	register_post_type( 'faq',
 		// CPT Options
@@ -8,7 +12,6 @@ function create_FAQ() {
 			'labels' => array(
 				'name' => __( 'FAQ' ),
 				'singular_name' => __( 'FAQ' ),
-				'add_new_item'       => __( 'Add New FAQ'),
 				'edit_item'          => __( 'Edit FAQ' ),
 			),
 			'public'             => true,
@@ -30,27 +33,14 @@ function create_FAQ() {
 		)
 	);
 }
-/*
-function add_faq_post_title( $post_id ) {
-
-	// unhook this function so it doesn't loop infinitely
-	remove_action( 'save_post', 'add_faq_post_title' );
-
-	// update the post, which calls save_post again
-	$ThePost = array(
-		'ID'           => $post_id,
-		'post_title'   => get_field('question', $post_id)
-	);
-	wp_update_post( $ThePost );
-
-	// re-hook this function
-	add_action( 'save_post', 'add_faq_post_title' );
-}
-add_action( 'save_post', 'add_faq_post_title' );*/
 
 // Hooking up our function to theme setup
 add_action( 'init', 'create_FAQ' );
 
 
+// Add user faq to the sidebar
+add_action('admin_menu', array('UserQuestions','add_user_questions'));
 
+// Register the user-faqs post type
+add_action('init', array('UserFaqQuestions','register_user_questions'));
 

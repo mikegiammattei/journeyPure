@@ -70,6 +70,9 @@ class Reviews
 	public function setPostByPostId($posts){
 		$this->reviewPostsIds = wp_list_pluck( $posts, 'ID' );
 
-		$this->setReviews();
+		if(!empty($this->reviewPostsIds)){
+			$this->setReviews();
+		}
+
 	}
 }

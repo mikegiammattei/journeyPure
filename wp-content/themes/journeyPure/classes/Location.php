@@ -51,8 +51,9 @@ class Location
 	}
 	private function setAboveFold(){
 		$this->setRatings();
+
 		$this->aboveFold = (object) array(
-			'image' => $this->fields['above_fold']['feature_image']['url'],
+			'image' => $this->fields['above_fold']['feature_image']['sizes']['large'],
 			'heading' => $this->fields['above_fold']['heading'],
 			'subheading' => $this->fields['above_fold']['sub_heading'],
 			'h1' => ($this->fields['above_fold']['location_text_overlay']['h1_heading']) ? : null,

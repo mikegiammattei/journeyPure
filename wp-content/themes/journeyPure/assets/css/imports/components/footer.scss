@@ -2,6 +2,17 @@
 footer{
   position: relative;
   z-index: 100;
+	@media (max-width: 600px) {
+		text-align:center;
+			.phone-action {
+				float:none !important;
+			}
+			.ctm-call-widget-container {
+				margin: 0 auto;
+			}
+	}
+
+
   .sub-tier{
 	background: $secondary;
 	border-top: 2px solid $primary;
@@ -18,6 +29,7 @@ footer{
 		color: white;
 		margin-bottom: 0;
 		padding-bottom: 0;
+		line-height:1;
 	  }
 	}
 	.phone-action{
@@ -55,6 +67,7 @@ footer{
 	.copyright{
 	  color: $main-gray;
 	  margin-top: $sm-space;
+	  font-size:13px;
 	  a{
 		color: $main-gray;
 		display: inline-block;
@@ -62,7 +75,9 @@ footer{
 	  }
 
 	  button{
-		margin-left: 5px;
+		margin: 5px;
+		 color:$background-color;
+		 font-size: 13px;
 	  }
 	}
   }

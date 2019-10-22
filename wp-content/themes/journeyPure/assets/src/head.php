@@ -19,7 +19,7 @@
 
 	<!--=== TITLE ===-->
 	<title><?php wp_title(); ?> - <?php bloginfo( 'name' ); ?></title>
-
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	<?php wp_head(); ?>
 
 </head>

@@ -18,7 +18,8 @@ class Inc
 	public function __construct(){
 		$this->get = (object) array(
 			'insurance_banner' => $this->set_insurance_banner(),
-			'call_back_input' => $this->set_call_back_input()
+			'call_back_input' => $this->set_call_back_input(),
+			'set_terms_conditions' => $this->set_terms_conditions(),
 		);
 	}
 
@@ -38,5 +39,16 @@ class Inc
 	public  function get_call_back_input(){
 		echo $this->get->call_back_input;
 	}
+
+	private  function set_terms_conditions(){
+		ob_start();
+		include(get_stylesheet_directory() . '/assets/src/includes/terms-and-conditions.php');
+		return ob_get_clean();
+	}
+	public  function get_terms_conditions(){
+		echo $this->get->set_terms_conditions;
+	}
+
+
 
 }

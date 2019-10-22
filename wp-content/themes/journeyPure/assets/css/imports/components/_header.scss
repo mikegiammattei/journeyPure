@@ -1,4 +1,8 @@
 header{
+
+  /** Mike's Update */
+  @import "mobile-nav";
+
   position: relative;
   z-index: 4;
   border-bottom: $border-color 1px solid;
@@ -9,14 +13,16 @@ header{
 	  text-align: center;
 	}
 	img{
-	  padding: $sm-space 0;
+	  padding: 0 0 5px;
 	  width: 100%;
-	  max-width: 300px;
+	  max-width: 200px;
 	}
   }
 
   nav{
-	@media (max-width: 1220px) {
+
+	/** Mike's Update For Mobile Nav */
+	@media (max-width: 992px) {
 	  display: none;
 	}
 	 ul{
@@ -70,10 +76,11 @@ header{
 		ul{
 		  position: absolute;
 		  left: 0;
-		  top: 39px;
+		  top: 50px;
 		  background: #fff;
 		  border-top: 6px solid $primary;
-		  box-shadow: -3px 3px 5px rgba(0,0,0,0.3);
+		  box-shadow: 0px 2px 4px rgba(0,0,0,.18);
+		  border-radius:0 0 3px 3px;
 		  width: 245px;
 		  font-size: 0;
 		  text-align: left;

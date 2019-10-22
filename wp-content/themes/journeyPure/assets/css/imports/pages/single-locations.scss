@@ -135,10 +135,25 @@
     background-image: url(/wp-content/themes/journeyPure/assets/img/background-diagmonds.png);
 	padding: $xl-space;
 
+	@media (max-width: 767px){
+	  padding: $lg-space 0;
+	}
+
 	.heading{
 	  text-align: center;
 	  display: block;
 	  margin-bottom: $xl-space;
+
+	  @media (max-width: 767px){
+		margin-bottom: $md-space;
+	  }
+	}
+	.content-section{
+	  &.top-xl{
+		@media (max-width: 767px){
+		  margin-top: $md-space;
+		}
+	  }
 	}
 	img{
 	  &.featured{

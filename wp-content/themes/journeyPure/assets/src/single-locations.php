@@ -244,6 +244,7 @@
 				<div class="content-container-right">
 					<div class="review-slide-container">
 						<div class="review-slide" data-slick='{"slidesToShow": 1}' role="toolbar">
+							<?php if(count($Location->reviews ) > 0): ?>
 							<?php foreach ($Location->reviews as $reviews) : ?>
 								<div class="card">
 									<div class="card-body">
@@ -278,6 +279,7 @@
 									</div>
 								</div>
 							<?php endforeach; ?>
+							<?php endif; ?>
 						</div>
 
 						<div class="review-nav">
@@ -329,7 +331,7 @@
 								<?php endforeach; ?>
 							</div>
 							<div class="ask-a-question">
-								<span class="link">Ask a question</span>
+								<span class="link" data-toggle="modal" data-target="#user-question-form-container">Ask a question</span>
 							</div>
 						</div>
 					<?php endif; ?>
@@ -377,4 +379,5 @@
 	</section>
 	<?php endif; ?>
 </div>
+<?php include(get_stylesheet_directory()  . '/assets/src/includes/components/ask-question-form.php'); ?>
 <?php get_footer(); ?>

@@ -323,3 +323,22 @@ hr{
 	padding: $md-space;
   }
 }
+
+
+// Captcha
+.captcha-container {
+  margin-top: $lg-space;
+
+  .bad-captcha {
+	@extend .invalid-feedback;
+
+	&.invalid {
+	  display: block;
+	}
+  }
+
+}
+// Miss
+[role="button"]{
+  cursor: pointer;
+}

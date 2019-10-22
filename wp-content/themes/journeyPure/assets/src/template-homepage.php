@@ -12,6 +12,7 @@ get_header();
 
 <div id="homepage">
 	<main>
+		<?php $restApiPath = 'http://journeypure.net/rest-api'; ?>
 		<section class="above-fold">
 			<div class="default-container" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/img/home-temp.jpg')">
 				<div class="container">
