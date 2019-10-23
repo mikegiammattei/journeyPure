@@ -2,17 +2,24 @@
 <header>
 	<div class="container ">
 		<div class="row align-items-center justify-content-between">
-			<div class="col-sm-auto">
+			<div class="col-md-auto col-5">
 				<a class="logo" href="/">
 					<img src="/wp-content/themes/journeyPure/assets/img/logo.png" alt="JourneyPure">
 				</a>
 			</div>
-			<div class="col-sm-6 d-block d-md-block d-lg-none">
-				Test
+			<div class="col-7 d-block d-md-block d-lg-none" id="mobile-element">
+				<div class="row no-gutters align-items-center">
+					<div class="col-10 mr-auto">
+						<button type="button" data-toggle="modal" data-target="#main-insurance-form" class="btn btn-outline-secondary"><i class="fas fa-id-card"></i> Check Insurance</button>
+					</div>
+					<div class="col-2">
+						<figure class="mobile-trigger pull-right"></figure>
+					</div>
+				</div>
 			</div>
-			<div class="col-auto text-right">
+			<div class="col-md-auto text-right nav-col-parent">
 				<div class="row align-items-center justify-content-end">
-					<div class="col-auto">
+					<div class="col-auto nav-col">
 						<nav>
 							<ul>
 								<li>
@@ -47,7 +54,7 @@
 							</ul>
 						</nav>
 					</div>
-					<div class="col-auto">
+					<div class="col-auto d-md-none d-lg-block">
 						<section class="contact">
 							<a class="contact-link" href="<?php the_permalink(54); ?>"><?php echo get_the_title(54); ?></a>
 							<a class="phone" href="<?php echo get_option('defaultPhone'); ?>"><?php echo get_option('defaultPhone'); ?></a>
@@ -62,7 +69,7 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+				<h5 class="modal-title" id="exampleModalLongTitle">Check Insurance</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -77,3 +84,5 @@
 		</div>
 	</div>
 </div>
+<?php /** Added my Mike */ ?>
+<div class="main-wrapper">

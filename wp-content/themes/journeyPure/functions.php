@@ -41,6 +41,15 @@ function enqueue_scripts() {
 	wp_register_script( 'jquery', "https://code.jquery.com/jquery-3.4.1.min.js", array(), '3.4.1' );
 
 
+    if (!(is_admin())) {
+        function defer_js($url) {
+            if (FALSE === strpos($url, '.js')) return $url;
+            if (strpos($url, 'jquery.js')) return $url;
+            return "$url' defer onload='";
+        }
+        add_filter('clean_url', 'defer_js', 11, 1);
+    }
+
 
 	/** REGISTER HTML5 Shim **/
 	wp_register_script( 'html5-shim', '//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js', array( 'jquery' ), '1', true );
@@ -62,6 +71,15 @@ function enqueue_scripts() {
 		'nonce' => wp_create_nonce( 'wp_rest' ),
 		'current_date' => date("m-d-Y")
 	) );
+
+	global $jsFile;
+	if(isset($jsFile) && !empty($jsFile)){
+		wp_register_script( 'defer-script', get_stylesheet_directory_uri() . '/js/defer/defer.js', array('jquery','fancybox-script','vendor-script'), '6', true );
+		wp_enqueue_script( 'defer-script' );
+		wp_localize_script( 'defer-script', 'deferData', array(
+			'filename' => $jsFile,
+		) );
+	}
 
 
 	wp_register_script( 'fancybox-script', '/wp-content/themes/journeyPure/plug-libs/fancybox/jquery.fancybox.js', array( 'jquery' ), '6', true );

@@ -3,6 +3,8 @@
 	include_once(get_stylesheet_directory() . '/classes/Location.php');
 	$Location = new Locations\Location();
 
+	/** Page specific js*/
+	$jsFile = 'rehab-location';
 	get_header();
 
  ?>

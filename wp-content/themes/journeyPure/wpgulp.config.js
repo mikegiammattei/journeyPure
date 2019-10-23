@@ -32,6 +32,11 @@ module.exports = {
 	jsCustomDestination: './js/', // Path to place the compiled JS custom scripts file.
 	jsCustomFile: 'custom', // Compiled JS custom file name. Default set to custom i.e. custom.js.
 
+	// JS Deffer options.
+	jsDeferSRC: './assets/js/defer/', // Path to JS Defer scripts folder.
+	jsDeferDestination: './js/', // Path to place the compiled JS Defer scripts file.
+	jsDeferFile: 'defer', // Compiled JS Defer file name. Default set to Defer i.e. Defer.js.
+
 	// Images options.
 	imgSRC: './assets/img/raw/**/*', // Source folder of images which should be optimized and watched. You can also specify types e.g. raw/**.{png,jpg,gif} in the glob.
 	imgDST: './assets/img/', // Destination folder of optimized images. Must be different from the imagesSRC folder.
@@ -44,6 +49,7 @@ module.exports = {
 	watchStyles: './assets/css/**/*.scss', // Path to all *.scss files inside css folder and inside them.
 	watchJsVendor: './assets/js/vendor/*.js', // Path to all vendor JS files.
 	watchJsCustom: './assets/js/custom/*.js', // Path to all custom JS files.
+	watchJsDefer: './assets/js/defer/*.js', // Path to all custom JS files.
 	watchPhp: './assets/src/**.php', // Path to all PHP files.
 
 	// Translation options.

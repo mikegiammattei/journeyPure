@@ -342,3 +342,21 @@ hr{
 [role="button"]{
   cursor: pointer;
 }
+
+// Figures
+/** Added by Mike */
+figure{
+  margin: inherit;
+}
+
+.main-wrapper{
+  opacity: 1;
+  -webkit-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  -ms-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  transition: all .4s ease;
+  &.on{
+	opacity: .1;
+  }
+}

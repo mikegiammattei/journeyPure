@@ -1,0 +1,177 @@
+
+
+header{
+
+  #mobile-element{
+	button{
+	  padding: 5px;
+	  font-size: 13px;
+	  display: inline-block;
+	  width: 94%;
+	  margin-right: $md-space;
+	  @include transition(all .5s ease);
+	}
+
+	.mobile-trigger{
+	  margin-left: $sm-space;
+	  border-top: 4px $main-font solid;
+	  border-bottom: 4px $main-font solid;
+	  height: 26px;
+	  cursor: pointer;
+	  display: block;
+	  width: 30px;
+
+	  &:before {
+		opacity: 0;
+	  }
+
+	  &:after {
+		display: block;
+		width: 100%;
+		height: 4px;
+		content: '';
+		background: $main-font;
+		margin-top:7px;
+		opacity: 1;
+	  }
+
+	  &:hover {
+		border-color: $primary;
+
+		&:after {
+		  background: $primary;
+		}
+	  }
+	}
+  }
+  .logo{
+	@include transition(all .4s ease);
+  }
+  &.mobile-nav-on{
+	background: $gray-300;
+	border: none;
+	.logo{
+	  opacity: .1;
+	}
+	#mobile-element {
+	  button {
+		opacity: .1;
+	  }
+
+	  .mobile-trigger{
+		width: auto;
+		margin: 0;
+		text-align: right;
+		border:none;
+		top: -10px;
+		position: relative;
+
+
+		&:before{
+		  content: "\f00d";
+		  @extend .font-awesome;
+		  background-color: transparent;
+		  height: auto;
+		  font-size: 32px;
+		  opacity: 1;
+		}
+		&:after{
+		  opacity: 0;
+		}
+	  }
+	}
+  }
+  @media (max-width: 992px) {
+	.nav-col-parent{
+	  display: none;
+	  width: 100%;
+	  background-color: white;
+	  padding-top: $md-space;
+	  padding-bottom: $md-space;
+	  margin-bottom: $lg-space;
+
+	  .nav-col{
+		display: block;
+		width: 100%;
+		background: white;
+
+		nav{
+		  background-color: $background-color;
+		  padding-bottom: $md-space;
+
+		  ul{
+
+			li{
+			  display:block;
+			  text-align: center;
+			  border-bottom: 1px $border-color solid;
+			  &:last-child{
+				border: none;
+			  }
+
+			  button{
+				top:0;
+				margin-left: 0;
+				margin-top: $md-space;
+				display: inline-block;
+			  }
+
+			  a{
+				padding: 10px;
+				font-weight: bold;
+				color: $main-font;
+
+				&.has-child{
+				  height:auto;
+				  border:none;
+				}
+				&.has-child:after {
+				  content:'';
+				  float: right;
+				  position: relative;
+				  top: 12px;
+				  margin-left: 3px;
+				}
+			  }
+			  ul {
+				position: relative;
+				display: block;
+				left: 0;
+				top: 0;
+				background: white;
+				border-bottom: none;
+				box-shadow: none;
+				width: 100%;
+				opacity: 1;
+				-webkit-transform: translateY(0px);
+				-moz-transform: translateY(0px);
+				-ms-transform: translateY(0px);
+				-o-transform: translateY(0px);
+				transform: translateY(0px);
+
+				padding: 0;
+
+				&:before {
+				  display: none;
+				}
+
+				li {
+				  border-bottom:none;
+				  border-top:none;
+				  a {
+					color: $main-font;
+					background-color: darken($background-color, 10);
+				  }
+
+				  &:last-child {
+					border: none;
+				  }
+				}
+			  }
+			}
+		  }
+		}
+	  }
+	}
+  }
+}
