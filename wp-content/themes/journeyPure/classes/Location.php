@@ -70,6 +70,11 @@ class Location
 	private function setBlock3(){
 		if(isset($this->fields['block_3'])){
 			$this->block3 = (object) array(
+				'container_background' => array(
+					'url' => $this->fields['block_3']['container_background']['sizes']['medium_large'],
+					'alt' => get_post_meta( $this->fields['block_3']['container_background']['ID'], '_wp_attachment_image_alt', true )
+				),
+				'toggle_on_box_style' => ($this->fields['block_3']['toggle_on_box_style']) ? : null,
 				'heading' => $this->fields['block_3']['heading'],
 				'image' => array(
 					'url' => $this->fields['block_3']['image']['sizes']['medium_large'],

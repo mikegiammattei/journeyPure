@@ -6,6 +6,8 @@
 include_once(get_stylesheet_directory() . '/classes/Homepage.php');
 $Homepage = new Homepage\Homepage();
 
+/** Page specific js*/
+$jsFile = 'homepage';
 get_header();
 
 ?>

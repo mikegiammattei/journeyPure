@@ -129,10 +129,19 @@
 		</div>
 	</section>
 	<?php endif; ?>
+		<?php if(isset($Location->gallery)): ?>
+	<div class="image-gallery" data-slick='{"slidesToShow": <?php echo count($Location->gallery); ?>}' role="toolbar">
+		<?php foreach ($Location->gallery as $index => $gallery) : ?>
+			<figure><img src="<?php echo $gallery->medium; ?>" /></figure>
+		<?php endforeach; ?>
+	</div>
+	<?php endif; ?>
+
 	<?php if(isset($Location->block3)): ?>
-	<section class="block-3">
+	<?php $block_img = ($Location->block3->container_background['url']) ? $Location->block3->container_background['url'] : null; ?>
+	<section class="block-3 <?php echo ($block_img == null) ? " pb-0" : ''; ?>" style="background-image: url('<?php echo $block_img; ?>'); ">
 		<div class="container">
-			<?php if(isset($Location->aboveFold->heading)): ?>
+			<?php if(isset($Location->block3->heading)  && !empty($Location->block3->heading)): ?>
 				<h3 class="h1 heading"><?php echo $Location->block3->heading; ?></h3>
 			<?php endif; ?>
 
@@ -140,20 +149,22 @@
 				<img class="featured" src="<?php echo $Location->block3->image['url'] ?>" alt="<?php echo $Location->block3->image['alt'] ?>">
 			<?php endif; ?>
 			<?php if(isset($Location->block3->midContent) && is_array($Location->block3->midContent)): ?>
-				<div class="content-section top-xl">
+				<div class="content-section <?php echo (!isset($Location->block3->heading)  && !empty($Location->block3->heading)) ? 'top-xl' : ''; ?>">
 					<div class="row row-eq-height">
 						<?php foreach ($Location->block3->midContent as $contentBox): ?>
 							<div class="col-md-6 d-flex align-items-stretch card-col">
-								<div class="card default">
+								<div class="card default <?php echo (isset($Location->block3->container_background)) ? " effect-none" : ''; ?>">
+									<?php if(isset($contentBox['heading']) && !empty($contentBox['heading'])): ?>
 									<h5 class="card-header text-center h4 bg-primary text-white"><?php echo $contentBox['heading']; ?></h5>
+									<?php endif; ?>
 									<div class="card-body">
-										<p class="card-text">
+										<div class="card-text">
 											<?php if($contentBox['use_image'] != 'img'):
 												echo $contentBox['body'];
 											else: ?>
 												<img class="featured" src="<?php echo $contentBox['image']['sizes']['large'] ?>" alt="<?php echo $contentBox['image']['alt'] ?>">
 											<?php endif; ?>
-										</p>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -173,50 +184,7 @@
 		</div>
 	</section>
 	<?php endif; ?>
-	<?php if(isset($Location->gallery)): ?>
-	<div class="image-gallery" data-slick='{"slidesToShow": <?php echo count($Location->gallery); ?>}' role="toolbar">
-		<?php foreach ($Location->gallery as $gallery) : ?>
-			<div class="img-box" style="background-image: url('<?php echo $gallery->medium; ?>');"></div>
-		<?php endforeach; ?>
-	</div>
-	<?php endif; ?>
-	<?php if(isset($Location->bios) && is_array($Location->bios->bios)): ?>
-	<section class="bio-section">
-		<div class="container">
-			<?php if(isset($Location->bios->heading)): ?>
-			<div class="heading">
-				<h3 class="h1"><?php echo $Location->bios->heading; ?></h3>
-			</div>
-			<?php endif; ?>
-			<div class="subheading">
-				<p><?php echo $Location->bios->subheading; ?></p>
-			</div>
 
-			<div class="bio-slider" data-slick='{"slidesToShow": 4}' >
-				<?php foreach ($Location->bios->bios as $bio): ?>
-					<div class="d-flex align-items-stretch card-col">
-						<div class="card default border-0">
-							<div class="card-body  bios">
-								<div class="img" style='background-image: url("<?php echo $bio->photo['image']; ?>");'></div>
-								<p class="text font-weight-bold"><?php echo $bio->name; ?></p>
-								<p class="text"><?php echo $bio->credentials; ?></p>
-								<p class="text"><?php echo $bio->title; ?></p>
-								<ul class="fa-ul">
-									<?php echo ($bio->education) ? '<li><span class="fa-li"><i class="fas fa-check"></i></span>' . $bio->education . '</li>': ''; ?>
-									<?php echo ($bio->specialty) ? '<li><span class="fa-li"><i class="fas fa-check"></i></span>' . $bio->specialty . '</li>': ''; ?>
-									<?php echo ($bio->years) ? '<li><span class="fa-li"><i class="fas fa-check"></i></span>' . $bio->years . ' years in the field</li>': ''; ?>
-									<?php echo ($bio->in_recovery) == "Yes" ? '<li><span class="fa-li"><i class="fas fa-check"></i></span>In Recovery</li>': ''; ?>
-								</ul>
-							</div>
-						</div>
-					</div>
-				<?php endforeach; ?>
-			</div>
-			<p class="link see-less-btn">Previous</p>
-			<p class="link see-more-btn has-more"><data>Data Generated Via Script</data> More</p>
-		</div>
-	</section>
-	<?php endif; ?>
 	<?php if(isset($Location->reviews)): ?>
 	<section class="review-section">
 		<div class="container">
@@ -244,7 +212,7 @@
 
 				</div>
 				<div class="content-container-right">
-					<div class="review-slide-container">
+					<div class="review-slide-container <?php echo (count($Location->reviews) == 1) ? ' pb-5' : null; ?>">
 						<div class="review-slide" data-slick='{"slidesToShow": 1}' role="toolbar">
 							<?php if(count($Location->reviews ) > 0): ?>
 							<?php foreach ($Location->reviews as $reviews) : ?>
@@ -294,6 +262,43 @@
 			</div>
 		</div>
 	</section>
+	<?php endif; ?>
+	<?php if(isset($Location->bios) && is_array($Location->bios->bios)): ?>
+		<section class="bio-section">
+			<div class="container">
+				<?php if(isset($Location->bios->heading)): ?>
+					<div class="heading">
+						<h3 class="h1"><?php echo $Location->bios->heading; ?></h3>
+					</div>
+				<?php endif; ?>
+				<div class="subheading">
+					<p><?php echo $Location->bios->subheading; ?></p>
+				</div>
+
+				<div class="bio-slider" data-slick='{"slidesToShow": 4}' >
+					<?php foreach ($Location->bios->bios as $bio): ?>
+						<div class="d-flex align-items-stretch card-col">
+							<div class="card default border-0">
+								<div class="card-body  bios">
+									<div class="img" style='background-image: url("<?php echo $bio->photo['image']; ?>");'></div>
+									<p class="text font-weight-bold"><?php echo $bio->name; ?></p>
+									<p class="text"><?php echo $bio->credentials; ?></p>
+									<p class="text"><?php echo $bio->title; ?></p>
+									<ul class="fa-ul">
+										<?php echo ($bio->education) ? '<li><span class="fa-li"><i class="fas fa-check"></i></span>' . $bio->education . '</li>': ''; ?>
+										<?php echo ($bio->specialty) ? '<li><span class="fa-li"><i class="fas fa-check"></i></span>' . $bio->specialty . '</li>': ''; ?>
+										<?php echo ($bio->years) ? '<li><span class="fa-li"><i class="fas fa-check"></i></span>' . $bio->years . ' years in the field</li>': ''; ?>
+										<?php echo ($bio->in_recovery) == "Yes" ? '<li><span class="fa-li"><i class="fas fa-check"></i></span>In Recovery</li>': ''; ?>
+									</ul>
+								</div>
+							</div>
+						</div>
+					<?php endforeach; ?>
+				</div>
+				<p class="link see-less-btn">Previous</p>
+				<p class="link see-more-btn has-more"><data>Data Generated Via Script</data> More</p>
+			</div>
+		</section>
 	<?php endif; ?>
 	<section class="insurance-section">
 		<div class="container">

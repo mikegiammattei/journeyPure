@@ -1,29 +1,26 @@
 
 $(document).ready(function () {
-	if($('#single-location .image-gallery').length > 0){
-		setTimeout(function () {
-			$('#single-location .image-gallery').slick({
-				slidesToScroll: 1,
-				dots: false,
-				centerMode: false,
-				arrows: false,
-				infinite: false,
-				adaptiveHeight: true,
-				//speed: 300,
-				autoplay: false,
-				//autoplaySpeed: 2000,
-				responsive: [
-					{
-						breakpoint: 768,
-						settings: {
-							slidesToShow: 1,
-						}
-					}
-				],
+	function slickImageGallery() {
+		if($('#single-location .image-gallery').length > 0){
+			setTimeout(function () {
+				$('#single-location .image-gallery').slick({
+					slidesToScroll: 1,
+					dots: false,
+					centerMode: false,
+					arrows: false,
+					infinite: false,
 
-			});
-		}, 2000);
+					adaptiveHeight: true,
+					//speed: 300,
+					autoplay: false,
+					//autoplaySpeed: 2000,
+
+
+				});
+			}, 2000);
+		}
 	}
+
 
 });
 
@@ -173,3 +170,8 @@ $(document).ready(function () {
 	}
 });
 
+$(document).ready(function(){
+	setTimeout(function () {
+		$('.image-gallery').flexgal();
+	},400);
+});
