@@ -36,4 +36,30 @@ class FAQs
 			}
 		endif;
 	}
+	public function setFAQsByCatName($name){
+
+		/** Get bios if there are any associated with the post bio category */
+		if($name){
+			// Get bio post by the categories ID
+			$args=array(
+				'posts_per_page' => 50,
+				'post_type' => 'faq',
+				'category_name' => $name
+			);
+			$wp_query = new \WP_Query( $args );
+
+			// Get just Post IDs
+			$postIds = wp_list_pluck( $wp_query->posts, 'ID' );
+
+			foreach ($postIds as $faqPostsId){
+				$faq = get_fields($faqPostsId);
+
+				$this->faqs[] = (object) array(
+					'question' => $faq['question'],
+					'answer' => $faq['answer']
+				);
+			}
+		}
+
+	}
 }

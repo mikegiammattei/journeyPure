@@ -1,101 +1,146 @@
 #homepage{
-  .feature{
-	margin: $xl-space 0;
-	text-align: left;
-
-	.rating-section{
-	  .col-md-6{
-		&:nth-child(even){
-		  .ratings{
-			margin-left: 10px;
-		  }
-		}
+  .above-fold{
+	.default-container{
+	  @media(max-width: 767px){
+		padding-bottom: 0;
 	  }
-	}
-	#homepage-above-fold-slider{
-	  opacity: 0;
-	  visibility: hidden;
-	  transition: opacity 1s ease;
-	  -webkit-transition: opacity 1s ease;
+	  .feature{
+		margin: $xl-space 0;
 
-	  &.slick-initialized {
-		visibility: visible;
-		opacity: 1;
-	  }
-	  .slide-item{
-
-		.slide-img{
-		  background:  no-repeat center;
-		  -webkit-background-size: cover;
-		  -moz-background-size: cover;
-		  -o-background-size: cover;
-		  background-size: cover;
-		  height: 400px;
-		  width: 600px;
-		  opacity: 0;
-		  -webkit-transition: all 1s ease;
-		  -moz-transition: all 1s ease;
-		  -ms-transition: all 1s ease;
-		  -o-transition: all 1s ease;
-		  transition: all 1s ease;
+		@media(max-width: 767px){
+		  margin-bottom: 0;
 		}
-		.slide-tag{
-		  position: absolute;
-		  z-index: 3;
-		  color: $main-font;
-		  line-height: 18px;
-		  bottom: 41px;
-		  width: 100%;
+		text-align: left;
 
-		  .item-info-container{
-			padding: $md-space ;
-			background-color: white;
-
-			.item-info{
+		.lead{
+		  line-height: 36px;
+		}
+		.card{
+		  &.transparent{
+			@media (max-width: 767px) {
 			  display: block;
+			  margin-bottom: $lg-space;
 
-			  .name{
-				display: block;
-				font-weight: bold;
-			  }
 			}
 		  }
-		  .item-mark-container{
-			padding: $md-space;
-			width: 100%;
-			background-color: rgba(0,0,0,.7);
-			text-align: right;
-			color: white;
+		}
+		.rating-section{
+		  margin: $md-space;
 
-			.item-mark{
-			  width: 100%;
+		  > .row > div{
+			@media (max-width: 767px) {
+			  display: block;
+			  margin-bottom: $lg-space;
 
-			  .mark-item{
-				display: block;
-				font-weight: bold;
-			  }
-			  .see-more-link{
-				color: $gray-500;
-				cursor: pointer;
+			}
+		  }
+		  .ratings{
+			.content{
+			  margin-left: 4px;
+			}
+			.col-md-6{
+			  &:nth-child(even){
+				.ratings{
+				  margin-left: 10px;
 
-				i{
-				  display: inline-block;
-				  margin-left: 4px;
-				  position: relative;
-				  top: 2px;
-
+				  @media (max-width: 767px) {
+					margin-left: 10px;
+				  }
 				}
 			  }
 			}
+		  }
 
+
+		}
+		#homepage-above-fold-slider{
+		  opacity: 0;
+		  visibility: hidden;
+		  transition: opacity 1s ease;
+		  -webkit-transition: opacity 1s ease;
+
+		  &.slick-initialized {
+			visibility: visible;
+			opacity: 1;
+		  }
+		  .slide-item{
+
+			.slide-img{
+			  background:  no-repeat center;
+			  -webkit-background-size: cover;
+			  -moz-background-size: cover;
+			  -o-background-size: cover;
+			  background-size: cover;
+			  height: 410px;
+			  width: 600px;
+			  opacity: 0;
+			  -webkit-transition: all 1s ease;
+			  -moz-transition: all 1s ease;
+			  -ms-transition: all 1s ease;
+			  -o-transition: all 1s ease;
+			  transition: all 1s ease;
+			}
+			.slide-tag{
+			  position: absolute;
+			  z-index: 3;
+			  color: $main-font;
+			  line-height: 18px;
+			  bottom: 41px;
+			  width: 100%;
+
+			  .item-info-container{
+				padding: $md-space ;
+				background-color: white;
+
+				.item-info{
+				  display: block;
+
+				  .name{
+					display: block;
+					font-weight: bold;
+				  }
+				}
+			  }
+			  .item-mark-container{
+				padding: $md-space;
+				width: 100%;
+				background-color: rgba(0,0,0,.7);
+				text-align: right;
+				color: white;
+
+				.item-mark{
+				  width: 100%;
+
+				  .mark-item{
+					display: block;
+					font-weight: bold;
+				  }
+				  .see-more-link{
+					color: $gray-500;
+					cursor: pointer;
+
+					i{
+					  display: inline-block;
+					  margin-left: 4px;
+					  position: relative;
+					  top: 2px;
+
+					}
+				  }
+				}
+
+			  }
+			}
 		  }
 		}
 	  }
+	  .insurance-section{
+		padding: $lg-space 0;
+	  }
 	}
+
   }
-  .insurance-section{
-	padding: $lg-space 0;
-  }
+
   .block-1{
 	padding: $lg-space 0;
 	text-align: center;
@@ -111,6 +156,7 @@
 	  }
 	  .lead{
 		@extend .h1;
+		line-height: 36px;
 	  }
 	}
 
@@ -130,11 +176,19 @@
   }
   .block-2{
 	padding: $xl-space 0;
-	.details{
-	  .heading{
-		margin-bottom: $md-space;
+
+	.heading-prime{
+		margin-bottom: $xl-space;
+
+	  @media(max-width: 767px){
+		text-align: center;
+		margin-bottom: $sm-space;
 	  }
 	}
+	@media(max-width: 767px){
+	  padding-bottom: 0;
+	}
+
 	.featured-on{
 
 	  .badge{
@@ -154,6 +208,64 @@
 	  .slick-prev:before, .slick-next:before, .slick-prev:after, .slick-next:after {
 		color: $primary;
 	  }
+	}
+  }
+  .block-3{
+	margin: $xl-space 0;
+  }
+  .block-4{
+	padding: $xl-space 0;
+	color: white;
+	background: $primary;
+	fieldset{
+
+	}
+	.service-container{
+	  border: 2px  solid white;
+	  margin-top: $lg-space;
+	  border-radius: 20px;
+	  padding: $lg-space;
+
+	  .heading{
+		color: white;
+		text-align: center;
+		background: $primary;
+		padding: 0 30px;
+		@extend .page-heading;
+		display: table;
+		margin: -33px auto 0 auto;
+		position: relative;
+		top: -24px;
+	  }
+
+	  .box{
+		text-align: center;
+		font-size: 24px;
+		padding: 40px $lg-space;
+		border-right: 2px solid white;
+
+		@media (max-width: 767px) {
+		  border-right: 0;
+		}
+
+		&.last{
+		  border: none;
+		}
+		i{
+		  font-size: 42px;
+		  display: block;
+		}
+	  }
+	}
+  }
+  .faqs{
+	margin: $xl-space auto;
+	max-width: $lg-width;
+
+	.heading{
+	  @extend .page-heading;
+	  text-align: center;
+	  margin-bottom: $md-space;
 	}
   }
 }

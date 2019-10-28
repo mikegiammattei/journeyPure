@@ -42,6 +42,7 @@ class Bios
 				'specialty' => $bio['specialty'],
 				'years' => $bio['years'],
 				'in_recovery' => $bio['in_recovery'],
+				'sober_since' => ($bio['sober_since']) ? : null,
 
 			);
 		}
@@ -56,6 +57,25 @@ class Bios
 				'posts_per_page' => 50,
 				'post_type' => 'bios',
 				'cat' => $categoryIDs,
+			);
+			$wp_query = new \WP_Query( $args );
+
+			// Get just Post IDs
+			$this->bioPostsIds = wp_list_pluck( $wp_query->posts, 'ID' );
+
+			$this->setBios();
+		}
+
+	}
+	public function setPostByCategoryName($name){
+
+		/** Get bios if there are any associated with the post bio category */
+		if($name){
+			// Get bio post by the categories ID
+			$args=array(
+				'posts_per_page' => 50,
+				'post_type' => 'bios',
+				'category_name' => 'homepage'
 			);
 			$wp_query = new \WP_Query( $args );
 

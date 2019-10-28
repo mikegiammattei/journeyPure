@@ -17,10 +17,14 @@ class Homepage
 
 	public $ratings;
 	public $reviews;
+	public $bios;
+	public $faqs;
 
 	public function __construct(){
 		$this->setRatings();
 		$this->setReviews();
+		$this->setBios();
+		$this->setFAQs();
 	}
 	private function setRatings(){
 		require_once(get_stylesheet_directory() . '/classes/Ratings.php');
@@ -41,5 +45,22 @@ class Homepage
 		$this->reviews = $Reviews->reviews;
 
 	}
+	private function setBios()
+	{
 
+		require_once(get_stylesheet_directory() . '/classes/Bios.php');
+		$Bios = new \Bios\Bios();
+
+		$Bios->setPostByCategoryName('homepage');
+
+		$this->bios = $Bios->bios;
+
+	}
+	private function setFAQs(){
+		require_once(get_stylesheet_directory() . '/classes/FAQs.php');
+		$Faqs = new \FAQs\FAQs();
+
+		$Faqs->setFAQsByCatName('homepage');
+		$this->faqs = $Faqs->faqs;
+	}
 }

@@ -1,0 +1,39 @@
+.faqs{
+  .card{
+	border:none;
+
+	.card-header{
+	  margin-bottom: 0;
+	  cursor: pointer;
+	  background-color: white;
+	  padding-top: 22px;
+
+	  .card-title{
+		&:before{
+		  content: '\f068';
+		  @extend .font-awesome;
+		  display: inline-block;
+		  position: relative;
+		  left: -15px;
+		}
+	  }
+
+	  &.collapsed{
+		.card-title{
+
+		  &:before{
+			content: '\f067';
+			color: $secondary;
+		  }
+		}
+	  }
+	}
+  }
+  .ask-a-question{
+	text-align: center;
+	margin: $lg-space auto 0 auto;
+	.link{
+
+	}
+  }
+}

@@ -1,0 +1,29 @@
+.media-outlets{
+  .media-con{
+	@media (max-width: 767px) {
+	  display: block;
+	  width: 50%;
+	}
+  }
+  .media-box{
+	background: #f6f7f9;
+	height: auto;
+	margin: 3px;
+	align-items: center;
+	justify-content: center;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	padding: $sm-space $lg-space;
+
+	img {
+	  width: 100%;
+	  max-width: 71px;
+	  display: block;
+	  margin: auto;
+	  -webkit-filter: grayscale(100%);
+	  filter: grayscale(100%);
+	}
+  }
+}

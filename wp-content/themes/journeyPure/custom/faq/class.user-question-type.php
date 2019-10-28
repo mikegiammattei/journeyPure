@@ -16,7 +16,7 @@ class UserFaqQuestions{
 				'public'             => true,
 				'publicly_queryable' => true,
 				'show_ui'            => true,
-				'show_in_menu'       => true,
+				'show_in_menu'       => false,
 				'query_var'          => true,
 				'rewrite' => array('slug' => 'user-question'),
 				'capability_type'    => 'post',

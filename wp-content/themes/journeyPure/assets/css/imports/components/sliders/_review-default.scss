@@ -57,10 +57,17 @@
 		.card-body{
 		  .author-info{
 			margin-bottom: $lg-space;
+			@media (max-width: 767px) {
+			  text-align: center;
+			}
 			img{
 			  width: 100px;
 			  height: 100px;
 			  border-radius: 50%;
+
+			  @media (max-width: 767px) {
+				margin:auto;
+			  }
 			}
 		  }
 		  .stars{
