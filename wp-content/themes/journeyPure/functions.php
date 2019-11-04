@@ -11,7 +11,6 @@ remove_action('wp_head', 'wp_generator');
 require_once(THEME_PATH . '/classes/Inc.php');
 $_inc = new \Includes\Inc();
 
-
 // ENQUEUE STYLES
 function enqueue_styles() {
 

@@ -4,7 +4,7 @@
  * FileName: Homepage.php
  * Description:
  *
- * Created by: Ambrosia Digital Team.
+ * Created by: Digital Team.
  * Author: Michael Giammattei
  * Date: 10/11/2019
  */

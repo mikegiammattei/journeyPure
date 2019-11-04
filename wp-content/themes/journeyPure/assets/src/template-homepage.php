@@ -14,6 +14,8 @@ get_header();
 
 <div id="homepage">
 	<main>
+
+
 		<?php $restApiPath = 'http://journeypure.net/rest-api'; ?>
 		<section class="above-fold">
 			<div class="default-container" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/img/home-temp.jpg')">
@@ -37,7 +39,7 @@ get_header();
 											<div class="rating-section">
 												<div class="row no-gutters">
 													<?php foreach ($Homepage->ratings as $rating) : ?>
-														<div class="col-md-6">
+														<div class="col-md-6 i-rating">
 															<div class="ratings default inline">
 																<div class="row no-gutters align-items-center">
 																	<div class="col-2">

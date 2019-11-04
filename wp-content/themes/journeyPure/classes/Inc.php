@@ -4,7 +4,7 @@
  * FileName: Inc.php
  * Description:
  *
- * Created by: Ambrosia Digital Team.
+ * Created by: Digital Team.
  * Author: Michael Giammattei
  * Date: 10/5/2019
  */
@@ -48,7 +48,5 @@ class Inc
 	public  function get_terms_conditions(){
 		echo $this->get->set_terms_conditions;
 	}
-
-
 
 }

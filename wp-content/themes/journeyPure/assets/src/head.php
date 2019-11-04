@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!doctype html>
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" <?php language_attributes(); ?>> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 oldie" <?php language_attributes(); ?>> <![endif]-->
@@ -21,6 +22,6 @@
 	<title><?php wp_title(); ?> - <?php bloginfo( 'name' ); ?></title>
 	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	<?php wp_head(); ?>
-
+	<script async src="//130400.tctm.co/t.js"></script>
 </head>
 <body <?php body_class(); ?>>

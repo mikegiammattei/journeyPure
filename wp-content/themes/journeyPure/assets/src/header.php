@@ -1,4 +1,20 @@
 <?php require_once(get_stylesheet_directory() . "/head.php"); ?>
+<?php
+
+$hideLocSub = false;
+$hideContactInfo = false;
+global $Location;
+if(isset($Location)){
+	if($Location->LocSubNavClass->getHideMenu()){
+		$hideLocSub = true;
+	}
+	if($Location->HeaderContactInfoClass->getHideMenu()){
+		$hideContactInfo = true;
+	}
+}
+
+?>
+
 <header>
 	<div class="container ">
 		<div class="row align-items-center justify-content-between">
@@ -23,7 +39,9 @@
 						<nav>
 							<ul>
 								<li>
-									<a class="has-child" href="<?php the_permalink(25); ?>"><?php echo get_the_title(25); ?></a>
+									<a class="<?php (!$hideLocSub) ? 'has-child' : null; ?>" href="<?php the_permalink(25); ?>"><?php echo get_the_title(25); ?></a>
+
+									<?php if(!$hideLocSub): ?>
 									<ul>
 										<?php
 										$request  = new WP_REST_Request( 'GET', '/wp/v2/locations-api' );
@@ -39,6 +57,7 @@
 										}
 										?>
 									</ul>
+									<?php endif; ?>
 								</li>
 
 								<li>
@@ -54,35 +73,19 @@
 							</ul>
 						</nav>
 					</div>
+					<?php if(!$hideContactInfo): ?>
 					<div class="col-auto d-md-none d-lg-block">
 						<section class="contact">
 							<a class="contact-link" href="<?php the_permalink(54); ?>"><?php echo get_the_title(54); ?></a>
 							<a class="phone" href="<?php echo get_option('defaultPhone'); ?>"><?php echo get_option('defaultPhone'); ?></a>
 						</section>
 					</div>
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>
 	</div>
 </header>
-<div class="modal fade" id="main-insurance-form" tabindex="-1" role="dialog" aria-hidden="true">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLongTitle">Check Insurance</h5>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
-			<div class="modal-body">
-				...
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Save changes</button>
-			</div>
-		</div>
-	</div>
-</div>
+<?php require_once(get_stylesheet_directory(). '/assets/src/includes/components/check-insurance-form.php'); ?>
 <?php /** Added my Mike */ ?>
 <div class="main-wrapper">

@@ -4,7 +4,7 @@
  * FileName: Bios.php
  * Description:
  *
- * Created by: Ambrosia Digital Team.
+ * Created by: Digital Team.
  * Author: Michael Giammattei
  * Date: 10/2/2019
  */
@@ -41,7 +41,7 @@ class Bios
 				'education' => $bio['education'],
 				'specialty' => $bio['specialty'],
 				'years' => $bio['years'],
-				'in_recovery' => $bio['in_recovery'],
+				'recovery_status' => $bio['recovery_status'],
 				'sober_since' => ($bio['sober_since']) ? : null,
 
 			);

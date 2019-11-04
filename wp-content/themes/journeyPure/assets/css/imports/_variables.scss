@@ -23,7 +23,7 @@ $mid-point-break :  1480px;
 $primary: #0033A1;
 $secondary: #00953B;
 $accent: #95005A;
-$orange: #E7711F;
+$orange: #E7711B;
 $errorBg: #ff7564;
 $errorTxt: darken($errorBg,40%);
 $successBg: lighten($secondary,30%);;
@@ -33,6 +33,7 @@ $main-gray: #9A9C99;
 $border-color:  #CBCCCB;
 $background-color: #EEEEED;
 $stars:#E7711B;
+$light-blue:#e0e7f5;
 $dark: #9A9C99;
 
   // Section Spacing
@@ -46,8 +47,6 @@ $lg-width: 900px;
 $md-width: 700px;
 
 // Fonts
-$heading-font: "Playfair Display", sans-serif;
-$heading-style-1: 'Montserrat', sans-serif;
-$heading-style-2: Helvetica, Arial, serif;
-$heading-style-3: Georgia, "Times New Roman", Times, serif;
-
+$heading-font: 'Montserrat', sans-serif;
+$heading-style: 'Montserrat', sans-serif;
+$heading-style-1: Georgia, "Times New Roman", Times, serif;

@@ -139,7 +139,7 @@
 
 	<?php if(isset($Location->block3)): ?>
 	<?php $block_img = ($Location->block3->container_background['url']) ? $Location->block3->container_background['url'] : null; ?>
-	<section class="block-3 <?php echo ($block_img == null) ? " pb-0" : ''; ?>" style="background-image: url('<?php echo $block_img; ?>'); ">
+	<section class="block-3 <?php echo ($block_img == null) ? "" : ''; ?>" style="background-image: url('<?php echo $block_img; ?>'); ">
 		<div class="container">
 			<?php if(isset($Location->block3->heading)  && !empty($Location->block3->heading)): ?>
 				<h3 class="h1 heading"><?php echo $Location->block3->heading; ?></h3>
@@ -193,7 +193,7 @@
 					<div class="details">
 						<h3 class="h1 heading">Reviews</h3>
 						<div class="tallies">
-							<data class="avg display-4" value="4.8">4.8</data> /
+							<data class="avg display-4" value="<?php echo $Location->reviewAvg; ?>"><?php echo $Location->reviewAvg; ?></data> /
 							<data class="cap" value="5"> 5</data>
 						</div>
 						<div class="stars">
@@ -204,9 +204,9 @@
 						<div class="sub-text">
 							<p>Average Rating</p>
 							<p class="review-count">
-								<data value="10">10</data>  reviews
+								<data value="<?php echo $Location->reviewTotal; ?>"><?php echo $Location->reviewTotal; ?></data>  reviews
 							</p>
-							<p class="link post-review-link">Leave a Review</p>
+							<p class="link post-review-link " data-toggle="modal" data-target="#leave-a-review">Leave a Review</p>
 						</div>
 					</div>
 
@@ -281,14 +281,26 @@
 							<div class="card default border-0">
 								<div class="card-body  bios">
 									<div class="img" style='background-image: url("<?php echo $bio->photo['image']; ?>");'></div>
-									<p class="text font-weight-bold"><?php echo $bio->name; ?></p>
-									<p class="text"><?php echo $bio->credentials; ?></p>
+									<p class="text name-text"><?php echo $bio->name; ?> <span class="text"> • <?php echo $bio->credentials; ?></span>
+									</p>
+
 									<p class="text"><?php echo $bio->title; ?></p>
 									<ul class="fa-ul">
-										<?php echo ($bio->education) ? '<li><span class="fa-li"><i class="fas fa-check"></i></span>' . $bio->education . '</li>': ''; ?>
-										<?php echo ($bio->specialty) ? '<li><span class="fa-li"><i class="fas fa-check"></i></span>' . $bio->specialty . '</li>': ''; ?>
-										<?php echo ($bio->years) ? '<li><span class="fa-li"><i class="fas fa-check"></i></span>' . $bio->years . ' years in the field</li>': ''; ?>
-										<?php echo ($bio->in_recovery) == "Yes" ? '<li><span class="fa-li"><i class="fas fa-check"></i></span>In Recovery</li>': ''; ?>
+										<?php echo ($bio->education) ? '<li><span class="fa-li"><i class="fas fa-graduation-cap"></i></span>' . $bio->education . '</li>': ''; ?>
+										<?php echo ($bio->specialty) ? '<li><span class="fa-li"><i class="fas fa-th-large"></i></span>' . $bio->specialty . '</li>': ''; ?>
+										<?php echo ($bio->years) ? '<li><span class="fa-li"><i class="fas fa-clock"></i></span>' . $bio->years . ' years in the field</li>': ''; ?>
+										<?php
+											if(!empty($bio->recovery_status)):
+												 switch ($bio->recovery_status):
+													case 'person' :
+														echo '<li><span class="fa-li"><i class="fas fa-grin"></i></span>In Recovery</li>';
+														break;
+														case 'loved_one' :
+														echo '<li><span class="fa-li"><i class="fas fa-grin"></i></span>Loved One In Recovery</li>';
+														break;
+												endswitch;
+											endif;
+										?>
 									</ul>
 								</div>
 							</div>
@@ -338,12 +350,12 @@
 								<?php endforeach; ?>
 							</div>
 							<div class="ask-a-question">
-								<span class="link" data-toggle="modal" data-target="#user-question-form-container">Ask a question</span>
+								<span class="btn btn-primary" data-toggle="modal" data-target="#user-question-form-container"><i class="fas fa-comment-dots"></i> Ask a question</span>
 							</div>
 						</div>
 					<?php endif; ?>
 				</div>
-				<div class="col-md-5 offset-md-1">
+				<div class="col-md-6">
 					<div class="location-information">
 						<div class="capacity">
 							<?php
@@ -369,7 +381,7 @@
 							<?php endif; ?>
 
 								<p><?php echo $Location->block4->location->city; ?>,
-									<?php echo $Location->block4->location->state; ?>,
+									<?php echo $Location->block4->location->state; ?>
 									<?php echo $Location->block4->location->zip; ?></p>
 
 							<?php if($Location->block4->location->description): ?>

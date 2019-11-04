@@ -29,27 +29,13 @@ function create_reviews() {
 	);
 }
 
-/*function add_review_post_title( $post_id ) {
-
-	global $post;
-	if ($post->post_type != 'reviews'){
-		return;
-	}
-
-	// unhook this function so it doesn't loop infinitely
-	remove_action( 'save_post', 'add_review_post_title' );
-
-	// update the post, which calls save_post again
-	$ThePost = array(
-		'ID'           => $post_id,
-		'post_title'   => get_field('heading', $post_id)
-	);
-	wp_update_post( $ThePost );
-
-	// re-hook this function
-	add_action( 'save_post', 'add_review_post_title' );
-}
-add_action( 'save_post', 'add_review_post_title' );*/
-
-// Hooking up our function to theme setup
 add_action( 'init', 'create_reviews' );
+
+require(__DIR__ . '/class.user-review.php');
+require(__DIR__ . '/class.user-review-type.php');
+
+// Add user faq to the sidebar
+add_action('admin_menu', array('UserReviews','add_user_reviews'));
+
+// Register the user-faqs post type
+add_action('init', array('UserReviewsType','register_user_reviews'));

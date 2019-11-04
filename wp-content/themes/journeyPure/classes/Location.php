@@ -4,7 +4,7 @@
  * FileName: Location.php
  * Description:
  *
- * Created by: Ambrosia Digital Team.
+ * Created by: Digital Team.
  * Author: Michael Giammattei
  * Date: 9/29/2019
  */
@@ -23,8 +23,12 @@ class Location
 	private $fields;
 	public $bios;
 	public $reviews;
+	public $reviewAvg;
+	public $reviewTotal;
 	public $block4;
 	private $post;
+	public $LocSubNavClass;
+	public $HeaderContactInfoClass;
 
 	public function __construct(){
 		global $post;
@@ -38,6 +42,22 @@ class Location
 		$this->setReviews();
 		$this->setBlock4();
 
+		/** Used to hide sub menu */
+		require_once(get_stylesheet_directory() . '/classes/LocationSubMenu.php');
+		$this->LocSubNavClass = new \Navigation\LocationSubMenu();
+		$this->locationNavStatus();
+
+		/** Used to hide header contact Info */
+		require_once(get_stylesheet_directory() . '/classes/HeaderContactInfo.php');
+		$this->HeaderContactInfoClass = new \Header\HeaderContactInfo();
+		$this->setHeaderContactStatus();
+
+	}
+	private function locationNavStatus(){
+		$this->LocSubNavClass->addHidePostType(get_post_type($this->post->ID));
+	}
+	private function setHeaderContactStatus(){
+		$this->HeaderContactInfoClass->addHidePostType(get_post_type($this->post->ID));
 	}
 	private function setRatings(){
 		require_once(get_stylesheet_directory() . '/classes/Ratings.php');
@@ -130,6 +150,9 @@ class Location
 			$Reviews->setPostByPostId($ReviewsCategoryIDs);
 
 			$this->reviews = $Reviews->reviews;
+
+			$this->reviewAvg = $Reviews->getAvgRating();
+			$this->reviewTotal= $Reviews->getTotalReviews();
 
 		endif;
 	}

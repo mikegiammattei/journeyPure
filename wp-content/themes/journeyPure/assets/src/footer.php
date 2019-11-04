@@ -45,7 +45,13 @@
 			</div>
 		</div>
 	</footer>
+<?php include_once(get_stylesheet_directory() . '/assets/src/includes/components/cta-widget.php'); ?>
+<?php include_once(get_stylesheet_directory()  . '/assets/src/includes/components/leave-a-review.php'); ?>
+
 </div> <?php /** end of main wrapper */ ?>
+<iframe class="ctm-call-widget" src="https://130400.tctm.co/form/FRT472ABB2C5B9B141A95E7A133293232FBB3EFEC59E103154BC3C3A194C8DE5FD3.html" style="display:none"></iframe>
+<script defer async src="https://130400.tctm.co/formreactor.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" async integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 
 	<?php wp_footer(); ?>

@@ -4,7 +4,7 @@
  * FileName: Reviews.php
  * Description:
  *
- * Created by: Ambrosia Digital Team.
+ * Created by: Digital Team.
  * Author: Michael Giammattei
  * Date: 10/4/2019
  */
@@ -18,11 +18,24 @@ class Reviews
 	private $post;
 	private $fields = array();
 	private $reviewPostsIds;
+	private $reviewCount;
+	private $avgRating;
 
 	public function __construct(){
 		global $post;
 		$this->post = $post;
 		$this->fields = get_fields($post->ID);
+	}
+	public function setAvgRating($reviews){
+		$total = 0;
+		foreach ($reviews as $rating):
+			$total = $total + $rating->star_rating;
+		endforeach;
+
+		$avg = $total / $this->reviewCount;
+		$avg = sprintf('%0.1f', $avg);
+
+		$this->avgRating = $avg;
 	}
 	private function setReviews(){
 
@@ -47,6 +60,18 @@ class Reviews
 				);
 			}
 		}
+
+		/** Set Review Count */
+		$this->reviewCount = count($this->reviewPostsIds);
+
+		$this->setAvgRating($this->reviews);
+
+	}
+	public function getAvgRating(){
+		return $this->avgRating;
+	}
+	public function getTotalReviews(){
+		return $this->reviewCount;
 	}
 	public function setPostByCategoryId($categoryIDs){
 
@@ -54,7 +79,7 @@ class Reviews
 		if($categoryIDs){
 			// Get review post by the categories ID
 			$args=array(
-				'posts_per_page' => 50,
+				'posts_per_page' => 500,
 				'post_type' => 'reviews',
 				'cat' => $categoryIDs,
 			);

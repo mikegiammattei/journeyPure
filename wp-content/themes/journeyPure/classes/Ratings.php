@@ -4,7 +4,7 @@
  * FileName: Ratings.php
  * Description:
  *
- * Created by: Ambrosia Digital Team.
+ * Created by: Digital Team.
  * Author: Michael Giammattei
  * Date: 9/30/2019
  */

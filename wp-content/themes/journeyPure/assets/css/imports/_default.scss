@@ -30,16 +30,10 @@ h2,.h2{
 h3,.h3{
   color: $main-font;
   font-family:$heading-style-1;
-  font-size : 17px;
-  line-height : 1.5;
+  font-size : 22px;
+  line-height : 1.25;
   font-style: italic;
-}
-h3,.h3{
-  color: $main-font;
-  font-family: $heading-style;
-  font-size : 18px;
-  line-height : 1.5;
-  font-style: italic;
+  letter-spacing: 0;
 }
 h5,.h5{
   color: $main-font;
@@ -112,6 +106,11 @@ img{
 	color: $main-gray;
   }
 }
+
+.btn-outline-primary{
+   border-width:2px;
+}
+
 .btn-outline-secondary{
   color: $secondary;
   /** Seems Really Large */
@@ -377,5 +376,11 @@ figure{
   transition: all .4s ease;
   &.on{
 	opacity: .1;
+  }
+}
+
+.modal{
+  .modal-content{
+	border:none;
   }
 }

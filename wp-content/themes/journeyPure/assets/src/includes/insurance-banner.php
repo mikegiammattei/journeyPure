@@ -9,7 +9,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<div onclick="" data-a-insurance="parent" class="text-center">
-				<p>Don't see your insurance? <span role="button" data-a-insurance="btn" class="link">Click to verify.</span></p>
+				<p>Don't see your insurance? <span role="button" data-toggle="modal" data-target="#main-insurance-form" data-a-insurance="btn" class="link">Click to verify.</span></p>
 			</div>
 		</div>
 	</div>

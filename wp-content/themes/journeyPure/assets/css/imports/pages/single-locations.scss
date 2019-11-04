@@ -1,8 +1,8 @@
 #single-location{
   // Page Globals
   .see-more-btn,.see-less-btn{
-	margin-top: 10px;
-	font-family:$heading-style-2;
+	margin-bottom: 10px;
+	font-family:$heading-font;
 	padding-bottom:0;
 	&.slick-disabled{
 	  opacity: 0;
@@ -50,6 +50,9 @@
   margin-bottom:15px;
   p {
   color:$main-gray;
+      font-size: 22px;
+    font-family: Montserrat;
+    letter-spacing: 0;
   }
 
   }
@@ -78,6 +81,8 @@
 		  line-height: 1.25;
 		  font-size:17px;
 		  font-weight:bold;
+		      letter-spacing: -1px;
+			  text-shadow: 0px 4px 3px rgba(0,0,0,0.4), 0px 8px 13px rgba(0,0,0,0.1), 0px 18px 23px rgba(0,0,0,0.1);
 		}
 		.heading-2 {
 		font-weight:normal !important;}
@@ -92,7 +97,7 @@
 	  background-size: cover;
 	  height: 400px;
 	  border-radius: 0 0 50% 50%;
-	  box-shadow: -25px 6px 0px $secondary;
+	  box-shadow: -40px 6px 2px $secondary;
 
 	  @media (max-width: 767px) {
 		height: 375px;
@@ -103,13 +108,17 @@
 
 	.heading{
 	  margin: auto;
-	  padding: $xl-space 0 ;
+	  padding: 40px 0 $xl-space 0 ;
 	  color: white;
 	  text-align: center;
 	  max-width: $lg-width;
 	  .lead {
 	  color: hsl(221,50%,92%);
-	  font-size: 20px;
+	  font-size: 22px;
+    font-weight: 100;
+    font-style: italic;
+font-family: $heading-style-1;
+	  
 	  }
 	}
 
@@ -130,21 +139,23 @@
   }
   .block-2{
 	padding: $xl-space 15px $lg-space 15px;
+	.tag{
+		border-radius: 3px;
+		
+	}
+	
 	.list-number{
 	  margin-top: $md-space;
 	  display: inline-block;
 	  width: 34px;
 	  height: 34px;
 	  border-radius:50%;
-	  color: $main-gray;
-	  border: 2px solid $main-gray;
+	  color: $secondary;
+	  border: 2px solid $secondary;
 	  text-align: center;
 	  font-size: 18px;
 	  line-height: 29px;
 	  margin-right: 5px;
-	}
-	h5 {
-	  font-size: 18px;
 	}
   }
   .block-3{
@@ -154,6 +165,28 @@
 	-o-background-size: cover;
 	background-size: cover;
 	padding: $xl-space;
+	
+	.card-body {
+	   padding: 0;
+	   h3 {
+	      margin-bottom: 30px;
+	   }
+	}
+	
+	ul {
+    font-family: $heading-style-1;
+    font-size: 17px;
+	    list-style-type: none;
+    padding-left: 0;
+}
+	
+	li {
+	
+	margin-bottom:19px;
+	border-bottom: 2px dashed $secondary;
+    padding-bottom: 17px;
+	}
+	
 
 	@media (max-width: 767px){
 	  padding: $lg-space 0;
@@ -178,8 +211,9 @@
 	img{
 	  &.featured{
 		display: block;
-		margin: $xl-space auto;
+		margin: 0 auto $xl-space;
 		width: 100%;
+		    max-width: 566px;
 	  }
 	}
 	.mid-content{
@@ -195,7 +229,7 @@
 	}
 	.card-header {
 	   font-size: 18px;
-       font-family: $heading-style-2;
+       font-family: $heading-style-1;
        padding: 26px;
        font-weight: bold;
 	}
@@ -234,7 +268,7 @@
 	}
   }
   .bio-section{
-	margin-top: $lg-space;
+	margin: $xl-space 0 $xl-space;
 
 	.heading,.subheading{
 	  text-align: center;
@@ -248,6 +282,7 @@
 	  &.slick-initialized {
 		visibility: visible;
 		opacity: 1;
+		font-family: $heading-font;
 	  }
 	  .card{
 		margin: auto;
@@ -264,8 +299,27 @@
 			display: block;
 			margin: 5px auto $lg-space ;
 		  }
+		  .name-text {
+		     font-weight:bold;
+			 color:black;
+		  }
 		  .text{
 			padding-bottom: 0;
+			font-family: "Montserrat",sans-serif;
+			span {
+			   font-size: 14px;
+			   font-weight:normal;
+			}
+			
+		  }
+		  name-text {
+		  color: black;
+		  font-weight: bold;
+		  span {
+		  font-size: 14px;
+    font-weight: normal;
+    color: #333;
+	}
 		  }
 
 		  .fa-ul{
@@ -299,12 +353,13 @@
 		.details{
 		  text-align: center;
 		  margin-right: 5px;
+		  font-family:$heading-font;
 		  p{
 			padding: 0;
-			font-family: $heading-style-2;
+			font-family: $heading-font;
 		  }
 		  .heading{
-			margin-top: 3px;
+			margin-top: 6px;
 			padding-bottom: 0;
 			line-height: 22px;
 		  }
@@ -332,6 +387,7 @@
 	  .content-container-right{
 		width: 70%;
 		float: right;
+		margin-bottom:25px;
 
 		@media (max-width: 767px) {
 		  width: 100%;
@@ -348,7 +404,6 @@
 				max-width: 100px;
 				height: auto;
 				border-radius: 50%;
-
 
 				&.source-img{
 				  max-width: 60px;
@@ -371,11 +426,10 @@
 
   }
   .insurance-section{
-	padding: $lg-space 0;
+	padding: $lg-space 0 15px;
 	background:white;
 	background-image: url(/wp-content/themes/journeyPure/assets/img/background-diagmonds.png);
-    border-bottom: 1px solid $border-color;
-    border-top: 1px solid $border-color;
+        box-shadow: 0px 2px 4px rgba(0,0,0,.18);
   }
   .block-4{
   	margin: $xl-space 0;
@@ -386,26 +440,79 @@
 		margin: auto;
 		display:block;
 		max-width: $lg-width;
-		font-family: $heading-style-2;
-    font-size: 18px;
+    font-size: 22px;
     color: #9A9C99;
+    letter-spacing: -1px;
+	margin-bottom: 20px;
 	  }
 	}
-	// FAQs in components
+
+	.faqs{
+	  .card{
+		border:none;
+
+		.card-header{
+		  margin-bottom: 0;
+		  cursor: pointer;
+		  background-color: white;
+		  padding: 22px 15px 12px;
+		  border-color: #333;
+
+		  .card-title{
+		   &:before{
+			 content: '\f068';
+			 @extend .font-awesome;
+			 display: inline-block;
+			 position: relative;
+			 left: -15px;
+			     background: $main-gray;
+    border-radius: 50%;
+    color: white;
+	    height: 40px;
+    width: 40px;
+    padding-top: 3px;
+	    text-align: center;
+		   }
+		 }
+
+		  &.collapsed{
+			.card-title{
+
+			  &:before{
+				content: '\f067';
+				color: white;
+				background: $primary;
+			  }
+			}
+		  }
+		}
+	  }
+	  .ask-a-question{
+		text-align: center;
+		margin: $lg-space auto;
+		.link{
+
+		}
+	  }
+	}
+
 	.location-information{
 	  .capacity{
-		border-left: 6px $secondary solid;
-
+		border-left: 6px $primary solid;
 		@extend .h1;
 		margin: $lg-space 0;
-		padding: $lg-space $md-space;
-		background: $primary;
-		color: white;
+		padding: $md-space;
+		background: $light-blue;
+		color: $primary;
 		margin-bottom: 0;
+		    font-size: 18px;
+    letter-spacing: 0;
 
 		i{
 		  display: inline-block;
 		  margin-right: 5px;
+		      font-size: 38px;
+    VERTICAL-ALIGN: MIDDLE;
 		}
 		span{
 		  display: block;

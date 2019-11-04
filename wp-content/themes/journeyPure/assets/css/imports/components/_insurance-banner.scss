@@ -13,6 +13,11 @@
 	}
   }
   p {
-  font-family: $heading-style-2;
+  font-family: $heading-font;
+  font-size: 14px;
+  color:black;
+  span {
+     color:$primary !important;
+  }
   }
 }

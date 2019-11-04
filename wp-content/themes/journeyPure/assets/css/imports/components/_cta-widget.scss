@@ -1,0 +1,109 @@
+.cta-widget{
+  z-index: 100;
+  background: $background-color;
+  padding: $md-space;
+  border-radius: 10px  10px 0 0;
+  position: fixed;
+  bottom: 0;
+  right: $md-space;
+  border: 1px  solid $border-color;
+  border-bottom: none;
+  color: $main-font;
+  font-weight: bold;
+  $base-size: 16;
+
+  .callout {
+	background-color: $accent;
+	color: white;
+	position: absolute;
+	padding:$sm-space $md-space;
+	line-height: 28px;
+	font-size: 24px;
+	border-radius: 5px;
+	top: -100%;
+	left:0;
+	right: 0;
+	font-weight: normal;
+	margin:-4px auto 0;
+	width: fit-content;
+
+	@media (max-width:767px) {
+	  min-width: 62px;
+	  text-align: center;
+	}
+
+	&.not-local{
+	  margin:0 auto 0;
+	  top: -49px;
+
+	}
+
+	.local-msg{
+	  display: block;
+	  font-size: 12px;
+	  line-height: 100%;
+	  margin: 0 0 5px;
+	}
+
+	.close-btn{
+	  position: absolute;
+	  color: white;
+	  right: 7px;
+	  top: -3px;
+	  cursor: pointer;
+	  outline: none;
+	  font-weight: lighter;
+	  font-size: 16px;
+	}
+	&:before {
+	  top: 100%;
+	  left: 50%;
+	  border: solid transparent;
+	  content: " ";
+	  height: 0;
+	  width: 0;
+	  position: absolute;
+	  pointer-events: none;
+	  margin-top: -1px;
+	}
+	&:before {
+	  border-top-color: $accent;
+	  border-width: 10px;
+	  margin-left: -10px
+	}
+  }
+  .chat-box{
+
+	i{
+	  font-size: ($base-size*2)+px;
+	  color: $accent;
+	  margin-right: $sm-space;
+	}
+	display: flex;
+	align-items: center;
+  }
+  .call-box{
+
+	i{
+	  font-size: $base-size+px;
+	  border-radius: 50%;
+	  width: ($base-size*2)+px;
+	  height: ($base-size*2)+px;
+	  line-height: ($base-size*2)+px;
+	  text-align: center;
+	  color: $background-color;
+	  background-color: $accent;
+	}
+	a{
+	  color: $main-font;
+	}
+  }
+
+  &.on{
+	.callout{
+	  i{
+		cursor: pointer;
+	  }
+	}
+  }
+}
