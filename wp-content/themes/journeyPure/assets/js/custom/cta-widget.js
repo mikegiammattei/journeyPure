@@ -10,6 +10,15 @@ function cta_widget() {
 		open : $(parentClass).find('.callout')
 	};
 
+	// Update callout width
+	setTimeout(function () {
+		//cta.callout.css({'width' : cta.el.outerWidth() + 'px'});
+	},500);
+
+	$(window).on('resize',function () {
+		cta.callout.css({'width' : cta.el.outerWidth() + 'px','left': '-2px'});
+	});
+
 	const startHtml = cta.callout.html();
 	const afterHtml = '<i class="fas fa-comments"></i>';
 
@@ -22,8 +31,8 @@ function cta_widget() {
 			lowerAmount = (cta.el.outerHeight());
 		}
 
-		cta.el.animate({'bottom' : '-' + lowerAmount + 'px'},400, function () {
-			cta.callout.html(afterHtml);
+		cta.callout.fadeOut( function () {
+			//cta.callout.html(afterHtml);
 		}).addClass('on');
 	});
 

@@ -1,35 +1,47 @@
 .cta-widget{
   z-index: 100;
   background: $background-color;
-  padding: $md-space;
-  border-radius: 10px  10px 0 0;
+  padding: 18px;
+  border-radius: 3px  3px 0 0;
   position: fixed;
   bottom: 0;
   right: $md-space;
-  border: 1px  solid $border-color;
+  border: 2px  solid $accent;
   border-bottom: none;
   color: $main-font;
   font-weight: bold;
   $base-size: 16;
+  
+ @media (max-width:427px) { 
+      width: 100%;
+    right: 0;
+	border-left:none;
+	border-right:none;
+	border-radius:0;
+}
+
+
+.call-button {
+   border-left: 2px dotted $accent;
+}
 
   .callout {
 	background-color: $accent;
 	color: white;
 	position: absolute;
-	padding:$sm-space $md-space;
-	line-height: 28px;
-	font-size: 24px;
-	border-radius: 5px;
-	top: -100%;
+	padding:8px 12px 10px;
+	line-height: 34px;
+	border-radius: 3px 3px 0 0;
+	top: -142%;
 	left:0;
 	right: 0;
 	font-weight: normal;
-	margin:-4px auto 0;
-	width: fit-content;
+	margin-left:-2px ;
+	width:101%;
+
 
 	@media (max-width:767px) {
 	  min-width: 62px;
-	  text-align: center;
 	}
 
 	&.not-local{
@@ -40,20 +52,27 @@
 
 	.local-msg{
 	  display: block;
-	  font-size: 12px;
-	  line-height: 100%;
-	  margin: 0 0 5px;
+	  font-size: 17px;
+	  line-height: 1.2;
+	  margin: 3px 0 5px;
+	  color: $light-accent;
+	  font-family:$heading-style-1; 
 	}
 
 	.close-btn{
 	  position: absolute;
-	  color: white;
-	  right: 7px;
-	  top: -3px;
+	  color: $main-font;
+	  right: 6px;
+	  top: 6px;
 	  cursor: pointer;
 	  outline: none;
-	  font-weight: lighter;
-	  font-size: 16px;
+	  font-weight: bold;
+	  font-size: 14px;
+	  background: $light-accent;
+      border-radius: 50%;
+      padding: 0 9px 0 10px;
+      opacity: .3;
+      line-height: 2;
 	}
 	&:before {
 	  top: 100%;

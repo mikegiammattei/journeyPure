@@ -57,6 +57,8 @@ class Bios
 				'posts_per_page' => 50,
 				'post_type' => 'bios',
 				'cat' => $categoryIDs,
+				'orderby' => 'publish_date',
+				'order' => 'ASC',
 			);
 			$wp_query = new \WP_Query( $args );
 

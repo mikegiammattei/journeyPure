@@ -1,7 +1,7 @@
 homepage();
 function homepage() {
 	const pageId = '#homepage';
-	if($(pageId).length > 0){
+	/*if($(pageId).length > 0){
 
 		const SLIDER  = $(pageId + " #homepage-above-fold-slider");
 		const SLIDER2  = $(pageId + " #homepage-multi-gallery");
@@ -50,11 +50,11 @@ function homepage() {
 
 		});
 
-	}
+	}*/
 
-	homepageReviewSlide();
+	//homepageReviewSlide();
 	function homepageReviewSlide() {
-		const PAGE_ID = pageId;
+		/*const PAGE_ID = pageId;
 		const SLIDER = PAGE_ID +' .review-slide';
 		const PREV_BTN = PAGE_ID + " .review-slide-container .see-less-btn";
 		const NEXT_BTN = PAGE_ID + " .review-slide-container .see-more-btn";
@@ -120,8 +120,8 @@ function homepage() {
 				});
 
 			}, 600);
-		}
-
+		}*/
 	}
+
 }
 

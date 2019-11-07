@@ -14,7 +14,11 @@ if(isset($Location)){
 }
 
 ?>
-
+<?php
+	/*require_once(get_stylesheet_directory() . "/classes/UploaderReview.php");
+	$UploaderReview  = new \Uploader\Review();
+	$UploaderReview->process();*/
+?>
 <header>
 	<div class="container ">
 		<div class="row align-items-center justify-content-between">

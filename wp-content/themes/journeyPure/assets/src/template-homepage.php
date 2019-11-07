@@ -15,25 +15,23 @@ get_header();
 <div id="homepage">
 	<main>
 
-
 		<?php $restApiPath = 'http://journeypure.net/rest-api'; ?>
 		<section class="above-fold">
 			<div class="default-container" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/img/home-temp.jpg')">
 				<div class="container">
 					<div class="content">
-						<h1 class="heading text-primary">Get Your Life Back</h1>
-						<div class="lead text-primary">
-							Your #1 Choice for <br>
-							Drug & Alcohol Treatment
+						<h1 class="heading text-primary">Get Your Life Back on Track</h1>
+						<div class="h3 text-primary">
+							Your #1 Choice for Drug & Alcohol Treatment
 						</div>
 						<div class="feature">
 							<div class="row">
 								<div class="col-md-6 d-flex align-items-stretch">
 									<div class="card transparent">
 										<div class="card-body">
-											<h2>This is the heading text for the homepage above the fold section.</h2>
-											<p>Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
-											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+											<h5>If you're looking for help that actually helps you, you're in the right place.</h5>
+											<p>Treatment here is covered by insurance — backed by a 99% satisfaction rating and hundreds of positive reviews online.</p>
+											<p>When you're ready to talk about doing something different, give us a call. We have both inpatient rehabs and outpatient clinics to meet you where you're at. You don't have to be committed to coming here or even to getting treatment to reach out.</p>
 										</div>
 										<?php if($Homepage->ratings): ?>
 											<div class="rating-section">
@@ -54,6 +52,7 @@ get_header();
 																				<?php for($i=0; $i < $rating->stars; $i++): ?>
 																					<i class="fas fa-star"></i>
 																				<?php endfor; ?>
+																				<span class="star-txt-color"><?php echo $rating->number_rating; ?></span>
 																			<?php else: ?>
 																				<p class="text-value"><?php echo $rating->line_2_text; ?></p>
 																			<?php endif; ?>
@@ -72,50 +71,9 @@ get_header();
 									</div>
 								</div>
 								<div class="col-md-6 d-flex align-items-stretch">
-									<div class="card transparent" >
-										<div class="card-body" >
-											<div id="homepage-above-fold-slider">
-												<div class="slide-item">
-													<div class="slide-img" data-base-img="https://images.pexels.com/photos/2983461/pexels-photo-2983461.jpeg?cs=srgb&dl=adorable-afro-hair-beautiful-2983461.jpg&fm=jpg">
-														<div class="slide-tag">
-															<div class="row justify-content-between no-gutters">
-																<div class="col-6 d-flex align-items-stretch item-info-container">
-																	<div class="item-info">
-																		<span class="name">Person One</span>
-																		<span class="info">Alumni Sober Since 2011</span>
-																	</div>
-																</div>
-																<div class="col-6 d-flex align-items-stretch item-mark-container">
-																	<div class="item-mark">
-																		<span class="mark-item">10k+ Success Stories</span>
-																		<span class="see-more-link ">See more <i class="fas fa-long-arrow-alt-right"></i></span>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="slide-item">
-													<div class="slide-img" data-base-img="/wp-content/themes/journeyPure/assets/img/journeyPure333.png">
-														<div class="slide-tag">
-															<div class="row justify-content-between no-gutters">
-																<div class="col-6 d-flex align-items-stretch item-info-container">
-																	<div class="item-info">
-																		<span class="name">Person Two</span>
-																		<span class="info">Alumni Sober Since 2011</span>
-																	</div>
-																</div>
-																<div class="col-6 d-flex align-items-stretch item-mark-container">
-																	<div class="item-mark">
-																		<span class="mark-item">10k+ Success Stories</span>
-																		<span class="see-more-link ">See more <i class="fas fa-long-arrow-alt-right"></i></span>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
+									<div class="card card-body h-100 justify-content-center transparent" style="width: 100%;">
+										<div class="embed-responsive embed-responsive-16by9">
+											<iframe class="embed-responsive-item" src="" data-src="https://www.youtube.com/embed/Gd1Dza355X8?rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 										</div>
 									</div>
 								</div>
@@ -133,41 +91,41 @@ get_header();
 		<section class="block-1">
 			<div class="container">
 				<div class="header">
-					<h3 class="heading text-primary">Get Your Life Back</h3>
-					<div class="lead text-primary">
-						Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+					<div class="lead">
+						"Everyone comes in overwhelmed, but looking to make big changes quickly. This is where it starts. Where you learn to harness and hold on to hope."
 					</div>
 				</div>
 
 
 				<div class="media d-inline-flex">
-					<img class="mr-3" src="/wp-content/uploads/2019/10/myAvatar-1-150x150.png" alt="Generic placeholder image">
+					<img class="mr-3" src="/wp-content/uploads/2019/11/kevin-lee.jpg" alt="Generic placeholder image">
 					<div class="media-body ">
-						<h5 class="mt-0">John Smith</h5>
-						<a href="/" class="btn btn-primary btn-sm"><i class="fab fa-facebook"></i> Facebook</a> 200k Success stories
+						<h5 class="mt-0">Kevin D. Lee</h5>
+						<p>CEO & Founder</p>
 					</div>
 				</div>
 			</div>
 		</section>
 		<section class="block-2">
 			<div class="container">
-				<h3 class="heading-prime h1">Subheader for section</h3>
+
 				<div class="row">
 					<div class="col-md-6">
+					<h5 class="heading-prime h1">Let's talk about the facts</h5>
 						<div class="details">
 							<?php
 								$listItems = array();
 								$listItems[] = array(
-									'heading' => "One Box Title Section",
-									'content' => "The content for box one. The content for box one. The content for box one. The content for box one. The content for box one."
+									'heading' => "You're TWICE as likely to get better here",
+									'content' => "According to the <a href=\"https://www.drugabuse.gov/publications/principles-drug-addiction-treatment-research-based-guide-third-edition/frequently-asked-questions/how-effective-drug-addiction-treatment\" target=\"_blank\">National Institute on Drug Abuse</a>, you can expect as little as 40% of people to be sober 6 months after starting treatment at another facility. That's not good. At JourneyPure, our success rate is 84%, and we stay in touch in case you do have a slip. "
 								);
 								$listItems[] = array(
-									'heading' => "Two Box Title Section",
-									'content' => "The content for box one. The content for box one. The content for box one. The content for box one. The content for box one."
+									'heading' => "Your treatment is backed by 6K+ success stories",
+									'content' => "We've helped thousands of people just like you get healthy and stay healthy.  We know what we're doing. We've seen it all. And, we can help you too."
 								);
 								$listItems[] = array(
-									'heading' => "Three Box Title Section",
-									'content' => "The content for box one. The content for box one. The content for box one. The content for box one. The content for box one."
+									'heading' => "We're 99% sure you'll be satisfied with your care",
+									'content' => "You deseve healthcare that listens and constantly improves.  The satisfaction rate here holds steady at 99%."
 								);
 							?>
 							<?php if($listItems): ?>
@@ -183,9 +141,9 @@ get_header();
 							<?php endif; ?>
 						</div>
 						<div class="featured-on">
-							<h4 class="heading line-heading">
+							<h5 class="heading line-heading">
 								<span>Featured On</span>
-							</h4>
+							</h5>
 							<div class="media-outlets">
 								<div class="row no-gutters">
 									<div class="media-con">
@@ -243,119 +201,7 @@ get_header();
 						</div>
 					</div>
 					<div class="col-md-6">
-						<div id="homepage-multi-gallery" class="multi-gallery default">
-							<div class="slide">
-								<div class="row no-gutters">
-									<div class="col-12">
-										<a data-fancybox="gallery" href="/wp-content/themes/journeyPure/assets/img/journeyPure333.png">
-											<div class="slide-img top-img" style="background-image: url('/wp-content/themes/journeyPure/assets/img/journeyPure333.png');">
-												<div class="img-text">
-													<span class="heading h3">Outpatient</span>
-												</div>
-											</div>
-										</a>
-									</div>
-									<div class="col-6">
-										<a data-fancybox="gallery" href="/wp-content/themes/journeyPure/assets/img/jp-cta-img-1920x628-wg.jpg">
-											<div class="slide-img left-img" style="background-image: url('/wp-content/themes/journeyPure/assets/img/jp-cta-img-1920x628-wg.jpg');">
-												<div class="img-text">
-													<span class="heading h3">Beta</span>
-												</div>
-											</div>
-										</a>
-									</div>
-									<div class="col-6">
-										<a data-fancybox="gallery" href="/wp-content/themes/journeyPure/assets/img/jp-header-1920x1080.jpg">
-											<div class="slide-img right-img" style="background-image: url('/wp-content/themes/journeyPure/assets/img/jp-header-1920x1080.jpg');">
-											</div>
-										</a>
-									</div>
-									<div class="col-12">
-										<a data-fancybox="gallery" href="/wp-content/themes/journeyPure/assets/img/treatment1.jpg">
-											<div class="slide-img bottom-img" style="background-image: url('/wp-content/themes/journeyPure/assets/img/treatment1.jpg');">
-												<div class="img-text">
-													<span class="heading h3">Other Text</span>
-												</div>
-											</div>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="slide">
-								<div class="row no-gutters">
-									<div class="col-12">
-										<a data-fancybox="gallery" href="/wp-content/themes/journeyPure/assets/img/journeyPure333.png">
-											<div class="slide-img top-img" style="background-image: url('/wp-content/themes/journeyPure/assets/img/journeyPure333.png');">
-												<div class="img-text">
-													<span class="heading h3">Outpatient</span>
-												</div>
-											</div>
-										</a>
-									</div>
-									<div class="col-6">
-										<a data-fancybox="gallery" href="/wp-content/themes/journeyPure/assets/img/jp-cta-img-1920x628-wg.jpg">
-											<div class="slide-img left-img" style="background-image: url('/wp-content/themes/journeyPure/assets/img/jp-cta-img-1920x628-wg.jpg');">
-												<div class="img-text">
-													<span class="heading h3">Beta</span>
-												</div>
-											</div>
-										</a>
-									</div>
-									<div class="col-6">
-										<a data-fancybox="gallery" href="/wp-content/themes/journeyPure/assets/img/jp-header-1920x1080.jpg">
-											<div class="slide-img right-img" style="background-image: url('/wp-content/themes/journeyPure/assets/img/jp-header-1920x1080.jpg');">
-											</div>
-										</a>
-									</div>
-									<div class="col-12">
-										<a data-fancybox="gallery" href="/wp-content/themes/journeyPure/assets/img/treatment1.jpg">
-											<div class="slide-img bottom-img" style="background-image: url('/wp-content/themes/journeyPure/assets/img/treatment1.jpg');">
-												<div class="img-text">
-													<span class="heading h3">Other Text</span>
-												</div>
-											</div>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="slide">
-								<div class="row no-gutters">
-									<div class="col-12">
-										<a data-fancybox="gallery" href="/wp-content/themes/journeyPure/assets/img/journeyPure333.png">
-											<div class="slide-img top-img" style="background-image: url('/wp-content/themes/journeyPure/assets/img/journeyPure333.png');">
-												<div class="img-text">
-													<span class="heading h3">Outpatient</span>
-												</div>
-											</div>
-										</a>
-									</div>
-									<div class="col-6">
-										<a data-fancybox="gallery" href="/wp-content/themes/journeyPure/assets/img/jp-cta-img-1920x628-wg.jpg">
-											<div class="slide-img left-img" style="background-image: url('/wp-content/themes/journeyPure/assets/img/jp-cta-img-1920x628-wg.jpg');">
-												<div class="img-text">
-													<span class="heading h3">Beta</span>
-												</div>
-											</div>
-										</a>
-									</div>
-									<div class="col-6">
-										<a data-fancybox="gallery" href="/wp-content/themes/journeyPure/assets/img/jp-header-1920x1080.jpg">
-											<div class="slide-img right-img" style="background-image: url('/wp-content/themes/journeyPure/assets/img/jp-header-1920x1080.jpg');">
-											</div>
-										</a>
-									</div>
-									<div class="col-12">
-										<a data-fancybox="gallery" href="/wp-content/themes/journeyPure/assets/img/treatment1.jpg">
-											<div class="slide-img bottom-img" style="background-image: url('/wp-content/themes/journeyPure/assets/img/treatment1.jpg');">
-												<div class="img-text">
-													<span class="heading h3">Other Text</span>
-												</div>
-											</div>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
+						<img src="/wp-content/uploads/2019/11/rehab-outpatient-collage.png" />
 					</div>
 				</div>
 			</div>
@@ -365,7 +211,7 @@ get_header();
 				<div class="parent">
 					<div class="content-container-left">
 						<div class="details">
-							<h3 class="h2 heading">Reviews</h3>
+							<h5 class="h1">Reviews</h5>
 							<div class="tallies">
 								<data class="avg display-4" value="4.8">4.8</data>,
 								<data class="cap" value="5"> 5</data>
@@ -428,15 +274,20 @@ get_header();
 		<section class="block-3">
 			<div class="container">
 				<div class="heading">
-					<h3 class="h1">Why it works?</h3>
+					<h5 class="h1">Treatment Here Works</h5>
+
 				</div>
 				<div class="row">
 					<div class="col-lg-6">
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-						<div class="h4">Header Break</div>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-						<p class="font-italic">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-						<p class="font-italic font-weight-bold">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+					<h3>Even if you've been to dozens of other facilities before, the treatment here is different.  We set industry standards and hold ourselves accountable for your long-term success.</h3>
+						<div class="h5">Evidence-Based Treatments</div>
+						<p>A safe environment that combines medical care, holistic healing and various intense daily therapies is what works. While we constantly improve and test new options, our programs are fully guided by science.</p>
+						<div class="h5">Personalized Treatment Plans</div>
+						<p>Addiction and the issues behind it are very personal. You get the combination of proven treatments that maximize your time here. From virtual-reality therapy for combat veterans to imago marriage counseling, we'll do whatever it takes to help you get healthy and stay healthy.</p>
+						<div class="h5">World-Renowned Experts</div>
+						<p>We've built quite a reputation over the last decade, known throughout the country for quality care. That reputation attracts the county's leading addiction professionals. If you've sought treatment before, you know how critical it is to get individualized attention from people that actually care.</p>
+						<div class="h5">Active Accountability for 1 Year </div>
+						<p>Your Recovery Coach can be reached 24/7 through our free alumni app. The app also offers interactive games and logs that strengthen your mental health and reward you for continuing healthy habits.    </p>
 					</div>
 					<div class="col-lg-6">
 						<div class="bio-default">
@@ -448,7 +299,7 @@ get_header();
 											<figcaption class="name"><?php echo $bio->name; ?></figcaption>
 										</figure>
 										<?php if($bio->sober_since): ?>
-											<span class="sub-caption">Sober since: <?php echo $bio->sober_since ?></span>
+											<span class="sub-caption">Sober since <span class="text-uppercase"> <?php echo $bio->sober_since ?></span></span>
 										<?php endif; ?>
 									</div>
 								</div>
@@ -462,26 +313,26 @@ get_header();
 		<section class="block-4">
 			<div class="container">
 				<div class="service-container">
-					<h3 class="heading">It's Time to Get Help</h3>
+					<h5 class="heading">It's Time to Get Help</h5>
 					<div class="row">
 						<div class="col-md-3">
 							<div class="box">
-								<i class="fab fa-laravel"></i>  Service One
+								<i class="fas fa-user-md"></i>  Medical Detox
 							</div>
 						</div>
 						<div class="col-md-3">
 							<div class="box">
-								<i class="fas fa-anchor"></i>  Service Two
+								<i class="fas fa-home"></i>  Inpatient Rehabs
 							</div>
 						</div>
 						<div class="col-md-3">
 							<div class="box">
-								<i class="fab fa-accusoft"></i>  Service Three
+								<i class="fas fa-clinic-medical"></i>  Outpatient Clinics
 							</div>
 						</div>
 						<div class="col-md-3">
 							<div class="box last">
-								<i class="fas fa-store"></i>Service Four
+								<i class="fas fa-mobile-alt"></i> App + Recovery Coach
 							</div>
 						</div>
 					</div>
@@ -490,7 +341,7 @@ get_header();
 		</section>
 		<section class="faqs">
 			<div class="container">
-				<h3 class="heading">What's holding you back?</h3>
+				<h5 class="h1 text-center">What's holding you back?</h5>
 				<div class="accordion" id="location-faq-rehab">
 					<?php foreach ( $Homepage->faqs as $index => $faq) : ?>
 						<div class="card">
@@ -507,7 +358,8 @@ get_header();
 					<?php endforeach; ?>
 				</div>
 				<div class="ask-a-question">
-					<span class="link" data-toggle="modal" data-target="#user-question-form-container">Ask a question</span>
+										<span class="btn btn-primary" data-toggle="modal" data-target="#user-question-form-container"><i class="fas fa-comment-dots"></i> Ask a question</span>
+
 				</div>
 			</div>
 		</section>

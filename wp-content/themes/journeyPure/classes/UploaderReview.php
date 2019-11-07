@@ -192,8 +192,9 @@ class Review
 	public function process(){
 
 		//$reviewArr = array_map('str_getcsv', file($_SERVER['DOCUMENT_ROOT'] . '/DataFiles/fl-reviews.csv'));
-		$reviewArr = array_map('str_getcsv', file($_SERVER['DOCUMENT_ROOT'] . '/DataFiles/tn-reviews.csv'));
+		//$reviewArr = array_map('str_getcsv', file($_SERVER['DOCUMENT_ROOT'] . '/DataFiles/tn-reviews.csv'));
 		//$reviewArr = array_map('str_getcsv', file($_SERVER['DOCUMENT_ROOT'] . '/DataFiles/ky-reviews.csv'));
+		$reviewArr = array_map('str_getcsv', file($_SERVER['DOCUMENT_ROOT'] . '/DataFiles/homepage-reviews.csv'));
 
 
 		foreach ($reviewArr as $index => $item):
