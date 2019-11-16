@@ -6,4 +6,98 @@
 	  display: none;
 	}
   }
+  .modal-title {
+      text-align: center;
+    width: 100%;
+	    margin-left: 2rem;
+	}
+  p{
+  text-align:center;
+  margin: 0 auto;
+  max-width:350px;
+  margin-top:$lg-space;
+  }
+  
+ .modal-footer {
+    border-top: none;
+	padding-top: 0;
+	button {
+	margin: 0 auto;
+	padding: 10px 32px;
+	}
+	
+
+}
+#steps {
+       overflow: auto;
+       padding: 0;
+    
+		.step.one {
+
+			text-align: right;
+		} 
+		.step.one:after {
+			content: "";
+			position: absolute;
+			height: 0;
+			margin: -5px 0 0 16px;
+			border: 14px solid transparent;
+			border-left-color: gray;
+			z-index: 34;
+		}
+		.step {
+			padding: 5px 16px;
+			display: inline-block;
+			list-style: none;
+			font-size: 14px;
+			width: 50%;
+			margin: 8px 0 0 0;
+			float: left;
+			-webkit-transition: all .3s ease;
+			-moz-transition: all .3s ease;
+			-ms-transition: all .3s ease;
+			-o-transition: all .3s ease;
+			transition: all .3s ease;
+			text-shadow: none;
+			line-height: inherit;
+			font-weight: inherit;
+			text-align: left;
+			line-height: 19px;
+		}
+		.step.two {
+			background: #cdcdcd;
+			color: gray;
+		}
+  		.step{
+		  &.on{
+			background: gray;
+			color: #fff;
+		  }
+		}
+
+	}
+	.bottom-text {
+		width:100%;
+	}
+	.phone {
+		color: $primary;
+		border: 2px solid $primary;
+		border-radius: 26px;
+		padding: 7px 21px;
+    margin: 0 auto;
+    font-size: 26px;
+    width: 287px;
+    display: block;
+    text-align: center;
+	}
+	.phone:before {
+		content: "";
+		color: gray;
+		font-family: "Font Awesome 5 Free";
+		font-weight: 900;
+		display: inline-block;
+		margin-right: 10px;
+		position: relative;
+		top: 1px;
+	}
 }

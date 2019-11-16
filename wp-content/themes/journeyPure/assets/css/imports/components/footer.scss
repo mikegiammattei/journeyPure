@@ -15,7 +15,7 @@ footer{
 
   .sub-tier{
 	background: $secondary;
-	border-top: 2px solid $primary;
+	border-top: 8px solid $primary;
 	color: white;
 	padding: $lg-space 0;
 
@@ -23,7 +23,7 @@ footer{
 
 	  .subheading{
 		display: inline-block;
-		margin-left: 10px;
+		margin-left: 5px;
 	  }
 	  .heading{
 		color: white;
@@ -41,6 +41,9 @@ footer{
 		color: white;
 		margin-top: $sm-space;
 		display: inline-block;
+		z-index: 100;
+		position: relative;
+
 		i{
 		  position: relative;
 		  display: inline-block;
@@ -59,10 +62,13 @@ footer{
   }
   .last-tier{
 	background: white;
-	padding: $lg-space 0;
+	padding: 35px 0;
 	.heading{
 	  color: $primary;
 	  @extend .h4;
+	  a {
+	  font-weight:100 !important;
+	  }
 	}
 	.copyright{
 	  color: $main-gray;

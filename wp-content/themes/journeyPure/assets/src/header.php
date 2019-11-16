@@ -1,7 +1,7 @@
 <?php require_once(get_stylesheet_directory() . "/head.php"); ?>
 <?php
 
-$hideLocSub = false;
+$hideLocSub = true;
 $hideContactInfo = false;
 global $Location;
 if(isset($Location)){
@@ -77,14 +77,6 @@ if(isset($Location)){
 							</ul>
 						</nav>
 					</div>
-					<?php if(!$hideContactInfo): ?>
-					<div class="col-auto d-md-none d-lg-block">
-						<section class="contact">
-							<a class="contact-link" href="<?php the_permalink(54); ?>"><?php echo get_the_title(54); ?></a>
-							<a class="phone" href="<?php echo get_option('defaultPhone'); ?>"><?php echo get_option('defaultPhone'); ?></a>
-						</section>
-					</div>
-					<?php endif; ?>
 				</div>
 			</div>
 		</div>

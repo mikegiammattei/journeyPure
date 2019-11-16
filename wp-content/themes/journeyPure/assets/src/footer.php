@@ -19,7 +19,7 @@
 								<iframe class="ctm-call-widget" src="https://app.calltrackingmetrics.com/form_reactors/FRT472ABB2C5B9B141A95E7A133293232FB64726C81D4381AEFF2617EDD86B68F50" style="width:100%;height:300px;border:none"></iframe>
 							</div>
 							<?php if(!isset($Footer->controls->hide_not_ready_link)): ?>
-							<span class="not-ready-link"><i class="fas fa-question"></i> Not Ready? Click here.</span>
+							<span class="not-ready-link" data-toggle="modal" data-target="#not-ready-modal"><i class="fas fa-question"></i> Not Ready? Click here.</span>
 							<?php endif;?>
 						</div>
 					</div>
@@ -31,8 +31,8 @@
 				<div class="row justify-content-between align-items-center">
 					<div class="col-sm-6">
 						<span class="heading">
-							Types of Drug Addiction<br>
-							Dual Diagnosis
+							<a href="/types-of-drug-abuse/">Types of Drug Abuse</a><br>
+							<a href="/effects-opioids-body/">Effects of Opioids on the Body</a>
 						</span>
 						<div class="copyright">
 							&copy; <?php echo date('Y'); ?> JourneyPure | <a href="/terms">Terms </a> 	&middot;  <a href="/privacy-policy">Privacy Policy </a> <button class="btn btn-dark btn-sm " onclick="topFunction()"><i class="fas fa-chevron-up"></i> Back to Top</button>
@@ -47,6 +47,8 @@
 	</footer>
 <?php include_once(get_stylesheet_directory() . '/assets/src/includes/components/cta-widget.php'); ?>
 <?php include_once(get_stylesheet_directory()  . '/assets/src/includes/components/leave-a-review.php'); ?>
+<?php include_once(get_stylesheet_directory()  . '/assets/src/includes/components/not-ready-component.php'); ?>
+<?php include_once(get_stylesheet_directory()  . '/assets/src/includes/components/exit-modal.php'); ?>
 
 </div> <?php /** end of main wrapper */ ?>
 <iframe class="ctm-call-widget" src="https://130400.tctm.co/form/FRT472ABB2C5B9B141A95E7A133293232FBB3EFEC59E103154BC3C3A194C8DE5FD3.html" style="display:none"></iframe>

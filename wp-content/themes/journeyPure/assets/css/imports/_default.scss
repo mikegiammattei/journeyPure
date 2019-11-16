@@ -39,8 +39,9 @@ h5,.h5{
   color: $main-font;
   font-family: $heading-style;
   font-size : 22px;
-  line-height : 1.5;
+  line-height : 1.25;
   font-weight: bold;
+  margin-bottom: 15px;
 }
 p{
   color: $main-font;
@@ -65,7 +66,6 @@ small{
   line-height : 1.5;
 }
 a{
-  display: inline-block;
   color: $primary;
   font-weight:bold;
 
@@ -186,7 +186,6 @@ hr{
 }
 // Links
 .link{
-  @extend p;
   color: $primary;
   font-weight: bold;
   cursor: pointer;
@@ -277,16 +276,16 @@ hr{
 	  width: 34px;
 	  height: 34px;
 	  border-radius:50%;
-	  color: $gray-500;
-	  border: 2px solid $border-color;
+	  color: $secondary;
 	  text-align: center;
-	  font-size: 20px;
-	  line-height: 27px;
+	  font-size: 18px;
+	  line-height: 29px;
 	  margin-right: 5px;
+	      border: 2px solid #00953b;
 
 	  &.colored{
 		color: white;
-		background-color: $gray-500;
+		background-color: $secondary;
 	  }
 	}
 
@@ -345,7 +344,7 @@ hr{
 
 // Captcha
 .captcha-container {
-  margin-top: $lg-space;
+  margin:5px 0 15px;
 
   .bad-captcha {
 	@extend .invalid-feedback;
@@ -380,6 +379,8 @@ figure{
 }
 
 .modal{
+  padding-right: 0px !important;
+
   .modal-content{
 	border:none;
   }

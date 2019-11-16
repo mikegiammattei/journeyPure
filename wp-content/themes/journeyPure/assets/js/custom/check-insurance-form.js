@@ -93,6 +93,7 @@ function checkInsurance(){
 						let treatmentFor = thisForm.find('[name="ins-treatment-for"]:checked').val();
 
 						addRequiredToInputs(thisForm,treatmentFor);
+						thisForm.find('.step.two').addClass('on');
 
 						// Update the form state for part 2
 						formState = 2;

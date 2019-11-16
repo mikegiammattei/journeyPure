@@ -25,6 +25,7 @@ class Reviews
 		global $post;
 		$this->post = $post;
 		$this->fields = get_fields($post->ID);
+
 	}
 	public function setAvgRating($reviews){
 		$total = 0;
@@ -88,16 +89,44 @@ class Reviews
 			// Get just Post IDs
 			$this->reviewPostsIds = wp_list_pluck( $wp_query->posts, 'ID' );
 
+
 			$this->setReviews();
+
+
 		}
 
 	}
 	public function setPostByPostId($posts){
-		$this->reviewPostsIds = wp_list_pluck( $posts, 'ID' );
+	$this->reviewPostsIds = wp_list_pluck( $posts, 'ID' );
+
+	if(!empty($this->reviewPostsIds)){
+		$this->setReviews();
+	}
+
+}
+	public function setPostTag($tagName){
+		$args=array(
+			'posts_per_page' => 50,
+			'post_type' => 'reviews',
+			'orderby' => 'publish_date',
+			'order' => 'ASC',
+			'tax_query' => array(
+				array(
+					'taxonomy' => 'post_tag',
+					'field'    => 'name',
+					'terms'    => $tagName,
+				),
+			),
+		);
+		$wp_query = new \WP_Query( $args );
+
+		// Get just Post IDs
+		$this->reviewPostsIds = wp_list_pluck( $wp_query->posts, 'ID' );
 
 		if(!empty($this->reviewPostsIds)){
 			$this->setReviews();
 		}
+
 
 	}
 }

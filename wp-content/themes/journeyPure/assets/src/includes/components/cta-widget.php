@@ -9,7 +9,9 @@ $Chat = new \CTA\Chat();
 ?>
 <div class="cta-widget">
 	<div class="callout <?php echo ($Chat->isLocal) ? : ' not-local'; ?> h5">
-		Get Help Now <span class="close-btn">x</span>
+		Get Help Now <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+					<span class="close-btn">×</span>
+				</button>
 		<?php if($Chat->isLocal): ?>
 			<span class="local-msg">We're <i>in-network</i> with insurances and have a location near <?php echo ltrim($Chat->getCity()); ?>.</span>
 		<?php endif; ?>
@@ -23,7 +25,7 @@ $Chat = new \CTA\Chat();
 			</div>
 			<div class="col-auto call-button">
 				<div class="call-box">
-					<i class="fas fa-phone"></i> Call <a class="phone" href="<?php echo get_option('defaultPhone'); ?>"><?php echo get_option('defaultPhone'); ?></a>
+					<i class="fas fa-phone"></i> Call <a class="phone" href="tel:<?php echo get_option('defaultPhone'); ?>"><?php echo get_option('defaultPhone'); ?></a>
 				</div>
 			</div>
 		</div>

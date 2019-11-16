@@ -1,29 +1,68 @@
 .faqs{
+
   .card{
 	border:none;
 
+	.question-box{
+	  display: table;
+	  .icon{
+		display: table-cell;
+		width: 30px;
+		vertical-align: top;
+
+		i{
+
+		  font-size: 26px;
+		  position: relative;
+		  margin-right: $sm-space;
+		  display: none;
+		  top: 2px;
+
+		  &.on{
+			display: inline-block;
+			color: $secondary;
+		  }
+		}
+	  }
+	  .content{
+		display: table-cell;
+
+	  }
+	}
 	.card-header{
 	  margin-bottom: 0;
 	  cursor: pointer;
 	  background-color: white;
 	  padding-top: 22px;
 
+
 	  .card-title{
-		&:before{
+		/*&:before{
 		  content: '\f068';
 		  @extend .font-awesome;
 		  display: inline-block;
 		  position: relative;
-		  left: -15px;
-		}
+		  left: -10px;
+		  background: #9a9c99;
+		  border-radius: 50%;
+		  color: #fff;
+		  height: 25px;
+		  width: 25px;
+		  padding-top: 3px;
+		  text-align: center;
+		  font-size: 14px;
+
+		}*/
 	  }
 
 	  &.collapsed{
-		.card-title{
-
-		  &:before{
-			content: '\f067';
-			color: $secondary;
+		i{
+		  color: $primary;
+		  &.on{
+			display: none;
+		  }
+		  &.off{
+			display: inline-block;
 		  }
 		}
 	  }

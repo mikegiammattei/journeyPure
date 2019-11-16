@@ -2,7 +2,7 @@
 define("THEME_DIR", get_template_directory_uri());
 define("THEME_PATH", get_template_directory());
 define("GOOGLE_API", 'AIzaSyDwoQ63Mff3mW9-u2fQUhnlMBmX752RKds');
-
+define("WP_UPLOAD_PATH", wp_upload_dir()['baseurl']);
 
 /*--- REMOVE GENERATOR META TAG ---*/
 remove_action('wp_head', 'wp_generator');
@@ -68,7 +68,8 @@ function enqueue_scripts() {
 	wp_localize_script( 'custom-script', 'jp_rest_details', array(
 		'rest_url' => esc_url_raw( rest_url() ),
 		'nonce' => wp_create_nonce( 'wp_rest' ),
-		'current_date' => date("m-d-Y")
+		'current_date' => date("m-d-Y"),
+		'google_API_key'  => GOOGLE_API
 	) );
 
 	global $jsFile;

@@ -19,6 +19,8 @@ class Homepage
 	public $reviews;
 	public $bios;
 	public $faqs;
+	public $reviewAvg;
+	public $reviewTotal;
 
 	public function __construct(){
 		$this->setRatings();
@@ -43,6 +45,9 @@ class Homepage
 		$Reviews->setPostByCategoryId($ReviewsCategoryIDs);
 
 		$this->reviews = $Reviews->reviews;
+
+		$this->reviewAvg = $Reviews->getAvgRating();
+		$this->reviewTotal= $Reviews->getTotalReviews();
 
 	}
 	private function setBios()

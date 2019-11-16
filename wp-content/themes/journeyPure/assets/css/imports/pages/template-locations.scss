@@ -1,0 +1,8 @@
+#locations-page{
+  // Import above fold  styles that are global
+  @import "../page-parts/above-fold";
+
+  .demo-block{
+	padding: $xl-space 0;
+  }
+}

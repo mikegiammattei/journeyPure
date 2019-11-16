@@ -10,6 +10,7 @@ function create_locations() {
 				'singular_name' => __( 'Location' )
 			),
 			'public'             => true,
+			'hierarchical'       => false,
 			'publicly_queryable' => true,
 			'show_ui'            => true,
 			'show_in_menu'       => true,
@@ -17,8 +18,7 @@ function create_locations() {
 			'rewrite' => array('slug' => 'locations'),
 			'menu_icon' => 'dashicons-location-alt',
 			'capability_type'    => 'post',
-			'has_archive'        => true,
-			'hierarchical'       => false,
+			'has_archive'        => false,
 			'menu_position'      => null,
 			'show_in_rest'       => true,
 			'rest_base'          => 'locations-api',

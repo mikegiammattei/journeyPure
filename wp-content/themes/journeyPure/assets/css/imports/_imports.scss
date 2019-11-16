@@ -31,6 +31,8 @@
 @import "components/faqs";
 @import "components/cta-widget";
 @import "components/main-insurance-form";
+@import "components/modals/not-ready-modal";
+@import "components/modals/exit-modal";
 
 // Global Override
 @import "migrate-styles";
@@ -45,3 +47,6 @@
 // Pages
 @import "pages/single-locations";
 @import "pages/homepage";
+@import "pages/about-us";
+@import "pages/reviews";
+@import "pages/template-locations";

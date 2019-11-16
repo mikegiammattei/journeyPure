@@ -14,7 +14,7 @@ function create_reviews() {
 			'show_ui'            => true,
 			'show_in_menu'       => true,
 			'query_var'          => true,
-			'rewrite' => array('slug' => 'reviews'),
+			'rewrite' => array('slug' => 'review'),
 			'menu_icon' => 'dashicons-groups',
 			'capability_type'    => 'post',
 			'has_archive'        => true,
@@ -34,7 +34,7 @@ add_action( 'init', 'create_reviews' );
 require(__DIR__ . '/class.user-review.php');
 require(__DIR__ . '/class.user-review-type.php');
 
-// Add user faq to the sidebar
+// Add user review to the sidebar
 add_action('admin_menu', array('UserReviews','add_user_reviews'));
 
 // Register the user-faqs post type

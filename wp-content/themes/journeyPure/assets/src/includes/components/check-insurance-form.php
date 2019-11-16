@@ -2,26 +2,27 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header bg-primary ">
-				<h5 class="modal-title text-white" id="exampleModalLongTitle">Check Insurance</h5>
+				<h5 class="modal-title text-white" id="exampleModalLongTitle">Insurance Checker</h5>
 				<button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
+			<p>Does your insurance cover treatment? Use the form or call now to find out.<br />(100% confidential)</p>
 			<form data-user-form="check-insurance" class="needs-validation" novalidate>
 				<div class="modal-body">
 						<div class="alert alert-success text-center" style="border-radius: 0" role="alert">
-							<strong>Sent Successfully!</strong><br> Our admissions team will contact shortly.
+							<strong>Congrats on reaching out!</strong><br> The admissions team will get back to you right away.
 						</div>
 					<div class="part-one">
 						<div class="form-group">
 							<div class="form-row">
 								<div class="col-md-12">
-									<input type="text" class="form-control" id="ins-name" placeholder="Full name" required>
+									<input type="text" class="form-control" id="ins-name" placeholder="Your (Full) name" required>
 									<div class="valid-feedback">
 										Looks good!
 									</div>
 									<div class="invalid-feedback">
-										Your name is required.
+										Opps, can you fill in your name?
 									</div>
 								</div>
 							</div>
@@ -29,12 +30,12 @@
 						<div class="form-group">
 							<div class="form-row">
 								<div class="col-md-12">
-									<input type="text" class="form-control" id="ins-phone" placeholder="Phone" required>
+									<input type="text" class="form-control" id="ins-phone" placeholder="Your Phone" required>
 									<div class="valid-feedback">
 										Looks good!
 									</div>
 									<div class="invalid-feedback">
-										Your Phone is required.
+										We'll call or text you to confirm your benefits.
 									</div>
 								</div>
 							</div>
@@ -204,8 +205,13 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-					<button type="submit" class="btn btn-primary">Next</button>
+					<button type="submit" class="btn btn-secondary">Next</button>
+				</div>
+					<div class="bottom-text">
+					<ul id="steps"><li class="step one on"> Step 1</li><li class="step two"> <span class="text">Step 2</span></li></ul>
+					<p>Have a question about your policy, insurance or treatment? Get answers now.</p>
+					<a href="tel:8445054799" class="phone">(844) 505-4799</a>
+					<p><b>2</b> specialists available now</p>
 				</div>
 			</form>
 		</div>

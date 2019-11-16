@@ -57,86 +57,8 @@
 
   }
 
-  .above-fold{
-	background-color: $primary;
-
-	.top-content{
-	  position: relative;
-	  margin-top: -200px;
-	  @media (max-width: 767px) {
-		margin-top: -315px;
-	  }
-
-	  .headers{
-	  display:none;
-		@media (max-width: 767px) {
-		  text-align: center;
-		  margin-bottom: $lg-space;
-		  display:block;
-		}
-		.heading-1,.heading-2{
-		  color: white;
-		  margin: 0;
-		  font-family: helvetica;
-		  line-height: 1.25;
-		  font-size:17px;
-		  font-weight:bold;
-		      letter-spacing: -1px;
-			  text-shadow: 0px 4px 3px rgba(0,0,0,0.4), 0px 8px 13px rgba(0,0,0,0.1), 0px 18px 23px rgba(0,0,0,0.1);
-		}
-		.heading-2 {
-		font-weight:normal !important;}
-	  }
-	}
-	.img-container{
-	  width: 100%;
-	  background:  no-repeat center;
-	  -webkit-background-size: cover;
-	  -moz-background-size: cover;
-	  -o-background-size: cover;
-	  background-size: cover;
-	  height: 400px;
-	  border-radius: 0 0 50% 50%;
-	  box-shadow: -40px 6px 2px $secondary;
-
-	  @media (max-width: 767px) {
-		height: 375px;
-		border-radius: 0;
-		box-shadow: none;
-	  }
-	}
-
-	.heading{
-	  margin: auto;
-	  padding: 40px 0 $xl-space 0 ;
-	  color: white;
-	  text-align: center;
-	  max-width: $lg-width;
-	  .lead {
-	  color: hsl(221,50%,92%);
-	  font-size: 22px;
-    font-weight: 100;
-    font-style: italic;
-font-family: $heading-style-1;
-	  
-	  }
-	}
-
-	.rating-section{
-	  float: right;
-	  width: auto;
-	  max-width: 330px;
-	  /*position: absolute;
-	  right: 100px;
-	  margin-top: -200px;*/
-
-	 @media (max-width: 767px) {
-		width: 90%;
-	    float: none;
-		margin: auto;
-	  }
-	}
-  }
+  // Import above fold  styles that are global
+  @import "../page-parts/above-fold";
   .block-2{
 	padding: $xl-space 15px $lg-space 15px;
 	.tag{
@@ -382,6 +304,7 @@ font-family: $heading-style-1;
 	  .card-title {
 		  font-size:18px;
 		  margin-bottom:0;
+		  text-align:left;
 		  }
 
 	  .content-container-right{
@@ -400,8 +323,7 @@ font-family: $heading-style-1;
 			.author-info{
 			  margin-bottom: $lg-space;
 			  img{
-				width: 100%;
-				max-width: 100px;
+				width: 60px;
 				height: auto;
 				border-radius: 50%;
 
@@ -409,11 +331,13 @@ font-family: $heading-style-1;
 				  max-width: 60px;
 				  height: auto;
 				  float: right;
+				      border-radius: 0;
 				}
 			  }
 			}
 			.stars{
 			  color: $stars;
+			  text-align:left;
 			}
 		  }
 		}
@@ -440,10 +364,10 @@ font-family: $heading-style-1;
 		margin: auto;
 		display:block;
 		max-width: $lg-width;
-    font-size: 22px;
-    color: #9A9C99;
-    letter-spacing: -1px;
-	margin-bottom: 20px;
+		font-size: 22px;
+		color: #9A9C99;
+		letter-spacing: -1px;
+		margin-bottom: 20px;
 	  }
 	}
 
@@ -455,36 +379,11 @@ font-family: $heading-style-1;
 		  margin-bottom: 0;
 		  cursor: pointer;
 		  background-color: white;
-		  padding: 22px 15px 12px;
+		  padding: 22px 10px 12px;
 		  border-color: #333;
 
-		  .card-title{
-		   &:before{
-			 content: '\f068';
-			 @extend .font-awesome;
-			 display: inline-block;
-			 position: relative;
-			 left: -15px;
-			     background: $main-gray;
-    border-radius: 50%;
-    color: white;
-	    height: 40px;
-    width: 40px;
-    padding-top: 3px;
-	    text-align: center;
-		   }
-		 }
 
-		  &.collapsed{
-			.card-title{
 
-			  &:before{
-				content: '\f067';
-				color: white;
-				background: $primary;
-			  }
-			}
-		  }
 		}
 	  }
 	  .ask-a-question{
@@ -511,7 +410,7 @@ font-family: $heading-style-1;
 		i{
 		  display: inline-block;
 		  margin-right: 5px;
-		      font-size: 38px;
+		      font-size: 28px;
     VERTICAL-ALIGN: MIDDLE;
 		}
 		span{
