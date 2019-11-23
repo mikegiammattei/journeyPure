@@ -15,9 +15,12 @@ if(isset($Location)){
 
 ?>
 <?php
-	/*require_once(get_stylesheet_directory() . "/classes/UploaderReview.php");
-	$UploaderReview  = new \Uploader\Review();
-	$UploaderReview->process();*/
+
+	/*if(isset($_GET['uploader'])):
+		require_once(get_stylesheet_directory() . "/classes/UploaderReview.php");
+		$UploaderReview  = new \Uploader\Review();
+		$UploaderReview->process();
+	endif;*/
 ?>
 <header>
 	<div class="container ">
@@ -43,7 +46,8 @@ if(isset($Location)){
 						<nav>
 							<ul>
 								<li>
-									<a class="<?php (!$hideLocSub) ? 'has-child' : null; ?>" href="<?php the_permalink(25); ?>"><?php echo get_the_title(25); ?></a>
+									<?php $locationPageID = ($_SERVER["REMOTE_ADDR"]  == '127.0.0.1') ? 1160 : 25; ?>
+									<a class="<?php (!$hideLocSub) ? 'has-child' : null; ?>" href="<?php the_permalink($locationPageID); ?>"><?php echo get_the_title($locationPageID); ?></a>
 
 									<?php if(!$hideLocSub): ?>
 									<ul>

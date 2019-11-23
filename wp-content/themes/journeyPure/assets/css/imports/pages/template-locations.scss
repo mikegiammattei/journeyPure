@@ -1,8 +1,125 @@
 #locations-page{
   // Import above fold  styles that are global
   @import "../page-parts/above-fold";
+  .block-4{
+	padding: 0 0 $xl-space;
+	background-color: $primary;
+	@media (max-width:767px) {
+	  margin-top: 50px;
+	  padding-top: 50px;
+	}
+	.rehab {
+	  background: $background-color;
+	  margin:10px -20px 5px;
+	  padding: 40px 10px 35px;
+	  button {
+		margin-top: 11px;
+		display: block;
+	  }
+	}
+	.fa-star,.fa-star-half-alt,.star {
+	  color:$stars;
+	}
+	.number {
+	  font-size: 25px;
+	  padding: 28px 0 0 20px;
+	  color:$main-gray;
+	}
+	.outpatient {
+	  margin: 0 -20px;
+	  padding: 20px 10px;
+	  border-bottom: 1px solid $border-color;
 
-  .demo-block{
-	padding: $xl-space 0;
+	}
+	.card {
+	  border:none;
+	  border-top: 8px solid $secondary;
+	  font-family: "Montserrat",sans-serif;
+	  border-radius: 0;
+	  margin:0 $md-space;
+
+	  img {
+		height: 100%;
+		border-radius: 3px;
+	  }
+	  .card-footer{
+		background-color: transparent;
+		border:none;
+		padding: 0;
+		.bottom-text{
+		  color: white !important;
+		  background: #0033a1;
+		  margin: 0 -20px -20px;
+		  padding: 20px 0;
+
+		  P {
+			text-align: center;
+			padding-bottom: 10px;
+			font-family: "Montserrat",sans-serif;
+			font-weight: bold;
+			color: white;
+		  }
+		  .phone {
+			color: white;
+			border: 2px solid white;
+			border-radius: 26px;
+			padding: 7px 21px;
+			margin: 0 auto;
+			font-size: 22px;
+			width: 287px;
+			display: block;
+			text-align: center;
+		  }
+		}
+	  }
+
+
+	  h5 {
+		margin-top:	30px;
+	  }
+	  .ky-bottom {
+		padding-bottom: 54px;
+	  }
+	  .fl-bottom {
+		padding-bottom:49px;
+	  }
+	}
+	h3 {
+	  margin: 0 auto $xl-space;
+	}
+	.card {
+	  @media (min-width: 576px) {
+		margin-left:0;
+	  }
+	}
+	.card-deck{
+	  @media  (max-width: 1200px) and (min-width: 550px) {
+		display: block;
+	  }
+	  .card{
+		@media (max-width: 1200px) and (min-width: 550px) {
+		  max-width: 500px;
+		  display: block;
+		  clear: both;
+		  margin: 0 auto $lg-space;
+		}
+		.card-img-top {
+		  width: 100%;
+		  height: 200px;
+		  object-fit: cover;
+		  border-top:8px solid $secondary;
+		  border-radius: 0;
+		}
+		.card-title{
+		  margin: 15px 0 35px;
+		}
+	  }
+	}
+  }
+  .insurance-section{
+	padding: $lg-space 0 15px;
+	background:white;
+	background-image: url(/wp-content/themes/journeyPure/assets/img/background-diagmonds.png);
+	box-shadow: 0px 2px 4px rgba(0,0,0,.18);
   }
 }

@@ -45,7 +45,7 @@ function checkInsurance(){
 				output += "-------------------------------- <br>";
 				output += "<strong>Name: </strong>" + thisForm.find('#ins-name').val() + "<br>";
 				output += "<strong>Phone: </strong>" + thisForm.find('#ins-phone').val() + "<br>";
-				output += "<strong>Email: </strong>" + thisForm.find('#ins-email').val() + "<br>";
+				//output += "<strong>Email: </strong>" + thisForm.find('#ins-email').val() + "<br>";
 				output += "<strong>Treatment For:</strong>  Self<br>";
 				output += "<strong>Birthday: </strong> " + thisForm.find('#ins-selfBirthday').val() + "<br>";
 				output += "<strong>Insurance Company:</strong> " + thisForm.find('#ins-insuranceName').val() + "<br>";
@@ -58,7 +58,7 @@ function checkInsurance(){
 				output += "-------------------------------- <br>";
 				output += "<strong>Name:</strong> " + thisForm.find('#ins-name').val() + "<br>";
 				output += "<strong>Phone:</strong> " + thisForm.find('#ins-phone').val() + "<br>";
-				output += "<strong>Email:</strong> " + thisForm.find('#ins-email').val() + "<br>";
+				//output += "<strong>Email:</strong> " + thisForm.find('#ins-email').val() + "<br>";
 				output += "<strong>Treatment For: Loved One</strong> <br>";
 				output += "-------------------------------- <br><br>";
 				output += "Loved One's Info <br>";

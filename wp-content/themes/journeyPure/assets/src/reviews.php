@@ -10,7 +10,7 @@
 	$ReviewPage = new Pages\Review();
 
 	/** Set tag for each review slider group */
-	$ReviewPage->reviewTags(array("google","facebook","verified","yelp","rehab"));
+	$ReviewPage->reviewTags(array("google","facebook","verified","yelp","reahbs.com","rehabs.com"));
 
 	/** Page specific js*/
 	//$jsFile = '';
@@ -22,7 +22,7 @@
 	<section class="above-fold">
 		<div class="row no-gutters">
 			<div class="col-12 order-md-1 order-2">
-				<div style="background-image: url('/wp-content/themes/journeyPure/assets/img/reviews-page.jpg')" class="img-container">
+				<div style="background-image: url('/wp-content/uploads/2019/11/reviewers-blue-color.jpg')" class="img-container">
 				</div>
 				<div class="top-content">
 					<div class="container">
@@ -69,8 +69,8 @@
 			<div class="col-12 order-md-2 order-1">
 				<div class="container">
 					<div class="heading">
-						<h1 class="page-heading text-white">We've Helped 10K+ People</h1>
-						<h2 class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
+						<h1 class="page-heading text-white">We've Helped 6K+ People Get Their Life Back on Track</h1>
+						<h2 class="lead">Chance are, we can help you too.</h2>
 					</div>
 				</div>
 			</div>
@@ -84,7 +84,7 @@
 				<div class="parent <?php echo (($index + 1) == count($ReviewPage->reviewTags))? ' last' : ''; ?>">
 					<div class="content-container-left">
 						<div class="details">
-							<h5 class="h1 text-capitalize"><?php echo $tag; ?> Reviews</h5>
+							<h5 class="h1 text-capitalize"><?php echo $tag; ?> </h5>
 							<div class="tallies">
 								<data class="avg display-4" value="<?php echo $ReviewPage->reviewAvg; ?>"><?php echo $ReviewPage->reviewAvg; ?></data> /
 								<data class="cap" value="5"> 5</data>
@@ -97,7 +97,7 @@
 							<div class="sub-text">
 								<p>Average Rating</p>
 								<p class="review-count">
-									<data value="<?php echo $ReviewPage->reviewTotal; ?>"><?php echo $ReviewPage->reviewTotal; ?></data>  reviews
+									The <data value="<?php echo $ReviewPage->reviewTotal; ?>"><?php echo $ReviewPage->reviewTotal; ?></data>  Most Recent Reviews
 								</p>
 								<p class="link post-review-link" data-toggle="modal" data-target="#leave-a-review">Leave a Review</p>
 							</div>
@@ -106,7 +106,7 @@
 					</div>
 					<div class="content-container-right">
 						<div class="review-slide-container <?php echo (count($ReviewPage->reviews) == 1) ? ' pb-5' : ''; ?>" >
-							<div class="review-slider" id="review-slide-<?php echo $tag; ?>" data-slick='{"slidesToShow": 1}' role="toolbar">
+							<div class="review-slider" id="review-slide-<?php echo preg_replace('/\./','',$tag); ?>" data-slick='{"slidesToShow": 1}' role="toolbar">
 								<?php foreach ($ReviewPage->reviews as $reviews) : ?>
 									<div class="card">
 										<div class="card-body">
@@ -149,7 +149,7 @@
 	<section class="review-video" id="feature-video-container">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-7">
+				<div class="col-md-7 order-md-1 order-2">
 					<div class="feature-video" >
 						<?php
 						/** First item last provided is featured at page load.*/
@@ -166,9 +166,9 @@
 					</div>
 
 				</div>
-				<div class="col-md-5">
-					<h3 class="h1">Video Section Heading</h3>
-					<h4 id="video-title"><?php echo $firstItem['snippet']['title']; ?></h4>
+				<div class="col-md-5 order-md-2 order-1">
+					<h2 class="h1">Video Reviews</h2>
+					<h5 id="video-title"><?php echo $firstItem['snippet']['title']; ?></h5>
 					<?php $description = nl2br($firstItem['snippet']['description']); ?>
 					<p id="video-description"><?php echo $description; ?></p>
 				</div>
@@ -179,7 +179,6 @@
 						<div class="content-container"  data-video-status="idle" data-video-id="<?php echo $object['snippet']['resourceId']['videoId']; ?>">
 							<div data-video-id="<?php echo $object['id']; ?>" class="image-box" style="background-image: url('<?php echo $object['snippet']['thumbnails']['high']['url']; ?>')"></div>
 							<h5 class="heading h5"><?php echo $object['snippet']['title']; ?></h5>
-							<p class="description"><?php echo wp_trim_words($object['snippet']['description'],10,'...'); ?></p>
 						</div>
 					</div>
 				<?php endforeach; ?>
@@ -194,5 +193,38 @@
 			</div>
 		</div>
 	</section>
+	<?php  if(count($ReviewPage->faqs) > 0): ?>
+	<section class="faqs">
+		<div class="container">
+			<h5 class="h1 text-center">What's holding you back?</h5>
+			<div class="accordion" id="location-faq-rehab">
+				<?php foreach ( $ReviewPage->faqs as $index => $faq) : ?>
+					<div class="card">
+						<div  data-parent="#location-faq-rehab" class="card-header  <?php echo ($index != 0) ? "collapsed" : ""; ?>" data-toggle="collapse" data-target="#l-faq-<?php echo $index; ?>" aria-expanded="true" aria-controls="l-faq-<?php echo $index; ?>" id="l-faq-heading-<?php echo $index; ?>">
+							<div class="question-box">
+								<div class="icon">
+									<i class="fas fa-plus-circle off"></i>
+									<i class="fas fa-minus-circle on"></i>
+								</div>
+								<div class="title">
+									<h5 class="card-title"><?php echo $faq->question; ?></h5>
+								</div>
+							</div>
+						</div>
+						<div id="l-faq-<?php echo $index; ?>" class="collapse <?php echo ($index == 0) ? "show" : ""; ?>" aria-labelledby="l-faq-heading-<?php echo $index; ?>">
+							<div class="card-body">
+								<?php echo $faq->answer; ?>
+							</div>
+						</div>
+					</div>
+				<?php endforeach; ?>
+			</div>
+			<div class="ask-a-question">
+				<span class="btn btn-primary" data-toggle="modal" data-target="#user-question-form-container"><i class="fas fa-comment-dots"></i> Ask a question</span>
+			</div>
+		</div>
+	</section>
+	<?php endif; ?>
 </div>
+<?php include(get_stylesheet_directory()  . '/assets/src/includes/components/ask-question-form.php'); ?>
 <?php get_footer(); ?>

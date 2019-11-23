@@ -338,7 +338,15 @@
 								<?php foreach ( $Location->block4->faqs as $index => $faq) : ?>
 									<div class="card">
 										<div class="card-header  <?php echo ($index != 0) ? "collapsed" : ""; ?>" data-toggle="collapse" data-target="#l-faq-<?php echo $index; ?>" aria-expanded="true" aria-controls="l-faq-<?php echo $index; ?>" id="l-faq-heading-<?php echo $index; ?>">
-											<h5 class="card-title"><?php echo $faq->question; ?></h5>
+											<div class="question-box">
+												<div class="icon">
+													<i class="fas fa-plus-circle off"></i>
+													<i class="fas fa-minus-circle on"></i>
+												</div>
+												<div class="title">
+													<h5 class="card-title"><?php echo $faq->question; ?></h5>
+												</div>
+											</div>
 										</div>
 
 										<div id="l-faq-<?php echo $index; ?>" class="collapse <?php echo ($index == 0) ? "show" : ""; ?>" aria-labelledby="l-faq-heading-<?php echo $index; ?>" data-parent="#location-faq-rehab">

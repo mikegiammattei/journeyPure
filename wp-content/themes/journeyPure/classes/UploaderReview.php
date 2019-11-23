@@ -55,13 +55,17 @@ class Review
 	 */
 	public function setCategory($category)
 	{
-		error_reporting(3);
 		$catID = null;
 		$category = strtolower($category);
+		$this->category = array();
+		$categories = explode(',', $category);
 
-		$catObj = get_category_by_slug( $category );
+		foreach($categories as $catName):
+			$catObj = get_category_by_slug( $catName );
+			$this->category[] =  $catObj->term_id;
 
-		$this->category = $catObj->term_id;
+		endforeach;
+
 	}
 	/**
 	 * @return mixed
@@ -194,52 +198,57 @@ class Review
 		//$reviewArr = array_map('str_getcsv', file($_SERVER['DOCUMENT_ROOT'] . '/DataFiles/fl-reviews.csv'));
 		//$reviewArr = array_map('str_getcsv', file($_SERVER['DOCUMENT_ROOT'] . '/DataFiles/tn-reviews.csv'));
 		//$reviewArr = array_map('str_getcsv', file($_SERVER['DOCUMENT_ROOT'] . '/DataFiles/ky-reviews.csv'));
-		$reviewArr = array_map('str_getcsv', file($_SERVER['DOCUMENT_ROOT'] . '/DataFiles/homepage-reviews.csv'));
+		$reviewArr = array_map('str_getcsv', file($_SERVER['DOCUMENT_ROOT'] . '/DataFiles/outpatient-page.csv'));
 
 
-		foreach ($reviewArr as $index => $item):
+		/** Turn on loop */
+		$runLoop = false;
+		if($runLoop):
+			foreach ($reviewArr as $index => $item):
+				unset($postArgs);
+				if($index != 0){
+					$this->setSrcImg($item[0]);
+					$this->setDate($item[1]);
+					$this->setLocation($item[2]);
+					$this->setName($item[3]);
+					$this->setRating($item[4]);
+					$this->setContent($item[5]);
+					$this->setCategory($this->getLocation());
+					$this->setProfileImg($item[6]);
 
-			unset($postArgs);
-			if($index != 0){
-				$this->setSrcImg($item[0]);
-				$this->setDate($item[1]);
-				$this->setLocation($item[2]);
-				$this->setName($item[3]);
-				$this->setRating($item[4]);
-				$this->setContent($item[5]);
-				$this->setCategory($this->getLocation());
-				$this->setProfileImg($item[6]);
+					$postArgs = array(
+						'post_title'    => $this->getName(),
+						'post_type' => 'reviews',
+						'post_status'   => 'publish',
+						'post_category' => $this->getCategory()
+					);
 
-				$postArgs = array(
-					'post_title'    => $this->getName(),
-					'post_type' => 'reviews',
-					'post_status'   => 'publish',
-					'post_category' => array($this->getCategory())
-				);
+					/** Create new review post and return the new post ID */
+					$new_post_id = wp_insert_post($postArgs);
+if($new_post_id){echo "Uploaded <br>";}
 
-				/** Create new review post and return the new post ID */
-				$new_post_id = wp_insert_post($postArgs);
+					/** image - acf */
+					update_field('field_5d97c80326d33', $this->getProfileImg(), $new_post_id);
 
-				/** image - acf */
-				update_field('field_5d97c80326d33', $this->getProfileImg(), $new_post_id);
+					/** source_image - acf */
+					update_field('field_5da8f6517e206', $this->getSrcId(), $new_post_id);
 
-				/** source_image - acf */
-				update_field('field_5da8f6517e206', $this->getSrcId(), $new_post_id);
+					/** heading - acf */
+					update_field('field_5d97c81726d34', $this->getName(), $new_post_id);
 
-				/** heading - acf */
-				update_field('field_5d97c81726d34', $this->getName(), $new_post_id);
+					/** star_rating - acf */
+					update_field('field_5d97c82526d35', $this->getRating(), $new_post_id);
 
-				/** star_rating - acf */
-				update_field('field_5d97c82526d35', $this->getRating(), $new_post_id);
+					/** review_text - acf */
+					update_field('field_5d97c83e26d36', $this->getContent(), $new_post_id);
 
-				/** review_text - acf */
-				update_field('field_5d97c83e26d36', $this->getContent(), $new_post_id);
+					/** date - acf */
+					update_field('field_5db8b6819c4bb', $this->getDate(), $new_post_id);
+				}
 
-				/** date - acf */
-				update_field('field_5db8b6819c4bb', $this->getDate(), $new_post_id);
-			}
+			endforeach;
+		endif;
 
-		endforeach;
 
 
 	}

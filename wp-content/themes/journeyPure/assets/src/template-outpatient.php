@@ -1,26 +1,25 @@
 <?php
 /*
- * Template Name: Homepage
+ * Template Name: Outpatient Location
  */
 
-include_once(get_stylesheet_directory() . '/classes/Homepage.php');
-$Homepage = new Homepage\Homepage();
+include_once(get_stylesheet_directory() . '/classes/OutpatientLocations.php');
+$OutPatientLocation = new Pages\Outpatient();
 
 /** Page specific js*/
-$jsFile = 'homepage';
+//$jsFile = '';
 get_header();
 
 ?>
 
-<div id="homepage">
+<div id="outpatient">
 	<main>
-
 		<?php $restApiPath = 'http://journeypure.net/rest-api'; ?>
 		<section class="above-fold">
-			<div class="default-container" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/img/river_admin_03.jpg')">
+			<div class="default-container" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/img/jp-header-1920x1080.jpg')">
 				<div class="container">
 					<div class="content">
-						<h1 class="heading text-primary">Get Your Life Back on Track</h1>
+						<h1 class="heading text-primary">Outpatient Treatment</h1>
 						<div class="h3 text-primary">
 							Your #1 Choice for Drug & Alcohol Treatment
 						</div>
@@ -34,12 +33,12 @@ get_header();
 											<p>Treatment here is covered by insurance — backed by a 99% satisfaction rating and hundreds of positive reviews online.</p>
 											<p class="no-pad">When you're ready to talk about doing something different, give us a call. We have both inpatient rehabs and outpatient clinics to meet you where you're at. You don't have to be committed to coming here or even to getting treatment to reach out.</p>
 										</div>
-										<?php if($Homepage->ratings): ?>
+										<?php if($OutPatientLocation->ratings): ?>
 											<div class="rating-section">
-												<div class="row no-gutters">
-													<?php foreach ($Homepage->ratings as $rating) : ?>
+												<div class="row no-gutters row-eq-height">
+													<?php foreach ($OutPatientLocation->ratings as $rating) : ?>
 														<div class="col-md-6 i-rating">
-															<div class="ratings default inline">
+															<div class="ratings default inline lineup">
 																<div class="row no-gutters align-items-center">
 																	<div class="col-2">
 																		<img src="<?php echo $rating->image['sizes']['medium']; ?>" alt="<?php echo get_post_meta( $rating->image['ID'], '_wp_attachment_image_alt', true ); ?>">
@@ -89,124 +88,65 @@ get_header();
 				<?php $_inc->get_insurance_banner(); ?>
 			</div>
 		</section>
-		<section class="block-1">
+		<section class="locations">
 			<div class="container">
-				<div class="header">
-					<div class="lead">
-						"Everyone comes in overwhelmed, but looking to make big changes quickly. This is where it starts. Where you learn to harness and hold on to hope."
-					</div>
-				</div>
+				<div class="row row-eq-height">
+					<?php  foreach ($OutPatientLocation->locations as $location): ?>
+						<div class="col-md-6 col-lg-4 details-col">
+							<div class="details">
+								<h3 class="name"><?php echo $location->facility_name; ?></h3>
+								<?php if($location->ratings->number): ?>
+								<div class="star-rating">
+									<span class="rating"><?php echo $location->ratings->number; ?></span>
+									<?php for( $i=1; $i <= $location->ratings->stars; $i++) : ?>
+										<i class="fas fa-star"></i>
+									<?php endfor; ?>
 
-
-				<div class="media d-inline-flex">
-					<img class="mr-3" src="/wp-content/uploads/2019/11/kevin-lee.jpg" alt="Generic placeholder image">
-					<div class="media-body ">
-						<h5 class="mt-0">Kevin D. Lee</h5>
-						<p>CEO & Founder</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="block-2">
-			<div class="container">
-
-				<div class="row">
-					<div class="col-lg-6 col-sm-12">
-					<h5 class="heading-prime h1">Let's talk about the facts</h5>
-						<div class="details">
-							<?php
-								$listItems = array();
-								$listItems[] = array(
-									'heading' => "You're TWICE as likely to get better here",
-									'content' => "According to the <a href=\"https://www.drugabuse.gov/publications/principles-drug-addiction-treatment-research-based-guide-third-edition/frequently-asked-questions/how-effective-drug-addiction-treatment\" target=\"_blank\">National Institute on Drug Abuse</a>, you can expect as little as 40% of people to be sober 6 months after starting treatment at another facility. That's not good. At JourneyPure, our success rate is 84%, and we stay in touch in case you do have a slip to get you right back on track."
-								);
-								$listItems[] = array(
-									'heading' => "Your treatment is backed by 6K+ success stories",
-									'content' => "We've helped thousands of people just like you get healthy and stay healthy.  We know what we're doing. We've seen it all. And, we can help you too."
-								);
-								$listItems[] = array(
-									'heading' => "We're 99% sure you'll be satisfied with your care",
-									'content' => "You deserve healthcare that listens and constantly improves.  The satisfaction rate as of " . date('F Y') . " is 99%."
-								);
-							?>
-							<?php if($listItems): ?>
-								<?php foreach ( $listItems as $index => $item) : ?>
-									<div class="media media-number-list">
-										<div class="align-self-start mr-3 list-number colored"><i class="fas fa-check"></i></div>
-										<div class="media-body">
-											<h5 class="mt-0"><?php echo $item['heading']; ?></h5>
-											<?php echo $item['content']; ?>
-										</div>
-									</div>
-								<?php endforeach; ?>
-							<?php endif; ?>
-						</div>
-						<div class="featured-on">
-							<h5 class="heading line-heading">
-								<span>Featured On</span>
-							</h5>
-							<div class="media-outlets">
-								<div class="row no-gutters">
-									<div class="media-con">
-										<div class="media-box">
-											<div class="inner-con"> <img src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/nyt-150x150.png" alt="The New York Times"></div>
-										</div>
-									</div>
-									<div class="media-con">
-										<div class="media-box">
-											<div class="inner-con"> <img src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/HUFF_POST.png" alt="The Huffington Post"></div>
-										</div>
-									</div>
-									<div class="media-con">
-										<div class="media-box">
-											<div class="inner-con"> <img src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/nbc-150x150.png" alt="NBC"></div>
-										</div>
-									</div>
-									<div class="media-con">
-										<div class="media-box">
-											<div class="inner-con"> <img src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/the-tennesseean-150x150.png" alt="Tennessean"></div>
-										</div>
-									</div>
-									<div class="media-con">
-										<div class="media-box">
-											<div class="inner-con"> <img src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/bbc-150x150.png" alt="BBC"></div>
-										</div>
-									</div>
-									<div class="media-con">
-										<div class="media-box">
-											<div class="inner-con"> <img src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/the-fix-150x150.png" alt="The Fix"></div>
-										</div>
-									</div>
-									<div class="media-con">
-										<div class="media-box">
-											<div class="inner-con"> <img src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/addiction-center-150x150.png" alt="Addiction Center"></div>
-										</div>
-									</div>
-									<div class="media-con">
-										<div class="media-box">
-											<div class="inner-con"> <img src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/npr-150x150.png" alt="NPR"></div>
-										</div>
-									</div>
-									<div class="media-con">
-										<div class="media-box">
-											<div class="inner-con"> <img src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/vanderbilt-150x150.png" alt="Venderbilt Health"></div>
-										</div>
-									</div>
-									<div class="media-con">
-										<div class="media-box">
-											<div class="inner-con"> <img src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/FORBES.png" alt="Forbes"></div>
-										</div>
-									</div>
+									<?php if(fmod($location->ratings->stars, 1) !== 0.00) : ?>
+										<i class="fas fa-star-half-alt"></i>
+									<?php endif; ?>
+									<span class="count">(<?php echo $location->ratings->count; ?>)</span>
 								</div>
+								<?php endif; ?>
+								<p class="count"><?php echo $location->address; ?></p>
 							</div>
 						</div>
+					<?php endforeach; ?>
+				</div>
+
+			</div>
+		</section>
+		<section class="block-4">
+			<div class="container">
+				<h5 class="heading h1">Block 4 Section</h5>
+				<h3 class="heading">It is a long established fact that a reader will be distracted by the readable uncover many web sites still in their infancy. </h3>
+				<div class="card-deck">
+					<div class="card">
+						<img src="/wp-content/uploads/2019/11/carf-bg-fade-02.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Section Heading</h5>
+							<p class="card-text"> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+							<p></p>
+						</div>
 					</div>
-					<div class="col-lg-6 col-sm-12 facility-photos">
-						<img src="/wp-content/uploads/2019/11/rehab-outpatient-collage.png" />
+					<div class="card">
+						<img src="/wp-content/uploads/2019/11/legitscripts-bg-fade-01.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Section Heading</h5>
+							<p class="card-text"> LegitScript is the authority on <b>ethical healthcare marketing</b>. Most other large providers in our industry do not meet these high standards. We were one of the first companies in the world to earn the LegitScript certification, which is backed by Visa, MasterCard, Google, Microsoft and Facebook. The certification assures what we say about ourselves and our facilities are <b>true and transparent</b>. It also ensures we do not accept any form of payment for referrals or work with companies that do.</p>
+						</div>
+					</div>
+					<div class="card">
+						<img src="http://jp.websiteservices.org/wp-content/uploads/2019/11/naatp-bg-fade-01.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Section Heading</h5>
+							<p class="card-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
+		<?php if($OutPatientLocation->reviewTotal): ?>
 		<section class="review-section">
 			<div class="container">
 				<div class="parent">
@@ -214,7 +154,7 @@ get_header();
 						<div class="details">
 							<h5 class="h1">Reviews</h5>
 							<div class="tallies">
-								<data class="avg display-4" value="<?php echo $Homepage->reviewAvg; ?>"><?php echo $Homepage->reviewAvg; ?></data>,
+								<data class="avg display-4" value="<?php echo $OutPatientLocation->reviewAvg; ?>"><?php echo $OutPatientLocation->reviewAvg; ?></data>,
 								<data class="cap" value="5"> 5</data>
 							</div>
 							<div class="stars">
@@ -225,7 +165,7 @@ get_header();
 							<div class="sub-text">
 								<p>Average Rating</p>
 								<p class="review-count">
-									<data value="<?php echo $Homepage->reviewTotal; ?>"><?php echo $Homepage->reviewTotal; ?></data>  reviews
+									<data value="<?php echo $OutPatientLocation->reviewTotal; ?>"><?php echo $OutPatientLocation->reviewTotal; ?></data>  reviews
 								</p>
 								<p class="link post-review-link" data-toggle="modal" data-target="#leave-a-review">Leave a Review</p>
 							</div>
@@ -233,9 +173,9 @@ get_header();
 
 					</div>
 					<div class="content-container-right">
-						<div class="review-slide-container <?php echo (count($Homepage->reviews) == 1) ? ' pb-5' : ''; ?>" >
+						<div class="review-slide-container <?php echo (count($OutPatientLocation->reviews) == 1) ? ' pb-5' : ''; ?>" >
 							<div class="review-slide" data-slick='{"slidesToShow": 1}' role="toolbar">
-								<?php foreach ($Homepage->reviews as $reviews) : ?>
+								<?php foreach ($OutPatientLocation->reviews as $reviews) : ?>
 									<div class="card">
 										<div class="card-body">
 											<div class="author-info">
@@ -272,82 +212,12 @@ get_header();
 				</div>
 			</div>
 		</section>
-		<section class="block-3">
-			<div class="container">
-				<div class="heading">
-					<h5 class="h1">Treatment Here Works</h5>
-
-				</div>
-				<div class="row">
-					<div class="col-lg-6">
-					<h3>Even if you've been to dozens of other facilities before, the treatment here is different.  We set industry standards and hold ourselves accountable for your long-term success.</h3>
-						<div class="h5">Evidence-Based Treatments</div>
-						<p>A safe environment that combines medical care, holistic healing and various intense daily therapies is what works. While we constantly improve and test new options, our programs are fully guided by science.</p>
-						<div class="h5">Personalized Treatment Plans</div>
-						<p>Addiction and the issues behind it are very personal. You get the combination of proven treatments that maximize your time here. From virtual-reality therapy for combat veterans to imago marriage counseling, we'll do whatever it takes to help you get healthy and stay healthy.</p>
-						<div class="h5">World-Renowned Experts</div>
-						<p>We've built quite a reputation over the last decade, known throughout the country for quality care. That reputation attracts the county's leading addiction professionals. If you've sought treatment before, you know how critical it is to get individualized attention from people that actually care.</p>
-						<div class="h5">Active Accountability for 1 Year </div>
-						<p>Your Recovery Coach can be reached 24/7 through our free alumni app. The app also offers interactive games and logs that strengthen your mental health and reward you for continuing healthy habits.    </p>
-					</div>
-					<div class="col-lg-6">
-						<div class="bio-default">
-							<div class="row no-gutters">
-								<?php foreach ($Homepage->bios as $bio): ?>
-								<div class="col-md-6">
-									<div class="bio">
-										<figure style="background-image: url('<?php echo $bio->photo['image']; ?>');">
-											
-										</figure>
-										<?php if($bio->sober_since): ?>
-										<div class="like-button"><i class="fas fa-thumbs-up"></i> 2981</div>
-											<span class="sub-caption">
-											<figcaption class="name"><?php echo $bio->name; ?></figcaption>
-											Sober <span class="text-uppercase"> <?php echo $bio->sober_since ?></span></span>
-										<?php endif; ?>
-									</div>
-								</div>
-								<?php endforeach; ?>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="block-4">
-			<div class="container">
-				<div class="service-container">
-					<h5 class="heading">It's Time to Get Help</h5>
-					<div class="row">
-						<div class="col-md-3">
-							<div class="box">
-								<i class="fas fa-user-md"></i>  Medical Detox
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="box">
-								<i class="fas fa-home"></i>  Inpatient Rehabs
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="box">
-								<i class="fas fa-clinic-medical"></i>  Outpatient Clinics
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="box last">
-								<i class="fas fa-mobile-alt"></i> App + Recovery Coach
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+		<?php endif; ?>
 		<section class="faqs">
 			<div class="container">
 				<h5 class="h1 text-center">What's holding you back?</h5>
 				<div class="accordion" id="location-faq-rehab">
-					<?php foreach ( $Homepage->faqs as $index => $faq) : ?>
+					<?php foreach ( $OutPatientLocation->faqs as $index => $faq) : ?>
 						<div class="card">
 							<div class="card-header  <?php echo ($index != 0) ? "collapsed" : ""; ?>" data-toggle="collapse" data-target="#l-faq-<?php echo $index; ?>" aria-expanded="true" aria-controls="l-faq-<?php echo $index; ?>" id="l-faq-heading-<?php echo $index; ?>">
 								<div class="question-box">
@@ -370,7 +240,7 @@ get_header();
 					<?php endforeach; ?>
 				</div>
 				<div class="ask-a-question">
-										<span class="btn btn-primary" data-toggle="modal" data-target="#user-question-form-container"><i class="fas fa-comment-dots"></i> Ask a question</span>
+						<span class="btn btn-primary" data-toggle="modal" data-target="#user-question-form-container"><i class="fas fa-comment-dots"></i> Ask a question</span>
 
 				</div>
 			</div>

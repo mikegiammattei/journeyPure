@@ -2,10 +2,15 @@
 
   // Import above fold  styles that are global
   @import "../page-parts/above-fold";
+  
+  
+  
+  
   .bio-section{
 	margin: $xl-space 0 $xl-space;
+
 	@media(max-width: 767px){
-	  margin: 130px 0 50px;
+	  margin: 130px 0 0;
 	}
 	.heading,.subheading{
 	  text-align: center;
@@ -16,20 +21,25 @@
 	  opacity: 0;
 	}
 	.about-bio-slider{
-	  padding-top: $xl-space;
+	  padding-top: $lg-space;
 	  visibility: hidden;
 
 	  .img-box{
-		background-color:$secondary;
 		margin: -27px;
 		padding: 20px;
 	  }
+	  .card {
+		border:none;
+	  }
 	  .header {
 		text-align: center;
-		background: #ebffec;
 		margin: 0 -20px;
 		padding: 5px 0;
-		border-bottom: 1px solid darken($border-color,10%);
+		hr {
+		    background-image: linear-gradient(90deg, rgba(0, 51, 161, 0), #0033a1 50%, rgba(0, 51, 161, 0) 100%);
+			height: 2px;
+			width:250px;
+		}
 	  }
 
 	  .slick-track {
@@ -37,8 +47,6 @@
 	  }
 
 	  .slick-slide {
-		background-color: $background-color;
-		border:1px solid $border-color;
 		border-radius: 15px 15px 0 0;
 		height: inherit !important;
 		overflow: hidden;
@@ -56,7 +64,6 @@
 		font-family: $heading-font;
 	  }
 	  .card{
-		background-color: transparent !important;
 		.bios{
 
 		  .img{
@@ -74,6 +81,10 @@
 		  .name-text {
 			font-weight:bold;
 			color:black;
+		  }
+		  .bio-long {
+			    margin-top: 5px;
+				padding: 0;
 		  }
 		  .text{
 			padding-bottom: 0;
@@ -118,9 +129,9 @@
 			  margin: 0;
 			}
 			.mention{
-			  margin-bottom: $md-space;
+			  margin-bottom: 3px;
 			  font-size: 14px;
-			  background: darken($background-color, 4%);
+			  background: $background-color;
 			  padding: 15px;
 
 			  a{
@@ -145,39 +156,64 @@
 	  }
 
 	}
+	
 	.main-controls{
-	  margin-top: $lg-space;
+		margin-top:-40px;
 	}
-	.link{
-	  color: $main-font;
-	}
+	
+
+	.see-more-btn {
+			font-family: "Montserrat",sans-serif;
+		  }
+	
+	
   }
   .page-quote{
-	background-color: $background-color;
-	border-top: 1px  solid  $border-color;
-	border-bottom: 1px  solid  $border-color;
-	padding: $xl-space 0;
+	padding: $lg-space 0 $xl-space;
 	text-align: center;
+	color: $primary !important;
 
-	blockquote{
-	  font-size: 24px;
-	  margin: 0 auto;
-	  text-align: center;
-	  width: 100%;
+
+	.header{
+	  margin: 0 auto $lg-space auto;
 	  max-width: $lg-width;
-	}
-
-	.bio{
-	  margin: $md-space auto;
-	  text-align: left;
-	  @media(max-width: 767px){
-		display: inline-block;
+	  font-style:italic;
+	  .heading{
+		@extend .page-heading;
 	  }
+	  .lead{
+		@extend .h5;
+		color: $main-gray;
+		
+	  }
+	  
+	}
+	
+	.media-body  {
+	margin-top: $lg-space;
+	     h5 {
+		    font-size:17px;
+			color:$main-gray;
+			line-height:0;
+			margin-bottom:13px;
+		 }
+		 p {
+		    font-family: $heading-font;
+			color: $main-gray;
+		 }
+	  }
+
+	.media{
+	  @extend .h5;
+	  text-align: left;
 	  img{
-		border-radius: 50%;
-		width: 50px;
-		height: 50px;
-		margin-right: $md-space;
+		width: 75px;
+		height: 75px;
+		border-radius:50%;
+	  }
+	  a.btn{
+		display: inline-block;
+		margin-right: 5px;
 	  }
 	}
   }
@@ -219,13 +255,19 @@
   }
   .block-4{
 	padding: $xl-space 0;
-	background-color: $background-color;
-	border-top:1px solid $border-color;
+	background-color: $primary;
 	.heading{
-	  margin-bottom: $lg-space;
 	  text-align: center;
+	  color:white;
 	}
-
+	.card {
+	border-radius:0 0 3px 3px !important;
+	border:none;
+	    box-shadow: 0px 2px 4px rgba(0,0,0,.18);
+	}
+h3 {
+	  margin: 0 auto $xl-space;
+	  }
 	.card-deck{
 	  @media  (max-width: 1200px) and (min-width: 550px) {
 		display: block;
@@ -241,9 +283,11 @@
 		  width: 100%;
 		  height: 200px;
 		  object-fit: cover;
+		  border-top:8px solid $secondary;
+		  border-radius: 0;
 		}
 		.card-title{
-		  text-align: center;
+		  margin: 15px 0 35px;
 		}
 	  }
 
@@ -254,5 +298,101 @@
 	background:white;
 	background-image: url(/wp-content/themes/journeyPure/assets/img/background-diagmonds.png);
 	box-shadow: 0px 2px 4px rgba(0,0,0,.18);
+  }
+  .ethics {
+	    background-image: url(/wp-content/themes/journeyPure/assets/img/background-diagmonds.png);
+	.container {
+		margin: 0 auto;
+		max-width: 900px;
+		padding: $xl-space 14px;
+			}
+		.h1 {
+			text-align:center;
+			margin-bottom: $lg-space;
+		}
+	}
+	  .block-3{
+	background:  no-repeat center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding: $xl-space;
+	
+	.card-body {
+	   padding: 0;
+	}
+	
+	ul {
+    font-family: $heading-style-1;
+    font-size: 17px;
+	    list-style-type: none;
+    padding-left: 0;
+}
+	
+	li {
+	
+	margin-top:10px;
+    padding: 17px;
+	background:$background-color;
+	border-radius:3px;
+	}
+	hr {
+	margin: 15px 0;
+    width: 44px;
+    border: 0;
+    border-top: 4px solid $primary;
+	}
+
+	@media (max-width: 767px){
+	  padding: $xl-space 0 $lg-space;
+	}
+
+	.heading{
+	  text-align: center;
+	  display: block;
+	  margin-bottom: $xl-space;
+
+	  @media (max-width: 767px){
+		margin-bottom: $md-space;
+	  }
+	}
+	.content-section{
+	  &.top-xl{
+		@media (max-width: 767px){
+		  margin-top: $md-space;
+		}
+	  }
+	}
+	img{
+	  &.featured{
+		display: block;
+		margin: 5px auto $xl-space;
+		width: 100%;
+		    max-width: 566px;
+	  }
+	}
+	.mid-content{
+	  .box{
+		&.default{
+		  padding: $xl-space;
+
+		}
+	  }
+	}
+	.top-lg {
+	   display:none;
+	}
+	.card-header {
+	   font-size: 18px;
+       font-family: $heading-style-1;
+       padding: 26px;
+       font-weight: bold;
+	}
+	.card {
+	   box-shadow: 0 2px 6px 0 hsla(0,0%,0%,0.2);
+	   border:none;
+	  	width: 100%;
+	}
   }
 }

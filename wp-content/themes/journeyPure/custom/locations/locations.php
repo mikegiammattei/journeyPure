@@ -30,3 +30,12 @@ function create_locations() {
 }
 // Hooking up our function to theme setup
 add_action( 'init', 'create_locations' );
+
+require(__DIR__ . '/class.outpatient-type.php');
+require(__DIR__ . '/class.outpatient-locations.php');
+
+// Add user review to the sidebar
+add_action('admin_menu', array('OutpatientLocation','add_outpatient_location'));
+
+// Register the user-faqs post type
+add_action('init', array('OutPatientType','register_out_patient_type'));

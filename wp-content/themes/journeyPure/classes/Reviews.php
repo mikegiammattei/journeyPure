@@ -105,8 +105,9 @@ class Reviews
 
 }
 	public function setPostTag($tagName){
+
 		$args=array(
-			'posts_per_page' => 50,
+			'posts_per_page' => 100,
 			'post_type' => 'reviews',
 			'orderby' => 'publish_date',
 			'order' => 'ASC',

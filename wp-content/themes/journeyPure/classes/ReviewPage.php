@@ -19,6 +19,7 @@ class Review
 	public $reviewAvg;
 	public $reviewTotal;
 	public $reviews;
+	public $faqs;
 	public $reviewTags = array();
 	public $videoObjects;
 
@@ -27,6 +28,7 @@ class Review
 		$this->post = $post;
 		$this->setRatings();
 		$this->setReviewVideos();
+		$this->setFAQs();
 	}
 	public function reviewTags($tags){
 		$this->reviewTags = $tags;
@@ -34,8 +36,9 @@ class Review
 	private function setRatings(){
 		require_once(get_stylesheet_directory() . '/classes/Ratings.php');
 		$Ratings = new \Ratings\Ratings();
+		$RatingsCategoryID = get_category_by_slug("reviews");
 
-		$Ratings->setPostByCategoryId(10);
+		$Ratings->setPostByCategoryId($RatingsCategoryID->term_id);
 
 		$this->ratings = $Ratings->ratings;
 	}
@@ -57,7 +60,7 @@ class Review
 		$this->reviewTotal= $Reviews->getTotalReviews();
 
 
-		//\ErrorHandler::get($this->reviews);
+
 	}
 
 	public function setReviewVideos(){
@@ -77,5 +80,12 @@ class Review
 		$json_details = json_decode(file_get_contents($channel_URL),true);
 		$this->videoObjects = $json_details;
 
+	}
+	private function setFAQs(){
+		require_once(get_stylesheet_directory() . '/classes/FAQs.php');
+		$Faqs = new \FAQs\FAQs();
+
+		$Faqs->setFAQsByCatName('reviews');
+		$this->faqs = $Faqs->faqs;
 	}
 }

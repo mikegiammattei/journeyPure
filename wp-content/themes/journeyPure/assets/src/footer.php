@@ -30,16 +30,15 @@
 			<div class="container">
 				<div class="row justify-content-between align-items-center">
 					<div class="col-sm-6">
-						<span class="heading">
-							<a href="/types-of-drug-abuse/">Types of Drug Abuse</a><br>
+						<p>
+							<a  href="/types-of-drug-abuse/">Types of Drug Abuse</a><br>
 							<a href="/effects-opioids-body/">Effects of Opioids on the Body</a>
-						</span>
+						</p>
 						<div class="copyright">
 							&copy; <?php echo date('Y'); ?> JourneyPure | <a href="/terms">Terms </a> 	&middot;  <a href="/privacy-policy">Privacy Policy </a> <button class="btn btn-dark btn-sm " onclick="topFunction()"><i class="fas fa-chevron-up"></i> Back to Top</button>
 						</div>
 					</div>
 					<div class="col-sm-6">
-
 					</div>
 				</div>
 			</div>
@@ -51,8 +50,10 @@
 <?php include_once(get_stylesheet_directory()  . '/assets/src/includes/components/exit-modal.php'); ?>
 
 </div> <?php /** end of main wrapper */ ?>
-<iframe class="ctm-call-widget" src="https://130400.tctm.co/form/FRT472ABB2C5B9B141A95E7A133293232FBB3EFEC59E103154BC3C3A194C8DE5FD3.html" style="display:none"></iframe>
+
+<iframe  id="ctm-chat-widget" class="ctm-call-widget ctm-chat-widget" src="https://130400.tctm.co/form/FRT472ABB2C5B9B141A95E7A133293232FBB3EFEC59E103154BC3C3A194C8DE5FD3.html" style="display:none"></iframe>
 <script defer async src="https://130400.tctm.co/formreactor.js"></script>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" async integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 

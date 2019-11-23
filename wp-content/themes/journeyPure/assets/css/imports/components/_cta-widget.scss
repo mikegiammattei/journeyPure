@@ -15,9 +15,8 @@
  @media (max-width:427px) { 
       width: 100%;
     right: 0;
-	border-left:none;
-	border-right:none;
-	border-radius:0;
+	    border-left: 0;
+		border-right:0;
 }
 
 
@@ -33,15 +32,15 @@
 	line-height: 34px;
 	border-radius: 3px 3px 0 0;
 	top: -142%;
-	left:0;
+	left:0 !important;
 	right: 0;
 	font-weight: normal;
 	margin-left:-2px ;
-	width:101%;
+	width:101% !important;
 
 
 	@media (max-width:767px) {
-	  min-width: 62px;
+    padding: 8px 23px;
 	}
 
 	&.not-local{
@@ -59,21 +58,7 @@
 	  font-family:$heading-style-1; 
 	}
 
-	.close-btn{
-	  position: absolute;
-	  color: $main-font;
-	  right: 6px;
-	  top: 6px;
-	  cursor: pointer;
-	  outline: none;
-	  font-weight: bold;
-	  font-size: 14px;
-	  background: $light-accent;
-      border-radius: 50%;
-      padding: 0 9px 0 10px;
-      opacity: .3;
-      line-height: 2;
-	}
+	
 	&:before {
 	  top: 100%;
 	  left: 50%;
@@ -124,5 +109,22 @@
 		cursor: pointer;
 	  }
 	}
+  }
+}
+.ctm-chat-widget{
+  position: fixed;
+  right: 15px;
+  bottom: 56px;
+  z-index: 1000;
+  background: $background-color;
+  width: 330px;
+  border: red 2px solid;
+  border-bottom: none;
+
+  #icon-chat {
+	bottom: 30px;
+	right: 0;
+	left: 0;
+	margin: auto;
   }
 }

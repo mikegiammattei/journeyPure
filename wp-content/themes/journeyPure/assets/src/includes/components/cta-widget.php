@@ -18,8 +18,8 @@ $Chat = new \CTA\Chat();
 	</div>
 	<div class="info">
 		<div class="row">
-			<div class="col-auto">
-				<div class="chat-box">
+			<div id="chat-ctm-btn" class="col-auto">
+				<div class="chat-box" >
 					<i class="fas fa-comments"></i> Chat
 				</div>
 			</div>
@@ -31,3 +31,14 @@ $Chat = new \CTA\Chat();
 		</div>
 	</div>
 </div>
+
+
+              
+
+
+
+
+
+
+
+

@@ -39,7 +39,7 @@ get_header();
 												<div class="row no-gutters">
 													<?php foreach ($Homepage->ratings as $rating) : ?>
 														<div class="col-md-6 i-rating">
-															<div class="ratings default inline">
+															<div class="ratings default inline lineup">
 																<div class="row no-gutters align-items-center">
 																	<div class="col-2">
 																		<img src="<?php echo $rating->image['sizes']['medium']; ?>" alt="<?php echo get_post_meta( $rating->image['ID'], '_wp_attachment_image_alt', true ); ?>">
@@ -225,7 +225,7 @@ get_header();
 							<div class="sub-text">
 								<p>Average Rating</p>
 								<p class="review-count">
-									<data value="<?php echo $Homepage->reviewTotal; ?>"><?php echo $Homepage->reviewTotal; ?></data>  reviews
+									The Most Recent <data value="<?php echo $Homepage->reviewTotal; ?>"><?php echo $Homepage->reviewTotal; ?></data>  Reviews
 								</p>
 								<p class="link post-review-link" data-toggle="modal" data-target="#leave-a-review">Leave a Review</p>
 							</div>
@@ -349,7 +349,7 @@ get_header();
 				<div class="accordion" id="location-faq-rehab">
 					<?php foreach ( $Homepage->faqs as $index => $faq) : ?>
 						<div class="card">
-							<div class="card-header  <?php echo ($index != 0) ? "collapsed" : ""; ?>" data-toggle="collapse" data-target="#l-faq-<?php echo $index; ?>" aria-expanded="true" aria-controls="l-faq-<?php echo $index; ?>" id="l-faq-heading-<?php echo $index; ?>">
+							<div  data-parent="#location-faq-rehab" class="card-header  <?php echo ($index != 0) ? "collapsed" : ""; ?>" data-toggle="collapse" data-target="#l-faq-<?php echo $index; ?>" aria-expanded="true" aria-controls="l-faq-<?php echo $index; ?>" id="l-faq-heading-<?php echo $index; ?>">
 								<div class="question-box">
 									<div class="icon">
 										<i class="fas fa-plus-circle off"></i>
@@ -360,8 +360,7 @@ get_header();
 									</div>
 								</div>
 							</div>
-
-							<div id="l-faq-<?php echo $index; ?>" class="collapse <?php echo ($index == 0) ? "show" : ""; ?>" aria-labelledby="l-faq-heading-<?php echo $index; ?>" data-parent="#location-faq-rehab">
+							<div id="l-faq-<?php echo $index; ?>" class="collapse <?php echo ($index == 0) ? "show" : ""; ?>" aria-labelledby="l-faq-heading-<?php echo $index; ?>">
 								<div class="card-body">
 									<?php echo $faq->answer; ?>
 								</div>
@@ -370,8 +369,7 @@ get_header();
 					<?php endforeach; ?>
 				</div>
 				<div class="ask-a-question">
-										<span class="btn btn-primary" data-toggle="modal" data-target="#user-question-form-container"><i class="fas fa-comment-dots"></i> Ask a question</span>
-
+					<span class="btn btn-primary" data-toggle="modal" data-target="#user-question-form-container"><i class="fas fa-comment-dots"></i> Ask a question</span>
 				</div>
 			</div>
 		</section>
