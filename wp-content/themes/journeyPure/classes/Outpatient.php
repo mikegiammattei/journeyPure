@@ -39,6 +39,7 @@ class Outpatient
 			$postData = get_fields($postId);
 			$this->locations[] = (object)array(
 				'facility_name' => $postData['facility_name'],
+				'location_image' => ($postData['location_image']['sizes']['medium']) ? : null,
 				'ratings' => (object) array(
 					'number' => $postData['ratings']['number_rating'],
 					'stars' => $postData['ratings']['stars'],

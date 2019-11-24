@@ -35,6 +35,7 @@ class Bios
 					'image' => $bio['photo']['sizes']['medium'],
 					'alt' => $bio['photo']['alt']
 				),
+				'identifier' => $bio['photo']['id'],
 				'name' => $bio['name'],
 				'credentials' => $bio['credentials'],
 				'title' => $bio['title'],

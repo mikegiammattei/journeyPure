@@ -32,7 +32,7 @@ get_header();
 										<div class="card-body">
 											<h5>If you're looking for help that actually helps you, you're in the right place.</h5>
 											<p>Treatment here is covered by insurance — backed by a 99% satisfaction rating and hundreds of positive reviews online.</p>
-											<p class="no-pad">When you're ready to talk about doing something different, give us a call. We have both inpatient rehabs and outpatient clinics to meet you where you're at. You don't have to be committed to coming here or even to getting treatment to reach out.</p>
+											<p class="no-pad">When you're ready to talk about doing something different, give us a call. We have inpatient rehabs and outpatient clinics to meet you where you are. You don’t have to commit to coming here, or even to getting treatment, to reach out.</p>
 										</div>
 										<?php if($Homepage->ratings): ?>
 											<div class="rating-section">
@@ -118,7 +118,7 @@ get_header();
 								$listItems = array();
 								$listItems[] = array(
 									'heading' => "You're TWICE as likely to get better here",
-									'content' => "According to the <a href=\"https://www.drugabuse.gov/publications/principles-drug-addiction-treatment-research-based-guide-third-edition/frequently-asked-questions/how-effective-drug-addiction-treatment\" target=\"_blank\">National Institute on Drug Abuse</a>, you can expect as little as 40% of people to be sober 6 months after starting treatment at another facility. That's not good. At JourneyPure, our success rate is 84%, and we stay in touch in case you do have a slip to get you right back on track."
+									'content' => "According to the <a href=\"https://www.drugabuse.gov/publications/principles-drug-addiction-treatment-research-based-guide-third-edition/frequently-asked-questions/how-effective-drug-addiction-treatment\" target=\"_blank\">National Institute on Drug Abuse</a>, you can expect as little as 40% of people to be sober six months after starting treatment at another facility. That's not good. At JourneyPure, our success rate is 84%, and we stay in touch to help the few that do have a slip get right back on track."
 								);
 								$listItems[] = array(
 									'heading' => "Your treatment is backed by 6K+ success stories",
@@ -202,7 +202,8 @@ get_header();
 						</div>
 					</div>
 					<div class="col-lg-6 col-sm-12 facility-photos">
-						<img src="/wp-content/uploads/2019/11/rehab-outpatient-collage.png" />
+						<img src="/wp-content/uploads/2019/11/rehab-outpatient-collage.png" alt="Beautiful, clean indoors, plenty of outdoor space"/>
+						<img src="/wp-content/uploads/2019/11/rehab-photo-collage-part-2.png" class="mobile-only" alt="Ocean and river views"/>
 					</div>
 				</div>
 			</div>
@@ -214,7 +215,7 @@ get_header();
 						<div class="details">
 							<h5 class="h1">Reviews</h5>
 							<div class="tallies">
-								<data class="avg display-4" value="<?php echo $Homepage->reviewAvg; ?>"><?php echo $Homepage->reviewAvg; ?></data>,
+								<span class="avg display-4">4.6</span> ,
 								<data class="cap" value="5"> 5</data>
 							</div>
 							<div class="stars">
@@ -225,7 +226,7 @@ get_header();
 							<div class="sub-text">
 								<p>Average Rating</p>
 								<p class="review-count">
-									The Most Recent <data value="<?php echo $Homepage->reviewTotal; ?>"><?php echo $Homepage->reviewTotal; ?></data>  Reviews
+								 <data value="<?php echo $Homepage->reviewTotal; ?>">456</data>  Reviews
 								</p>
 								<p class="link post-review-link" data-toggle="modal" data-target="#leave-a-review">Leave a Review</p>
 							</div>
@@ -235,15 +236,23 @@ get_header();
 					<div class="content-container-right">
 						<div class="review-slide-container <?php echo (count($Homepage->reviews) == 1) ? ' pb-5' : ''; ?>" >
 							<div class="review-slide" data-slick='{"slidesToShow": 1}' role="toolbar">
-								<?php foreach ($Homepage->reviews as $reviews) : ?>
+								<?php foreach ($Homepage->reviews as $reviews) :  break; ?>
 									<div class="card">
 										<div class="card-body">
 											<div class="author-info">
+												
+											
+											
+											
 												<div class="row">
+												
+												
+												
 													<div class="col-md-auto align-self-center">
 														<img src="<?php echo $reviews->photo['image']; ?>" alt="<?php echo $reviews->photo['alt']; ?>">
 													</div>
-													<div class="col-md-auto align-self-center">
+							
+							<div class="col-md-auto align-self-center">
 														<h5 class="card-title"><?php echo $reviews->heading; ?></h5>
 														<div class="stars">
 															<?php for($i=0; $i < $reviews->star_rating; $i++): ?>
@@ -252,6 +261,12 @@ get_header();
 														</div>
 
 													</div>
+													<?php if(isset($reviews->source_image['image'])): ?>
+												<div class="review-logo">
+													<img class="source-img" src="<?php echo $reviews->source_image['image']; ?>" alt="<?php echo $reviews->source_image['alt']; ?>">
+												</div>
+												<?php endif; ?>
+													
 												</div>
 											</div>
 											<div class="review-text">
@@ -264,7 +279,7 @@ get_header();
 
 							<div class="review-nav">
 								<p class="link see-less-btn">Previous</p>
-								<p class="link see-more-btn has-more"><data>Data Generated Via Script</data> More</p>
+								<p class="link see-more-btn has-more"> More</p>
 							</div>
 						</div>
 
@@ -286,7 +301,7 @@ get_header();
 						<div class="h5">Personalized Treatment Plans</div>
 						<p>Addiction and the issues behind it are very personal. You get the combination of proven treatments that maximize your time here. From virtual-reality therapy for combat veterans to imago marriage counseling, we'll do whatever it takes to help you get healthy and stay healthy.</p>
 						<div class="h5">World-Renowned Experts</div>
-						<p>We've built quite a reputation over the last decade, known throughout the country for quality care. That reputation attracts the county's leading addiction professionals. If you've sought treatment before, you know how critical it is to get individualized attention from people that actually care.</p>
+						<p>We've built quite a reputation over the last decade, known throughout the country for quality care. That reputation attracts the county's leading addiction professionals. If you've sought treatment before, you know how critical it is to get individualized attention from people who actually care.</p>
 						<div class="h5">Active Accountability for 1 Year </div>
 						<p>Your Recovery Coach can be reached 24/7 through our free alumni app. The app also offers interactive games and logs that strengthen your mental health and reward you for continuing healthy habits.    </p>
 					</div>
@@ -294,13 +309,24 @@ get_header();
 						<div class="bio-default">
 							<div class="row no-gutters">
 								<?php foreach ($Homepage->bios as $bio): ?>
+									<?php
+									/** Set the range to start likes from if the object has never been like.
+									 *  The total will be a random number between the range. If a specific number
+									 *  is desired, then add the desired number as the min and max
+									 */
+									$Homepage->setInitialLikesStart(54,300);
+									$likeIdentifier = $bio->identifier;
+									$totalLikes  = $Homepage->setLikes($likeIdentifier);
+									?>
 								<div class="col-md-6">
 									<div class="bio">
 										<figure style="background-image: url('<?php echo $bio->photo['image']; ?>');">
 											
 										</figure>
 										<?php if($bio->sober_since): ?>
-										<div class="like-button"><i class="fas fa-thumbs-up"></i> 2981</div>
+										<div data-like-object="<?php echo $likeIdentifier; ?>" class="like-button"  data-placement="top" data-toggle="tooltip" <?php echo ($Homepage->isLikedBySession($likeIdentifier)) ? 'title="Already liked"' : 'title="Do you like?"'; ?>>
+											<i class="fas fa-thumbs-up"></i> <data value="<?php echo $totalLikes; ?>"> <?php echo $totalLikes; ?></data>
+										</div>
 											<span class="sub-caption">
 											<figcaption class="name"><?php echo $bio->name; ?></figcaption>
 											Sober <span class="text-uppercase"> <?php echo $bio->sober_since ?></span></span>
@@ -336,7 +362,7 @@ get_header();
 						</div>
 						<div class="col-md-3">
 							<div class="box last">
-								<i class="fas fa-mobile-alt"></i> App + Recovery Coach
+								<i class="fas fa-mobile-alt"></i> App + Life Coaching
 							</div>
 						</div>
 					</div>
@@ -360,6 +386,7 @@ get_header();
 									</div>
 								</div>
 							</div>
+
 							<div id="l-faq-<?php echo $index; ?>" class="collapse <?php echo ($index == 0) ? "show" : ""; ?>" aria-labelledby="l-faq-heading-<?php echo $index; ?>">
 								<div class="card-body">
 									<?php echo $faq->answer; ?>

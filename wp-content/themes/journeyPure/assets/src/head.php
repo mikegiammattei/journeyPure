@@ -1,4 +1,16 @@
+<?php
+	/** Global Controllers */
+
+	// Enable Third Party Scripts
+	Define("THIRD_PARTY_SCRIPTS", false);
+?>
+
 <?php session_start(); ?>
+<?php
+	include_once(get_stylesheet_directory() . '/classes/ThirdPartyScripts.php');
+	$ThirdPartyScripts  = new \Scripts\ThirdPartyScripts();
+?>
+
 <!doctype html>
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" <?php language_attributes(); ?>> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 oldie" <?php language_attributes(); ?>> <![endif]-->
@@ -23,5 +35,7 @@
 	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	<?php wp_head(); ?>
 	<script async src="//130400.tctm.co/t.js"></script>
+	<?php echo $ThirdPartyScripts->getHeadScripts(THIRD_PARTY_SCRIPTS) ?>
 </head>
 <body <?php body_class(); ?>>
+<?php echo $ThirdPartyScripts->getBodyNoScripts(THIRD_PARTY_SCRIPTS) ?>

@@ -16,12 +16,12 @@ get_header();
 	<main>
 		<?php $restApiPath = 'http://journeypure.net/rest-api'; ?>
 		<section class="above-fold">
-			<div class="default-container" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/img/jp-header-1920x1080.jpg')">
+			<div class="default-container" style="background-image: url('/wp-content/uploads/2019/11/journeypure-outpatient-suboxone-clinic.jpg')">
 				<div class="container">
 					<div class="content">
-						<h1 class="heading text-primary">Outpatient Treatment</h1>
+						<h1 class="heading text-primary">Suboxone Clinics</h1>
 						<div class="h3 text-primary">
-							Your #1 Choice for Drug & Alcohol Treatment
+							for anyone that feels it's impossible to stop using drugs.
 						</div>
 						<hr>
 						<div class="feature">
@@ -29,9 +29,9 @@ get_header();
 								<div class="col-lg-6 col-sm-12 d-flex align-items-stretch">
 									<div class="card transparent">
 										<div class="card-body">
-											<h5>If you're looking for help that actually helps you, you're in the right place.</h5>
-											<p>Treatment here is covered by insurance — backed by a 99% satisfaction rating and hundreds of positive reviews online.</p>
-											<p class="no-pad">When you're ready to talk about doing something different, give us a call. We have both inpatient rehabs and outpatient clinics to meet you where you're at. You don't have to be committed to coming here or even to getting treatment to reach out.</p>
+											<h5>The science of addiction medicine has advanced exponentially in the last decade.</h5>
+											<p>We now understand what's going on at the brainwave level — the damage drug addiction does and the effectiveness of medications like Suboxone.</p>
+											<p class="no-pad">Suboxone stabilizes your mind and body to be able to function normally. You get past the withdrawls and live without being sick, high or constantly distracted. If you've been unable to stop on your own, medications like Suboxone can help.</p>
 										</div>
 										<?php if($OutPatientLocation->ratings): ?>
 											<div class="rating-section">
@@ -73,7 +73,7 @@ get_header();
 								<div class="col-lg-6 col-sm-12 d-flex align-items-stretch">
 									<div class="card card-body h-100 justify-content-center transparent" style="width: 100%;">
 										<div class="embed-responsive embed-responsive-16by9">
-											<iframe class="embed-responsive-item" src="" data-src="https://www.youtube.com/embed/Gd1Dza355X8?rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+											<iframe class="embed-responsive-item" src="" data-src="https://www.youtube.com/embed/PQG6dqjlKNI?rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 										</div>
 									</div>
 								</div>
@@ -83,18 +83,17 @@ get_header();
 				</div>
 			</div>
 		</section>
-		<section class="insurance-section">
-			<div class="container">
-				<?php $_inc->get_insurance_banner(); ?>
-			</div>
-		</section>
+
 		<section class="locations">
 			<div class="container">
+			<h2 class="h1">13 Clinic Locations</h2>
 				<div class="row row-eq-height">
 					<?php  foreach ($OutPatientLocation->locations as $location): ?>
 						<div class="col-md-6 col-lg-4 details-col">
 							<div class="details">
-								<h3 class="name"><?php echo $location->facility_name; ?></h3>
+							<div class="row">
+								<div class="col-7">
+								<h5 class="name"><?php echo $location->facility_name; ?></h5>
 								<?php if($location->ratings->number): ?>
 								<div class="star-rating">
 									<span class="rating"><?php echo $location->ratings->number; ?></span>
@@ -109,38 +108,58 @@ get_header();
 								</div>
 								<?php endif; ?>
 								<p class="count"><?php echo $location->address; ?></p>
+								</div>
+								<div class="col-5">
+									<div class="location-img" style="background-image: url('<?php echo ($location->location_image) ? : "https://journeypure.com/wp-content/uploads/2019/02/jp-locations-ftw-500x375.jpg"; ?>')">
+									</div>
+								</div>
+							</div>
 							</div>
 						</div>
 					<?php endforeach; ?>
+					<div class="col-md-6 col-lg-4 details-col"><div class="details rehab-details"><h5>+ Inpatient Rehabs in Each State</h5>
+					<p>If you're ready to do whatever it takes, inpatient rehab is the most effective form of treatment.</p>
+	 <a href="/locations/tennessee/" class="btn btn-primary"><i class="fas fa-map-marker-alt"></i> Tennessee</a>
+
+	  <a href="/locations/kentucky/" class="btn btn-primary"><i class="fas fa-map-marker-alt"></i> Kentucky</a>
+
+	  	  <a href="/locations/florida/" class="btn btn-primary"><i class="fas fa-map-marker-alt"></i> Florida</a></h5></div></div>
 				</div>
 
 			</div>
 		</section>
+		<section class="insurance-section">
+			<div class="container">
+				<?php $_inc->get_insurance_banner(); ?>
+			</div>
+		</section>
 		<section class="block-4">
 			<div class="container">
-				<h5 class="heading h1">Block 4 Section</h5>
-				<h3 class="heading">It is a long established fact that a reader will be distracted by the readable uncover many web sites still in their infancy. </h3>
+				<h5 class="heading h1">The 3 Components of Treatment</h5>
+				<h3 class="heading">Get help with addiction that fits into your life.</h3>
 				<div class="card-deck">
 					<div class="card">
-						<img src="/wp-content/uploads/2019/11/carf-bg-fade-02.jpg" class="card-img-top" alt="...">
+						<img src="/wp-content/uploads/2019/11/brian-wind-2-1-scaled.jpg" class="card-img-top" alt="...">
 						<div class="card-body">
-							<h5 class="card-title">Section Heading</h5>
-							<p class="card-text"> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
-							<p></p>
+							<h5 class="card-title">Medications</h5>
+							<p class="card-text">Using medications in the treatment of drug addiction is recommended by nearly all healthcare authorities, including the World Health Organization and the National Institue of Health in the U.S. </p>
+							<p>In addition to Suboxone, medications for dual-diagnosis issues (like depression or anxiety) stabilize other imbalances in your brain that contribute to drug use. </p>
 						</div>
 					</div>
 					<div class="card">
-						<img src="/wp-content/uploads/2019/11/legitscripts-bg-fade-01.jpg" class="card-img-top" alt="...">
+						<img src="/wp-content/uploads/2019/11/therapy-suboxone-clinic.jpg" class="card-img-top" alt="...">
 						<div class="card-body">
-							<h5 class="card-title">Section Heading</h5>
-							<p class="card-text"> LegitScript is the authority on <b>ethical healthcare marketing</b>. Most other large providers in our industry do not meet these high standards. We were one of the first companies in the world to earn the LegitScript certification, which is backed by Visa, MasterCard, Google, Microsoft and Facebook. The certification assures what we say about ourselves and our facilities are <b>true and transparent</b>. It also ensures we do not accept any form of payment for referrals or work with companies that do.</p>
+							<h5 class="card-title">Therapy</h5>
+							<p class="card-text"> Therapy helps you look honestly at your life and motivations.  It shows you how to adjust your thinking to cope with stress, anxiety and pain without turning to drugs or alcohol.</p>
+							<p>In group therapy specifically, you’re challenged and supported by those who understand the heaviness you live with every day.  It only takes a few hours per week to learn to see things from a healthier perspective.  </p>
 						</div>
 					</div>
 					<div class="card">
-						<img src="http://jp.websiteservices.org/wp-content/uploads/2019/11/naatp-bg-fade-01.jpg" class="card-img-top" alt="...">
+						<img src="/wp-content/uploads/2019/11/journeypure-app.jpg" class="card-img-top" alt="...">
 						<div class="card-body">
-							<h5 class="card-title">Section Heading</h5>
-							<p class="card-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+							<h5 class="card-title">App Work</h5>
+							<p class="card-text">The JourneyPure app gives you all the tools you need to stay healthy long-term.  Since it's on your phone, you have access whenever you have time or are feeling triggered.</p>
+							<p>You tackle the pillars of general health (like sleep and nutrition) and mental health (like gratitude and self-awareness).  You're also connected with your Recovery Coach to give you guidance — even after you finish treatment here.</p>
 						</div>
 					</div>
 				</div>
@@ -165,7 +184,7 @@ get_header();
 							<div class="sub-text">
 								<p>Average Rating</p>
 								<p class="review-count">
-									<data value="<?php echo $OutPatientLocation->reviewTotal; ?>"><?php echo $OutPatientLocation->reviewTotal; ?></data>  reviews
+									(<data value="<?php echo $OutPatientLocation->reviewTotal; ?>"><?php echo $OutPatientLocation->reviewTotal; ?></data>  reviews)
 								</p>
 								<p class="link post-review-link" data-toggle="modal" data-target="#leave-a-review">Leave a Review</p>
 							</div>
@@ -215,7 +234,7 @@ get_header();
 		<?php endif; ?>
 		<section class="faqs">
 			<div class="container">
-				<h5 class="h1 text-center">What's holding you back?</h5>
+				<h5 class="h1 text-center">Suboxone FAQs</h5>
 				<div class="accordion" id="location-faq-rehab">
 					<?php foreach ( $OutPatientLocation->faqs as $index => $faq) : ?>
 						<div class="card">

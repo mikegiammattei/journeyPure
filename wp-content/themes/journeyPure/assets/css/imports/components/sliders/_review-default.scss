@@ -20,6 +20,7 @@
 		margin-right: 5px;
 		p{
 		  padding: 0;
+		  font-family:$heading-font;
 		}
 		.heading{
 		  margin-bottom: 0;
@@ -28,7 +29,7 @@
 		  line-height: 22px;
 		}
 		.stars{
-		  color: $accent;
+		  color: $stars;
 		}
 
 	  }
@@ -55,70 +56,37 @@
 
 	  .card{
 		.card-body{
+
 		  .author-info{
 			margin-bottom: $lg-space;
 			@media (max-width: 767px) {
 			  text-align: center;
 			}
 			img{
-			  width: 100px;
-			  height: 100px;
+			  width: 60px;
+			  height: auto;
 			  border-radius: 50%;
 
 			  @media (max-width: 767px) {
 				margin:auto;
 			  }
+			  &.source-img{
+				max-width: 60px;
+				height: auto;
+				float: right;
+				border-radius: 0;
+			  }
 			}
 		  }
 		  .stars{
-			color: $accent;
+			color: $stars;
 		  }
 		}
 	  }
 	  .review-nav{
 		text-align: right;
 
-		.see-more-btn,.see-less-btn{
-		  margin-top: 10px;
-		  &.slick-disabled{
-			opacity: 0;
-		  }
-		  &.has-more{
-			cursor: pointer;
-			color: $primary;
 
-			&:after,&:before{
-			  @extend .font-awesome;
-			  display: inline-block;
-			  position: relative;
-			  font-size: 10px;
-			}
-		  }
-		}
-		.see-more-btn{
-		  float: right;
-		  &.has-more{
-
-			&:after{
-			  content: '\f054';
-			  margin-left: 5px;
-			}
-		  }
-		  data{
-			display: inline-block;
-			margin-right: 3px;
-		  }
-		}
-		.see-less-btn{
-		  float: left;
-		  &.has-more{
-			display: block;
-			&:before{
-			  content: '\f104';
-			  margin-right: 5px;
-			}
-		  }
-		}
 	  }
 	}
   }

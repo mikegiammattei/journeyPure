@@ -111,21 +111,31 @@
 									<div class="card">
 										<div class="card-body">
 											<div class="author-info">
-												<div class="row">
-													<div class="col-md-auto align-self-center">
-														<img src="<?php echo $reviews->photo['image']; ?>" alt="<?php echo $reviews->photo['alt']; ?>">
-													</div>
-													<div class="col-auto align-self-center">
-														<h5 class="card-title"><?php echo $reviews->heading; ?></h5>
-														<div class="stars">
-															<?php for($i=0; $i < $reviews->star_rating; $i++): ?>
-																<i class="fas fa-star"></i>
-															<?php endfor; ?>
-														</div>
+												<div class="row justify-content-between">
+													<div class="col-md-9 col-8">
+														<div class="row">
+															<div class="col-lg-auto col-md-3 col-4 align-self-center">
+																<img src="<?php echo $reviews->photo['image']; ?>" alt="<?php echo $reviews->photo['alt']; ?>">
+															</div>
+															<div class="col-lg-auto col-md-9 col-8 align-self-center">
+																<h5 class="card-title"><?php echo $reviews->heading; ?></h5>
+																<div class="stars">
+																	<?php for($i=0; $i < $reviews->star_rating; $i++): ?>
+																		<i class="fas fa-star"></i>
+																	<?php endfor; ?>
+																</div>
 
+															</div>
+														</div>
 													</div>
+													<?php if(isset($reviews->source_image['image'])): ?>
+														<div class="col-md-3 col-4 align-self-center">
+															<img class="source-img" src="<?php echo $reviews->source_image['image']; ?>" alt="<?php echo $reviews->source_image['alt']; ?>">
+														</div>
+													<?php endif; ?>
 												</div>
 											</div>
+
 											<div class="review-text">
 												<?php echo $reviews->review_text; ?>
 											</div>

@@ -68,4 +68,26 @@ class Homepage
 		$Faqs->setFAQsByCatName('homepage');
 		$this->faqs = $Faqs->faqs;
 	}
+	public function setLikes($objIdentifier){
+		require_once(get_stylesheet_directory() . '/classes/Likes.php');
+		$Likes = new \Likes();
+
+		/** The identifier is the path of the bio image
+		 * Returns total likes
+		 */
+		return $Likes->setLike($objIdentifier);
+	}
+	public function setInitialLikesStart($min,$max){
+		require_once(get_stylesheet_directory() . '/classes/Likes.php');
+		$Likes = new \Likes();
+
+		/** The identifier is the path of the bio image */
+		$Likes::setInitialLikesStart($min,$max);
+	}
+	public function isLikedBySession($objIdentifier){
+		require_once(get_stylesheet_directory() . '/classes/Likes.php');
+		$Likes = new \Likes();
+
+		return $Likes->isLikedBySession($objIdentifier);
+	}
 }

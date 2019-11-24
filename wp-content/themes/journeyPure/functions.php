@@ -40,16 +40,6 @@ function enqueue_scripts() {
 	wp_register_script( 'jquery', "https://code.jquery.com/jquery-3.4.1.min.js", array(), '3.4.1' );
 
 
-    if (!(is_admin())) {
-        function defer_js($url) {
-            if (FALSE === strpos($url, '.js')) return $url;
-            if (strpos($url, 'jquery.js')) return $url;
-            return "$url' defer onload='";
-        }
-        add_filter('clean_url', 'defer_js', 11, 1);
-    }
-
-
 	/** REGISTER HTML5 Shim **/
 	wp_register_script( 'html5-shim', '//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js', array( 'jquery' ), '1', true );
 	wp_enqueue_script( 'html5-shim' );

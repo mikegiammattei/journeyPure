@@ -354,6 +354,8 @@
 	background:white;
 	background-image: url(/wp-content/themes/journeyPure/assets/img/background-diagmonds.png);
         box-shadow: 0px 2px 4px rgba(0,0,0,.18);
+		    border-top: 8px solid $primary;
+    border-bottom: 8px solid $primary;
   }
   .block-4{
   	margin: $xl-space 0;
@@ -364,10 +366,10 @@
 		margin: auto;
 		display:block;
 		max-width: $lg-width;
-		font-size: 22px;
-		color: #9A9C99;
-		letter-spacing: -1px;
-		margin-bottom: 20px;
+    font-size: 22px;
+    color: #9A9C99;
+    letter-spacing: -1px;
+	margin-bottom: 20px;
 	  }
 	}
 
