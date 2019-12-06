@@ -65,7 +65,7 @@
 				<div class="container">
 					<div class="heading">
 						<h1 class="page-heading text-white">Here, it's different.</h1>
-						<h3 class="lead">Our mission is to help people, families and communities heal through quality dual-diagnosis addiction treatment and compassionate care.  Our high standards attract well-known behavioral health professionals from across the country.  Their commitments to ethics and patient success are backed by the highest accreditation and affiliations in the industry and constant improvement.</h3>
+						<h3 class="lead">Our mission is to help people, families and communities heal. Patients here get evidence-based, dual-diagnosis addiction treatment and compassionate care.  Our high standards attract well-known behavioral health professionals from across the country.  Their commitments to ethics and patient success are backed by the highest accreditation and affiliations in the industry.</h3>
 					</div>
 				</div>
 			</div>
@@ -135,13 +135,14 @@
 				<?php endforeach; ?>
 			</div>
 
+			<div class="clearfix"></div>
 			<div class="main-controls">
 				<div class="row justify-content-between">
 					<div class="col-6">
-						<p class="link see-less-btn">&lt; Back</p>
+						<p class="link see-less-btn">Back</p>
 					</div>
 					<div class="col-6 text-right">
-						<p class="link see-more-btn">Next&nbsp;<i class="fas fa-chevron-circle-right"></i></p>
+						<p class="link see-more-btn">More</p>
 					</div>
 				</div>
 			</div>
@@ -149,31 +150,46 @@
 	</section>
 	<section class="page-quote">
 		<div class="container">
-			<div class="container"><div class="header"><div class="lead">"In order to continuously improve, we believe in science, real-world analysis and teamwork. Yet, the driving force behind JourneyPure remains an eternal compassion to help."</div></div><div class="media d-inline-flex"> <img class="mr-3" src="/wp-content/uploads/2019/11/dr-stephen-loyd-journeypure-md.jpg" alt="Doctor Stephen Loyd Headhot as Drug Czar"><div class="media-body "><h5 class="mt-0">Dr. Stephen Loyd M.D.</h5><p>Cheif Medical Officer</p></div></div></div>
+			<div class="container">
+				<div class="header">
+					<div class="lead">
+						"In order to continuously improve, we believe in science, real-world analysis and teamwork. Yet, the driving force behind JourneyPure remains an eternal compassion to help."
+					</div>
+				</div>
+				<div class="media d-inline-flex">
+					<img class="mr-3" src="/wp-content/uploads/2019/11/dr-stephen-loyd-journeypure-md.jpg" alt="Doctor Stephen Loyd Headhot as Drug Czar">
+					<div class="media-body ">
+						<h5 class="mt-0">Dr. Stephen Loyd M.D.</h5>
+						<p>Cheif Medical Officer</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
-	<section class="ethics">
-	<div class="container">
-	<h2 class="h1">Founding Principles</h2>
-			<div class="media media-number-list"><div class="align-self-start mr-3 list-number colored"><i class="fas fa-check"></i></div><div class="media-body"><h5 class="mt-0">Addiction is a disease that can be treated with evidence-based and research-backed treatments</h5></div></div>
-	<div class="media media-number-list"><div class="align-self-start mr-3 list-number colored"><i class="fas fa-check"></i></div><div class="media-body"><h5 class="mt-0">Any co-occurring mental health conditions must be treated along with the addictive behaviors to achieve long-term healing </h5></div></div>
+		<section class="ethics">
+		<div class="container">
+		<h2 class="h1">Founding Principles</h2>
+				<div class="media media-number-list"><div class="align-self-start mr-3 list-number colored"><i class="fas fa-check"></i></div><div class="media-body"><h5 class="mt-0">Addiction is a disease that can be treated with evidence-based and research-backed treatments</h5></div></div>
+		<div class="media media-number-list"><div class="align-self-start mr-3 list-number colored"><i class="fas fa-check"></i></div><div class="media-body"><h5 class="mt-0">Any co-occurring mental health conditions must be treated along with the addictive behaviors to achieve long-term healing </h5></div></div>
 
-	<div class="media media-number-list"><div class="align-self-start mr-3 list-number colored"><i class="fas fa-check"></i></div><div class="media-body"><h5 class="mt-0">Everyone can recover from addiction</h5></div></div>
-			<div class="media media-number-list"><div class="align-self-start mr-3 list-number colored"><i class="fas fa-check"></i></div><div class="media-body"><h5 class="mt-0">Every patient deserves respectful, compassionate care </h5></div></div>
+		<div class="media media-number-list"><div class="align-self-start mr-3 list-number colored"><i class="fas fa-check"></i></div><div class="media-body"><h5 class="mt-0">Everyone can recover from addiction</h5></div></div>
+				<div class="media media-number-list"><div class="align-self-start mr-3 list-number colored"><i class="fas fa-check"></i></div><div class="media-body"><h5 class="mt-0">Every patient deserves respectful, compassionate care </h5></div></div>
 <div class="media media-number-list"><div class="align-self-start mr-3 list-number colored"><i class="fas fa-check"></i></div><div class="media-body"><h5 class="mt-0">Treatment providers are accountable for patient's lasting success</h5></div></div>
-</div>
-</section>
+	</div>
+	</section>
+
+
 	<section class="block-4">
 		<div class="container">
 			<h5 class="heading h1">Third-Party Vetted</h5>
-				<h3 class="heading">Treatment here is monitored by all the leading addiction healthcare organizations.</h3>
+				<h3 class="heading">Our treatment is monitored by all the leading addiction healthcare organizations.</h3>
 			<div class="card-deck">
 				<div class="card">
 					<img src="/wp-content/uploads/2019/11/carf-bg-fade-02.jpg" class="card-img-top" alt="...">
 					<div class="card-body">
 						<h5 class="card-title">CARF Accredited </h5>
 						<p class="card-text">
-							While state licensing is mandatory, adhering to much <b>higher standards</b> from non-profit accrediting organizations is reserved only for providers with the commitment and capabilities to provide <b>better treatment</b>.  <i>The majority of addiction treatment providers are not accredited.</i> CARF is the highest level of accreditation in our industry.  The review process takes 9-12 months. Only 20% of addiction treatment providers meet and maintain these strict criteria.  </p>
+							While state licensing is mandatory, adhering to much <b>higher standards</b> from non-profit accrediting organizations is reserved only for providers with the commitment and capabilities to provide <b>better treatment</b>.  <i>The majority of addiction treatment providers are not accredited.</i> CARF is the highest level of accreditation in our industry.  The review process takes nine to 12 months. Only 20% of addiction treatment providers meet and maintain these strict criteria.
 						</p>
 					</div>
 				</div>
@@ -208,9 +224,9 @@
 	<h5 class="h1">The Latest News</h5>
 	<div class="row row-eq-height"> <div class="col-lg-6 d-flex align-items-stretch card-col"><div class="card default  effect-none"> <div class="card-body"><div class="card-text"> 
 <ul>
-<li><h3>We're in-network with new VA Choice insurance.</h3><hr /> Vetran care is a high priority here. We accept Tricare and have specialized programs led by Vetrans that undertand the heaviness those in the millitary community live with. We're also currently testing the effectiveness of virutal reality technology in treatment.</li>
-<li><h3>All 14 outpatient locations across the country have launched.</h3><hr /> We're growing in our commitment to communities in Tennessee, Kentucky and Florida.  Outpatient treatment, including Suboxone maintainence, is the only way to  meet each person where they are at.</li>
-<li class="last-news"><h3>Current data shows 84% of alumni are sober 6 months after starting treatment here.</h3><hr /> We use our data and statistically-verified studies from others in the industry to adjust our programs and modalities in ways that have the biggest impact on individual success. </li>
+<li><h3>We're in-network with new VA Choice insurance.</h3><hr /> Veteran care is a high priority here. We accept Tricare and have specialized programs led by veterans who understand the heaviness the millitary community lives with every day. We're also currently testing the effectiveness of virutal reality technology in treatment.</li>
+<li><h3>All 14 outpatient locations across the country have launched.</h3><hr />  We're growing in our commitment to communities in <a href="/locations/tennessee">Tennessee</a>, <a href="/locations/kentucky">Kentucky</a> and <a href="/locations/florida">Florida</a>. Offering both outpatient and inpatient care is the only way to meet each person where they're at.</li>
+<li class="last-news"><h3>Current data shows 84% of alumni are sober six months after starting treatment here.</h3><hr /> We use our data and statistically-verified studies from others in the industry to adjust our programs and modalities in ways that have the biggest impact on individual success. </li>
 </ul>
 </div></div></div></div> <div class="col-lg-6 d-flex align-items-stretch card-col"><div class="card default  effect-none"> <div class="card-body"><div class="card-text">  <img class="featured" src="/wp-content/uploads/2019/11/journeypure-alumni-app-after-rehab-left.png" alt="JourneyPure Phone App Screenshot Listing Features"> </div></div></div></div> </div></div>  <div class="content-section top-lg"><div class="card default"><div class="card-body"> </div></div></div> </div></section>
 

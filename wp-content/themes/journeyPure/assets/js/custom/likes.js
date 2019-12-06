@@ -1,8 +1,6 @@
 $(document).ready(function () {
 	jp_likes();
 });
-
-
 function jp_likes(){
 	let likeSelector = '[data-like-object]';
 
@@ -14,7 +12,7 @@ function jp_likes(){
 			let currentCountEl = thisLike.find('data');
 			let currentCount = currentCountEl.val();
 
-			$.post('/wp-content/themes/journeyPure/ajax/Likes.php', {data: likeIdentifier},function (response) {
+			$.post('/wp-admin/admin-ajax.php', {'action' : 'like_action_hok', data: likeIdentifier},function (response) {
 				if(response ){
 					/** Increment Likes */
 					currentCount++;

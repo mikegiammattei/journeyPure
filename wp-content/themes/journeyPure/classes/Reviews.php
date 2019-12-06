@@ -40,6 +40,7 @@ class Reviews
 	}
 	private function setReviews(){
 
+		$this->reviews  = array();
 		foreach ($this->reviewPostsIds as $index => $reviewPostsId){
 			$review = get_fields($reviewPostsId);
 
@@ -89,10 +90,7 @@ class Reviews
 			// Get just Post IDs
 			$this->reviewPostsIds = wp_list_pluck( $wp_query->posts, 'ID' );
 
-
 			$this->setReviews();
-
-
 		}
 
 	}

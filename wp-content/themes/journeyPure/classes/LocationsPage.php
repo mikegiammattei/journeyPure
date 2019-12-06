@@ -40,4 +40,18 @@ class LocationsPage
 
 		$this->ratings = $Ratings->ratings;
 	}
+	public function getReviewsByLocationCat($locationCat){
+
+		require_once(get_stylesheet_directory() . '/classes/Reviews.php');
+		$Reviews = new \Reviews\Reviews();
+
+		$catId = get_category_by_slug( $locationCat);
+		$Reviews->setPostByCategoryId(array($catId->term_id));
+
+		$this->reviews = $Reviews->reviews;
+
+		$this->reviewAvg = $Reviews->getAvgRating();
+		$this->reviewTotal= $Reviews->getTotalReviews();
+
+	}
 }

@@ -1,7 +1,7 @@
 .cta-widget{
   z-index: 100;
   background: $background-color;
-  padding: 18px;
+  padding: 22px 20px;
   border-radius: 3px  3px 0 0;
   position: fixed;
   bottom: 0;
@@ -11,6 +11,7 @@
   color: $main-font;
   font-weight: bold;
   $base-size: 16;
+  font-family:$heading-font;
   
  @media (max-width:427px) { 
       width: 100%;
@@ -31,7 +32,7 @@
 	padding:8px 12px 10px;
 	line-height: 34px;
 	border-radius: 3px 3px 0 0;
-	top: -142%;
+	top: -131%;
 	left:0 !important;
 	right: 0;
 	font-weight: normal;

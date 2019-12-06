@@ -31,4 +31,4 @@ function create_mg_forms() {
 	);
 }
 // Hooking up our function to theme setup
-add_action( 'init', 'create_mg_forms' );
+//add_action( 'init', 'create_mg_forms' );

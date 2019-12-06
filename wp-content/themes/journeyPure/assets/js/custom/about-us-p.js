@@ -48,27 +48,31 @@ $(document).ready(function () {
 
 				}).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
 
-					// Handle slides remaining to show
-					let direction;
-					if (Math.abs(nextSlide - currentSlide) === 1) {
-						direction = (nextSlide - currentSlide > 0) ? "right" : "left";
-					} else {
-						direction = (nextSlide - currentSlide > 0) ? "left" : "right";
-					}
-					if (direction === 'right') {
-						if (slidesLeft !== 0) {
-							slidesLeft--;
+					if (nextSlide > 0 && event.target.id === 'about-bio-slider') {
+						// Handle slides remaining to show
+						let direction;
+						if (Math.abs(nextSlide - currentSlide) === 1) {
+							direction = (nextSlide - currentSlide > 0) ? "right" : "left";
+						} else {
+							direction = (nextSlide - currentSlide > 0) ? "left" : "right";
 						}
-					} else {
-						slidesLeft++;
-					}
-					$(NEXT_BTN).find('data').val(slidesLeft).text(slidesLeft);
+						if (direction === 'right') {
+							if (slidesLeft !== 0) {
+								slidesLeft--;
+							}
+						} else {
+							slidesLeft++;
+						}
+						$(NEXT_BTN).find('data').val(slidesLeft).text(slidesLeft);
+						console.log(event.target.id);
 
-					// Toggle Prev Button
-					if (nextSlide > 0) {
-						$(PREV_BTN).addClass('has-more');
-					} else {
-						$(PREV_BTN).removeClass('has-more');
+						// Toggle Prev Button
+						if (nextSlide > 0 && event.target.id) {
+
+							$(PREV_BTN).addClass('has-more');
+						} else {
+							$(PREV_BTN).removeClass('has-more');
+						}
 					}
 				});
 
@@ -78,13 +82,11 @@ $(document).ready(function () {
 	}
 
 
-
 	fireEachAboutBioMentionSlide();
 	function fireEachAboutBioMentionSlide(){
 		if($('#about-us .bio-new-mentions').length > 0){
 			$('#about-us .bio-new-mentions').each(function () {
 				let thisSide = $(this);
-				console.log(thisSide.attr('id'));
 				aboutUsMentions(thisSide.attr('id'));
 			});
 		}

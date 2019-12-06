@@ -2,7 +2,7 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header bg-primary ">
-				<h5 class="modal-title text-white h1" id="exampleModalLongTitle">Insurance Checker</h5>
+				<h5 class="modal-title text-white h5" id="exampleModalLongTitle">Insurance Checker</h5>
 				<button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -21,6 +21,7 @@
 							<div class="form-row">
 								<div class="col-md-12">
 									<input type="text" class="form-control" id="ins-name" placeholder="Your (Full) Name" required>
+									<input type="hidden" name="names" class="form-control" id="ins-names" placeholder="Your Name">
 									<span class="fa fa-id-card field-icons"></span>
 									
 									<div class="invalid-feedback">
@@ -178,12 +179,14 @@
 								</div>
 							</div>
 						</div>
+						<?php /**
 						<div class="captcha-container">
 							<div class="g-recaptcha" data-callback="userQuestionClientFormCaptchaCallback" data-theme="light"  data-sitekey="6LccjL4UAAAAAJAHAWjebiNA4_A0fPcHvxO-BG-b"></div>
 							<div class="bad-captcha">
 								Captcha is required
 							</div>
 						</div>
+ 							*/ ?>
 					</div>
 				</div>
 				<div class="modal-footer">

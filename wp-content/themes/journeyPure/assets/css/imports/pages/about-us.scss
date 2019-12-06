@@ -156,15 +156,11 @@
 	  }
 
 	}
-	
-	.main-controls{
-		margin-top:-40px;
-	}
-	
+
 
 	.see-more-btn {
-			font-family: "Montserrat",sans-serif;
-		  }
+	  font-family: "Montserrat",sans-serif;
+	}
 	
 	
   }
@@ -298,9 +294,11 @@ h3 {
 	background:white;
 	background-image: url(/wp-content/themes/journeyPure/assets/img/background-diagmonds.png);
 	box-shadow: 0px 2px 4px rgba(0,0,0,.18);
+	border-top: 8px solid $primary;
   }
   .ethics {
 	    background-image: url(/wp-content/themes/journeyPure/assets/img/background-diagmonds.png);
+		border-top:8px solid $primary;
 	.container {
 		margin: 0 auto;
 		max-width: 900px;

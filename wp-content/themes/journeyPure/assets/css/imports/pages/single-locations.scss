@@ -4,6 +4,7 @@
 	margin-bottom: 10px;
 	font-family:$heading-font;
 	padding-bottom:0;
+		margin-top:0;
 	&.slick-disabled{
 	  opacity: 0;
 	}
@@ -51,10 +52,9 @@
   p {
   color:$main-gray;
       font-size: 22px;
-    font-family: Montserrat;
-    letter-spacing: 0;
-  }
-
+	  font-family: Montserrat;
+	  letter-spacing: 0;
+	}
   }
 
   // Import above fold  styles that are global
@@ -63,21 +63,32 @@
 	padding: $xl-space 15px $lg-space 15px;
 	.tag{
 		border-radius: 3px;
-		
 	}
-	
-	.list-number{
-	  margin-top: $md-space;
-	  display: inline-block;
-	  width: 34px;
-	  height: 34px;
-	  border-radius:50%;
-	  color: $secondary;
-	  border: 2px solid $secondary;
-	  text-align: center;
-	  font-size: 18px;
-	  line-height: 29px;
-	  margin-right: 5px;
+	.list-container{
+	  margin-top: $lg-space;
+
+	  .list-item{
+		margin-bottom: $md-space;
+
+		.list-heading{
+		  margin-bottom: $md-space;
+		  .icon{
+			display: inline-block;
+			width: 34px;
+			height: 34px;
+			border-radius:50%;
+			color: $secondary;
+			border: 2px solid $secondary;
+			text-align: center;
+			font-size: 18px;
+			line-height: 30px;
+			margin-right: 5px;
+		  }
+		  .item-title{
+			margin-bottom: 0;
+		  }
+		}
+	  }
 	}
   }
   .block-3{

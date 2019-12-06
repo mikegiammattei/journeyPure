@@ -121,7 +121,32 @@ img{
   border:2px solid #00953B;
   background: white;
 }
+.btn-social{
+  position: relative;
+  padding-left: 44px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
+  span {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 32px;
+	line-height: 34px;
+	font-size: 18px;
+	text-align: center;
+	border-right: 1px solid rgba(0,0,0,0.2);
+  }
+
+  &.btn-facebook{
+	color: #fff;
+	background-color: $primary;
+	border-color: rgba(0,0,0,0.2);
+  }
+}
 // Text Colors
 .text-orange{
   color:$orange;
@@ -191,6 +216,49 @@ hr{
   cursor: pointer;
 }
 
+
+		.see-more-btn,.see-less-btn{
+		  margin-top: 10px;
+		  font-family:$heading-font;
+		  &.slick-disabled{
+			opacity: 0;
+		  }
+		  &.has-more{
+			cursor: pointer;
+			color: $primary;
+
+			&:after,&:before{
+			  @extend .font-awesome;
+			  display: inline-block;
+			  position: relative;
+			  font-size: 10px;
+			}
+		  }
+		}
+		.see-more-btn{
+		  float: right;
+		  &.has-more{
+
+			&:after{
+			  content: '\f054';
+			  margin-left: 5px;
+			}
+		  }
+		  data{
+			display: inline-block;
+			margin-right: 3px;
+		  }
+		}
+		.see-less-btn{
+		  float: left;
+		  &.has-more{
+			display: block;
+			&:before{
+			  content: '\f104';
+			  margin-right: 5px;
+			}
+		  }
+		}
 
 // Popover
 .popover{

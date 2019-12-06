@@ -4,6 +4,7 @@
  */
 ?>
 <?php
+
 include_once(get_stylesheet_directory() . '/classes/LocationsPage.php');
 $LocationsPage = new Pages\LocationsPage();
 get_header();
@@ -60,8 +61,8 @@ get_header();
 				<div class="col-12 order-md-2 order-1">
 					<div class="container">
 						<div class="heading">
-							<h1 class="page-heading text-white">18 Locations Across the Country</h1>
-							<h2 class="lead">Whether you're just realizing there's a problem or you've been in and out of other facilities for years, we can help. People come from all across the country because the treatment here is that good. If you're not sure which location to choose, don't worry. Call or chat with someone who understands and can make a recommendation.</h2>
+							<h1 class="page-heading text-white">19 Locations Across the Country</h1>
+							<h2 class="lead">Whether you're just realizing there's a problem or you've been in and out of other facilities for years, we can help. People from all over the country come here because the treatment is that good. If you're not sure which location to choose, don't worry. Call or chat with someone who understands and can make a recommendation.</h2>
 						</div>
 					</div>
 				</div>
@@ -73,11 +74,13 @@ get_header();
 					<div class="card">
 						<div class="card-body">
 							<h5 class="card-title h1">Tennessee</h5>
-							<p class="card-text">With outpatient clinics in 5 cities and the nicest inpatient rehab in the state, anyone in Tennessee can get their life back on track. </p>
+							<?php $LocationsPage->getReviewsByLocationCat("tennessee"); ?>
+							<p class="card-text">With outpatient clinics in five cities and the nicest inpatient rehab in the state, anyone in Tennessee can get their life back on track. </p>
 							<div class="rehab">
 								<div class="row">
 									<div class="col-1 number">1</div>
-									<div class="col-7"><b><a href="/locations/tennessee/">TN Inpatient Rehab</a></b><br><span class="star">4.2&nbsp;</span> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> (85)<br>Tennessee
+									<div class="col-7"><b><a href="/locations/tennessee/">TN Inpatient Rehab</a></b><br><data value="<?php echo $LocationsPage->reviewAvg; ?>" class="star"><?php echo $LocationsPage->reviewAvg; ?></data>&nbsp;<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <data value="<?php echo $LocationsPage->reviewTotal; ?>">(<?php echo $LocationsPage->reviewTotal; ?>) </data>
+										<br>Tennessee
 										<button class="btn btn-primary" data-toggle="modal" type="button" onclick="window.location.href = '/locations/tennessee/';"><i class="fas fa-map-marker-alt" ></i> Learn More</button>
 									</div>
 									<div class="col-4"><a href="/locations/tennessee/"><img src="/wp-content/uploads/2019/11/murfreesboro-tn-inpatient-rehab.jpg" alt="..."></a></div>
@@ -143,14 +146,15 @@ get_header();
 					<div class="card">
 						<div class="card-body">
 							<h5 class="card-title h1">Kentucky</h5>
+							<?php $LocationsPage->getReviewsByLocationCat("kentucky"); ?>
 							<p class="card-text">People travel from all over Kentucky to our inpatient rehab. We also have 5 outpatient clinics throughout the state. </p>
 							<div class="rehab">
 								<div class="row">
 									<div class="col-1 number">1</div>
-									<div class="col-7"><b><a href="/locations/kentucky/">KY Inpatient Rehab</a></b><br><span class="star">4.8&nbsp;</span> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> (55)<br>Kentucky
+									<div class="col-7"><b><a href="/locations/kentucky/">KY Inpatient Rehab</a></b><br><data value="<?php echo $LocationsPage->reviewAvg; ?>" class="star"><?php echo $LocationsPage->reviewAvg; ?>&nbsp;</data> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <data value="<?php echo $LocationsPage->reviewTotal; ?>"> (<?php echo $LocationsPage->reviewTotal; ?>)</data><br>Kentucky
 										<button class="btn btn-primary" data-toggle="modal" type="button" onclick="window.location.href = '/locations/kentucky/';"><i class="fas fa-map-marker-alt" ></i> Learn More</button>
 									</div>
-									<div class="col-4"><a href="/locations/kentucky/"><img src="/wp-content/uploads/2019/11/kentycky-inpatient-rehab-1.jpg" alt="..."></a></div>
+									<div class="col-4"><a href="/locations/kentucky/"><img src="/wp-content/uploads/2019/10/JPBG43-1.jpg" alt="..."></a></div>
 								</div>
 							</div>
 							<div class="outpatient">
@@ -198,11 +202,12 @@ get_header();
 					<div class="card">
 						<div class="card-body">
 							<h5 class="card-title h1">Florida</h5>
+							<?php $LocationsPage->getReviewsByLocationCat("florida"); ?>
 							<p class="card-text">Anyone can access the best drug and alcohol treatment in the country at our locations in sunny Florida.</p>
 							<div class="rehab">
 								<div class="row">
 									<div class="col-1 number">1</div>
-									<div class="col-7"><b><a href="/locations/florida/">FL Inpatient Rehab</a></b><br><span class="star">4.4&nbsp;</span> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> (168)<br>Florida
+									<div class="col-7"><b><a href="/locations/florida/">FL Inpatient Rehab</a></b><br><data value="<?php echo $LocationsPage->reviewAvg; ?>" class="star"><?php echo $LocationsPage->reviewAvg; ?></data>&nbsp;<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <data value="<?php echo $LocationsPage->reviewTotal; ?>"> (<?php echo $LocationsPage->reviewTotal; ?>)</data><br>Florida
 										<button class="btn btn-primary" data-toggle="modal" type="button" onclick="window.location.href = '/locations/florida/';"><i class="fas fa-map-marker-alt" ></i> Learn More</button>
 									</div>
 									<div class="col-4"><a href="/locations/florida/"><img src="/wp-content/uploads/2019/10/JOURNEYPURE-25-e1573757926615.jpg" alt="..."></a></div>
@@ -231,7 +236,7 @@ get_header();
 							<h5>Those in Florida</h5>
 							<p>People come from as far as Alaska to access treatment here. With locations in the southeast and the northwest of the state, you're a drive or bus ride away. No excuses!</p>
 							<h5>The Military Community</h5>
-							<p>Our FL locations have seperate programing run by Vetrans that understand the heaviness you have to live with every day. We're in network with Tricare and VA Choice and are the only facility testing virtual reality technology in treatment. </p>
+							<p>Our Florida locations have separate programming run by veterans who understand the heaviness you live with every day. We're in network with Tricare and VA Choice and are the only facility testing virtual reality technology in treatment. </p>
 
 						</div>
 						<div class="card-footer">

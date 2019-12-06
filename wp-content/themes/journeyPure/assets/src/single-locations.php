@@ -10,7 +10,6 @@
  ?>
 
 <div id="single-location">
-
 	<?php if(isset($Location->aboveFold)): ?>
 	<section class="above-fold">
 
@@ -88,19 +87,31 @@
 	<?php if(isset($Location->block2)): ?>
 	<section class="container block-2">
 		<div class="row">
+
 			<div class="col-md-8">
 				<?php if($Location->block2->heading): ?>
 				<h3 class="h1"><?php echo $Location->block2->heading; ?></h3>
 				<?php endif; ?>
 				<?php if($Location->block2->list): ?>
+				<div class="list-container">
 					<?php foreach ( $Location->block2->list as $index => $item) : ?>
-						<?php if($item['heading']): ?>
-						<h5><span class="list-number"><i class="fas fa-check"></i></span><?php echo $item['heading']; ?></h5>
-						<?php endif; ?>
-						<?php if($item['content']): ?>
-						<div><?php echo $item['content']; ?></div>
-						<?php endif; ?>
+						<div class="list-item">
+							<div class="row no-gutters">
+								<?php if($item['heading']): ?>
+								<div class="list-heading">
+									<div class="d-flex">
+										<div class="align-self-center"><i class="fas fa-check icon"></i></div>
+										<div class="align-self-center"><h5 class="item-title"><?php echo $item['heading']; ?></h5></div>
+									</div>
+								</div>
+								<?php endif; ?>
+							</div>
+							<?php if($item['content']): ?>
+								<div><?php echo $item['content']; ?></div>
+							<?php endif; ?>
+						</div>
 					<?php endforeach; ?>
+				</div>
 				<?php endif; ?>
 			</div>
 			<div class="col-md-4">
@@ -129,10 +140,10 @@
 		</div>
 	</section>
 	<?php endif; ?>
-		<?php if(isset($Location->gallery)): ?>
+		<?php if(isset($Location->gallery)):  ?>
 	<div class="image-gallery" data-slick='{"slidesToShow": <?php echo count($Location->gallery); ?>}' role="toolbar">
-		<?php foreach ($Location->gallery as $index => $gallery) : ?>
-			<figure><img src="<?php echo $gallery->medium; ?>" /></figure>
+		<?php foreach ($Location->gallery as $index => $gallery) :  ?>
+			<figure><img src="<?php echo $gallery->medium; ?>" alt="<?php echo $gallery->alt; ?>" /></figure>
 		<?php endforeach; ?>
 	</div>
 	<?php endif; ?>
@@ -254,7 +265,7 @@
 
 						<div class="review-nav">
 							<p class="link see-less-btn">Previous</p>
-							<p class="link see-more-btn has-more"><data>Data Generated Via Script</data> More</p>
+							<p class="link see-more-btn has-more"> More</p>
 						</div>
 					</div>
 

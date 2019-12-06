@@ -24,6 +24,8 @@ footer{
 	  .subheading{
 		display: inline-block;
 		margin-left: 5px;
+		font-family:$heading-font;
+		font-size:17px;
 	  }
 	  .heading{
 		color: white;
@@ -34,21 +36,23 @@ footer{
 	}
 	.phone-action{
 	  float: right;
-	  text-align: right;
+	  text-align: center;
+
 	  .not-ready-link{
 		text-align: center;
 		@extend .link;
-		color: white;
 		margin-top: $sm-space;
 		display: inline-block;
 		z-index: 100;
 		position: relative;
+		font-size:17px;
+		font-family:$heading-font;
 
 		i{
 		  position: relative;
 		  display: inline-block;
 		  margin-right: 5px;
-		  border: 2px solid white;
+		  border: 2px solid $primary;
 		  width: 18px;
 		  height: 18px;
 		  top: -2px;
@@ -62,7 +66,7 @@ footer{
   }
   .last-tier{
 	background: white;
-	padding: 35px 0;
+	padding: 35px 0 25px;
 	.heading{
 	  color: $primary;
 	  @extend .h4;
@@ -72,18 +76,17 @@ footer{
 	}
 	.copyright{
 	  color: $main-gray;
-	  margin-top: $sm-space;
 	  font-size:13px;
 	  a{
 		color: $main-gray;
 		display: inline-block;
-		margin-left: 4px;
+		margin:0 2px;
 	  }
 
 	  button{
-		margin: 5px;
 		 color:$background-color;
 		 font-size: 13px;
+		 margin:10px 0;
 	  }
 	}
   }

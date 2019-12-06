@@ -206,35 +206,61 @@
 	<?php  if(count($ReviewPage->faqs) > 0): ?>
 	<section class="faqs">
 		<div class="container">
-			<h5 class="h1 text-center">What's holding you back?</h5>
-			<div class="accordion" id="location-faq-rehab">
-				<?php foreach ( $ReviewPage->faqs as $index => $faq) : ?>
-					<div class="card">
-						<div  data-parent="#location-faq-rehab" class="card-header  <?php echo ($index != 0) ? "collapsed" : ""; ?>" data-toggle="collapse" data-target="#l-faq-<?php echo $index; ?>" aria-expanded="true" aria-controls="l-faq-<?php echo $index; ?>" id="l-faq-heading-<?php echo $index; ?>">
-							<div class="question-box">
-								<div class="icon">
-									<i class="fas fa-plus-circle off"></i>
-									<i class="fas fa-minus-circle on"></i>
+			<div class="row">
+				<div class="col-xl-8 col-lg-6">
+					<h5 class="h1 text-center">What's holding you back?</h5>
+					<div class="accordion" id="location-faq-rehab">
+						<?php foreach ( $ReviewPage->faqs as $index => $faq) : ?>
+							<div class="card">
+								<div  data-parent="#location-faq-rehab" class="card-header  <?php echo ($index != 0) ? "collapsed" : ""; ?>" data-toggle="collapse" data-target="#l-faq-<?php echo $index; ?>" aria-expanded="true" aria-controls="l-faq-<?php echo $index; ?>" id="l-faq-heading-<?php echo $index; ?>">
+									<div class="question-box">
+										<div class="icon">
+											<i class="fas fa-plus-circle off"></i>
+											<i class="fas fa-minus-circle on"></i>
+										</div>
+										<div class="title">
+											<h5 class="card-title"><?php echo $faq->question; ?></h5>
+										</div>
+									</div>
 								</div>
-								<div class="title">
-									<h5 class="card-title"><?php echo $faq->question; ?></h5>
+								<div id="l-faq-<?php echo $index; ?>" class="collapse <?php echo ($index == 0) ? "show" : ""; ?>" aria-labelledby="l-faq-heading-<?php echo $index; ?>">
+									<div class="card-body">
+										<?php echo $faq->answer; ?>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div id="l-faq-<?php echo $index; ?>" class="collapse <?php echo ($index == 0) ? "show" : ""; ?>" aria-labelledby="l-faq-heading-<?php echo $index; ?>">
-							<div class="card-body">
-								<?php echo $faq->answer; ?>
-							</div>
-						</div>
+						<?php endforeach; ?>
 					</div>
-				<?php endforeach; ?>
+				</div>
+				<div class="col-xl-4 col-lg-6 align-self-center">
+					<aside>
+						<blockquote>
+							"Big text quote like on the other pages."
+						</blockquote>
+						<a target="_blank" href="https://facebook.com" class="btn btn-social btn-facebook">
+							<span class="fab fa-facebook-f"></span>Check us out
+						</a>
+						<div class="media-container">
+							<div class="media d-inline-flex">
+								<img class="mr-3" src="/wp-content/uploads/reviews/generic-profile-1.png" alt="Default Alt Tag">
+								<div class="media-body ">
+									<h5 class="name">Person's Name</h5>
+									<p>Title or other details</p>
+								</div>
+							</div>
+						</div>
+					</aside>
+				</div>
 			</div>
-			<div class="ask-a-question">
-				<span class="btn btn-primary" data-toggle="modal" data-target="#user-question-form-container"><i class="fas fa-comment-dots"></i> Ask a question</span>
-			</div>
+
 		</div>
 	</section>
 	<?php endif; ?>
+	<section class="insurance-section">
+		<div class="container">
+			<?php $_inc->get_insurance_banner(); ?>
+		</div>
+	</section>
 </div>
 <?php include(get_stylesheet_directory()  . '/assets/src/includes/components/ask-question-form.php'); ?>
 <?php get_footer(); ?>

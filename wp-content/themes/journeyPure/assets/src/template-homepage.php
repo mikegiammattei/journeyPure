@@ -11,10 +11,8 @@ $jsFile = 'homepage';
 get_header();
 
 ?>
-
 <div id="homepage">
 	<main>
-
 		<?php $restApiPath = 'http://journeypure.net/rest-api'; ?>
 		<section class="above-fold">
 			<div class="default-container" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/img/river_admin_03.jpg')">
@@ -27,7 +25,7 @@ get_header();
 						<hr>
 						<div class="feature">
 							<div class="row">
-								<div class="col-lg-6 col-sm-12 d-flex align-items-stretch">
+								<div class="col-lg-6 col-sm-12 ">
 									<div class="card transparent">
 										<div class="card-body">
 											<h5>If you're looking for help that actually helps you, you're in the right place.</h5>
@@ -96,8 +94,6 @@ get_header();
 						"Everyone comes in overwhelmed, but looking to make big changes quickly. This is where it starts. Where you learn to harness and hold on to hope."
 					</div>
 				</div>
-
-
 				<div class="media d-inline-flex">
 					<img class="mr-3" src="/wp-content/uploads/2019/11/kevin-lee.jpg" alt="Generic placeholder image">
 					<div class="media-body ">
@@ -109,25 +105,24 @@ get_header();
 		</section>
 		<section class="block-2">
 			<div class="container">
-
 				<div class="row">
 					<div class="col-lg-6 col-sm-12">
-					<h5 class="heading-prime h1">Let's talk about the facts</h5>
+						<h5 class="heading-prime h1">Let's talk about the facts</h5>
 						<div class="details">
 							<?php
-								$listItems = array();
-								$listItems[] = array(
-									'heading' => "You're TWICE as likely to get better here",
-									'content' => "According to the <a href=\"https://www.drugabuse.gov/publications/principles-drug-addiction-treatment-research-based-guide-third-edition/frequently-asked-questions/how-effective-drug-addiction-treatment\" target=\"_blank\">National Institute on Drug Abuse</a>, you can expect as little as 40% of people to be sober six months after starting treatment at another facility. That's not good. At JourneyPure, our success rate is 84%, and we stay in touch to help the few that do have a slip get right back on track."
-								);
-								$listItems[] = array(
-									'heading' => "Your treatment is backed by 6K+ success stories",
-									'content' => "We've helped thousands of people just like you get healthy and stay healthy.  We know what we're doing. We've seen it all. And, we can help you too."
-								);
-								$listItems[] = array(
-									'heading' => "We're 99% sure you'll be satisfied with your care",
-									'content' => "You deserve healthcare that listens and constantly improves.  The satisfaction rate as of " . date('F Y') . " is 99%."
-								);
+							$listItems = array();
+							$listItems[] = array(
+								'heading' => "You're TWICE as likely to get better here",
+								'content' => "According to the <a href=\"https://www.drugabuse.gov/publications/principles-drug-addiction-treatment-research-based-guide-third-edition/frequently-asked-questions/how-effective-drug-addiction-treatment\" target=\"_blank\">National Institute on Drug Abuse</a>, you can expect as little as 40% of people to be sober six months after starting treatment at another facility. That's not good. At JourneyPure, our success rate is 84%, and we stay in touch to help the few that do have a slip get right back on track."
+							);
+							$listItems[] = array(
+								'heading' => "Your treatment is backed by 6K+ success stories",
+								'content' => "We've helped thousands of people just like you get healthy and stay healthy.  We know what we're doing. We've seen it all. And, we can help you too."
+							);
+							$listItems[] = array(
+								'heading' => "We're 99% sure you'll be satisfied with your care",
+								'content' => "You deserve healthcare that listens and constantly improves.  The satisfaction rate as of " . date('F Y') . " is 99%."
+							);
 							?>
 							<?php if($listItems): ?>
 								<?php foreach ( $listItems as $index => $item) : ?>
@@ -226,47 +221,37 @@ get_header();
 							<div class="sub-text">
 								<p>Average Rating</p>
 								<p class="review-count">
-								 <data value="<?php echo $Homepage->reviewTotal; ?>">456</data>  Reviews
+									<data value="<?php echo $Homepage->reviewTotal; ?>">456</data>
+									Reviews
 								</p>
 								<p class="link post-review-link" data-toggle="modal" data-target="#leave-a-review">Leave a Review</p>
 							</div>
 						</div>
-
 					</div>
 					<div class="content-container-right">
 						<div class="review-slide-container <?php echo (count($Homepage->reviews) == 1) ? ' pb-5' : ''; ?>" >
 							<div class="review-slide" data-slick='{"slidesToShow": 1}' role="toolbar">
-								<?php foreach ($Homepage->reviews as $reviews) :  break; ?>
+								<?php foreach ($Homepage->reviews as $reviews) :   ?>
 									<div class="card">
 										<div class="card-body">
 											<div class="author-info">
-												
-											
-											
-											
 												<div class="row">
-												
-												
-												
 													<div class="col-md-auto align-self-center">
 														<img src="<?php echo $reviews->photo['image']; ?>" alt="<?php echo $reviews->photo['alt']; ?>">
 													</div>
-							
-							<div class="col-md-auto align-self-center">
+													<div class="col-md-auto align-self-center">
 														<h5 class="card-title"><?php echo $reviews->heading; ?></h5>
 														<div class="stars">
 															<?php for($i=0; $i < $reviews->star_rating; $i++): ?>
 																<i class="fas fa-star"></i>
 															<?php endfor; ?>
 														</div>
-
 													</div>
 													<?php if(isset($reviews->source_image['image'])): ?>
-												<div class="review-logo">
-													<img class="source-img" src="<?php echo $reviews->source_image['image']; ?>" alt="<?php echo $reviews->source_image['alt']; ?>">
-												</div>
-												<?php endif; ?>
-													
+														<div class="review-logo">
+															<img class="source-img" src="<?php echo $reviews->source_image['image']; ?>" alt="<?php echo $reviews->source_image['alt']; ?>">
+														</div>
+													<?php endif; ?>
 												</div>
 											</div>
 											<div class="review-text">
@@ -276,13 +261,11 @@ get_header();
 									</div>
 								<?php endforeach; ?>
 							</div>
-
 							<div class="review-nav">
 								<p class="link see-less-btn">Previous</p>
 								<p class="link see-more-btn has-more"> More</p>
 							</div>
 						</div>
-
 					</div>
 				</div>
 			</div>
@@ -291,11 +274,10 @@ get_header();
 			<div class="container">
 				<div class="heading">
 					<h5 class="h1">Treatment Here Works</h5>
-
 				</div>
 				<div class="row">
 					<div class="col-lg-6">
-					<h3>Even if you've been to dozens of other facilities before, the treatment here is different.  We set industry standards and hold ourselves accountable for your long-term success.</h3>
+						<h3>Even if you've been to dozens of other facilities before, the treatment here is different.  We set industry standards and hold ourselves accountable for your long-term success.</h3>
 						<div class="h5">Evidence-Based Treatments</div>
 						<p>A safe environment that combines medical care, holistic healing and various intense daily therapies is what works. While we constantly improve and test new options, our programs are fully guided by science.</p>
 						<div class="h5">Personalized Treatment Plans</div>
@@ -318,21 +300,22 @@ get_header();
 									$likeIdentifier = $bio->identifier;
 									$totalLikes  = $Homepage->setLikes($likeIdentifier);
 									?>
-								<div class="col-md-6">
-									<div class="bio">
-										<figure style="background-image: url('<?php echo $bio->photo['image']; ?>');">
-											
-										</figure>
-										<?php if($bio->sober_since): ?>
-										<div data-like-object="<?php echo $likeIdentifier; ?>" class="like-button"  data-placement="top" data-toggle="tooltip" <?php echo ($Homepage->isLikedBySession($likeIdentifier)) ? 'title="Already liked"' : 'title="Do you like?"'; ?>>
-											<i class="fas fa-thumbs-up"></i> <data value="<?php echo $totalLikes; ?>"> <?php echo $totalLikes; ?></data>
+									<div class="col-md-6">
+										<div class="bio">
+											<figure style="background-image: url('<?php echo $bio->photo['image']; ?>');">
+											</figure>
+											<?php if($bio->sober_since): ?>
+												<div data-like-object="<?php echo $likeIdentifier; ?>" class="like-button"  data-placement="top" data-toggle="tooltip" <?php echo ($Homepage->isLikedBySession($likeIdentifier)) ? 'title="Already liked"' : 'title="Do you like?"'; ?>>
+													<i class="fas fa-thumbs-up"></i>
+													<data value="<?php echo $totalLikes; ?>"> <?php echo $totalLikes; ?></data>
+												</div>
+												<span class="sub-caption">
+							 <figcaption class="name"><?php echo $bio->name; ?></figcaption>
+							 Sober <span class="text-uppercase"> <?php echo $bio->sober_since ?></span>
+						  </span>
+											<?php endif; ?>
 										</div>
-											<span class="sub-caption">
-											<figcaption class="name"><?php echo $bio->name; ?></figcaption>
-											Sober <span class="text-uppercase"> <?php echo $bio->sober_since ?></span></span>
-										<?php endif; ?>
 									</div>
-								</div>
 								<?php endforeach; ?>
 							</div>
 						</div>
@@ -386,7 +369,6 @@ get_header();
 									</div>
 								</div>
 							</div>
-
 							<div id="l-faq-<?php echo $index; ?>" class="collapse <?php echo ($index == 0) ? "show" : ""; ?>" aria-labelledby="l-faq-heading-<?php echo $index; ?>">
 								<div class="card-body">
 									<?php echo $faq->answer; ?>
