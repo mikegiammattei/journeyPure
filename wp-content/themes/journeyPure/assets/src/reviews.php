@@ -22,7 +22,7 @@
 	<section class="above-fold">
 		<div class="row no-gutters">
 			<div class="col-12 order-md-1 order-2">
-				<div style="background-image: url('/wp-content/uploads/2019/11/reviewers-blue-color.jpg')" class="img-container">
+				<div style="background-image: url('/wp-content/uploads/2019/12/jp-reviews-banner.jpg')" class="img-container">
 				</div>
 				<div class="top-content">
 					<div class="container">
@@ -97,17 +97,17 @@
 							<div class="sub-text">
 								<p>Average Rating</p>
 								<p class="review-count">
-									The <data value="<?php echo $ReviewPage->reviewTotal; ?>"><?php echo $ReviewPage->reviewTotal; ?></data>  Most Recent Reviews
+									<data value="<?php echo $ReviewPage->reviewTotal; ?>"><?php echo $ReviewPage->reviewTotal; ?></data> Reviews
 								</p>
 								<p class="link post-review-link" data-toggle="modal" data-target="#leave-a-review">Leave a Review</p>
 							</div>
 						</div>
-
 					</div>
 					<div class="content-container-right">
 						<div class="review-slide-container <?php echo (count($ReviewPage->reviews) == 1) ? ' pb-5' : ''; ?>" >
 							<div class="review-slider" id="review-slide-<?php echo preg_replace('/\./','',$tag); ?>" data-slick='{"slidesToShow": 1}' role="toolbar">
 								<?php foreach ($ReviewPage->reviews as $reviews) : ?>
+
 									<div class="card">
 										<div class="card-body">
 											<div class="author-info">
@@ -115,7 +115,7 @@
 													<div class="col-md-9 col-8">
 														<div class="row">
 															<div class="col-lg-auto col-md-3 col-4 align-self-center">
-																<img src="<?php echo $reviews->photo['image']; ?>" alt="<?php echo $reviews->photo['alt']; ?>">
+																<img src="" data-lazy="<?php echo $reviews->photo['image']; ?>" alt="<?php echo $reviews->photo['alt']; ?>">
 															</div>
 															<div class="col-lg-auto col-md-9 col-8 align-self-center">
 																<h5 class="card-title"><?php echo $reviews->heading; ?></h5>
@@ -124,7 +124,6 @@
 																		<i class="fas fa-star"></i>
 																	<?php endfor; ?>
 																</div>
-
 															</div>
 														</div>
 													</div>
@@ -177,7 +176,7 @@
 
 				</div>
 				<div class="col-md-5 order-md-2 order-1">
-					<h2 class="h1">Video Reviews</h2>
+					<h2 class="h1">Video Review</h2>
 					<h5 id="video-title"><?php echo $firstItem['snippet']['title']; ?></h5>
 					<?php $description = nl2br($firstItem['snippet']['description']); ?>
 					<p id="video-description"><?php echo $description; ?></p>
@@ -203,12 +202,17 @@
 			</div>
 		</div>
 	</section>
+		<section class="insurance-section">
+		<div class="container">
+			<?php $_inc->get_insurance_banner(); ?>
+		</div>
+	</section>
 	<?php  if(count($ReviewPage->faqs) > 0): ?>
 	<section class="faqs">
 		<div class="container">
 			<div class="row">
 				<div class="col-xl-8 col-lg-6">
-					<h5 class="h1 text-center">What's holding you back?</h5>
+					<h5 class="h1">Review FAQs</h5>
 					<div class="accordion" id="location-faq-rehab">
 						<?php foreach ( $ReviewPage->faqs as $index => $faq) : ?>
 							<div class="card">
@@ -234,21 +238,21 @@
 				</div>
 				<div class="col-xl-4 col-lg-6 align-self-center">
 					<aside>
-						<blockquote>
-							"Big text quote like on the other pages."
-						</blockquote>
-						<a target="_blank" href="https://facebook.com" class="btn btn-social btn-facebook">
-							<span class="fab fa-facebook-f"></span>Check us out
-						</a>
-						<div class="media-container">
-							<div class="media d-inline-flex">
-								<img class="mr-3" src="/wp-content/uploads/reviews/generic-profile-1.png" alt="Default Alt Tag">
-								<div class="media-body ">
-									<h5 class="name">Person's Name</h5>
-									<p>Title or other details</p>
-								</div>
-							</div>
+						<img src="/wp-content/uploads/2019/11/peter-addiction-recovery-300x249.png" style="
+    filter: grayscale(100%);
+">
+						<?php
+							$ReviewPage->setInitialLikesStart(54,300);
+							$likeIdentifier = 'peter-addiction-recovery-300x249.png';
+							$totalLikes  = $ReviewPage->setLikes($likeIdentifier);
+						?>
+						<div data-like-object="<?php echo $likeIdentifier; ?>" class="like-button"  data-placement="top" data-toggle="tooltip" <?php echo ($ReviewPage->isLikedBySession($likeIdentifier)) ? 'title="Already liked"' : 'title="Do you like?"'; ?>>
+							<i class="fas fa-thumbs-up"></i>
+							<data value="<?php echo $totalLikes; ?>"> <?php echo $totalLikes; ?></data>
 						</div>
+						<span class="sub-caption">
+							<figcaption class="name">Peter K.</figcaption> Sober <span>APR 2017</span>
+						</span>
 					</aside>
 				</div>
 			</div>
@@ -256,11 +260,7 @@
 		</div>
 	</section>
 	<?php endif; ?>
-	<section class="insurance-section">
-		<div class="container">
-			<?php $_inc->get_insurance_banner(); ?>
-		</div>
-	</section>
+
 </div>
 <?php include(get_stylesheet_directory()  . '/assets/src/includes/components/ask-question-form.php'); ?>
 <?php get_footer(); ?>

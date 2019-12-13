@@ -37,5 +37,5 @@ require(__DIR__ . '/class.user-review-type.php');
 // Add user review to the sidebar
 add_action('admin_menu', array('UserReviews','add_user_reviews'));
 
-// Register the user-faqs post type
+// Register the review post type
 add_action('init', array('UserReviewsType','register_user_reviews'));

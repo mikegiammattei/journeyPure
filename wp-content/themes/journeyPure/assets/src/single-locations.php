@@ -387,7 +387,7 @@
 						</div>
 						<?php $address = urlencode($Location->block4->location->full_address); ?>
 						<div class="embed-responsive embed-responsive-16by9">
-							<iframe src="https://www.google.com/maps/embed/v1/place?key=<?php echo GOOGLE_API; ?>
+							<iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDwoQ63Mff3mW9-u2fQUhnlMBmX752RKds
     &q=1<?php echo $address; ?>" allowfullscreen>
 							</iframe>
 						</div>

@@ -80,6 +80,18 @@
 		  }
 		  .stars{
 			color: $stars;
+			display: inline-block;
+			clear: left;
+		  }
+		  .like-button{
+			color:$primary;
+			display: inline-block;
+			margin-left: 5px;
+
+			data{
+			  position: relative;
+			  top:1px;
+			}
 		  }
 		}
 	  }

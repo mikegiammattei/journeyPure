@@ -75,7 +75,7 @@ get_header();
 						<div class="card-body">
 							<h5 class="card-title h1">Tennessee</h5>
 							<?php $LocationsPage->getReviewsByLocationCat("tennessee"); ?>
-							<p class="card-text">With outpatient clinics in five cities and the nicest inpatient rehab in the state, anyone in Tennessee can get their life back on track. </p>
+							<p class="card-text">With outpatient clinics in five cities and the most prestigious inpatient rehab in the state, anyone in Tennessee can get their life back on track. </p>
 							<div class="rehab">
 								<div class="row">
 									<div class="col-1 number">1</div>
@@ -203,7 +203,7 @@ get_header();
 						<div class="card-body">
 							<h5 class="card-title h1">Florida</h5>
 							<?php $LocationsPage->getReviewsByLocationCat("florida"); ?>
-							<p class="card-text">Anyone can access the best drug and alcohol treatment in the country at our locations in sunny Florida.</p>
+							<p class="card-text">Anyone can access the best drug and alcohol treatment in the country at our locations throughout sunny Florida.</p>
 							<div class="rehab">
 								<div class="row">
 									<div class="col-1 number">1</div>

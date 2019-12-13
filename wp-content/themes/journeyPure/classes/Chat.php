@@ -23,9 +23,9 @@ class Chat extends \User
 
 		parent::__construct();
 		$this->locations = $this->setLocations();
+		//$this->isNearBy();
+		$this->geoNearBy = $this->geoPlugin->nearby(30, 100);
 		$this->isLocal();
-		$this->isNearBy();
-		$this->geoNearBy = $this->geoPlugin->nearby();
 	}
 	private function setLocations(){
 		$path = get_stylesheet_directory() . '/locations.xml';
@@ -48,10 +48,11 @@ class Chat extends \User
 	private function isLocal(){
 		/** Loop through locations */
 		foreach ($this->locations as $location):
-
 			/** Loop through locations filters */
 			foreach ($location as $item ) {
-				if($item['state'] == $this->getState()){
+
+				if($this->isNearBy($item['state'],$item['city'])){
+
 					$this->isLocal = true;
 					break;
 				}
@@ -59,19 +60,21 @@ class Chat extends \User
 		endforeach;
 
 	}
-	function isNearBy(){
+	function isNearBy($theState,$theCity){
 		$isNearBy = false;
 
-		if($this->isLocal):
-
-			if(is_array($this->geoNearBy)):
+		if(is_array($this->geoNearBy)):
 			foreach ($this->geoNearBy as $location):
-				if($location['geoplugin_region'] == $this->getState()){
+
+				if($location['geoplugin_region'] == $theState && $location['geoplugin_place'] == $theCity){
+					//\ErrorHandler::get($location['geoplugin_region']);
+					//\ErrorHandler::get($location['geoplugin_place']);
 					$isNearBy = true;
 					break;
 				}
+
 			endforeach;
-			endif;
+
 		endif;
 		return $isNearBy;
 	}

@@ -35,11 +35,13 @@ function reviewPage() {
 						dots: false,
 						centerMode: false,
 						arrows: true,
+						lazyLoad: "ondemand",
 						infinite: false,
 						adaptiveHeight: true,
 						autoplay: false,
 						prevArrow: PREV_BTN,
 						nextArrow: NEXT_BTN,
+						slidesToShow: 1,
 						responsive: [
 							{
 								breakpoint: 768,
@@ -164,7 +166,7 @@ function reviewPage() {
 				var thisVideoId = $this.data('video-id');
 
 				var thisVideoStatus = $this.data('video-status');
-				var key = jp_rest_details.google_API_key;
+				var key = 'AIzaSyDwoQ63Mff3mW9-u2fQUhnlMBmX752RKds';
 
 				if($this.attr('class') === 'content-container'){
 					document.getElementById('feature-video-container').scrollIntoView(true);

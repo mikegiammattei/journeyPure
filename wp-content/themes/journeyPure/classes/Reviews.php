@@ -90,6 +90,7 @@ class Reviews
 			// Get just Post IDs
 			$this->reviewPostsIds = wp_list_pluck( $wp_query->posts, 'ID' );
 
+
 			$this->setReviews();
 		}
 

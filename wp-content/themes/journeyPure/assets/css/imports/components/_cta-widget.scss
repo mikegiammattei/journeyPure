@@ -33,7 +33,6 @@
 	line-height: 34px;
 	border-radius: 3px 3px 0 0;
 	top: -131%;
-	left:0 !important;
 	right: 0;
 	font-weight: normal;
 	margin-left:-2px ;
@@ -45,8 +44,8 @@
 	}
 
 	&.not-local{
-	  margin:0 auto 0;
-	  top: -49px;
+	  left:0;
+	  top: -78px;
 
 	}
 
@@ -118,9 +117,10 @@
   bottom: 56px;
   z-index: 1000;
   background: $background-color;
-  width: 330px;
+  width: 345px;
   border: red 2px solid;
   border-bottom: none;
+  height: 240px;
 
   #icon-chat {
 	bottom: 30px;

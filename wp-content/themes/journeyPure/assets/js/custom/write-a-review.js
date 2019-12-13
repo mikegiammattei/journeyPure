@@ -17,7 +17,8 @@ function writeAReview(){
 
 		function formatOutput(thisForm){
 			let output = "";
-				output += "Visitor's Review Data <br>";
+				//output += "<img src=" + document.location.origin  +  "'/wp-content/themes/journeyPure/assets/img/logo.png' width='200' height='61'> <br>";
+				output += "Review Data <br>";
 				output += "-------------------------------- <br>";
 				output += "<strong>Name: </strong>" + thisForm.find('#review-name').val() + "<br>";
 				output += "<strong>Email: </strong>" + thisForm.find('#review-email').val() + "<br>";
@@ -42,7 +43,21 @@ function writeAReview(){
 				// Validation was good check captcha
 				let response = grecaptcha.getResponse();
 
-				$.ajax({
+				$.post('/wp-admin/admin-ajax.php', {'action' : 'email_action_hok', 'data': formatOutput(thisForm)},function (response) {
+					if(response ){
+						thisForm.find('.part-one').slideUp(400);
+						thisForm[0].reset();
+						thisForm.removeClass('was-validated');
+						thisForm.find('.alert').slideDown(500).addClass('up');
+
+						grecaptcha.reset();
+						// Save the page ID in case you need it for something
+
+						thisForm.find('[type="submit"]').fadeOut(400);
+					}
+				});
+
+				/*$.ajax({
 					method: "POST",
 					url: jp_rest_details.rest_url + 'wp/v2/user-reviews-api',
 					data: {
@@ -70,7 +85,7 @@ function writeAReview(){
 
 					}
 				});
-
+*/
 				/*if(response.length === 0){
 					thisForm.find('.bad-captcha').addClass('invalid');
 				}else {

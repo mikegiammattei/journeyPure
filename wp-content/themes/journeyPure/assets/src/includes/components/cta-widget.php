@@ -14,6 +14,8 @@ $Chat = new \CTA\Chat();
 				</button>
 		<?php if($Chat->isLocal): ?>
 			<span class="local-msg">We're <i>in-network</i> with insurances and have a location near <?php echo ltrim($Chat->getCity()); ?>.</span>
+			<?php else: ?>
+			<span class="local-msg">We're <i>in-network</i> with insurances.</span>
 		<?php endif; ?>
 	</div>
 	<div class="info">

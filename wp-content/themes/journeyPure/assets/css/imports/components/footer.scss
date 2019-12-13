@@ -36,7 +36,7 @@ footer{
 	}
 	.phone-action{
 	  float: right;
-	  text-align: center;
+	  text-align: right;
 
 	  .not-ready-link{
 		text-align: center;
@@ -47,6 +47,7 @@ footer{
 		position: relative;
 		font-size:17px;
 		font-family:$heading-font;
+		margin-right:10px;
 
 		i{
 		  position: relative;
@@ -64,9 +65,17 @@ footer{
 	  }
 	}
   }
+    @media (max-width: 991px) {
+			.phone-action{
+	  text-align: center !important;
+	  }
+	  .not-ready-link{
+		margin-right: 0px !important;
+	  }
+	}
   .last-tier{
 	background: white;
-	padding: 35px 0 25px;
+	padding: 35px 0 24px;
 	.heading{
 	  color: $primary;
 	  @extend .h4;
@@ -77,6 +86,7 @@ footer{
 	.copyright{
 	  color: $main-gray;
 	  font-size:13px;
+	  font-family:$heading-font;
 	  a{
 		color: $main-gray;
 		display: inline-block;

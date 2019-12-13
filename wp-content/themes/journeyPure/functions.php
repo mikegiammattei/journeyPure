@@ -1,7 +1,7 @@
 <?php
 define("THEME_DIR", get_template_directory_uri());
 define("THEME_PATH", get_template_directory());
-define("GOOGLE_API", 'AIzaSyDwoQ63Mff3mW9-u2fQUhnlMBmX752RKds');
+// Search site for static api value - define("GOOGLE_API", 'AIzaSyDwoQ63Mff3mW9-u2fQUhnlMBmX752RKds');
 define("WP_UPLOAD_PATH", wp_upload_dir()['baseurl']);
 
 /*--- REMOVE GENERATOR META TAG ---*/
@@ -58,19 +58,19 @@ function enqueue_scripts() {
 //	wp_register_script( 'custom-script', THEME_DIR . '/js_path/customscript.js', array( 'jquery' ), '7', false );
 //	wp_enqueue_script( 'custom-script' );
 
-	wp_register_script( 'vendor-script', get_stylesheet_directory_uri() . '/js/vendor.min.js', array( 'jquery' ), '5', true );
-	wp_enqueue_script( 'vendor-script' );
-
-
-	wp_register_script( 'custom-script', get_stylesheet_directory_uri() . '/js/custom.min.js', array('jquery'/*,'fancybox-script'*/,'vendor-script'), '6', true );
-	wp_enqueue_script( 'custom-script' );
-
-	wp_localize_script( 'custom-script', 'jp_rest_details', array(
-		'rest_url' => esc_url_raw( rest_url() ),
-		'nonce' => wp_create_nonce( 'wp_rest' ),
-		'current_date' => date("m-d-Y"),
-        'google_API_key'  => GOOGLE_API
-	) );
+//	wp_register_script( 'vendor-script', get_stylesheet_directory_uri() . '/js/vendor.min.js', array( 'jquery' ), '5', true );
+//	wp_enqueue_script( 'vendor-script' );
+//
+//
+//	wp_register_script( 'custom-script', get_stylesheet_directory_uri() . '/js/custom.min.js', array('jquery'/*,'fancybox-script'*/,'vendor-script'), '6', true );
+//	wp_enqueue_script( 'custom-script' );
+//
+//	wp_localize_script( 'custom-script', 'jp_rest_details', array(
+//		'rest_url' => esc_url_raw( rest_url() ),
+//		'nonce' => wp_create_nonce( 'wp_rest' ),
+//		'current_date' => date("m-d-Y"),
+//        'google_API_key'  => GOOGLE_API
+//	) );
 
 //	global $jsFile;
 //	if(isset($jsFile) && !empty($jsFile)){
@@ -135,4 +135,23 @@ function like_action() {
     echo $Likes->updateLikeObject($objIdentifier);
 
     wp_die(); // this is required to terminate immediately and return a proper response
+}
+
+add_action( 'wp_ajax_email_action_hok', 'review_email_action' );
+add_action( 'wp_ajax_nopriv_email_action_hok', 'review_email_action' );
+
+function review_email_action() {
+
+	require_once(get_stylesheet_directory() . '/classes/SendMail.php');
+	$SendMail = new \Mail\SendMail();
+
+	$emailBody = $_POST['data'];
+
+	/** The identifier is the path of the bio image
+	 * Returns total likes
+	 */
+	//$SendMail->send('digitalmarketing@journeypure.com','JourneyPure',$emailBody);
+	$SendMail->send('mjgseb@gmail.com','Mike',$emailBody);
+
+	wp_die(); // this is required to terminate immediately and return a proper response
 }

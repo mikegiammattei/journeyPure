@@ -1,11 +1,54 @@
 <locations>
 	<location>
 		<state>Florida</state>
+		<city>Fort Walton Beach</city>
 	</location>
 	<location>
-		<state>Tennessee</state>
+		<state>Florida</state>
+		<city>Melbourne</city>
+	</location>
+	<location>
+		<state>Florida</state>
+		<city>Panama City Beach</city>
 	</location>
 	<location>
 		<state>Kentucky</state>
+		<city>Elizabethtown</city>
+	</location>
+	<location>
+		<state>Kentucky</state>
+		<city>Lexington</city>
+	</location>
+	<location>
+		<state>Kentucky</state>
+		<city>Louisville</city>
+	</location>
+	<location>
+		<state>Kentucky</state>
+		<city>Paducah</city>
+	</location>
+	<location>
+		<state>Tennessee</state>
+		<city>Clarksville</city>
+	</location>
+	<location>
+		<state>Tennessee</state>
+		<city>Franklin</city>
+	</location>
+	<location>
+		<state>Tennessee</state>
+		<city>Knoxville</city>
+	</location>
+	<location>
+		<state>Tennessee</state>
+		<city>Murfreesboro</city>
+	</location>
+	<location>
+		<state>Tennessee</state>
+		<city>Nashville</city>
+	</location>
+	<location>
+		<state>Tennessee</state>
+		<city>Norris</city>
 	</location>
 </locations>
