@@ -1,9 +1,9 @@
 cta_widget();
 function cta_widget() {
 
+	// CTM implementation code block
 	const ctm_frame = $("iframe[src*='https://130400.tctm.co/form/FRT472ABB2C5B9B141A95E7A133293232FBB3EFEC59E103154BC3C3A194C8DE5FD3.html']").get(0);
 
-	// in case the iframe needs to finish loading use this
 	$(ctm_frame).on('load', function(){
 		ctm_frame.contentWindow.postMessage(window.JSON.stringify({action: 'showForm'}), ctm_frame.src);
 
