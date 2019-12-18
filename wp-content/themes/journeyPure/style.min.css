@@ -4772,6 +4772,7 @@ figure{margin:inherit}
 .main-wrapper.on{opacity:.1}
 .modal{padding-right:0 !important}
 .modal .modal-content{border:0}
+.tooltip-inner a{color:inherit;text-decoration:underline;font-weight:normal}
 header{position:relative;z-index:4;border-bottom:#cbcccb 1px solid;border-top:8px solid #00953b;padding:10px 0}
 @media(max-width:767px){header .logo{display:block;text-align:center}
 }header .logo img{padding:0 0 5px;width:100%;max-width:200px}
@@ -4886,7 +4887,7 @@ footer .last-tier .copyright button{color:#eeeeed;font-size:13px;margin:10px 0}
 .faqs .card .card-header.collapsed i.on{display:none}
 .faqs .card .card-header.collapsed i.off{display:inline-block}
 .faqs .ask-a-question{text-align:center;margin:25px auto 0 auto}
-.cta-widget{z-index:100;background:#eeeeed;padding:22px 20px;border-radius:3px 3px 0 0;position:fixed;bottom:0;right:15px;border:2px solid #ea4335;border-bottom:0;color:#333;font-weight:bold;font-family:"Montserrat",sans-serif}
+.cta-widget{z-index:100;background:#eeeeed;padding:22px 20px;border-radius:3px 3px 0 0;position:fixed;bottom:0;right:15px;border-bottom:0;color:#333;font-weight:bold;font-family:"Montserrat",sans-serif;width:400px}
 @media(max-width:427px){.cta-widget{width:100%;right:0;border-left:0;border-right:0}
 }.cta-widget .call-button{border-left:2px dotted #ea4335}
 .cta-widget .callout{background-color:#ea4335;color:white;position:absolute;padding:8px 12px 10px;line-height:34px;border-radius:3px 3px 0 0;top:-131%;right:0;font-weight:normal;margin-left:-2px;width:101% !important}
@@ -4895,12 +4896,13 @@ footer .last-tier .copyright button{color:#eeeeed;font-size:13px;margin:10px 0}
 .cta-widget .callout .local-msg{display:block;font-size:17px;line-height:1.2;margin:3px 0 5px;color:#fad2d6;font-family:Georgia,"Times New Roman",Times,serif}
 .cta-widget .callout:before{top:100%;left:50%;border:solid transparent;content:" ";height:0;width:0;position:absolute;pointer-events:none;margin-top:-1px}
 .cta-widget .callout:before{border-top-color:#ea4335;border-width:10px;margin-left:-10px}
-.cta-widget .chat-box{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.cta-widget .chat-box{cursor:pointer;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .cta-widget .chat-box i{font-size:32px;color:#ea4335;margin-right:5px}
 .cta-widget .call-box i{font-size:16px;border-radius:50%;width:32px;height:32px;line-height:32px;text-align:center;color:#eeeeed;background-color:#ea4335}
 .cta-widget .call-box a{color:#333}
 .cta-widget.on .callout i{cursor:pointer}
-.ctm-chat-widget{position:fixed;right:15px;bottom:56px;z-index:1000;background:#eeeeed;width:345px;border:red 2px solid;border-bottom:0;height:240px}
+.ctm-chat-container{background:#eeeeed}
+.ctm-chat-widget{position:fixed;right:15px;z-index:1000;background:#eeeeed;width:400px;border:red 2px solid !important;border-bottom:none !important;height:240px;bottom:0}
 .ctm-chat-widget #icon-chat{bottom:30px;right:0;left:0;margin:auto}
 .main-insurance-form .part-two{display:none}
 .main-insurance-form .part-two .self,.main-insurance-form .part-two .loved-one{display:none}

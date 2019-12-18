@@ -51,11 +51,6 @@
 
 </div> <?php /** end of main wrapper */ ?>
 
-<div class="ctm-chat-container">
-	<iframe  id="ctm-chat-widget" class="ctm-call-widget ctm-chat-widget" src="https://130400.tctm.co/form/FRT472ABB2C5B9B141A95E7A133293232FBB3EFEC59E103154BC3C3A194C8DE5FD3.html" style="display:none"></iframe>
-	<script defer async src="https://130400.tctm.co/formreactor.js"></script>
-</div>
-
 
 <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script>
@@ -63,17 +58,6 @@
 <script src="<?php echo get_stylesheet_directory_uri() . '/js/vendor.min.js'; ?>"></script>
 <script src="<?php echo get_stylesheet_directory_uri() . '/js/custom.min.js'; ?>"></script>
 
-<script>
-	var ctm_frame = $("iframe[src*='https://130400.tctm.co/form/FRT472ABB2C5B9B141A95E7A133293232FBB3EFEC59E103154BC3C3A194C8DE5FD3.html']").get(0);
-
-	// in case the iframe needs to finish loading use this
-	$(ctm_frame).on('load', function(){
-		ctm_frame.contentWindow.postMessage(window.JSON.stringify({action: 'showForm'}), ctm_frame.src);
-
-	});
-
-
-</script>
 	<?php wp_footer(); ?>
 
 	</body>

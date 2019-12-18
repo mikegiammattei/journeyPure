@@ -79,7 +79,7 @@ get_header();
 							<div class="rehab">
 								<div class="row">
 									<div class="col-1 number">1</div>
-									<div class="col-7"><b><a href="/locations/tennessee/">TN Inpatient Rehab</a></b><br><data value="<?php echo $LocationsPage->reviewAvg; ?>" class="star"><?php echo $LocationsPage->reviewAvg; ?></data>&nbsp;<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <data value="<?php echo $LocationsPage->reviewTotal; ?>">(<?php echo $LocationsPage->reviewTotal; ?>) </data>
+									<div class="col-7"><b><a href="/locations/tennessee/">TN Inpatient Rehab</a></b><br><data value="<?php echo $LocationsPage->reviewStats['Tennessee']['avg']; ?>" class="star"><?php echo $LocationsPage->reviewStats['Tennessee']['avg']; ?></data>&nbsp;<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <data value="<?php echo $LocationsPage->reviewStats['Tennessee']['total']; ?>">(<?php echo $LocationsPage->reviewStats['Tennessee']['total']; ?>) </data>
 										<br>Tennessee
 										<button class="btn btn-primary" data-toggle="modal" type="button" onclick="window.location.href = '/locations/tennessee/';"><i class="fas fa-map-marker-alt" ></i> Learn More</button>
 									</div>
@@ -151,7 +151,7 @@ get_header();
 							<div class="rehab">
 								<div class="row">
 									<div class="col-1 number">1</div>
-									<div class="col-7"><b><a href="/locations/kentucky/">KY Inpatient Rehab</a></b><br><data value="<?php echo $LocationsPage->reviewAvg; ?>" class="star"><?php echo $LocationsPage->reviewAvg; ?>&nbsp;</data> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <data value="<?php echo $LocationsPage->reviewTotal; ?>"> (<?php echo $LocationsPage->reviewTotal; ?>)</data><br>Kentucky
+									<div class="col-7"><b><a href="/locations/kentucky/">KY Inpatient Rehab</a></b><br><data value="<?php echo $LocationsPage->reviewStats['Kentucky']['avg']; ?>" class="star"><?php echo $LocationsPage->reviewStats['Kentucky']['avg']; ?>&nbsp;</data> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <data value="<?php echo $LocationsPage->reviewStats['Kentucky']['total']; ?>"> (<?php echo $LocationsPage->reviewStats['Kentucky']['total']; ?>)</data><br>Kentucky
 										<button class="btn btn-primary" data-toggle="modal" type="button" onclick="window.location.href = '/locations/kentucky/';"><i class="fas fa-map-marker-alt" ></i> Learn More</button>
 									</div>
 									<div class="col-4"><a href="/locations/kentucky/"><img src="/wp-content/uploads/2019/10/JPBG43-1.jpg" alt="..."></a></div>
@@ -207,7 +207,7 @@ get_header();
 							<div class="rehab">
 								<div class="row">
 									<div class="col-1 number">1</div>
-									<div class="col-7"><b><a href="/locations/florida/">FL Inpatient Rehab</a></b><br><data value="<?php echo $LocationsPage->reviewAvg; ?>" class="star"><?php echo $LocationsPage->reviewAvg; ?></data>&nbsp;<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <data value="<?php echo $LocationsPage->reviewTotal; ?>"> (<?php echo $LocationsPage->reviewTotal; ?>)</data><br>Florida
+									<div class="col-7"><b><a href="/locations/florida/">FL Inpatient Rehab</a></b><br><data value="<?php echo $LocationsPage->reviewStats['Florida']['avg']; ?>" class="star"><?php echo $LocationsPage->reviewStats['Florida']['avg']; ?></data>&nbsp;<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <data value="<?php echo $LocationsPage->reviewStats['Florida']['total']; ?>"> (<?php echo $LocationsPage->reviewStats['Florida']['total']; ?>)</data><br>Florida
 										<button class="btn btn-primary" data-toggle="modal" type="button" onclick="window.location.href = '/locations/florida/';"><i class="fas fa-map-marker-alt" ></i> Learn More</button>
 									</div>
 									<div class="col-4"><a href="/locations/florida/"><img src="/wp-content/uploads/2019/10/JOURNEYPURE-25-e1573757926615.jpg" alt="..."></a></div>

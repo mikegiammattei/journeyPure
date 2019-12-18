@@ -21,11 +21,13 @@ class LocationsPage
 	public $reviews;
 	public $reviewTags = array();
 	public $videoObjects;
+	public $reviewStats = array();
 
 	public function __construct(){
 		global $post;
 		$this->post = $post;
 		$this->setRatings();
+		$this->reviewStats = $this->reviewStats();
 	}
 	public function reviewTags($tags){
 		$this->reviewTags = $tags;
@@ -53,5 +55,34 @@ class LocationsPage
 		$this->reviewAvg = $Reviews->getAvgRating();
 		$this->reviewTotal= $Reviews->getTotalReviews();
 
+	}
+
+	public function reviewStats(){
+		global $wpdb;
+		$table = $wpdb->prefix.'review_loc_stats';
+		$results = $wpdb->get_results(
+			$wpdb->prepare("SELECT `data` FROM {$table} WHERE id=%d", 1)
+		);
+		if($results){
+			$results = json_decode($results[0]->data,true);
+		}else{
+			$results = array();
+		}
+		$array = array(
+			'Tennessee' => array(
+				'total' => $results['tennessee-review-count'],
+				'avg' => $results['tennessee-review-avg']
+			),
+			'Kentucky' => array(
+				'total' => $results['kentucky-review-count'],
+				'avg' => $results['kentucky-review-avg']
+			),
+			'Florida' => array(
+				'total' => $results['florida-review-count'],
+				'avg' => $results['florida-review-avg']
+			),
+		);
+
+		return $array;
 	}
 }

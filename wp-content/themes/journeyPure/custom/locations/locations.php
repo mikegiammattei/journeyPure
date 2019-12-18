@@ -39,3 +39,4 @@ add_action('admin_menu', array('OutpatientLocation','add_outpatient_location'));
 
 // Register the user-faqs post type
 add_action('init', array('OutPatientType','register_out_patient_type'));
+

@@ -6,13 +6,13 @@
   position: fixed;
   bottom: 0;
   right: $md-space;
-  border: 2px  solid $accent;
+
   border-bottom: none;
   color: $main-font;
   font-weight: bold;
   $base-size: 16;
   font-family:$heading-font;
-  
+  width: 400px;
  @media (max-width:427px) { 
       width: 100%;
     right: 0;
@@ -78,6 +78,7 @@
   }
   .chat-box{
 
+	cursor: pointer;
 	i{
 	  font-size: ($base-size*2)+px;
 	  color: $accent;
@@ -111,16 +112,19 @@
 	}
   }
 }
+.ctm-chat-container{
+  background: $background-color;
+}
 .ctm-chat-widget{
   position: fixed;
   right: 15px;
-  bottom: 56px;
   z-index: 1000;
   background: $background-color;
-  width: 345px;
-  border: red 2px solid;
-  border-bottom: none;
+  width: 400px;
+  border: red 2px solid !important;
+  border-bottom: none  !important;
   height: 240px;
+  bottom: 0;
 
   #icon-chat {
 	bottom: 30px;

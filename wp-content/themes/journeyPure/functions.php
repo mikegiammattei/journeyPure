@@ -151,7 +151,7 @@ function review_email_action() {
 	 * Returns total likes
 	 */
 	//$SendMail->send('digitalmarketing@journeypure.com','JourneyPure',$emailBody);
-	$SendMail->send('mjgseb@gmail.com','Mike',$emailBody);
+	$SendMail->send('journeypuremurf@gmail.com','Admissions',$emailBody);
 
 	wp_die(); // this is required to terminate immediately and return a proper response
 }

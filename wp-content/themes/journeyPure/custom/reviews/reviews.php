@@ -39,3 +39,5 @@ add_action('admin_menu', array('UserReviews','add_user_reviews'));
 
 // Register the review post type
 add_action('init', array('UserReviewsType','register_user_reviews'));
+
+require_once(plugin_dir_path(__FILE__) . DIRECTORY_SEPARATOR  . 'stats.php');

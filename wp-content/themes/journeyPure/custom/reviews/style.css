@@ -1,0 +1,27 @@
+form{
+	padding-top: 20px;
+}
+form h3{
+	padding:0;
+	margin:0;
+}
+form input{
+	display: block;
+	margin-bottom: 10px;
+}
+form .group{
+	width: 200px;
+}
+form .group .flex{
+	display: flex;
+}
+form .group .flex .flex-item{
+	flex:auto;
+	justify-content: flex-start;
+
+}
+form .group .flex .flex-item input{
+	width: 85px;
+	box-sizing: border-box;
+}
+

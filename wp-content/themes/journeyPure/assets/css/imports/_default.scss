@@ -453,3 +453,12 @@ figure{
 	border:none;
   }
 }
+
+// Tooltip
+.tooltip-inner{
+	a{
+		color:inherit;
+		text-decoration: underline;
+		font-weight: normal;
+	}
+}

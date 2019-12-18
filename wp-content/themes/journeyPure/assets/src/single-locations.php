@@ -6,7 +6,6 @@
 	/** Page specific js*/
 	$jsFile = 'rehab-location';
 	get_header();
-
  ?>
 
 <div id="single-location">
@@ -204,7 +203,7 @@
 					<div class="details">
 						<h3 class="h1 heading">Reviews</h3>
 						<div class="tallies">
-							<data class="avg display-4" value="<?php echo $Location->reviewAvg; ?>"><?php echo $Location->reviewAvg; ?></data> /
+							<data class="avg display-4" value="<?php echo $Location->reviewStats[get_the_title()]['avg']; ?>"><?php echo $Location->reviewStats[get_the_title()]['avg']; ?></data> /
 							<data class="cap" value="5"> 5</data>
 						</div>
 						<div class="stars">
@@ -215,7 +214,7 @@
 						<div class="sub-text">
 							<p>Average Rating</p>
 							<p class="review-count">
-								<data value="<?php echo $Location->reviewTotal; ?>"><?php echo $Location->reviewTotal; ?></data>  reviews
+								<data value="<?php echo $Location->reviewStats[get_the_title()]['total']; ?>"><?php echo $Location->reviewStats[get_the_title()]['total']; ?></data>  reviews
 							</p>
 							<p class="link post-review-link " data-toggle="modal" data-target="#leave-a-review">Leave a Review</p>
 						</div>
