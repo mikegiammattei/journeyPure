@@ -6,7 +6,7 @@
   position: fixed;
   bottom: 0;
   right: $md-space;
-
+  border: 2px $accent solid;
   border-bottom: none;
   color: $main-font;
   font-weight: bold;
@@ -31,12 +31,12 @@
 	position: absolute;
 	padding:8px 12px 10px;
 	line-height: 34px;
-	border-radius: 3px 3px 0 0;
-	top: -131%;
+	top: -146%;
+	border-radius: 3px;
 	right: 0;
 	font-weight: normal;
 	margin-left:-2px ;
-	width:101% !important;
+	width:100% !important;
 
 
 	@media (max-width:767px) {

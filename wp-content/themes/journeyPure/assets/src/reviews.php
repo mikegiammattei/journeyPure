@@ -155,6 +155,7 @@
 			<?php endforeach; ?>
 		</div>
 	</section>
+	<?php if(!empty($ReviewPage->videoObjects['items'][0])): ?>
 	<section class="review-video" id="feature-video-container">
 		<div class="container">
 			<div class="row">
@@ -202,6 +203,7 @@
 			</div>
 		</div>
 	</section>
+	<?php endif; ?>
 		<section class="insurance-section">
 		<div class="container">
 			<?php $_inc->get_insurance_banner(); ?>

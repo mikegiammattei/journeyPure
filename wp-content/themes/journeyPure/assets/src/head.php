@@ -2,7 +2,7 @@
 	/** Global Controllers */
 
 	// Enable Third Party Scripts
-	Define("THIRD_PARTY_SCRIPTS", false);
+	Define("THIRD_PARTY_SCRIPTS", true);
 ?>
 
 <?php session_start(); ?>
@@ -26,7 +26,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 	<!--=== LINK TAGS ===-->
-	<link rel="shortcut icon" href="<?php echo THEME_DIR; ?>/path/favicon.ico" />
+	<link rel="shortcut icon" href="<?php echo THEME_DIR; ?>/favicon.ico" />
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS2 Feed" href="<?php bloginfo('rss2_url'); ?>" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
@@ -35,7 +35,27 @@
 	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	<?php wp_head(); ?>
 	<script async src="//130400.tctm.co/t.js"></script>
-	<?php echo $ThirdPartyScripts->getHeadScripts(THIRD_PARTY_SCRIPTS) ?>
+
+	<script>
+		(function(w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({
+				'gtm.start': new Date().getTime(),
+				event: 'gtm.js'
+			});
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != 'dataLayer' ? '&l=' + l : '';
+			j.async = true;
+			j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-NKJHBM9');
+	</script>
+	<?php //echo $ThirdPartyScripts->getHeadScripts(THIRD_PARTY_SCRIPTS) ?>
+
 </head>
 <body <?php body_class(); ?>>
-<?php echo $ThirdPartyScripts->getBodyNoScripts(THIRD_PARTY_SCRIPTS) ?>
+<noscript>
+	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKJHBM9" height="0" width="0" style="display:none; visibility:hidden"></iframe>
+</noscript>
+<?php //echo addslashes($ThirdPartyScripts->getBodyNoScripts(THIRD_PARTY_SCRIPTS)) ?>

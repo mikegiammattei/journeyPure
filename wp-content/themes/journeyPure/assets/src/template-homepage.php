@@ -283,7 +283,7 @@ get_header();
 						<div class="h5">Personalized Treatment Plans</div>
 						<p>Addiction and the issues behind it are very personal. You get the combination of proven treatments that maximize your time here. From virtual-reality therapy for combat veterans to imago marriage counseling, we'll do whatever it takes to help you get healthy and stay healthy.</p>
 						<div class="h5">World-Renowned Experts</div>
-						<p>We've built quite a reputation over the last decade, known throughout the country for quality care. That reputation attracts the county's leading addiction professionals. If you've sought treatment before, you know how critical it is to get individualized attention from people who actually care.</p>
+						<p>We've built quite a reputation over the last decade, known for quality care. That reputation attracts the county's leading addiction professionals to our rehabs in <a href="locations/tennessee/">Tennessee</a>, <a href="/locations/kentucky/">Kentucky</a> and <a href="/locations/florida/">Florida</a>, as well as to our outpatient clinics. If you've sought treatment before, you know how critical it is to get individualized attention from people who actually care.</p>
 						<div class="h5">Active Accountability for 1 Year </div>
 						<p>Your Recovery Coach can be reached 24/7 through our free alumni app. The app also offers interactive games and logs that strengthen your mental health and reward you for continuing healthy habits.    </p>
 					</div>
