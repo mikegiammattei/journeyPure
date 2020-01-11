@@ -139,7 +139,7 @@ get_header();
 				<h3 class="heading">Get help with addiction that fits into your life.</h3>
 				<div class="card-deck">
 					<div class="card">
-						<img src="/wp-content/uploads/2019/11/brian-wind-2-1-scaled.jpg" class="card-img-top" alt="...">
+						<img src="/wp-content/uploads/2020/01/brian-wind.jpg" class="card-img-top" alt="...">
 						<div class="card-body">
 							<h5 class="card-title">Medications</h5>
 							<p class="card-text">Using medications in the treatment of drug addiction is recommended by nearly all healthcare authorities, including the World Health Organization and the National Institue of Health in the U.S. </p>

@@ -1,7 +1,7 @@
 <?php require_once(get_stylesheet_directory() . "/head.php"); ?>
 <?php
 
-$hideLocSub = true;
+$hideLocSub = false;
 $hideContactInfo = false;
 global $Location;
 if(isset($Location)){
@@ -64,6 +64,7 @@ if(isset($Location)){
 											<?php endforeach;
 										}
 										?>
+										<li><a href="/locations/">Outpatient Locations</a></li>
 									</ul>
 									<?php endif; ?>
 								</li>

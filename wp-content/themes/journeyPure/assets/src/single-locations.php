@@ -385,9 +385,10 @@
 							<i class="fa fa-info-circle"></i> <b><?php echo $location_status_data; ?></b>
 						</div>
 						<?php $address = urlencode($Location->block4->location->full_address); ?>
+						<?php $address = preg_replace('/\./','',$address) ?>
 						<div class="embed-responsive embed-responsive-16by9">
 							<iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDwoQ63Mff3mW9-u2fQUhnlMBmX752RKds
-    &q=1<?php echo $address; ?>" allowfullscreen>
+    &q=<?php echo $address; ?>" allowfullscreen>
 							</iframe>
 						</div>
 						<div class="details">

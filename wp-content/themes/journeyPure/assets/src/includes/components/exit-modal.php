@@ -5,19 +5,23 @@
 		<div class="inside-overlay">
 			<div id="exit-modal-container">
 				<div class="title-box">
-                    <span class="title green">
+                    <span class="title green h1">
                         why wait?
                     </span>
-					<span class="title">
+					<span class="title h3">
                         Get answers now.
                     </span>
 				</div>
 				<div class="sub-title-box">
 					<p class="sub-text lg-width">
-						You're here because you need help. You don't have to be ready to commit to coming here to give us a call.
+						
+						You're here because you need help. You don't have to commit to treatment to talk about your options and what's going on.
+					
 					</p>
 					<p class="sub-text sm-width">
-						You deserve support and someone to talk to.
+						
+						Get support from someone that will listen without judgement.
+					
 					</p>
 				</div>
 				<div class="phone-container">

@@ -67,8 +67,8 @@ class Chat extends \User
 			foreach ($this->geoNearBy as $location):
 
 				if($location['geoplugin_region'] == $theState && $location['geoplugin_place'] == $theCity){
-					//\ErrorHandler::get($location['geoplugin_region']);
-					//\ErrorHandler::get($location['geoplugin_place']);
+//					\ErrorHandler::get($location['geoplugin_region']);
+//					\ErrorHandler::get($location['geoplugin_place']);
 					$isNearBy = true;
 					break;
 				}

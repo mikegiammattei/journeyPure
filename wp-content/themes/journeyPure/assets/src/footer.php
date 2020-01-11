@@ -35,7 +35,7 @@
 							<a href="/effects-opioids-body/">Effects of Opioids on the Body</a>
 						</p>
 						<div class="copyright">
-							&copy; <?php echo date('Y'); ?> JourneyPure | <a href="/terms">Terms </a> 	&middot;  <a href="/privacy-policy">Privacy Policy &nbsp; </a> <button class="btn btn-dark btn-sm " onclick="topFunction()"><i class="fas fa-chevron-up"></i> Back to Top</button>
+							&copy; <?php echo date('Y'); ?> JourneyPure | <a href="/terms-of-use/">Terms </a> 	&middot;  <a href="/privacy-policy/">Privacy Policy &nbsp; </a> <button class="btn btn-dark btn-sm " onclick="topFunction()"><i class="fas fa-chevron-up"></i> Back to Top</button>
 						</div>
 					</div>
 					<div class="col-sm-6">

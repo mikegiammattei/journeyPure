@@ -9,13 +9,13 @@ $NotReady = new Modal\NotReady();
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
-				<img src="/wp-content/uploads/2019/11/favicon-bird-270x270.png" align="Journey Pure">
 			</div>
-			<h5 class="modal-title text-primary" id="not-ready-label">Not ready to call?</h5>
-
+			
+			<h5 class="modal-title h5" id="not-ready-label">What's holding you back?</h5>
 			<div class="modal-body">
 				<section class="faqs">
 					<div class="container">
+					
 						<div class="accordion" id="location-faq-rehab">
 							<?php foreach ( $NotReady->faqs as $index => $faq) : ?>
 								<div class="card">
@@ -45,7 +45,7 @@ $NotReady = new Modal\NotReady();
 			<div class="modal-footer">
 				<p>Let's talk through this together.</p>
 				<div class="call-action">
-					<i class="fas fa-phone"></i> Call <a class="phone" href="tel:<?php echo get_option('defaultPhone'); ?>"><?php echo get_option('defaultPhone'); ?></a>
+					<a class="phone" href="tel:<?php echo get_option('defaultPhone'); ?>"><?php echo get_option('defaultPhone'); ?></a>
 				</div>
 			</div>
 		</div>

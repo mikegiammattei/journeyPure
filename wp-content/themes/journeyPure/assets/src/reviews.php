@@ -10,7 +10,7 @@
 	$ReviewPage = new Pages\Review();
 
 	/** Set tag for each review slider group */
-	$ReviewPage->reviewTags(array("google","facebook","verified","yelp","reahbs.com","rehabs.com"));
+	$ReviewPage->reviewTags(array("google","facebook","rehabs.com"));
 
 	/** Page specific js*/
 	//$jsFile = '';

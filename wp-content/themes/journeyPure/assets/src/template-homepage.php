@@ -29,7 +29,7 @@ get_header();
 									<div class="card transparent">
 										<div class="card-body">
 											<h5>If you're looking for help that actually helps you, you're in the right place.</h5>
-											<p>Treatment here is covered by insurance — backed by a 99% satisfaction rating and hundreds of positive reviews online.</p>
+											<p>Treatment here is covered by insurance — backed by a 95% satisfaction rating and hundreds of positive reviews online.</p>
 											<p class="no-pad">When you're ready to talk about doing something different, give us a call. We have inpatient rehabs and outpatient clinics to meet you where you are. You don’t have to commit to coming here, or even to getting treatment, to reach out.</p>
 										</div>
 										<?php if($Homepage->ratings): ?>
@@ -95,9 +95,9 @@ get_header();
 					</div>
 				</div>
 				<div class="media d-inline-flex">
-					<img class="mr-3" src="/wp-content/uploads/2019/11/kevin-lee.jpg" alt="Generic placeholder image">
+					<img class="mr-3" src="/wp-content/uploads/2019/11/kevin-lee.jpg" alt="Kevin Lee">
 					<div class="media-body ">
-						<h5 class="mt-0">Kevin D. Lee</h5>
+						<h5>Kevin D. Lee</h5>
 						<p>CEO & Founder</p>
 					</div>
 				</div>
@@ -120,8 +120,8 @@ get_header();
 								'content' => "We've helped thousands of people just like you get healthy and stay healthy.  We know what we're doing. We've seen it all. And, we can help you too."
 							);
 							$listItems[] = array(
-								'heading' => "We're 99% sure you'll be satisfied with your care",
-								'content' => "You deserve healthcare that listens and constantly improves.  The satisfaction rate as of " . date('F Y') . " is 99%."
+								'heading' => "We're 95% sure you'll be satisfied with your care",
+								'content' => "You deserve healthcare that listens and constantly improves.  The satisfaction rate as of " . date('F Y') . " is 95%."
 							);
 							?>
 							<?php if($listItems): ?>

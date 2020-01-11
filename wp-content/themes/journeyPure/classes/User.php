@@ -21,7 +21,17 @@ class User
 
 		require_once(get_stylesheet_directory() . '/classes/geoplugin.class.php');
 		$this->geoPlugin= new geoPlugin();
-		$this->geoPlugin->locate();
+
+		if(isset($_GET['IP_INFO'])){
+			\ErrorHandler::get($_SERVER);
+		}
+		if(isset($_GET['dev'])){
+
+			$this->geoPlugin->locate('96.69.119.93');
+		}else{
+			$this->geoPlugin->locate();
+		}
+
 		$this->state = $this->geoPlugin->region;
 		$this->city = $this->geoPlugin->city;
 

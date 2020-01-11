@@ -2,7 +2,7 @@
 	/** Global Controllers */
 
 	// Enable Third Party Scripts
-	Define("THIRD_PARTY_SCRIPTS", true);
+	Define("THIRD_PARTY_SCRIPTS", false);
 ?>
 
 <?php session_start(); ?>
@@ -32,30 +32,35 @@
 
 	<!--=== TITLE ===-->
 	<title><?php wp_title(); ?> - <?php bloginfo( 'name' ); ?></title>
-	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 	<?php wp_head(); ?>
 	<script async src="//130400.tctm.co/t.js"></script>
 
 	<script>
-		(function(w, d, s, l, i) {
-			w[l] = w[l] || [];
-			w[l].push({
-				'gtm.start': new Date().getTime(),
-				event: 'gtm.js'
-			});
-			var f = d.getElementsByTagName(s)[0],
-				j = d.createElement(s),
-				dl = l != 'dataLayer' ? '&l=' + l : '';
-			j.async = true;
-			j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-			f.parentNode.insertBefore(j, f);
-		})(window, document, 'script', 'dataLayer', 'GTM-NKJHBM9');
+		// (function(w, d, s, l, i) {
+		// 	w[l] = w[l] || [];
+		// 	w[l].push({
+		// 		'gtm.start': new Date().getTime(),
+		// 		event: 'gtm.js'
+		// 	});
+		// 	var f = d.getElementsByTagName(s)[0],
+		// 		j = d.createElement(s),
+		// 		dl = l != 'dataLayer' ? '&l=' + l : '';
+		// 	j.async = true;
+		// 	j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+		// 	f.parentNode.insertBefore(j, f);
+		// })(window, document, 'script', 'dataLayer', 'GTM-NKJHBM9');
 	</script>
 	<?php //echo $ThirdPartyScripts->getHeadScripts(THIRD_PARTY_SCRIPTS) ?>
 
 </head>
 <body <?php body_class(); ?>>
-<noscript>
+<!--<noscript>
 	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKJHBM9" height="0" width="0" style="display:none; visibility:hidden"></iframe>
-</noscript>
+</noscript>-->
 <?php //echo addslashes($ThirdPartyScripts->getBodyNoScripts(THIRD_PARTY_SCRIPTS)) ?>
+<?php
+	require_once(get_stylesheet_directory() . "/classes/Schema.php");
+	$Schema = new Schema();
+	$Schema->getMarkup();
+?>
