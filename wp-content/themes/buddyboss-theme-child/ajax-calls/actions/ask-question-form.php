@@ -44,6 +44,40 @@ if ( isset($_REQUEST) ) {
             update_field('field_5e6405e3bd8e7',$current_user->user_email,$new_post_id);
         }
 
+        // Make the post author a follower to the post.
+        function  makeFollowerFor_wpw_fp_plugin($new_post_id){
+            global $user_ID, $user_email, $wpw_fp_options;
+
+            // Create post object
+            $add_follow_post_arr = array(
+                'post_title'		=>	$user_ID,
+                'post_content'		=>	'',
+                'post_status'		=>	'publish',
+                'post_type'			=>	'wpwfollowpost',
+                'post_parent'		=>	$new_post_id,
+                'author'            => $user_ID,
+                'post_author'       => $user_ID,
+            );
+
+
+            $followed_post_id = wp_insert_post( $add_follow_post_arr );
+
+            if($followed_post_id){
+                // update follow status
+                update_post_meta( $followed_post_id, '_wpw_fp_follow_status', 1 );
+
+                // update post user email
+                update_post_meta( $followed_post_id, '_wpw_fp_post_user_email', $user_email );
+            }
+
+
+        }
+
+
+        if(is_user_logged_in()){
+            makeFollowerFor_wpw_fp_plugin($new_post_id);
+        }
+
         $returnArr['success'] = true;
 
     }
