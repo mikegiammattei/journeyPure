@@ -1,0 +1,35 @@
+{
+  "name": "journeypure-aod",
+  "version": "1.0.0",
+  "description": "Forum application for JourneyPure.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "grunt": "^1.0.4",
+    "grunt-browserify": "^5.3.0",
+    "grunt-contrib-sass": "~1.0.0",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-htmlclean": "^2.7.7",
+    "grunt-sass": "^3.1.0",
+    "grunt-sassyclean": "^0.1.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikegiammattei/multijourneypurecom.git"
+  },
+  "author": "Captials, LLC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikegiammattei/multijourneypurecom/issues"
+  },
+  "homepage": "https://github.com/mikegiammattei/multijourneypurecom#readme",
+  "dependencies": {
+    "grunt-babel": "^7.0.0",
+    "grunt-contrib-uglify-es": "github:gruntjs/grunt-contrib-uglify#harmony"
+  }
+}

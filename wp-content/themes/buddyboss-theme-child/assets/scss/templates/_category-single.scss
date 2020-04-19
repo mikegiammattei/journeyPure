@@ -1,0 +1,115 @@
+.category{
+  .default-spacing{
+    padding: 50px 15px 15px 15px ;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .page-header {
+
+    margin: 0 10px;
+
+}
+  .card-body {
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    border-top: 8px solid #00953b;
+    border-radius: 2px;
+	
+	.wp-block-image img{
+		max-width:500px;
+		margin:0 auto;
+	}
+	
+	h2 {
+
+    margin-top: 10px;
+
+}
+}
+  .entry-meta {
+    margin-top: auto;
+    border-top: 2px solid #EBEBEB;
+    padding-top: 17px;
+}
+.post-date {
+    display: none;
+}
+
+.first {
+.entry-title {
+	line-height:1 !important;
+}
+}
+.entry-title {
+	margin-bottom:15px;
+}
+.entry-content {
+    color: #333 !important;
+	UL{
+	margin-bottom:50px;
+	}
+}
+  .top{
+    @extend .default-spacing;
+    background-color: $primary;
+	background-image:url(/wp-content/uploads/sites/2/2020/03/jp-background.png);
+    @import "../components/progress-bar";
+    @import "../components/f-ask-your-question";
+  }
+  .wpw-fp-follow-btn-wrapper{
+    display: inline-block;
+    position: relative;
+    top: 11px;
+  }
+.cat-follow-box {
+background-color:$primary;
+padding: 35px 20px 45px;
+border-top: 1px solid $primary;
+margin: 0 -15px 20px;
+display: block;
+text-align: center;
+border-bottom: 1px solid $primary;
+background-image:url(/wp-content/uploads/sites/2/2020/03/jp-background.png);
+h3{
+margin:10px 5px 5px;
+font-weight:bold;
+}
+p{
+padding-bottom:5px;
+color:white;
+font-family:"Montserrat",sans-serif;}
+.wpw-following-text,.wpw-fp-button i {
+}
+
+.wpw_fp_popup_label{font-family:"Montserrat",sans-serif;}
+
+
+.white-font,.wpw-fp-button,.fa-envelope{color:white !Important;
+}
+.wpw-fp-popup-header i, .wpw-fp-popup-body p{color:#333 !important;margin: 5px 0 10px;}
+.wpw-fp-popup-footer .wpw-fp-button {color:#00953b !important;border-color:#00953b !important;}
+.wpw-fp-button {
+border-color:white !Important;
+}
+}
+
+.wpw_fp_followers_message.wpw_fp_left {
+
+    display: none;
+
+}
+
+  .widget-area,.widget-area:not(.widget-area-secondary){
+    padding-top: 0;
+  }
+  .category-textarea {
+
+    margin-bottom: 20px;
+
+}
+.highlight-box {
+    background: #e0e7f5;
+    padding: 15px;
+}
+
+}

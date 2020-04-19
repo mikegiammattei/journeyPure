@@ -1,0 +1,80 @@
+.pb-5 
+{
+padding-bottom: 20px !important;
+h2{
+	max-width:800px;
+	margin:0 auto;
+	line-height:1.25;
+}
+}
+.bios{
+  max-width: 900px;
+  margin: auto;
+
+  .item{
+      padding-left: 50px;
+      padding-right: 50px;
+      font-family:"Montserrat",sans-serif;
+	  margin:20px 0 35px;
+	  width:100%;
+
+    @media (max-width:992px) {
+      display: inline-block;
+	   padding: 5px 1px 15px;
+    }
+
+      .profile{
+        text-align: center;
+        font-size: 24px;
+
+        img{
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          display: block;
+          overflow: hidden;
+        }
+
+        .badge{
+          position: relative;
+          top: -15px;
+        }
+		.badge-primary {
+    color: #fff;
+    background-color: #333;
+    border-radius: 25px;
+    padding: 5px 12px;
+}
+      }
+      span.d-block.font-weight-bold {
+        line-height: 1;
+      }
+      .icon-items {
+        margin: 10px 0;
+      }
+      .info{
+        margin-left: 15px;
+		text-align: left;
+
+        i{
+          color: #9a9c99;
+        }
+
+      }
+
+      .media-outlets{
+        .media-box {
+          padding: 5px 10px;
+		  border-radius:2px;
+
+          img {
+            max-width: 60px;
+          }
+        }
+      }
+    }
+
+.wpw_fp_followers_message{display:none;}
+
+
+}

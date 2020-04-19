@@ -1,0 +1,45 @@
+.aod-ask-question-modal{
+  @import "../components/f-ask-your-question";
+
+  .modal-title{
+    color: white;
+    font-weight: bold;
+  }
+  .close{
+    color: white;
+  }
+  .modal-content{
+    background-color: $primary;
+    background-image:url(/wp-content/uploads/sites/2/2020/03/jp-background.png);
+  }
+
+  .i-action{
+    .d-flex{
+      display: block !important;
+
+      &.mt-3{
+        margin-top:5px !important;
+      }
+
+
+      .flex-fill{
+        p{
+          padding-top: 0;
+          text-align: center;
+        }
+      }
+      .btn {
+        float: none;
+        font-size: 22px;
+        margin: 25px auto 7px auto;
+        display: inherit;
+      }
+    }
+  }
+  .aod-ask-question-modal .modal-footer {
+    display: none;
+}
+
+
+}
+

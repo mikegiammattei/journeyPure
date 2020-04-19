@@ -1,0 +1,48 @@
+$jp-secondary : #00953b;
+
+a{
+  font-weight: normal;
+}
+@media (min-width: 1200px){
+  .container {
+    max-width: 1341px;
+  }
+  .has-sidebar:not(.profile-sidebar):not(.group-sidebar):not(.llms-pointer) #primary, body.buddypress.has-sidebar:not(.profile-sidebar):not(.group-sidebar):not(.llms-pointer) #page #primary {
+    max-width: 1014px;
+    width: 100%;
+  }
+  .header-aside {
+    margin-right: 19px;
+  }
+}
+.cta-widget .chat-box {
+  font-weight: normal;
+}
+
+.btn{
+  &.btn-secondary{
+    background: $jp-secondary !important;
+  } 
+
+  &.btn-outline-light{
+    color: #ffffff;
+    background-color: transparent;
+    background-image: none;
+    border-color: #ffffff;
+  }
+}
+textarea{
+  resize: vertical;
+}
+.site-content {
+  min-height: 65vh;
+
+}
+body:not(.page-template-page-fullscreen) .site{
+  overflow: hidden;
+}
+//icons
+.fas.revers{
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}

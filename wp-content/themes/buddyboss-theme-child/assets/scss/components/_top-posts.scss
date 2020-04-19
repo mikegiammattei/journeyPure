@@ -1,0 +1,76 @@
+.top-posts{
+  padding: 15px 15px 0;
+  margin: 1.875rem 20px 10px 0;
+  background: white;
+  border-top: 8px solid #00953b;
+  font-family:"Montserrat",sans-serif;
+  border-radius: 0 0 3px 4px;
+  @media (max-width:425px) {
+    margin: 20px 0;
+}
+  .item{
+    border-top: 1px solid #EBEBEB;
+    padding: 25px 0;
+
+    &.header{
+      .actions{
+        i{
+          display: inline-block;
+          padding: 8px;
+        }
+      }
+    }
+
+    .title{
+      font-weight: bold;
+      margin: 0;
+	  font-size:17px;
+	  margin-bottom: 10px;
+    }
+    ul{
+      margin: 0;
+    }
+  }
+  .header {
+    margin: 10px 0 20px;
+}
+
+.bb-icon-comment:before {
+    font-size: 25px;
+    vertical-align: middle;
+}
+.show-comments {
+    margin-top: -27px;
+    float: right;
+    margin-right: 10px;
+@media (max-width:426px) {
+	display:none; 
+}
+}
+.category-list {
+    float: right;
+    margin-top: -35px;
+	  @media (max-width:320px) {
+		display:none;
+	  }
+}
+.vote-buttons-list .likebtn-wrapper {
+    width: 185px;
+}
+
+.wpw-fp-tooltip-inner {
+    DISPLAY: NONE;
+}
+}
+.pagination-button{
+font-family: "Montserrat",sans-serif;
+color:#0033a1;
+font-weight:bold;
+padding-bottom:35px;
+cursor: pointer;
+}
+.bb-content {
+	margin-top:25px;
+    z-index: revert;
+
+}

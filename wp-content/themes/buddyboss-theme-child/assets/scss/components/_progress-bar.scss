@@ -1,0 +1,105 @@
+.progress-bar{
+  text-align: center;
+  background: #e0e7f5;
+  height: 41px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  font-family:"Montserrat",sans-serif;
+  font-weight: bold;
+  color:#9a9c99;
+
+  @media(max-width:992px){
+    height: auto;
+  }
+
+  .item-container{
+    .flex-fill{
+      .item{
+        &.active{
+          color: #0033a1;
+
+          &:before, &:after {
+            content: '';
+            display: none;
+          }
+        }
+
+      }
+      .item{
+	    @media(max-width:1202px){
+            &:before, &:after{
+                display:none;
+            }
+		}
+		
+		
+		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+				/* IE10+ CSS styles go here */
+	 		    border-left: 6px solid #0033a1;
+						&:before, &:after{
+								display:none;
+							}
+					}
+		
+		
+		
+        &:before {
+          content: '';
+          float: left;
+          width: 0;
+          height: 0;
+          -webkit-transform: rotate(-90deg);
+          position: relative;
+          left: -20px;
+          top: -2px;
+        }
+		&:after {
+          content: '';
+          float: left;
+          width: 0;
+          height: 0;
+          -webkit-transform: rotate(-90deg);
+          position: relative;
+          left: -83px;
+          top: 0;
+		  margin-right: -83px;
+        }
+      }
+      &:nth-child(2){
+	            background: #ebebeb;
+ @media(max-width:1202px){
+ border-left: 5px solid #0033a1;
+				border-right: 5px solid #0033a1;
+ }
+				
+        .item{
+          &:before {
+            border-left: 31px solid transparent;
+            border-right: 31px solid transparent;
+            border-top: 31px solid #0033a1;
+          }
+		  &:after {
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-top: 25px solid #e0e7f5;
+          }
+        }
+      }
+      &:nth-child(3){
+	  	            background: #ebebeb;
+        .item{
+          &:before {
+            border-left: 31px solid transparent;
+            border-right: 31px solid transparent;
+            border-top: 31px solid #0033a1;
+          }
+		  &:after {
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-top: 25px solid #EBEBEB;
+          }
+        }
+      }
+    }
+  }
+}
