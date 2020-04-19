@@ -2,7 +2,6 @@
 // Fonts
 @import "fonts";
 
-
 // Font Awesome
 @import "../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
@@ -17,8 +16,6 @@
 @import "../vendors/slick/slick-theme";
 
 @import "extends";
-
-
 
 // Components
 @import "./default";
@@ -53,3 +50,4 @@
 @import "pages/reviews";
 @import "pages/template-locations";
 @import "pages/outpatient";
+@import "pages/press-page";

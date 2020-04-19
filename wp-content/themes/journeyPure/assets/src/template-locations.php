@@ -11,6 +11,13 @@ get_header();
 
 ?>
 	<div id="locations-page">
+	<div class="note-box">												<h3>We are accepting new inpatient admissions with additional pre-screening procedures. All outpatient services, family therapy and alumni meetings are running virtual-only until further notice.</h3>
+	<p>Learn More</p>
+		<span class="note-cta"><i class="fas fa-phone"></i> <?php echo get_option('defaultPhone'); ?></span>
+
+
+	</div>
+
 		<section class="above-fold">
 			<div class="row no-gutters">
 				<div class="col-12 order-md-1 order-2">
@@ -79,8 +86,8 @@ get_header();
 							<div class="rehab">
 								<div class="row">
 									<div class="col-1 number">1</div>
-									<div class="col-7"><b><a href="/locations/tennessee/">TN Inpatient Rehab</a></b><br><data value="<?php echo $LocationsPage->reviewStats['Tennessee']['avg']; ?>" class="star"><?php echo $LocationsPage->reviewStats['Tennessee']['avg']; ?></data>&nbsp;<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <data value="<?php echo $LocationsPage->reviewStats['Tennessee']['total']; ?>">(<?php echo $LocationsPage->reviewStats['Tennessee']['total']; ?>) </data>
-										<br>Tennessee
+									<div class="col-7"><b><a href="/locations/tennessee/">TN Alcohol & Drug Rehab</a></b><br><data value="<?php echo $LocationsPage->reviewStats['Tennessee']['avg']; ?>" class="star"><?php echo $LocationsPage->reviewStats['Tennessee']['avg']; ?></data>&nbsp;<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <data value="<?php echo $LocationsPage->reviewStats['Tennessee']['total']; ?>">(<?php echo $LocationsPage->reviewStats['Tennessee']['total']; ?>) </data>
+										<br>Murfreesboro
 										<button class="btn btn-primary" data-toggle="modal" type="button" onclick="window.location.href = '/locations/tennessee/';"><i class="fas fa-map-marker-alt" ></i> Learn More</button>
 									</div>
 									<div class="col-4"><a href="/locations/tennessee/"><img src="/wp-content/uploads/2019/11/murfreesboro-tn-inpatient-rehab.jpg" alt="..."></a></div>
@@ -89,19 +96,19 @@ get_header();
 							<div class="outpatient">
 								<div class="row">
 									<div class="col-1 number">2</div>
-									<div class="col-11"><b>Knoxville Inpatient Rehab (Men's)</b><br><span class="star">4.5&nbsp;</span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> (35)<br>17 Ridgeway Road, Norris, TN 37828</div>
+									<div class="col-11"><a href="/locations/knoxville/"><b>Norris Alcohol & Drug Rehab</b></a><br><span class="star">4.5&nbsp;</span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> (35)<br>17 Ridgeway Road, Norris, TN 37828</div>
 								</div>
 							</div>
 							<div class="outpatient">
 								<div class="row">
 									<div class="col-1 number">3</div>
-									<div class="col-11"><b>Knoxville Inpatient Rehab (Women's)</b><br><span class="star">5.0&nbsp;</span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> (10)<br>2636 Maryville Pike, Knoxville, TN 37920</div>
+									<div class="col-11"><a href="/locations/knoxville/"><b>Knoxville Alcohol & Drug Rehab</b></a><br><span class="star">5.0&nbsp;</span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> (16)<br>2636 Maryville Pike, Knoxville, TN 37920</div>
 								</div>
 							</div>
 							<div class="outpatient">
 								<div class="row">
 									<div class="col-1 number">4</div>
-									<div class="col-11"><b>Knoxville Outpatient Clinc</b><br><span class="star">5.0&nbsp;</span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> (2)<br>9050 Executive Park Drive STE 100B, Knoxville, TN 37923</div>
+									<div class="col-11"><b>Knoxville Outpatient Clinic</b><br><span class="star">5.0&nbsp;</span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> (2)<br>9050 Executive Park Drive STE 100B, Knoxville, TN 37923</div>
 								</div>
 							</div>
 							<div class="outpatient">
@@ -151,7 +158,7 @@ get_header();
 							<div class="rehab">
 								<div class="row">
 									<div class="col-1 number">1</div>
-									<div class="col-7"><b><a href="/locations/kentucky/">KY Inpatient Rehab</a></b><br><data value="<?php echo $LocationsPage->reviewStats['Kentucky']['avg']; ?>" class="star"><?php echo $LocationsPage->reviewStats['Kentucky']['avg']; ?>&nbsp;</data> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <data value="<?php echo $LocationsPage->reviewStats['Kentucky']['total']; ?>"> (<?php echo $LocationsPage->reviewStats['Kentucky']['total']; ?>)</data><br>Kentucky
+									<div class="col-7"><b><a href="/locations/kentucky/">KY Alcohol & Drug Rehab</a></b><br><data value="<?php echo $LocationsPage->reviewStats['Kentucky']['avg']; ?>" class="star"><?php echo $LocationsPage->reviewStats['Kentucky']['avg']; ?>&nbsp;</data> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <data value="<?php echo $LocationsPage->reviewStats['Kentucky']['total']; ?>"> (<?php echo $LocationsPage->reviewStats['Kentucky']['total']; ?>)</data><br>Kentucky
 										<button class="btn btn-primary" data-toggle="modal" type="button" onclick="window.location.href = '/locations/kentucky/';"><i class="fas fa-map-marker-alt" ></i> Learn More</button>
 									</div>
 									<div class="col-4"><a href="/locations/kentucky/"><img src="/wp-content/uploads/2019/10/JPBG43-1.jpg" alt="..."></a></div>
@@ -166,7 +173,7 @@ get_header();
 							<div class="outpatient">
 								<div class="row">
 									<div class="col-1 number">3</div>
-									<div class="col-11"><b>Elizabethtown Outpatient Clinic</b><br><span class="star">5.0&nbsp;</span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> (3)<br>790 North Dixie, Suite B100, Elizabethtown, KY 42701</div>
+									<div class="col-11"><b>Elizabethtown Outpatient Clinic</b><br><span class="star">5.0&nbsp;</span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> (3)<br>400 Ring Rd. Suite 155 Elizabethtown, KY 42701</div>
 								</div>
 							</div>
 							<div class="outpatient">
@@ -207,7 +214,7 @@ get_header();
 							<div class="rehab">
 								<div class="row">
 									<div class="col-1 number">1</div>
-									<div class="col-7"><b><a href="/locations/florida/">FL Inpatient Rehab</a></b><br><data value="<?php echo $LocationsPage->reviewStats['Florida']['avg']; ?>" class="star"><?php echo $LocationsPage->reviewStats['Florida']['avg']; ?></data>&nbsp;<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <data value="<?php echo $LocationsPage->reviewStats['Florida']['total']; ?>"> (<?php echo $LocationsPage->reviewStats['Florida']['total']; ?>)</data><br>Florida
+									<div class="col-7"><b><a href="/locations/florida/">FL Alcohol & Drug Rehab</a></b><br><data value="<?php echo $LocationsPage->reviewStats['Florida']['avg']; ?>" class="star"><?php echo $LocationsPage->reviewStats['Florida']['avg']; ?></data>&nbsp;<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <data value="<?php echo $LocationsPage->reviewStats['Florida']['total']; ?>"> (<?php echo $LocationsPage->reviewStats['Florida']['total']; ?>)</data><br>Florida
 										<button class="btn btn-primary" data-toggle="modal" type="button" onclick="window.location.href = '/locations/florida/';"><i class="fas fa-map-marker-alt" ></i> Learn More</button>
 									</div>
 									<div class="col-4"><a href="/locations/florida/"><img src="https://journeypure.com/wp-content/uploads/2019/10/JOURNEYPURE-25-e1573757926615-300x300.jpg" alt="..."></a></div>

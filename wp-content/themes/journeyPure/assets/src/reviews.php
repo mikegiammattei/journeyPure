@@ -264,5 +264,4 @@
 	<?php endif; ?>
 
 </div>
-<?php include(get_stylesheet_directory()  . '/assets/src/includes/components/ask-question-form.php'); ?>
 <?php get_footer(); ?>

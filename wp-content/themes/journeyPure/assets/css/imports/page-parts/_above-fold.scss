@@ -3,9 +3,9 @@
 
   .top-content{
 	position: relative;
-	margin-top: -200px;
+	margin-top: -236px;
 	@media (max-width: 767px) {
-	  margin-top: -315px;
+	  margin-top: -305px;
 	}
 
 	.headers{
@@ -36,9 +36,7 @@
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	height: 400px;
-	border-radius: 0 0 50% 50%;
-	box-shadow: -40px 6px 2px $secondary;
+	height: 260px;
 
 	@media (max-width: 767px) {
 	  height: 375px;
@@ -49,7 +47,7 @@
 
   .heading{
 	margin: auto;
-	padding: 40px 0 $xl-space 0 ;
+	padding: $xl-space 0 ;
 	color: white;
 	text-align: center;
 	max-width: $lg-width;
@@ -75,6 +73,7 @@
 	  width: 90%;
 	  float: none;
 	  margin: auto;
+	  opacity:.9;
 	}
   }
 }

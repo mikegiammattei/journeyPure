@@ -50,5 +50,9 @@ class Outpatient
 			);
 		}
 
+		   if(isset($_GET['dev'])){
+
+			\ErrorHandler::get($this->locations);
+			}
 	}
 }

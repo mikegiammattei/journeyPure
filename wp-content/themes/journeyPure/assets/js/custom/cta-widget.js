@@ -1,4 +1,5 @@
 cta_widget();
+
 function cta_widget() {
 
 	// CTM implementation code block
@@ -19,6 +20,8 @@ function cta_widget() {
 		open : $(parentClass).find('.callout')
 	};
 
+
+
 	// Update callout width
 	setTimeout(function () {
 		//cta.callout.css({'width' : cta.el.outerWidth() + 'px'});
@@ -31,7 +34,8 @@ function cta_widget() {
 	const startHtml = cta.callout.html();
 	const afterHtml = '<i class="fas fa-comments"></i>';
 
-	cta.el.on('click', '.close-btn',function () {
+	$('html').on('click', '.close-btn',function () {
+
 		let lowerAmount;
 
 		if($('.local-msg').length > 0){
@@ -40,7 +44,7 @@ function cta_widget() {
 			lowerAmount = (cta.el.outerHeight());
 		}
 
-		cta.callout.fadeOut( function () {
+		$('.callout').fadeOut( function () {
 			//cta.callout.html(afterHtml);
 		}).addClass('on');
 	});

@@ -11,6 +11,14 @@
 
 	@media(max-width: 767px){
 	  margin: 130px 0 0;
+
+	  .fa-li{
+		display: none;
+	  }
+
+	  .main-controls{
+		 display: none;
+	  }
 	}
 	.heading,.subheading{
 	  text-align: center;
@@ -20,9 +28,15 @@
 	.slick-disabled {
 	  opacity: 0;
 	}
+
 	.about-bio-slider{
 	  padding-top: $lg-space;
-	  visibility: hidden;
+
+	  @media(min-width: 767px){
+		visibility: hidden;
+	  }
+
+
 
 	  .img-box{
 		margin: -27px;
@@ -36,9 +50,9 @@
 		margin: 0 -20px;
 		padding: 5px 0;
 		hr {
-		    background-image: linear-gradient(90deg, rgba(0, 51, 161, 0), #0033a1 50%, rgba(0, 51, 161, 0) 100%);
-			height: 2px;
-			width:250px;
+			background: #0033a1;
+			height: 4px;
+			width: 60px;
 		}
 	  }
 
@@ -187,6 +201,7 @@
 	
 	.media-body  {
 	margin-top: $lg-space;
+	flex:none;
 	     h5 {
 		    font-size:17px;
 			color:$main-gray;
@@ -288,6 +303,13 @@ h3 {
 	  }
 
 	}
+	span {
+		text-align: center;
+		color: #e0e7f5;
+		margin-top: 25px;
+		display: block;
+	}
+	
   }
   .insurance-section{
 	padding: $lg-space 0 15px;
@@ -298,7 +320,7 @@ h3 {
   }
   .ethics {
 	    background-image: url(/wp-content/themes/journeyPure/assets/img/background-diagmonds.png);
-		border-top:8px solid $primary;
+		border-top:8px solid $main-gray;
 	.container {
 		margin: 0 auto;
 		max-width: 900px;
@@ -321,6 +343,14 @@ h3 {
 	   padding: 0;
 	}
 	
+	.fab {
+	    font-family: "Font Awesome 5 Brands";
+    padding-left: 13px;
+    font-size: 20px;
+    vertical-align: middle;
+	display: inline;
+	}
+
 	ul {
     font-family: $heading-style-1;
     font-size: 17px;

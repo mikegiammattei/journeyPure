@@ -65,16 +65,14 @@
 	  .title-box {
 		.title {
 		  display: block;
-		  font-size: 50px;
 		  color: #ffffff;
-		  line-height: 80px;
 		  text-align: center;
-		  font-weight: 600;
 		  &.green {
 			color: #29c000;
-			font-size: 100px;
-			text-transform: uppercase;
+			text-transform: capitalize;
 			font-weight: 800;
+			margin-bottom: 0;
+			font-size:55px;
 		  }
 		}
 	  }
@@ -83,20 +81,15 @@
 		width: 100%;
 		.sub-text {
 		  color: #ffffff;
-		  font-size: 22px;
-		  line-height: 30px;
-		  margin: 0;
-		  font-weight: 600;
 		  text-align: right;
 		  float: right;
 		  overflow: auto;
 		  clear: both;
 		  &.lg-width {
-			margin-top: 15px;
-			width: 53%;
+			margin-top: $lg-space;
+			width: 46%;
 		  }
 		  &.sm-width {
-			margin-top: 15px;
 			width: 35%;
 		  }
 		}
@@ -104,7 +97,7 @@
 	  .phone-container {
 		color: #ffffff;
 		font-size: 22px;
-		margin: 40px 0 0;
+		margin: 20px 0 0;
 		font-weight: 600;
 		text-align: center;
 		float: right;
@@ -117,6 +110,7 @@
 		position: relative;
 		right: -20px;
 		text-transform: uppercase;
+		    font-family:$heading-font;
 		.phone-number {
 		  font-size: 44px;
 		  line-height: 40px;

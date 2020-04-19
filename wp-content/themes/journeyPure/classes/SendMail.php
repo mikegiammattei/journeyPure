@@ -26,9 +26,9 @@ class SendMail
 		$mail->Host = "smtp.gmail.com";
 		$mail->Port = 587; // or 587
 		$mail->IsHTML(true);
-		$mail->Username = "journeypuremurf@gmail.com";
-		$mail->Password = "J0urneyPure2018!";
-		$mail->SetFrom("journeypuremurf@gmail.com");
+		$mail->Username = "webstackpro@gmail.com";
+		$mail->Password = "TomTom2020%";
+		$mail->SetFrom("webstackpro@gmail.com");
 		$mail->Subject = "Review Submission From Website";
 		$mail->Body = $body;
 		$mail->AddAddress($email,$emailName);

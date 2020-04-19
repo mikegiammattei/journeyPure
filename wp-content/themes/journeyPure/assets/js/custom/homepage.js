@@ -77,4 +77,11 @@ if($('#homepage').length > 0){
 			}, 600);
 		}
 	}
+
+	var video_wrapper = $('.youtube-video-place');
+	if(video_wrapper.length){
+		$('.youtube-video-place').on('click', function(){
+			video_wrapper.html('<iframe allowfullscreen allow="autoplay; encrypted-media" frameborder="0" class="embed-responsive-item" src="' + video_wrapper.data('yt-url') + '"></iframe>');
+		});
+	}
 }

@@ -12,10 +12,16 @@ get_header();
 
 ?>
 <div id="homepage">
+<div class="note-box">												<h3>We are accepting new inpatient admissions with additional pre-screening procedures. All outpatient services, family therapy and alumni meetings are running virtual-only until further notice.</h3>
+	<p>Learn More</p>
+		<span class="note-cta"><i class="fas fa-phone"></i> <?php echo get_option('defaultPhone'); ?></span>
+
+
+	</div>
 	<main>
 		<?php $restApiPath = 'http://journeypure.net/rest-api'; ?>
 		<section class="above-fold">
-			<div class="default-container" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/img/river_admin_03.jpg')">
+			<div class="default-container x-loc lazy" data-src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/river_admin_03.jpg">
 				<div class="container">
 					<div class="content">
 						<h1 class="heading text-primary">Get Your Life Back on Track</h1>
@@ -40,7 +46,7 @@ get_header();
 															<div class="ratings default inline lineup">
 																<div class="row no-gutters align-items-center">
 																	<div class="col-2">
-																		<img src="<?php echo $rating->image['sizes']['medium']; ?>" alt="<?php echo get_post_meta( $rating->image['ID'], '_wp_attachment_image_alt', true ); ?>">
+																		<img class="lazy" data-src="<?php echo $rating->image['sizes']['medium']; ?>" alt="<?php echo get_post_meta( $rating->image['ID'], '_wp_attachment_image_alt', true ); ?>">
 																	</div>
 																	<div class="col-10">
 																		<div class="content">
@@ -70,9 +76,10 @@ get_header();
 									</div>
 								</div>
 								<div class="col-lg-6 col-sm-12 d-flex align-items-stretch">
-									<div class="card card-body h-100 justify-content-center transparent" style="width: 100%;">
-										<div class="embed-responsive embed-responsive-16by9">
-											<iframe class="embed-responsive-item" src="" data-src="https://www.youtube.com/embed/Gd1Dza355X8?rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<div class="card card-body h-100 justify-content-center transparent" style="width: 100%; ">
+										<div class="embed-responsive embed-responsive-16by9 youtube-video-place" style=" cursor: pointer; background: no-repeat center url('/wp-content/themes/journeyPure/assets/img/addiction-video-home-page.JPG');
+		  -webkit-background-size: cover;
+		  background-size: cover;" data-yt-url="https://www.youtube.com/embed/Gd1Dza355X8?rel=0&showinfo=0&autoplay=1">
 										</div>
 									</div>
 								</div>
@@ -95,7 +102,7 @@ get_header();
 					</div>
 				</div>
 				<div class="media d-inline-flex">
-					<img class="mr-3" src="/wp-content/uploads/2019/11/kevin-lee.jpg" alt="Kevin Lee">
+					<img class="mr-3 lazy" a data-src="/wp-content/uploads/2019/11/kevin-lee.jpg" alt="Kevin Lee">
 					<div class="media-body ">
 						<h5>Kevin D. Lee</h5>
 						<p>CEO & Founder</p>
@@ -121,7 +128,7 @@ get_header();
 							);
 							$listItems[] = array(
 								'heading' => "We're 95% sure you'll be satisfied with your care",
-								'content' => "You deserve healthcare that listens and constantly improves.  The satisfaction rate as of " . date('F Y') . " is 95%."
+								'content' => "You deserve healthcare that listens and constantly improves.  As of " . date('F Y') . ", the satisfaction rate here has never dropped below 95%."
 							);
 							?>
 							<?php if($listItems): ?>
@@ -144,52 +151,52 @@ get_header();
 								<div class="row no-gutters">
 									<div class="media-con">
 										<div class="media-box">
-											<div class="inner-con"> <img src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/nyt-150x150.png" alt="The New York Times"></div>
+											<div class="inner-con"> <img class="lazy" data-src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/nyt-150x150.png" alt="The New York Times"></div>
 										</div>
 									</div>
 									<div class="media-con">
 										<div class="media-box">
-											<div class="inner-con"> <img src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/HUFF_POST.png" alt="The Huffington Post"></div>
+											<div class="inner-con"> <img class="lazy" data-src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/HUFF_POST.png" alt="The Huffington Post"></div>
 										</div>
 									</div>
 									<div class="media-con">
 										<div class="media-box">
-											<div class="inner-con"> <img src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/nbc-150x150.png" alt="NBC"></div>
+											<div class="inner-con"> <img class="lazy" data-src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/nbc-150x150.png" alt="NBC"></div>
 										</div>
 									</div>
 									<div class="media-con">
 										<div class="media-box">
-											<div class="inner-con"> <img src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/the-tennesseean-150x150.png" alt="Tennessean"></div>
+											<div class="inner-con"> <img class="lazy" data-src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/the-tennesseean-150x150.png" alt="Tennessean"></div>
 										</div>
 									</div>
 									<div class="media-con">
 										<div class="media-box">
-											<div class="inner-con"> <img src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/bbc-150x150.png" alt="BBC"></div>
+											<div class="inner-con"> <img class="lazy" data-src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/bbc-150x150.png" alt="BBC"></div>
 										</div>
 									</div>
 									<div class="media-con">
 										<div class="media-box">
-											<div class="inner-con"> <img src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/the-fix-150x150.png" alt="The Fix"></div>
+											<div class="inner-con"> <img class="lazy" data-src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/the-fix-150x150.png" alt="The Fix"></div>
 										</div>
 									</div>
 									<div class="media-con">
 										<div class="media-box">
-											<div class="inner-con"> <img src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/addiction-center-150x150.png" alt="Addiction Center"></div>
+											<div class="inner-con"> <img class="lazy" data-src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/addiction-center-150x150.png" alt="Addiction Center"></div>
 										</div>
 									</div>
 									<div class="media-con">
 										<div class="media-box">
-											<div class="inner-con"> <img src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/npr-150x150.png" alt="NPR"></div>
+											<div class="inner-con"> <img class="lazy" data-src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/npr-150x150.png" alt="NPR"></div>
 										</div>
 									</div>
 									<div class="media-con">
 										<div class="media-box">
-											<div class="inner-con"> <img src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/vanderbilt-150x150.png" alt="Venderbilt Health"></div>
+											<div class="inner-con"> <img class="lazy" data-src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/vanderbilt-150x150.png" alt="Venderbilt Health"></div>
 										</div>
 									</div>
 									<div class="media-con">
 										<div class="media-box">
-											<div class="inner-con"> <img src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/FORBES.png" alt="Forbes"></div>
+											<div class="inner-con"> <img class="lazy" data-src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/FORBES.png" alt="Forbes"></div>
 										</div>
 									</div>
 								</div>
@@ -197,8 +204,8 @@ get_header();
 						</div>
 					</div>
 					<div class="col-lg-6 col-sm-12 facility-photos">
-						<img src="/wp-content/uploads/2019/11/rehab-outpatient-collage.png" alt="Beautiful, clean indoors, plenty of outdoor space"/>
-						<img src="/wp-content/uploads/2019/11/rehab-photo-collage-part-2.png" class="mobile-only" alt="Ocean and river views"/>
+						<img data-src="/wp-content/uploads/2019/11/rehab-outpatient-collage.png" class="lazy" alt="Beautiful, clean indoors, plenty of outdoor space"/>
+						<img data-src="/wp-content/uploads/2020/01/journeypure-rehab-facility-collage.jpg" class="mobile-only lazy" alt="Ocean and river views"/>
 					</div>
 				</div>
 			</div>
@@ -237,7 +244,7 @@ get_header();
 											<div class="author-info">
 												<div class="row">
 													<div class="col-md-auto align-self-center">
-														<img src="<?php echo $reviews->photo['image']; ?>" alt="<?php echo $reviews->photo['alt']; ?>">
+														<img class="lazy" data-src="<?php echo $reviews->photo['image']; ?>" alt="<?php echo $reviews->photo['alt']; ?>">
 													</div>
 													<div class="col-md-auto align-self-center">
 														<h5 class="card-title"><?php echo $reviews->heading; ?></h5>
@@ -249,7 +256,7 @@ get_header();
 													</div>
 													<?php if(isset($reviews->source_image['image'])): ?>
 														<div class="review-logo">
-															<img class="source-img" src="<?php echo $reviews->source_image['image']; ?>" alt="<?php echo $reviews->source_image['alt']; ?>">
+															<img class="source-img lazy" data-src="<?php echo $reviews->source_image['image']; ?>" alt="<?php echo $reviews->source_image['alt']; ?>">
 														</div>
 													<?php endif; ?>
 												</div>
@@ -279,11 +286,11 @@ get_header();
 					<div class="col-lg-6">
 						<h3>Even if you've been to dozens of other facilities before, the treatment here is different.  We set industry standards and hold ourselves accountable for your long-term success.</h3>
 						<div class="h5">Evidence-Based Treatments</div>
-						<p>A safe environment that combines medical care, holistic healing and various intense daily therapies is what works. While we constantly improve and test new options, our programs are fully guided by science.</p>
+						<p>A safe environment that combines medical care, holistic healing and intense daily therapies is what works. While we constantly improve and test new options, our programs are fully guided by science.</p>
 						<div class="h5">Personalized Treatment Plans</div>
 						<p>Addiction and the issues behind it are very personal. You get the combination of proven treatments that maximize your time here. From virtual-reality therapy for combat veterans to imago marriage counseling, we'll do whatever it takes to help you get healthy and stay healthy.</p>
 						<div class="h5">World-Renowned Experts</div>
-						<p>We've built quite a reputation over the last decade, known for quality care. That reputation attracts the county's leading addiction professionals to our rehabs in <a href="locations/tennessee/">Tennessee</a>, <a href="/locations/kentucky/">Kentucky</a> and <a href="/locations/florida/">Florida</a>, as well as to our outpatient clinics. If you've sought treatment before, you know how critical it is to get individualized attention from people who actually care.</p>
+						<p>We've built quite a reputation over the last decade, which attracts the county's leading addiction professionals to our <a href="locations/tennessee/">Tennessee</a>, <a href="/locations/kentucky/">Kentucky</a> and <a href="/locations/florida/">Florida</a> rehabs and outpatient clinics. If you've sought treatment before, you know how critical it is to get individualized attention from people with experience who actually care.</p>
 						<div class="h5">Active Accountability for 1 Year </div>
 						<p>Your Recovery Coach can be reached 24/7 through our free alumni app. The app also offers interactive games and logs that strengthen your mental health and reward you for continuing healthy habits.    </p>
 					</div>
@@ -302,7 +309,7 @@ get_header();
 									?>
 									<div class="col-md-6">
 										<div class="bio">
-											<figure style="background-image: url('<?php echo $bio->photo['image']; ?>');">
+											<figure class="lazy" data-src="<?php echo $bio->photo['image']; ?>">
 											</figure>
 											<?php if($bio->sober_since): ?>
 												<div data-like-object="<?php echo $likeIdentifier; ?>" class="like-button"  data-placement="top" data-toggle="tooltip" <?php echo ($Homepage->isLikedBySession($likeIdentifier)) ? 'title="Already liked"' : 'title="Do you like?"'; ?>>
@@ -384,5 +391,4 @@ get_header();
 		</section>
 	</main>
 </div>
-<?php include(get_stylesheet_directory()  . '/assets/src/includes/components/ask-question-form.php'); ?>
 <?php get_footer(); ?>

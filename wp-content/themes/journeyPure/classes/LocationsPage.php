@@ -22,12 +22,14 @@ class LocationsPage
 	public $reviewTags = array();
 	public $videoObjects;
 	public $reviewStats = array();
+	public $locationName;
 
 	public function __construct(){
 		global $post;
 		$this->post = $post;
 		$this->setRatings();
 		$this->reviewStats = $this->reviewStats();
+		$this->setLocationName();
 	}
 	public function reviewTags($tags){
 		$this->reviewTags = $tags;
@@ -70,19 +72,23 @@ class LocationsPage
 		}
 		$array = array(
 			'Tennessee' => array(
-				'total' => $results['tennessee-review-count'],
-				'avg' => $results['tennessee-review-avg']
+				'total' => $results['tennessee-rehab-review-count'],
+				'avg' => $results['tennessee-rehab-review-avg']
 			),
 			'Kentucky' => array(
-				'total' => $results['kentucky-review-count'],
-				'avg' => $results['kentucky-review-avg']
+				'total' => $results['kentucky-rehab-review-count'],
+				'avg' => $results['kentucky-rehab-review-avg']
 			),
 			'Florida' => array(
-				'total' => $results['florida-review-count'],
-				'avg' => $results['florida-review-avg']
+				'total' => $results['florida-rehab-review-count'],
+				'avg' => $results['florida-rehab-review-avg']
 			),
 		);
 
 		return $array;
+	}
+
+	public function setLocationName(){
+		$this->locationName = ($this->fields['location_name']) ? : 'Tennessee';
 	}
 }

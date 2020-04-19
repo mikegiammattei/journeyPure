@@ -1,4 +1,23 @@
 #single-location{
+  .note-box{
+background-color:rgb(251,188,6);
+padding: 20px 15px 30px;
+text-align: center;
+    margin-bottom: -15px;
+.note-cta{
+color: #fff !important;
+border-radius:4px;
+border:2px solid white;
+padding:6px 12px;
+}
+p {
+font-family:"Montserrat",sans-serif;
+color:#fff;
+margin:0 0 5px;
+padding:0;
+line-height:1.2;
+}
+}
   // Page Globals
   .see-more-btn,.see-less-btn{
 	margin-bottom: 10px;
@@ -46,6 +65,15 @@
 	}
   }
 
+  .heading-1{
+    color: hsla(220, 51%, 50%, 1);
+	font-size: 17px;
+	font-weight: bold;
+	letter-spacing: normal;
+	@media (max-width: 767px){
+	  margin-top:10px;
+	}
+  }
   .h1 {
   font-style: normal;
   margin-bottom:15px;
@@ -54,6 +82,7 @@
       font-size: 22px;
 	  font-family: Montserrat;
 	  letter-spacing: 0;
+	  padding-bottom:0;
 	}
   }
 
@@ -61,6 +90,12 @@
   @import "../page-parts/above-fold";
   .block-2{
 	padding: $xl-space 15px $lg-space 15px;
+	@media (max-width: 767px) {
+    margin-top: 80px; }
+	iframe {
+		width: 100%;
+    padding-right: 15px;
+	}
 	.tag{
 		border-radius: 3px;
 	}
@@ -369,7 +404,10 @@
     border-bottom: 8px solid $primary;
   }
   .block-4{
-  	margin: $xl-space 0;
+  	margin: $xl-space;
+	@media (max-width: 767px){
+    margin: 25px 15px 20px;
+}
 	.heading{
 	  margin: auto;
 	  text-align: center;
@@ -385,6 +423,8 @@
 	}
 
 	.faqs{
+		    max-width: 800px;
+    margin: 0 auto;
 	  .card{
 		border:none;
 
@@ -408,17 +448,29 @@
 	  }
 	}
 
-	.location-information{
+
+  }
+  	.location-information{
+		padding: 50px;
+    background: #e0e7f5;
+	@media (max-width: 767px){
+    padding: 25px 15px 20px;
+}
+.row{
+    margin-right: auto !important;
+    margin-left: auto !important;
+    max-width: 1260px
+	}
 	  .capacity{
-		border-left: 6px $primary solid;
-		@extend .h1;
-		margin: $lg-space 0;
+		border-left: 6px #FABB05 solid;
 		padding: $md-space;
-		background: $light-blue;
-		color: $primary;
+		background: #FFF2AF;
+		color: #FABB05;
 		margin-bottom: 0;
 		    font-size: 18px;
     letter-spacing: 0;
+	
+
 
 		i{
 		  display: inline-block;
@@ -435,11 +487,18 @@
 
 	  .details{
 		margin-top: $md-space;
-		p{
-		  padding-bottom: 0;
+		.dotted{
+    margin: 0 0 10px;
+	border-color:$primary;
+		}
+		.address-line{
+		font-family:"Montserrat",sans-serif;
+		color:$primary;
+		}
+		h4{
+		color:$primary;
 		}
 	  }
 	}
-  }
 }
 @import "../../vendors/flexbox-image-grid";

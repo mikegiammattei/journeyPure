@@ -75,10 +75,10 @@ footer{
 	}
   .last-tier{
 	background: white;
-	padding: 35px 0 24px;
+	padding: 25px 0 5px;
 	.heading{
 	  color: $primary;
-	  @extend .h4;
+	  @extend .h4 !optional;
 	  a {
 	  font-weight:100 !important;
 	  }

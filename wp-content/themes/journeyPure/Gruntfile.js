@@ -13,7 +13,14 @@ module.exports = function(grunt){
                     src: ['style.scss'],
                     dest: './',
                     ext: '.css'
-                }
+                },
+					{
+						expand: true,
+						cwd: './assets/css/imports/pages',
+						src: ['homepage.scss'],
+						dest: './css',
+						ext: '.min.css'
+					}
                 ]
             }
         },
@@ -27,7 +34,7 @@ module.exports = function(grunt){
         },
         watch: {
             options: {
-                livereload: true,
+                livereload: 35731,
 				forever: true
             },
             css: {

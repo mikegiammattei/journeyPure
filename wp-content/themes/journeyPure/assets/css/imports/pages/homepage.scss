@@ -1,3 +1,42 @@
+@import "../variables";
+// Fonts
+@import "../fonts";
+
+
+// Font Awesome
+@import "../../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "../../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "../../../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+@import "../../../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+
+// Bootstrap
+@import "../../../../node_modules/bootstrap/scss/bootstrap";
+
+// Vendors
+@import "../../vendors/slick/slick";
+@import "../../vendors/slick/slick-theme";
+
+@import "../extends";
+
+// Components
+@import "../default";
+@import "../components/header";
+@import "../components/footer";
+@import "../components/ratings";
+@import "../components/insurance-banner";
+@import "../components/call-back-input";
+@import "../components/media-outlets";
+@import "../components/bio_default";
+@import "../components/faqs";
+@import "../components/cta-widget";
+@import "../components/main-insurance-form";
+@import "../components/modals/not-ready-modal";
+@import "../components/modals/exit-modal";
+/** Pages using the slider: homepage */
+@import "../components/sliders/multi-gallery";
+/** Pages using the slider: homepage, single-location */
+@import "../components/sliders/review-default";
+
 #homepage{
 overflow-x: hidden;
   .above-fold{
@@ -15,19 +54,16 @@ overflow-x: hidden;
     letter-spacing: -3px;
 	font-style: normal;
 		}
-		
 	  }
 	  hr {
 	  display:none;
 	  @media(max-width: 767px){
 	  display:block;
 	      border: 0;
-    margin: 21px 97px 0;
-    max-width: 100%;
-    background-position: 50%;
-    box-sizing: border-box;
-    background-image: linear-gradient(90deg,rgba(0,51,161,-1),rgba(0,51,161,1) 50%,rgba(0,51,161,0) 100%);
-	height: 2px;
+    margin: 21px auto 0;
+    background: #0033a1;
+    height: 4px;
+    width: 60px;
 	}
 	  }
 	  .no-pad{
@@ -35,6 +71,7 @@ overflow-x: hidden;
 		}
 		.embed-responsive {
 		  box-shadow: 0px 2px 4px rgba(0,0,0,.18);
+
 		}
 	  .feature{
 		margin: $xl-space 0 $lg-space;
@@ -366,4 +403,33 @@ overflow-x: hidden;
 	  margin-bottom: $md-space;
 	}
   }
+  .note-box{
+background-color:rgb(251,188,6);
+padding: 35px 20px 65px;
+margin: 0 -15px 20px;
+display: block;
+text-align: center;
+    margin-bottom: -15px;
+h3 {
+color:#fff;
+font-family:"Montserrat",sans-serif;
+font-weight: bold;
+font-style:normal;
+font-size:20px;
+max-width: 800px;
+margin: 10px auto;
+}
+.note-cta{
+color: #fff !important;
+border-radius:4px;
+border:2px solid white;
+padding:6px 12px;
+}
+p {
+font-family:"Montserrat",sans-serif;
+color:#fff;
+margin:0 0 5px;
+padding:0;
+}
+}
 }

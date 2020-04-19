@@ -1,4 +1,11 @@
 .main-insurance-form{
+font-family: $heading-font !important;
+
+p{
+font-family: $heading-font !important;
+
+}
+
 
   .part-two{
 	display: none;
@@ -13,14 +20,15 @@
 	}
   p{
   text-align:center;
-  margin: 0 auto;
+  margin: 15px auto 0;
   max-width:350px;
-  margin-top:$lg-space;
+  padding:5px;
   }
   
  .modal-footer {
     border-top: none;
 	padding-top: 0;
+	padding-bottom: 0;
 	button {
 	margin: 0 auto;
 	padding: 10px 32px;
@@ -28,30 +36,45 @@
 	
 
 }
+.form-group {
+    margin-bottom: 10px;
+}
+.modal-body {
+	padding: 1rem 1rem 0;
+	
+}
+.alert-success {
+	color:$secondary;
+	padding: 25px 10px;
+	h5 {
+	color:$secondary;
+	}
+}
 #steps {
        overflow: auto;
        padding: 0;
     
 		.step.one {
-
+			background: gray;
+			color: #fff;
 			text-align: right;
 		} 
 		.step.one:after {
 			content: "";
 			position: absolute;
 			height: 0;
-			margin: -5px 0 0 16px;
-			border: 14px solid transparent;
+			margin: -11px 0 0 19px;
+			border: 20px solid transparent;
 			border-left-color: gray;
 			z-index: 34;
 		}
 		.step {
-			padding: 5px 16px;
+			padding: 10px 20px;
 			display: inline-block;
 			list-style: none;
 			font-size: 14px;
 			width: 50%;
-			margin: 8px 0 0 0;
+			margin: 15px 0 0 0;
 			float: left;
 			-webkit-transition: all .3s ease;
 			-moz-transition: all .3s ease;
@@ -68,16 +91,27 @@
 			background: #cdcdcd;
 			color: gray;
 		}
-  		.step{
-		  &.on{
-			background: gray;
-			color: #fff;
-		  }
-		}
 
+	}
+	.field-icons {
+    float: right;
+    margin-right: 1px;
+    margin-top: -37px;
+    position: relative;
+    z-index: 2;
+    color: #9A9C99;
+    padding: 10px;
+    border-radius: 0 3px 3px 0;
+	width:37px;
 	}
 	.bottom-text {
 		width:100%;
+		p{
+			color: $main-gray;
+		}
+		.specialists{
+		    margin: 0 auto $lg-space;
+		}
 	}
 	.phone {
 		color: $primary;
@@ -85,14 +119,13 @@
 		border-radius: 26px;
 		padding: 7px 21px;
     margin: 0 auto;
-    font-size: 26px;
+    font-size: 22px;
     width: 287px;
     display: block;
     text-align: center;
 	}
 	.phone:before {
 		content: "";
-		color: gray;
 		font-family: "Font Awesome 5 Free";
 		font-weight: 900;
 		display: inline-block;

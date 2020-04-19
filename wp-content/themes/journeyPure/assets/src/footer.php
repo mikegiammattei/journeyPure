@@ -31,8 +31,8 @@
 				<div class="row justify-content-between align-items-center">
 					<div class="col-sm-6">
 						<p>
-							<a  href="/types-of-drug-abuse/">Types of Drug Abuse</a><br>
-							<a href="/effects-opioids-body/">Effects of Opioids on the Body</a>
+							<a href="/ask-our-doctors/">Addiction Help</a> » 
+							<a href="/locations/florida/">Florida Rehab</a> · <a href="/locations/tennessee/">Tennessee Rehab</a> · <a href="/locations/kentucky/">Kentucky Rehab</a> · <a href="/locations/military-program/">Veteran Rehab</a>
 						</p>
 						<div class="copyright">
 							&copy; <?php echo date('Y'); ?> JourneyPure | <a href="/terms-of-use/">Terms </a> 	&middot;  <a href="/privacy-policy/">Privacy Policy &nbsp; </a> <button class="btn btn-dark btn-sm " onclick="topFunction()"><i class="fas fa-chevron-up"></i> Back to Top</button>
@@ -51,13 +51,14 @@
 
 </div> <?php /** end of main wrapper */ ?>
 
-
+<?php if(!isset($_GET['DEV'])): ?>
 <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
 <script src="<?php echo get_stylesheet_directory_uri() . '/js/vendor.min.js'; ?>"></script>
 <script src="<?php echo get_stylesheet_directory_uri() . '/js/custom.min.js'; ?>"></script>
-
+<?php endif; ?>
 	<?php wp_footer(); ?>
 
 	</body>

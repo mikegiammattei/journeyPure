@@ -166,7 +166,7 @@ function reviewPage() {
 				var thisVideoId = $this.data('video-id');
 
 				var thisVideoStatus = $this.data('video-status');
-				var key = 'AIzaSyDwoQ63Mff3mW9-u2fQUhnlMBmX752RKds';
+				var key = jp_rest_details.google_API_key;
 
 				if($this.attr('class') === 'content-container'){
 					document.getElementById('feature-video-container').scrollIntoView(true);
@@ -189,7 +189,6 @@ function reviewPage() {
 					$('#iframeHolder').attr('src', "https://www.youtube.com/embed/" + thisVideoId + "?rel=0&showinfo=0&autoplay=1").animate({
 						'opacity': '1'
 					}, 500);
-
 					$.get('https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&id=' + thisVideoId + '&key=' + key, {
 						dataType: 'html'
 					}, function (data) {

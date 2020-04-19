@@ -15,7 +15,11 @@ function create_locations() {
 			'show_ui'            => true,
 			'show_in_menu'       => true,
 			'query_var'          => true,
-			'rewrite' => array('slug' => 'locations'),
+			//'rewrite' => array('slug' => 'locations'),
+            'rewrite' => array(
+                'with_front' => false,
+                'slug'       => 'locations'
+            ),
 			'menu_icon' => 'dashicons-location-alt',
 			'capability_type'    => 'post',
 			'has_archive'        => false,

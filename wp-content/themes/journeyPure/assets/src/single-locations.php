@@ -9,6 +9,7 @@
  ?>
 
 <div id="single-location">
+<div class="note-box"><p>This location is accepting new admissions with additional pre-screening procedures. To learn more, call <?php echo get_option('defaultPhone'); ?>.</p></div>
 	<?php if(isset($Location->aboveFold)): ?>
 	<section class="above-fold">
 
@@ -19,19 +20,8 @@
 				<div class="top-content">
 					<div class="container">
 						<div class="row justify-content-between">
-							<div class="col-md-6 order-xl-1 order-lg-1 order-md-1 order-sm-2 order-last align-self-md-center">
-								<?php if($Location->aboveFold->h1 || $Location->aboveFold->h2): ?>
-									<div class="headers">
-										<?php if($Location->aboveFold->h1): ?>
-											<h1 class="heading-1"><?php echo $Location->aboveFold->h1; ?></h1>
-										<?php endif; ?>
-										<?php if($Location->aboveFold->h2): ?>
-											<h2 class="heading-2"><?php echo $Location->aboveFold->h2; ?></h2>
-										<?php endif; ?>
-									</div>
-								<?php endif; ?>
-							</div>
-							<div class="col-md-6 order-md-2 order-sm-1">
+
+							<div class="col-md-12 order-md-2 order-sm-1">
 								<?php if(isset($Location->ratings)): ?>
 									<div class="rating-section">
 										<?php foreach ($Location->ratings as $rating) : ?>
@@ -71,8 +61,11 @@
 			<div class="col-12 order-md-2 order-1">
 				<div class="container">
 					<div class="heading">
+															<?php if($Location->aboveFold->h1): ?>
+											<h1 class="heading-1"><?php echo $Location->aboveFold->h1; ?></h1>
+										<?php endif; ?>
 						<?php if($Location->aboveFold->heading): ?>
-							<p class="page-heading text-white"><?php echo $Location->aboveFold->heading; ?></p>
+							<h2 class="page-heading text-white"><?php echo $Location->aboveFold->heading; ?></h2>
 						<?php endif; ?>
 						<?php if($Location->aboveFold->heading): ?>
 							<span class="lead"><?php echo $Location->aboveFold->subheading; ?></span>
@@ -203,7 +196,7 @@
 					<div class="details">
 						<h3 class="h1 heading">Reviews</h3>
 						<div class="tallies">
-							<data class="avg display-4" value="<?php echo $Location->reviewStats[get_the_title()]['avg']; ?>"><?php echo $Location->reviewStats[get_the_title()]['avg']; ?></data> /
+							<data class="avg display-4" value="<?php echo $Location->reviewStats[$Location->locationName]['avg']; ?>"><?php echo $Location->reviewStats[$Location->locationName]['avg']; ?></data> /
 							<data class="cap" value="5"> 5</data>
 						</div>
 						<div class="stars">
@@ -214,7 +207,7 @@
 						<div class="sub-text">
 							<p>Average Rating</p>
 							<p class="review-count">
-								<data value="<?php echo $Location->reviewStats[get_the_title()]['total']; ?>"><?php echo $Location->reviewStats[get_the_title()]['total']; ?></data>  reviews
+								<data value="<?php echo $Location->reviewStats[$Location->locationName]['total']; ?>"><?php echo $Location->reviewStats[$Location->locationName]['total']; ?></data>  reviews
 							</p>
 							<p class="link post-review-link " data-toggle="modal" data-target="#leave-a-review">Leave a Review</p>
 						</div>
@@ -340,8 +333,7 @@
 				</span>
 				<?php endif; ?>
 			</div>
-			<div class="row">
-				<div class="col-md-6">
+
 					<?php if( isset($Location->block4->faqs)): ?>
 						<div class="faqs">
 							<div class="accordion" id="location-faq-rehab">
@@ -372,9 +364,20 @@
 							</div>
 						</div>
 					<?php endif; ?>
-				</div>
-				<div class="col-md-6">
-					<div class="location-information">
+
+
+
+
+
+
+
+
+
+		</div>
+	</section>
+	<section class="location-information ">
+	<div class="row">
+					<div class="col-md-6">
 						<div class="capacity">
 							<?php
 							$location_status_data = 'Only ' . $Location->block4->location->status->availableRoomCount . ' ';
@@ -391,15 +394,16 @@
     &q=<?php echo $address; ?>" allowfullscreen>
 							</iframe>
 						</div>
-						<div class="details">
+						</div>
+						<div class="details col-md-6">
 							<?php if($Location->block4->location->name): ?>
 							<h4><?php echo $Location->block4->location->name; ?></h4>
 							<?php endif; ?>
 							<?php if($Location->block4->location->street_address): ?>
-								<p><?php echo $Location->block4->location->street_address; ?></p>
+								<p class="address-line"><?php echo $Location->block4->location->street_address; ?>
 							<?php endif; ?>
 
-								<p><?php echo $Location->block4->location->city; ?>,
+								<?php echo $Location->block4->location->city; ?>,
 									<?php echo $Location->block4->location->state; ?>
 									<?php echo $Location->block4->location->zip; ?></p>
 
@@ -410,12 +414,8 @@
 
 						</div>
 					</div>
-				</div>
-			</div>
+					</section>
 
-		</div>
-	</section>
 	<?php endif; ?>
 </div>
-<?php include(get_stylesheet_directory()  . '/assets/src/includes/components/ask-question-form.php'); ?>
 <?php get_footer(); ?>

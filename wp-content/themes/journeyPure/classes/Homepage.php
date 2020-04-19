@@ -27,6 +27,7 @@ class Homepage
 		$this->setReviews();
 		$this->setBios();
 		$this->setFAQs();
+		define("STYLESHEET_NAME", "homepage");
 	}
 	private function setRatings(){
 		require_once(get_stylesheet_directory() . '/classes/Ratings.php');
@@ -90,4 +91,5 @@ class Homepage
 
 		return $Likes->isLikedBySession($objIdentifier);
 	}
+
 }

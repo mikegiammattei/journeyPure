@@ -15,13 +15,20 @@ get_header();
 <div id="outpatient">
 	<main>
 		<?php $restApiPath = 'http://journeypure.net/rest-api'; ?>
+		<div class="note-box">												<h3>Due to COVID-19, outpatient services (including Suboxone) are online-only.</h3>						<p>See your doctor or therapist while at home using an app like FaceTime instead of coming in person. Doctors still prescribe medications. Call to schedule your virtual appointment.</p>
+		<span class="note-cta"><i class="fas fa-phone"></i>Call Now <?php echo get_option('defaultPhone'); ?></span>
+
+
+	</div>
 		<section class="above-fold">
+
+
 			<div class="default-container" style="background-image: url('/wp-content/uploads/2019/11/journeypure-outpatient-suboxone-clinic.jpg')">
 				<div class="container">
 					<div class="content">
 						<h1 class="heading text-primary">Suboxone Clinics</h1>
 						<div class="h3 text-primary">
-							for anyone that feels it's impossible to stop using drugs.
+							For anyone that feels it's impossible to stop using drugs.
 						</div>
 						<hr>
 						<div class="feature">
@@ -266,5 +273,4 @@ get_header();
 		</section>
 	</main>
 </div>
-<?php include(get_stylesheet_directory()  . '/assets/src/includes/components/ask-question-form.php'); ?>
 <?php get_footer(); ?>

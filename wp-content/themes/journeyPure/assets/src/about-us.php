@@ -136,6 +136,7 @@
 			</div>
 
 			<div class="clearfix"></div>
+			<!--
 			<div class="main-controls">
 				<div class="row justify-content-between">
 					<div class="col-6">
@@ -146,11 +147,12 @@
 					</div>
 				</div>
 			</div>
+			-->
 		</div>
 	</section>
 	<section class="page-quote">
 		<div class="container">
-			<div class="container"><div class="header"><div class="lead">"In order to continuously improve, we believe in science, real-world analysis and teamwork. Yet, the driving force behind JourneyPure remains an eternal compassion to help."</div></div><div class="media d-inline-flex"> <img class="mr-3" src="/wp-content/uploads/2019/11/dr-stephen-loyd-journeypure-md.jpg" alt="Doctor Stephen Loyd Headhot as Drug Czar"><div class="media-body "><h5 class="mt-0">Dr. Stephen Loyd M.D.</h5><p>Cheif Medical Officer</p></div></div></div>
+			<div class="container"><div class="header"><div class="lead">"In order to continuously improve, we believe in science, real-world analysis and teamwork. Yet, the driving force behind JourneyPure remains an eternal compassion to help."</div></div><div class="media d-inline-flex"> <img class="mr-3" src="/wp-content/uploads/2019/11/dr-stephen-loyd-journeypure-md.jpg" alt="Doctor Stephen Loyd Headhot as Drug Czar"><div class="media-body "><h5 class="mt-0">Dr. Stephen Loyd M.D.</h5><p>Chief Medical Officer</p></div></div></div>
 		</div>
 	</section>
 		<section class="ethics">
@@ -203,6 +205,7 @@
 					</div>
 				</div>
 			</div>
+			
 		</div>
 
 	</section>
@@ -212,9 +215,12 @@
 <a href="https://www.facebook.com/journeypure" target="_blank"><i class="fab fa-facebook"></i></a><a href="https://www.linkedin.com/company/journeypure/about/" target="_blank"><i class="fab fa-linkedin-in"></i></a><a href="https://www.youtube.com/journeypure" target="_blank"><i class="fab fa-youtube"></i></a></h5>
 	<div class="row row-eq-height"> <div class="col-lg-6 d-flex align-items-stretch card-col"><div class="card default  effect-none"> <div class="card-body"><div class="card-text"> 
 <ul>
-<li><h3>We're in-network with new VA Choice insurance.</h3><hr /> Veteran care is a high priority here. We accept Tricare and have specialized programs led by veterans who understand the heaviness the millitary community lives with every day. We're also currently testing the effectiveness of virutal reality technology in treatment.</li>
-<li><h3>All 14 outpatient locations across the country have launched.</h3><hr />  We're growing in our commitment to communities in <a href="/locations/tennessee">Tennessee</a>, <a href="/locations/kentucky">Kentucky</a> and <a href="/locations/florida">Florida</a>. Offering both outpatient and inpatient care is the only way to meet each person where they're at.</li>
-<li class="last-news"><h3>Current data shows 84% of alumni are sober six months after starting treatment here.</h3><hr /> We use our data and statistically-verified studies from others in the industry to adjust our programs and modalities in ways that have the biggest impact on individual success. </li>
+<li><h3>Official provider for retired NFL & MLB pro athletes.</h3><hr /> <div class="row"><div class="col-md-10 col-sm-12">We are the only addiction treatment provider approved by the NFL Player Care Foundation and the MLB BAT program.</div><div class="col-md-2 col-sm-12"><img src="/wp-content/uploads/2020/01/Player-Care-Foundation-500x342-1.png"></div></div>
+</li>
+<li><h3>We're in-network with new VA Choice insurance.</h3><hr /> Veteran care is a high priority here. We accept Tricare and have specialized programs led by veterans that include virtual reality technology in treatment.
+</li>
+<li><h3>All 14 outpatient locations across the country have launched.</h3><hr />  We're growing in our commitment to communities in <a href="/locations/tennessee/">Tennessee</a>, <a href="/locations/kentucky/">Kentucky</a> and <a href="/locations/florida/">Florida</a>. Offering both outpatient and inpatient care is the only way to meet each person where they're at.</li>
+<li class="last-news"><h3>Current data shows 84% of alumni are sober six months after starting treatment here.</h3><hr /> We use our data and statistically-verified studies from others in the industry to adjust our programs in ways that have the biggest impact on individual success. </li>
 </ul>
 </div></div></div></div> <div class="col-lg-6 d-flex align-items-stretch card-col"><div class="card default  effect-none"> <div class="card-body"><div class="card-text">  <img class="featured" src="/wp-content/uploads/2019/11/journeypure-alumni-app-after-rehab-left.png" alt="JourneyPure Phone App Screenshot Listing Features"> </div></div></div></div> </div></div>  <div class="content-section top-lg"><div class="card default"><div class="card-body"> </div></div></div> </div></section>
 

@@ -5,9 +5,10 @@
   color: $main-font;
   font-family: $heading-font;
   font-size: 55px;
-  line-height : 1.25;
-  margin-bottom:10px;
+  line-height : 1.1;
+  margin-bottom:20px;
   letter-spacing: -3px;
+  font-weight:normal;
    @media (max-width: 767px) {
    font-size:40px;
    }
@@ -16,7 +17,7 @@ h1,.h1{
   color: black;
   font-family: $heading-style;
     font-size: 40px;
-    line-height: 1.25;
+    line-height: 1.1;
     font-weight: normal;
     letter-spacing: -3px;
 }
@@ -415,9 +416,9 @@ hr{
   margin:5px 0 15px;
 
   .bad-captcha {
-	@extend .invalid-feedback;
+	@extend .invalid-feedback !optional;
 
-	&.invalid {
+	&.invalid{
 	  display: block;
 	}
   }

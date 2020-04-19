@@ -30,5 +30,3 @@ function create_ratings() {
 }
 // Hooking up our function to theme setup
 add_action( 'init', 'create_ratings' );
-
-require_once(plugin_dir_path(__FILE__) . DIRECTORY_SEPARATOR  . 'stats.php');

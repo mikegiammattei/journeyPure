@@ -1,5 +1,6 @@
 <?php
-include_once(get_stylesheet_directory() . '/classes/NotReady.php');
+error_reporting(3);
+include_once(WP_CONTENT_DIR . '/themes/journeyPure/classes/NotReady.php');
 $NotReady = new Modal\NotReady();
 ?>
 <div class="modal fade" id="not-ready-modal" tabindex="-1" role="dialog" aria-labelledby="not-ready-label" aria-hidden="true">

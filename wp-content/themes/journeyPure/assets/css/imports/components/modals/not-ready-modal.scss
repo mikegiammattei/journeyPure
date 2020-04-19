@@ -8,6 +8,8 @@
 		right: 10px;
 		position: absolute;
 		font-size: 30px;
+		Color:white;
+		top:5px;
 	  }
 	  img{
 		display: block;
@@ -16,37 +18,56 @@
 	  }
 	}
 	.modal-title {
-	  text-align: center;
 	  width: 100%;
-	  font-size: 42px;
-	  font-weight: bold;
+	  padding:25px 0 15px;
+	  text-align:center;
+	  background:$primary;
+	  color:white;
+	  margin-bottom: 10px;
 	}
 	p{
 	  margin-top:$sm-space;
 	}
+	.modal-body {
+		padding: 1rem 0;
+	}
 
 	.modal-footer {
 	  border-top: none;
-	  margin-bottom: $md-space;
+	  margin-bottom: $lg-space;
 	  text-align: center;
 	  display: block;
 
 	  p{
 		@extend .h3;
 		color: $primary;
+		padding-bottom: 0;
 	  }
 	 .call-action{
-	   background-color: $primary;
-	   color:white;
-	   display: inline-block;
-	   margin: auto;
-	   padding: $md-space;
-	   clear: both;
-	   font-size: 24px;
+	   font-family:$heading-font;
 	   a{
 		 color:white;
 	   }
+	   .phone{
+	       color: #0033a1;
+    border: 2px solid #0033a1;
+    border-radius: 26px;
+    padding: 7px 21px;
+    margin: 0 auto;
+    font-size: 22px;
+    width: 287px;
+    display: block;
+    text-align: center;}
 	 }
+	 .phone:before {
+    content: "\f095";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    top: 1px;
+}
 	}
   }
 

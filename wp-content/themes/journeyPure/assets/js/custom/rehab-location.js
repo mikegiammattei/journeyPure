@@ -1,29 +1,38 @@
 
+/*
 $(document).ready(function () {
-	function slickImageGallery() {
-		if($('#single-location .image-gallery').length > 0){
-			setTimeout(function () {
-				$('#single-location .image-gallery').slick({
-					slidesToScroll: 1,
-					dots: false,
-					centerMode: false,
-					arrows: false,
-					infinite: false,
+	if($('#single-location .image-gallery').length > 0){
+		setTimeout(function () {
+			$('#single-location .image-gallery').slick({
+				slidesToScroll: 1,
+				dots: false,
+				centerMode: false,
+				arrows: false,
+				infinite: false,
+				adaptiveHeight: true,
+				//speed: 300,
+				autoplay: false,
+				//autoplaySpeed: 2000,
+				responsive: [
+					{
+						breakpoint: 768,
+						settings: {
+							slidesToShow: 1,
+						}
+					}
+				],
 
-					adaptiveHeight: true,
-					//speed: 300,
-					autoplay: false,
-					//autoplaySpeed: 2000,
-
-
-				});
-			}, 2000);
-		}
+			});
+		}, 2000);
 	}
 
-
 });
-
+*/
+$(document).ready(function(){
+	setTimeout(function () {
+		$('.image-gallery').flexgal();
+	},400);
+});
 $(document).ready(function () {
 	rehabLocationBioSlider();
 	function rehabLocationBioSlider() {
@@ -168,14 +177,4 @@ $(document).ready(function () {
 		}
 
 	}
-});
-
-$(document).ready(function(){
-
-	if($('.image-gallery').length > 0){
-		setTimeout(function () {
-			$('.image-gallery').flexgal();
-		},400);
-	}
-
 });

@@ -29,7 +29,7 @@ class ThirdPartyScripts
 		$this->addScriptToHeaderArr($script);
 	}
 	private function setGTMBodyNoScript(){
-		$script = '(<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKJHBM9" height="0" width="0" style="display:none;visibility:hidden"></iframe>';
+		$script = "(<iframe src='https://www.googletagmanager.com/ns.html?id=GTM-NKJHBM9' height='0' width='0' style='display:none;visibility:hidden'></iframe>";
 		$this->addNoScriptToBodyArr($script);
 	}
 	public function getHeadScripts($controller){

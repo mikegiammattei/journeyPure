@@ -30,6 +30,7 @@ class Location
 	public $LocSubNavClass;
 	public $HeaderContactInfoClass;
 	public $reviewStats = array();
+	public $locationName;
 
 	public function __construct(){
 		global $post;
@@ -42,6 +43,7 @@ class Location
 		$this->setBios();
 		$this->setReviews();
 		$this->setBlock4();
+		$this->setLocationName();
 		$this->reviewStats = $this->reviewStats();
 
 		/** Used to hide sub menu */
@@ -207,24 +209,37 @@ class Location
 		);
 		if($results){
 			$results = json_decode($results[0]->data,true);
+			
 		}else{
 			$results = array();
 		}
-		$array = array(
-			'Tennessee' => array(
-				'total' => $results['tennessee-review-count'],
-				'avg' => $results['tennessee-review-avg']
+		$theArray = array(
+			"Tennessee" => array(
+				'total' => $results["tennessee-alcohol-038-drug-rehab-review-count"],
+				'avg' => $results['tennessee-alcohol-038-drug-rehab-review-avg']
 			),
-			'Kentucky' => array(
-				'total' => $results['kentucky-review-count'],
-				'avg' => $results['kentucky-review-avg']
+			"Kentucky" => array(
+				'total' => $results['kentucky-alcohol-038-drug-rehab-review-count'],
+				'avg' => $results['kentucky-alcohol-038-drug-rehab-review-avg']
 			),
-			'Florida' => array(
-				'total' => $results['florida-review-count'],
-				'avg' => $results['florida-review-avg']
+			"Florida" => array(
+				'total' => $results['florida-alcohol-038-drug-rehab-review-count'],
+				'avg' => $results['florida-alcohol-038-drug-rehab-review-avg']
+			),
+			"Knoxville" => array(
+				'total' => $results['knoxville-alcohol-038-drug-rehab-review-count'],
+				'avg' => $results['knoxville-alcohol-038-drug-rehab-review-avg']
+			),
+			"Military" => array(
+				'total' => $results['military-program-review-count'],
+				'avg' => $results['military-program-review-avg']
 			),
 		);
 
-		return $array;
+		return $theArray;
+	}
+
+	public function setLocationName(){
+		$this->locationName = ($this->fields['location_name']) ? : 'Tennessee';
 	}
 }

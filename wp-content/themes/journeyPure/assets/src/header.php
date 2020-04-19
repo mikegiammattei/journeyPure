@@ -1,13 +1,17 @@
 <?php require_once(get_stylesheet_directory() . "/head.php"); ?>
 <?php
+	require_once(get_stylesheet_directory() . "/classes/LogoHandler.php");
+	$LogoHandler = new \Handlers\LogoHandler();
+?>
+<?php
 
 $hideLocSub = false;
 $hideContactInfo = false;
 global $Location;
 if(isset($Location)){
-	if($Location->LocSubNavClass->getHideMenu()){
-		$hideLocSub = true;
-	}
+//	if($Location->LocSubNavClass->getHideMenu()){
+//		$hideLocSub = true;
+//	}
 	if($Location->HeaderContactInfoClass->getHideMenu()){
 		$hideContactInfo = true;
 	}
@@ -27,7 +31,7 @@ if(isset($Location)){
 		<div class="row align-items-center justify-content-between">
 			<div class="col-md-auto col-5">
 				<a class="logo" href="/">
-					<img src="/wp-content/themes/journeyPure/assets/img/logo.png" alt="JourneyPure">
+					<?php echo $LogoHandler->output(); ?>
 				</a>
 			</div>
 			<div class="col-7 d-block d-md-block d-lg-none" id="mobile-element">

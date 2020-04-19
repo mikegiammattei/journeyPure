@@ -1,10 +1,10 @@
-<?php require_once(get_stylesheet_directory() . '/classes/geoplugin.class.php');
+<?php require_once(WP_CONTENT_DIR . '/themes/journeyPure/classes/geoplugin.class.php');
 
 // User Data
-require_once(THEME_PATH . '/classes/User.php');
+require_once(WP_CONTENT_DIR . '/themes/journeyPure/classes/User.php');
 $User = new User();
 
-require_once(THEME_PATH . '/classes/Chat.php');
+require_once(WP_CONTENT_DIR . '/themes/journeyPure/classes/Chat.php');
 $Chat = new \CTA\Chat();
 ?>
 <!--<div class="cta-widget">-->
@@ -40,7 +40,7 @@ $Chat = new \CTA\Chat();
 			</div>
 			<div class="col-auto call-button">
 				<div class="call-box">
-					<i class="fas fa-phone"></i> Call <a class="phone" href="tel:<?php echo get_option('defaultPhone'); ?>"><?php echo get_option('defaultPhone'); ?></a>
+					<a class="phone" href="tel:<?php echo get_option('defaultPhone'); ?>"><i class="fas fa-phone"></i> Call <?php echo get_option('defaultPhone'); ?></a>
 				</div>
 			</div>
 		</div>

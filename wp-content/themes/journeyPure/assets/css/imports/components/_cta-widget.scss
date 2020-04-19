@@ -12,7 +12,7 @@
   font-weight: bold;
   $base-size: 16;
   font-family:$heading-font;
-  width: 400px;
+  width: 360px;
  @media (max-width:427px) { 
       width: 100%;
     right: 0;
@@ -23,29 +23,31 @@
 
 .call-button {
    border-left: 2px dotted $accent;
+   a{
+	  color: $main-font;
+	}
 }
 
   .callout {
 	background-color: $accent;
 	color: white;
 	position: absolute;
-	padding:8px 12px 10px;
+	padding:6px 12px;
 	line-height: 34px;
-	top: -146%;
-	border-radius: 3px;
-	right: 0;
+	top: -123%;
+	border-radius: 3px 3px 0 0;
+	right: -2px;
 	font-weight: normal;
-	margin-left:-2px ;
-	width:100% !important;
+	width:101.2% !important;
 
 
 	@media (max-width:767px) {
     padding: 8px 23px;
+	border-radius:0;
 	}
 
 	&.not-local{
-	  left:0;
-	  top: -78px;
+	  top: -69px;
 
 	}
 
@@ -99,9 +101,8 @@
 	  color: $background-color;
 	  background-color: $accent;
 	}
-	a{
-	  color: $main-font;
-	}
+
+	
   }
 
   &.on{

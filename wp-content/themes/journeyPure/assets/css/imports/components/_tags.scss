@@ -1,8 +1,10 @@
 .tag-list{
   .heading{
-	font-weight: bold;
 	display: block;
 	margin-bottom: $md-space;
+	 font-family:$heading-font;
+	 margin-top: 3px;
+	 color: $main-gray;
   }
   .tag{
 	&.default{
@@ -13,8 +15,11 @@
 	  vertical-align: middle;
 	  text-align: center;
 	  padding: 15px 5px;
-	  margin-bottom: 15px;
+	  margin-bottom: 11px;
 	  margin-right: 15px;
+	  font-family:$heading-font;
+	  color: $main-gray;
+	  font-weight: bold;
 	}
   }
   margin-bottom: $lg-space;

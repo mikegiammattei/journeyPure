@@ -28,7 +28,7 @@ class Chat extends \User
 		$this->isLocal();
 	}
 	private function setLocations(){
-		$path = get_stylesheet_directory() . '/locations.xml';
+		$path = WP_CONTENT_DIR . '/themes/journeyPure/locations.xml';
 
 		// Read entire file into string
 		$xmlfile = file_get_contents($path);

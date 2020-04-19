@@ -1,2 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+//@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+//@import url('https://fonts.googleapis.com/css?family=Montserrat');
+//@import url('/wp-content/themes/journeyPure/fonts/Montserrat-Regular.otf');
+@font-face {
+  font-family: Montserrat;
+  font-weight: 400;
+  src: url("/wp-content/themes/journeyPure/fonts/Montserrat-Regular.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: Playfair Display;
+  font-weight: 400;
+  src: url("/wp-content/themes/journeyPure/fonts/PlayfairDisplaySC-Regular.otf") format("opentype");
+  font-display: swap;
+}
