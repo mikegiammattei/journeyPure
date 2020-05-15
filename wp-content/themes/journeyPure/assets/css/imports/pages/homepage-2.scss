@@ -1,44 +1,7 @@
-@import "../variables";
-// Fonts
-@import "../fonts";
 
-// Font Awesome
-@import "../../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
-@import "../../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
-@import "../../../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
-@import "../../../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
-
-// Bootstrap
-@import "../../../../node_modules/bootstrap/scss/bootstrap";
-
-// Vendors
-@import "../../vendors/slick/slick";
-@import "../../vendors/slick/slick-theme";
-
-@import "../extends";
-
-// Components
-@import "../default";
-@import "../components/header";
-@import "../components/footer";
-@import "../components/ratings";
-@import "../components/insurance-banner";
-@import "../components/call-back-input";
-@import "../components/media-outlets";
-@import "../components/bio_default";
-@import "../components/faqs";
-@import "../components/cta-widget";
-@import "../components/main-insurance-form";
-@import "../components/modals/not-ready-modal";
-@import "../components/modals/exit-modal";
-/** Pages using the slider: homepage */
-@import "../components/sliders/multi-gallery";
-/** Pages using the slider: homepage, single-location */
-@import "../components/sliders/review-default";
-
-.homepage-1 {
-  overflow-x: hidden;
-  .above-fold {
+.homepage-2 {
+	overflow-x: hidden;
+	.above-fold {
 	.default-container {
 	  padding-top: 40px;
 	  @media (max-width: 767px) {
@@ -72,7 +35,7 @@
 		box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
 	  }
 	  .feature {
-		margin: $xl-space -20px $lg-space;
+		margin: $xl-space 0 $lg-space;
 		background-color: rgba(255, 255, 255, 0.8);
 		padding: 35px 65px;
 
@@ -80,6 +43,10 @@
 		  margin: 15px -15px 0;
 		  padding: 10px 0 30px;
 		  background-color: rgba(255, 255, 255, 0.3);
+		}
+		.row {
+				max-width: 1240px;
+				margin: 0 auto;
 		}
 		text-align: left;
 
@@ -200,27 +167,50 @@
 		}
 	  }
 	}
-  }
-  section.insurance-section {
-	padding: 25px 0 20px;
-	border-top: 8px solid $primary;
-	border-bottom: 8px solid $primary;
-  }
+	}
+	 section.insurance-section {
+	background-color: $light-blue;
+	padding: 25px 0 45px;
 
-  .block-1 {
-	padding: $xl-space 0;
+	h5{
+		color:$primary;
+		font-weight:bold;
+	}
+	p{
+		max-width: 683px;
+		margin: 0 auto;
+	}
+	a {
+	color:$secondary;
+	cursor: pointer;
+	}
+	}
+	.arrow-divider-container .arrow-divider hr:after {
+	background-image: url(/wp-content/themes/journeyPure/assets/img/background-diagmonds.png);
+	border-bottom: none;
+	border-right: none;
+	}
+	.arrow-divider{
+	border-top-color:$light-blue;
+	}
+	.arrow-divider-container .arrow-divider hr:before {
+		border-color:$light-blue;
+	}
+	.block-1 {
+	padding: 30px 0 17px;
 	text-align: center;
 	background-image: url(/wp-content/themes/journeyPure/assets/img/background-diagmonds.png);
 
 	.header {
 	  margin: 0 auto $lg-space auto;
-	  max-width: $lg-width;
+	  max-width: 683px;
 	  .heading {
 		@extend .page-heading;
 	  }
 	  .lead {
 		@extend .h5;
 		color: $main-gray;
+		line-height:1.5;
 	  }
 	}
 
@@ -250,15 +240,14 @@
 		margin-right: 5px;
 	  }
 	}
-  }
-  .bio-section {
-	margin: $xl-space 0 $xl-space;
-
+	}
+	.bio-section {
+	margin: $xl-space auto 45px;
+	max-width: 1241px;
 	.heading,
 	.subheading {
-	  text-align: center;
-	  max-width: $lg-width;
-	  margin: auto;
+	  max-width: 850px;
+	  margin-top: 15px;
 	}
 	.bio-slider {
 	  margin-top: $lg-space;
@@ -271,7 +260,11 @@
 	  }
 	  .card {
 		margin: auto;
+		text-align:center;
+
+
 		.bios {
+
 		  .img {
 			background: no-repeat center;
 			-webkit-background-size: cover;
@@ -316,18 +309,19 @@
 		}
 	  }
 	}
-  }
-  .arrow-divider{
-	hr:after{
-	  border-color:#EBEBEB;
-	  background-color: #EBEBEB;
 	}
-  }
-  .block-2 {
-	padding: 55px 0 40px;
+	.block-2 {
+	padding: 55px 0 0;
 
 	.container {
 	  max-width: 1241px;
+	}
+	.media-box {
+	background:none !important;
+	margin:0 !important;
+	img {
+		max-width:60px !important;
+	}
 	}
 
 	.details {
@@ -343,8 +337,15 @@
 
 	.facility-photos {
 	  height: 100%;
-	  margin-top: 5px;
-	  padding-left: 75px;
+    margin: -95px 0;
+    padding-left: 75px;
+	
+	img {
+	    min-height: 1px;
+    height: 100%;
+    width: fit-content;
+    overflow: hidden;
+	}
 
 	  @media (max-width: 991px) {
 		margin: 3px 3px -30px;
@@ -395,15 +396,39 @@
 		color: $primary;
 	  }
 	}
-  }
-  .block-3 {
-	margin: $xl-space 0;
-	h3 {
-	  margin-bottom: $lg-space;
 	}
-  }
-  .block-4 {
-	padding: $xl-space 0;
+	.block-3 {
+	padding: 55px 0 15px;
+	background:$light-blue;
+	.container{
+		max-width: 1241px;
+	}
+
+	h3 {
+	  margin:15px 0 45px;
+		  max-width: 850px;
+	}
+	i {
+	background: $primary;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	padding-top: 12px;
+	border-radius: 5px;
+	color: $light-blue;
+		font-size: 28px;
+	}
+	.why-point{
+	margin-bottom:40px;
+		max-width: 584px;
+	}
+	.col-lg-11 {
+	padding-left:35px;
+
+	}
+	}
+	.block-4 {
+	padding:60px 15px 25px;
 	color: $primary;
 	background: $light-blue;
 	font-weight: bold;
@@ -453,8 +478,12 @@
 		}
 	  }
 	}
-  }
-  .review-logo {
+	}
+	.review-section{
+	margin-top:0;
+	padding-bottom:40px;
+	}
+	.review-logo {
 	position: absolute !important;
 	right: 15px;
 	top: 15px;
@@ -465,9 +494,9 @@
 	  height: auto;
 	  border-radius: 0;
 	}
-  }
+	}
 
-  .faqs {
+	.faqs {
 	margin: $xl-space auto;
 	max-width: $lg-width;
 
@@ -476,8 +505,8 @@
 	  text-align: center;
 	  margin-bottom: $md-space;
 	}
-  }
-  .note-box {
+	}
+	.note-box {
 	background-color: #fcf8e3;
 	padding: 20px 20px 50px;
 	margin: 0 -15px 20px;
@@ -501,11 +530,44 @@
 	}
 	p {
 	  font-family: "Montserrat", sans-serif;
-	  color: #fbbb06;
+	  color: #fbbb06 !important;
 	  margin: 0 0 5px;
 	  padding: 0;
 	}
-  }
-}
+	}
+	.call-text {
+	background-color: $primary;
+	img {
+		height:100%;
+		opacity: 0.4;
+	}
 
-@import "homepage-2";
+	.text-side{
+		color:white;
+		max-width: 644px;
+		padding:50px 15px 65px 35px;
+
+		.h1 {
+			color:white;
+		}
+		p {
+			color:white;
+		}
+		ul {
+			font-family:$heading-style-1;
+			font-size:17px;
+			margin-bottom:45px;
+		}
+		h3{
+			color:white;
+			margin: 15px 0 25px;
+			
+		}
+		.note-cta {
+    border-radius: 4px;
+    border: 2px solid #fff;
+    padding: 14px 28px;
+}
+	}
+	}
+}

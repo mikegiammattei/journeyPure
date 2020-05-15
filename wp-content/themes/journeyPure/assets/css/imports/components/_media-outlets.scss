@@ -1,4 +1,5 @@
 .media-outlets{
+	margin-top:20px;
   .media-con{
 	@media (max-width: 767px) {
 	  display: block;
@@ -15,11 +16,11 @@
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	padding: $sm-space $lg-space;
+	padding: 7px 29px;
 
 	img {
 	  width: 100%;
-	  max-width: 71px;
+	  max-width: 54px;
 	  display: block;
 	  margin: auto;
 	  -webkit-filter: grayscale(100%);

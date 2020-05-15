@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Homepage
+ * Template Name: Homepage 2 | 5-11
  */
 
 include_once(get_stylesheet_directory() . '/classes/Homepage.php');
@@ -11,7 +11,7 @@ $jsFile = 'homepage';
 get_header();
 
 ?>
-<div id="homepage" class="homepage-1">
+<div id="homepage" class="homepage-2">
 <div class="note-box">
 	<h3>We are accepting new inpatient admissions with additional pre-screening procedures. All outpatient services, family therapy and alumni meetings are running virtual-only until further notice.</h3>
 	<p>Learn More</p>

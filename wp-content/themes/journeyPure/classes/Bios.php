@@ -71,6 +71,7 @@ class Bios
 			$wp_query = new \WP_Query( $args );
 
 			// Get just Post IDs
+			$this->bioPostsIds = null;
 			$this->bioPostsIds = wp_list_pluck( $wp_query->posts, 'ID' );
 
 			$this->setBios();

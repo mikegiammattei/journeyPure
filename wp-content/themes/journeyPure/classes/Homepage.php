@@ -18,14 +18,18 @@ class Homepage
 	public $ratings;
 	public $reviews;
 	public $bios;
+	public $bioSection;
 	public $faqs;
 	public $reviewAvg;
 	public $reviewTotal;
+	private $fields;
 
 	public function __construct(){
+		$this->fields = get_fields();
 		$this->setRatings();
 		$this->setReviews();
 		$this->setBios();
+		$this->setBioSection();
 		$this->setFAQs();
 		define("STYLESHEET_NAME", "homepage");
 	}
@@ -61,6 +65,34 @@ class Homepage
 
 		$this->bios = $Bios->bios;
 
+	}
+	private function setBioSection(){
+
+		if(isset($this->fields['bios'])):
+
+			require_once(get_stylesheet_directory() . '/classes/Bios.php');
+			$Bios = new \Bios\Bios();
+
+			// Send the bio id to the the bio class to set the bios array object
+			$BiosCategoryIDs =$this->fields['bios']['bios'];
+
+			$Bios->setPostByCategoryId($BiosCategoryIDs);
+
+			$this->bioSection = null;
+			$this->bioSection = $Bios->bios;
+
+
+			if($this->fields['bios']['show']){
+				$this->bioSection = (object) array(
+					'heading' => $this->fields['bios']['heading'],
+					'subheading' => $this->fields['bios']['subheading'],
+					'bios' => $this->bioSection
+				);
+			}else{
+				$this->bioSection = null;
+			}
+
+		endif;
 	}
 	private function setFAQs(){
 		require_once(get_stylesheet_directory() . '/classes/FAQs.php');

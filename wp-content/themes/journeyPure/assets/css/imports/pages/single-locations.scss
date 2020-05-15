@@ -89,9 +89,11 @@ line-height:1.2;
   // Import above fold  styles that are global
   @import "../page-parts/above-fold";
   .block-2{
-	padding: $xl-space 15px $lg-space 15px;
+	padding: $xl-space $xl-space $lg-space;
 	@media (max-width: 767px) {
-    margin-top: 80px; }
+    margin-top: 80px;
+	padding: 50px 0;
+	}
 	iframe {
 		width: 100%;
     padding-right: 15px;
@@ -157,7 +159,7 @@ line-height:1.2;
 	
 
 	@media (max-width: 767px){
-	  padding: $lg-space 0;
+	  padding: $xl-space 0 $lg-space;
 	}
 
 	.heading{
@@ -454,7 +456,7 @@ line-height:1.2;
 		padding: 50px;
     background: #e0e7f5;
 	@media (max-width: 767px){
-    padding: 25px 15px 20px;
+    padding: $xl-space 0 $lg-space;
 }
 .row{
     margin-right: auto !important;
