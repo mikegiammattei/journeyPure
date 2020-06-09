@@ -72,16 +72,20 @@ class LocationsPage
 		}
 		$array = array(
 			'Tennessee' => array(
-				'total' => $results['tennessee-rehab-review-count'],
-				'avg' => $results['tennessee-rehab-review-avg']
+				'total' => $results['tennessee-alcohol-038-drug-rehab-review-count'],
+				'avg' => $results['tennessee-alcohol-038-drug-rehab-review-avg']
 			),
 			'Kentucky' => array(
-				'total' => $results['kentucky-rehab-review-count'],
-				'avg' => $results['kentucky-rehab-review-avg']
+				'total' => $results['kentucky-alcohol-038-drug-rehab-review-count'],
+				'avg' => $results['kentucky-alcohol-038-drug-rehab-review-avg']
 			),
 			'Florida' => array(
-				'total' => $results['florida-rehab-review-count'],
-				'avg' => $results['florida-rehab-review-avg']
+				'total' => $results['florida-alcohol-038-drug-rehab-review-count'],
+				'avg' => $results['florida-alcohol-038-drug-rehab-review-avg']
+			),
+			'Military' => array(
+				'total' => $results['military-program-review-count'],
+				'avg' => $results['military-program-review-avg']
 			),
 		);
 

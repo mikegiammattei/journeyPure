@@ -77,7 +77,8 @@
 	</section>
 	<?php endif; ?>
 	<?php if(isset($Location->block2)): ?>
-	<section class="container block-2">
+	<section class="block-2">
+		<div class="container">
 		<div class="row">
 
 			<div class="col-md-8">
@@ -129,6 +130,7 @@
 				<?php endforeach; ?>
 				<?php endif; ?>
 			</div>
+		</div>
 		</div>
 	</section>
 	<?php endif; ?>
@@ -315,6 +317,125 @@
 			</div>
 		</section>
 	<?php endif; ?>
+	
+	
+	
+	
+			<section class="design-process-section" id="process-tab">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <!-- design process steps-->
+        <!-- Nav tabs -->
+		    <h5 class="h1">The Process is Simple</h5>
+        <ul class="nav nav-tabs process-model more-icon-preocess" role="tablist">
+          <li role="presentation" class="active">
+            <a href="#discover" aria-controls="discover" role="tab" data-toggle="tab"><i class="fas fa-mobile-alt" aria-hidden="true"></i>
+              <p>1. Call</p>
+            </a>
+          </li>
+          <li role="presentation">
+            <a href="#strategy" aria-controls="strategy" role="tab" data-toggle="tab"><i class="fas fa-id-card" aria-hidden="true"></i>
+              <p>2. Insurance</p>
+            </a>
+          </li>
+          <li role="presentation">
+            <a href="#optimization" aria-controls="optimization" role="tab" data-toggle="tab"><i class="fas fa-calendar" aria-hidden="true"></i>
+              <p>3. Start</p>
+            </a>
+          </li>
+          <li role="presentation">
+            <a href="#reporting" aria-controls="reporting" role="tab" data-toggle="tab"><i class="fas fa-diagnoses" aria-hidden="true"></i>
+              <p>4. Heal</p>
+            </a>
+          </li>
+        </ul>
+        <!-- end design process steps-->
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="discover">
+            <div class="design-process-content">
+              <div class="row">
+                <div class="col-md-6 order-md-2">
+                  <div class="lazy" data-src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg">
+                    <img src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg" alt="Call JourneyPure">
+                  </div>
+                </div>
+                <div class="col-md-6 order-md-1">
+                  <div class="design-process-content-inner">
+                    <h5 class="semi-bold">1. Make The Call</h5>
+                    <p>Even if you're not ready to commit to JourneyPure or not sure if you want treatment at all, talk about what's going on with someone that's been there before. You'll feel better and more informed after you call, I promise.</p>
+                    <div class="note-cta"><i class="fas fa-phone"></i> <?php echo get_option('defaultPhone'); ?></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="strategy">
+            <div class="design-process-content">
+              <div class="row">
+                <!--<div class="col-md-6 order-md-2">
+                  <div class="lazy" data-src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg">
+                    <img src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg" alt="Call JourneyPure">
+                  </div>
+                </div>
+                <div class="col-md-6 order-md-1">-->
+                <div class="col-sm-12">
+                  <div class="design-process-content-inner">
+                    <h5 class="semi-bold">2. Discuss Any Costs</h5>
+                    <p>Insurance covers the majority of your cost here! How much you owe depends on deductable and co-insurance rates set by each policy. Don't worry, we'll call your insruance company, then explain the details of your specific insurance policy. You can privately <a data-toggle="modal" data-target="#main-insurance-form" href="#">submit insurance information online</a>.</p>
+                    <p>(If you don't have insurance, you still have options. We can talk about that too.)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="optimization">
+            <div class="design-process-content">
+              <div class="row">
+                <!--<div class="col-md-6 order-md-2">
+                  <div class="lazy" data-src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg">
+                    <img src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg" alt="Call JourneyPure">
+                  </div>
+                </div>
+                <div class="col-md-6 order-md-1">-->
+                <div class="col-sm-12">
+                  <div class="design-process-content-inner">
+                    <h5 class="semi-bold">3. Start Treatment</h5>
+                    <p>Our locations often operate on waiting lists, but we're as accommodating as possible with the schedule. It helps to call early in your decision process and come in while you're still motivated.</p>
+			              <p>The first thing you notice when you walk in is an overwhelming sense of hope and compassion. You're surrounded by people that actually understand what you're going through.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="reporting">
+            <div class="design-process-content">
+              <div class="row">
+                <!--<div class="col-md-6 order-md-2">
+                  <div class="lazy" data-src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg">
+                    <img src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg" alt="Call JourneyPure">
+                  </div>
+                </div>
+                <div class="col-md-6 order-md-1">-->
+                <div class="col-sm-12">
+                  <div class="design-process-content-inner">
+                    <h5>4. The Treatment Process</h5>
+                    <p>Intensive cognitive-behavioral therapies aren't as boring as they sound.  You tackle issues hiding behind drugs and alcohol like trauma, depression or anxiety. And, you graduate feeling better than ever with a plan and a coach to help you stay on track long after treatment ends.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+	
+	
+	
+	
 	<section class="insurance-section">
 		<div class="container">
 			<?php $_inc->get_insurance_banner(); ?>
@@ -360,7 +481,7 @@
 								<?php endforeach; ?>
 							</div>
 							<div class="ask-a-question">
-								<span class="btn btn-primary" data-toggle="modal" data-target="#user-question-form-container"><i class="fas fa-comment-dots"></i> Ask a question</span>
+								<span class="btn btn-primary" data-toggle="modal" data-target="#user-question-form-container">Ask a question</span>
 							</div>
 						</div>
 					<?php endif; ?>

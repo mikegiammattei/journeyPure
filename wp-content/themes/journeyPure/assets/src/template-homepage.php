@@ -12,10 +12,11 @@ get_header();
 
 ?>
 <div id="homepage" class="homepage-1">
-<div class="note-box">
-	<h3>We are accepting new inpatient admissions with additional pre-screening procedures. All outpatient services, family therapy and alumni meetings are running virtual-only until further notice.</h3>
+<div class="note-box">												<h3>We are accepting new inpatient admissions with additional pre-screening procedures. All outpatient services, family therapy and alumni meetings are running virtual-only until further notice.</h3>
 	<p>Learn More</p>
 		<span class="note-cta"><i class="fas fa-phone"></i> <?php echo get_option('defaultPhone'); ?></span>
+
+
 	</div>
 	<main>
 		<?php $restApiPath = 'http://journeypure.net/rest-api'; ?>
@@ -35,7 +36,7 @@ get_header();
 										<div class="card-body">
 											<h5>If you're looking for help that actually helps you, you're in the right place.</h5>
 											<p>Your treatment here is covered by insurance — backed by a 95% satisfaction rating and hundreds of positive reviews online.</p>
-											<p class="no-pad">And, you don't have to figure this out on your own. These issues are complex and personal. When you're ready for something to change, call to talk about your options and get informaiton without commitment. You <i>can</i> do this! </p>
+											<p class="no-pad">And, you don't have to figure this out on your own. These issues are complex and personal. When you're ready for something to change, call to talk about your options and get information without commitment. You <i>can</i> do this! </p>
 										</div>
 										<?php if($Homepage->ratings): ?>
 											<div class="rating-section">
@@ -109,55 +110,6 @@ get_header();
 				</div>
 			</div>
 		</section>
-
-		<?php if(isset($Homepage->bioSection)): ?>
-			<section class="bio-section">
-				<div class="container">
-					<?php if(isset($Homepage->bioSection->heading)): ?>
-						<div class="heading">
-							<h3 class="h1"><?php echo $Homepage->bioSection->heading; ?></h3>
-						</div>
-					<?php endif; ?>
-					<div class="subheading">
-						<p><?php echo $Homepage->bioSection->subheading; ?></p>
-					</div>
-
-					<div class="bio-slider row" >
-						<?php foreach ($Homepage->bioSection->bios as $bio): ?>
-							<div class="col-md-3 col-sm-4">
-								<div class="card default border-0">
-									<div class="card-body  bios">
-										<div class="img" style='background-image: url("<?php echo $bio->photo['image']; ?>");'></div>
-										<p class="text name-text"><?php echo $bio->name; ?> <span class="text"> • <?php echo $bio->credentials; ?></span>
-										</p>
-
-										<p class="text"><?php echo $bio->title; ?></p>
-										<ul class="fa-ul">
-											<?php echo ($bio->education) ? '<li><span class="fa-li"><i class="fas fa-graduation-cap"></i></span>' . $bio->education . '</li>': ''; ?>
-											<?php echo ($bio->specialty) ? '<li><span class="fa-li"><i class="fas fa-th-large"></i></span>' . $bio->specialty . '</li>': ''; ?>
-											<?php echo ($bio->years) ? '<li><span class="fa-li"><i class="fas fa-clock"></i></span>' . $bio->years . ' years in the field</li>': ''; ?>
-											<?php
-											if(!empty($bio->recovery_status)):
-												switch ($bio->recovery_status):
-													case 'person' :
-														echo '<li><span class="fa-li"><i class="fas fa-grin"></i></span>In Recovery</li>';
-														break;
-													case 'loved_one' :
-														echo '<li><span class="fa-li"><i class="fas fa-grin"></i></span>Loved One In Recovery</li>';
-														break;
-												endswitch;
-											endif;
-											?>
-										</ul>
-									</div>
-								</div>
-							</div>
-						<?php endforeach; ?>
-					</div>
-				</div>
-			</section>
-		<?php endif; ?>
-		<?php echo jp_divider() ?>
 		<section class="block-2">
 			<div class="container">
 				<div class="row">
@@ -206,7 +158,7 @@ get_header();
 										<div class="media-box">
 											<div class="inner-con"> <img class="lazy" data-src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/npr-150x150.png" alt="NPR"></div>
 										</div>
-
+										
 									</div>
 									<div class="media-con">
 										<div class="media-box">
@@ -236,7 +188,7 @@ get_header();
 									<div class="media-con">
 										<div class="media-box">
 											<div class="inner-con"> <img class="lazy" data-src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/the-tennesseean-150x150.png" alt="Tennessean"></div>
-										</div>
+										</div>									
 									</div>
 									<div class="media-con">
 										<div class="media-box">
@@ -391,17 +343,17 @@ get_header();
 						</div>
 						<div class="col-md-3">
 							<div class="box">
-								<i class="fas fa-home"></i>  Inpatient Rehabs
+								<i class="fas fa-clinic-medical"></i>  Inpatient Rehabs <p>The most effective level of treatment.</p>
 							</div>
 						</div>
 						<div class="col-md-3">
 							<div class="box">
-								<i class="fas fa-clinic-medical"></i>  Outpatient Clinics
+								<i class="fas fa-hotel"></i>  Outpatient Clinics <p>Treatment that works around your schedule.</p>
 							</div>
 						</div>
 						<div class="col-md-3">
 							<div class="box last">
-								<i class="fas fa-mobile-alt"></i> App + Life Coaching
+								<i class="fas fa-mobile-alt"></i> App + Life Coaching <p>Ongoing support whenever feel triggered.</p>
 							</div>
 						</div>
 					</div>

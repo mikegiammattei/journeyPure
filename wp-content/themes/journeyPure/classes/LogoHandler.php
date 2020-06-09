@@ -7,7 +7,7 @@ class LogoHandler
 	public $defaultFileURL;
 	private $returnImgURL;
 	private $utmParam = false;
-	private $defaultAltValue = "JourneyPure";
+	private $defaultAltValue = "JourneyPure - Addiction Treatment Centers";
 
 	function __construct($defaultFileURL = 'https://journeypure.com/wp-content/themes/journeyPure/assets/img/loc-logos/logo.png'){
 		$this->defaultFileURL = $defaultFileURL;

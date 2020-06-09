@@ -4,7 +4,7 @@
 	box-shadow: 0px 2px 4px rgba(0,0,0,.18);
 	margin: 0 $md-space 30px;
 	overflow: hidden;
-	background: #e0e7f5;
+	background: #ebebeb;
 	
 	@media (max-width: 767px) {
 				margin:0 0px 15px;
@@ -32,15 +32,15 @@
 	  display: block;
 	  color: $main-gray;
       font-size: 14px;
+	  font-family:$heading-font;
 	}
 	.like-button {
 	  cursor: pointer;
 	  float: right;
-	  background: #0033a1;
 	  margin: 15px 10px;
-	  padding: 10px 25px;
+	  padding: 10px 0;
 	  border-radius: 3px;
-	  color: #fff;
+	  color: $primary;
 	  font-size: 14px;
 	  font-weight: bold;
 	}

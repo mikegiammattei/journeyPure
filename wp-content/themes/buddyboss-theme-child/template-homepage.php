@@ -298,7 +298,7 @@ echo do_shortcode('[wpw_follow_author_me author_id=6 disable_reload=true][/wpw_f
 			<hr />
 		<h3>Who can I contact about issues with this website?</h3>
 			<p>Thank you for taking the time to help us improve. Whether you want to point out a typo or something isn't working, we can help. Just email <a href="mailto:askourdoctors@journeyoure.com">AskOurDoctors@JourneyPure.com</a> and the team will get back to you. (You can reply to any email we send you too).</p>
-			<p>Please note – if you're looking to get help for addiction or mental health, the chat or call feature on the website is much quicker.</p> 
+			<p>Please note – if you're looking for <a href="https://journeypure.com/">addiction treatment</a>, the text or call feature on the website is much quicker.</p> 
 </div>
 </div>
     <div class="bb-grid"><!-- bb required in footer  -->

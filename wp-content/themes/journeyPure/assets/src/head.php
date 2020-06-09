@@ -34,7 +34,9 @@
 	<?php wp_head(); ?>
 	<script async src="//130400.tctm.co/t.js"></script>
 
+    
 	<script>
+
 		(function(w, d, s, l, i) {
 			w[l] = w[l] || [];
 			w[l].push({

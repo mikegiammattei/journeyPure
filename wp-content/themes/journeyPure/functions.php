@@ -4,7 +4,7 @@ define("THEME_PATH", get_template_directory());
 // Search site for static api value - define("GOOGLE_API", 'AIzaSyDwoQ63Mff3mW9-u2fQUhnlMBmX752RKds');
 define("WP_UPLOAD_PATH", wp_upload_dir()['baseurl']);
 
-add_filter('acf/settings/show_admin', '__return_true');
+add_filter('acf/settings/show_admin', '__return_false');
 
 /*--- REMOVE GENERATOR META TAG ---*/
 remove_action('wp_head', 'wp_generator');
@@ -131,14 +131,12 @@ function review_email_action() {
 }
 remove_action('shutdown', 'wp_ob_end_flush_all', 1);
 
-
 // Divider element getter function
 if ( ! function_exists( 'jp_divider' ) ) :
-	function jp_divider() {
-		ob_start();
-		include __DIR__ . '/assets/src/includes/elements/arrow-divider-view.php';
-		$componentView = ob_get_clean();
-		return $componentView;
-	}
+    function jp_divider() {
+        ob_start();
+        include __DIR__ . '/assets/src/includes/elements/arrow-divider-view.php';
+        $componentView = ob_get_clean();
+        return $componentView;
+    }
 endif;
-

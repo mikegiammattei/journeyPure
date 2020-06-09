@@ -68,7 +68,7 @@ get_header();
 				<div class="col-12 order-md-2 order-1">
 					<div class="container">
 						<div class="heading">
-							<h1 class="page-heading text-white">19 Locations Across the Country</h1>
+							<h1 class="page-heading text-white">18 Locations Across the Country</h1>
 							<h2 class="lead">Whether you're just realizing there's a problem or you've been in and out of other facilities for years, we can help. People from all over the country come here because the treatment is that good. If you're not sure which location to choose, don't worry. Call or chat with someone who understands and can make a recommendation.</h2>
 						</div>
 					</div>
@@ -82,7 +82,7 @@ get_header();
 						<div class="card-body">
 							<h5 class="card-title h1">Tennessee</h5>
 							<?php $LocationsPage->getReviewsByLocationCat("tennessee"); ?>
-							<p class="card-text">With outpatient clinics in five cities and the most prestigious inpatient rehab in the state, anyone in Tennessee can get their life back on track. </p>
+							<p class="card-text">With outpatient clinics in four cities and the most prestigious inpatient rehab in the state, anyone in Tennessee can get their life back on track. </p>
 							<div class="rehab">
 								<div class="row">
 									<div class="col-1 number">1</div>
@@ -123,21 +123,16 @@ get_header();
 									<div class="col-11"><b>Nashville Outpatient Clinic</b><br><span class="star">4.3&nbsp;</span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> (16)<br>3808 Park Ave, Nashville, TN 37209</div>
 								</div>
 							</div>
+							
 							<div class="outpatient">
 								<div class="row">
 									<div class="col-1 number">7</div>
-									<div class="col-11"><b>Clarksville Outpatient Clinic</b><br><span class="star">5.0 &nbsp;</span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> (2)<br>210 Needmore Road Suite A, Clarksville, TN 37040</div>
-								</div>
-							</div>
-							<div class="outpatient">
-								<div class="row">
-									<div class="col-1 number">8</div>
 									<div class="col-11"><b>Franklin Outpatient Clinic</b><br><span class="star">5.0&nbsp;</span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> (1)<br>135 2nd Avenue N Suite 200, Franklin, TN 37064</div>
 								</div>
 							</div>
 							<div class="outpatient no-line">
 								<div class="row">
-									<div class="col-1 number">9</div>
+									<div class="col-1 number">8</div>
 									<div class="col-11"><b>Professionals Inpatient Program<br>(Doctors, Nurses)</b><br><span class="star">5.0 &nbsp;</span> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> (3)<br>1306 SE Broad Street, Murfreesboro, TN 37130</div>
 								</div>
 							</div>
@@ -195,7 +190,7 @@ get_header();
 								</div>
 							</div>
 							<h5>Kentucky's Crisis</h5>
-							<p class="card-text">The addiction crisis in Kentucky is very real. Every day we lose another four lives to drug overdose, while thousands more are barely hanging on.</p>
+							<p class="card-text">Every day we lose another four lives to drug overdose in our state, while thousands more are barely hanging on.</p>
 							<h5>Kentucky's Solution</h5>
 							<p>If you're struggling with drugs or alcohol anywhere in the state, this is your best option to get back on track. Let's talk about what's going on and go from there. You can feel better again.</p>
 						</div>
@@ -239,11 +234,11 @@ get_header();
 								</div>
 							</div>
 							<h5>Those Outside Florida</h5>
-							<p>While you may not have wanted to go far from home, that could be exactly what you need. Escaping triggers and bad influences helps you stay focused on getting to the core of your issue.</p>
+							<p>While you may not have wanted to go far from home, that could be exactly what you need. Escaping triggers and bad influences helps you focus on getting to the core of your issue.</p>
 							<h5>Those in Florida</h5>
 							<p>People come from as far as Alaska to access treatment here. With locations in the southeast and the northwest of the state, you're a drive or bus ride away. No excuses!</p>
 							<h5>The Military Community</h5>
-							<p>Our Florida locations have separate programming run by veterans who understand the heaviness you live with every day. We're in network with Tricare and VA Choice and are the only facility testing virtual reality technology in treatment. </p>
+							<p>Our Florida locations have separate programming run by veterans who understand the heaviness you live with every day. We're in network with Tricare and are the only facility testing VR technology in treatment. </p>
 
 						</div>
 						<div class="card-footer">

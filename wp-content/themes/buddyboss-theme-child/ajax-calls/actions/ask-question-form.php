@@ -1,11 +1,11 @@
 <?php
-if ( isset($_REQUEST) ) {
 
+if ( isset($_REQUEST) ) {
     require_once(AOD_CLASSES . 'JP_Validation.php');
+
     $JP_Validation = new JP_Validation();
 
     $returnArr = array();
-
     $returnArr['success'] = false;
     $returnArr['loggedIn'] = is_user_logged_in();
 
@@ -13,6 +13,7 @@ if ( isset($_REQUEST) ) {
     $JP_Validation->deleteErrors();
     $JP_Validation->isMinimum(150,$_REQUEST['textareaMaxErrMsgData']);
     $JP_Validation->isEmpty("You did not enter a question.");
+
     $returnArr['question'] = $JP_Validation->getErrors();
 
     if($_REQUEST['showDetails'] == 'true'){
@@ -20,9 +21,9 @@ if ( isset($_REQUEST) ) {
         $JP_Validation->deleteErrors();
         $JP_Validation->isEmpty("You did not enter any details.");
         $JP_Validation->isMinimum(300,$_REQUEST['detailsMaxErrMsgData']);
+
         $returnArr['showDetails'] = $JP_Validation->getErrors();
     }
-
 
     if(empty($JP_Validation->getErrors())){
         // Create post object
@@ -35,10 +36,12 @@ if ( isset($_REQUEST) ) {
 
         // Insert the post into the database
         $new_post_id = wp_insert_post( $user_question_post );
+        $returnArr['postId'] = $new_post_id;
 
         if($_REQUEST['showDetails'] == 'true'){
             update_field('field_5e64059fbd8e5',wp_strip_all_tags($_REQUEST['details'],false),$new_post_id);
         }
+
         if($returnArr['loggedIn']){
             $current_user = wp_get_current_user();
             update_field('field_5e6405e3bd8e7',$current_user->user_email,$new_post_id);
@@ -59,7 +62,6 @@ if ( isset($_REQUEST) ) {
                 'post_author'       => $user_ID,
             );
 
-
             $followed_post_id = wp_insert_post( $add_follow_post_arr );
 
             if($followed_post_id){
@@ -69,23 +71,17 @@ if ( isset($_REQUEST) ) {
                 // update post user email
                 update_post_meta( $followed_post_id, '_wpw_fp_post_user_email', $user_email );
             }
-
-
         }
-
 
         if(is_user_logged_in()){
             makeFollowerFor_wpw_fp_plugin($new_post_id);
         }
 
         $returnArr['success'] = true;
-
     }
 
     echo json_encode($returnArr);
-
-
 }
+
 // Always die in functions echoing ajax content
 die();
-?>

@@ -65,7 +65,7 @@
 				<div class="container">
 					<div class="heading">
 						<h1 class="page-heading text-white">Here, it's different.</h1>
-						<h3 class="lead">Our mission is to help people, families and communities heal. Patients here get evidence-based, dual-diagnosis addiction treatment and compassionate care.  Our high standards attract well-known behavioral health professionals from across the country.  Their commitments to ethics and patient success are backed by the highest accreditation and affiliations in the industry.</h3>
+						<h3 class="lead">Our mission is to help people become healthy and stay healthy. Patients here get evidence-based, dual-diagnosis addiction treatment and compassionate care.  Our high standards attract well-known behavioral health professionals from across the country.  Their commitments to ethics and patient success are backed by the highest accreditation and affiliations in the industry.</h3>
 					</div>
 				</div>
 			</div>
@@ -84,7 +84,7 @@
 							<div class="img" style='background-image: url("<?php echo $bio->photo['image']; ?>");'></div>
 						</div>
 						<div class="header">
-							<p class="text name-text"><?php echo $bio->name; ?> <span class="text"> • <?php echo $bio->credentials; ?></span></p>
+							<p class="text name-text"><?php echo $bio->name; ?> <span class="text"><?php echo $bio->credentials; ?></span></p>
 							<p class="text"><?php echo $bio->title; ?></p>
 						<hr />
 						</div>
@@ -152,7 +152,7 @@
 	</section>
 	<section class="page-quote">
 		<div class="container">
-			<div class="container"><div class="header"><div class="lead">"In order to continuously improve, we believe in science, real-world analysis and teamwork. Yet, the driving force behind JourneyPure remains an eternal compassion to help."</div></div><div class="media d-inline-flex"> <img class="mr-3" src="/wp-content/uploads/2019/11/dr-stephen-loyd-journeypure-md.jpg" alt="Doctor Stephen Loyd Headhot as Drug Czar"><div class="media-body "><h5 class="mt-0">Dr. Stephen Loyd M.D.</h5><p>Chief Medical Officer</p></div></div></div>
+			<div class="container"><div class="header"><div class="lead">"In order to continuously improve, we believe in science, real-world analysis and teamwork. Yet, the driving force behind JourneyPure remains an eternal compassion to help."</div></div><div class="media d-inline-flex"> <img class="mr-3" src="/wp-content/uploads/2019/11/dr-stephen-loyd-journeypure-md.jpg" alt="Doctor Stephen Loyd Headhot as Drug Czar"><div class="media-body "><h5 class="mt-0">Dr. Stephen Loyd MD</h5><p>Chief Medical Officer</p></div></div></div>
 		</div>
 	</section>
 		<section class="ethics">

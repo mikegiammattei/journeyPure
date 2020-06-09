@@ -28,7 +28,7 @@ get_header();
 					<div class="content">
 						<h1 class="heading text-primary">Suboxone Clinics</h1>
 						<div class="h3 text-primary">
-							For anyone that feels it's impossible to stop using drugs.
+							Locations Accross Tennessee, Kentucky & Florida or Online
 						</div>
 						<hr>
 						<div class="feature">
@@ -36,9 +36,9 @@ get_header();
 								<div class="col-lg-6 col-sm-12 d-flex align-items-stretch">
 									<div class="card transparent">
 										<div class="card-body">
-											<h5>The science of addiction medicine has advanced exponentially in the last decade.</h5>
-											<p>We now understand what's going on at the brainwave level — the damage drug addiction does and the effectiveness of medications like Suboxone.</p>
-											<p class="no-pad">Suboxone stabilizes your mind and body to be able to function normally. You get past the withdrawls and live without being sick, high or constantly distracted. If you've been unable to stop on your own, medications like Suboxone can help.</p>
+											<h5>Finally, you can live without being sick, high or constantly distracted.</h5>
+											<p>The science of addiction medicine has advanced exponentially in the last decade. We now understand what's going on at the brainwave level and how Suboxone stabilizes your mind and body to be able to function normally.</p>
+											<p class="no-pad">If you've been unable to stop on your own, medications like Suboxone can help.</p>
 										</div>
 										<?php if($OutPatientLocation->ratings): ?>
 											<div class="rating-section">
@@ -266,7 +266,7 @@ get_header();
 					<?php endforeach; ?>
 				</div>
 				<div class="ask-a-question">
-						<span class="btn btn-primary" data-toggle="modal" data-target="#user-question-form-container"><i class="fas fa-comment-dots"></i> Ask a question</span>
+						<span class="btn btn-primary" data-toggle="modal" data-target="#user-question-form-container">Ask a question</span>
 
 				</div>
 			</div>

@@ -1,0 +1,68 @@
+.ask-a-question {
+	/* ask our doctors reset */
+	background-color: white;
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+	font-size: 1rem;
+	/* /ask our doctors reset */
+
+	.bottom-cta {
+		padding-bottom: 75px;
+		text-transform: uppercase;
+		overflow: hidden;
+	}
+
+	.h1 {
+		margin-bottom: 50px;
+		margin-top: 55px;
+	}
+
+	h4 {
+		margin-bottom:20px;
+		font-weight: 500;
+		line-height: 1.2;
+		font-size: 1.5rem;
+	}
+
+	a {
+		color:#333;
+		font-weight:bold;
+	}
+
+	.insurance-link {
+		color:$primary !important;
+	}
+
+	.fa, .fas {
+		font-size:65px;
+		color:$secondary;
+		margin-bottom:20px;
+	}
+
+	.drop {
+		cursor: pointer;
+		display: block;
+		color:$primary;
+		font-weight: bold;
+	}
+
+	.ctm-call-widget-container {
+		margin: 0 auto;
+
+		p {
+			text-transform:none;
+			padding-bottom:0;
+		}
+	}
+
+	input[type="checkbox"]  {
+		display: none; /* hide the checkboxes */
+	}
+
+	input +.drop + div {
+		display: none;
+	}
+
+	input:checked + .drop + div {
+		display:block;
+	}
+}

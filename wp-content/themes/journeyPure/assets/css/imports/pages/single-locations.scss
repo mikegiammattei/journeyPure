@@ -1,21 +1,24 @@
 #single-location{
   .note-box{
-background-color:rgb(251,188,6);
+background-color:#fcf8e3;
 padding: 20px 15px 30px;
 text-align: center;
     margin-bottom: -15px;
 .note-cta{
-color: #fff !important;
+color: #FBBC07 !important;
 border-radius:4px;
 border:2px solid white;
 padding:6px 12px;
 }
 p {
 font-family:"Montserrat",sans-serif;
-color:#fff;
+color:#FBBC07;
 margin:0 0 5px;
 padding:0;
 line-height:1.2;
+}
+a {
+color:#FBBC07;
 }
 }
   // Page Globals
@@ -89,10 +92,19 @@ line-height:1.2;
   // Import above fold  styles that are global
   @import "../page-parts/above-fold";
   .block-2{
-	padding: $xl-space $xl-space $lg-space;
+	padding: 55px $xl-space 30px;
 	@media (max-width: 767px) {
     margin-top: 80px;
 	padding: 50px 0;
+	}
+	.h3{
+	margin-top:20px;
+	}
+	li{
+		font-family:$heading-style-1;
+		margin-bottom:20px;
+		font-size:17px;
+	
 	}
 	iframe {
 		width: 100%;
@@ -102,13 +114,14 @@ line-height:1.2;
 		border-radius: 3px;
 	}
 	.list-container{
-	  margin-top: $lg-space;
+	  margin-top: 15px;
 
 	  .list-item{
 		margin-bottom: $md-space;
 
 		.list-heading{
 		  margin-bottom: $md-space;
+		  margin-top:$lg-space;
 		  .icon{
 			display: inline-block;
 			width: 34px;
@@ -305,6 +318,7 @@ line-height:1.2;
   }
   .review-section{
 	background: $background-color;
+	background-image:url(/wp-content/uploads/sites/2/2020/03/jp-background.png);
 	margin-top: 0;
 	padding-top: $xl-space;
 
@@ -399,8 +413,8 @@ line-height:1.2;
   }
   .insurance-section{
 	padding: $lg-space 0 15px;
-	background:white;
-	background-image: url(/wp-content/themes/journeyPure/assets/img/background-diagmonds.png);
+	    background: #ebebeb;
+    background-image: url(/wp-content/uploads/sites/2/2020/03/jp-background.png);
         box-shadow: 0px 2px 4px rgba(0,0,0,.18);
 		    border-top: 8px solid $primary;
     border-bottom: 8px solid $primary;
@@ -501,6 +515,260 @@ line-height:1.2;
 		color:$primary;
 		}
 	  }
+}
+	.call-text {
+	background-color: $primary;
+	.row {
+	width:100%;
+	}
+	img {
+		height:100%;
+		opacity: 0.4;
+		max-height:575px;
+	}
+	a {
+		color:white;
+	}
+
+	.text-side{
+		color:white;
+		max-width: 644px;
+		padding:50px 15px 65px 35px;
+@media (max-width: 767px) {
+	padding-right:36px;
+}
+
+		.h1 {
+			color:white;
+		}
+		p {
+			color:white;
+		}
+		ul {
+			font-family:$heading-style-1;
+			font-size:17px;
+			margin-bottom:45px;
+		}
+		h3{
+			color:white;
+			margin: 15px 0 25px;
+			
+		}
+		.note-cta {
+    border-radius: 4px;
+    border: 2px solid #fff;
+    padding: 14px 28px;
+}
+	}
+	}
+	
+	
+	.design-process-section {
+    line-height: 25px;
+	background-color:$primary;
+	padding:50px 0 55px;
+
+	.h1 {
+	text-align:center;
+	color:white;
+	}
+	.nav {
+	p {
+	color:white;
+	font-family:$heading-font;
+	font-weight:bold;
+
+	}
+	}
+	.container{
+	max-width:960px;
+	}
+
+}
+.design-process-content {
+    border: 1px solid $light-blue;
+    position: relative;
+	background:white;
+	border-radius: 5px;
+	margin:0 5px;
+	overflow:hidden;
+	.design-process-content-inner {
+		padding: 30px 15px 20px;
+	}
+	.note-cta {
+		border-radius: 4px;
+		border: 2px solid $primary;
+		padding: 14px 28px;
+		color:$primary;
+		display: inline-block;
+		margin-bottom: 12px;
+	}
+	.lazy {
+		@media screen and (max-width: 767px) {
+			background-image: none !important;
+		}
+		@media screen and (min-width: 768px) {
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center top;
+		}
+		img {
+			@media screen and (min-width: 768px) {
+				display: none;
+			}
+		}
 	}
 }
+/*.design-process-content img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    max-height: 100%;
+}*/
+.design-process-content h3 {
+    margin-bottom: 16px;
+}
+.design-process-content p {
+    line-height: 26px;
+    margin-bottom: 12px;
+}
+.process-model {
+    list-style: none;
+    padding: 0;
+    position: relative;
+    max-width: 600px;
+    margin: 20px auto 26px;
+    border: none;
+	z-index: 0;
+	display: flex;
+    justify-content: center;
+}
+.process-model li::after {
+    background: #e5e5e5 none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 4px;
+    margin: 0 auto;
+    position: absolute;
+    right: -30px;
+    top: 33px;
+    width: 85%;
+    z-index: -1;
+}
+.process-model li.visited::after {
+    background: $secondary;
+}
+.process-model li:last-child::after {
+    width: 0;
+}
+.process-model li {
+    display: inline-block;
+    width: 18%;
+    text-align: center;
+	float: none;
+	position: relative;
+}
+.nav-tabs.process-model > li.active > a, .nav-tabs.process-model > li.active > a:hover, .nav-tabs.process-model > li.active > a:focus, .process-model li a:hover, .process-model li a:focus {
+    border: none;
+    background: transparent;
+
+}
+.process-model li a {
+    padding: 0;
+    border: none;
+    color: #606060;
+}
+.process-model li.active,
+.process-model li.visited {
+    color: $secondary;
+}
+.process-model li.active a,
+.process-model li.active a:hover,
+.process-model li.active a:focus,
+.process-model li.visited a,
+.process-model li.visited a:hover,
+.process-model li.visited a:focus {
+    color: $secondary;
+}
+.process-model li.active p,
+.process-model li.visited p {
+    font-weight: 600;
+}
+.process-model li i {
+    display: block;
+    height: 68px;
+    width: 68px;
+    text-align: center;
+    margin: 0 auto;
+    background: #f5f6f7;
+    border: 2px solid #e5e5e5;
+    line-height: 65px;
+    font-size: 30px;
+    border-radius: 50%;
+}
+.process-model li.active i, .process-model li.visited i  {
+    background: #fff;
+    border-color: $secondary;
+}
+.process-model li p {
+    font-size: 14px;
+    margin-top: 11px;
+}
+.process-model.contact-us-tab li.visited a, .process-model.contact-us-tab li.visited p {
+    color: #606060!important;
+    font-weight: normal
+}
+.process-model.contact-us-tab li::after  {
+    display: none;
+}
+.process-model.contact-us-tab li.visited i {
+    border-color: #e5e5e5;
+}
+
+
+
+@media screen and (max-width: 560px) {
+  .more-icon-preocess.process-model li span {
+        font-size: 23px;
+        height: 50px;
+        line-height: 46px;
+        width: 50px;
+    }
+    .more-icon-preocess.process-model li::after {
+        top: 24px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .process-model.more-icon-preocess li {
+        width: 24%;
+    }
+    .more-icon-preocess.process-model li span {
+        font-size: 16px;
+        height: 35px;
+        line-height: 32px;
+        width: 35px;
+    }
+    .more-icon-preocess.process-model li p {
+        font-size: 11px;
+    }
+    .more-icon-preocess.process-model li::after {
+        top: 32px;
+    }
+    .process-model.more-icon-preocess {
+        text-align: center;
+    }
+}
+
+	
+	
+	}
+
 @import "../../vendors/flexbox-image-grid";

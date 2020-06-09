@@ -17,6 +17,7 @@ if($('#homepage').length > 0){
 		if($(SLIDER).length > 0){
 
 			setTimeout(function () {
+
 				$(SLIDER).on('init', function(event, slick){
 					let OriginalSlideTOShow;
 
@@ -29,6 +30,7 @@ if($('#homepage').length > 0){
 					slidesLeft = slick.slideCount - OriginalSlideTOShow;
 					$(NEXT_BTN).find('data').val(slidesLeft).text(slidesLeft);
 				});
+
 				$(SLIDER).slick({
 					dots: false,
 					centerMode: false,
@@ -46,9 +48,7 @@ if($('#homepage').length > 0){
 							}
 						}
 					],
-
 				}).on('beforeChange', function(event, slick, currentSlide, nextSlide){
-
 					// Handle slides remaining to show
 					let direction;
 					if (Math.abs(nextSlide - currentSlide) === 1) {
@@ -74,6 +74,19 @@ if($('#homepage').length > 0){
 					}
 				});
 
+				// On slider image loads, resize the slider
+				$(SLIDER).find('img').each(function() {
+					var img = this;
+
+					if (img.complete) {
+						$(SLIDER).slick('setPosition');
+					} else {
+						img.addEventListener('load', function() {
+							$(SLIDER).slick('setPosition');
+						});
+					}
+				});
+
 			}, 600);
 		}
 	}
@@ -84,4 +97,17 @@ if($('#homepage').length > 0){
 			video_wrapper.html('<iframe allowfullscreen allow="autoplay; encrypted-media" frameborder="0" class="embed-responsive-item" src="' + video_wrapper.data('yt-url') + '"></iframe>');
 		});
 	}
+
+	// script for tab steps
+	$('.process-model a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+
+		var href = $(e.target).attr('href');
+		var $curr = $(".process-model a[href='" + href + "']").parent();
+
+		$('.process-model li').removeClass();
+
+		$curr.addClass("active");
+		$curr.prevAll().addClass("visited");
+	});
+	// end  script for tab steps
 }

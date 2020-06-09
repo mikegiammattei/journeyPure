@@ -1,0 +1,54 @@
+// Fake <ol>
+.jp-ol {
+	display: block;
+	padding-left: 0;
+
+	// Counter reset
+	&-counter-reset {
+		counter-reset: line;
+	}
+	
+	span {
+		font-size:22px;
+	}	
+
+	// <li>
+	&-li {
+		display: block;
+		margin-bottom: 7px;
+		padding-left: 40px;
+		position: relative;
+		font-family: $heading-style-1;
+		font-size: 17px;
+
+		// Counter
+		&:before {
+			border: 2px solid #333;
+			border-radius: 50%;
+			counter-increment: line;
+			content: counter(line);
+			display: block;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			height: 25px;
+			left: 0;
+			line-height: 18px;
+			position: absolute;
+			text-align: center;
+			top: 0;
+			width: 30px;
+			font-family:"Montserrat",sans-serif;
+			color:#333;
+		}
+
+		// Styles
+		.white > & {
+			// Counter
+			&:before {
+				border-color: white;
+				color: white;
+			}
+		}
+	}
+}

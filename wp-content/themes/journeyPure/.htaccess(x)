@@ -1,0 +1,84 @@
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+Redirect 301 /sam-macmaster https://journeypure.com/about-us/
+Redirect 301 /about/ https://journeypure.com/about-us/
+Redirect 301 /addiction-resources/addiction-research/ https://journeypure.com/
+Redirect 301 /addiction-resources/effects-of-addiction-on-your-body/ https://journeypure.com/effects-opioids-body/
+Redirect 301 /adolescent-survey-opioid/ https://journeypure.com/
+Redirect 301 /avoiding-family-conflict-at-the-holidays/ https://journeypure.com/
+Redirect 301 /blog/ https://journeypure.com/
+Redirect 301 /blog/2015/6/9/am-i-depressed-start-with-this-self-diagnosis-tool https://journeypure.com/
+Redirect 301 /blog-holidays-loved-one-recovery/ https://journeypure.com/
+Redirect 301 /bowling-green https://journeypure.com/locations/kentucky/
+Redirect 301 /contact/ https://journeypure.com/about-us/
+Redirect 301 /drug-alcohol-detox-services/ https://journeypure.com/
+Redirect 301 /emerald-coast/ https://journeypure.com/locations/florida/
+Redirect 301 /enabling-matrix/ https://journeypure.com/
+Redirect 301 /experiential-therapy-for-substance-abuse-treatment/ https://journeypure.com/
+Redirect 301 /finding-hope-in-treatment/ https://journeypure.com/
+Redirect 301 /ft-walton-beach-outpatient/ https://journeypure.com/suboxone-clinics/
+Redirect 301 /journeypure-athens-iop-set-to-launch-restore-dui-school/ https://journeypure.com/suboxone-clinics/
+Redirect 301 /journeypure-medical-director-dr-stephen-loyd-to-speak-at-lhc-lunch-and-learn/ https://journeypure.com/about-us/
+Redirect 301 /journeypure-names-stephen-loyd-md-to-national-medical-director/ https://journeypure.com/about-us/
+Redirect 301 /journeypure-panama-city-beach-outpati https://journeypure.com/suboxone-clinics/
+Redirect 301 /journeypure-panama-city-beach-outpatient/ https://journeypure.com/suboxone-clinics/
+Redirect 301 /journeypures-e-imr-workbook-now-part-of-journeypures-coaching-app/ https://journeypure.com/
+Redirect 301 /jp_locations/journeypure-bowling-green/ https://journeypure.com/locations/kentucky/
+Redirect 301 /jp_locations/journeypure-knoxville-iop/ https://journeypure.com/suboxone-clinics/
+Redirect 301 /jp_locations/journeypure-paducah/ https://journeypure.com/suboxone-clinics/
+Redirect 301 /jp_locations/journeypure-serenity-network/ https://journeypure.com/locations/
+Redirect 301 /jp_locations/journeypure-voyage/ https://journeypure.com/locations/
+Redirect 301 /kevin-lee https://journeypure.com/about-us/
+Redirect 301 /murfreesboro-outpatient/ https://journeypure.com/suboxone-clinics/
+Redirect 301 /new-study-opioid-prescriptions/ https://journeypure.com/
+Redirect 301 /opioid-crisis-public-health-emergency/ https://journeypure.com/
+Redirect 301 /opioid-epidemic-leads-hepatitis-c-cases/ https://journeypure.com/
+Redirect 301 /patrick-dunn https://journeypure.com/about-us/
+Redirect 301 /rehab-facility-location/ https://journeypure.com/locations/
+Redirect 301 /research/a-stress-coping-model-for-conceptualizing-the-impact-of-substance-abuse-on-families/ https://journeypure.com/
+Redirect 301 /research/differences-in-residential-treatment-for-co-occurring-disorders/ https://journeypure.com/
+Redirect 301 /research/female-methamphetamine-users-in-rural-appalachia/ https://journeypure.com/
+Redirect 301 /research/identifying-co-occurring-disorders-in-adolescent-populations/ https://journeypure.com/
+Redirect 301 /research/predictors-of-residential-treatment-retention/ https://journeypure.com/
+Redirect 301 /research/substance-abuse-behavior-change-in-faith-based-substance-abuse-treatment/ https://journeypure.com/
+Redirect 301 /research/the-impact-of-a-substance-abuse-disorder-on-the-well-being-of-family-caregivers/ https://journeypure.com/
+Redirect 301 /research/understanding-spiritual-mechanisms-underlying-change-in-substance-abuse-treatment/ https://journeypure.com/
+Redirect 301 /tms-myths/ https://journeypure.com/
+Redirect 301 /treatment/ https://journeypure.com/
+Redirect 301 /treatment/coaching-app/ https://journeypure.com/
+Redirect 301 /treatment/detox/ https://journeypure.com/
+Redirect 301 /treatment/detox-services/ https://journeypure.com/
+Redirect 301 /treatment/dual-diagnosis/ https://journeypure.com/
+Redirect 301 /treatment/eating-disorder-treatment/ https://journeypure.com/
+Redirect 301 /treatment/experiential-therapy/ https://journeypure.com/
+Redirect 301 /treatment/intensive-outpatient/ https://journeypure.com/suboxone-clinics/
+Redirect 301 /treatment/journeypure-recovery-coaching/ https://journeypure.com/
+Redirect 301 /treatment/military-care/ https://journeypure.com/
+Redirect 301 /treatment/residential-addiction-treatment-programs/ https://journeypure.com/locations/
+Redirect 301 /treatment/residential-treatment/ https://journeypure.com/locations/
+Redirect 301 /treatment/transcranial-magnetic-stimulation-tms/ https://journeypure.com/
+Redirect 301 /twelve-journeypure-iops-to-offer-mental-health-only-programming/ https://journeypure.com/
+Redirect 301 /understanding-ad. https://journeypure.com/
+Redirect 301 /understanding-addiction/ https://journeypure.com/
+Redirect 301 /understanding-addiction/signs-of-substance-abuse/ https://journeypure.com/
+Redirect 301 /understanding-addiction/stigma-of-addiction/ https://journeypure.com/
+Redirect 301 /voyage/ https://journeypure.com/locations/
+Redirect 301 /why-us/ https://journeypure.com/about-us/
+Redirect 301 /why-us/our-mission/ https://journeypure.com/about-us/
+Redirect 301 /blog-infographic-dangers-holiday-drinking/ https://journeypure.com/
+Redirect 301 /journeypures-e-imr-workbook-now-part-of-journeypures-coaching-app/ https://journeypure.com/
+Redirect 301 /understanding-experiential-therapy-in-rehab/ https://journeypure.com/
+Redirect 301 /opioid-epidemic-leads-hepatitis-c-cases/ https://journeypure.com/
+Redirect 301 /testimonials/ https://journeypure.com/
+Redirect 301 /95-billion-opioid-epidemic-study/ https://journeypure.com/
+Redirect 301 /new-study-opioid-prescriptions/ https://journeypure.com/

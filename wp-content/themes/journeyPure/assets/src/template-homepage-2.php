@@ -8,11 +8,9 @@ $Homepage = new Homepage\Homepage();
 
 /** Page specific js*/
 $jsFile = 'homepage';
-
+get_header();
 /** Specify footer */
 $footerVersion = 2;
-
-get_header();
 
 ?>
 <div id="homepage" class="homepage-2">
@@ -37,8 +35,13 @@ get_header();
 								<div class="col-lg-6 col-sm-12 ">
 									<div class="card transparent">
 										<div class="card-body">
-											<h5>You deserve help that actually helps you. You deserve a treatment team that listens and puts you first.</h5>
-											<p>Getting help is a life-changing experience. And, change can feel scary. Whether you choose JourneyPure or not, follow-through on getting treatment. We're always here to talk about your options.</p>
+											<h5>You deserve help that actually helps you – and a treatment team that listens and puts you first.</h5>
+
+											<p>You don't have to figure this out on your own. These issues are complex and personal. When you're ready for something to change, call to talk about your options and get information without commitment.</p>
+
+											<p>You can do this!</p>
+
+
 										</div>
 										<?php if($Homepage->ratings): ?>
 											<div class="rating-section">
@@ -79,9 +82,9 @@ get_header();
 								</div>
 								<div class="col-lg-6 col-sm-12 d-flex align-items-stretch">
 									<div class="card card-body h-100 justify-content-center transparent" style="width: 100%; ">
-										<div class="embed-responsive embed-responsive-16by9 youtube-video-place" style=" cursor: pointer; background: no-repeat center url('/wp-content/themes/journeyPure/assets/img/addiction-video-home-page.JPG');
+										<div class="embed-responsive embed-responsive-16by9 youtube-video-place  lazy" data-src='/wp-content/themes/journeyPure/assets/img/journeypure-rehab-review.jpg'  style=" cursor: pointer; background: no-repeat center;
 		  -webkit-background-size: cover;
-		  background-size: cover;" data-yt-url="https://www.youtube.com/embed/Gd1Dza355X8?rel=0&showinfo=0&autoplay=1">
+		  background-size: cover;" data-yt-url="https://www.youtube.com/embed/RHj5F5yhLC8?rel=0&showinfo=0&autoplay=1">
 										</div>
 									</div>
 								</div>
@@ -91,6 +94,7 @@ get_header();
 				</div>
 			</div>
 		</section>
+
 		<section class="block-4">
 			<div class="container">
 				<div class="service-container">
@@ -108,12 +112,12 @@ get_header();
 						</div>
 						<div class="col-md-3">
 							<div class="box">
-								<i class="fas fa-hotel"></i>  Outpatient Clinics <p>Treatment that works around your schedule.</p>
+								<i class="fas fa-hotel"></i>  Outpatient Clinics <p>Treatment on your schedule.</p>
 							</div>
 						</div>
 						<div class="col-md-3">
 							<div class="box last">
-								<i class="fas fa-mobile-alt"></i> App + Coaching <p>Free, ongoing support whenever feel triggered.</p>
+								<i class="fas fa-mobile-alt"></i> App + Coaching <p>Free, life-long support.</p>
 							</div>
 						</div>
 					</div>
@@ -124,25 +128,28 @@ get_header();
 			<div class="insurance-banner">
 	<div class="row">
 		<div class="col-12">
-		<h5 class="center">Plus, Your Treatment is Likely In-Network </h5>
-		<p>Cost is usually part of a decision like this. Luckily, insurance almost always covers the majority of the cost for treatment here. <a data-toggle="modal" data-target="#main-insurance-form">Check your policy now</a>.</p>
+		<h5 class="center">Treatment Here is In-Network </h5>
+		<p>In-network with insurance companies means <i>any cost to you is as low as possible</i>. Get answers about your specific policy within 54 minutes.
+				<button type="button" data-toggle="modal" data-target="#main-insurance-form" class="btn btn-outline-secondary"><i class="fas fa-id-card"></i>Submit Your Insurance</button></p>
+		<br>
+
 			<img class="lazy loaded" src="/wp-content/themes/journeyPure/assets/img/insurance2.png" data-src="/wp-content/themes/journeyPure/assets/img/insurance2.png" alt="Aetna, Anthem Blue Cross Blue Sheild, Cigna Heath Insurances" data-was-processed="true">
 			<img class="lazy loaded" src="/wp-content/themes/journeyPure/assets/img/insurance1.png" data-src="/wp-content/themes/journeyPure/assets/img/insurance1.png" alt="Amerihealth, United Healthcare, Humana, Tricare and 43 More Insurances" data-was-processed="true">
 		</div>
 	</div>
-	
+
 </div>
 		</section>
 
 
-		<?php if(isset($Homepage->bioSection)): ?>
+<?php if(isset($Homepage->bioSection)): ?>
 			<section class="bio-section">
 				<div class="container">
 						<div class="heading">
-							<h5 class="h1">Your Life Matters to Us</h5>
+							<h5 class="h1">You're Not Alone</h5>
 						</div>
 					<div class="subheading">
-						<p class="h3">It's the personal story and hope for each person that walks through our doors that gets us up in the morning and keeps us up at night. Here are a few of the 40+ doctorate or master's-level professionals you'll meet here.</p>
+						<p class="h3">It's the personal story of each person that walks through our doors that gets us up in the morning and keeps us up at night. Here are a few of the 40+ doctorate or master's-level professionals you'll meet here.</p>
 					</div>
 
 					<div class="bio-slider row" >
@@ -150,11 +157,11 @@ get_header();
 							<div class="col-md-3 col-sm-4">
 								<div class="card default border-0">
 									<div class="card-body  bios">
-										<div class="img" style='background-image: url("<?php echo $bio->photo['image']; ?>");'></div>
+										<div class="img lazy" data-src="<?php echo $bio->photo['image']; ?>"></div>
 										<p class="text name-text"><?php echo $bio->name; ?> <span class="text"><?php echo $bio->credentials; ?></span>
 										</p>
 
-										
+
 											<?php
 											if(!empty($bio->recovery_status)):
 												switch ($bio->recovery_status):
@@ -176,11 +183,13 @@ get_header();
 				</div>
 			</section>
 		<?php endif; ?>
-				<section class="block-1">
+
+
+		<section class="block-1">
 			<div class="container">
 				<div class="header">
 					<div class="lead">
-						 "Everyone comes in overwhelmed, but looking to make big changes quickly. This is where you start to take back your health, family and future. You can do this!"
+						 "Everyone comes in overwhelmed, but looking to make big changes quickly. This is where it starts. Where you learn to harness and hold on to hope."
 					</div>
 				</div>
 				<div class="media d-inline-flex">
@@ -192,12 +201,15 @@ get_header();
 				</div>
 			</div>
 		</section>
+
+
+
 		<?php echo jp_divider() ?>
 		<section class="block-2">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6 col-sm-12">
-						<h5 class="heading-prime h1">Now, Here Are The Facts</h5>
+						<h5 class="heading-prime h1">Here Are The Facts</h5>
 						<div class="details">
 							<?php
 							$listItems = array();
@@ -207,11 +219,11 @@ get_header();
 							);
 							$listItems[] = array(
 								'heading' => "Your treatment is backed by 6K+ success stories",
-								'content' => "We've helped thousands of people like you get healthy and stay healthy.  Don't buy-in to the idea that treatment won't work. You've got this! (And, we're here to help)."
+								'content' => "We've helped thousands of people like you get healthy and stay healthy.  Don't let doubts hold you back. You've got this! (And, we're here to help)."
 							);
 							$listItems[] = array(
 								'heading' => "There's 95% you'll be happy with your care",
-								'content' => "You're probably looking for a provider that listens and constantly improves.  As of " . date('F Y') . ", the satisfaction rate here has never dropped below 95%."
+								'content' => "You deserve care that listens and constantly improves.  As of " . date('F Y') . ", the satisfaction rate here has never dropped below 95%."
 							);
 							?>
 							<?php if($listItems): ?>
@@ -234,53 +246,53 @@ get_header();
 								<div class="row no-gutters">
 									<div class="media-con">
 										<div class="media-box">
-											<div class="inner-con"> <img class="lazy" data-src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/nyt-150x150.png" alt="The New York Times"></div>
+											<div class="inner-con"> <img class="lazy" data-src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/nyt-150x150.png" alt="The New York Times" title="The New York Times"></div>
 										</div>
 									</div>
 									<div class="media-con">
 										<div class="media-box">
-											<div class="inner-con"> <img class="lazy" data-src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/npr-150x150.png" alt="NPR"></div>
+											<div class="inner-con"> <img class="lazy" data-src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/npr-150x150.png" alt="NPR" title="National Public Radio"></div>
 										</div>
 
 									</div>
 									<div class="media-con">
 										<div class="media-box">
-											<div class="inner-con"> <img class="lazy" data-src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/nbc-150x150.png" alt="NBC"></div>
+											<div class="inner-con"> <img class="lazy" data-src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/nbc-150x150.png" alt="NBC" title="NBC News"></div>
 										</div>
 									</div>
 									<div class="media-con">
 									<div class="media-box">
-											<div class="inner-con"> <img class="lazy" data-src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/HUFF_POST.png" alt="The Huffington Post"></div>
+											<div class="inner-con"> <img class="lazy" data-src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/HUFF_POST.png" alt="The Huffington Post" title="The Huffington Post"></div>
 										</div>
 									</div>
 									<div class="media-con">
 										<div class="media-box">
-											<div class="inner-con"> <img class="lazy" data-src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/bbc-150x150.png" alt="BBC"></div>
+											<div class="inner-con"> <img class="lazy" data-src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/bbc-150x150.png" alt="BBC" title="BBC News"></div>
 										</div>
 									</div>
 									<div class="media-con">
 										<div class="media-box">
-											<div class="inner-con"> <img class="lazy" data-src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/nfl-150x150.png" alt="Players Care Foundation"></div>
+											<div class="inner-con"> <img class="lazy" data-src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/nfl-150x150.png" alt="Players Care Foundation" title="NFL Players Care Foundation"></div>
 										</div>
 									</div>
 									<div class="media-con">
 										<div class="media-box">
-											<div class="inner-con"> <img class="lazy" data-src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/vanderbilt-150x150.png" alt="Venderbilt University"></div>
+											<div class="inner-con"> <img class="lazy" data-src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/vanderbilt-150x150.png" alt="Venderbilt University" title="Venderbilt University - Published Research"></div>
 										</div>
 									</div>
 									<div class="media-con">
 										<div class="media-box">
-											<div class="inner-con"> <img class="lazy" data-src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/HR-Departments-02.png" alt="58K HR Departments"></div>
+											<div class="inner-con"> <img class="lazy" data-src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/FORBES.png" alt="Forbes" title="Forbes Magazine"></div>
 										</div>
 									</div>
 									<div class="media-con">
 										<div class="media-box">
-											<div class="inner-con"> <img class="lazy" data-src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/Hospital-Systems-02.png" alt="77 Hospital Systems"></div>
+											<div class="inner-con"> <img class="lazy" data-src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/the-tennesseean-150x150.png" alt="Tennessean" title="Tennessean Newspaper"></div>
 										</div>
 									</div>
 									<div class="media-con">
 										<div class="media-box">
-											<div class="inner-con"> <img class="lazy" data-src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/Military-Orgs-02.png" alt="24 Military Bases and Vetran Organizations"></div>
+											<div class="inner-con"> <img class="lazy" data-src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/ref-logos/the-fix-150x150.png" alt="The Fix - Top 10 Rehabs" title="The Fix - Top 10 Rehabs"></div>
 										</div>
 									</div>
 								</div>
@@ -289,134 +301,65 @@ get_header();
 					</div>
 					<div class="col-lg-6 col-sm-12 facility-photos">
 						<img data-src="/wp-content/themes/journeyPure/assets/img/rehab-outpatient-collage-2020.png" class="lazy" alt="Beautiful, clean indoors, plenty of outdoor space"/>
-						<img data-src="/wp-content/uploads/2020/01/journeypure-rehab-facility-collage.jpg" class="mobile-only lazy" alt="Ocean and river views"/>
 					</div>
 				</div>
 			</div>
 		</section>
-		
 		<section class="block-3">
-			<div class="container">
-			
-			
-				<div class="heading">
-					<h5 class="h1">Why Treatment Here Works</h5>
-				</div>
-						<h3>Even if you've been to dozens of other facilities before, the treatment here is different.  We set industry standards and hold ourselves accountable for your long-term success.</h3>
-				<div class="d-flex">
-					<div class="p-2">
-						<div class="row why-point">
-							<div class="col-lg-1">
-								<i class="fas fa-microscope"></i>
-							</div>
-							<div class="col-lg-11">
-								<div class="h5">Evidence-Based Treatments</div>
-								<p>All good treatment centers combine medical care, holistic healing and intense daily therapies. Our success rates are better because of how we execute and refine these methods.  Not only do we follow the <b>latest advances in addiction science</b>, but the research we publish is often leading the charge.</p>
-							</div>	
-						</div>
-						<div class="row why-point">
-							<div class="col-lg-1">
-								<i class="fas fa-file-medical-alt"></i>
-							</div>
-							<div class="col-lg-11">
-								<div class="h5">Personalized Plans</div>
-								<p>These issues are personal. You need access to the specific tools that <b>maximize your time here</b>. From virtual-reality therapy for combat veterans to imago marriage counseling, we'll do what it takes to help you get healthy (and stay healthy).</p>
-							</div>	
-						</div>
-					</div>
-					<div class="ml-auto p-2">
-						<div class="row why-point">
-							<div class="col-lg-1">
-								<i class="fas fa-user-md"></i>
-							</div>
-							<div class="col-lg-11">
-								<div class="h5">World-Renowned Experts</div>
-								<p>We've built a reputation over the last decade that attracts the county's leading addiction doctors, therapists and researchers. If you've sought treatment before, you know how critical it is to get <b>individualized attention from experienced professionals</b> who actually care.</p>
-							</div>	
-						</div>
-						<div class="row why-point">
-							<div class="col-lg-1">
-								<i class="fas fa-hands-helping"></i>
-							</div>
-							<div class="col-lg-11">
-								<div class="h5">Active Accountability</div>
-								<p>Your Accountability Coach can be reached 24/7 through the alumni app. They've been where you are and can show you how to stay on track. The app also has an 11-modual self-help course and gives you <b>real rewards for making healthy choices</b>. </p>
-							</div>	
-						</div>
-					</div>
-					
-				</div>					
-										
-				</div>
-		</section>
-		<section class="review-section">
-			<div class="container">
-				<div class="parent">
-					<div class="content-container-left">
-						<div class="details">
-							<h5 class="h1">The Reviews</h5>
-							<div class="tallies">
-								<span class="avg display-4">4.8</span> ,
-								<data class="cap" value="5"> 5</data>
-							</div>
-							<div class="stars">
-								<?php for($i=0; $i < 5; $i++): ?>
-									<i class="fas fa-star"></i>
-								<?php endfor; ?>
-							</div>
-							<div class="sub-text">
-								<p>Average Rating</p>
-								<p class="review-count">
-									<data value="<?php echo $Homepage->reviewTotal; ?>">438</data>
-									Reviews
-								</p>
-								<p class="link post-review-link" data-toggle="modal" data-target="#leave-a-review">Leave a Review</p>
-							</div>
-						</div>
-					</div>
-					<div class="content-container-right">
-						<div class="review-slide-container <?php echo (count($Homepage->reviews) == 1) ? ' pb-5' : ''; ?>" >
-							<div class="review-slide" data-slick='{"slidesToShow": 1}' role="toolbar">
-								<?php foreach ($Homepage->reviews as $reviews) :   ?>
-									<div class="card">
-										<div class="card-body">
-											<div class="author-info">
-												<div class="row">
-													<div class="col-md-auto align-self-center">
-														<img class="lazy" data-src="<?php echo $reviews->photo['image']; ?>" alt="<?php echo $reviews->photo['alt']; ?>">
-													</div>
-													<div class="col-md-auto align-self-center">
-														<h5 class="card-title"><?php echo $reviews->heading; ?></h5>
-														<div class="stars">
-															<?php for($i=0; $i < $reviews->star_rating; $i++): ?>
-																<i class="fas fa-star"></i>
-															<?php endfor; ?>
-														</div>
-													</div>
-													<?php if(isset($reviews->source_image['image'])): ?>
-														<div class="review-logo">
-															<img class="source-img lazy" data-src="<?php echo $reviews->source_image['image']; ?>" alt="<?php echo $reviews->source_image['alt']; ?>">
-														</div>
-													<?php endif; ?>
-												</div>
-											</div>
-											<div class="review-text">
-												<?php echo $reviews->review_text; ?>
-											</div>
-										</div>
-									</div>
-								<?php endforeach; ?>
-							</div>
-							<div class="review-nav">
-								<p class="link see-less-btn">Previous</p>
-								<p class="link see-more-btn has-more"> More</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-								
-						<div class="bio-default container">
+      <div class="container">
+        <div class="heading">
+          <h5 class="h1">Why Treatment Here Works</h5>
+        </div>
+        <h3>Even if you've been to dozens of other facilities before, the treatment here is different.  We set industry standards and hold ourselves accountable for your long-term success.</h3>
+        <div class="d-sm-flex">
+          <div class="d-sm-flex p-2 why-point">
+            <div class="p-2 why-icon">
+              <i class="fas fa-microscope"></i>
+            </div>
+            <div class="p-2">
+              <div class="h5">Evidence-Based Treatments</div>
+              <ul>
+                <li>All good treatment centers combine medical care, holistic healing and intense daily therapies. <b>Our success rates are better</b> because of how we execute and refine proven methods.</li>
+                <li>We incorporate the <b>latest advances in addiction science</b> and publish groundbreaking research with a focus on each individual success story.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="d-sm-flex p-2 ml-auto why-point">
+            <div class="p-2 why-icon"><i class="fas fa-hands-helping"></i></div>
+            <div class="p-2">
+              <div class="h5">Active Accountability</div>
+              <ul>
+                <li>Your Accountability Coach can be reached 24/7 through the alumni app – available to you forever for free. They've been where you are and can show you how to stay on track <b>long after treatment</b> here.</li>
+                <li>The app also has an 11-module self-help course and gives you <b>real rewards</b> for making healthy choices.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="d-sm-flex">
+          <div class="d-sm-flex p-2 why-point">
+            <div class="p-2 why-icon"><i class="fas fa-user-md"></i></div>
+            <div class="p-2">
+              <div class="h5">World-Renowned Experts</div>
+              <ul>
+                <li>Effective treatment addresses the wide range of issues that <b>hide behind alcohol and drugs</b> - like trauma and anxiety. It takes a team of specialists to attack the disease at all angles.</li>
+                <li>If you've sought treatment before, you know how critical it is to get <b>individualized attention</b> from experienced professionals who actually care.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="d-sm-flex p-2 ml-auto why-point">
+            <div class="p-2 why-icon"><i class="fas fa-file-medical-alt"></i></div>
+            <div class="p-2">
+              <div class="h5">Personalized Plans</div>
+              <ul>
+                <li>These issues are personal. Beyond cognitive behavior group and individual therapies, you need access to specific tools that <b>maximize your time here</b>. </li>
+                <li>From virtual-reality therapy for combat veterans to imago marriage counseling, we'll <b>do what it takes</b> to help you get healthy (and stay healthy).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+	  <div class="bio-default container">
 							<div class="row no-gutters">
 								<?php foreach ($Homepage->bios as $bio): ?>
 									<?php
@@ -430,8 +373,7 @@ get_header();
 									?>
 									<div class="col-md-3">
 										<div class="bio">
-											<figure class="lazy" data-src="<?php echo $bio->photo['image']; ?>">
-											</figure>
+											<img src="<?php echo $bio->photo['image']; ?>" />
 											<?php if($bio->sober_since): ?>
 												<div data-like-object="<?php echo $likeIdentifier; ?>" class="like-button"  data-placement="top" data-toggle="tooltip" <?php echo ($Homepage->isLikedBySession($likeIdentifier)) ? 'title="Already liked"' : 'title="Do you like?"'; ?>>
 													<i class="fas fa-thumbs-up"></i>
@@ -447,29 +389,211 @@ get_header();
 								<?php endforeach; ?>
 							</div>
 						</div>
-					
-		</section>
-		
-		<div class="call-text">
-			<div class="row">
-				<div class="col-lg-6">
-					<img src="/wp-content/themes/journeyPure/assets/img/call-cta.jpg" />
+
+    </section>
+
+
+	<section class="review-section">
+		<div class="container">
+			<h2 class="h1 text-center">You can do this!</h2>
+			<h3 class="text-center">Whether Journeypure is your first (and last) treatment expereince, or you've spent decades in and out of other facilities...here's proof that you can feel better. There's no shame in getting help.</h3>
+			<div class="parent">
+				<div class="content-container-left">
+					<div class="details">
+						<h5 class="video-ctas-title text-center">Video Stories</h5>
+						<!-- Review > Video CTAs -->
+						<div class="video-ctas text-center">
+							<!-- Review > Video CTA -->
+							<a class="video-cta" data-toggle="modal" data-target="#video-cta-1">
+								<!-- Image Wrapper -->
+								<div class="video-cta-image-wrapper">
+									<!-- Image -->
+									<img class="video-cta-image lazy" src="https://journeypure.com/wp-content/uploads/2020/05/jared-video-review.jpg" alt="Jared Lanpher">
+									<!-- Icon -->
+									<span class="fas fa-play-circle"></span>
+								</div>
+								<!-- Title -->
+								<h6 class="video-cta-title">Jared L.</h6>
+							</a>
+							<!-- Review > Video CTA -->
+							<a class="video-cta" data-toggle="modal" data-target="#video-cta-2">
+								<!-- Image Wrapper -->
+								<div class="video-cta-image-wrapper">
+									<!-- Image -->
+									<img class="video-cta-image lazy" src="https://journeypure.com/wp-content/uploads/2020/05/amber-video-review.jpg" alt="Amber F.">
+									<!-- Icon -->
+									<span class="fas fa-play-circle"></span>
+								</div>
+								<!-- Title -->
+								<h6 class="video-cta-title">Amber F.</h6>
+							</a>
+						</div>
+					</div>
 				</div>
-				<div class="col-lg-6 text-side">
-					<h5 class="h1">It's Time to Make a Change</h5>
-					<h3>The first step is to call. Even if you're not ready to commit, talk about what's going on with someone that's been there before.  You'll feel better after you call, I promise.</h3>
-					<p>If you decide at any point to come here, the process is simple:</p>
-					<ul><li>Your insurance policy is checked.</li> 
-					<li>You're scheduled for a day and time to come in to the center.</li>
-					<li>We meet you at the airport if you're flying here. </li>
-					<li>You're welcomed with warmth and acceptence.</li></ul>
-					
-					<span class="note-cta"><i class="fas fa-phone"></i> <?php echo get_option('defaultPhone'); ?></span>
+				<div class="content-container-right">
+					<div class="review-slide-container <?php echo (count($Homepage->reviews) == 1) ? ' pb-5' : ''; ?>" >
+						<div class="review-slide" data-slick='{"slidesToShow": 1}' role="toolbar">
+							<?php foreach ($Homepage->reviews as $reviews) :   ?>
+								<div class="card">
+									<div class="card-body">
+										<div class="author-info">
+											<div class="row">
+												<div class="col-md-auto align-self-center">
+													<img class="lazy" data-src="<?php echo $reviews->photo['image']; ?>" alt="<?php echo $reviews->photo['alt']; ?>">
+												</div>
+												<div class="col-md-auto align-self-center">
+													<h5 class="card-title"><?php echo $reviews->heading; ?></h5>
+													<div class="stars">
+														<?php for($i=0; $i < $reviews->star_rating; $i++): ?>
+															<i class="fas fa-star"></i>
+														<?php endfor; ?>
+													</div>
+												</div>
+												<?php if(isset($reviews->source_image['image'])): ?>
+													<div class="review-logo">
+														<img class="source-img lazy" data-src="<?php echo $reviews->source_image['image']; ?>" alt="<?php echo $reviews->source_image['alt']; ?>">
+													</div>
+												<?php endif; ?>
+											</div>
+										</div>
+										<div class="review-text">
+											<?php echo $reviews->review_text; ?>
+										</div>
+									</div>
+								</div>
+							<?php endforeach; ?>
+						</div>
+						<div class="review-nav">
+							<p class="link see-less-btn">Previous</p>
+							<p class="link see-more-btn has-more"> Read More</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-		
-		
+	</section>
+
+
+<section class="design-process-section" id="process-tab">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <!-- design process steps-->
+        <!-- Nav tabs -->
+		    <h5 class="h1">The Process is Simple</h5>
+        <ul class="nav nav-tabs process-model more-icon-preocess" role="tablist">
+          <li role="presentation" class="active">
+            <a href="#discover" aria-controls="discover" role="tab" data-toggle="tab"><i class="fas fa-mobile-alt" aria-hidden="true"></i>
+              <p>1. Call</p>
+            </a>
+          </li>
+          <li role="presentation">
+            <a href="#strategy" aria-controls="strategy" role="tab" data-toggle="tab"><i class="fas fa-id-card" aria-hidden="true"></i>
+              <p>2. Insurance</p>
+            </a>
+          </li>
+          <li role="presentation">
+            <a href="#optimization" aria-controls="optimization" role="tab" data-toggle="tab"><i class="fas fa-calendar" aria-hidden="true"></i>
+              <p>3. Start</p>
+            </a>
+          </li>
+          <li role="presentation">
+            <a href="#reporting" aria-controls="reporting" role="tab" data-toggle="tab"><i class="fas fa-diagnoses" aria-hidden="true"></i>
+              <p>4. Heal</p>
+            </a>
+          </li>
+        </ul>
+        <!-- end design process steps-->
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="discover">
+            <div class="design-process-content">
+              <div class="row">
+                <div class="col-md-6 order-md-2">
+                  <div class="lazy" data-src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg">
+                    <img src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg" alt="Call JourneyPure">
+                  </div>
+                </div>
+                <div class="col-md-6 order-md-1">
+                  <div class="design-process-content-inner">
+                    <h5 class="semi-bold">1. Make The Call</h5>
+                    <p>Even if you're not ready to commit to JourneyPure or not sure if you want treatment at all, talk about what's going on with someone that's been there before. You'll feel better and more informed after you call, I promise.</p>
+                    <div class="note-cta"><i class="fas fa-phone"></i> <?php echo get_option('defaultPhone'); ?></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="strategy">
+            <div class="design-process-content">
+              <div class="row">
+                <!--<div class="col-md-6 order-md-2">
+                  <div class="lazy" data-src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg">
+                    <img src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg" alt="Call JourneyPure">
+                  </div>
+                </div>
+                <div class="col-md-6 order-md-1">-->
+                <div class="col-sm-12">
+                  <div class="design-process-content-inner">
+                    <h5 class="semi-bold">2. Discuss Any Costs</h5>
+                    <p>Insurance covers the majority of your cost here! How much you owe depends on deductable and co-insurance rates set by each policy. Don't worry, we'll call your insruance company, then explain the details of your specific insurance policy. You can privately <a data-toggle="modal" data-target="#main-insurance-form" href="#">submit insurance information online</a>.</p>
+                    <p>(If you don't have insurance, you still have options. We can talk about that too.)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="optimization">
+            <div class="design-process-content">
+              <div class="row">
+                <!--<div class="col-md-6 order-md-2">
+                  <div class="lazy" data-src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg">
+                    <img src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg" alt="Call JourneyPure">
+                  </div>
+                </div>
+                <div class="col-md-6 order-md-1">-->
+                <div class="col-sm-12">
+                  <div class="design-process-content-inner">
+                    <h5 class="semi-bold">3. Start Treatment</h5>
+                    <p>Our locations often operate on waiting lists, but we're as accommodating as possible with the schedule. It helps to call early in your decision process and come in while you're still motivated.</p>
+			              <p>The first thing you notice when you walk in to the <a href="/locations/florida/">Florida</a>, <a href="/locations/kentucky/">Kentucky</a>, <a href="/locations/tennessee/">Murfreesboro</a> or <a href="/locations/knoxville/">Knoxville</a> rehabs and Outpatient or <a href="/suboxone-clinics/">Suboxone Clinics</a> is an overwhelming sense of hope and compassion. You're surrounded by people that actually understand what you're going through.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="reporting">
+            <div class="design-process-content">
+              <div class="row">
+                <!--<div class="col-md-6 order-md-2">
+                  <div class="lazy" data-src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg">
+                    <img src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg" alt="Call JourneyPure">
+                  </div>
+                </div>
+                <div class="col-md-6 order-md-1">-->
+                <div class="col-sm-12">
+                  <div class="design-process-content-inner">
+                    <h5>4. The Treatment Process</h5>
+                    <p>Intensive cognitive-behavioral therapies aren't as boring as they sound.  You tackle issues hiding behind drugs and alcohol like trauma, depression or anxiety. And, you graduate feeling better than ever with a plan and a coach to help you stay on track long after treatment ends.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
 		<section class="faqs">
 			<div class="container">
 				<h5 class="h1 text-center">What's holding you back?</h5>
@@ -496,37 +620,6 @@ get_header();
 					<?php endforeach; ?>
 				</div>
 		</section>
-		<div class="ask-a-question">
-				<div class="container">
-						<h3 clss="h1">Still have questions?</h3>
-
-						<div class="row">
-    <div class="col-xs-6 col-md-3 text-center"><a href="/appointment" class="track" rel="contact endcap: appointment funnel: book free appointment">
-  		<i class="fas fa-phone"></i> <h4 class="oswald-med-uppercase jc-blue-dark">Book Free Appointment</h4></a>
-    </div>
-
-    <div class="col-xs-6 col-md-3 text-center jc-blue-dark endcap-wrap">
-      <img alt="" src="https://www.jennycraig.com/themes/custom/jenny_bootstrap/images/endcap-icon-booking.png" /><h4 class="oswald-med-uppercase jc-blue-dark tablet-desktop">Call us: <span class="phone attributionNumber"><a href="tel:+1-877-260-4880" class="track jc-blue-dark" rel="contact endcap: phone: desktop number">877-260-4880</a></span></h4>
-      <h4 class="oswald-med-uppercase jc-blue-dark mobile-only"><span class="phone attributionNumber"><a href="tel:+1-877-260-4880" class="track jc-blue-dark" rel="contact endcap: phone: mobile give us a call">877-260-4880</a></span></h4>
-    </div>
-
-    <div class="col-xs-6 col-md-3 text-center jc-blue-dark endcap-wrap">
-      <a href="sms:7602390029" class="track" rel="contact endcap: text 760-239-0029"><img data-src="/themes/custom/jenny_bootstrap/images/endcap-icon-mobile.png" class=" lazyloaded img-center" alt="Text Us Icon" src="/themes/custom/jenny_bootstrap/images/endcap-icon-mobile.png"></a>
-      <h4 class="oswald-med-uppercase jc-blue-dark tablet-desktop"><a href="sms:7602390029" class="track jc-blue-dark" rel="contact endcap: text 760-239-0029">Text Us: 760-239-0029</a> <a id="myPop" data-title="X" tabindex="0" data-html="true" data-container="body" data-toggle="popover" data-placement="auto top" data-trigger="focus" data-content="By texting the number indicated above, you authorize Jenny Craig to send informational and marketing calls or text messages to the phone number you text from. Standard message and data rates may apply. Messages may be sent from an automated system. Consent is not required to receive any good or service. Text STOP to 760-239-0029 to opt out.  View our privacy policy at www.jennycraig.com/privacy for more information." role="button" data-original-title="" title=""><span class="glyphicon glyphicon-info-sign jc-blue-dark" aria-hidden="true"></span></a></h4>
-      <h4 class="oswald-med-uppercase jc-blue-dark mobile-only"><a href="sms:7602390029" class="track jc-blue-dark" rel="contact endcap: text 760-239-0029">Send us a text</a> &nbsp;&nbsp;<a id="myPop" data-title="X" tabindex="0" data-html="true" data-container="body" data-toggle="popover" data-placement="auto top" data-trigger="focus" data-content="By texting the number indicated above, you authorize Jenny Craig to send informational and marketing calls or text messages to the phone number you text from. Standard message and data rates may apply. Messages may be sent from an automated system. Consent is not required to receive any good or service. Text STOP to 760-239-0029 to opt out.  View our privacy policy at www.jennycraig.com/privacy for more information." role="button" data-original-title="" title=""><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></a></h4>
-    </div>
-    
-    <div class="col-xs-6 col-md-3 text-center endcap-wrap">
-      <a href="/faqs" class="track" rel="contact endcap: FAQs"><img data-src="/themes/custom/jenny_bootstrap/images/endcap-icon-question.png" class=" lazyloaded img-center" alt="FAQ Icon" src="/themes/custom/jenny_bootstrap/images/endcap-icon-question.png"></a>
-      <h4 class="oswald-med-uppercase jc-blue-dark tablet-desktop"><a href="/faqs" class="track jc-blue-dark" rel="contact endcap: FAQ">FAQ</a></h4>
-      <h4 class="oswald-med-uppercase jc-blue-dark mobile-only"><a href="/faqs" class="track jc-blue-dark" rel="contact endcap: FAQ">FAQ</a></h4>
-    </div>
-  </div>
-				
-		
-			</div>
-			</div>
-			</div>
 	</main>
 </div>
 <?php get_footer(); ?>

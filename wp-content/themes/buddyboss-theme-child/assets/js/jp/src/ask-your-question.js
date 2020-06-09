@@ -1,12 +1,15 @@
-$(document).ready(function () {
+jQuery(document).ready(function () {
+    window.jQueryJP = jQuery;
     askYourQuestion();
+    activationPage();
 });
 
 function askYourQuestion() {
     let errors = [];
 
-    if($('.f-ask-your-question').length > 0){
+    if(jQuery('.f-ask-your-question').length > 0){
         const formClass = '.f-ask-your-question';
+
         const obj = {
             btn : formClass + ' .submit-btn',
             questionErrorBox : formClass + ' .error.question',
@@ -19,15 +22,17 @@ function askYourQuestion() {
             detailsIsChecked: false,
             error : false
         };
+
         // See more button action  script
-        $(obj.seeDetailsBtn + ' [data-action-type]').on('click', function (e) {
-            const $this = $(this);
+
+        jQuery(obj.seeDetailsBtn + ' [data-action-type]').on('click', function (e) {
+            const $this = jQuery(this);
             const $actionType = $this.data('action-type');
 
             function detailsIsChecked () {
-
                 if($actionType === 'details-label'){
                     e.preventDefault();
+
                     if($this.parent().find('[type="checkbox"]').is(':checked')){
                         $this.parent().find('[type="checkbox"]').prop('checked', false);
                         return false;
@@ -47,23 +52,21 @@ function askYourQuestion() {
             obj.detailsIsChecked = detailsIsChecked();
 
             // Show more if details is checked
+
             if(obj.detailsIsChecked){
-                $(obj.questionDetailsBox).stop().slideDown();
+                jQuery(obj.questionDetailsBox).stop().slideDown();
             }else{
-                $(obj.questionDetailsBox).stop().slideUp();
+                jQuery(obj.questionDetailsBox).stop().slideUp();
                 obj.error = false;
             }
-
         });
 
         keyUpValidation(obj.question,obj.questionErrorBox,'question');
         keyUpValidation(obj.questionDetails,obj.detailsErrorBox,'details');
+
         function keyUpValidation(objElement,questionErrorBox,errBoxClass){
-            $(objElement).on('keyup', function () {
-
-
-
-                let questionValue = $(this).val();
+            jQuery(objElement).on('keyup', function () {
+                let questionValue = jQuery(this).val();
                 let limit;
 
                 if(errBoxClass === "question"){
@@ -71,127 +74,166 @@ function askYourQuestion() {
                 }else if(errBoxClass === "details"){
                     limit = 300
                 }
+
                 if(questionValue.length > limit){
                     let errorHtml = "<ul class='error-live-set "+errBoxClass+"'>";
-                    if($('.error-live-set.' + errBoxClass).length < 1){
-                        $(objElement).css({'background-color': "#ffe6ea"});
+
+                    if(jQuery('.error-live-set.' + errBoxClass).length < 1){
+                        jQuery(objElement).css({'background-color': "#ffe6ea"});
+
                         setTimeout(function () {
-                            $(objElement).css({'background-color': "white"});
+                            jQuery(objElement).css({'background-color': "white"});
                         },3000);
 
-                        errorHtml += $(objElement).data('error-msg-limiter');
-
+                        errorHtml += jQuery(objElement).data('error-msg-limiter');
                         errorHtml += "</ul>";
-                        $(questionErrorBox).append(errorHtml);
-                        $(questionErrorBox).slideDown();
+
+                        jQuery(questionErrorBox).append(errorHtml);
+                        jQuery(questionErrorBox).slideDown();
                     }else{
-                        $(questionErrorBox).slideDown();
+                        jQuery(questionErrorBox).slideDown();
                     }
 
                     obj.error = true;
                 }else {
-                    if($('.error-live-set.' + errBoxClass).length > 0){
-                        $(objElement).css({'background-color': "white"});
-                        $('.error-live-set.' + errBoxClass).remove();
+                    if(jQuery('.error-live-set.' + errBoxClass).length > 0){
+                        jQuery(objElement).css({'background-color': "white"});
+                        jQuery('.error-live-set.' + errBoxClass).remove();
                     }
-                    $(questionErrorBox).slideUp();
+
+                    jQuery(questionErrorBox).slideUp();
                     obj.error = false;
                 }
-
             });
         }
-      
-        //Process submit
-        $(formClass).on('submit', function (e) {
+
+        // Process submit
+
+        jQuery(formClass).on('submit', function (e) {
             e.preventDefault();
 
-            const question = $(obj.question).val();
+            const question = jQuery(obj.question).val();
 
             if(!obj.error){
-                $.ajax({
+                jQuery.ajax({
                     url: ajaxurl,
+
                     data: {
                         'action': 'ask_question_ajax_call',
                         'question': question,
-                        'textareaMaxErrMsgData': $(formClass + ' textarea.question').data('error-msg-limiter'),
-                        'detailsMaxErrMsgData': $(formClass + ' textarea.details').data('error-msg-limiter'),
+                        'textareaMaxErrMsgData': jQuery(formClass + ' textarea.question').data('error-msg-limiter'),
+                        'detailsMaxErrMsgData': jQuery(formClass + ' textarea.details').data('error-msg-limiter'),
                         'showDetails' : obj.detailsIsChecked,
-                        'details': $(obj.questionDetails).val()
+                        'details': jQuery(obj.questionDetails).val()
                     },
+
                     success:function(data) {
                         let returnData = JSON.parse(data);
 
                         // Remove existing errors
-                        if($('.error-live-set.question').length > 0){
 
-                            $('.error-live-set.question').remove();
+                        if(jQuery('.error-live-set.question').length > 0){
+                            jQuery('.error-live-set.question').remove();
                         }
-                        if($('.error-live-set.details').length > 0){
 
-                            $('.error-live-set.details').remove();
+                        if(jQuery('.error-live-set.details').length > 0){
+                            jQuery('.error-live-set.details').remove();
                         }
-                        // question error section
+
+                        // Question error section
+
                         if(returnData.question.length > 0){
                             let errorHtml = "<ul class='error-live-set question'>";
 
-                            $(obj.question).css({'background-color': "#ffe6ea"});
+                            jQuery(obj.question).css({'background-color': "#ffe6ea"});
+
                             setTimeout(function () {
-                                $(obj.question).css({'background-color': "white"});
+                                jQuery(obj.question).css({'background-color': "white"});
                             },3000);
 
-                            $.each(returnData.question, function(key, value) {
+                            jQuery.each(returnData.question, function(key, value) {
                                 errorHtml += "<li>" + value + "</li>";
                             });
 
                             errorHtml += "</ul>";
-                            $(obj.questionErrorBox).append(errorHtml);
-                            $(obj.questionErrorBox).slideDown();
+
+                            jQuery(obj.questionErrorBox).append(errorHtml);
+                            jQuery(obj.questionErrorBox).slideDown();
                         }else{
-                            $(obj.questionErrorBox).slideUp();
+                            jQuery(obj.questionErrorBox).slideUp();
                         }
 
                         // Details error section
+
                         if(typeof returnData.showDetails != "undefined"){
                             if(returnData.showDetails.length > 0){
                                 let errorHtml = "<ul class='error-live-set details'>";
 
-                                $(obj.questionDetails).css({'background-color': "#ffe6ea"});
+                                jQuery(obj.questionDetails).css({'background-color': "#ffe6ea"});
+
                                 setTimeout(function () {
-                                    $(obj.questionDetails).css({'background-color': "white"});
+                                    jQuery(obj.questionDetails).css({'background-color': "white"});
                                 },3000);
 
-                                $.each(returnData.showDetails, function(key, value) {
+                                jQuery.each(returnData.showDetails, function(key, value) {
                                     errorHtml += "<li>" + value + "</li>";
                                 });
 
                                 errorHtml += "</ul>";
-                                $(obj.detailsErrorBox).append(errorHtml);
-                                $(obj.detailsErrorBox).slideDown();
+                                jQuery(obj.detailsErrorBox).append(errorHtml);
+                                jQuery(obj.detailsErrorBox).slideDown();
                             }else{
-                                $(obj.detailsErrorBox).slideUp();
+                                jQuery(obj.detailsErrorBox).slideUp();
                             }
-
                         }
 
                         if(returnData.success){
-                            $(obj.question).val('');
-                            $(obj.questionDetails).val('');
-                            $(obj.successMsgBox).slideDown();
+                            jQuery(obj.question).val('');
+                            jQuery(obj.questionDetails).val('');
 
-                            if(!returnData.loggedIn){
-                                window.location.href = "/ask-our-doctors/register";
+                            if (!returnData.loggedIn) {
+                                // window.location.href = "/ask-our-doctors/register";
+
+                                const html = `
+                                    <div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-labelledby="Register" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="bp-feedback error question" style="border-bottom: 1px solid #d33; margin: 0;">
+                                                    <span class="bp-icon" aria-hidden="true"></span>
+                                                    <div style="padding: 8px 5px;">If you typed a question, it’s saved, but will only submit after you sign up.</div>
+                                                </div>
+                                                <div class="modal-body" style="margin: 0; padding: 0;">
+                                                    <iframe src="/ask-our-doctors/register?modal=1&question=${returnData.postId}" frameborder="0" allowtransparency="true" style="width: 100%; height: 800px;"></iframe>
+                                                </div>
+                                            </div>
+                                            <!-- /.modal-content -->
+                                        </div>
+                                        <!-- /.modal-dialog -->
+                                    </div>
+                                    <!-- /.modal -->
+                                `;
+
+                                jQuery('body').append(html);
+                                jQueryJP("#register-modal").modal();
+                            } else {
+                                jQuery(obj.successMsgBox).slideDown();
                             }
                         }
                     },
+
                     error: function(errorThrown){
                         console.log(errorThrown);
                     }
                 });
             }
 
-
             return false;
-
         });
+    }
+}
+
+function activationPage() {
+    if (jQuery('#activation-page-modal').length > 0) {
+        jQueryJP('#activation-page-modal').modal('show');
     }
 }

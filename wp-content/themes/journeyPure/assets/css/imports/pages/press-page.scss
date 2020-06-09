@@ -1,0 +1,429 @@
+#press-page{
+
+  // Import above fold  styles that are global
+  @import "../page-parts/above-fold";
+  
+  .press-contact-box{
+  font-family:"Montserrat",sans-serif !important;
+  color:red !important;
+  }
+  
+  
+  .bio-section{
+	margin: $xl-space 0 $xl-space;
+
+	@media(max-width: 767px){
+	  margin: 130px 0 0;
+
+	  .fa-li{
+		display: none;
+	  }
+
+	  .main-controls{
+		 display: none;
+	  }
+	}
+	.heading,.subheading{
+	  text-align: center;
+	  max-width: $lg-width;
+	  margin: auto;
+	}
+	.slick-disabled {
+	  opacity: 0;
+	}
+
+	.about-bio-slider{
+	  padding-top: $lg-space;
+
+	  @media(min-width: 767px){
+		visibility: hidden;
+	  }
+
+
+
+	  .img-box{
+		margin: -27px;
+		padding: 20px;
+	  }
+	  .card {
+		border:none;
+	  }
+	  .header {
+		text-align: center;
+		margin: 0 -20px;
+		padding: 5px 0;
+		hr {
+			background: #0033a1;
+			height: 4px;
+			width: 60px;
+		}
+	  }
+
+	  .slick-track {
+		display: flex !important;
+	  }
+
+	  .slick-slide {
+		border-radius: 15px 15px 0 0;
+		height: inherit !important;
+		overflow: hidden;
+
+	  }
+	  .slick-slide {
+		margin: 0 $md-space;
+	  }
+	  .slick-list {
+		margin: 0 -($md-space);
+	  }
+	  &.slick-initialized {
+		visibility: visible;
+		opacity: 1;
+		font-family: $heading-font;
+	  }
+	  .card{
+		.bios{
+
+		  .img{
+			background:  no-repeat center;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			width:100px;
+			height:100px;
+			border-radius: 50%;
+			display: block;
+			margin: 5px auto $lg-space ;
+		  }
+		  .name-text {
+			font-weight:bold;
+			color:black;
+		  }
+		  .bio-long {
+			    margin-top: 5px;
+				padding: 0;
+		  }
+		  .text{
+			padding-bottom: 0;
+			font-family: "Montserrat",sans-serif;
+			span {
+			  font-size: 14px;
+			  font-weight:normal;
+			}
+
+		  }
+		  .name-text {
+			color: black;
+			font-weight: bold;
+			span {
+			  font-size: 14px;
+			  font-weight: normal;
+			  color: #333;
+			}
+		  }
+
+		  .fa-ul{
+			margin-top: $lg-space;
+			margin-left:25px;
+			i{
+			  color: $secondary;
+			}
+		  }
+
+		  .bio-new-mentions{
+
+			.slick-track {
+			  display: block !important;
+
+			}
+			.slick-slide {
+			  border:none;
+			  border-radius:0;
+			  height: auto !important;
+			  margin: 0;
+			}
+			.slick-list {
+			  margin: 0;
+			}
+			.mention{
+			  margin-bottom: 3px;
+			  font-size: 14px;
+			  background: $background-color;
+			  padding: 15px;
+
+			  a{
+				color: $main-font;
+				font-weight: normal;
+				font-style: italic;
+			  }
+			  .content{
+				font-style: inherit;
+			  }
+			}
+		  }
+		  .see-less-mentions,.see-less-mentions {
+			margin-bottom: 10px;
+			font-family: $heading-font;
+			padding-bottom: 0;
+			&.slick-disabled {
+			  opacity: 0;
+			}
+		  }
+		}
+	  }
+
+	}
+
+
+	.see-more-btn {
+	  font-family: "Montserrat",sans-serif;
+	}
+	
+	
+  }
+  .page-quote{
+	padding: $lg-space 0 $xl-space;
+	text-align: center;
+	color: $primary !important;
+
+
+	.header{
+	  margin: 0 auto $lg-space auto;
+	  max-width: $lg-width;
+	  font-style:italic;
+	  .heading{
+		@extend .page-heading;
+	  }
+	  .lead{
+		@extend .h5;
+		color: $main-gray;
+		
+	  }
+	  
+	}
+	
+	.media-body  {
+	margin-top: $lg-space;
+	flex:none;
+	     h5 {
+		    font-size:17px;
+			color:$main-gray;
+			line-height:0;
+			margin-bottom:13px;
+		 }
+		 p {
+		    font-family: $heading-font;
+			color: $main-gray;
+		 }
+	  }
+
+	.media{
+	  @extend .h5;
+	  text-align: left;
+	  img{
+		width: 75px;
+		height: 75px;
+		border-radius:50%;
+	  }
+	  a.btn{
+		display: inline-block;
+		margin-right: 5px;
+	  }
+	}
+  }
+  .media-section{
+	margin: $xl-space 0;
+
+	.media-con{
+	  margin-top: $lg-space;
+	  .media-box {
+		background: #f6f7f9;
+		height: auto;
+		margin: 0 $md-space;
+		align-items: center;
+		justify-content: center;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		padding: $lg-space;
+
+		img {
+		  width: 100%;
+		  max-width: 71px;
+		  display: block;
+		  margin: auto;
+		  -webkit-filter: grayscale(100%);
+		  filter: grayscale(100%);
+		}
+	  }
+	}
+
+	.controls{
+	  padding: $md-space;
+
+	  .slick-disabled {
+		opacity: 0;
+	  }
+	}
+  }
+  .block-4{
+	padding: $xl-space 0;
+	background-color: $primary;
+	.heading{
+	  text-align: center;
+	  color:white;
+	}
+	.card {
+	border-radius:0 0 3px 3px !important;
+	border:none;
+	    box-shadow: 0px 2px 4px rgba(0,0,0,.18);
+	}
+h3 {
+	  margin: 0 auto $xl-space;
+	  }
+	.card-deck{
+	  @media  (max-width: 1200px) and (min-width: 550px) {
+		display: block;
+	  }
+	  .card{
+		@media (max-width: 1200px) and (min-width: 550px) {
+		  max-width: 500px;
+		  display: block;
+		  clear: both;
+		  margin: 0 auto $lg-space;
+		}
+		.card-img-top {
+		  width: 100%;
+		  height: 200px;
+		  object-fit: cover;
+		  border-top:8px solid $secondary;
+		  border-radius: 0;
+		}
+		.card-title{
+		  margin: 15px 0 35px;
+		}
+	  }
+
+	}
+	span {
+		text-align: center;
+		color: #e0e7f5;
+		margin-top: 25px;
+		display: block;
+	}
+	
+  }
+  .insurance-section{
+	padding: $lg-space 0 15px;
+	background:white;
+	background-image: url(/wp-content/themes/journeyPure/assets/img/background-diagmonds.png);
+	box-shadow: 0px 2px 4px rgba(0,0,0,.18);
+	border-top: 8px solid $primary;
+  }
+  .ethics {
+	    background-image: url(/wp-content/themes/journeyPure/assets/img/background-diagmonds.png);
+		border-top:8px solid $main-gray;
+	.container {
+		margin: 0 auto;
+		max-width: 900px;
+		padding: $xl-space 14px;
+			}
+		.h1 {
+			text-align:center;
+			margin-bottom: $lg-space;
+		}
+	}
+	  .block-3{
+	background:  no-repeat center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding: $xl-space;
+	
+	.card-body {
+	   padding: 0;
+	}
+	
+	.fab {
+	    font-family: "Font Awesome 5 Brands";
+    padding-left: 13px;
+    font-size: 20px;
+    vertical-align: middle;
+	display: inline;
+	}
+
+	ul {
+    font-family: $heading-style-1;
+    font-size: 17px;
+	    list-style-type: none;
+    padding-left: 0;
+}
+	
+	li {
+	
+	margin-top:10px;
+    padding: 17px;
+	background:$background-color;
+	border-radius:3px;
+	}
+	hr {
+	margin: 15px 0;
+    width: 44px;
+    border: 0;
+    border-top: 4px solid $primary;
+	}
+
+	@media (max-width: 767px){
+	  padding: $xl-space 0 $lg-space;
+	}
+
+	.heading{
+	  text-align: center;
+	  display: block;
+	  margin-bottom: $xl-space;
+
+	  @media (max-width: 767px){
+		margin-bottom: $md-space;
+	  }
+	}
+	.content-section{
+	  &.top-xl{
+		@media (max-width: 767px){
+		  margin-top: $md-space;
+		}
+	  }
+	}
+	img{
+	  &.featured{
+		display: block;
+		margin: 5px auto $xl-space;
+		width: 100%;
+		    max-width: 566px;
+	  }
+	}
+	.mid-content{
+	  .box{
+		&.default{
+		  padding: $xl-space;
+
+		}
+	  }
+	}
+	.top-lg {
+	   display:none;
+	}
+	.card-header {
+	   font-size: 18px;
+       font-family: $heading-style-1;
+       padding: 26px;
+       font-weight: bold;
+	}
+	.card {
+	   box-shadow: 0 2px 6px 0 hsla(0,0%,0%,0.2);
+	   border:none;
+	  	width: 100%;
+	}
+  }
+}

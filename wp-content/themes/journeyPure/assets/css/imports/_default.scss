@@ -531,3 +531,16 @@ figure{
   }
 }
 
+/* New modal overlay */
+
+.modal-backdrop.show {
+    opacity: .2;
+}
+
+.modal-open > .main-wrapper > *:not(.modal),
+.modal-open > header {
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+/* /New modal overlay */

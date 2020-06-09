@@ -36,10 +36,10 @@ if(isset($Location)){
 			</div>
 			<div class="col-7 d-block d-md-block d-lg-none" id="mobile-element">
 				<div class="row no-gutters align-items-center">
-					<div class="col-10 mr-auto">
+					<!--<div class="col-10 mr-auto">
 						<button type="button" data-toggle="modal" data-target="#main-insurance-form" class="btn btn-outline-secondary"><i class="fas fa-id-card"></i> Check Insurance</button>
-					</div>
-					<div class="col-2">
+					</div>-->
+					<div class="col-12 text-right">
 						<figure class="mobile-trigger pull-right"></figure>
 					</div>
 				</div>
