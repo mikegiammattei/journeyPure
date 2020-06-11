@@ -477,7 +477,7 @@ $footerVersion = 2;
 <section class="design-process-section" id="process-tab">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12">
+      <div class="col-12">
         <!-- design process steps-->
         <!-- Nav tabs -->
 		    <h5 class="h1">The Process is Simple</h5>

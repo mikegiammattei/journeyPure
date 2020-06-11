@@ -317,14 +317,14 @@
 			</div>
 		</section>
 	<?php endif; ?>
-	
-	
-	
-	
+
+
+
+
 			<section class="design-process-section" id="process-tab">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12">
+      <div class="col-12">
         <!-- design process steps-->
         <!-- Nav tabs -->
 		    <h5 class="h1">The Process is Simple</h5>
@@ -432,10 +432,10 @@
     </div>
   </div>
 </section>
-	
-	
-	
-	
+
+
+
+
 	<section class="insurance-section">
 		<div class="container">
 			<?php $_inc->get_insurance_banner(); ?>
