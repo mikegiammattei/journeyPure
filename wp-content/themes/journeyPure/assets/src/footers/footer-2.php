@@ -44,10 +44,10 @@
 								<div class="row">
 									<div class="col-sm-4">
 										<p class="link-list-header">Rehab Locations</p>
-										<a href="/locations/florida/" class="font-weight-bold">Florida<span class="hide-for-tablet"> Rehab</span></a><br />
-										<a href="/locations/tennessee/" class="font-weight-bold">Tennessee<span class="hide-for-tablet"> Rehab</span></a><br />
-										<a href="/locations/kentucky/" class="font-weight-bold">Kentucky<span class="hide-for-tablet"> Rehab</span></a><br />
-										<a href="/locations/military-program/" class="font-weight-bold">Veteran<span class="hide-for-tablet"> Rehab</span></a>
+										<a href="/locations/florida/" class="font-weight-bold">Florida<span class="hide-for-md-only"> Rehab</span></a><br />
+										<a href="/locations/tennessee/" class="font-weight-bold">Tennessee<span class="hide-for-md-only"> Rehab</span></a><br />
+										<a href="/locations/kentucky/" class="font-weight-bold">Kentucky<span class="hide-for-md-only"> Rehab</span></a><br />
+										<a href="/locations/military-program/" class="font-weight-bold">Veteran<span class="hide-for-md-only"> Rehab</span></a>
 									</div>
 
 									<div class="col-sm-6">

@@ -20,6 +20,7 @@
 
 // Components
 @import "../default";
+@import "../components/visibility";
 @import "../components/header";
 @import "../components/footers/footer-main";
 @import "../components/footers/footer-2";
@@ -33,8 +34,12 @@
 @import "../components/main-insurance-form";
 @import "../components/modals/not-ready-modal";
 @import "../components/modals/exit-modal";
+@import "../components/jp-ol";
+@import "../components/ask-a-question";
+
 /** Pages using the slider: homepage */
 @import "../components/sliders/multi-gallery";
+
 /** Pages using the slider: homepage, single-location */
 @import "../components/sliders/review-default";
 
@@ -454,6 +459,3 @@ padding:0;
 }
 
 @import "homepage-2";
-
-// Components
-@import "../components/jp-ol";

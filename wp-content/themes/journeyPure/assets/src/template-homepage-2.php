@@ -154,7 +154,7 @@ $footerVersion = 2;
 
 					<div class="bio-slider row" >
 						<?php foreach ($Homepage->bioSection->bios as $bio): ?>
-							<div class="col-md-3 col-sm-4">
+							<div class="col-md-3 col-sm-4 <?php echo in_array( $bio->name, [ 'Dr. Timothy Gooden', 'Maria Matty' ] ) ? 'hide-for-xs-only' : ''; ?>">
 								<div class="card default border-0">
 									<div class="card-body  bios">
 										<div class="img lazy" data-src="<?php echo $bio->photo['image']; ?>"></div>
@@ -371,7 +371,7 @@ $footerVersion = 2;
 									$likeIdentifier = $bio->identifier;
 									$totalLikes  = $Homepage->setLikes($likeIdentifier);
 									?>
-									<div class="col-md-3">
+									<div class="col-md-3 <?php echo in_array( $bio->name, [ 'Caleb H.' ] ) ? 'hide-for-xs-only' : ''; ?>">
 										<div class="bio">
 											<img src="<?php echo $bio->photo['image']; ?>" />
 											<?php if($bio->sober_since): ?>
