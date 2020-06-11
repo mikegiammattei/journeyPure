@@ -23,7 +23,7 @@ $footerVersion = 2;
 		<?php $restApiPath = 'http://journeypure.net/rest-api'; ?>
 		<section class="above-fold">
 			<div class="default-container x-loc lazy" data-src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/tennessee-background.jpg">
-				<div>
+				<div class="background-fade">
 					<div class="content">
 						<h1 class="heading text-primary">Get Your Life Back on Track</h1>
 						<div class="h3 text-primary">
@@ -37,9 +37,9 @@ $footerVersion = 2;
 										<div class="card-body">
 											<h5>You deserve help that actually helps you – and a treatment team that listens and puts you first.</h5>
 
-											<p>You don't have to figure this out on your own. These issues are complex and personal. When you're ready for something to change, call to talk about your options and get information without commitment.</p>
+											<p>You don't have to figure this out on your own. These issues are complex and personal. When you're ready for something to change, call to talk privately about your options and get information without commitment.</p>
 
-											<p>You can do this!</p>
+											<p><b>You can do this!</b></p>
 
 
 										</div>
@@ -117,7 +117,7 @@ $footerVersion = 2;
 						</div>
 						<div class="col-md-3">
 							<div class="box last">
-								<i class="fas fa-mobile-alt"></i> App + Coaching <p>Free, life-long support.</p>
+								<i class="fas fa-mobile-alt"></i> App + Coaching <p>Free, life-long support and resources.</p>
 							</div>
 						</div>
 					</div>

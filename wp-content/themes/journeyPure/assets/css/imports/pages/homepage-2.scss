@@ -510,6 +510,7 @@ li {
 	line-height: 50px;
 	p {
 	  padding-bottom: 0;
+	  padding-top:10px;
 
 	}
 	.service-container {
@@ -553,7 +554,7 @@ li {
 	  .box {
 		text-align: center;
 		font-size: 22px;
-		padding: 20px 0;
+		padding: 40px;
 		line-height:30px;
 
 		@media (max-width: 767px) {
