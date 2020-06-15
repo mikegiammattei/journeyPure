@@ -22,6 +22,7 @@
 	}
 	.default-container {
 	  padding-top: 40px;
+	  padding-bottom:0;
 	  @media (max-width: 767px) {
 		padding-bottom: 0;
 		h1 {
@@ -54,9 +55,17 @@
 		box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
 	  }
 	  .feature {
-		margin: $xl-space 0 $lg-space;
-		background-color: rgba(255, 255, 255, 0.8);
-		padding: 35px 65px;
+		margin: 40px auto 0;
+		padding: 5px 65px 50px;
+		max-width:800px;
+		
+		.lineup{
+		box-shadow: 0px 2px 4px rgba(0,0,0,.18);
+		}
+		
+		p{
+		text-shadow: 1px 1px #ffffff;
+		}
 
 		@media (max-width: 800px) {
 		  margin: 15px -15px 0;
@@ -86,7 +95,7 @@
 		  }
 		}
 		.rating-section {
-		  margin: -2px $md-space $md-space;
+		  margin: -2px $md-space 20px;
 
 		  > .row > div {
 			@media (max-width: 767px) {
@@ -185,6 +194,9 @@
 		  }
 		}
 	  }
+	}
+	.background-fade{
+	background-color: rgba(255,255,255,0.6);
 	}
 	}
 	 section.insurance-section {

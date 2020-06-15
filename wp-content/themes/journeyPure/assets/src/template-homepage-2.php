@@ -32,12 +32,12 @@ $footerVersion = 2;
 						<hr>
 						<div class="feature">
 							<div class="row">
-								<div class="col-lg-6 col-sm-12 ">
+								<div class="col-lg-12 col-sm-12 top-text">
 									<div class="card transparent">
 										<div class="card-body">
 											<h5>You deserve help that actually helps you – and a treatment team that listens and puts you first.</h5>
 
-											<p>You don't have to figure this out on your own. These issues are complex and personal. When you're ready for something to change, call to talk privately about your options and get information without commitment.</p>
+											<p>These issues are complex and personal. But, you don't have to figure this out on your own. When you're ready for something to change, call to talk privately about your options and get information without commitment.</p>
 
 											<p><b>You can do this!</b></p>
 
@@ -80,11 +80,11 @@ $footerVersion = 2;
 										<?php endif; ?>
 									</div>
 								</div>
-								<div class="col-lg-6 col-sm-12 d-flex align-items-stretch">
+								<div class="col-lg-12 col-sm-12 d-flex align-items-stretch">
 									<div class="card card-body h-100 justify-content-center transparent" style="width: 100%; ">
 										<div class="embed-responsive embed-responsive-16by9 youtube-video-place  lazy" data-src='/wp-content/themes/journeyPure/assets/img/journeypure-rehab-review.jpg'  style=" cursor: pointer; background: no-repeat center;
 		  -webkit-background-size: cover;
-		  background-size: cover;" data-yt-url="https://www.youtube.com/embed/RHj5F5yhLC8?rel=0&showinfo=0&autoplay=1">
+		  background-size: cover;" data-yt-url="https://www.youtube.com/embed/kNj08KeNbIA?rel=0&showinfo=0&autoplay=1">
 										</div>
 									</div>
 								</div>
