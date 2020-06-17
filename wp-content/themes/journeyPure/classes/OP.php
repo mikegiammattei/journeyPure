@@ -1,6 +1,6 @@
 <?php
 /**
- * Outpatient 2 model class
+ * OP CPT model class
  *
  * @author   Fernando Tessmann
  * @package  JourneyPure
@@ -9,9 +9,9 @@
 namespace Pages;
 
 /**
- * Outpatient 2 model class
+ * OP CPT model class
  */
-class Outpatient2 {
+class OP {
 
 	/**
 	 * City
@@ -69,9 +69,7 @@ class Outpatient2 {
 	 * @return void
 	 */
 	private function set_masthead_section() {
-		global $post;
-
-		$this->masthead_title    = $post->post_title ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
+		$this->masthead_title    = $this->fields['title'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
 		$this->masthead_subtitle = $this->fields['subtitle'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
 	}
 

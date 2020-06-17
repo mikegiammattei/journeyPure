@@ -1,13 +1,13 @@
 /**
- * Outpatient 2
+ * OP CTP
  *
  * @author   Fernando Tessmann
  * @package  JourneyPure
  */
 
-// Page Template Outpatient 2
+// OP CTP template
 
-if ($('#jp-outpatient').length > 0) {
+if ($('#jp-op').length > 0) {
 
 	// Section Masthead
 

@@ -23,9 +23,11 @@ wp-config.php
 /wp-content/themes/journeyPure/sidebar.php
 /wp-content/themes/journeyPure/page.php
 /wp-content/themes/journeyPure/style.css
+/wp-content/themes/journeyPure/css/homepage.min.css
 /wp-content/plugins/jp-site-config/
 /wp-content/plugins/advanced-custom-fields-pro/
 /wp-content/themes/journeyPure/template-location.php
 /wp-content/themes/journeyPure/single-location.php
 /siteDocs/
 /wp-content/themes/journeyPure/single-locations.php
+/wp-content/themes/journeyPure/single-op.php
