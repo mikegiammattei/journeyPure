@@ -51,6 +51,7 @@ class OP {
 
 		$this->set_core_fields();
 		$this->set_masthead_section();
+		$this->set_highlights_section();
 	}
 
 	/**
@@ -71,6 +72,16 @@ class OP {
 	private function set_masthead_section() {
 		$this->masthead_title    = $this->fields['title'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
 		$this->masthead_subtitle = $this->fields['subtitle'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
+	}
+
+	/**
+	 * Set Highlights section content
+	 *
+	 * @return void
+	 */
+	private function set_highlights_section() {
+		$this->highlights_insurers_image = $this->fields['highlights_insurers_image'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
+		$this->highlights_main_image     = $this->fields['highlights_main_image'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
 	}
 
 }

@@ -52,7 +52,7 @@ get_header();
 
 	<!-- /SECTION: Masthead -->
 
-	<!-- SECTION: Clinic Highlights -->
+	<!-- SECTION: Highlights -->
 
 	<section class="jp-op-section jp-op-highlights">
 		<div class="container">
@@ -93,7 +93,7 @@ get_header();
 					</ul>
 
 					<div class="jp-op-highlights-img-logos-wrapper">
-						<img class="jp-op-highlights-img-logos lazy" data-src="/wp-content/themes/journeyPure/assets/img/op/insurers-logos.png" alt="Insurers">
+						<img class="jp-op-highlights-img-logos lazy" data-src="<?php echo esc_attr( $op->highlights_insurers_image['url'] ); ?>" alt="<?php echo esc_attr( $op->highlights_insurers_image['alt'] ); ?>">
 					</div>
 
 					<div class="jp-op-highlights-button-wrapper">
@@ -102,13 +102,13 @@ get_header();
 				</div>
 
 				<div class="col-12 col-md-6 col-lg-5">
-					<img class="jp-op-highlights-img-faces lazy" data-src="/wp-content/themes/journeyPure/assets/img/op/clinic-highlights-faces.png" alt="Clinic Highlights">
+					<img class="jp-op-highlights-img-faces lazy" data-src="<?php echo esc_attr( $op->highlights_main_image['url'] ); ?>" alt="<?php echo esc_attr( $op->highlights_main_image['alt'] ); ?>">
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- /SECTION: Clinic Highlights -->
+	<!-- /SECTION: Highlights -->
 
 	<!-- SECTION: Table -->
 
