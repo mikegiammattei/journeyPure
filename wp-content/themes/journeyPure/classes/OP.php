@@ -80,8 +80,8 @@ class OP {
 	 * @return void
 	 */
 	private function set_highlights_section() {
-		$this->highlights_insurers_image = $this->fields['highlights_insurers_image'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
-		$this->highlights_main_image     = $this->fields['highlights_main_image'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
+		$this->highlights_insurers_image = $this->fields['highlights']['highlights_insurers_image'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
+		$this->highlights_main_image     = $this->fields['highlights']['highlights_main_image'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
 	}
 
 }
