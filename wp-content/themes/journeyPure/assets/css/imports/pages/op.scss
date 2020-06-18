@@ -402,12 +402,103 @@
 			}
 		}
 
-		.see-more-btn,
 		.see-less-btn {
 			&.has-more {
-				&:after,&:before{
+				&:before {
+					content: '\f053'; // Fix global
+				}
+			}
+		}
+
+		.see-more-btn,
+		.see-less-btn {
+			margin-top: 0;
+			padding-bottom: 0;
+
+			&.has-more {
+				&:after,
+				&:before {
 					font-size: 28px;
 					vertical-align: middle;
+				}
+			}
+		}
+	}
+
+	// Section Reviews
+
+	&-reviews {
+		background: #ebebeb url(/wp-content/uploads/sites/2/2020/03/jp-background.png) repeat center center;
+		position: relative;
+
+		&-title {
+			@extend .h1;
+
+			font-style: unset;
+			margin-bottom: 15px;
+			text-align: center;
+
+			span {
+				text-decoration: underline;
+			}
+		}
+
+		&-subtitle {
+			@extend .h3;
+
+    		margin: 0 auto 20px;
+			max-width: 700px;
+			text-align: center;
+
+			@media screen and (min-width: 768px) {
+				margin-bottom: 40px;
+			}
+		}
+
+		&-cards {
+			> .row > .col-12 {
+				margin-bottom: 30px;
+			}
+		}
+
+		&-card {
+			background-color: #ffffff;
+			border: 1px solid rgba(0, 0, 0, .125);
+			border-radius: 4px;
+			height: 100%;
+			padding: 20px;
+
+			&-author {
+				margin-bottom: 20px;
+			}
+
+			&-image {
+				border-radius: 50%;
+				height: 60px;
+				width: 60px;
+			}
+
+			&-title {
+				font-size: 18px;
+				margin-bottom: 0;
+				text-align: left;
+			}
+
+			&-stars {
+				color: #fbbc06b3;
+			}
+
+			&-image-google {
+				float: right;
+				height: 60px;
+				width: 60px;
+			}
+
+			&-review {
+				p {
+					&:last-child {
+						padding-bottom: 0;
+					}
 				}
 			}
 		}

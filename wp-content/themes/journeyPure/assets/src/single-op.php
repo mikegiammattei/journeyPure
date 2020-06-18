@@ -126,7 +126,7 @@ get_header();
 				<div class="row">
 					<div class="col-12 col-lg-4">
 						<div class="jp-op-table-card">
-							<img data-src="/wp-content/themes/journeyPure/assets/img/op/paper-plane.png" alt="Session Types" class="jp-op-table-card-img lazy">
+							<img class="jp-op-table-card-img lazy" data-src="/wp-content/themes/journeyPure/assets/img/op/paper-plane.png" alt="Session Types">
 							<h4 class="jp-op-table-card-title">Session Types</h4>
 
 							<ul class="jp-op-table-card-list">
@@ -140,7 +140,7 @@ get_header();
 
 					<div class="col-12 col-lg-4">
 						<div class="jp-op-table-card">
-							<img data-src="/wp-content/themes/journeyPure/assets/img/op/plane.png" alt="Methodologies" class="jp-op-table-card-img lazy">
+							<img class="jp-op-table-card-img lazy" data-src="/wp-content/themes/journeyPure/assets/img/op/plane.png" alt="Methodologies">
 							<h4 class="jp-op-table-card-title">Methodologies</h4>
 
 							<ul class="jp-op-table-card-list">
@@ -154,7 +154,7 @@ get_header();
 
 					<div class="col-12 col-lg-4">
 						<div class="jp-op-table-card">
-							<img data-src="/wp-content/themes/journeyPure/assets/img/op/space-ship.png" alt="Medications" class="jp-op-table-card-img lazy">
+							<img class="jp-op-table-card-img lazy" data-src="/wp-content/themes/journeyPure/assets/img/op/space-ship.png" alt="Medications">
 							<h4 class="jp-op-table-card-title">Medications</h4>
 
 							<ul class="jp-op-table-card-list">
@@ -200,24 +200,24 @@ get_header();
 
 									<ul class="fa-ul">
 										<?php if ( ! empty( $bio->education ) ) : ?>
-											<li><span class="fa-li"><i class="fas fa-graduation-cap"></i></span><?php echo esc_html( $bio->education ); ?></li>
+											<li><span class="fa-li"><span class="fas fa-graduation-cap"></span></span><?php echo esc_html( $bio->education ); ?></li>
 										<?php endif; ?>
 
 										<?php if ( ! empty( $bio->specialty ) ) : ?>
-											<li><span class="fa-li"><i class="fas fa-th-large"></i></span><?php echo esc_html( $bio->specialty ); ?></li>
+											<li><span class="fa-li"><span class="fas fa-th-large"></span></span><?php echo esc_html( $bio->specialty ); ?></li>
 										<?php endif; ?>
 
 										<?php if ( ! empty( $bio->years ) ) : ?>
-											<li><span class="fa-li"><i class="fas fa-clock"></i></span><?php echo esc_html( $bio->years ); ?> years in the field</li>
+											<li><span class="fa-li"><span class="fas fa-clock"></span></span><?php echo esc_html( $bio->years ); ?> years in the field</li>
 										<?php endif; ?>
 
 										<?php if ( ! empty( $bio->recovery_status ) ) : ?>
 											<?php if ( 'person' === $bio->recovery_status ) : ?>
-												<li><span class="fa-li"><i class="fas fa-grin"></i></span>In Recovery</li>
+												<li><span class="fa-li"><span class="fas fa-grin"></span></span>In Recovery</li>
 											<?php endif; ?>
 
 											<?php if ( 'loved_one' === $bio->recovery_status ) : ?>
-												<li><span class="fa-li"><i class="fas fa-grin"></i></span>Loved One In Recovery</li>
+												<li><span class="fa-li"><span class="fas fa-grin"></span></span>Loved One In Recovery</li>
 											<?php endif; ?>
 										<?php endif; ?>
 									</ul>
@@ -234,6 +234,171 @@ get_header();
 	<?php endif; ?>
 
 	<!-- /SECTION: Bios -->
+
+	<!-- SECTION: Reviews -->
+
+	<section class="jp-op-section jp-op-reviews">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-12">
+					<h3 class="jp-op-reviews-title">You're TWICE as likely to get better here.</h3>
+					<p class="jp-op-reviews-subtitle">Your long-term success is what counts. Here are a few stories behind the data to prove that you can do this!</p>
+				</div>
+			</div>
+
+			<div class="jp-op-reviews-cards">
+				<div class="row">
+					<div class="col-12 col-md-6">
+						<div class="jp-op-reviews-card">
+							<div class="jp-op-reviews-card-author">
+								<div class="row justify-content-between">
+									<div class="col-md-9 col-8">
+										<div class="row">
+											<div class="col-lg-auto col-md-3 col-4 align-self-center">
+												<img class="jp-op-reviews-card-image lazy" data-src="/wp-content/uploads/reviews/generic-profile-1.png" alt="Stephanie C.">
+											</div>
+
+											<div class="col-lg-auto col-md-9 col-8 align-self-center">
+												<h5 class="jp-op-reviews-card-title">Stephanie C.</h5>
+
+												<div class="jp-op-reviews-card-stars">
+													<span class="fas fa-star"></span>
+													<span class="fas fa-star"></span>
+													<span class="fas fa-star"></span>
+													<span class="fas fa-star"></span>
+													<span class="fas fa-star"></span>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-md-3 col-4 align-self-center">
+										<img class="jp-op-reviews-card-image-google lazy" data-src="/wp-content/uploads/2019/10/verified-google.png" alt="Review from Google">
+									</div>
+								</div>
+							</div>
+
+							<div class="jp-op-reviews-card-review">
+								<p>JourneyPure IOP is the first and only treatment program I have ever tried. I came into the program with 20 years of using and abusing under my belt, and now I am coming up on 2 years sober in November. <strong>The program literally saved my life.</strong></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-12 col-md-6">
+						<div class="jp-op-reviews-card">
+							<div class="jp-op-reviews-card-author">
+								<div class="row justify-content-between">
+									<div class="col-md-9 col-8">
+										<div class="row">
+											<div class="col-lg-auto col-md-3 col-4 align-self-center">
+												<img class="jp-op-reviews-card-image lazy" data-src="/wp-content/uploads/reviews/generic-profile-1.png" alt="Bree M.">
+											</div>
+
+											<div class="col-lg-auto col-md-9 col-8 align-self-center">
+												<h5 class="jp-op-reviews-card-title">Bree M.</h5>
+
+												<div class="jp-op-reviews-card-stars">
+													<span class="fas fa-star"></span>
+													<span class="fas fa-star"></span>
+													<span class="fas fa-star"></span>
+													<span class="fas fa-star"></span>
+													<span class="fas fa-star"></span>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-md-3 col-4 align-self-center">
+										<img class="jp-op-reviews-card-image-google lazy" data-src="/wp-content/uploads/2019/10/verified-google.png" alt="Review from Google">
+									</div>
+								</div>
+							</div>
+
+							<div class="jp-op-reviews-card-review">
+								<p><strong>I enjoyed going to class</strong> and even asked for extra days. I'm so grateful there's an alumni meeting I can attend so that I can check in with everybody. I feel like all of the workers truly care about you <strong>with no judgment</strong>.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-12 col-md-6">
+						<div class="jp-op-reviews-card">
+							<div class="jp-op-reviews-card-author">
+								<div class="row justify-content-between">
+									<div class="col-md-9 col-8">
+										<div class="row">
+											<div class="col-lg-auto col-md-3 col-4 align-self-center">
+												<img class="jp-op-reviews-card-image lazy" data-src="/wp-content/uploads/reviews/generic-profile-1.png" alt="John B.">
+											</div>
+
+											<div class="col-lg-auto col-md-9 col-8 align-self-center">
+												<h5 class="jp-op-reviews-card-title">John B.</h5>
+
+												<div class="jp-op-reviews-card-stars">
+													<span class="fas fa-star"></span>
+													<span class="fas fa-star"></span>
+													<span class="fas fa-star"></span>
+													<span class="fas fa-star"></span>
+													<span class="fas fa-star"></span>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-md-3 col-4 align-self-center">
+										<img class="jp-op-reviews-card-image-google lazy" data-src="/wp-content/uploads/2019/10/verified-google.png" alt="Review from Google">
+									</div>
+								</div>
+							</div>
+
+							<div class="jp-op-reviews-card-review">
+								<p>I had been to other IOP programs before but JourneyPure was by far the most helpful. The staff and therapist <strong>actually cared</strong> about your recovery and I am in contact with most of them still to this day.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-12 col-md-6">
+						<div class="jp-op-reviews-card">
+							<div class="jp-op-reviews-card-author">
+								<div class="row justify-content-between">
+									<div class="col-md-9 col-8">
+										<div class="row">
+											<div class="col-lg-auto col-md-3 col-4 align-self-center">
+												<img class="jp-op-reviews-card-image lazy" data-src="/wp-content/uploads/reviews/generic-profile-1.png" alt="Chris B.">
+											</div>
+
+											<div class="col-lg-auto col-md-9 col-8 align-self-center">
+												<h5 class="jp-op-reviews-card-title">Chris B.</h5>
+
+												<div class="jp-op-reviews-card-stars">
+													<span class="fas fa-star"></span>
+													<span class="fas fa-star"></span>
+													<span class="fas fa-star"></span>
+													<span class="fas fa-star"></span>
+													<span class="fas fa-star"></span>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-md-3 col-4 align-self-center">
+										<img class="jp-op-reviews-card-image-google lazy" data-src="/wp-content/uploads/2019/10/verified-google.png" alt="Review from Google">
+									</div>
+								</div>
+							</div>
+
+							<div class="jp-op-reviews-card-review">
+								<p>Everyone at Journey Pure went above &amp; beyond to <strong>tailor a treatment plan to meet my specific needs &amp; goals</strong>. Everyone from the Dr. to the staff and the therapists were super empathetic... A truly custom and dignified experience!</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- SECTION: Reviews -->
 
 </div>
 
@@ -259,9 +424,9 @@ get_header();
 				<p>The JourneyPure Alumni app is a great way to stay connected.</p>
 				<p>The app has:</p>
 				<ul>
-					<li>Direct 24/7 text message connection to your <b>dedicated life coach</b></li>
-					<li>Personalized reminders to <b>reward you</b> for making healthy choices (with points exchanged for real gift cards)</li>
-					<li>An 11-module <b>self-help course</b> with interactive journals for you to work through at your own pace</li>
+					<li>Direct 24/7 text message connection to your <strong>dedicated life coach</strong></li>
+					<li>Personalized reminders to <strong>reward you</strong> for making healthy choices (with points exchanged for real gift cards)</li>
+					<li>An 11-module <strong>self-help course</strong> with interactive journals for you to work through at your own pace</li>
 				</ul>
 			</div>
 		</div>
@@ -280,10 +445,10 @@ get_header();
 			</div>
 
 			<div class="modal-body">
-				<p><b>Naltrexone</b> (Vivitrol, Revia, Depade) is non-addictive. The medication blocks the positive effects of alcohol and drugs to discourage relapse, while also reducing cravings.</p>
+				<p><strong>Naltrexone</strong> (Vivitrol, Revia, Depade) is non-addictive. The medication blocks the positive effects of alcohol and drugs to discourage relapse, while also reducing cravings.</p>
 				<p>It can be started day 7-10 of sobriety and has no serious side effects. Because of cost, it's usually used for 1-12 months, but could be taken forever.</p>
 				<p>In shot form (Vivitrol), it’s administered once a month at the clinic, eliminating the option to skip or mistake the dose. If not covered by insurance Vivitrol is $1,000 per monthly shot, though they offer a <a href="https://www.vivitrol.com/co-pay-savings-program" target="_blank">savings card</a>. The other options are Revia and Depade. These daily oral pills are around $100 a month.</p>
-				<p><b>Gabapentin</b> (Neurontin, Gralise, Horizant) is a medication that has been studied recently for cravings. While research is ongoing, the takeaway is that Gabapentin is addictive and rarely the right choice.</p>
+				<p><strong>Gabapentin</strong> (Neurontin, Gralise, Horizant) is a medication that has been studied recently for cravings. While research is ongoing, the takeaway is that Gabapentin is addictive and rarely the right choice.</p>
 			</div>
 		</div>
 	</div>
@@ -303,9 +468,9 @@ get_header();
 			<div class="modal-body">
 				<p>While Naltrexone is usually the first choice, the following medications are also FDA-approved specifically for alcoholism:</p>
 				<ul>
-					<li><b>Acamprosate</b> (Campral) reduces symptoms of long-lasting withdrawal and cravings, such as insomnia, anxiety, restlessness and generally feeling unwell. It must be taken three times a day.</li>
-					<li><b>Disulfiram</b> (Antabuse) interferes with the body’s ability to absorb alcohol. Instead of feeling “good”, alcohol will cause unpleasant reactions such as nausea and possibly be dangerous. Those who have shown the ability to stay sober for an extended period with recent relapse are ideal candidates.</li>
-					<li><b>Topiramate</b> (Topamax, Qudexy) is an FDA-approved medication for seizures used “off label” to also reduce alcohol cravings due to initial promising research.</li>
+					<li><strong>Acamprosate</strong> (Campral) reduces symptoms of long-lasting withdrawal and cravings, such as insomnia, anxiety, restlessness and generally feeling unwell. It must be taken three times a day.</li>
+					<li><strong>Disulfiram</strong> (Antabuse) interferes with the body’s ability to absorb alcohol. Instead of feeling “good”, alcohol will cause unpleasant reactions such as nausea and possibly be dangerous. Those who have shown the ability to stay sober for an extended period with recent relapse are ideal candidates.</li>
+					<li><strong>Topiramate</strong> (Topamax, Qudexy) is an FDA-approved medication for seizures used “off label” to also reduce alcohol cravings due to initial promising research.</li>
 				</ul>
 			</div>
 		</div>
@@ -326,8 +491,8 @@ get_header();
 			<div class="modal-body">
 				<p>In addition to Naltrexone, these medications are FDA-approved to treat heroin or pain pill addiction:</p>
 				<ul>
-					<li><b>Buprenorphine + Naloxone</b> (Suboxone) helps prevent withdrawal symptoms by replacing the effects of opiates with a lesser effect that does not produce a “high.” This is typically administered for 7-10 days or a longer maintenance program. This medication is addictive but poses a much lower risk.</li>
-					<li><b>Methadone</b> (Dolophine, Methadose) is a more dangerous version of the above medication that is no longer recommended.</li>
+					<li><strong>Buprenorphine + Naloxone</strong> (Suboxone) helps prevent withdrawal symptoms by replacing the effects of opiates with a lesser effect that does not produce a “high.” This is typically administered for 7-10 days or a longer maintenance program. This medication is addictive but poses a much lower risk.</li>
+					<li><strong>Methadone</strong> (Dolophine, Methadose) is a more dangerous version of the above medication that is no longer recommended.</li>
 				</ul>
 			</div>
 		</div>
@@ -349,11 +514,11 @@ get_header();
 				<p>All other physical and mental health issues (like depression and anxiety) need to be treated – whether they helped fuel the addiction in the first place or came as a result of the addiction.</p>
 				<p>Common mental health prescriptions include:</p>
 				<ul>
-					<li><b>Fluoxetine</b> (Prozac, Sarafem) or <b>Bupropion</b> (Wellbutrin) for depression</li>
-					<li><b>Aripiprazole</b> (Abilify) for mood and bipolar</li>
-					<li><b>Trazodone</b> (Oleptro) or <b>Hydroxyzine</b> (Vistaril, Atarax) for sleep and anxiety</li>
-					<li><b>Paroxetine</b> (Paxil, Pexeva, Brisdelle) or <b>Sertraline</b> (Zoloft) for major depress, PTSD, OCD</li>
-					<li><b>Oxcarbazepine</b> (Trileptal) for mood stabilization</li>
+					<li><strong>Fluoxetine</strong> (Prozac, Sarafem) or <strong>Bupropion</strong> (Wellbutrin) for depression</li>
+					<li><strong>Aripiprazole</strong> (Abilify) for mood and bipolar</li>
+					<li><strong>Trazodone</strong> (Oleptro) or <strong>Hydroxyzine</strong> (Vistaril, Atarax) for sleep and anxiety</li>
+					<li><strong>Paroxetine</strong> (Paxil, Pexeva, Brisdelle) or <strong>Sertraline</strong> (Zoloft) for major depress, PTSD, OCD</li>
+					<li><strong>Oxcarbazepine</strong> (Trileptal) for mood stabilization</li>
 				</ul>
 			</div>
 		</div>
