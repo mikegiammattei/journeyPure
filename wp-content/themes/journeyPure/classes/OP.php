@@ -42,6 +42,13 @@ class OP {
 	public $masthead_subtitle;
 
 	/**
+	 * Bios
+	 *
+	 * @var bios
+	 */
+	public $bios;
+
+	/**
 	 * Constructor
 	 *
 	 * @return void
@@ -52,6 +59,7 @@ class OP {
 		$this->set_core_fields();
 		$this->set_masthead_section();
 		$this->set_highlights_section();
+		$this->set_bios();
 	}
 
 	/**
@@ -80,8 +88,33 @@ class OP {
 	 * @return void
 	 */
 	private function set_highlights_section() {
-		$this->highlights_insurers_image = $this->fields['highlights']['highlights_insurers_image'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
-		$this->highlights_main_image     = $this->fields['highlights']['highlights_main_image'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
+		$this->highlights_insurers_image_1 = $this->fields['highlights']['highlights_insurers_image_1'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
+		$this->highlights_insurers_image_2 = $this->fields['highlights']['highlights_insurers_image_2'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
+		$this->highlights_main_image       = $this->fields['highlights']['highlights_main_image'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
+	}
+
+	/**
+	 * Set Bios section content
+	 *
+	 * @return void
+	 */
+	private function set_bios() {
+		if ( isset( $this->fields['bios'] ) ) {
+			require_once get_stylesheet_directory() . '/classes/Bios.php';
+			$bios = new \Bios\Bios();
+
+			// Send the bio id to the the bio class to set the bios array object.
+			$bios_category_ids = $this->fields['bios']['bios'];
+			$bios->setPostByCategoryId( $bios_category_ids );
+
+			$this->bios = $bios->bios;
+
+			$this->bios = (object) array(
+				'heading'    => $this->fields['bios']['heading'],
+				'subheading' => $this->fields['bios']['subheading'],
+				'bios'       => $this->bios,
+			);
+		}
 	}
 
 }

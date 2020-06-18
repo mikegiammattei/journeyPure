@@ -167,15 +167,21 @@
 		}
 
 		&-img-logos {
-			width: 90%;
+			filter: grayscale(100%);
+			width: 100%;
+
+			@media screen and (min-width: 992px) {
+				width: 50%;
+			}
 
 			&-wrapper {
+				display: flex;
+				flex-wrap: wrap;
 				margin-bottom: 20px;
-				padding-left: 35px;
 
 				@media screen and (min-width: 768px) {
 					margin-bottom: 30px;
-					padding-left: 45px;
+					padding-left: 30px;
 				}
 			}
 		}
@@ -312,12 +318,96 @@
 			&-info {
 				margin-left: 5px;
 			}
+		}
+	}
 
-			&-tooltip {
-				.tooltip-inner {
-					max-width: 300px;
-					padding: 15px 20px;
-					text-align: left;
+	// Section Bios (copied from single-locations.scss)
+
+	.bio-section {
+		margin: $xl-space 0 $xl-space;
+
+		.h1 {
+			font-style: unset;
+			margin-bottom: 15px;
+		}
+
+		.heading,
+		.subheading {
+			text-align: center;
+			max-width: $lg-width;
+			margin: auto;
+		}
+
+		.bio-slider {
+			margin-top: $lg-space;
+			visibility: hidden;
+
+			&.slick-initialized {
+				visibility: visible;
+				opacity: 1;
+				font-family: $heading-font;
+			}
+
+			.card {
+				margin: auto;
+
+				.bios {
+					.img {
+						background: no-repeat center;
+						background-size: cover;
+						width: 100px;
+						height: 100px;
+						border-radius: 50%;
+						display: block;
+						margin: 5px auto $lg-space;
+					}
+
+					.name-text {
+						font-weight: bold;
+						color: black;
+					}
+
+					.text {
+						padding-bottom: 0;
+						font-family: "Montserrat",sans-serif;
+
+						span {
+							font-size: 14px;
+							font-weight: normal;
+						}
+					}
+
+					/*
+					name-text {
+						color: black;
+						font-weight: bold;
+
+						span {
+							font-size: 14px;
+							font-weight: normal;
+							color: #333;
+						}
+					}
+					*/
+
+					.fa-ul {
+						margin-top: $lg-space;
+						margin-left: 25px;
+
+						i {
+							color: $secondary;
+						}
+					}
+				}
+			}
+		}
+
+		.see-more-btn,
+		.see-less-btn {
+			&.has-more {
+				&:after,&:before{
+					font-size: 28px;
+					vertical-align: middle;
 				}
 			}
 		}
