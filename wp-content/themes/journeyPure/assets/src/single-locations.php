@@ -356,18 +356,20 @@
           <div role="tabpanel" class="tab-pane active" id="discover">
             <div class="design-process-content">
               <div class="row">
-                <div class="col-md-6 order-md-2">
-                  <div class="lazy" data-src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg">
-                    <img src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg" alt="Call JourneyPure">
-                  </div>
-                </div>
-                <div class="col-md-6 order-md-1">
+			                  <div class="col-md-6">
                   <div class="design-process-content-inner">
                     <h5 class="semi-bold">1. Make The Call</h5>
                     <p>Even if you're not ready to commit to JourneyPure or not sure if you want treatment at all, talk about what's going on with someone that's been there before. You'll feel better and more informed after you call, I promise.</p>
                     <div class="note-cta"><i class="fas fa-phone"></i> <?php echo get_option('defaultPhone'); ?></div>
                   </div>
                 </div>
+				
+                <div class="col-md-6 d-none d-sm-block">
+                  <div class="lazy" data-src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg">
+                    <img src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg" alt="Call JourneyPure">
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
@@ -383,8 +385,8 @@
                 <div class="col-sm-12">
                   <div class="design-process-content-inner">
                     <h5 class="semi-bold">2. Discuss Any Costs</h5>
-                    <p>Insurance covers the majority of your cost here! How much you owe depends on deductable and co-insurance rates set by each policy. Don't worry, we'll call your insruance company, then explain the details of your specific insurance policy. You can privately <a data-toggle="modal" data-target="#main-insurance-form" href="#">submit insurance information online</a>.</p>
-                    <p>(If you don't have insurance, you still have options. We can talk about that too.)</p>
+                    <p>Insurance covers the majority of your cost here! How much you owe depends on your insurance policy's deductable and co-insurance rates. Don't worry, we'll confidentially look at your policy and explain everything. You can privately <a data-toggle="modal" data-target="#main-insurance-form" href="#">submit insurance information online</a>.</p>
+                    <p>(If you don't have insurance, you still have options. We can talk about that).</p>
                   </div>
                 </div>
               </div>
@@ -403,7 +405,7 @@
                   <div class="design-process-content-inner">
                     <h5 class="semi-bold">3. Start Treatment</h5>
                     <p>Our locations often operate on waiting lists, but we're as accommodating as possible with the schedule. It helps to call early in your decision process and come in while you're still motivated.</p>
-			              <p>The first thing you notice when you walk in is an overwhelming sense of hope and compassion. You're surrounded by people that actually understand what you're going through.</p>
+			              <p>The first thing you notice when you walk in is an overwhelming sense of hope and compassion. You're surrounded by people that actually understand you.</p>
                   </div>
                 </div>
               </div>
