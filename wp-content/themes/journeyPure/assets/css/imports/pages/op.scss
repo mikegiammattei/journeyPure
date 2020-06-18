@@ -8,6 +8,7 @@
 // OP CTP template
 
 .jp-op {
+	overflow: hidden;
 
 	// Section
 
@@ -500,6 +501,57 @@
 						padding-bottom: 0;
 					}
 				}
+			}
+		}
+	}
+
+	// Section FAQ (copied from single-locations.scss)
+
+	.block-4 {
+		margin: $xl-space;
+
+		@media (max-width: 767px) {
+			margin: 25px 15px 20px;
+		}
+
+		.heading {
+			margin: auto;
+			text-align: center;
+
+			.lead {
+				@extend .h3;
+
+				margin: 20px auto;
+				max-width: 700px;
+				text-align: center;
+
+				@media screen and (min-width: 768px) {
+					margin-bottom: 40px;
+				}
+			}
+		}
+
+		.faqs {
+			max-width: 800px;
+			margin: 0 auto;
+
+			.card {
+				border: none;
+
+				.card-header {
+					margin-bottom: 0;
+					cursor: pointer;
+					background-color: white;
+					padding: 22px 10px 12px;
+					border-color: #333;
+				}
+			}
+
+			.ask-a-question {
+				text-align: center;
+				margin: $lg-space auto;
+
+				// .link { }
 			}
 		}
 	}

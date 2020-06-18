@@ -49,6 +49,13 @@ class OP {
 	public $bios;
 
 	/**
+	 * FAQ
+	 *
+	 * @var faq
+	 */
+	public $faq;
+
+	/**
 	 * Constructor
 	 *
 	 * @return void
@@ -60,6 +67,7 @@ class OP {
 		$this->set_masthead_section();
 		$this->set_highlights_section();
 		$this->set_bios();
+		$this->set_faq();
 	}
 
 	/**
@@ -99,11 +107,10 @@ class OP {
 	 * @return void
 	 */
 	private function set_bios() {
-		if ( isset( $this->fields['bios'] ) ) {
+		if ( ! empty( $this->fields['bios'] ) ) {
 			require_once get_stylesheet_directory() . '/classes/Bios.php';
-			$bios = new \Bios\Bios();
 
-			// Send the bio id to the the bio class to set the bios array object.
+			$bios              = new \Bios\Bios();
 			$bios_category_ids = $this->fields['bios']['bios'];
 			$bios->setPostByCategoryId( $bios_category_ids );
 
@@ -115,6 +122,67 @@ class OP {
 				'bios'       => $this->bios,
 			);
 		}
+	}
+
+	/**
+	 * Set FAQ section content
+	 *
+	 * @return void
+	 */
+	private function set_faq() {
+		if ( ! empty( $this->fields['faq'] ) ) {
+			$this->faq = (object) array(
+				'heading'    => $this->fields['faq']['heading'],
+				'subheading' => $this->fields['faq']['subheading'],
+			);
+		}
+
+		if ( ! empty( $this->fields['faq']['faq'] ) ) {
+			/*
+			require_once get_stylesheet_directory() . '/classes/FAQs.php';
+
+			$faqs              = new \FAQs\FAQs();
+			$faqs_category_ids = $this->fields['faq']['faq'];
+			$faqs->setFAQs( $faqs_category_ids );
+			*/
+
+			$faqs_category_ids = $this->fields['faq']['faq'];
+			$this->faq->faqs   = array();
+
+			foreach ( $faqs_category_ids as $faq_post_id ) {
+				$faq = get_fields( $faq_post_id );
+
+				$this->faq->faqs[] = (object) array(
+					'question' => $faq['question'],
+					'answer'   => $faq['answer'],
+				);
+			}
+		}
+
+		/*
+		if ( ! empty( $this->fields['faq']['location'] ) ) {
+			$this->faq->location                 = (object) array();
+			$this->faq->location->name           = $this->fields['faq']['location']['name'] ?: null;
+			$this->faq->location->street_address = $this->fields['faq']['location']['street_address'] ?: null;
+			$this->faq->location->city           = $this->fields['faq']['location']['city'] ?: null;
+			$this->faq->location->state          = $this->fields['faq']['location']['state'] ?: null;
+			$this->faq->location->zip            = $this->fields['faq']['location']['zip'] ?: null;
+			$this->faq->location->description    = $this->fields['faq']['location']['description'] ?: null;
+			$this->faq->location->full_address   = $this->fields['faq']['location']['street_address'] ?
+				$this->fields['faq']['location']['street_address'] . ' ' .
+				$this->fields['faq']['location']['city'] . ' ' .
+				$this->fields['faq']['location']['state'] . ' ' .
+				$this->fields['faq']['location']['zip']
+				: null;
+		}
+
+		if ( ! empty( $this->fields['faq']['location'] ) ) {
+			require_once get_stylesheet_directory() . '/classes/LocationStatus.php';
+
+			$location_status             = new \Status\LocationStatus( $this->post->ID );
+			$this->faq->location->status = ( $location_status );
+		}
+		*/
 	}
 
 }

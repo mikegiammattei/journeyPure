@@ -398,7 +398,62 @@ get_header();
 		</div>
 	</section>
 
-	<!-- SECTION: Reviews -->
+	<!-- /SECTION: Reviews -->
+
+	<!-- SECTION: FAQ -->
+
+	<?php if ( ! empty( $op->faq ) ) : ?>
+		<section class="block-4">
+			<div class="container">
+				<?php if ( ! empty( $op->faq->heading ) || ! empty( $op->faq->subheading ) ) : ?>
+					<div class="heading">
+						<span class="h1">
+							<?php echo esc_html( $op->faq->heading ); ?>
+
+							<?php if ( ! empty( $op->faq->subheading ) ) : ?>
+								<h2 class="lead"><?php echo esc_html( $op->faq->subheading ); ?></h2>
+							<?php endif; ?>
+						</span>
+					</div>
+				<?php endif; ?>
+
+				<?php if ( ! empty( $op->faq->faqs ) ) : ?>
+					<div class="faqs">
+						<div class="accordion" id="faq">
+							<?php foreach ( $op->faq->faqs as $index => $faq ) : ?>
+								<div class="card">
+									<div class="card-header <?php echo ( 0 !== $index ) ? 'collapsed' : ''; ?>" data-toggle="collapse" data-target="#l-faq-<?php echo esc_attr( $index ); ?>" aria-expanded="true" aria-controls="l-faq-<?php echo esc_attr( $index ); ?>" id="l-faq-heading-<?php echo esc_attr( $index ); ?>">
+										<div class="question-box">
+											<div class="icon">
+												<i class="fas fa-plus-circle off"></i>
+												<i class="fas fa-minus-circle on"></i>
+											</div>
+
+											<div class="title">
+												<h5 class="card-title"><?php echo esc_html( $faq->question ); ?></h5>
+											</div>
+										</div>
+									</div>
+
+									<div id="l-faq-<?php echo esc_attr( $index ); ?>" class="collapse <?php echo ( 0 === $index ) ? 'show' : ''; ?>" aria-labelledby="l-faq-heading-<?php echo esc_attr( $index ); ?>" data-parent="#faq">
+										<div class="card-body">
+											<?php echo wp_kses_post( $faq->answer ); ?>
+										</div>
+									</div>
+								</div>
+							<?php endforeach; ?>
+						</div>
+
+						<div class="ask-a-question">
+							<span class="btn btn-primary" data-toggle="modal" data-target="#user-question-form-container">Ask a question</span>
+						</div>
+					</div>
+				<?php endif; ?>
+			</div>
+		</section>
+	<?php endif; ?>
+
+	<!-- /SECTION: FAQ -->
 
 </div>
 
