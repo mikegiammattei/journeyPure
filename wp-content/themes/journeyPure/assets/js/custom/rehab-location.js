@@ -28,11 +28,13 @@ $(document).ready(function () {
 
 });
 */
+
 $(document).ready(function(){
 	setTimeout(function () {
 		$('.image-gallery').flexgal();
 	},400);
 });
+
 $(document).ready(function () {
 	rehabLocationBioSlider();
 	function rehabLocationBioSlider() {
@@ -176,5 +178,20 @@ $(document).ready(function () {
 			}, 600);
 		}
 
+	}
+
+	if ($('#single-location .process-model').length > 0) {
+		// script for tab steps
+		$('.process-model a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+
+			var href = $(e.target).attr('href');
+			var $curr = $(".process-model a[href='" + href + "']").parent();
+
+			$('.process-model li').removeClass();
+
+			$curr.addClass("active");
+			$curr.prevAll().addClass("visited");
+		});
+		// end  script for tab steps
 	}
 });
