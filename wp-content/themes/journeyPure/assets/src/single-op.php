@@ -431,19 +431,21 @@ get_header();
 								<?php echo esc_html( $op->location->zip ); ?>
 							</p>
 
-							<p class="jp-op-location-map-cta">Let's Talk Now</p>
-							<a class="jp-op-location-map-button hide-for-sm" href="tel:844-505-4799" title="Call (844) 505-4799 to talk now."><span class="fas fa-phone"></span> (844) 505-4799</a>
-							<a class="jp-op-location-map-button show-for-sm" href="javascript:void(0);" data-toggle="tooltip" data-placement="top" data-trigger="click" title="Call (844) 505-4799 to talk now."><span class="fas fa-phone"></span> (844) 505-4799</a>
+							<div class="jp-op-location-map-bottom">
+								<p class="jp-op-location-map-cta">Let's Talk Now</p>
+								<a class="jp-op-location-map-button hide-for-sm" href="tel:844-505-4799" title="Call (844) 505-4799 to talk now."><span class="fas fa-phone"></span> (844) 505-4799</a>
+								<a class="jp-op-location-map-button show-for-sm" href="javascript:void(0);" data-toggle="tooltip" data-placement="top" data-trigger="click" title="Call (844) 505-4799 to talk now."><span class="fas fa-phone"></span> (844) 505-4799</a>
 
-							<?php
-								$location_status_data  = 'Only ' . esc_html( $op->location->status->availableRoomCount ) . ' ';
-								$location_status_data .= ( 1 === $op->location->status->availableRoomCount ) ? ' spot' : ' spots';
-								$location_status_data .= ' available';
-							?>
+								<?php
+									$location_status_data  = 'Only ' . esc_html( $op->location->status->availableRoomCount ) . ' ';
+									$location_status_data .= ( 1 === $op->location->status->availableRoomCount ) ? ' spot' : ' spots';
+									$location_status_data .= ' available';
+								?>
 
-							<p class="jp-op-location-map-spots">
-								<i class="fa fa-info-circle"></i> <b><?php echo esc_html( $location_status_data ); ?></b>
-							</p>
+								<p class="jp-op-location-map-spots">
+									<i class="fa fa-info-circle"></i> <b><?php echo esc_html( $location_status_data ); ?></b>
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
