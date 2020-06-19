@@ -28,11 +28,11 @@ get_header();
 			</div>
 
 			<div class="row">
-				<div class="col-12 col-md-6 col-lg-7">
-					<div class="embed-responsive embed-responsive-16by9 youtube-video-place lazy" data-src="/wp-content/themes/journeyPure/assets/img/journeypure-rehab-review.jpg" style="cursor: pointer; background: no-repeat center; background-size: cover;" data-yt-url="https://www.youtube.com/embed/kNj08KeNbIA?rel=0&showinfo=0&autoplay=1"></div>
+				<div class="col-12 col-lg-7">
+					<div class="embed-responsive embed-responsive-16by9 youtube-video-place" style="cursor: pointer; background: transparent url('/wp-content/themes/journeyPure/assets/img/journeypure-rehab-review.jpg') no-repeat center center; background-size: cover;" data-yt-url="https://www.youtube.com/embed/kNj08KeNbIA?rel=0&showinfo=0&autoplay=1"></div>
 				</div>
 
-				<div class="col-12 col-md-6 col-lg-5">
+				<div class="col-12 col-lg-5">
 					<div class="jp-op-masthead-content">
 						<h3 class="jp-op-masthead-h3">If you're sick of living with drugs or alcohol, but can't "just stop", you have two choices: sink or swim.</h3>
 
@@ -57,7 +57,7 @@ get_header();
 	<section class="jp-op-section jp-op-highlights">
 		<div class="container">
 			<div class="row">
-				<div class="col-12 col-md-6 col-lg-7">
+				<div class="col-12 col-md-6 col-lg-6 offset-lg-1">
 					<h3 class="jp-op-highlights-title">Clinic Highlights</h3>
 
 					<ul class="jp-op-highlights-list">
@@ -102,7 +102,7 @@ get_header();
 					</div>
 				</div>
 
-				<div class="col-12 col-md-6 col-lg-5">
+				<div class="col-12 col-md-6 col-lg-4">
 					<img class="jp-op-highlights-img-faces lazy" data-src="<?php echo esc_attr( $op->highlights_main_image['url'] ); ?>" alt="<?php echo esc_attr( $op->highlights_main_image['alt'] ); ?>">
 				</div>
 			</div>
@@ -400,6 +400,83 @@ get_header();
 
 	<!-- /SECTION: Reviews -->
 
+	<!-- SECTION: Location -->
+
+	<section class="jp-op-section jp-op-location">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-lg-5">
+					<div class="jp-op-location-map">
+						<?php
+							$address = rawurlencode( $op->location->full_address );
+							$address = preg_replace( '/\./', '', $address );
+						?>
+
+						<div class="jp-op-location-map-embed embed-responsive embed-responsive-16by9">
+							<iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDwoQ63Mff3mW9-u2fQUhnlMBmX752RKds&q=<?php echo esc_html( $address ); ?>" allowfullscreen></iframe>
+						</div>
+
+						<div class="jp-op-location-map-content">
+							<?php if ( $op->location->name ) : ?>
+								<h4 class="jp-op-location-map-title"><?php echo esc_html( $op->location->name ); ?></h4>
+							<?php endif; ?>
+
+							<p class="jp-op-location-map-address">
+								<?php if ( $op->location->street_address ) : ?>
+									<?php echo esc_html( $op->location->street_address ); ?>
+								<?php endif; ?>
+
+								<?php echo esc_html( $op->location->city ); ?>,
+								<?php echo esc_html( $op->location->state ); ?>
+								<?php echo esc_html( $op->location->zip ); ?>
+							</p>
+
+							<p class="jp-op-location-map-cta">Let's Talk Now</p>
+							<a class="jp-op-location-map-button hide-for-sm" href="tel:844-505-4799" title="Call (844) 505-4799 to talk now."><span class="fas fa-phone"></span> (844) 505-4799</a>
+							<a class="jp-op-location-map-button show-for-sm" href="javascript:void(0);" data-toggle="tooltip" data-placement="top" data-trigger="click" title="Call (844) 505-4799 to talk now."><span class="fas fa-phone"></span> (844) 505-4799</a>
+
+							<?php
+								$location_status_data  = 'Only ' . esc_html( $op->location->status->availableRoomCount ) . ' ';
+								$location_status_data .= ( 1 === $op->location->status->availableRoomCount ) ? ' spot' : ' spots';
+								$location_status_data .= ' available';
+							?>
+
+							<p class="jp-op-location-map-spots">
+								<i class="fa fa-info-circle"></i> <b><?php echo esc_html( $location_status_data ); ?></b>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-12 col-lg-7">
+					<div class="jp-op-location-content">
+						<div class="jp-op-location-header">
+							<h1 class="jp-op-location-title">You can do this!</h1>
+							<h3 class="jp-op-location-subtitle">Get information without commitment.</h3>
+						</div>
+
+						<div class="jp-op-location-card">
+							<h4 class="jp-op-location-card-title">1. Make the Call</h4>
+							<p class="jp-op-location-card-text">The first step is to call. You can finally talk honestly about what's going on with someone who's been there before too.</p>
+						</div>
+
+						<div class="jp-op-location-card">
+							<h4 class="jp-op-location-card-title">2. Check Insurance</h4>
+							<p class="jp-op-location-card-text">If you have insurance, we will check the policy. Either way, we'll give you all the cost information, but you don't pay anything until you actually have your first session.</p>
+						</div>
+
+						<div class="jp-op-location-card">
+							<h4 class="jp-op-location-card-title">3. Show up</h4>
+							<p class="jp-op-location-card-text">Once you're scheduled for an appointment time to come in, all you have to do is show up. You'll be amazed at how your life starts to change as you keep just showing up.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- /SECTION: Location -->
+
 	<!-- SECTION: FAQ -->
 
 	<?php if ( ! empty( $op->faq ) ) : ?>
@@ -463,7 +540,7 @@ get_header();
 
 <!-- MODALS -->
 
-<div class="modal fade" id="jp-op-modal-01" tabindex="-1" role="dialog" aria-labelledby="not-ready-label" aria-hidden="true">
+<div class="modal fade jp-op-modal" id="jp-op-modal-01" tabindex="-1" role="dialog" aria-labelledby="not-ready-label" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -488,7 +565,7 @@ get_header();
 	</div>
 </div>
 
-<div class="modal fade" id="jp-op-modal-02" tabindex="-1" role="dialog" aria-labelledby="not-ready-label" aria-hidden="true">
+<div class="modal fade jp-op-modal" id="jp-op-modal-02" tabindex="-1" role="dialog" aria-labelledby="not-ready-label" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -509,7 +586,7 @@ get_header();
 	</div>
 </div>
 
-<div class="modal fade" id="jp-op-modal-03" tabindex="-1" role="dialog" aria-labelledby="not-ready-label" aria-hidden="true">
+<div class="modal fade jp-op-modal" id="jp-op-modal-03" tabindex="-1" role="dialog" aria-labelledby="not-ready-label" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -532,7 +609,7 @@ get_header();
 	</div>
 </div>
 
-<div class="modal fade" id="jp-op-modal-04" tabindex="-1" role="dialog" aria-labelledby="not-ready-label" aria-hidden="true">
+<div class="modal fade jp-op-modal" id="jp-op-modal-04" tabindex="-1" role="dialog" aria-labelledby="not-ready-label" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -554,7 +631,7 @@ get_header();
 	</div>
 </div>
 
-<div class="modal fade" id="jp-op-modal-05" tabindex="-1" role="dialog" aria-labelledby="not-ready-label" aria-hidden="true">
+<div class="modal fade jp-op-modal" id="jp-op-modal-05" tabindex="-1" role="dialog" aria-labelledby="not-ready-label" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">

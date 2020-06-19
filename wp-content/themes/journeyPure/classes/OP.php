@@ -56,11 +56,21 @@ class OP {
 	public $faq;
 
 	/**
+	 * Location
+	 *
+	 * @var location
+	 */
+	public $location;
+
+	/**
 	 * Constructor
 	 *
 	 * @return void
 	 */
 	public function __construct() {
+		global $post;
+		$this->post = $post;
+
 		$this->fields = get_fields();
 
 		$this->set_core_fields();
@@ -68,6 +78,7 @@ class OP {
 		$this->set_highlights_section();
 		$this->set_bios();
 		$this->set_faq();
+		$this->set_location();
 	}
 
 	/**
@@ -158,31 +169,36 @@ class OP {
 				);
 			}
 		}
+	}
 
-		/*
-		if ( ! empty( $this->fields['faq']['location'] ) ) {
-			$this->faq->location                 = (object) array();
-			$this->faq->location->name           = $this->fields['faq']['location']['name'] ?: null;
-			$this->faq->location->street_address = $this->fields['faq']['location']['street_address'] ?: null;
-			$this->faq->location->city           = $this->fields['faq']['location']['city'] ?: null;
-			$this->faq->location->state          = $this->fields['faq']['location']['state'] ?: null;
-			$this->faq->location->zip            = $this->fields['faq']['location']['zip'] ?: null;
-			$this->faq->location->description    = $this->fields['faq']['location']['description'] ?: null;
-			$this->faq->location->full_address   = $this->fields['faq']['location']['street_address'] ?
-				$this->fields['faq']['location']['street_address'] . ' ' .
-				$this->fields['faq']['location']['city'] . ' ' .
-				$this->fields['faq']['location']['state'] . ' ' .
-				$this->fields['faq']['location']['zip']
+	/**
+	 * Set Location section content
+	 *
+	 * @return void
+	 */
+	private function set_location() {
+		if ( ! empty( $this->fields['location'] ) ) {
+			$this->location                 = (object) array();
+			$this->location->name           = $this->fields['location']['name'] ?: null;
+			$this->location->street_address = $this->fields['location']['street_address'] ?: null;
+			$this->location->city           = $this->fields['location']['city'] ?: null;
+			$this->location->state          = $this->fields['location']['state'] ?: null;
+			$this->location->zip            = $this->fields['location']['zip'] ?: null;
+			$this->location->description    = $this->fields['location']['description'] ?: null;
+			$this->location->full_address   = $this->fields['location']['street_address'] ?
+				$this->fields['location']['street_address'] . ' ' .
+				$this->fields['location']['city'] . ' ' .
+				$this->fields['location']['state'] . ' ' .
+				$this->fields['location']['zip']
 				: null;
 		}
 
-		if ( ! empty( $this->fields['faq']['location'] ) ) {
+		if ( ! empty( $this->fields['location'] ) ) {
 			require_once get_stylesheet_directory() . '/classes/LocationStatus.php';
 
-			$location_status             = new \Status\LocationStatus( $this->post->ID );
-			$this->faq->location->status = ( $location_status );
+			$location_status        = new \Status\LocationStatus( $this->post->ID );
+			$this->location->status = ( $location_status );
 		}
-		*/
 	}
 
 }

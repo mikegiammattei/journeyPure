@@ -169,6 +169,7 @@
 
 		&-img-logos {
 			filter: grayscale(100%);
+			height: auto;
 			width: 100%;
 
 			@media screen and (min-width: 992px) {
@@ -424,6 +425,10 @@
 				}
 			}
 		}
+
+		.fa-li {
+			color: #3b9341;
+		}
 	}
 
 	// Section Reviews
@@ -505,6 +510,136 @@
 		}
 	}
 
+	// Section Location
+
+	&-location {
+		// Map
+
+		&-map {
+			border-radius: 5px;
+			border-top: 7px solid #e1e7f6;
+			box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+			overflow: hidden;
+
+			// Embed
+
+			&-embed {}
+
+			// Content
+
+			&-content {
+				padding: 20px 20px 25px
+			}
+
+			// Title
+
+			&-title {
+				font-weight: 400;
+			}
+
+			// Address
+
+			&-address {
+				padding-bottom: 30px;
+			}
+
+			// CTA
+
+			&-cta {
+				color: #093aa3;
+				font-family: $heading-style;
+				font-weight: 600;
+				padding-bottom: 5px;
+			}
+
+			// Button
+
+			&-button {
+				background: #ffffff;
+				border: 2px solid #01389f;
+				border-radius: 5px;
+				color: #01389f;
+				display: inline-block;
+				font-family: $heading-style;
+				padding: 6px 12px;
+				transition: all 250ms ease-in-out;
+
+				&:hover {
+					background: #01389f;
+					color: #ffffff;
+				}
+			}
+
+			// Spots
+
+			&-spots {
+				color: #f4ba20;
+				font-family: $heading-style;
+				margin-top: 7px;
+				padding-bottom: 0;
+
+				@media (min-width: 1200px) {
+					display: inline-block;
+					margin-left: 7px;
+					margin-top: 0;
+				}
+			}
+		}
+
+		// Content
+
+		&-content {
+			margin-top: 30px;
+
+			@media (min-width: 992px) {
+				margin-top: 0;
+			}
+		}
+
+		// Header
+
+		&-header {
+			background-color: #093aa3;
+			padding: 20px;
+		}
+
+		// Title
+
+		&-title {
+			color: #ffffff;
+		}
+
+		// Subtitle
+
+		&-subtitle {
+			color: #ffffff;
+			margin-bottom: 0;
+		}
+
+		// Card
+
+		&-card {
+			border: 1px solid #ddd;
+			border-top: 0;
+			padding: 20px;
+
+			// Title
+
+			&-title {
+				color: #093aa3;
+				font-size: 22px;
+				font-weight: 400;
+				margin-bottom: 15px;
+			}
+
+			// Text
+
+			&-text {
+				padding-bottom: 0;
+			}
+		}
+	}
+
 	// Section FAQ (copied from single-locations.scss)
 
 	.block-4 {
@@ -552,6 +687,19 @@
 				margin: $lg-space auto;
 
 				// .link { }
+			}
+		}
+	}
+
+	// Modal
+
+	&-modal {
+		.modal-header {
+			background-color: $primary;
+
+			.modal-title,
+			.close {
+				color: #ffffff;
 			}
 		}
 	}
