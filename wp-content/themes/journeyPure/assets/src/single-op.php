@@ -39,7 +39,7 @@ get_header();
 						<div class="jp-op-masthead-text">
 							<p>The decision you make right now becomes your life.</p>
 							<p>If you feel too unmotivated or unsure to make a change, don't worry. That's exactly what the <?php echo esc_html( $op->city ); ?> Clinic is for.</p>
-							<p>Whether it's here or not, make the call and show up. Everything will start to come together after that. You can do this!</p>
+							<p>Whether it's here or not, make the call and show up. Everything will come together after that. <b>You can do this!</b></p>
 						</div>
 
 						<a class="jp-op-masthead-button hide-for-sm" href="tel:844-505-4799" title="Call (844) 505-4799 to talk now."><span class="fas fa-phone"></span> (844) 505-4799</a>
@@ -63,26 +63,22 @@ get_header();
 					<ul class="jp-op-highlights-list">
 						<li class="jp-op-highlights-list-item">
 							<span class="far fa-check-circle jp-op-highlights-list-item-icon"></span>
+							<span class="jp-op-highlights-list-item-title">Works with your schedule</span>
+							<span class="jp-op-highlights-list-item-text">Convenient morning and evening appointments</span>
+						</li>
+
+						<li class="jp-op-highlights-list-item">
+							<span class="far fa-check-circle jp-op-highlights-list-item-icon"></span>
 							<span class="jp-op-highlights-list-item-title">95% satisfaction rating</span>
-							<span class="jp-op-highlights-list-item-text">And, 6000 success stories</span>
+							<span class="jp-op-highlights-list-item-text">And, <i>success rates 2x higher</i> than the national average</span>
 						</li>
+
+						
 
 						<li class="jp-op-highlights-list-item">
 							<span class="far fa-check-circle jp-op-highlights-list-item-icon"></span>
-							<span class="jp-op-highlights-list-item-title">Success rates 2x higher than average</span>
-							<span class="jp-op-highlights-list-item-text">Compared to data from the National Institute on Drug & Alcohol Abuse</span>
-						</li>
-
-						<li class="jp-op-highlights-list-item">
-							<span class="far fa-check-circle jp-op-highlights-list-item-icon"></span>
-							<span class="jp-op-highlights-list-item-title">Masters-level+ clinical and medical team</span>
-							<span class="jp-op-highlights-list-item-text">Who actually care and put you first</span>
-						</li>
-
-						<li class="jp-op-highlights-list-item">
-							<span class="far fa-check-circle jp-op-highlights-list-item-icon"></span>
-							<span class="jp-op-highlights-list-item-title">CARF Gold Seal</span>
-							<span class="jp-op-highlights-list-item-text">Earned only by the top 20% of centers in the country</span>
+							<span class="jp-op-highlights-list-item-title">A treatment team that puts you first</span>
+							<span class="jp-op-highlights-list-item-text">Attack clinical, brain and life issues with a full team that's in recovery too</span>
 						</li>
 
 						<li class="jp-op-highlights-list-item">
@@ -117,7 +113,7 @@ get_header();
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-md-12">
-					<h3 class="jp-op-table-title">Evidenced-Based treatments that attack <span>all</span> the issues that hold you back.</h3>
+					<h3 class="jp-op-table-title">Evidenced-Based treatments for <span>all</span> the issues that hold you back.</h3>
 					<p class="jp-op-table-subtitle">(including things like depression and anxiety)</p>
 				</div>
 			</div>
@@ -126,8 +122,8 @@ get_header();
 				<div class="row">
 					<div class="col-12 col-lg-4">
 						<div class="jp-op-table-card">
-							<img class="jp-op-table-card-img lazy" data-src="/wp-content/themes/journeyPure/assets/img/op/paper-plane.png" alt="Session Types">
-							<h4 class="jp-op-table-card-title">Session Types</h4>
+							<img class="jp-op-table-card-img lazy" data-src="/wp-content/uploads/2020/06/jp-icon-meditation-180x180-1.png" alt="Session Types">
+							<h4 class="jp-op-table-card-title">Sessions</h4>
 
 							<ul class="jp-op-table-card-list">
 								<li class="jp-op-table-card-list-item">Group Therapy</li>
@@ -140,8 +136,8 @@ get_header();
 
 					<div class="col-12 col-lg-4">
 						<div class="jp-op-table-card">
-							<img class="jp-op-table-card-img lazy" data-src="/wp-content/themes/journeyPure/assets/img/op/plane.png" alt="Methodologies">
-							<h4 class="jp-op-table-card-title">Methodologies</h4>
+							<img class="jp-op-table-card-img lazy" data-src="/wp-content/uploads/2020/06/jp-icon-teaching-180x180-1.png" alt="Methodologies">
+							<h4 class="jp-op-table-card-title">Methods</h4>
 
 							<ul class="jp-op-table-card-list">
 								<li class="jp-op-table-card-list-item">CBT and DBT Psychotherapy</li>
@@ -154,14 +150,14 @@ get_header();
 
 					<div class="col-12 col-lg-4">
 						<div class="jp-op-table-card">
-							<img class="jp-op-table-card-img lazy" data-src="/wp-content/themes/journeyPure/assets/img/op/space-ship.png" alt="Medications">
+							<img class="jp-op-table-card-img lazy" data-src="/wp-content/uploads/2020/06/jp-icon-molecular-180x180-1.png" alt="Medications">
 							<h4 class="jp-op-table-card-title">Medications</h4>
 
 							<ul class="jp-op-table-card-list">
-								<li class="jp-op-table-card-list-item">For everyone <a href="javascript:void(0);" class="jp-op-table-card-info" data-toggle="modal" data-target="#jp-op-modal-02"><span class="fas fa-info-circle"></span></a></li>
-								<li class="jp-op-table-card-list-item">For alcohol <a href="javascript:void(0);" class="jp-op-table-card-info" data-toggle="modal" data-target="#jp-op-modal-03"><span class="fas fa-info-circle"></span></a></li>
-								<li class="jp-op-table-card-list-item">For opiates <a href="javascript:void(0);" class="jp-op-table-card-info" data-toggle="modal" data-target="#jp-op-modal-04"><span class="fas fa-info-circle"></span></a></li>
-								<li class="jp-op-table-card-list-item">For underlying issues <a href="javascript:void(0);" class="jp-op-table-card-info" data-toggle="modal" data-target="#jp-op-modal-05"><span class="fas fa-info-circle"></span></a></li>
+								<li class="jp-op-table-card-list-item">Anticravings <a href="javascript:void(0);" class="jp-op-table-card-info" data-toggle="modal" data-target="#jp-op-modal-02"><span class="fas fa-info-circle"></span></a></li>
+								<li class="jp-op-table-card-list-item">Alcohol-Specific <a href="javascript:void(0);" class="jp-op-table-card-info" data-toggle="modal" data-target="#jp-op-modal-03"><span class="fas fa-info-circle"></span></a></li>
+								<li class="jp-op-table-card-list-item">Opiate-Specific <a href="javascript:void(0);" class="jp-op-table-card-info" data-toggle="modal" data-target="#jp-op-modal-04"><span class="fas fa-info-circle"></span></a></li>
+								<li class="jp-op-table-card-list-item">Underlying Issues <a href="javascript:void(0);" class="jp-op-table-card-info" data-toggle="modal" data-target="#jp-op-modal-05"><span class="fas fa-info-circle"></span></a></li>
 							</ul>
 						</div>
 					</div>
@@ -523,7 +519,7 @@ get_header();
 							<?php endforeach; ?>
 						</div>
 
-						<div class="ask-a-question">
+						<div class="ask-a-question" style="display:none;">
 							<span class="btn btn-primary" data-toggle="modal" data-target="#user-question-form-container">Ask a question</span>
 						</div>
 					</div>
