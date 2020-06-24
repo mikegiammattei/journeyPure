@@ -73,8 +73,6 @@ get_header();
 							<span class="jp-op-highlights-list-item-text">And, <i>success rates 2x higher</i> than the national average</span>
 						</li>
 
-						
-
 						<li class="jp-op-highlights-list-item">
 							<span class="far fa-check-circle jp-op-highlights-list-item-icon"></span>
 							<span class="jp-op-highlights-list-item-title">A treatment team that puts you first</span>

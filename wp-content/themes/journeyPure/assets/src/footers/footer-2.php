@@ -3,38 +3,40 @@
 				$Footer = new \Footer\Footer();
 			?>
 
-			<div class="ask-a-question">
-				<div class="container">
-					<h5 class="h1 text-center">Still have questions?</h3>
+			<?php if ( ! is_page_template( 'template-virtual-rehab.php' ) ) : ?>
+				<div class="ask-a-question">
+					<div class="container">
+						<h5 class="h1 text-center">Still have questions?</h3>
 
-					<div class="row">
-						<div class="col-xs-6 col-md-6 text-center bottom-cta">
-							<a href="tel:+1-844-505-4799"><i class="fas fa-phone"></i><h4>Call us: (844) 505-4799</h4></a>
-							<input id="_1" type="checkbox">
-							<label class="drop" for="_1">Or, Get a Call Back »</label>
+						<div class="row">
+							<div class="col-xs-6 col-md-6 text-center bottom-cta">
+								<a href="tel:+1-844-505-4799"><i class="fas fa-phone"></i><h4>Call us: (844) 505-4799</h4></a>
+								<input id="_1" type="checkbox">
+								<label class="drop" for="_1">Or, Get a Call Back »</label>
 
-							<div class="ctm-call-widget-container">
-								<p>Enter your phone number and get a call usually within 5 minutes.</p>
-								<iframe class="ctm-call-widget" src="https://app.calltrackingmetrics.com/form_reactors/FRT472ABB2C5B9B141A95E7A133293232FB64726C81D4381AEFF2617EDD86B68F50" style="width:100%;height:300px;border:none"></iframe>
+								<div class="ctm-call-widget-container">
+									<p>Enter your phone number and get a call usually within 5 minutes.</p>
+									<iframe class="ctm-call-widget" src="https://app.calltrackingmetrics.com/form_reactors/FRT472ABB2C5B9B141A95E7A133293232FB64726C81D4381AEFF2617EDD86B68F50" style="width:100%;height:300px;border:none"></iframe>
+								</div>
 							</div>
-						</div>
 
-						<div class="col-xs-6 col-md-4 text-center bottom-cta" style="display:none;">
-							<a data-toggle="modal" data-target="#main-insurance-form" href="#"><i class="fas fa-id-card"></i> <h4>Submit Insurance</h4></a>
-						</div>
+							<div class="col-xs-6 col-md-4 text-center bottom-cta" style="display:none;">
+								<a data-toggle="modal" data-target="#main-insurance-form" href="#"><i class="fas fa-id-card"></i> <h4>Submit Insurance</h4></a>
+							</div>
 
-						<div class="col-xs-6 col-md-6 text-center bottom-cta">
-							<a href="sms:+18445054799"><i class="fas fa-mobile-alt"></i><h4>Text us: (844) 505-4799</h4></a>
-							<a data-toggle="modal" data-target="#main-insurance-form" href="#" class="insurance-link" style="display:none;">Or, Submit Insurance »</a>
-						</div>
+							<div class="col-xs-6 col-md-6 text-center bottom-cta">
+								<a href="sms:+18445054799"><i class="fas fa-mobile-alt"></i><h4>Text us: (844) 505-4799</h4></a>
+								<a data-toggle="modal" data-target="#main-insurance-form" href="#" class="insurance-link" style="display:none;">Or, Submit Insurance »</a>
+							</div>
 
-						<div class="col-xs-6 col-md-3 text-center bottom-cta" style="display:none;">
-							<i class="fas fa-phone"></i>
-							<h4 class="oswald-med-uppercase jc-blue-dark tablet-desktop"><a href="#" class="track jc-blue-dark" rel="contact endcap: FAQ">FAQ</a></h4>
+							<div class="col-xs-6 col-md-3 text-center bottom-cta" style="display:none;">
+								<i class="fas fa-phone"></i>
+								<h4 class="oswald-med-uppercase jc-blue-dark tablet-desktop"><a href="#" class="track jc-blue-dark" rel="contact endcap: FAQ">FAQ</a></h4>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+			<?php endif; ?>
 
 			<footer class="footer-2">
 				<div class="last-tier">
@@ -70,7 +72,10 @@
 				</div>
 			</footer>
 
-			<?php include_once(get_stylesheet_directory() . '/assets/src/includes/components/cta-widget.php'); ?>
+			<?php if ( ! is_page_template( 'template-virtual-rehab.php' ) ) : ?>
+				<?php include_once(get_stylesheet_directory() . '/assets/src/includes/components/cta-widget.php'); ?>
+			<?php endif; ?>
+
 			<?php include_once(get_stylesheet_directory() . '/assets/src/includes/components/leave-a-review.php'); ?>
 			<?php include_once(get_stylesheet_directory() . '/assets/src/includes/components/not-ready-component.php'); ?>
 			<?php include_once(get_stylesheet_directory() . '/assets/src/includes/components/exit-modal.php'); ?>

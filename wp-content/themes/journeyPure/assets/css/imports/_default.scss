@@ -122,6 +122,14 @@ img{
   border:2px solid #00953B;
   background: white;
 }
+.btn-outline-secondary-big {
+	padding: 15px 20px;
+	text-transform: uppercase;
+
+	span:first-child {
+		margin-right: 5px;
+	}
+}
 .btn-social{
   position: relative;
   padding-left: 44px;
