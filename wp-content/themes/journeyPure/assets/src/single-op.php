@@ -64,25 +64,25 @@ get_header();
 						<li class="jp-op-highlights-list-item">
 							<span class="far fa-check-circle jp-op-highlights-list-item-icon"></span>
 							<span class="jp-op-highlights-list-item-title">Works with your schedule</span>
-							<span class="jp-op-highlights-list-item-text">Convenient morning and evening appointments</span>
+							<p class="jp-op-highlights-list-item-text">Convenient morning and evening appointments</p>
 						</li>
 
 						<li class="jp-op-highlights-list-item">
 							<span class="far fa-check-circle jp-op-highlights-list-item-icon"></span>
 							<span class="jp-op-highlights-list-item-title">95% satisfaction rating</span>
-							<span class="jp-op-highlights-list-item-text">And, <i>success rates 2x higher</i> than the national average</span>
+							<p class="jp-op-highlights-list-item-text">And, <i>success rates 2x higher</i> than the national average</p>
 						</li>
 
 						<li class="jp-op-highlights-list-item">
 							<span class="far fa-check-circle jp-op-highlights-list-item-icon"></span>
 							<span class="jp-op-highlights-list-item-title">A treatment team that puts you first</span>
-							<span class="jp-op-highlights-list-item-text">Attack clinical, brain and life issues with a full team that's in recovery too</span>
+							<p class="jp-op-highlights-list-item-text">Attack clinical, brain and life issues with a full team that's in recovery too</p>
 						</li>
 
 						<li class="jp-op-highlights-list-item">
 							<span class="far fa-check-circle jp-op-highlights-list-item-icon"></span>
 							<span class="jp-op-highlights-list-item-title">In-network with almost every insurance</span>
-							<span class="jp-op-highlights-list-item-text">So any cost to you is as low as possible</span>
+							<p class="jp-op-highlights-list-item-text">So any cost to you is as low as possible</p>
 						</li>
 					</ul>
 
@@ -179,7 +179,7 @@ get_header();
 
 				<?php if ( ! empty( $op->bios->subheading ) ) : ?>
 					<div class="subheading">
-						<p><?php echo esc_html( $op->bios->subheading ); ?></p>
+						<p class="h3"><?php echo esc_html( $op->bios->subheading ); ?></p>
 					</div>
 				<?php endif; ?>
 
@@ -273,7 +273,7 @@ get_header();
 							</div>
 
 							<div class="jp-op-reviews-card-review">
-								<p>JourneyPure IOP is the first and only treatment program I have ever tried. I came into the program with 20 years of using and abusing under my belt, and now I am coming up on 2 years sober in November. <strong>The program literally saved my life.</strong></p>
+								<p>JourneyPure IOP is the <b>first and only treatment program</b> I have ever tried. I came into the program with 20 years of using and abusing under my belt, and now I am coming up on <b>2 years sober</b> in November. The program literally <b>saved my life.</b></p>
 							</div>
 						</div>
 					</div>
@@ -309,7 +309,7 @@ get_header();
 							</div>
 
 							<div class="jp-op-reviews-card-review">
-								<p><strong>I enjoyed going to class</strong> and even asked for extra days. I'm so grateful there's an alumni meeting I can attend so that I can check in with everybody. I feel like all of the workers truly care about you <strong>with no judgment</strong>.</p>
+								<p>I <b>enjoyed going</b> to class and even <b>asked for extra days</b>. I am so grateful there's an alumni meeting I can attend so that I can check in with everybody. I feel like all of the workers <b>truly care about you</b> with <b>no judgment</b>.</p>
 							</div>
 						</div>
 					</div>
@@ -347,7 +347,7 @@ get_header();
 							</div>
 
 							<div class="jp-op-reviews-card-review">
-								<p>I had been to other IOP programs before but JourneyPure was by far the most helpful. The staff and therapist <strong>actually cared</strong> about your recovery and I am in contact with most of them still to this day.</p>
+								<p>I had <b>been to other IOP programs</b> before but JourneyPure was by far the <b>most helpful</b>. The staff and therapists <b>actually cared</b> and I am <b>still in contact</b> with most of them still to this day.</p>
 							</div>
 						</div>
 					</div>
@@ -383,7 +383,7 @@ get_header();
 							</div>
 
 							<div class="jp-op-reviews-card-review">
-								<p>Everyone at Journey Pure went above &amp; beyond to <strong>tailor a treatment plan to meet my specific needs &amp; goals</strong>. Everyone from the Dr. to the staff and the therapists were super empathetic... A truly custom and dignified experience!</p>
+								<p>Everyone at Journey Pure went <b>above and beyond</b> to tailor a treatment plan to meet my <b>specific needs</b> &amp; goals. Everyone from the Dr. to the staff and the therapists were <b>super empathetic</b>...</p>
 							</div>
 						</div>
 					</div>
@@ -399,6 +399,46 @@ get_header();
 	<section class="jp-op-section jp-op-location">
 		<div class="container">
 			<div class="row">
+			
+							<div class="col-12 col-lg-7">
+					<div class="jp-op-location-content">
+						<div class="jp-op-location-header">
+							<h1 class="jp-op-location-title">You can do this!</h1>
+							<h3 class="jp-op-location-subtitle">Get information without commitment.</h3>
+						</div>
+
+						<div class="jp-op-location-card">
+							<h4 class="jp-op-location-card-title">1. Make the Call</h4>
+							<p class="jp-op-location-card-text">The first step is to call. You can finally talk honestly about what's going on with someone who's been there before too.</p>
+							<div class="jp-op-location-map-bottom">
+								<p class="jp-op-location-map-cta">Let's Talk Now</p>
+								<a class="jp-op-location-map-button hide-for-sm" href="tel:844-505-4799" title="Call (844) 505-4799 to talk now."><span class="fas fa-phone"></span> (844) 505-4799</a>
+								<a class="jp-op-location-map-button show-for-sm" href="javascript:void(0);" data-toggle="tooltip" data-placement="top" data-trigger="click" title="Call (844) 505-4799 to talk now."><span class="fas fa-phone"></span> (844) 505-4799</a>
+
+								<?php
+									$location_status_data  = 'Only ' . esc_html( $op->location->status->availableRoomCount ) . ' ';
+									$location_status_data .= ( 1 === $op->location->status->availableRoomCount ) ? ' spot' : ' spots';
+									$location_status_data .= ' available';
+								?>
+
+								<p class="jp-op-location-map-spots">
+									<i class="fa fa-info-circle"></i> <b><?php echo esc_html( $location_status_data ); ?></b>
+								</p>
+							</div>
+						</div>
+
+						<div class="jp-op-location-card">
+							<h4 class="jp-op-location-card-title">2. Check Insurance</h4>
+							<p class="jp-op-location-card-text">If you have insurance, we will check the policy. Either way, we'll give you all the cost information, but you don't pay anything until you actually have your first session.</p>
+						</div>
+
+						<div class="jp-op-location-card">
+							<h4 class="jp-op-location-card-title">3. Show up</h4>
+							<p class="jp-op-location-card-text">Once you're scheduled for an appointment time to come in, all you have to do is show up. You'll be amazed at how your life starts to change as you keep just showing up.</p>
+						</div>
+					</div>
+				</div>
+			
 				<div class="col-12 col-lg-5">
 					<div class="jp-op-location-map">
 						<?php
@@ -425,48 +465,12 @@ get_header();
 								<?php echo esc_html( $op->location->zip ); ?>
 							</p>
 
-							<div class="jp-op-location-map-bottom">
-								<p class="jp-op-location-map-cta">Let's Talk Now</p>
-								<a class="jp-op-location-map-button hide-for-sm" href="tel:844-505-4799" title="Call (844) 505-4799 to talk now."><span class="fas fa-phone"></span> (844) 505-4799</a>
-								<a class="jp-op-location-map-button show-for-sm" href="javascript:void(0);" data-toggle="tooltip" data-placement="top" data-trigger="click" title="Call (844) 505-4799 to talk now."><span class="fas fa-phone"></span> (844) 505-4799</a>
-
-								<?php
-									$location_status_data  = 'Only ' . esc_html( $op->location->status->availableRoomCount ) . ' ';
-									$location_status_data .= ( 1 === $op->location->status->availableRoomCount ) ? ' spot' : ' spots';
-									$location_status_data .= ' available';
-								?>
-
-								<p class="jp-op-location-map-spots">
-									<i class="fa fa-info-circle"></i> <b><?php echo esc_html( $location_status_data ); ?></b>
-								</p>
-							</div>
+							
 						</div>
 					</div>
 				</div>
 
-				<div class="col-12 col-lg-7">
-					<div class="jp-op-location-content">
-						<div class="jp-op-location-header">
-							<h1 class="jp-op-location-title">You can do this!</h1>
-							<h3 class="jp-op-location-subtitle">Get information without commitment.</h3>
-						</div>
 
-						<div class="jp-op-location-card">
-							<h4 class="jp-op-location-card-title">1. Make the Call</h4>
-							<p class="jp-op-location-card-text">The first step is to call. You can finally talk honestly about what's going on with someone who's been there before too.</p>
-						</div>
-
-						<div class="jp-op-location-card">
-							<h4 class="jp-op-location-card-title">2. Check Insurance</h4>
-							<p class="jp-op-location-card-text">If you have insurance, we will check the policy. Either way, we'll give you all the cost information, but you don't pay anything until you actually have your first session.</p>
-						</div>
-
-						<div class="jp-op-location-card">
-							<h4 class="jp-op-location-card-title">3. Show up</h4>
-							<p class="jp-op-location-card-text">Once you're scheduled for an appointment time to come in, all you have to do is show up. You'll be amazed at how your life starts to change as you keep just showing up.</p>
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
 	</section>

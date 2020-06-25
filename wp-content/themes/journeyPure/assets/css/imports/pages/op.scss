@@ -120,7 +120,7 @@
 			padding-left: 0;
 
 			@media screen and (min-width: 768px) {
-				margin-bottom: 30px;
+				margin-bottom: 0;
 			}
 
 			&-item {
@@ -184,6 +184,7 @@
 
 				@media screen and (min-width: 992px) {
 					display: flex;
+					    margin-top: -35px;
 				}
 			}
 		}
@@ -464,6 +465,10 @@
 				margin-bottom: 30px;
 			}
 		}
+		
+		b {
+		font-size:1.25em;
+		}
 
 		&-card {
 			background-color: #ffffff;
@@ -475,6 +480,7 @@
 			&-author {
 				margin-bottom: 20px;
 			}
+			
 
 			&-image {
 				border-radius: 50%;
@@ -517,8 +523,9 @@
 
 		&-map {
 			background-color: #f2f3f4;
-			border-radius: 5px;
+			border-radius: 3px;
 			overflow: hidden;
+			padding: 15px 15px 0;
 
 			// Embed
 
@@ -531,7 +538,7 @@
 			// Content
 
 			&-content {
-				padding: 20px 20px 25px
+				padding: 20px 20px 10px;
 			}
 
 			// Title
@@ -548,9 +555,10 @@
 
 			&-bottom {
 				background-color: #e1e7f5;
-				border-radius: 5px;
+				border-radius: 3px;
 				padding: 15px;
 				text-align: center;
+				margin-top:20px;
 			}
 
 			// CTA
@@ -565,7 +573,6 @@
 			// Button
 
 			&-button {
-				background: #ffffff;
 				border: 2px solid #01389f;
 				border-radius: 5px;
 				color: #01389f;
@@ -665,7 +672,7 @@
 		.heading {
 			margin: auto;
 			max-width: 900px;
-			text-align: left;
+			text-align: center;
 
 			.lead {
 				@extend .h3;
