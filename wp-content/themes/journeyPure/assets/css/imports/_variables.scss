@@ -1,6 +1,7 @@
 /***************************\
 / 		Font Awesome        \
 /***************************/
+
 $fa-font-path: "/wp-content/themes/journeyPure/fonts/webfonts";
 
 /***************************\
@@ -9,11 +10,11 @@ $fa-font-path: "/wp-content/themes/journeyPure/fonts/webfonts";
 
 // Grid
 $container-max-widths: (
-		sm: 540px,
-		md: 720px,
-		lg: 960px,
-		//xl: 1366px
-		xl: 1341px
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	//xl: 1366px
+	xl: 1341px
 ) !default;
 
 // Breakpoints
@@ -37,7 +38,7 @@ $stars:rgba(251, 188, 6, 0.7);
 $light-blue:#e0e7f5;
 $dark: #9A9C99;
 
-  // Section Spacing
+// Section Spacing
 $xl-space: 50px;
 $lg-space: 25px;
 $md-space: 15px;
@@ -50,4 +51,5 @@ $md-width: 700px;
 // Fonts
 $heading-font: 'Montserrat', sans-serif;
 $heading-style: 'Montserrat', sans-serif;
-$heading-style-1: Georgia, "Times New Roman", Times, serif; 
+$heading-style-1: Georgia, "Times New Roman", Times, serif;
+$font-family-base: 'Montserrat', sans-serif;
