@@ -57,7 +57,9 @@
 	  font-weight: 100;
 	  font-style: italic;
 	  font-family: $heading-style-1;
-
+	  p {
+		color: hsl(221,50%,92%);
+	  }
 	}
   }
 
@@ -77,5 +79,3 @@
 	}
   }
 }
-
-

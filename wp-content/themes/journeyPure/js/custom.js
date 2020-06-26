@@ -1408,6 +1408,15 @@ $(document).ready(function () {
       $curr.addClass("active");
       $curr.prevAll().addClass("visited");
     }); // end  script for tab steps
+  } // Section Masthead (Layout V2)
+
+
+  var video = $('#single-location .youtube-video-place');
+
+  if (video.length > 0) {
+    video.on('click', function () {
+      video.html('<iframe allowfullscreen allow="autoplay; encrypted-media" frameborder="0" class="embed-responsive-item" src="' + video.data('yt-url') + '"></iframe>');
+    });
   }
 });
 "use strict";

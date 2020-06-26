@@ -82,6 +82,8 @@ class Location
 			'subheading' => $this->fields['above_fold']['sub_heading'],
 			'h1' => ($this->fields['above_fold']['location_text_overlay']['h1_heading']) ? : null,
 			'h2' => ($this->fields['above_fold']['location_text_overlay']['h2_heading']) ? : null,
+			'layout_v2' => $this->fields['above_fold']['layout_v2']['layout_v2'],
+			'youtube_video_id' => $this->fields['above_fold']['layout_v2']['youtube_video_id'],
 		);
 	}
 	private function setBlock2(){
@@ -209,7 +211,7 @@ class Location
 		);
 		if($results){
 			$results = json_decode($results[0]->data,true);
-			
+
 		}else{
 			$results = array();
 		}
