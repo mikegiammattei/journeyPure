@@ -98,7 +98,7 @@ $footerVersion = 2;
 		<section class="block-4">
 			<div class="container">
 				<div class="service-container">
-					<h5 class="heading">You Have Options</h5>
+					<h5 class="heading">It's Time to Make a Change</h5>
 					<div class="row">
 						<div class="col-md-3">
 							<div class="box">
@@ -329,8 +329,8 @@ $footerVersion = 2;
             <div class="p-2">
               <div class="h5">Active Accountability</div>
               <ul>
-                <li>Your Accountability Coach can be reached 24/7 through the alumni app – available to you forever for free. They've been where you are and can show you how to stay on track <b>long after treatment</b> here.</li>
-                <li>The app also has an 11-module self-help course and gives you <b>real rewards</b> for making healthy choices.</li>
+                <li>Your Accountability Coach can be reached 24/7 through the <b>alumni app</b> – available to you forever for free. They've been where you are and can show you how to <b>stay on track </b>long after treatment here.</li>
+                <li>The app also has an 11-module <b>self-help course</b> and gives you real rewards for making healthy choices.</li>
               </ul>
             </div>
           </div>
@@ -341,7 +341,7 @@ $footerVersion = 2;
             <div class="p-2">
               <div class="h5">World-Renowned Experts</div>
               <ul>
-                <li>Effective treatment addresses the wide range of issues that <b>hide behind alcohol and drugs</b> - like trauma and anxiety. It takes a team of specialists to attack the disease at all angles.</li>
+                <li>Effective treatment addresses the wide range of <b>issues that hide behind alcohol and drugs</b> - like trauma and anxiety. It takes a team of specialists to attack the disease at all angles.</li>
                 <li>If you've sought treatment before, you know how critical it is to get <b>individualized attention</b> from experienced professionals who actually care.</li>
               </ul>
             </div>
@@ -517,7 +517,7 @@ $footerVersion = 2;
                 <div class="col-md-6 order-md-1">
                   <div class="design-process-content-inner">
                     <h5 class="semi-bold">1. Make The Call</h5>
-                    <p>Even if you're not ready to commit to JourneyPure or not sure if you want treatment at all, talk about what's going on with someone that's been there before. You'll feel better and more informed after you call, I promise.</p>
+                    <p>Because we sometimes operate on waitlists, it's best to call in as early as possible. You don't have to commit to coming here and you'll feel better after you talk to someone who actually understands.</p>
                     <div class="note-cta"><i class="fas fa-phone"></i> <?php echo get_option('defaultPhone'); ?></div>
                   </div>
                 </div>
@@ -536,7 +536,7 @@ $footerVersion = 2;
                 <div class="col-sm-12">
                   <div class="design-process-content-inner">
                     <h5 class="semi-bold">2. Discuss Any Costs</h5>
-                    <p>Insurance covers the majority of your cost here! How much you owe depends on deductable and co-insurance rates set by each policy. Don't worry, we'll call your insruance company, then explain the details of your specific insurance policy. You can privately <a data-toggle="modal" data-target="#main-insurance-form" href="#">submit insurance information online</a>.</p>
+                    <p>Insurance covers the majority of your cost here! How much you owe depends on deductable and co-insurance rates set by each policy. Don't worry, we'll get with your insruance company, then explain the details of your specific insurance policy. You can privately <a data-toggle="modal" data-target="#main-insurance-form" href="#">submit insurance information online</a>.</p>
                     <p>(If you don't have insurance, you still have options. We can talk about that too.)</p>
                   </div>
                 </div>
@@ -555,7 +555,7 @@ $footerVersion = 2;
                 <div class="col-sm-12">
                   <div class="design-process-content-inner">
                     <h5 class="semi-bold">3. Start Treatment</h5>
-                    <p>Our locations often operate on waiting lists, but we're as accommodating as possible with the schedule. It helps to call early in your decision process and come in while you're still motivated.</p>
+                    <p>We're as accommodating as possible with the schedule. It helps to call early in your decision process and come in while you're still motivated.</p>
 			              <p>The first thing you notice when you walk in to the <a href="/locations/florida/">Florida</a>, <a href="/locations/kentucky/">Kentucky</a>, <a href="/locations/tennessee/">Murfreesboro</a> or <a href="/locations/knoxville/">Knoxville</a> rehabs and Outpatient or <a href="/suboxone-clinics/">Suboxone Clinics</a> is an overwhelming sense of hope and compassion. You're surrounded by people that actually understand what you're going through.</p>
                   </div>
                 </div>

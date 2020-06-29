@@ -23,7 +23,7 @@ get_header();
 			<div class="row">
 				<div class="col-12 col-lg-5 order-lg-2">
 					<div class="jp-vr-masthead-img-wrapper">
-						<img class="jp-vr-masthead-img lazy" data-src="/wp-content/uploads/2020/06/phone.png" alt="Mobile">
+						<img class="jp-vr-masthead-img lazy" data-src="/wp-content/uploads/2020/06/iphone-with-app.png" alt="Mobile">
 					</div>
 				</div>
 
@@ -49,44 +49,38 @@ get_header();
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-md-6 col-lg-6 offset-lg-1">
-					<h3 class="jp-vr-highlights-title">Online Rehab Highlights</h3>
+					<h3 class="jp-vr-highlights-title">Virtual Rehab Highlights</h3>
 
 					<ul class="jp-vr-highlights-list">
 						<li class="jp-vr-highlights-list-item">
 							<span class="far fa-check-circle jp-vr-highlights-list-item-icon"></span>
-							<span class="jp-vr-highlights-list-item-title">95% satisfaction rating</span>
-							<span class="jp-vr-highlights-list-item-text">And, 6000 success stories</span>
+							<span class="jp-vr-highlights-list-item-title">100% online</span>
+							<span class="jp-vr-highlights-list-item-text">Convenient to work around your schedule.</span>
 						</li>
 
 						<li class="jp-vr-highlights-list-item">
 							<span class="far fa-check-circle jp-vr-highlights-list-item-icon"></span>
-							<span class="jp-vr-highlights-list-item-title">Success rates 2x higher than average</span>
-							<span class="jp-vr-highlights-list-item-text">Compared to data from the National Institute on Drug &amp; Alcohol Abuse</span>
+							<span class="jp-vr-highlights-list-item-title">Created by Industry Pros</span>
+							<span class="jp-vr-highlights-list-item-text">JourneyPure has 6K+ success stories and 18 locations across the country.</span>
 						</li>
 
 						<li class="jp-vr-highlights-list-item">
 							<span class="far fa-check-circle jp-vr-highlights-list-item-icon"></span>
-							<span class="jp-vr-highlights-list-item-title">Masters-level+ clinical and medical team</span>
-							<span class="jp-vr-highlights-list-item-text">Who actually care and out you first</span>
+							<span class="jp-vr-highlights-list-item-title">Goes Beyond Therapy</span>
+							<span class="jp-vr-highlights-list-item-text">Includes medical appointments, peer support and life coaching</span>
 						</li>
 
-						<li class="jp-vr-highlights-list-item">
-							<span class="far fa-check-circle jp-vr-highlights-list-item-icon"></span>
-							<span class="jp-vr-highlights-list-item-title">CARF Gold Seal</span>
-							<span class="jp-vr-highlights-list-item-text">Earned only by the top 20% of centers in the country</span>
-						</li>
-
-						<li class="jp-vr-highlights-list-item">
+						<!-- <li class="jp-vr-highlights-list-item">
 							<span class="far fa-check-circle jp-vr-highlights-list-item-icon"></span>
 							<span class="jp-vr-highlights-list-item-title">In-network with almost every insurance</span>
 							<span class="jp-vr-highlights-list-item-text">So any cost to you is as low as possible</span>
-						</li>
+						</li> -->
 					</ul>
 
-					<div class="jp-vr-highlights-img-logos-wrapper">
+					<!-- <div class="jp-vr-highlights-img-logos-wrapper">
 						<img class="jp-vr-highlights-img-logos lazy" data-src="<?php echo esc_attr( $virtual_rehab->highlights_insurers_image_1['url'] ); ?>" alt="<?php echo esc_attr( $virtual_rehab->highlights_insurers_image_1['alt'] ); ?>">
 						<img class="jp-vr-highlights-img-logos lazy" data-src="<?php echo esc_attr( $virtual_rehab->highlights_insurers_image_2['url'] ); ?>" alt="<?php echo esc_attr( $virtual_rehab->highlights_insurers_image_2['alt'] ); ?>">
-					</div>
+					</div> -->
 
 					<!-- <div class="jp-vr-highlights-button-wrapper">
 						<button type="button" data-toggle="modal" data-target="#main-insurance-form" class="jp-vr-highlights-button"><span class="fas fa-id-card"></span> Check Insurance</button>
@@ -108,8 +102,8 @@ get_header();
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
-					<h3 class="jp-vr-table-title">This Online Rehab Program is Likely Your Best Option</h3>
-					<p class="jp-vr-table-subtitle">Get help from experts that understand addiction pesonally<br>and professionally in the convenience of your home.</p>
+					<h3 class="jp-vr-table-title">The Most Comprehensive AND Convenient Way to Get Help</h3>
+					<p class="jp-vr-table-subtitle">Get help from experts that actually understand drug and alcohol issues - without ever leaving your house.</p>
 				</div>
 			</div>
 
@@ -117,20 +111,20 @@ get_header();
 				<div class="row">
 					<div class="col-12 col-lg-4">
 						<div class="jp-vr-table-card">
-							<img class="jp-vr-table-card-img lazy" data-src="https://journeypure.com/wp-content/uploads/2020/06/paper-plane.png" alt="Other Online Services">
-							<h4 class="jp-vr-table-card-title">Other Online Services</h4>
+							<img class="jp-vr-table-card-img lazy" data-src="https://journeypure.com/wp-content/uploads/2020/06/jp-icon-online-services-180x180-1.png" alt="Other Online Services">
+							<h4 class="jp-vr-table-card-title">Virtual Rehab Vs. Other Online Services</h4>
 
 							<ul class="jp-vr-table-card-list">
-								<li class="jp-vr-table-card-list-item">Specific to addiction (&amp; only addiction)</li>
-								<li class="jp-vr-table-card-list-item">Combination of medical and clinical and life support to tackle the full issues</li>
+								<li class="jp-vr-table-card-list-item">Understand & specialized in addiction</li>
+								<li class="jp-vr-table-card-list-item">Includes medical and life coaching to tackle the issues beyond therapy</li>
 							</ul>
 						</div>
 					</div>
 
 					<div class="col-12 col-lg-4">
 						<div class="jp-vr-table-card">
-							<img class="jp-vr-table-card-img lazy" data-src="https://journeypure.com/wp-content/uploads/2020/06/plane.png" alt="Going In-person">
-							<h4 class="jp-vr-table-card-title">Going In-person</h4>
+							<img class="jp-vr-table-card-img lazy" data-src="https://journeypure.com/wp-content/uploads/2020/06/jp-icon-in-person-services-180x180-1.png" alt="Going In-person">
+							<h4 class="jp-vr-table-card-title">Virtual Rehab Vs. Going In-person</h4>
 
 							<ul class="jp-vr-table-card-list">
 								<li class="jp-vr-table-card-list-item">Convenient</li>
@@ -142,12 +136,12 @@ get_header();
 
 					<div class="col-12 col-lg-4">
 						<div class="jp-vr-table-card">
-							<img class="jp-vr-table-card-img lazy" data-src="https://journeypure.com/wp-content/uploads/2020/06/space-ship.png" alt="Doing Nothing">
-							<h4 class="jp-vr-table-card-title">Doing Nothing</h4>
+							<img class="jp-vr-table-card-img lazy" data-src="https://journeypure.com/wp-content/uploads/2020/06/jp-icon-no-services-180x180-1.png" alt="Doing Nothing">
+							<h4 class="jp-vr-table-card-title">Virtual Rehab Vs. Doing Nothing</h4>
 
 							<ul class="jp-vr-table-card-list">
 								<li class="jp-vr-table-card-list-item">If you could "just stop" on your own, you wouldn't be on this site</li>
-								<li class="jp-vr-table-card-list-item">Drug &amp; alcohol issues are proven to get worse without treatment</li>
+								<li class="jp-vr-table-card-list-item">Drug &amp; alcohol issues get worse without treatment</li>
 							</ul>
 						</div>
 					</div>
@@ -175,7 +169,7 @@ get_header();
 
 			<div class="row">
 				<div class="col-12 col-lg-5">
-					<img class="jp-vr-components-img lazy" data-src="/wp-content/uploads/2020/06/doctor.png" alt="Doctor">
+					<img class="jp-vr-components-img lazy" data-src="https://journeypure.com/wp-content/uploads/2020/06/jp-brian-wind-signature.jpg" alt="Doctor">
 				</div>
 
 				<div class="col-12 col-lg-7">
@@ -255,7 +249,7 @@ get_header();
 							<h5 class="jp-vr-cards-card-title">Individual Therapy</h5>
 
 							<div class="jp-vr-cards-card-text">
-								<p>You talk privately with your therapist and need.</p>
+								<p>Talk privately with your therapist and learn to process past traumas, current triggers and future worries in ways that aren't self-destructive. </p>
 							</div>
 						</div>
 					</div>
@@ -263,13 +257,14 @@ get_header();
 					<div class="col-12 col-md-6 col-lg-4">
 						<div class="jp-vr-cards-card">
 							<div class="jp-vr-cards-card-image">
-								<i class="fas fa-user"></i>
+								<i class="fas fa-users"></i>
 							</div>
 
-							<h5 class="jp-vr-cards-card-title">Individual Therapy</h5>
+							<h5 class="jp-vr-cards-card-title">Group Therapy</h5>
 
 							<div class="jp-vr-cards-card-text">
-								<p>You talk privately with your therapist and need (you can invite a spouse or other family member to work on healing the relathionship too).</p>
+								<p>Be held accountable by people that are going through the same thing, learn from their lessons and make a friend to support each other forever.
+</p>
 							</div>
 						</div>
 					</div>
@@ -277,13 +272,13 @@ get_header();
 					<div class="col-12 col-md-6 col-lg-4">
 						<div class="jp-vr-cards-card">
 							<div class="jp-vr-cards-card-image">
-								<i class="fas fa-user"></i>
+								<i class="fas fa-user-md"></i>
 							</div>
 
-							<h5 class="jp-vr-cards-card-title">Individual Therapy</h5>
+							<h5 class="jp-vr-cards-card-title">Medications</h5>
 
 							<div class="jp-vr-cards-card-text">
-								<p>You talk privately with your therapist and need (you can invite a spouse or other family member to work on healing the relathionship too).</p>
+								<p>While not a cure, medications can be critical to rebalance your brain. Whether it's anti-cravings like Vivitrol or Suboxone or to address underlying issues like antidepressants. </p>
 							</div>
 						</div>
 					</div>
@@ -291,13 +286,13 @@ get_header();
 					<div class="col-12 col-md-6 col-lg-4">
 						<div class="jp-vr-cards-card">
 							<div class="jp-vr-cards-card-image">
-								<i class="fas fa-user"></i>
+								<i class="fas fa-street-view"></i>
 							</div>
 
-							<h5 class="jp-vr-cards-card-title">Individual Therapy</h5>
+							<h5 class="jp-vr-cards-card-title">Support Meetings</h5>
 
 							<div class="jp-vr-cards-card-text">
-								<p>You talk privately with your therapist and need (you can invite a spouse or other family member to work on healing the relathionship too).</p>
+								<p>Online meetings run 24/7. They are a way to ensure you have support if you feel triggered at 3 AM. </p>
 							</div>
 						</div>
 					</div>
@@ -305,13 +300,13 @@ get_header();
 					<div class="col-12 col-md-6 col-lg-4">
 						<div class="jp-vr-cards-card">
 							<div class="jp-vr-cards-card-image">
-								<i class="fas fa-user"></i>
+								<i class="fas fa-hands-helping"></i>
 							</div>
 
-							<h5 class="jp-vr-cards-card-title">Individual Therapy</h5>
+							<h5 class="jp-vr-cards-card-title">Recovery Coaching </h5>
 
 							<div class="jp-vr-cards-card-text">
-								<p>You talk privately with your therapist and need (you can invite a spouse or other family member to work on healing the relathionship too).</p>
+								<p>Your Recovery Life Coach helps you meet your goals. They've been there before and now what it takes to stay on track - available via text or calls.</p>
 							</div>
 						</div>
 					</div>
@@ -319,13 +314,13 @@ get_header();
 					<div class="col-12 col-md-6 col-lg-4">
 						<div class="jp-vr-cards-card">
 							<div class="jp-vr-cards-card-image">
-								<i class="fas fa-user"></i>
+								<i class="fas fa-book"></i>
 							</div>
 
-							<h5 class="jp-vr-cards-card-title">Individual Therapy</h5>
+							<h5 class="jp-vr-cards-card-title">Self-Help Course</h5>
 
 							<div class="jp-vr-cards-card-text">
-								<p>You talk privately with your therapist and need (you can invite a spouse or other family member to work on healing the relathionship too).</p>
+								<p>The JourneyPure app gives you personalized content and reminders that reward you for making healthy choices (with points exchanged for real gift cards).</p>
 							</div>
 						</div>
 					</div>
@@ -448,7 +443,7 @@ get_header();
 
 			<div class="row">
 				<div class="col-12">
-					<button type="button" class="btn btn-outline-secondary jp-vr-process-button"><span class="fas fa-calendar-alt"></span> Schedule now ($40)</button>
+					<button type="button" class="btn btn-outline-secondary jp-vr-process-button"><span class="fas fa-calendar-alt"></span> Schedule now</button>
 				</div>
 			</div>
 		</div>

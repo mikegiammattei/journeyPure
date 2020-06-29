@@ -272,6 +272,53 @@ get_header();
 			</div>
 		</section>
 	<?php endif; ?>
+	
+	
+	<?php if ( isset( $location->block4 ) ) : ?>
+		<section class="block-4">
+			<div class="container">
+				<?php if(isset($location->block4->heading) || isset($location->block4->subheading)): ?>
+					<div class="heading">
+						<span class="h1"><?php echo $location->block4->heading; ?>
+							<?php if(isset($location->block4->subheading)): ?>
+								<h2 class="lead"><?php echo $location->block4->subheading; ?></h2>
+							<?php endif; ?>
+						</span>
+					</div>
+				<?php endif; ?>
+				<?php if( isset($location->block4->faqs)): ?>
+					<div class="faqs">
+						<div class="accordion" id="location-faq-rehab">
+							<?php foreach ( $location->block4->faqs as $index => $faq) : ?>
+								<div class="card">
+									<div class="card-header  <?php echo ($index != 0) ? "collapsed" : ""; ?>" data-toggle="collapse" data-target="#l-faq-<?php echo $index; ?>" aria-expanded="true" aria-controls="l-faq-<?php echo $index; ?>" id="l-faq-heading-<?php echo $index; ?>">
+										<div class="question-box">
+											<div class="icon">
+												<i class="fas fa-plus-circle off"></i>
+												<i class="fas fa-minus-circle on"></i>
+											</div>
+											<div class="title">
+												<h5 class="card-title"><?php echo $faq->question; ?></h5>
+											</div>
+										</div>
+									</div>
+									<div id="l-faq-<?php echo $index; ?>" class="collapse <?php echo ($index == 0) ? "show" : ""; ?>" aria-labelledby="l-faq-heading-<?php echo $index; ?>" data-parent="#location-faq-rehab">
+										<div class="card-body">
+											<?php echo $faq->answer; ?>
+										</div>
+									</div>
+								</div>
+							<?php endforeach; ?>
+						</div>
+						<div class="ask-a-question">
+							<span class="btn btn-primary" data-toggle="modal" data-target="#user-question-form-container">Ask a question</span>
+						</div>
+					</div>
+				<?php endif; ?>
+			</div>
+		</section>
+	
+	
 
 	<?php if ( isset( $location->reviews ) ) : ?>
 		<section class="review-section">
@@ -519,49 +566,7 @@ get_header();
 		</div>
 	</section>
 
-	<?php if ( isset( $location->block4 ) ) : ?>
-		<section class="block-4">
-			<div class="container">
-				<?php if(isset($location->block4->heading) || isset($location->block4->subheading)): ?>
-					<div class="heading">
-						<span class="h1"><?php echo $location->block4->heading; ?>
-							<?php if(isset($location->block4->subheading)): ?>
-								<h2 class="lead"><?php echo $location->block4->subheading; ?></h2>
-							<?php endif; ?>
-						</span>
-					</div>
-				<?php endif; ?>
-				<?php if( isset($location->block4->faqs)): ?>
-					<div class="faqs">
-						<div class="accordion" id="location-faq-rehab">
-							<?php foreach ( $location->block4->faqs as $index => $faq) : ?>
-								<div class="card">
-									<div class="card-header  <?php echo ($index != 0) ? "collapsed" : ""; ?>" data-toggle="collapse" data-target="#l-faq-<?php echo $index; ?>" aria-expanded="true" aria-controls="l-faq-<?php echo $index; ?>" id="l-faq-heading-<?php echo $index; ?>">
-										<div class="question-box">
-											<div class="icon">
-												<i class="fas fa-plus-circle off"></i>
-												<i class="fas fa-minus-circle on"></i>
-											</div>
-											<div class="title">
-												<h5 class="card-title"><?php echo $faq->question; ?></h5>
-											</div>
-										</div>
-									</div>
-									<div id="l-faq-<?php echo $index; ?>" class="collapse <?php echo ($index == 0) ? "show" : ""; ?>" aria-labelledby="l-faq-heading-<?php echo $index; ?>" data-parent="#location-faq-rehab">
-										<div class="card-body">
-											<?php echo $faq->answer; ?>
-										</div>
-									</div>
-								</div>
-							<?php endforeach; ?>
-						</div>
-						<div class="ask-a-question">
-							<span class="btn btn-primary" data-toggle="modal" data-target="#user-question-form-container">Ask a question</span>
-						</div>
-					</div>
-				<?php endif; ?>
-			</div>
-		</section>
+	
 
 		<section class="location-information">
 			<div class="row">

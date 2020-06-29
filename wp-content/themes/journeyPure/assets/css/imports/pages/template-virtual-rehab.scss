@@ -317,7 +317,7 @@
 			&-img {
 				display: block;
 				margin: 0 auto 25px;
-				max-width: 180px;
+				max-width: 150px;
 			}
 
 			&-title {
@@ -507,7 +507,7 @@
 
 			&-image {
 				align-items: center;
-				background-color: #0054a5;
+				background-color: $primary;
 				border-radius: 50%;
 				color: #eeeeee;
 				display: flex;
@@ -650,7 +650,7 @@
 	// Section Process
 
 	&-process {
-		background-color: #0054a5;
+		background-color: $primary;
 		position: relative;
 
 		.container {
@@ -721,7 +721,7 @@
 		}
 
 		&-divider {
-			background-color: #0054a5;
+			background-color: $primary;
 			display: block;
 			height: 40px;
 			position: relative;
@@ -746,7 +746,7 @@
 			}
 
 			&:after {
-				background-color: #0054a5;
+				background-color: $primary;
 				border-radius: 100%;
 				content: '';
 				display: block;
