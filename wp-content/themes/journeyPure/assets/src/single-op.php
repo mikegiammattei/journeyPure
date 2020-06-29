@@ -16,6 +16,20 @@ get_header();
 
 <div id="jp-op" class="jp-op">
 
+	<!-- SECTION: Note Box -->
+
+	<div class="jp-op-section jp-op-note-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 text-center">
+					<p>If you're looking for Suboxone-only treatment... <a href="/suboxone-clinics/" class="jp-op-note-box-btn">Click Here</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- /SECTION: Note Box -->
+
 	<!-- SECTION: Masthead -->
 
 	<section class="jp-op-section jp-op-masthead">

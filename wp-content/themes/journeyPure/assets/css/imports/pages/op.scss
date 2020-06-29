@@ -20,6 +20,44 @@
 		}
 	}
 
+	// Note Box
+
+	&-note-box {
+		background-color: #ebebeb;
+		color: #333333;
+		padding: 20px 0;
+
+		@media screen and (min-width: 768px) {
+			padding: 20px 0;
+		}
+
+		p, ul, ol {
+			line-height: 1.8;
+
+			&:last-child {
+				padding-bottom: 0;
+			}
+		}
+
+		// Button
+
+		&-btn {
+			border: 2px solid #cbcccb;
+			border-radius: 5px;
+			color: #333333;
+			display: inline-block;
+			font-family: $heading-style;
+			margin-left: 10px;
+			padding: 3px 12px;
+			transition: all 250ms ease-in-out;
+
+			&:hover {
+				background: #cbcccb;
+				color: #333333;
+			}
+		}
+	}
+
 	// Section Masthead
 
 	&-masthead {
@@ -465,7 +503,7 @@
 				margin-bottom: 30px;
 			}
 		}
-		
+
 		b {
 		font-size:1.25em;
 		}
@@ -480,7 +518,7 @@
 			&-author {
 				margin-bottom: 20px;
 			}
-			
+
 
 			&-image {
 				border-radius: 50%;
