@@ -93,8 +93,8 @@ get_header();
 			<div class="container">
 				<div class="row">
 					<div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-						<h1 class="jp-loc-masthead-title"><?php echo esc_html( $location->aboveFold->h1 ); ?></h1>
-						<h2 class="jp-loc-masthead-subtitle"><?php echo esc_html( $location->aboveFold->heading ); ?></h2>
+						<h1 class="jp-loc-masthead-title"><?php echo wp_kses_post( $location->aboveFold->h1 ); ?></h1>
+						<h2 class="jp-loc-masthead-subtitle"><?php echo wp_kses_post( $location->aboveFold->heading ); ?></h2>
 					</div>
 				</div>
 
@@ -111,7 +111,7 @@ get_header();
 					</div>
 
 					<div class="col-12 col-lg-7 order-lg-1">
-						<div class="embed-responsive embed-responsive-16by9 youtube-video-place" style="cursor: pointer; background: transparent url('/wp-content/themes/journeyPure/assets/img/journeypure-rehab-review.jpg') no-repeat center center; background-size: cover;" data-yt-url="https://www.youtube.com/embed/<?php echo esc_attr( $location->aboveFold->youtube_video_id ); ?>?rel=0&showinfo=0&autoplay=1"></div>
+						<div class="embed-responsive embed-responsive-16by9 youtube-video-place" style="cursor: pointer; background: transparent url('<?php echo esc_attr( $location->aboveFold->youtube_video_thumbnail ); ?>') no-repeat center center; background-size: cover;" data-yt-url="https://www.youtube.com/embed/<?php echo esc_attr( $location->aboveFold->youtube_video_id ); ?>?rel=0&showinfo=0&autoplay=1"></div>
 					</div>
 				</div>
 
@@ -272,8 +272,8 @@ get_header();
 			</div>
 		</section>
 	<?php endif; ?>
-	
-	
+
+
 	<?php if ( isset( $location->block4 ) ) : ?>
 		<section class="block-4">
 			<div class="container">
@@ -317,8 +317,8 @@ get_header();
 				<?php endif; ?>
 			</div>
 		</section>
-	
-	
+
+
 
 	<?php if ( isset( $location->reviews ) ) : ?>
 		<section class="review-section">
@@ -566,7 +566,7 @@ get_header();
 		</div>
 	</section>
 
-	
+
 
 		<section class="location-information">
 			<div class="row">

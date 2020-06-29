@@ -84,6 +84,7 @@ class Location
 			'h2' => ($this->fields['above_fold']['location_text_overlay']['h2_heading']) ? : null,
 			'layout_v2' => $this->fields['above_fold']['layout_v2']['layout_v2'],
 			'youtube_video_id' => $this->fields['above_fold']['layout_v2']['youtube_video_id'],
+			'youtube_video_thumbnail' => $this->fields['above_fold']['layout_v2']['youtube_video_thumbnail']['sizes']['large'],
 		);
 	}
 	private function setBlock2(){

@@ -22,14 +22,14 @@ get_header();
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-					<h1 class="jp-op-masthead-title"><?php echo esc_html( $op->masthead_title ); ?></h1>
-					<h2 class="jp-op-masthead-subtitle"><?php echo esc_html( $op->masthead_subtitle ); ?></h2>
+					<h1 class="jp-op-masthead-title"><?php echo wp_kses_post( $op->masthead_title ); ?></h1>
+					<h2 class="jp-op-masthead-subtitle"><?php echo wp_kses_post( $op->masthead_subtitle ); ?></h2>
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="col-12 col-lg-7">
-					<div class="embed-responsive embed-responsive-16by9 youtube-video-place" style="cursor: pointer; background: transparent url('/wp-content/themes/journeyPure/assets/img/journeypure-rehab-review.jpg') no-repeat center center; background-size: cover;" data-yt-url="https://www.youtube.com/embed/kNj08KeNbIA?rel=0&showinfo=0&autoplay=1"></div>
+					<div class="embed-responsive embed-responsive-16by9 youtube-video-place" style="cursor: pointer; background: transparent url('<?php echo esc_attr( $op->masthead_youtube_video_thumbnail['url'] ); ?>') no-repeat center center; background-size: cover;" data-yt-url="https://www.youtube.com/embed/<?php echo esc_attr( $op->masthead_youtube_video_id ); ?>?rel=0&showinfo=0&autoplay=1"></div>
 				</div>
 
 				<div class="col-12 col-lg-5">
@@ -399,7 +399,7 @@ get_header();
 	<section class="jp-op-section jp-op-location">
 		<div class="container">
 			<div class="row">
-			
+
 							<div class="col-12 col-lg-7">
 					<div class="jp-op-location-content">
 						<div class="jp-op-location-header">
@@ -438,7 +438,7 @@ get_header();
 						</div>
 					</div>
 				</div>
-			
+
 				<div class="col-12 col-lg-5">
 					<div class="jp-op-location-map">
 						<?php
@@ -465,7 +465,7 @@ get_header();
 								<?php echo esc_html( $op->location->zip ); ?>
 							</p>
 
-							
+
 						</div>
 					</div>
 				</div>

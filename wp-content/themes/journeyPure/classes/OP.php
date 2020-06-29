@@ -97,8 +97,10 @@ class OP {
 	 * @return void
 	 */
 	private function set_masthead_section() {
-		$this->masthead_title    = $this->fields['title'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
-		$this->masthead_subtitle = $this->fields['subtitle'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
+		$this->masthead_title                   = $this->fields['title'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
+		$this->masthead_subtitle                = $this->fields['subtitle'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
+		$this->masthead_youtube_video_id        = $this->fields['youtube_video_id'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
+		$this->masthead_youtube_video_thumbnail = $this->fields['youtube_video_thumbnail'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
 	}
 
 	/**
