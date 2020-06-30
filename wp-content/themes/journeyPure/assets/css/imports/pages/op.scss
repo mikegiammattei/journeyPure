@@ -23,21 +23,36 @@
 	// Note Box
 
 	&-note-box {
-		background-color: #ebebeb;
-		color: #333333;
-		padding: 20px 0;
+		background-color: #fcf8e3;
+		color: #fbbb06;
+		padding: 10px 0;
 
 		@media screen and (min-width: 768px) {
-			padding: 20px 0;
+			padding: 10px 0;
 		}
 
 		p, ul, ol {
-			line-height: 1.8;
+			color: #fbbb06;
+    font-family: "Montserrat",sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;
+    max-width: 800px;
+    margin: 5px auto;
+    padding: 0 15px;
 
 			&:last-child {
 				padding-bottom: 0;
 			}
 		}
+		a{
+		border-bottom: 2px dotted;
+		    color: #fbbb06;
+						&:hover {
+				color: white !important;
+			}
+		}
+
 
 		// Button
 
@@ -62,13 +77,20 @@
 
 	&-masthead {
 		background-color: #01389f;
+		padding:35px 0;
 
 		&-title {
 			color: #436ebd;
 			font-size: 20px;
-			font-weight: 600;
+			font-weight: normal;
 			letter-spacing: 0;
 			text-align: center;
+						    margin-bottom: 50px;
+			a {
+			color:#436ebd;
+			border-bottom:4px dotted;
+			font-weight:bold;
+			}
 		}
 
 		&-subtitle {
@@ -77,12 +99,13 @@
 			font-weight: 400;
 			letter-spacing: -2px;
 			line-height: 1.1;
-			margin-bottom: 25px;
+			margin-bottom: 10px;
 			text-align: center;
+
 
 			@media screen and (min-width: 768px) {
 				font-size: 45px;
-				margin-bottom: 50px;
+				margin-bottom: 10px;
 			}
 
 			@media screen and (min-width: 992px) {
