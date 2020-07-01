@@ -263,8 +263,7 @@ get_header();
 							<h5 class="jp-vr-cards-card-title">Group Therapy</h5>
 
 							<div class="jp-vr-cards-card-text">
-								<p>Be held accountable by people that are going through the same thing, learn from their lessons and make a friend to support each other forever.
-</p>
+								<p>Be held accountable by people that are going through the same thing, learn from their lessons and make a friend to support each other forever.</p>
 							</div>
 						</div>
 					</div>
@@ -534,4 +533,4 @@ get_header();
 
 <!-- /TEMPLATE: Virtual Rehab -->
 
-<?php get_footer(); ?>
+<?php get_footer();

@@ -18,7 +18,15 @@ get_header();
 
 	<!-- SECTION: Note Box -->
 
-	
+	<!-- <div class="jp-op-section jp-op-note-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 text-center">
+					<p>If you're looking for Suboxone-only treatment... <a href="/suboxone-clinics/" class="jp-op-note-box-btn">Click Here</a></p>
+				</div>
+			</div>
+		</div>
+	</div> -->
 
 	<!-- /SECTION: Note Box -->
 
@@ -30,9 +38,7 @@ get_header();
 				<div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
 					<h1 class="jp-op-masthead-subtitle"><?php echo wp_kses_post( $op->masthead_subtitle ); ?></h2>
 					<h4 class="jp-op-masthead-title">Fully Virtual and <a href="/suboxone-clinics/">Suboxone-Only</a> Options Available</h4>
-					
 					<!-- <h4 class="jp-op-masthead-title"><?php echo wp_kses_post( $op->masthead_title ); ?></h1> -->
-
 				</div>
 			</div>
 

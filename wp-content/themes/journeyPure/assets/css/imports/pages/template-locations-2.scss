@@ -1,0 +1,346 @@
+/**
+ * Template Locations 2
+ *
+ * @author   Fernando Tessmann
+ * @package  JourneyPure
+ */
+
+// Template Locations 2
+
+.jp-loc2 {
+	overflow: hidden;
+
+	// Section
+
+	&-section {
+		padding: 30px 0;
+
+		@media screen and (min-width: 768px) {
+			padding: 60px 0;
+		}
+	}
+
+	// Section Masthead
+
+	&-masthead {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		@media screen and (max-width: 767px) {
+			background-image: none !important;
+			border-top: 10px solid #e0e7f5;
+		}
+
+		&-content {
+			@media screen and (min-width: 768px) {
+				background-color: rgba(#ffffff, 0.9);
+				border-top: 10px solid #e0e7f5;
+				padding: 45px;
+			}
+		}
+
+		&-title {
+			font-family: $heading-style;
+			font-size: 40px;
+			line-height: 1.1;
+			margin-bottom: 20px;
+			letter-spacing: -3px;
+			font-weight: normal;
+
+			@media screen and (min-width: 768px) {
+				font-size: 45px;
+			}
+		}
+
+		&-subtitle {
+			font-size: 22px;
+			font-weight: 100;
+			font-style: italic;
+			font-family: $heading-style-1;
+			padding-bottom: 0;
+		}
+	}
+
+	// Section Cards
+
+	&-cards {
+		background-color: #ededed;
+
+		&-title {
+			@extend .jp-loc2-masthead-title;
+
+			@media screen and (min-width: 768px) {
+				margin-bottom: 50px;
+				text-align: center;
+			}
+		}
+
+		&-card {
+			background-color: #ffffff;
+			border-top: 10px solid #00953b;
+			box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.08), 0px 20px 31px 3px rgba(0, 0, 0, 0.09), 0px 8px 20px 7px rgba(0, 0, 0, 0.02);
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 20px;
+			transition: transform 150ms ease-out;
+
+			@media screen and (min-width: 992px) {
+				height: 100%;
+				margin-bottom: 0;
+			}
+
+			&-inner {
+				display: flex;
+				flex: 1 1 0;
+				flex-direction: column;
+				padding: 15px;
+
+				@media screen and (min-width: 1200px) {
+					padding: 20px;
+				}
+			}
+
+			// &-img {}
+
+			&-title {
+				font-family: $heading-style;
+				font-size: 20px;
+				font-style: normal;
+				font-weight: 600;
+				line-height: 1.1;
+				margin-bottom: 20px;
+				letter-spacing: 0;
+				font-weight: normal;
+
+				@media screen and (min-width: 768px) {
+					font-size: 28px;
+				}
+			}
+
+			&-subtitle {
+				flex: 1 1 0;
+				padding-bottom: 0;
+			}
+
+			&-footer {
+				align-items: center;
+				display: flex;
+				justify-content: space-between;
+				margin-top: 15px;
+
+				@media screen and (min-width: 1200px) {
+					font-size: 20px;
+				}
+			}
+
+			&-learn-more {
+				color: #2454ac;
+				text-transform: uppercase;
+
+				strong {
+					font-weight: 800;
+				}
+			}
+
+			&-stars {
+				color: #fadb8a;
+			}
+
+			&-star {
+				font-weight: 700;
+				margin-right: 5px;
+			}
+
+			&-count {
+				color: #333333;
+			}
+		}
+	}
+
+	// Section Table
+
+	&-table {
+		background-color: #ffffff;
+		position: relative;
+
+		&:before {
+			background-color: #e1e7f5;
+			content: '';
+			height: 50%;
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+
+		.container {
+			position: relative;
+			z-index: 1;
+		}
+
+		.col-12 {
+			border-bottom: 1px solid #e1f1ff;
+
+			&:last-child {
+				border-bottom: none;
+			}
+
+			@media screen and (min-width: 992px) {
+				border-bottom: none;
+				border-right: 1px solid #e1f1ff;
+
+				&:last-child {
+					border-right: none;
+				}
+			}
+		}
+
+		&-title {
+			@extend .h1;
+
+			font-style: unset;
+			margin-bottom: 15px;
+			text-align: center;
+
+			span {
+				text-decoration: underline;
+			}
+		}
+
+		&-subtitle {
+			@extend .h3;
+
+			margin-bottom: 20px;
+			text-align: center;
+
+			@media screen and (min-width: 768px) {
+				margin-bottom: 40px;
+			}
+		}
+
+		&-cards {
+			background-color: #ffffff;
+			border-radius: 10px;
+			box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.08), 0px 20px 31px 3px rgba(0, 0, 0, 0.09), 0px 8px 20px 7px rgba(0, 0, 0, 0.02);
+			padding: 15px 25px;
+			margin: 0 auto;
+			max-width: 1024px;
+		}
+
+		&-card {
+			padding: 25px;
+
+			&-img {
+				display: block;
+				margin: 0 auto 25px;
+				max-width: 110px;
+			}
+
+			&-title {
+				margin-bottom: 20px;
+				font-size: 18px;
+				font-weight: 800;
+				margin-top: 35px;
+				text-align: center;
+				text-transform: uppercase;
+			}
+
+			&-list {
+				list-style: none;
+				margin-bottom: 0;
+				padding-left: 0;
+
+				&-item {
+					border-top: 1px solid #e1f1ff;
+    				font-weight: 600;
+					line-height: 1.5;
+					padding: 15px 0;
+				}
+			}
+
+			&-place {
+				display: block;
+
+				&-title {
+					color: #2454ac;
+					margin-bottom: 5px;
+					font-size: 17px;
+					font-weight: 800;
+
+					.fas {
+						margin-left: 5px;
+					}
+				}
+
+				&-stars {
+					color: #fadb8a;
+					margin-bottom: 3px;
+				}
+
+				&-star {
+					font-weight: 700;
+					margin-right: 5px;
+				}
+
+				&-count {
+					color: #333333;
+				}
+
+				&-address {
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
+
+	// Section FAQ (copied from op.scss)
+
+	.block-4 {
+		margin: $xl-space;
+
+		@media screen and (max-width: 767px) {
+			margin: 25px 15px 20px;
+		}
+
+		.heading {
+			margin: 0 auto 30px;
+			max-width: 1024px;
+			text-align: center;
+
+			.lead {
+				@extend .h3;
+
+				margin: 20px 0;
+
+				@media screen and (min-width: 768px) {
+					margin-bottom: 40px;
+				}
+			}
+		}
+
+		.faqs {
+			max-width: 800px;
+			margin: 0 auto;
+
+			.card {
+				border: none;
+
+				.card-header {
+					margin-bottom: 0;
+					cursor: pointer;
+					background-color: white;
+					padding: 22px 10px 12px;
+					border-color: #333;
+				}
+			}
+
+			.ask-a-question {
+				text-align: center;
+				margin: $lg-space auto;
+
+				// .link { }
+			}
+		}
+	}
+}

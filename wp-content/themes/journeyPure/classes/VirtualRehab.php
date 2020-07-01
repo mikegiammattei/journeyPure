@@ -9,7 +9,7 @@
 namespace Pages;
 
 /**
- * OP CPT model class
+ * Template Virtual Rehab model class
  */
 class VirtualRehab {
 
