@@ -1,15 +1,5 @@
 "use strict";
 
-function topFunction() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-}
-
-jQuery('[data-toggle="tooltip"]').tooltip();
-"use strict";
-
 $(document).ready(function () {
   aboutUsBioSlider();
 
@@ -256,6 +246,16 @@ $(document).ready(function () {
     }
   }
 });
+"use strict";
+
+function topFunction() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+
+jQuery('[data-toggle="tooltip"]').tooltip();
 "use strict";
 "use strict";
 
@@ -505,14 +505,14 @@ function checkInsurance() {
             	},
             	success : function( response ) {
             		let newPostID = response.id;
-            			thisForm.find('.part-two').slideUp(400);
+            				thisForm.find('.part-two').slideUp(400);
             		thisForm[0].reset();
             		thisForm.removeClass('was-validated');
             		thisForm.find('.alert').slideDown(500).addClass('up');
-            			grecaptcha.reset();
+            				grecaptcha.reset();
             		// Save the page ID in case you need it for something
-            			thisForm.find('[type="submit"]').fadeOut(400);
-            		}
+            				thisForm.find('[type="submit"]').fadeOut(400);
+            			}
             });*/
 
           }
@@ -588,7 +588,7 @@ function cta_widget() {
     	//$('img', this).clone().prependTo('#fullimage');
     	//$( "#fullimage" ).fadeIn("slow");
     });
-    	$('#fullimage').click(function() {
+    		$('#fullimage').click(function() {
     	$(this).fadeOut( "slow", function() {
     		$('img',this).remove();
     	});
@@ -614,6 +614,23 @@ $(".phone-format").keypress(function (e) {
   } else if (curchr == 9) {
     $(this).val(curval + "-");
     $(this).attr('maxlength', '14');
+  }
+});
+"use strict";
+
+window.onload = function () {
+  setTimeout(function () {
+    $.getScript("//130400.tctm.co/t.js");
+    $(".ctm-call-widget").attr('src', $(".ctm-call-widget").data('url-value'));
+  }, 2000);
+}; // CTA Trigger
+
+
+var CTA_STATE = false;
+$('.bottom-cta .drop').on('click', function () {
+  if (!CTA_STATE) {
+    $('.ctm-call-widget-container').append('<iframe class="ctm-call-widget" src="https://app.calltrackingmetrics.com/form_reactors/FRT472ABB2C5B9B141A95E7A133293232FB64726C81D4381AEFF2617EDD86B68F50" style="width:100%;height:300px;border:none"></iframe>');
+    CTA_STATE = true;
   }
 });
 "use strict";
@@ -707,10 +724,16 @@ if ($('#homepage').length > 0) {
 
   if (video_wrapper.length) {
     $('.youtube-video-place').on('click', function () {
-      video_wrapper.html('<iframe allowfullscreen allow="autoplay; encrypted-media" frameborder="0" class="embed-responsive-item" src="' + video_wrapper.data('yt-url') + '"></iframe>');
+      var thisVidUrl = $(this);
+      thisVidUrl.html('<iframe allowfullscreen allow="autoplay; encrypted-media" frameborder="0" class="embed-responsive-item" src="' + thisVidUrl.data('yt-url') + '?autoplay=1&loop=1&rel=0&wmode=transparent"></iframe>');
     });
-  } // script for tab steps
+  }
 
+  $('.video-cta').on('click', function () {
+    var thisTrigger = $(this);
+    var thisVideContainerId = thisTrigger.data('target');
+    $(thisVideContainerId).find('.youtube-video-place').trigger('click');
+  }); // script for tab steps
 
   $('.process-model a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     var href = $(e.target).attr('href');
@@ -1408,15 +1431,6 @@ $(document).ready(function () {
       $curr.addClass("active");
       $curr.prevAll().addClass("visited");
     }); // end  script for tab steps
-  } // Section Masthead (Layout V2)
-
-
-  var video = $('#single-location .youtube-video-place');
-
-  if (video.length > 0) {
-    video.on('click', function () {
-      video.html('<iframe allowfullscreen allow="autoplay; encrypted-media" frameborder="0" class="embed-responsive-item" src="' + video.data('yt-url') + '"></iframe>');
-    });
   }
 });
 "use strict";
@@ -1836,14 +1850,14 @@ function writeAReview() {
         	},
         	success : function( response ) {
         		let newPostID = response.id;
-        			thisForm.find('.part-one').slideUp(400);
+        				thisForm.find('.part-one').slideUp(400);
         		thisForm[0].reset();
         		thisForm.removeClass('was-validated');
         		thisForm.find('.alert').slideDown(500).addClass('up');
-        			grecaptcha.reset();
+        				grecaptcha.reset();
         		// Save the page ID in case you need it for something
-        			thisForm.find('[type="submit"]').fadeOut(400);
-        		}
+        				thisForm.find('[type="submit"]').fadeOut(400);
+        			}
         });
         */
 
@@ -1851,7 +1865,7 @@ function writeAReview() {
         	thisForm.find('.bad-captcha').addClass('invalid');
         }else {
         	thisForm.find('.bad-captcha').removeClass('invalid');
-        		//  Had Ajax here after captcha is fixed
+        			//  Had Ajax here after captcha is fixed
         }*/
       }
     });

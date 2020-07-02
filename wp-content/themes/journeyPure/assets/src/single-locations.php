@@ -106,12 +106,13 @@ get_header();
 							</div>
 
 							<a class="jp-op-masthead-button hide-for-sm" href="tel:844-505-4799" title="Call (844) 505-4799 to talk now."><span class="fas fa-phone"></span> (844) 505-4799</a>
-							<a class="jp-op-masthead-button show-for-sm" href="javascript:void(0);" data-toggle="tooltip" data-placement="top" data-trigger="click" title="Call (844) 505-4799 to talk now."><span class="fas fa-phone"></span> (844) 505-4799</a>
+							<a class="jp-op-masthead-button show-for-sm" href="javascript:void(0);" data-toggle="tooltip" data-placement="top" data-trigger="click" title="Call (844) 505-4799 to talk now."><span class="fas fa-phone"></span> Call (844) 505-4799</a>
+							<span class="button-support-text"> Available 27/7</span>
 						</div>
 					</div>
 
 					<div class="col-12 col-lg-7 order-lg-1">
-						<div class="embed-responsive embed-responsive-16by9 youtube-video-place" style="cursor: pointer; background: transparent url('<?php echo esc_attr( $location->aboveFold->youtube_video_thumbnail ); ?>') no-repeat center center; background-size: cover;" data-yt-url="https://www.youtube.com/embed/<?php echo esc_attr( $location->aboveFold->youtube_video_id ); ?>?rel=0&showinfo=0&autoplay=1"></div>
+						<div class="embed-responsive embed-responsive-16by9 youtube-video-place" style="cursor: pointer; background: transparent url('<?php echo esc_attr( $location->aboveFold->youtube_video_thumbnail ); ?>') no-repeat center center; background-size: cover;" data-yt-url="https://www.youtube.com/embed/<?php echo esc_attr( $location->aboveFold->youtube_video_id ); ?>"></div>
 					</div>
 				</div>
 

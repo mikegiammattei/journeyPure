@@ -15,7 +15,7 @@
 		background-color: $light-blue;
 
 		&-title {
-			color: white;
+			color: #CACFDC;
 			font-size: 20px;
 			font-weight: 600;
 			letter-spacing: 0;
@@ -25,16 +25,16 @@
 
 		&-subtitle {
 			color: $primary;
-			font-size: 30px;
+			font-size: 40px;
 			font-weight: 400;
 			letter-spacing: -2px;
 			line-height: 1.1;
-			margin-bottom: 25px;
+			margin-bottom: 40px;
 			text-align: center;
 
 			@media screen and (min-width: 768px) {
 				font-size: 45px;
-				margin-bottom: 35px;
+				margin-bottom: 40px;
 			}
 
 			@media screen and (min-width: 992px) {
@@ -47,6 +47,11 @@
 			border-top: 8px solid #c9cfdc;
 			height: 100%;
 			padding: 30px 35px;
+		}
+		
+		.button-support-text{
+			color:#CACFDC;
+			font-weight:bold;
 		}
 
 		&-text {

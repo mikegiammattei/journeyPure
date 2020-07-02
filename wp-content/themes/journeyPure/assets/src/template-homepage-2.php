@@ -84,7 +84,7 @@ $footerVersion = 2;
 									<div class="card card-body h-100 justify-content-center transparent" style="width: 100%; ">
 										<div class="embed-responsive embed-responsive-16by9 youtube-video-place  lazy" data-src='/wp-content/themes/journeyPure/assets/img/journeypure-rehab-review.jpg'  style=" cursor: pointer; background: no-repeat center;
 		  -webkit-background-size: cover;
-		  background-size: cover;" data-yt-url="https://www.youtube.com/embed/kNj08KeNbIA?rel=0&showinfo=0&autoplay=1">
+		  background-size: cover;" data-yt-url="https://www.youtube.com/embed/kNj08KeNbIA">
 										</div>
 									</div>
 								</div>
@@ -133,8 +133,8 @@ $footerVersion = 2;
 				<button type="button" data-toggle="modal" data-target="#main-insurance-form" class="btn btn-outline-secondary"><i class="fas fa-id-card"></i>Submit Your Insurance</button></p>
 		<br>
 
-			<img class="lazy loaded" src="/wp-content/themes/journeyPure/assets/img/insurance2.png" data-src="/wp-content/themes/journeyPure/assets/img/insurance2.png" alt="Aetna, Anthem Blue Cross Blue Sheild, Cigna Heath Insurances" data-was-processed="true">
-			<img class="lazy loaded" src="/wp-content/themes/journeyPure/assets/img/insurance1.png" data-src="/wp-content/themes/journeyPure/assets/img/insurance1.png" alt="Amerihealth, United Healthcare, Humana, Tricare and 43 More Insurances" data-was-processed="true">
+			<img class="lazy" data-src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/insurance2.png" alt="Aetna, Anthem Blue Cross Blue Sheild, Cigna Heath Insurances">
+			<img class="lazy" data-src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/insurance1.png" alt="Amerihealth, United Healthcare, Humana, Tricare and 43 More Insurances">
 		</div>
 	</div>
 
@@ -193,7 +193,7 @@ $footerVersion = 2;
 					</div>
 				</div>
 				<div class="media d-inline-flex">
-					<img class="mr-3 lazy" a data-src="/wp-content/uploads/2019/11/kevin-lee.jpg" alt="Kevin Lee">
+					<img class="mr-3 lazy" data-src="/wp-content/uploads/2019/11/kevin-lee.jpg" alt="Kevin Lee">
 					<div class="media-body ">
 						<h5>Kevin D. Lee</h5>
 						<p>CEO & Founder</p>
@@ -373,7 +373,7 @@ $footerVersion = 2;
 									?>
 									<div class="col-md-3 <?php echo in_array( $bio->name, [ 'Caleb H.' ] ) ? 'hide-for-xs-only' : ''; ?>">
 										<div class="bio">
-											<img src="<?php echo $bio->photo['image']; ?>" />
+											<img class="lazy" data-src="<?php echo $bio->photo['image']; ?>" />
 											<?php if($bio->sober_since): ?>
 												<div data-like-object="<?php echo $likeIdentifier; ?>" class="like-button"  data-placement="top" data-toggle="tooltip" <?php echo ($Homepage->isLikedBySession($likeIdentifier)) ? 'title="Already liked"' : 'title="Do you like?"'; ?>>
 													<i class="fas fa-thumbs-up"></i>
@@ -408,7 +408,7 @@ $footerVersion = 2;
 								<!-- Image Wrapper -->
 								<div class="video-cta-image-wrapper">
 									<!-- Image -->
-									<img class="video-cta-image lazy" src="https://journeypure.com/wp-content/uploads/2020/05/jared-video-review.jpg" alt="Jared Lanpher">
+									<img class="video-cta-image lazy" data-src="https://journeypure.com/wp-content/uploads/2020/05/jared-video-review.jpg" alt="Jared Lanpher">
 									<!-- Icon -->
 									<span class="fas fa-play-circle"></span>
 								</div>
@@ -420,7 +420,7 @@ $footerVersion = 2;
 								<!-- Image Wrapper -->
 								<div class="video-cta-image-wrapper">
 									<!-- Image -->
-									<img class="video-cta-image lazy" src="https://journeypure.com/wp-content/uploads/2020/05/amber-video-review.jpg" alt="Amber F.">
+									<img class="video-cta-image lazy" data-src="https://journeypure.com/wp-content/uploads/2020/05/amber-video-review.jpg" alt="Amber F.">
 									<!-- Icon -->
 									<span class="fas fa-play-circle"></span>
 								</div>
@@ -511,7 +511,7 @@ $footerVersion = 2;
               <div class="row">
                 <div class="col-md-6 order-md-2">
                   <div class="lazy" data-src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg">
-                    <img src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg" alt="Call JourneyPure">
+                    <img class="lazy" data-src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg" alt="Call JourneyPure">
                   </div>
                 </div>
                 <div class="col-md-6 order-md-1">

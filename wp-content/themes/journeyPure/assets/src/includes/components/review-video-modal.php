@@ -11,8 +11,7 @@
 			</div>
 			<!-- Body -->
 			<div class="modal-body">
-				<div class="embed-responsive embed-responsive-16by9">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/EGZsOdPunJM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<div class="embed-responsive embed-responsive-16by9 youtube-video-place  lazy" data-yt-url="https://www.youtube.com/embed/EGZsOdPunJM">
 				</div>
 				<br>
 				<p>Jared came to JourneyPure in 2016 to avoid prison. He had been to other treatment centers before but was able to actually stay sober after successfully completing treatment here years ago.</p>
@@ -36,8 +35,7 @@
 			</div>
 			<!-- Body -->
 			<div class="modal-body">
-				<div class="embed-responsive embed-responsive-16by9">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/wA75f5aN-ow" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<div class="embed-responsive embed-responsive-16by9 youtube-video-place  lazy" data-yt-url="https://www.youtube.com/embed/wA75f5aN-ow">
 				</div>
 				<br>
 				<p>Amber came to JourneyPure motivated by seeing herself both in her 9-year-old daughter and her dying, addict mother. She overcame shame, guilt and anger to finally find peace.</p>

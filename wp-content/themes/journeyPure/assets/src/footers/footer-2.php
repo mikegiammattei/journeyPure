@@ -6,7 +6,7 @@
 			<?php if ( ! is_page_template( 'template-virtual-rehab.php' ) ) : ?>
 				<div class="ask-a-question">
 					<div class="container">
-						<h5 class="h1 text-center">Still have questions?</h3>
+						<h5 class="h1 text-center">Still have questions?</h5>
 
 						<div class="row">
 							<div class="col-xs-6 col-md-6 text-center bottom-cta">
@@ -16,7 +16,6 @@
 
 								<div class="ctm-call-widget-container">
 									<p>Enter your phone number and get a call usually within 5 minutes.</p>
-									<iframe class="ctm-call-widget" src="https://app.calltrackingmetrics.com/form_reactors/FRT472ABB2C5B9B141A95E7A133293232FB64726C81D4381AEFF2617EDD86B68F50" style="width:100%;height:300px;border:none"></iframe>
 								</div>
 							</div>
 
@@ -83,14 +82,14 @@
 
 		</div> <?php /** end of main wrapper */ ?>
 
-		<?php if ( ! isset( $_GET['DEV'] ) ) : ?>
-			<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-			<script src="<?php echo get_stylesheet_directory_uri() . '/js/vendor.min.js?v=20200602'; ?>"></script>
-			<script src="<?php echo get_stylesheet_directory_uri() . '/js/custom.min.js?v=20200602'; ?>"></script>
-		<?php endif; ?>
+			<?php if ( ! isset( $_GET['DEV'] ) ) : ?>
+				<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+				<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script>
+				<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+				<script src="<?php echo get_stylesheet_directory_uri() . '/js/vendor.min.js?v=20200602'; ?>"></script>
+				<script src="<?php echo get_stylesheet_directory_uri() . '/js/custom.min.js?v=20200602'; ?>"></script>
+			<?php endif; ?>
 
-		<?php wp_footer(); ?>
-	</body>
-</html>
+			<?php wp_footer(); ?>
+			</body>
+			</html>

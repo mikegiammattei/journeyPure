@@ -23,8 +23,8 @@ get_header();
 			<div class="row">
 				<div class="col-12 col-lg-8 offset-lg-2">
 					<div class="jp-loc2-masthead-content">
-						<h1 class="jp-loc2-masthead-title">18 Rehab &amp; Outpatient Locations</h1>
-						<p class="jp-loc2-masthead-subtitle">Whether you're just realizing there's a problem or you've been in and out of other facilities for years, we can help. People from all over the country come here because the treatment is that good.</p>
+						<h1 class="jp-loc2-masthead-title">18 Rehab &amp; Clinic Locations</h1>
+						<p class="jp-loc2-masthead-subtitle">Whether you're just realizing there's a problem or you've been in and out of other facilities for years, we can help. People come here from as far away as Alaksa and  Hawaii because treatment here works.</p>
 					</div>
 				</div>
 			</div>
@@ -40,20 +40,21 @@ get_header();
 			<div class="row">
 				<div class="col-12">
 					<h2 class="jp-loc2-cards-title">The Best In-Network Rehabs in the Country</h2>
+					<p class="jp-loc2-table-subtitle">Rehab is the most effective level of treatment.</p>
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="col-12 col-lg-4">
 					<div class="jp-loc2-cards-card">
-						<img class="jp-loc2-cards-card-img lazy" src="/wp-content/themes/journeyPure/assets/img/locations/example-1.png" alt="Kentucky Alcohol &amp; Drug Rehab">
+						<img class="jp-loc2-cards-card-img lazy" src="/wp-content/uploads/2019/10/JPBG43-1-1024x683.jpg" alt="Kentucky Alcohol &amp; Drug Rehab">
 
 						<div class="jp-loc2-cards-card-inner">
-							<h3 class="jp-loc2-cards-card-title">Kentucky Alcohol &amp; Drug Rehab</h3>
-							<p class="jp-loc2-cards-card-subtitle">The Kentucky drug and alcohol rehab helps people from across the state get the life back on track (for good).</p>
+							<h5>Kentucky Alcohol &amp; Drug Rehab</h3>
+							<p class="jp-loc2-cards-card-subtitle">Come from any where across the state to get your life back on track (for good).</p>
 
 							<div class="jp-loc2-cards-card-footer">
-								<a class="jp-loc2-cards-card-learn-more" href="#"><strong>Learn More</strong></a>
+								<a class="jp-loc2-cards-card-learn-more" href="/locations/kentucky/"><strong>Learn More</strong></a>
 
 								<div class="jp-loc2-cards-card-stars">
 									<span class="jp-loc2-cards-card-star">4.8</span>
@@ -70,54 +71,59 @@ get_header();
 
 				<div class="col-12 col-lg-4">
 					<div class="jp-loc2-cards-card">
-						<img class="jp-loc2-cards-card-img lazy" src="/wp-content/themes/journeyPure/assets/img/locations/example-2.png" alt="Tennessee Alcohol &amp; Drug Rehab">
+						<img class="jp-loc2-cards-card-img lazy" src="/wp-content/uploads/2019/11/murfreesboro-tn-inpatient-rehab.jpg" alt="Tennessee Alcohol &amp; Drug Rehab">
 
 						<div class="jp-loc2-cards-card-inner">
-							<h3 class="jp-loc2-cards-card-title">Tennessee Alcohol &amp; Drug Rehab</h3>
-							<p class="jp-loc2-cards-card-subtitle">The best place for anyone in Tennessee to get back on track.</p>
+							<h5>Tennessee Alcohol &amp; Drug Rehab</h3>
+							<p class="jp-loc2-cards-card-subtitle">Choose our flagship location and the most prestigious rehab in the state.</p>
 
 							<div class="jp-loc2-cards-card-footer">
-								<a class="jp-loc2-cards-card-learn-more" href="#"><strong>Learn More</strong></a>
+								<a class="jp-loc2-cards-card-learn-more" href="/locations/tennessee/"><strong>Learn More</strong></a>
 
 								<div class="jp-loc2-cards-card-stars">
-									<span class="jp-loc2-cards-card-star">4.8</span>
+									<span class="jp-loc2-cards-card-star">4.4</span>
 									<span class="fas fa-star"></span>
 									<span class="fas fa-star"></span>
 									<span class="fas fa-star"></span>
 									<span class="fas fa-star"></span>
-									<span class="jp-loc2-cards-card-count">(55)</span>
+									<span class="jp-loc2-cards-card-count">(91)</span>
 								</div>
 							</div>
 
-							<div class="jp-loc2-cards-card-footer">
-								<a class="jp-loc2-cards-card-learn-more" href="#">Click here for medicaid</a>
-							</div>
+							
 						</div>
 					</div>
+					<div class="jp-loc2-cards-card-footer">
+								<a class="jp-loc2-cards-card-learn-more extra-link" href="/locations/knoxville/">Tenncare Click Here</a>
+							</div>
 				</div>
 
 				<div class="col-12 col-lg-4">
 					<div class="jp-loc2-cards-card">
-						<img class="jp-loc2-cards-card-img lazy" src="/wp-content/themes/journeyPure/assets/img/locations/example-1.png" alt="Kentucky Alcohol &amp; Drug Rehab">
+						<img class="jp-loc2-cards-card-img lazy" src="/wp-content/uploads/2020/06/journeypure-panama-city-beach-residential-1024x683.jpg" alt="Florida Alcohol &amp; Drug Rehab">
 
 						<div class="jp-loc2-cards-card-inner">
-							<h3 class="jp-loc2-cards-card-title">Kentucky Alcohol &amp; Drug Rehab</h3>
-							<p class="jp-loc2-cards-card-subtitle">The Kentucky drug and alcohol rehab helps people from across the state get the life back on track (for good).</p>
+							<h5>Florida Alcohol &amp; Drug Rehab</h3>
+							<p class="jp-loc2-cards-card-subtitle">Access the best treatment program in the country while overlooking the ocean.</p>
 
 							<div class="jp-loc2-cards-card-footer">
-								<a class="jp-loc2-cards-card-learn-more" href="#"><strong>Learn More</strong></a>
+								<a class="jp-loc2-cards-card-learn-more" href="/locations/florida/"><strong>Learn More</strong></a>
 
 								<div class="jp-loc2-cards-card-stars">
-									<span class="jp-loc2-cards-card-star">4.8</span>
+									<span class="jp-loc2-cards-card-star">4.5</span>
 									<span class="fas fa-star"></span>
 									<span class="fas fa-star"></span>
 									<span class="fas fa-star"></span>
 									<span class="fas fa-star"></span>
-									<span class="jp-loc2-cards-card-count">(55)</span>
+									<span class="jp-loc2-cards-card-count">(129)</span>
 								</div>
 							</div>
+							
 						</div>
 					</div>
+					<div class="jp-loc2-cards-card-footer text-center">
+								<a class="jp-loc2-cards-card-learn-more extra-link" href="/locations/military-program/">Military Click Here</a>
+							</div>
 				</div>
 			</div>
 		</div>
@@ -140,7 +146,7 @@ get_header();
 				<div class="row">
 					<div class="col-12 col-lg-4">
 						<div class="jp-loc2-table-card">
-							<img class="jp-loc2-table-card-img lazy" src="/wp-content/themes/journeyPure/assets/img/locations/example-3.png" alt="<?php echo esc_attr( $locations->cards_1_title ); ?>">
+							<img class="jp-loc2-table-card-img lazy" src="/wp-content/uploads/2020/07/jp-icon-KY-180x180-1.png" alt="<?php echo esc_attr( $locations->cards_1_title ); ?>">
 							<h4 class="jp-loc2-table-card-title"><?php echo esc_html( $locations->cards_1_title ); ?></h4>
 
 							<ul class="jp-loc2-table-card-list">
@@ -170,7 +176,7 @@ get_header();
 
 					<div class="col-12 col-lg-4">
 						<div class="jp-loc2-table-card">
-							<img class="jp-loc2-table-card-img lazy" src="/wp-content/themes/journeyPure/assets/img/locations/example-4.png" alt="Kentucky">
+							<img class="jp-loc2-table-card-img lazy" src="/wp-content/uploads/2020/07/jp-icon-TN-180x180-1.png" alt="Kentucky">
 							<h4 class="jp-loc2-table-card-title">Kentucky</h4>
 
 							<ul class="jp-loc2-table-card-list">
@@ -200,7 +206,7 @@ get_header();
 
 					<div class="col-12 col-lg-4">
 						<div class="jp-loc2-table-card">
-							<img class="jp-loc2-table-card-img lazy" src="/wp-content/themes/journeyPure/assets/img/locations/example-5.png" alt="Florida">
+							<img class="jp-loc2-table-card-img lazy" src="/wp-content/uploads/2020/07/FLjp-icon-TN-180x180-1.png" alt="Florida">
 							<h4 class="jp-loc2-table-card-title">Florida</h4>
 
 							<ul class="jp-loc2-table-card-list">
