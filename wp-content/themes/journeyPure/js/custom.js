@@ -1,15 +1,5 @@
 "use strict";
 
-function topFunction() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-}
-
-jQuery('[data-toggle="tooltip"]').tooltip();
-"use strict";
-
 $(document).ready(function () {
   aboutUsBioSlider();
 
@@ -256,6 +246,16 @@ $(document).ready(function () {
     }
   }
 });
+"use strict";
+
+function topFunction() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+
+jQuery('[data-toggle="tooltip"]').tooltip();
 "use strict";
 "use strict";
 
@@ -505,14 +505,14 @@ function checkInsurance() {
             	},
             	success : function( response ) {
             		let newPostID = response.id;
-            			thisForm.find('.part-two').slideUp(400);
+            				thisForm.find('.part-two').slideUp(400);
             		thisForm[0].reset();
             		thisForm.removeClass('was-validated');
             		thisForm.find('.alert').slideDown(500).addClass('up');
-            			grecaptcha.reset();
+            				grecaptcha.reset();
             		// Save the page ID in case you need it for something
-            			thisForm.find('[type="submit"]').fadeOut(400);
-            		}
+            				thisForm.find('[type="submit"]').fadeOut(400);
+            			}
             });*/
 
           }
@@ -588,7 +588,7 @@ function cta_widget() {
     	//$('img', this).clone().prependTo('#fullimage');
     	//$( "#fullimage" ).fadeIn("slow");
     });
-    	$('#fullimage').click(function() {
+    		$('#fullimage').click(function() {
     	$(this).fadeOut( "slow", function() {
     		$('img',this).remove();
     	});
@@ -615,6 +615,52 @@ $(".phone-format").keypress(function (e) {
     $(this).val(curval + "-");
     $(this).attr('maxlength', '14');
   }
+});
+"use strict";
+
+$(document).ready(function () {
+  setTimeout(function () {
+    $.getScript("//130400.tctm.co/t.js");
+
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NKJHBM9');
+
+    $(".ctm-call-widget").attr('src', $(".ctm-call-widget").data('url-value'));
+  }, 2000);
+}); // CTA Trigger
+
+var CTA_STATE = false;
+$('.bottom-cta .drop').on('click', function () {
+  if (!CTA_STATE) {
+    $('.ctm-call-widget-container').append('<iframe class="ctm-call-widget" src="https://app.calltrackingmetrics.com/form_reactors/FRT472ABB2C5B9B141A95E7A133293232FB64726C81D4381AEFF2617EDD86B68F50" style="width:100%;height:300px;border:none"></iframe>');
+    CTA_STATE = true;
+  }
+});
+var video_wrapper = $('.youtube-video-place');
+
+if (video_wrapper.length) {
+  $('.youtube-video-place').on('click', function () {
+    var thisVidUrl = $(this);
+    thisVidUrl.html('<iframe allowfullscreen allow="autoplay; encrypted-media" frameborder="0" class="embed-responsive-item" src="' + thisVidUrl.data('yt-url') + '??rel=0&showinfo=0&autoplay=1"></iframe>');
+    setTimeout(function () {});
+  });
+}
+
+$('.video-cta').on('click', function () {
+  var thisTrigger = $(this);
+  var thisVideContainerId = thisTrigger.data('target');
+  $(thisVideContainerId).find('.youtube-video-place').trigger('click');
 });
 "use strict";
 
@@ -696,22 +742,14 @@ if ($('#homepage').length > 0) {
         });
       }, 600);
     }
-  };
+  }; // script for tab steps
+
 
   $(document).ready(function () {
     setTimeout(function () {
       homepageReviewSlide('#homepage');
     }, 1000);
   });
-  var video_wrapper = $('.youtube-video-place');
-
-  if (video_wrapper.length) {
-    $('.youtube-video-place').on('click', function () {
-      video_wrapper.html('<iframe allowfullscreen allow="autoplay; encrypted-media" frameborder="0" class="embed-responsive-item" src="' + video_wrapper.data('yt-url') + '"></iframe>');
-    });
-  } // script for tab steps
-
-
   $('.process-model a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     var href = $(e.target).attr('href');
     var $curr = $(".process-model a[href='" + href + "']").parent();
@@ -1827,14 +1865,14 @@ function writeAReview() {
         	},
         	success : function( response ) {
         		let newPostID = response.id;
-        			thisForm.find('.part-one').slideUp(400);
+        				thisForm.find('.part-one').slideUp(400);
         		thisForm[0].reset();
         		thisForm.removeClass('was-validated');
         		thisForm.find('.alert').slideDown(500).addClass('up');
-        			grecaptcha.reset();
+        				grecaptcha.reset();
         		// Save the page ID in case you need it for something
-        			thisForm.find('[type="submit"]').fadeOut(400);
-        		}
+        				thisForm.find('[type="submit"]').fadeOut(400);
+        			}
         });
         */
 
@@ -1842,7 +1880,7 @@ function writeAReview() {
         	thisForm.find('.bad-captcha').addClass('invalid');
         }else {
         	thisForm.find('.bad-captcha').removeClass('invalid');
-        		//  Had Ajax here after captcha is fixed
+        			//  Had Ajax here after captcha is fixed
         }*/
       }
     });

@@ -14,3 +14,4 @@ switch($footerVersion):
 	default : get_template_part('footers/footer','main');
 endswitch;
 */
+?>

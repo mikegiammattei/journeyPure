@@ -3,3 +3,5 @@ function topFunction() {
 }
 
 jQuery('[data-toggle="tooltip"]').tooltip();
+
+
