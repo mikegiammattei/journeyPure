@@ -34,77 +34,77 @@ class LocationsPage2 {
 	 * @return void
 	 */
 	public function set_table_section() {
-		$this->outpatient_location_1_1      = $this->fields['outpatient_location_1_1'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
-		$this->outpatient_location_1_1_link = $this->fields['outpatient_location_1_1_link'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
+		$this->cards_1_title    = $this->fields['outpatient_location_1_title'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
+		$this->cards_1_category = $this->fields['outpatient_location_1_category'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
+		$this->cards_1          = array();
 
-		$this->outpatient_location_1_2      = $this->fields['outpatient_location_1_2'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
-		$this->outpatient_location_1_2_link = $this->fields['outpatient_location_1_2_link'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
+		if ( ! empty( $this->cards_1_category ) ) {
+			$args = array(
+				'post_type'      => 'outpatient-locations',
+				'posts_per_page' => 50,
+				'category__in'   => array( $this->cards_1_category ),
+			);
 
-		$this->cards_1_title = $this->fields['outpatient_location_1_title'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
+			$wp_query = new \WP_Query( $args );
+			$ids      = wp_list_pluck( $wp_query->posts, 'ID' );
 
-		$this->cards_1 = array(
-			array(
-				'title'   => get_field( 'facility_name', $this->outpatient_location_1_1->ID ),
-				'ratings' => get_field( 'ratings', $this->outpatient_location_1_1->ID ),
-				'address' => get_field( 'address', $this->outpatient_location_1_1->ID ),
-				'link'    => $this->outpatient_location_1_1_link,
-			),
+			foreach ( $ids as $post_id ) {
+				$this->cards_1[] = array(
+					'title'   => get_field( 'facility_name', $post_id ),
+					'ratings' => get_field( 'ratings', $post_id ),
+					'address' => get_field( 'address', $post_id ),
+					'link'    => get_field( 'link', $post_id ),
+				);
+			}
+		}
 
-			array(
-				'title'   => get_field( 'facility_name', $this->outpatient_location_1_2->ID ),
-				'ratings' => get_field( 'ratings', $this->outpatient_location_1_2->ID ),
-				'address' => get_field( 'address', $this->outpatient_location_1_2->ID ),
-				'link'    => $this->outpatient_location_1_2_link,
-			),
-		);
+		$this->cards_2_title    = $this->fields['outpatient_location_2_title'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
+		$this->cards_2_category = $this->fields['outpatient_location_2_category'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
+		$this->cards_2          = array();
 
-		$this->outpatient_location_2_1      = $this->fields['outpatient_location_2_1'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
-		$this->outpatient_location_2_1_link = $this->fields['outpatient_location_2_1_link'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
+		if ( ! empty( $this->cards_2_category ) ) {
+			$args = array(
+				'post_type'      => 'outpatient-locations',
+				'posts_per_page' => 50,
+				'category__in'   => array( $this->cards_2_category ),
+			);
 
-		$this->outpatient_location_2_2      = $this->fields['outpatient_location_1_2'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
-		$this->outpatient_location_2_2_link = $this->fields['outpatient_location_2_2_link'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
+			$wp_query = new \WP_Query( $args );
+			$ids      = wp_list_pluck( $wp_query->posts, 'ID' );
 
-		$this->cards_2_title = $this->fields['outpatient_location_2_title'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
+			foreach ( $ids as $post_id ) {
+				$this->cards_2[] = array(
+					'title'   => get_field( 'facility_name', $post_id ),
+					'ratings' => get_field( 'ratings', $post_id ),
+					'address' => get_field( 'address', $post_id ),
+					'link'    => get_field( 'link', $post_id ),
+				);
+			}
+		}
 
-		$this->cards_2 = array(
-			array(
-				'title'   => get_field( 'facility_name', $this->outpatient_location_2_1->ID ),
-				'ratings' => get_field( 'ratings', $this->outpatient_location_2_1->ID ),
-				'address' => get_field( 'address', $this->outpatient_location_2_1->ID ),
-				'link'    => $this->outpatient_location_2_1_link,
-			),
+		$this->cards_3_title    = $this->fields['outpatient_location_3_title'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
+		$this->cards_3_category = $this->fields['outpatient_location_3_category'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
+		$this->cards_3          = array();
 
-			array(
-				'title'   => get_field( 'facility_name', $this->outpatient_location_2_2->ID ),
-				'ratings' => get_field( 'ratings', $this->outpatient_location_2_2->ID ),
-				'address' => get_field( 'address', $this->outpatient_location_2_2->ID ),
-				'link'    => $this->outpatient_location_2_2_link,
-			),
-		);
+		if ( ! empty( $this->cards_3_category ) ) {
+			$args = array(
+				'post_type'      => 'outpatient-locations',
+				'posts_per_page' => 50,
+				'category__in'   => array( $this->cards_3_category ),
+			);
 
-		$this->outpatient_location_3_1      = $this->fields['outpatient_location_3_1'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
-		$this->outpatient_location_3_1_link = $this->fields['outpatient_location_3_1_link'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
+			$wp_query = new \WP_Query( $args );
+			$ids      = wp_list_pluck( $wp_query->posts, 'ID' );
 
-		$this->outpatient_location_3_2      = $this->fields['outpatient_location_3_2'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
-		$this->outpatient_location_3_2_link = $this->fields['outpatient_location_3_2_link'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
-
-		$this->cards_3_title = $this->fields['outpatient_location_3_title'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
-
-		$this->cards_3 = array(
-			array(
-				'title'   => get_field( 'facility_name', $this->outpatient_location_3_1->ID ),
-				'ratings' => get_field( 'ratings', $this->outpatient_location_3_1->ID ),
-				'address' => get_field( 'address', $this->outpatient_location_3_1->ID ),
-				'link'    => $this->outpatient_location_3_1_link,
-			),
-
-			array(
-				'title'   => get_field( 'facility_name', $this->outpatient_location_3_2->ID ),
-				'ratings' => get_field( 'ratings', $this->outpatient_location_3_2->ID ),
-				'address' => get_field( 'address', $this->outpatient_location_3_2->ID ),
-				'link'    => $this->outpatient_location_3_2_link,
-			),
-		);
+			foreach ( $ids as $post_id ) {
+				$this->cards_3[] = array(
+					'title'   => get_field( 'facility_name', $post_id ),
+					'ratings' => get_field( 'ratings', $post_id ),
+					'address' => get_field( 'address', $post_id ),
+					'link'    => get_field( 'link', $post_id ),
+				);
+			}
+		}
 	}
 
 	/**

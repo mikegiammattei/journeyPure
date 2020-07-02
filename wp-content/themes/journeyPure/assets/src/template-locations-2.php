@@ -46,18 +46,20 @@ get_header();
 
 			<div class="row">
 				<div class="col-12 col-lg-4">
-					<div class="jp-loc2-cards-card">
-						<img class="jp-loc2-cards-card-img lazy" src="/wp-content/uploads/2019/10/JPBG43-1-1024x683.jpg" alt="Kentucky Alcohol &amp; Drug Rehab">
+					<a class="jp-loc2-cards-card" href="/locations/kentucky/">
+						<span class="jp-loc2-cards-card-img-tag">Kentucky</span>
+						<img class="jp-loc2-cards-card-img lazy" data-src="/wp-content/uploads/2019/10/JPBG43-1-1024x683.jpg" alt="Kentucky Alcohol &amp; Drug Rehab">
 
 						<div class="jp-loc2-cards-card-inner">
 							<h5>Kentucky Alcohol &amp; Drug Rehab</h3>
 							<p class="jp-loc2-cards-card-subtitle">Come from any where across the state to get your life back on track (for good).</p>
 
 							<div class="jp-loc2-cards-card-footer">
-								<a class="jp-loc2-cards-card-learn-more" href="/locations/kentucky/"><strong>Learn More</strong></a>
+								<span class="jp-loc2-cards-card-learn-more"><strong>Learn More</strong></span>
 
 								<div class="jp-loc2-cards-card-stars">
 									<span class="jp-loc2-cards-card-star">4.8</span>
+									<span class="fas fa-star"></span>
 									<span class="fas fa-star"></span>
 									<span class="fas fa-star"></span>
 									<span class="fas fa-star"></span>
@@ -66,19 +68,20 @@ get_header();
 								</div>
 							</div>
 						</div>
-					</div>
+					</a>
 				</div>
 
 				<div class="col-12 col-lg-4">
-					<div class="jp-loc2-cards-card">
-						<img class="jp-loc2-cards-card-img lazy" src="/wp-content/uploads/2019/11/murfreesboro-tn-inpatient-rehab.jpg" alt="Tennessee Alcohol &amp; Drug Rehab">
+					<a class="jp-loc2-cards-card" href="/locations/tennessee/">
+						<span class="jp-loc2-cards-card-img-tag">Tennessee</span>
+						<img class="jp-loc2-cards-card-img lazy" data-src="/wp-content/uploads/2019/11/murfreesboro-tn-inpatient-rehab.jpg" alt="Tennessee Alcohol &amp; Drug Rehab">
 
 						<div class="jp-loc2-cards-card-inner">
 							<h5>Tennessee Alcohol &amp; Drug Rehab</h3>
 							<p class="jp-loc2-cards-card-subtitle">Choose our flagship location and the most prestigious rehab in the state.</p>
 
 							<div class="jp-loc2-cards-card-footer">
-								<a class="jp-loc2-cards-card-learn-more" href="/locations/tennessee/"><strong>Learn More</strong></a>
+								<span class="jp-loc2-cards-card-learn-more"><strong>Learn More</strong></span>
 
 								<div class="jp-loc2-cards-card-stars">
 									<span class="jp-loc2-cards-card-star">4.4</span>
@@ -86,28 +89,29 @@ get_header();
 									<span class="fas fa-star"></span>
 									<span class="fas fa-star"></span>
 									<span class="fas fa-star"></span>
+									<span class="fas fa-star-half"></span>
 									<span class="jp-loc2-cards-card-count">(91)</span>
 								</div>
 							</div>
-
-							
 						</div>
-					</div>
+					</a>
+
 					<div class="jp-loc2-cards-card-footer">
-								<a class="jp-loc2-cards-card-learn-more extra-link" href="/locations/knoxville/">Tenncare Click Here</a>
-							</div>
+						<a class="jp-loc2-cards-card-learn-more extra-link" href="/locations/knoxville/">Tenncare Click Here</a>
+					</div>
 				</div>
 
 				<div class="col-12 col-lg-4">
-					<div class="jp-loc2-cards-card">
-						<img class="jp-loc2-cards-card-img lazy" src="/wp-content/uploads/2020/06/journeypure-panama-city-beach-residential-1024x683.jpg" alt="Florida Alcohol &amp; Drug Rehab">
+					<a class="jp-loc2-cards-card" href="/locations/florida/">
+						<span class="jp-loc2-cards-card-img-tag">Florida</span>
+						<img class="jp-loc2-cards-card-img lazy" data-src="/wp-content/uploads/2020/06/journeypure-panama-city-beach-residential-1024x683.jpg" alt="Florida Alcohol &amp; Drug Rehab">
 
 						<div class="jp-loc2-cards-card-inner">
 							<h5>Florida Alcohol &amp; Drug Rehab</h3>
 							<p class="jp-loc2-cards-card-subtitle">Access the best treatment program in the country while overlooking the ocean.</p>
 
 							<div class="jp-loc2-cards-card-footer">
-								<a class="jp-loc2-cards-card-learn-more" href="/locations/florida/"><strong>Learn More</strong></a>
+								<span class="jp-loc2-cards-card-learn-more"><strong>Learn More</strong></span>
 
 								<div class="jp-loc2-cards-card-stars">
 									<span class="jp-loc2-cards-card-star">4.5</span>
@@ -115,15 +119,16 @@ get_header();
 									<span class="fas fa-star"></span>
 									<span class="fas fa-star"></span>
 									<span class="fas fa-star"></span>
+									<span class="fas fa-star-half"></span>
 									<span class="jp-loc2-cards-card-count">(129)</span>
 								</div>
 							</div>
-							
 						</div>
-					</div>
+					</a>
+
 					<div class="jp-loc2-cards-card-footer text-center">
-								<a class="jp-loc2-cards-card-learn-more extra-link" href="/locations/military-program/">Military Click Here</a>
-							</div>
+						<a class="jp-loc2-cards-card-learn-more extra-link" href="/locations/military-program/">Military Click Here</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -146,22 +151,41 @@ get_header();
 				<div class="row">
 					<div class="col-12 col-lg-4">
 						<div class="jp-loc2-table-card">
-							<img class="jp-loc2-table-card-img lazy" src="/wp-content/uploads/2020/07/jp-icon-KY-180x180-1.png" alt="<?php echo esc_attr( $locations->cards_1_title ); ?>">
+							<img class="jp-loc2-table-card-img lazy" data-src="/wp-content/uploads/2020/07/jp-icon-KY-180x180-1.png" alt="<?php echo esc_attr( $locations->cards_1_title ); ?>">
 							<h4 class="jp-loc2-table-card-title"><?php echo esc_html( $locations->cards_1_title ); ?></h4>
 
 							<ul class="jp-loc2-table-card-list">
 								<?php if ( ! empty( $locations->cards_1 ) ) : ?>
 									<?php foreach ( $locations->cards_1 as $card ) : ?>
 										<li class="jp-loc2-table-card-list-item">
-											<a class="jp-loc2-table-card-place" href="<?php echo esc_attr( $card['link'] ); ?>">
+											<a class="jp-loc2-table-card-place" <?php if ( ! empty( $card['link'] ) ) echo ( 'href="' . esc_attr( $card['link'] ) . '"' ); ?>>
 												<h4 class="jp-loc2-table-card-place-title"><?php echo esc_html( $card['title'] ); ?> <span class="fas fa-info-circle"></span></h4>
 
 												<div class="jp-loc2-table-card-place-stars">
 													<span class="jp-loc2-table-card-place-star"><?php echo esc_html( $card['ratings']['number_rating'] ); ?></span>
 													<span class="fas fa-star"></span>
 													<span class="fas fa-star"></span>
-													<span class="fas fa-star"></span>
-													<span class="fas fa-star"></span>
+
+													<?php if ( floatval( $card['ratings']['number_rating'] ) <= 2.5 ) : ?>
+														<span class="fas fa-star-half"></span>
+													<?php elseif ( floatval( $card['ratings']['number_rating'] ) <= 3 ) : ?>
+														<span class="fas fa-star"></span>
+													<?php elseif ( floatval( $card['ratings']['number_rating'] ) <= 3.5 ) : ?>
+														<span class="fas fa-star"></span>
+														<span class="fas fa-star-half"></span>
+													<?php elseif ( floatval( $card['ratings']['number_rating'] ) <= 4 ) : ?>
+														<span class="fas fa-star"></span>
+														<span class="fas fa-star"></span>
+													<?php elseif ( floatval( $card['ratings']['number_rating'] ) <= 4.5 ) : ?>
+														<span class="fas fa-star"></span>
+														<span class="fas fa-star"></span>
+														<span class="fas fa-star-half"></span>
+													<?php else : ?>
+														<span class="fas fa-star"></span>
+														<span class="fas fa-star"></span>
+														<span class="fas fa-star"></span>
+													<?php endif; ?>
+
 													<span class="jp-loc2-table-card-place-count">(<?php echo esc_html( $card['ratings']['count'] ); ?>)</span>
 												</div>
 
@@ -176,22 +200,41 @@ get_header();
 
 					<div class="col-12 col-lg-4">
 						<div class="jp-loc2-table-card">
-							<img class="jp-loc2-table-card-img lazy" src="/wp-content/uploads/2020/07/jp-icon-TN-180x180-1.png" alt="Kentucky">
+							<img class="jp-loc2-table-card-img lazy" data-src="/wp-content/uploads/2020/07/jp-icon-TN-180x180-1.png" alt="Kentucky">
 							<h4 class="jp-loc2-table-card-title">Kentucky</h4>
 
 							<ul class="jp-loc2-table-card-list">
 								<?php if ( ! empty( $locations->cards_2 ) ) : ?>
 									<?php foreach ( $locations->cards_2 as $card ) : ?>
 										<li class="jp-loc2-table-card-list-item">
-											<a class="jp-loc2-table-card-place" href="<?php echo esc_attr( $card['link'] ); ?>">
+											<a class="jp-loc2-table-card-place" <?php if ( ! empty( $card['link'] ) ) echo ( 'href="' . esc_attr( $card['link'] ) . '"' ); ?>>
 												<h4 class="jp-loc2-table-card-place-title"><?php echo esc_html( $card['title'] ); ?> <span class="fas fa-info-circle"></span></h4>
 
 												<div class="jp-loc2-table-card-place-stars">
 													<span class="jp-loc2-table-card-place-star"><?php echo esc_html( $card['ratings']['number_rating'] ); ?></span>
 													<span class="fas fa-star"></span>
 													<span class="fas fa-star"></span>
-													<span class="fas fa-star"></span>
-													<span class="fas fa-star"></span>
+
+													<?php if ( floatval( $card['ratings']['number_rating'] ) <= 2.5 ) : ?>
+														<span class="fas fa-star-half"></span>
+													<?php elseif ( floatval( $card['ratings']['number_rating'] ) <= 3 ) : ?>
+														<span class="fas fa-star"></span>
+													<?php elseif ( floatval( $card['ratings']['number_rating'] ) <= 3.5 ) : ?>
+														<span class="fas fa-star"></span>
+														<span class="fas fa-star-half"></span>
+													<?php elseif ( floatval( $card['ratings']['number_rating'] ) <= 4 ) : ?>
+														<span class="fas fa-star"></span>
+														<span class="fas fa-star"></span>
+													<?php elseif ( floatval( $card['ratings']['number_rating'] ) <= 4.5 ) : ?>
+														<span class="fas fa-star"></span>
+														<span class="fas fa-star"></span>
+														<span class="fas fa-star-half"></span>
+													<?php else : ?>
+														<span class="fas fa-star"></span>
+														<span class="fas fa-star"></span>
+														<span class="fas fa-star"></span>
+													<?php endif; ?>
+
 													<span class="jp-loc2-table-card-place-count">(<?php echo esc_html( $card['ratings']['count'] ); ?>)</span>
 												</div>
 
@@ -206,22 +249,41 @@ get_header();
 
 					<div class="col-12 col-lg-4">
 						<div class="jp-loc2-table-card">
-							<img class="jp-loc2-table-card-img lazy" src="/wp-content/uploads/2020/07/FLjp-icon-TN-180x180-1.png" alt="Florida">
+							<img class="jp-loc2-table-card-img lazy" data-src="/wp-content/uploads/2020/07/FLjp-icon-TN-180x180-1.png" alt="Florida">
 							<h4 class="jp-loc2-table-card-title">Florida</h4>
 
 							<ul class="jp-loc2-table-card-list">
 								<?php if ( ! empty( $locations->cards_3 ) ) : ?>
 									<?php foreach ( $locations->cards_3 as $card ) : ?>
 										<li class="jp-loc2-table-card-list-item">
-											<a class="jp-loc2-table-card-place" href="<?php echo esc_attr( $card['link'] ); ?>">
+											<a class="jp-loc2-table-card-place" <?php if ( ! empty( $card['link'] ) ) echo ( 'href="' . esc_attr( $card['link'] ) . '"' ); ?>>
 												<h4 class="jp-loc2-table-card-place-title"><?php echo esc_html( $card['title'] ); ?> <span class="fas fa-info-circle"></span></h4>
 
 												<div class="jp-loc2-table-card-place-stars">
 													<span class="jp-loc2-table-card-place-star"><?php echo esc_html( $card['ratings']['number_rating'] ); ?></span>
 													<span class="fas fa-star"></span>
 													<span class="fas fa-star"></span>
-													<span class="fas fa-star"></span>
-													<span class="fas fa-star"></span>
+
+													<?php if ( floatval( $card['ratings']['number_rating'] ) <= 2.5 ) : ?>
+														<span class="fas fa-star-half"></span>
+													<?php elseif ( floatval( $card['ratings']['number_rating'] ) <= 3 ) : ?>
+														<span class="fas fa-star"></span>
+													<?php elseif ( floatval( $card['ratings']['number_rating'] ) <= 3.5 ) : ?>
+														<span class="fas fa-star"></span>
+														<span class="fas fa-star-half"></span>
+													<?php elseif ( floatval( $card['ratings']['number_rating'] ) <= 4 ) : ?>
+														<span class="fas fa-star"></span>
+														<span class="fas fa-star"></span>
+													<?php elseif ( floatval( $card['ratings']['number_rating'] ) <= 4.5 ) : ?>
+														<span class="fas fa-star"></span>
+														<span class="fas fa-star"></span>
+														<span class="fas fa-star-half"></span>
+													<?php else : ?>
+														<span class="fas fa-star"></span>
+														<span class="fas fa-star"></span>
+														<span class="fas fa-star"></span>
+													<?php endif; ?>
+
 													<span class="jp-loc2-table-card-place-count">(<?php echo esc_html( $card['ratings']['count'] ); ?>)</span>
 												</div>
 
