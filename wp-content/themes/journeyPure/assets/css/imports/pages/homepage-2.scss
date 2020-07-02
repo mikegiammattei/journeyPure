@@ -53,16 +53,17 @@
 	  }
 	  .embed-responsive {
 		box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
+		@extend .jp-embed-responsive;
 	  }
 	  .feature {
 		margin: 40px auto 0;
 		padding: 5px 65px 50px;
 		max-width:800px;
-		
+
 		.lineup{
 		box-shadow: 0px 2px 4px rgba(0,0,0,.18);
 		}
-		
+
 		p{
 		text-shadow: 1px 1px #ffffff;
 		}

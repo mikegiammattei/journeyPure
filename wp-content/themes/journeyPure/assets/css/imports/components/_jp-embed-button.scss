@@ -1,0 +1,27 @@
+.jp-embed-responsive {
+	&:after {
+		background-color: #fff;
+		border-radius: 50%;
+		content: "";
+		font-family: "Font Awesome 5 Free";
+		font-size: 94px;
+		font-weight: 900;
+		height: 100px;
+		left: 50%;
+		line-height: 100px;
+		opacity: .7;
+		position: absolute;
+		text-align: center;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		transition: all 150ms ease-out;
+		width: 100px;
+	}
+
+	&:hover, &:focus {
+		&:after {
+			opacity: .9;
+			transform: translate(-50%, -50%) scale(1.05);
+		}
+	}
+}

@@ -33,26 +33,27 @@
 
 		p, ul, ol {
 			color: #fbbb06;
-    font-family: "Montserrat",sans-serif;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 20px;
-    max-width: 800px;
-    margin: 5px auto;
-    padding: 0 15px;
+			font-family: "Montserrat",sans-serif;
+			font-weight: normal;
+			font-style: normal;
+			font-size: 20px;
+			max-width: 800px;
+			margin: 5px auto;
+			padding: 0 15px;
 
 			&:last-child {
 				padding-bottom: 0;
 			}
 		}
-		a{
-		border-bottom: 2px dotted;
-		    color: #fbbb06;
-						&:hover {
+
+		a {
+			border-bottom: 2px dotted;
+			color: #fbbb06;
+
+			&:hover {
 				color: white !important;
 			}
 		}
-
 
 		// Button
 
@@ -156,6 +157,10 @@
 				background: #01389f;
 				color: #ffffff;
 			}
+		}
+
+		.embed-responsive {
+			@extend .jp-embed-responsive;
 		}
 	}
 
