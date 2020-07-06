@@ -18,7 +18,7 @@ get_header();
 
 	<!-- SECTION: Masthead -->
 
-	<section class="jp-loc2-section jp-loc2-masthead" style="background-image: url('/wp-content/uploads/2019/11/jp-locations-banner-2-1920x522.jpg');">
+	<section class="jp-loc2-section jp-loc2-masthead" style="background-image: url('/wp-content/uploads/2020/07/location-photos-KY-TN-FL.jpg');">
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-lg-8 offset-lg-2">
@@ -200,8 +200,8 @@ get_header();
 
 					<div class="col-12 col-lg-4">
 						<div class="jp-loc2-table-card">
-							<img class="jp-loc2-table-card-img lazy" data-src="/wp-content/uploads/2020/07/jp-icon-TN-180x180-1.png" alt="Kentucky">
-							<h4 class="jp-loc2-table-card-title">Kentucky</h4>
+							<img class="jp-loc2-table-card-img lazy" data-src="/wp-content/uploads/2020/07/jp-icon-TN-180x180-1.png" alt="<?php echo esc_attr( $locations->cards_2_title ); ?>">
+							<h4 class="jp-loc2-table-card-title"><?php echo esc_html( $locations->cards_2_title ); ?></h4>
 
 							<ul class="jp-loc2-table-card-list">
 								<?php if ( ! empty( $locations->cards_2 ) ) : ?>
@@ -249,8 +249,8 @@ get_header();
 
 					<div class="col-12 col-lg-4">
 						<div class="jp-loc2-table-card">
-							<img class="jp-loc2-table-card-img lazy" data-src="/wp-content/uploads/2020/07/FLjp-icon-TN-180x180-1.png" alt="Florida">
-							<h4 class="jp-loc2-table-card-title">Florida</h4>
+							<img class="jp-loc2-table-card-img lazy" data-src="/wp-content/uploads/2020/07/FLjp-icon-TN-180x180-1.png" alt="<?php echo esc_attr( $locations->cards_3_title ); ?>">
+							<h4 class="jp-loc2-table-card-title"><?php echo esc_html( $locations->cards_3_title ); ?></h4>
 
 							<ul class="jp-loc2-table-card-list">
 								<?php if ( ! empty( $locations->cards_3 ) ) : ?>
