@@ -99,22 +99,26 @@ get_header();
 				</div>
 
 				<div class="row">
+					
+
+					<div class="col-12 col-lg-7 order-lg-1">
+						<div class="embed-responsive embed-responsive-16by9 youtube-video-place" style="cursor: pointer; background: transparent url('<?php echo esc_attr( $location->aboveFold->youtube_video_thumbnail ); ?>') no-repeat center center; background-size: cover;" data-yt-url="https://www.youtube.com/embed/<?php echo esc_attr( $location->aboveFold->youtube_video_id ); ?>"></div>
+					</div>
+					
 					<div class="col-12 col-lg-5 order-lg-2">
 						<div class="jp-loc-masthead-content">
 							<div class="jp-loc-masthead-text">
 								<?php echo wp_kses_post( $location->aboveFold->subheading ); ?>
 							</div>
 
-							<a class="jp-op-masthead-button hide-for-sm" href="tel:844-505-4799" title="Call (844) 505-4799 to talk now."><span class="fas fa-phone"></span> (844) 505-4799</a>
+							<a class="jp-op-masthead-button hide-for-sm" href="tel:844-505-4799" title="Call (844) 505-4799 to talk now."><span class="fas fa-phone"></span>Call (844) 505-4799</a>
 							<a class="jp-op-masthead-button show-for-sm" href="javascript:void(0);" data-toggle="tooltip" data-placement="top" data-trigger="click" title="Call (844) 505-4799 to talk now."><span class="fas fa-phone"></span> Call (844) 505-4799</a>
-							<span class="button-support-text"> Available 27/7</span>
 						</div>
 					</div>
-
-					<div class="col-12 col-lg-7 order-lg-1">
-						<div class="embed-responsive embed-responsive-16by9 youtube-video-place" style="cursor: pointer; background: transparent url('<?php echo esc_attr( $location->aboveFold->youtube_video_thumbnail ); ?>') no-repeat center center; background-size: cover;" data-yt-url="https://www.youtube.com/embed/<?php echo esc_attr( $location->aboveFold->youtube_video_id ); ?>"></div>
-					</div>
+					
 				</div>
+				
+				
 
 				<div class="row">
 					<div class="col-12">
@@ -445,7 +449,53 @@ get_header();
 		</section>
 	<?php endif; ?>
 
-	<section class="design-process-section" id="process-tab">
+
+	<section class="insurance-section">
+		<div class="container">
+			<?php $_inc->get_insurance_banner(); ?>
+		</div>
+	</section>
+
+
+
+		<section class="location-information">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="capacity">
+						<?php
+							$location_status_data = 'Only ' . $location->block4->location->status->availableRoomCount . ' ';
+							$location_status_data .= ($location->block4->location->status->availableRoomCount == 1) ? ' spot' : ' spots';
+							$location_status_data .= ' available </b>';
+						?>
+						<i class="fa fa-info-circle"></i> <b><?php echo $location_status_data; ?></b>
+					</div>
+					<?php $address = urlencode($location->block4->location->full_address); ?>
+					<?php $address = preg_replace('/\./','',$address) ?>
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDwoQ63Mff3mW9-u2fQUhnlMBmX752RKds&q=<?php echo $address; ?>" allowfullscreen></iframe>
+					</div>
+				</div>
+				<div class="details col-md-6">
+					<?php if($location->block4->location->name): ?>
+						<h4><?php echo $location->block4->location->name; ?></h4>
+					<?php endif; ?>
+					<?php if($location->block4->location->street_address): ?>
+						<p class="address-line"><?php echo $location->block4->location->street_address; ?>
+					<?php endif; ?>
+					<?php echo $location->block4->location->city; ?>,
+					<?php echo $location->block4->location->state; ?>
+					<?php echo $location->block4->location->zip; ?></p>
+					<?php if($location->block4->location->description): ?>
+						<hr class="dotted">
+						<p><?php echo $location->block4->location->description; ?></p>
+					<?php endif; ?>
+				</div>
+			</div>
+		</section>
+	<?php endif; ?>
+	
+	
+		<section class="design-process-section" id="process-tab">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
@@ -561,49 +611,8 @@ get_header();
 		</div>
 	</section>
 
-	<section class="insurance-section">
-		<div class="container">
-			<?php $_inc->get_insurance_banner(); ?>
-		</div>
-	</section>
-
-
-
-		<section class="location-information">
-			<div class="row">
-				<div class="col-md-6">
-					<div class="capacity">
-						<?php
-							$location_status_data = 'Only ' . $location->block4->location->status->availableRoomCount . ' ';
-							$location_status_data .= ($location->block4->location->status->availableRoomCount == 1) ? ' spot' : ' spots';
-							$location_status_data .= ' available </b>';
-						?>
-						<i class="fa fa-info-circle"></i> <b><?php echo $location_status_data; ?></b>
-					</div>
-					<?php $address = urlencode($location->block4->location->full_address); ?>
-					<?php $address = preg_replace('/\./','',$address) ?>
-					<div class="embed-responsive embed-responsive-16by9">
-						<iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDwoQ63Mff3mW9-u2fQUhnlMBmX752RKds&q=<?php echo $address; ?>" allowfullscreen></iframe>
-					</div>
-				</div>
-				<div class="details col-md-6">
-					<?php if($location->block4->location->name): ?>
-						<h4><?php echo $location->block4->location->name; ?></h4>
-					<?php endif; ?>
-					<?php if($location->block4->location->street_address): ?>
-						<p class="address-line"><?php echo $location->block4->location->street_address; ?>
-					<?php endif; ?>
-					<?php echo $location->block4->location->city; ?>,
-					<?php echo $location->block4->location->state; ?>
-					<?php echo $location->block4->location->zip; ?></p>
-					<?php if($location->block4->location->description): ?>
-						<hr class="dotted">
-						<p><?php echo $location->block4->location->description; ?></p>
-					<?php endif; ?>
-				</div>
-			</div>
-		</section>
-	<?php endif; ?>
+	
+	
 </div>
 
 <!-- /TEMPLATE: Locations CPT -->
