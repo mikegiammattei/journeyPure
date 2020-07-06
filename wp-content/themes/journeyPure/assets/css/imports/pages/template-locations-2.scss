@@ -26,13 +26,28 @@
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
+		position: relative;
 
 		@media screen and (max-width: 767px) {
 			background-image: none !important;
 			border-top: 10px solid #e0e7f5;
 		}
 
+		&:before {
+			background-color: rgba($white, 0.6);
+			bottom: 0;
+			content: '';
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: 1;
+		}
+
 		&-content {
+			position: relative;
+			z-index: 2;
+
 			@media screen and (min-width: 768px) {
 				background-color: rgba(#ffffff, 0.9);
 				border-top: 10px solid #e0e7f5;
