@@ -59,6 +59,8 @@
 	  font-family: $heading-style-1;
 	  p {
 		color: hsl(221,50%,92%);
+		    max-width: 800px;
+    margin: 0 auto;
 	  }
 	}
   }

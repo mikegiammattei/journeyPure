@@ -8,17 +8,6 @@
 // OP CTP template
 
 if ($('#jp-op').length > 0) {
-
-	// Section Masthead
-
-	var video = $('.youtube-video-place');
-
-	if (video.length > 0) {
-		video.on('click', function() {
-			video.html('<iframe allowfullscreen allow="autoplay; encrypted-media" frameborder="0" class="embed-responsive-item" src="' + video.data('yt-url') + '"></iframe>');
-		});
-	}
-
 	// Section Bios
 
 	var slider = $('.bio-slider');

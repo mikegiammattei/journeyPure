@@ -18,6 +18,10 @@
 		width: 100px;
 	}
 
+	&.playing:after {
+		display: none;
+	}
+
 	&:hover, &:focus {
 		&:after {
 			opacity: .9;

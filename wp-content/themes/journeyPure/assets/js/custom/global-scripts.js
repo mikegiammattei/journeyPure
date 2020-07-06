@@ -42,17 +42,13 @@ var video_wrapper = $('.youtube-video-place');
 if(video_wrapper.length){
 	$('.youtube-video-place').on('click', function(){
 		let thisVidUrl = $(this);
-		thisVidUrl.html('<iframe allowfullscreen allow="autoplay; encrypted-media" frameborder="0" class="embed-responsive-item" src="' + thisVidUrl.data('yt-url') + '??rel=0&showinfo=0&autoplay=1"></iframe>');
-		setTimeout(function () {
-
-		});
+		thisVidUrl.html('<iframe allowfullscreen allow="autoplay; encrypted-media" frameborder="0" class="embed-responsive-item" src="' + thisVidUrl.data('yt-url') + '?rel=0&showinfo=0&autoplay=1&cc_load_policy=1"></iframe>');
+		thisVidUrl.addClass('playing');
 	});
-
-
 }
+
 $('.video-cta').on('click', function(){
 	let thisTrigger = $(this);
 	let thisVideContainerId = thisTrigger.data('target');
-
 	$(thisVideContainerId).find('.youtube-video-place').trigger('click');
 });

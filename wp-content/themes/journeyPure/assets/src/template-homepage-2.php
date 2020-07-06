@@ -82,7 +82,7 @@ $footerVersion = 2;
 								</div>
 								<div class="col-lg-12 col-sm-12 d-flex align-items-stretch">
 									<div class="card card-body h-100 justify-content-center transparent" style="width: 100%; ">
-										<div class="embed-responsive embed-responsive-16by9 youtube-video-place  lazy" data-src='/wp-content/themes/journeyPure/assets/img/journeypure-rehab-review-2.png'  style=" cursor: pointer; background: no-repeat center; -webkit-background-size: cover; background-size: cover;" data-yt-url="https://www.youtube.com/embed/kNj08KeNbIA">
+										<div class="embed-responsive embed-responsive-16by9 youtube-video-place  lazy" data-src='/wp-content/uploads/2020/07/dainel-rehab-story.png'  style=" cursor: pointer; background: no-repeat center; -webkit-background-size: cover; background-size: cover;" data-yt-url="https://www.youtube.com/embed/kNj08KeNbIA">
 										</div>
 									</div>
 								</div>
