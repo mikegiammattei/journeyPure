@@ -72,7 +72,7 @@
 			</footer>
 
 			<?php if ( ! is_page_template( 'template-virtual-rehab.php' ) ) : ?>
-				<?php include_once(get_stylesheet_directory() . '/assets/src/includes/components/cta-widget.php'); ?>
+				<?php // include_once(get_stylesheet_directory() . '/assets/src/includes/components/cta-widget.php'); ?>
 			<?php endif; ?>
 
 			<?php include_once(get_stylesheet_directory() . '/assets/src/includes/components/leave-a-review.php'); ?>

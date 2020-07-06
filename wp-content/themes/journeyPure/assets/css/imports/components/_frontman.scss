@@ -1,0 +1,69 @@
+// External HTML from Frontman (makerobos.com)
+
+.mkosBTNContainer._widgetRight {
+	@media screen and (min-width: 768px) {
+		right: 145px !important;
+	}
+}
+
+.mkosBTNContainer._widgetRight .mkosBTNFrame {
+	@media screen and (min-width: 768px) {
+		right: 145px !important;
+	}
+}
+
+.mkosBTNContainer._widgetRight .mr-btn-wrapper {
+	@media screen and (min-width: 768px) {
+		right: 185px !important;
+	}
+}
+
+.makerobos_containerMain._widgetRight._large .makerobos_containerIn {
+	@media screen and (min-width: 768px) {
+		right: 260px !important;
+	}
+}
+
+// Custom code (frontman.js)
+
+.mr-btn-wrapper-jp-text {
+    background-color: #ea4335;
+ 	bottom: 40px;
+    box-sizing: border-box;
+    cursor: pointer;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+	height: 70px;
+    justify-content: center;
+    padding: 8px 8px 8px 50px;
+    position: fixed;
+	right: 0;
+	transition: all 150ms ease-in-out;
+    width: 220px;
+	z-index: 2147482998;
+
+	@media screen and (max-width: 767px) {
+		left: 40px;
+		padding: 8px 45px 8px 15px;
+		right: 75px;
+		width: auto;
+	}
+
+	&:hover, &:focus {
+		background-color: darken($color: #ea4335, $amount: 5%);
+		color: #fff;
+	}
+}
+
+.mr-btn-wrapper-jp-text-top {
+	font-size: 12px;
+    margin-bottom: 2px;
+    pointer-events: none;
+}
+
+.mr-btn-wrapper-jp-text-bottom {
+    font-size: 18px;
+	font-weight: 600;
+    pointer-events: none;
+}
