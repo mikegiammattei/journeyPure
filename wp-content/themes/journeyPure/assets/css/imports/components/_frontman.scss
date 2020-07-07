@@ -46,10 +46,12 @@
 
 	@media screen and (max-width: 767px) {
 		left: 40px;
-		padding: 8px 45px 8px 0;
+		padding: 8px 0 7px 0;
 		right: 38px;
 		width: auto;
 		border-radius: 40px;
+		height: 74px;
+    bottom: 38px;
 	}
 
 	&.msie {
@@ -68,7 +70,7 @@
     pointer-events: none;
 	line-height:17px;
 		@media screen and (max-width: 767px) {
-	margin: 0 auto;}
+	margin: 0 0 0 14%;}
 }
 
 .mr-btn-wrapper-jp-text-bottom {
@@ -77,7 +79,7 @@
     pointer-events: none;
 	@media screen and (max-width: 767px) {
 		font-size:17px;
-		margin: 0 auto;
+		margin: 0 0 0 13%;
 		
 	}
 	i{
