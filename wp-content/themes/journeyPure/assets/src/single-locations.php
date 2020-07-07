@@ -99,12 +99,14 @@ get_header();
 				</div>
 
 				<div class="row">
-					
+
 
 					<div class="col-12 col-lg-7 order-lg-1">
-						<div class="embed-responsive embed-responsive-16by9 youtube-video-place" style="cursor: pointer; background: transparent url('<?php echo esc_attr( $location->aboveFold->youtube_video_thumbnail ); ?>') no-repeat center center; background-size: cover;" data-yt-url="https://www.youtube.com/embed/<?php echo esc_attr( $location->aboveFold->youtube_video_id ); ?>"></div>
+						<div class="embed-responsive embed-responsive-16by9 youtube-video-place" style="background-image: url('<?php echo esc_attr( $location->aboveFold->youtube_video_thumbnail ); ?>');" data-yt-url="https://www.youtube.com/embed/<?php echo esc_attr( $location->aboveFold->youtube_video_id ); ?>">
+							<span class="play-button"></span>
+						</div>
 					</div>
-					
+
 					<div class="col-12 col-lg-5 order-lg-2">
 						<div class="jp-loc-masthead-content">
 							<div class="jp-loc-masthead-text">
@@ -115,10 +117,10 @@ get_header();
 							<a class="jp-op-masthead-button show-for-sm" href="javascript:void(0);" data-toggle="tooltip" data-placement="top" data-trigger="click" title="Call (844) 505-4799 to talk now."><span class="fas fa-phone"></span> Call (844) 505-4799</a>
 						</div>
 					</div>
-					
+
 				</div>
-				
-				
+
+
 
 				<div class="row">
 					<div class="col-12">
@@ -493,8 +495,8 @@ get_header();
 			</div>
 		</section>
 	<?php endif; ?>
-	
-	
+
+
 		<section class="design-process-section" id="process-tab">
 		<div class="container">
 			<div class="row">
@@ -611,8 +613,8 @@ get_header();
 		</div>
 	</section>
 
-	
-	
+
+
 </div>
 
 <!-- /TEMPLATE: Locations CPT -->
