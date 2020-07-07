@@ -44,7 +44,7 @@ get_header();
 
 			<div class="row">
 				<div class="col-12 col-lg-7">
-					<div class="embed-responsive embed-responsive-16by9 youtube-video-place" style="background-image: transparent url('<?php echo esc_attr( $op->masthead_youtube_video_thumbnail['url'] ); ?>');" data-yt-url="https://www.youtube.com/embed/<?php echo esc_attr( $op->masthead_youtube_video_id ); ?>">
+					<div class="embed-responsive embed-responsive-16by9 youtube-video-place" style="background-image: url('<?php echo esc_attr( $op->masthead_youtube_video_thumbnail['url'] ); ?>');" data-yt-url="https://www.youtube.com/embed/<?php echo esc_attr( $op->masthead_youtube_video_id ); ?>">
 						<span class="play-button"></span>
 					</div>
 				</div>
