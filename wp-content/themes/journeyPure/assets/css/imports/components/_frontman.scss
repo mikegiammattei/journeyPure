@@ -2,25 +2,25 @@
 
 .mkosBTNContainer._widgetRight {
 	@media screen and (min-width: 768px) {
-		right: 145px !important;
+		right: 185px !important;
 	}
 }
 
 .mkosBTNContainer._widgetRight .mkosBTNFrame {
 	@media screen and (min-width: 768px) {
-		right: 145px !important;
+		right: 185px !important;
 	}
 }
 
 .mkosBTNContainer._widgetRight .mr-btn-wrapper {
 	@media screen and (min-width: 768px) {
-		right: 185px !important;
+		right: 225px !important;
 	}
 }
 
 .makerobos_containerMain._widgetRight._large .makerobos_containerIn {
 	@media screen and (min-width: 768px) {
-		right: 260px !important;
+		right: 300px !important;
 	}
 }
 
@@ -28,26 +28,28 @@
 
 .mr-btn-wrapper-jp-text {
     background-color: #ea4335;
- 	bottom: 40px;
+ 	bottom: 38px;
     box-sizing: border-box;
     cursor: pointer;
     color: #fff;
     display: flex;
     flex-direction: column;
-	height: 70px;
+	height: 75px;
     justify-content: center;
-    padding: 8px 8px 8px 45px;
+    padding: 9px 8px 9px 87px;
     position: fixed;
 	right: 0;
 	transition: all 150ms ease-in-out;
-    width: 220px;
+    width: 300px;
 	z-index: 2147482998;
+	border-radius: 40px 0 0 40px;
 
 	@media screen and (max-width: 767px) {
 		left: 40px;
-		padding: 8px 45px 8px 15px;
-		right: 75px;
+		padding: 8px 45px 8px 0;
+		right: 38px;
 		width: auto;
+		border-radius: 40px;
 	}
 
 	&.msie {
@@ -61,13 +63,27 @@
 }
 
 .mr-btn-wrapper-jp-text-top {
-	font-size: 12px;
-    margin-bottom: 2px;
+	font-size: 17px;
+    margin-bottom: 0px;
     pointer-events: none;
+		@media screen and (max-width: 767px) {
+	margin: 0 auto;}
 }
 
 .mr-btn-wrapper-jp-text-bottom {
-    font-size: 18px;
+    font-size: 22px;
 	font-weight: 600;
     pointer-events: none;
+	@media screen and (max-width: 767px) {
+		font-size:17px;
+		margin: 0 auto;
+		
+	}
+	i{
+	opacity: .4;
+    vertical-align: middle;
+    transform: rotate(45deg);
+    margin-right: -4px;
+	
+	}
 }
