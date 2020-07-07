@@ -626,9 +626,10 @@ $(document).ready(function () {
 
   if (navigator.userAgent.indexOf('MSIE') !== -1 || navigator.userAgent.indexOf('Trident') !== -1) {
     jQuery('.mr-btn-wrapper-jp-text').addClass('msie');
-  } // Show the button HTML as soon the external API sends a "widget_wakeup_signal" message to the window
+  } // Only when the chat widget is ready/loaded
   // window.addEventListener('message', function(e) {
-  // 	if ('widget_wakeup_signal' === e.data.type) {
+  // 	if ('signal' === e.data.type) {
+  // Show the button HTML as soon the external API sends a "signal" message to the window
 
 
   jQuery('.mr-btn-wrapper-jp-text').removeClass('hide'); // 	}
@@ -642,6 +643,31 @@ $(document).ready(function () {
       if (jQuery('.mr-btn-wrapper').length > 0) {
         jQuery('.mr-btn-wrapper').trigger('click');
       }
+    }
+  }); // Only when the chat widget is ready/loaded
+
+  window.addEventListener('message', function (e) {
+    if ('signal' === e.data.type) {
+      // Make all the Insurances CTA open the new chat instead
+      jQuery('[data-toggle="modal"][data-target="#main-insurance-form"]').each(function () {
+        jQuery(this).removeAttr('data-toggle').removeAttr('data-target').addClass('frontman-cta-insurance');
+      }); // On CTA click, shows the chat modal with the Insurance tab open
+
+      jQuery(document).on('click', '.frontman-cta-insurance', function (e) {
+        e.preventDefault();
+        document.location.hash = '#Insurance';
+        var customButton = jQuery('.mr-btn-wrapper');
+
+        if (customButton.length > 0) {
+          customButton.trigger('click');
+        }
+
+        var chatIframe = jQuery('#makerobos_chat');
+
+        if (chatIframe.length > 0) {
+          chatIframe.attr('src', chatIframe.attr('src'));
+        }
+      });
     }
   });
 });

@@ -79,7 +79,7 @@
 			<?php include_once(get_stylesheet_directory() . '/assets/src/includes/components/not-ready-component.php'); ?>
 			<?php include_once(get_stylesheet_directory() . '/assets/src/includes/components/exit-modal.php'); ?>
 			<?php include_once(get_stylesheet_directory() . '/assets/src/includes/components/review-video-modal.php'); ?>
-			<?php // include_once(get_stylesheet_directory() . '/assets/src/includes/components/frontman.php'); ?>
+			<?php include_once(get_stylesheet_directory() . '/assets/src/includes/components/frontman.php'); ?>
 
 		</div> <?php /** end of main wrapper */ ?>
 
