@@ -36,7 +36,7 @@
     flex-direction: column;
 	height: 70px;
     justify-content: center;
-    padding: 8px 8px 8px 50px;
+    padding: 8px 8px 8px 45px;
     position: fixed;
 	right: 0;
 	transition: all 150ms ease-in-out;
@@ -48,6 +48,10 @@
 		padding: 8px 45px 8px 15px;
 		right: 75px;
 		width: auto;
+	}
+
+	&.msie {
+		padding: 10px 20px;
 	}
 
 	&:hover, &:focus {
