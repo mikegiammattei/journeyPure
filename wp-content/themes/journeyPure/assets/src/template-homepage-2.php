@@ -25,10 +25,11 @@ $footerVersion = 2;
 			<div class="default-container x-loc lazy" data-src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/tennessee-background.jpg">
 				<div class="background-fade">
 					<div class="content">
-						<h1 class="heading text-primary">Get Your Life Back on Track</h1>
-						<div class="h3 text-primary">
-							Your #1 Choice for Drug & Alcohol Treatment
-						</div>
+						<h1 class="heading text-primary">
+							Your #1 Choice for
+							<br class="hide-for-sm-only hide-for-xs-only">
+							Drug &amp; Alcohol Treatment
+						</h1>
 						<hr>
 						<div class="feature">
 							<div class="row">

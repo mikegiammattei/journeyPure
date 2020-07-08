@@ -31,8 +31,8 @@ $(document).ready(function () {
 	});
 
 	// Only when the chat widget is ready/loaded
-	window.addEventListener('message', function(e) {
-		if ('signal' === e.data.type) {
+	// window.addEventListener('message', function(e) {
+	// 	if ('signal' === e.data.type) {
 			// Make all the Insurances CTA open the new chat instead
 			jQuery('[data-toggle="modal"][data-target="#main-insurance-form"]').each(function() {
 				jQuery(this).removeAttr('data-toggle').removeAttr('data-target').addClass('frontman-cta-insurance');
@@ -53,7 +53,7 @@ $(document).ready(function () {
 					chatIframe.attr('src', chatIframe.attr('src'));
 				}
 			});
-		}
-	});
+	// 	}
+	// });
 
 });
