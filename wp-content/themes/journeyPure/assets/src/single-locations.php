@@ -106,7 +106,7 @@ get_header();
 		<section class="block-2">
 			<div class="container">
 				<div class="row">
-					<div class="col-12 col-md-10 offset-md-1">
+					<div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
 						<?php if ( $location->block2->heading ) : ?>
 							<h3 class="h1"><?php echo wp_kses_post( $location->block2->heading ); ?></h3>
 						<?php endif; ?>
@@ -137,7 +137,7 @@ get_header();
 						<?php endif; ?>
 					</div>
 
-					<div class="col-12 col-md-10 offset-md-1">
+					<div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
 						<div class="logos-wrapper">
 							<img class="logos lazy" data-src="<?php echo esc_attr( get_stylesheet_directory_uri() ); ?>/assets/img/insurance2.png" alt="Aetna, Anthem Blue Cross Blue Sheild, Cigna Heath Insurances">
 							<img class="logos lazy" data-src="<?php echo esc_attr( get_stylesheet_directory_uri() ); ?>/assets/img/insurance1.png" alt="Amerihealth, United Healthcare, Humana, Tricare and 43 More Insurances">
@@ -274,7 +274,7 @@ get_header();
 				<?php endif; ?>
 
 				<div class="subheading">
-					<p><?php echo esc_html( $location->bios->subheading ); ?></p>
+					<p class="h3"><?php echo esc_html( $location->bios->subheading ); ?></p>
 				</div>
 
 				<div class="bio-slider" data-slick='{"slidesToShow": 4}' >
