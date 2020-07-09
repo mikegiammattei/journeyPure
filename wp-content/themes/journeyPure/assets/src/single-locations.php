@@ -197,7 +197,7 @@ get_header();
 				<?php if ( ! empty( $location->boxes->image ) ) : ?>
 					<div class="row">
 						<div class="col-12">
-							<img class="jp-single-loc-boxes-image" src="<?php echo esc_attr( $location->boxes->image ); ?>" alt="<?php echo esc_attr( $location->boxes->heading ); ?>">
+							<img class="jp-single-loc-boxes-image lazy" data-src="<?php echo esc_attr( $location->boxes->image ); ?>" alt="<?php echo esc_attr( $location->boxes->heading ); ?>">
 						</div>
 					</div>
 				<?php endif; ?>
