@@ -38,6 +38,9 @@
 	  h1 {
 		margin: 0 auto;
 		max-width: 800px;
+		@media (max-width: 767px) {
+		    padding: 0 25px;
+			}
 	  }
 	  hr {
 		display: none;

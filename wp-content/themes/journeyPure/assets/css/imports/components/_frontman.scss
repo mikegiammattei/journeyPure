@@ -46,7 +46,7 @@
 
 	@media screen and (max-width: 767px) {
 		left: 40px;
-		padding: 8px 0 7px 0;
+		padding: 6px 0 7px 0;
 		right: 38px;
 		width: auto;
 		border-radius: 40px;
@@ -70,7 +70,8 @@
     pointer-events: none;
 	line-height:17px;
 		@media screen and (max-width: 767px) {
-	margin: 0 0 0 14%;}
+	margin: 0 0 0 14%;
+	line-height:25px;}
 }
 
 .mr-btn-wrapper-jp-text-bottom {
