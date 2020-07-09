@@ -462,7 +462,7 @@ get_header();
 						<?php foreach ( $location->block2->tag_sections as $section ) : ?>
 							<aside class="tag-list">
 								<?php if ( $section['heading'] ) : ?>
-									<span class="heading"><span><?php echo esc_html( $section['heading'] ); ?></span></span>
+									<span class="heading"><span><?php echo $section['heading']; ?></span></span>
 								<?php endif; ?>
 
 								<?php if ( $section['tags'] ) : ?>
