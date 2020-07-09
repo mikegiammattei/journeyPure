@@ -33,10 +33,13 @@ $(document).ready(function () {
 	// Only when the chat widget is ready/loaded
 	// window.addEventListener('message', function(e) {
 	// 	if ('signal' === e.data.type) {
-			// Make all the Insurances CTA open the new chat instead
-			jQuery('[data-toggle="modal"][data-target="#main-insurance-form"]').each(function() {
-				jQuery(this).removeAttr('data-toggle').removeAttr('data-target').addClass('frontman-cta-insurance');
-			});
+			// Not IE
+			if (navigator.userAgent.indexOf('MSIE') === -1 && navigator.userAgent.indexOf('Trident') === -1) {
+				// Make all the Insurances CTA open the new chat instead
+				jQuery('[data-toggle="modal"][data-target="#main-insurance-form"]').each(function() {
+					jQuery(this).removeAttr('data-toggle').removeAttr('data-target').addClass('frontman-cta-insurance');
+				});
+			}
 
 			// On CTA click, shows the chat modal with the Insurance tab open
 			jQuery(document).on('click', '.frontman-cta-insurance', function(e) {
@@ -53,7 +56,7 @@ $(document).ready(function () {
 					chatIframe.attr('src', chatIframe.attr('src'));
 				}
 			});
-	// 	}
+		// 	}
 	// });
 
 });
