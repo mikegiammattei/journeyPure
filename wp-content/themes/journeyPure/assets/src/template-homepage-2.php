@@ -410,7 +410,7 @@ $footerVersion = 2;
 									<!-- Image -->
 									<img class="video-cta-image lazy" data-src="https://journeypure.com/wp-content/uploads/2020/05/jared-video-review.jpg" alt="Jared Lanpher">
 									<!-- Icon -->
-									<span class="fas fa-play-circle"></span>
+									<span class="play-button"></span>
 								</div>
 								<!-- Title -->
 								<h6 class="video-cta-title">Jared L.</h6>
@@ -422,7 +422,7 @@ $footerVersion = 2;
 									<!-- Image -->
 									<img class="video-cta-image lazy" data-src="https://journeypure.com/wp-content/uploads/2020/05/amber-video-review.jpg" alt="Amber F.">
 									<!-- Icon -->
-									<span class="fas fa-play-circle"></span>
+									<span class="play-button"></span>
 								</div>
 								<!-- Title -->
 								<h6 class="video-cta-title">Amber F.</h6>
