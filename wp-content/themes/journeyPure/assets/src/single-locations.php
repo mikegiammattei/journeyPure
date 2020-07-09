@@ -462,7 +462,7 @@ get_header();
 						<?php foreach ( $location->block2->tag_sections as $section ) : ?>
 							<aside class="tag-list">
 								<?php if ( $section['heading'] ) : ?>
-									<span class="heading"><span><?php echo $section['heading']; ?></span></span>
+									<span class="heading"><span><?php echo wp_kses_post( $section['heading'] ); ?></span></span>
 								<?php endif; ?>
 
 								<?php if ( $section['tags'] ) : ?>
@@ -472,7 +472,7 @@ get_header();
 
 											<div class="col-6 col-lg-auto <?php echo ( ( $index + 1 ) === $tag_count && 0 !== $tag_count % 2 ) ? 'col-12' : ''; ?>">
 												<div class="tag default">
-													<?php echo esc_html( $_tag['value'] ); ?>
+													<?php echo wp_kses_post( $_tag['value'] ); ?>
 												</div>
 											</div>
 										<?php endforeach; ?>
