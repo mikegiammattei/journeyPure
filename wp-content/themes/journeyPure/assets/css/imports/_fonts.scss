@@ -4,45 +4,43 @@
 @font-face {
 	font-family: Montserrat;
 	font-weight: 100;
-	// src: url("/wp-content/themes/journeyPure/fonts/Montserrat-Thin.otf") format("opentype");
+	src: url("/wp-content/themes/journeyPure/fonts/Montserrat-Thin.otf") format("opentype");
+	font-display: swap;
+}
+@font-face {
+	font-family: Montserrat;
+	font-weight: 200;
+	src: url("/wp-content/themes/journeyPure/fonts/Montserrat-ExtraLight.otf") format("opentype");
+	font-display: swap;
+}
+@font-face {
+	font-family: Montserrat;
+	font-weight: 300;
 	src: url("/wp-content/themes/journeyPure/fonts/Montserrat-Light.otf") format("opentype");
 	font-display: swap;
 }
-// @font-face {
-// 	font-family: Montserrat;
-// 	font-weight: 200;
-// 	src: url("/wp-content/themes/journeyPure/fonts/Montserrat-ExtraLight.otf") format("opentype");
-// 	font-display: swap;
-// }
-// @font-face {
-// 	font-family: Montserrat;
-// 	font-weight: 300;
-// 	src: url("/wp-content/themes/journeyPure/fonts/Montserrat-Light.otf") format("opentype");
-// 	font-display: swap;
-// }
 @font-face {
 	font-family: Montserrat;
 	font-weight: 400;
 	src: url("/wp-content/themes/journeyPure/fonts/Montserrat-Regular.otf") format("opentype");
 	font-display: swap;
 }
-// @font-face {
-// 	font-family: Montserrat;
-// 	font-weight: 500;
-// 	src: url("/wp-content/themes/journeyPure/fonts/Montserrat-Medium.otf") format("opentype");
-// 	font-display: swap;
-// }
-// @font-face {
-// 	font-family: Montserrat;
-// 	font-weight: 600;
-// 	src: url("/wp-content/themes/journeyPure/fonts/Montserrat-SemiBold.otf") format("opentype");
-// 	font-display: swap;
-// }
+@font-face {
+	font-family: Montserrat;
+	font-weight: 500;
+	src: url("/wp-content/themes/journeyPure/fonts/Montserrat-Medium.otf") format("opentype");
+	font-display: swap;
+}
+@font-face {
+	font-family: Montserrat;
+	font-weight: 600;
+	src: url("/wp-content/themes/journeyPure/fonts/Montserrat-SemiBold.otf") format("opentype");
+	font-display: swap;
+}
 @font-face {
 	font-family: Montserrat;
 	font-weight: 700;
-	// src: url("/wp-content/themes/journeyPure/fonts/Montserrat-Bold.otf") format("opentype");
-	src: url("/wp-content/themes/journeyPure/fonts/Montserrat-Medium.otf") format("opentype");
+	src: url("/wp-content/themes/journeyPure/fonts/Montserrat-Bold.otf") format("opentype");
 	font-display: swap;
 }
 @font-face {

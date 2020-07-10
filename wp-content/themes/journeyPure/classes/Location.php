@@ -61,7 +61,8 @@ class Location {
 		require_once get_stylesheet_directory() . '/classes/Ratings.php';
 		$ratings = new \Ratings\Ratings();
 
-		$ratings->setPostByCategoryId( 5 );
+		$ratings_category_ids = $this->fields['above_fold']['ratings'];
+		$ratings->setPostByCategoryId( $ratings_category_ids );
 		$this->ratings = $ratings->ratings;
 	}
 

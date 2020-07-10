@@ -41,7 +41,7 @@ h5,.h5{
   font-family: $heading-style;
   font-size : 22px;
   line-height : 1.25;
-  font-weight: bold;
+  font-weight: 500;
   margin-bottom: 15px;
 }
 p{
@@ -552,3 +552,7 @@ figure{
 }
 
 /* /New modal overlay */
+
+b, bold {
+	font-weight: 700;
+}

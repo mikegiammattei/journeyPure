@@ -16,6 +16,10 @@ get_header();
 
 <div id="single-location" class="jp-single-loc">
 
+	<div class="note-box">
+		<p>This location is accepting new admissions with additional pre-screening procedures. To learn more, call <?php echo esc_html( get_option( 'defaultPhone' ) ); ?>.</p>
+	</div>
+
 	<!-- SECTION: Top Section (Above Fold / Masthead) -->
 
 	<section class="above-fold">
@@ -108,7 +112,7 @@ get_header();
 				<div class="row">
 					<div class="col-12 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
 						<?php if ( $location->block2->heading ) : ?>
-							<h3 class="h1"><?php echo wp_kses_post( $location->block2->heading ); ?></h3>
+							<h2 class="h1"><?php echo wp_kses_post( $location->block2->heading ); ?></h2>
 						<?php endif; ?>
 
 						<?php if ( $location->block2->list ) : ?>
@@ -212,17 +216,15 @@ get_header();
 	<?php if ( ! empty( $location->block4 ) && ! empty( $location->block4->faqs ) ) : ?>
 		<section class="block-4">
 			<div class="container">
-				<?php if ( ! empty( $location->block4->heading ) || ! empty( $location->block4->subheading ) ) : ?>
-					<div class="heading">
-						<span class="h1">
-							<?php echo esc_html( $location->block4->heading ); ?>
+				<div class="heading">
+					<?php if ( isset( $location->block4->heading ) ) : ?>
+						<h2 class="h1 text-center"><?php echo esc_html( $location->block4->heading ); ?></h2>
+					<?php endif; ?>
 
-							<?php if ( ! empty( $location->block4->subheading ) ) : ?>
-								<h2 class="lead"><?php echo esc_html( $location->block4->subheading ); ?></h2>
-							<?php endif; ?>
-						</span>
-					</div>
-				<?php endif; ?>
+					<?php if ( isset( $location->block4->subheading ) ) : ?>
+						<h3 class="h3 text-center"><?php echo esc_html( $location->block4->subheading ); ?></h3>
+					<?php endif; ?>
+				</div>
 
 				<?php if ( ! empty( $location->block4->faqs ) ) : ?>
 					<div class="faqs">
@@ -273,9 +275,11 @@ get_header();
 					</div>
 				<?php endif; ?>
 
-				<div class="subheading">
-					<p class="h3"><?php echo esc_html( $location->bios->subheading ); ?></p>
-				</div>
+				<?php if ( isset( $location->bios->subheading ) ) : ?>
+					<div class="subheading">
+						<p class="h3"><?php echo esc_html( $location->bios->subheading ); ?></p>
+					</div>
+				<?php endif; ?>
 
 				<div class="bio-slider" data-slick='{"slidesToShow": 4}' >
 					<?php foreach ( $location->bios->bios as $bio ) : ?>
@@ -292,16 +296,16 @@ get_header();
 										<?php echo ( $bio->years ) ? '<li><span class="fa-li"><i class="fas fa-clock"></i></span>' . esc_html( $bio->years ) . ' years in the field</li>' : ''; ?>
 
 										<?php
-											if ( ! empty( $bio->recovery_status ) ) {
-												switch ( $bio->recovery_status ) {
-													case 'person':
-														echo '<li><span class="fa-li"><i class="fas fa-grin"></i></span>In Recovery</li>';
-														break;
-													case 'loved_one':
-														echo '<li><span class="fa-li"><i class="fas fa-grin"></i></span>Loved One In Recovery</li>';
-														break;
-												}
+										if ( ! empty( $bio->recovery_status ) ) {
+											switch ( $bio->recovery_status ) {
+												case 'person':
+													echo '<li><span class="fa-li"><i class="fas fa-grin"></i></span>In Recovery</li>';
+													break;
+												case 'loved_one':
+													echo '<li><span class="fa-li"><i class="fas fa-grin"></i></span>Loved One In Recovery</li>';
+													break;
 											}
+										}
 										?>
 									</ul>
 								</div>
@@ -362,7 +366,7 @@ get_header();
 											<div class="author-info">
 												<div class="row">
 													<div class="col-md-auto align-self-center">
-														<img class="lazy" data-src="<?php echo esc_attr( $reviews->photo['image'] ); ?>" alt="<?php echo esc_attr( $reviews->photo['alt'] ); ?>">
+														<img src="<?php echo esc_attr( $reviews->photo['image'] ); ?>" alt="<?php echo esc_attr( $reviews->photo['alt'] ); ?>">
 													</div>
 
 													<div class="col-md-auto align-self-center">
@@ -377,7 +381,7 @@ get_header();
 
 													<?php if ( ! empty( $reviews->source_image['image'] ) ) : ?>
 														<div class="review-logo">
-															<img class="source-img lazy" data-src="<?php echo esc_attr( $reviews->source_image['image'] ); ?>" alt="<?php echo esc_attr( $reviews->source_image['alt'] ); ?>">
+															<img class="source-img" src="<?php echo esc_attr( $reviews->source_image['image'] ); ?>" alt="<?php echo esc_attr( $reviews->source_image['alt'] ); ?>">
 														</div>
 													<?php endif; ?>
 												</div>
