@@ -17,7 +17,7 @@ get_header();
 <div id="single-location" class="jp-single-loc">
 
 	<div class="note-box">
-		<p>This location is accepting new admissions with additional pre-screening procedures. To learn more, call <?php echo esc_html( get_option( 'defaultPhone' ) ); ?>.</p>
+		<p>This location is accepting limited admissions with additional pre-screening procedures. To learn more, call <?php echo esc_html( get_option( 'defaultPhone' ) ); ?>.</p>
 	</div>
 
 	<!-- SECTION: Top Section (Above Fold / Masthead) -->
@@ -327,7 +327,7 @@ get_header();
 	<?php if ( ! empty( $location->reviews ) ) : ?>
 		<section class="review-section">
 			<div class="container">
-				<h2 class="h1 text-center">You can do this!</h2>
+				<h2 class="h1 text-center">You Can Do This!</h2>
 				<h3 class="text-center">Whether Journeypure is your first (and last) treatment expereince, or you've spent decades in and out of other facilities...here's proof that you can feel better. There's no shame in getting help.</h3>
 
 				<div class="parent">

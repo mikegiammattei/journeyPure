@@ -83,7 +83,7 @@ $footerVersion = 2;
 								</div>
 								<div class="col-lg-12 col-sm-12 d-flex align-items-stretch">
 									<div class="card card-body h-100 justify-content-center transparent" style="width: 100%; ">
-										<div class="embed-responsive embed-responsive-16by9 youtube-video-place lazy" data-src='/wp-content/uploads/2020/07/dainel-rehab-story.png' data-yt-url="https://www.youtube.com/embed/kNj08KeNbIA">
+										<div class="embed-responsive embed-responsive-16by9 youtube-video-place lazy" data-src='/wp-content/uploads/2020/07/SL4Daniel.png' data-yt-url="https://www.youtube.com/embed/kNj08KeNbIA">
 											<span class="play-button"></span>
 										</div>
 									</div>

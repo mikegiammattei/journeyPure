@@ -121,7 +121,8 @@
 			  }
 			}
 			.content {
-			  margin-left: 4px;
+			  margin-left: 15px;
+			  text-align:left;
 			}
 		  }
 		}
@@ -215,7 +216,7 @@
 
 	h5{
 		color:$primary;
-		font-weight:bold;
+		font-weight:500;
 	}
 	p{
 		max-width: 635px;
@@ -326,10 +327,7 @@
 			display: block;
 			margin: 5px auto $lg-space;
 		  }
-		  .name-text {
-			font-weight: bold;
-			color: black;
-		  }
+
 		  .text {
 			padding-bottom: 0;
 			font-family: "Montserrat", sans-serif;
@@ -340,7 +338,7 @@
 		  }
 		  .name-text {
 			color: black;
-			font-weight: bold;
+			font-weight: 500;
 			span {
 			  font-size: 14px;
 			  font-weight: normal;
@@ -527,7 +525,7 @@ li {
 	padding:60px 15px 25px;
 	color: $primary;
 	background: $light-blue;
-	font-weight: bold;
+	font-weight: 500;
 	font-family: $heading-font;
 	line-height: 50px;
 	p {
@@ -710,7 +708,6 @@ li {
 	h3 {
 	  color: #fbbb06;
 	  font-family: "Montserrat", sans-serif;
-	  font-weight: bold;
 	  font-style: normal;
 	  font-size: 20px;
 	  max-width: 800px;
@@ -746,7 +743,7 @@ li {
 	p {
 	color:white;
 	font-family:$heading-font;
-	font-weight:bold;
+	font-weight:500;
 
 	}
 	}
@@ -828,7 +825,7 @@ li {
     height: 4px;
     margin: 0 auto;
     position: absolute;
-    right: -30px;
+    right: -42px;
     top: 33px;
     width: 85%;
     z-index: -1;
@@ -841,7 +838,7 @@ li {
 }
 .process-model li {
     display: inline-block;
-    width: 18%;
+    width: 25%;
     text-align: center;
 	float: none;
 	position: relative;

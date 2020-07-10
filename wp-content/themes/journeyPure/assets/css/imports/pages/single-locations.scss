@@ -227,11 +227,12 @@
 
 					.item-title {
 						margin-bottom: 0;
+						color:$secondary;
 					}
 				}
 
 				.content {
-					padding-left: 45px;
+					padding:10px 0 20px;
 				}
 			}
 		}
@@ -331,6 +332,8 @@
 			z-index: 1;
 		}
 
+	
+
 		// &-title {}
 
 		&-subtitle {
@@ -361,6 +364,13 @@
 			&-text {
 				ul, ol {
 					padding-bottom: 0;
+					padding-left: 15px;
+					font-family: georgia;
+					font-size: 17px;
+				li {
+					padding-bottom:15px;
+				}
+	
 				}
 
 				strong, b {
@@ -811,7 +821,7 @@
 			height: 4px;
 			margin: 0 auto;
 			position: absolute;
-			right: -30px;
+			right: -42px;
 			top: 33px;
 			width: 85%;
 			z-index: -1;
@@ -827,7 +837,7 @@
 
 		li {
 			display: inline-block;
-			width: 18%;
+			width: 25%;
 			text-align: center;
 			float: none;
 			position: relative;
