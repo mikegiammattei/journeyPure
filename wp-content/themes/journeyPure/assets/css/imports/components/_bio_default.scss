@@ -5,10 +5,28 @@
 	margin: 0 $md-space 30px;
 	overflow: hidden;
 	background: #ebebeb;
-	
+
 	@media (max-width: 767px) {
 				margin:0 0px 15px;
 			  }
+
+	.tophat {
+		box-shadow: 0px 2px 4px rgba(0,0,0,0.18);
+		position: absolute;
+		top: 7px;
+		background-color: $light-blue;
+		color: $primary;
+		right: 22px;
+		border-radius: 18px;
+		padding: 6px 12px;
+		font-weight: 600;
+		transition: all 150ms ease-in-out;
+
+		&:focus, &:hover {
+			background-color: $primary;
+			color: $light-blue;
+		}
+	}
 
 	figure{
 
@@ -21,7 +39,7 @@
 	  margin: 0;
 	  filter: grayscale(100%);
 
-	 
+
 	}
 	 .name {
     font-weight: bold;

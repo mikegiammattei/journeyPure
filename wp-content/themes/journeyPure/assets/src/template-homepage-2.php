@@ -373,7 +373,11 @@ $footerVersion = 2;
 									?>
 									<div class="col-md-3 <?php echo in_array( $bio->name, [ 'Caleb H.' ] ) ? 'hide-for-xs-only' : ''; ?>">
 										<div class="bio">
-											<img class="lazy" data-src="<?php echo $bio->photo['image']; ?>" />
+											<?php if ( ! empty( $bio->location ) ) : ?>
+												<a href="<?php echo esc_attr( $bio->location['link'] ); ?>" class="tophat"><?php echo esc_html( $bio->location['label'] ); ?></a>
+											<?php endif; ?>
+											<!-- <img class="lazy" data-src="<?php echo $bio->photo['image']; ?>" /> -->
+											<img src="<?php echo $bio->photo['image']; ?>" />
 											<?php if($bio->sober_since): ?>
 												<div data-like-object="<?php echo $likeIdentifier; ?>" class="like-button"  data-placement="top" data-toggle="tooltip" <?php echo ($Homepage->isLikedBySession($likeIdentifier)) ? 'title="Already liked"' : 'title="Do you like?"'; ?>>
 													<i class="fas fa-thumbs-up"></i>
