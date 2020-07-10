@@ -156,7 +156,7 @@
 			padding: 60px 0;
 		}
 
-		b {
+		b, strong {
 			font-size: 1.25em;
 		}
 
@@ -218,7 +218,7 @@
 			}
 
 			&-wrapper {
-				margin-bottom: 20px;
+				margin-bottom: 10px;
 				margin-top: 10px;
 
 				@media screen and (min-width: 768px) {
@@ -330,7 +330,7 @@
 			// &-title {}
 
 			&-text {
-				p, ul, ol {
+				ul, ol {
 					padding-bottom: 0;
 				}
 
@@ -578,6 +578,7 @@
 
 	.location-information {
 		padding: 30px 0;
+		background: #ebebeb;
 
 		@media screen and (min-width: 768px) {
 			padding: 60px 0;
@@ -590,13 +591,13 @@
 		}
 
 		.map-wrapper {
-			background: #f2f3f4;
+			background: #f3f3f3;
 			border-radius: 2px;
 			padding: 15px;
 		}
 
 		.address-wrapper {
-			padding: 15px 15px 5px;
+			padding: 18px 15px 5px;
 		}
 
 		.capacity {
@@ -640,6 +641,7 @@
 			.tag {
 				border-radius: 3px;
 				padding: 15px;
+				background: #f3f3f3;
 			}
 
 			.tag-list {

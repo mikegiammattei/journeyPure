@@ -106,7 +106,7 @@ get_header();
 		<section class="block-2">
 			<div class="container">
 				<div class="row">
-					<div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+					<div class="col-12 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
 						<?php if ( $location->block2->heading ) : ?>
 							<h3 class="h1"><?php echo wp_kses_post( $location->block2->heading ); ?></h3>
 						<?php endif; ?>
