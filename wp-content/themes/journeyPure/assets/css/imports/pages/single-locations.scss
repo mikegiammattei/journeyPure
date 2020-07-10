@@ -242,16 +242,12 @@
 			width: 100%;
 
 			@media screen and (min-width: 992px) {
-				width: 40%;
+				width: 45%;
 			}
 
 			&-wrapper {
 				margin-bottom: 10px;
 				margin-top: 10px;
-
-				@media screen and (min-width: 768px) {
-					padding-left: 30px;
-				}
 
 				@media screen and (min-width: 992px) {
 					display: flex;
@@ -275,7 +271,6 @@
 				text-align: center;
 
 				@media screen and (min-width: 768px) {
-					padding-left: 45px;
 					text-align: left;
 				}
 			}
@@ -332,7 +327,7 @@
 			z-index: 1;
 		}
 
-	
+
 
 		// &-title {}
 
@@ -363,14 +358,19 @@
 
 			&-text {
 				ul, ol {
+					margin-bottom: 0;
 					padding-bottom: 0;
 					padding-left: 15px;
 					font-family: georgia;
 					font-size: 17px;
-				li {
-					padding-bottom:15px;
-				}
-	
+
+					li {
+						padding-bottom: 15px;
+
+						&:last-child {
+							padding-bottom: 0;
+						}
+					}
 				}
 
 				strong, b {

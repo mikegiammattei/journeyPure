@@ -719,6 +719,16 @@ $('.video-cta').on('click', function () {
   var thisTrigger = $(this);
   var thisVideContainerId = thisTrigger.data('target');
   $(thisVideContainerId).find('.youtube-video-place').trigger('click');
+}); // If there is an image inside a slick slider, on image load, resize the slider height
+
+jQuery('img.lazy').each(function () {
+  this.onload = function () {
+    var slider = jQuery(this).closest('.slick-slider.slick-initialized');
+
+    if (slider.length > 0) {
+      slider.slick('setPosition');
+    }
+  };
 });
 "use strict";
 

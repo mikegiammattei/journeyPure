@@ -141,7 +141,7 @@ get_header();
 						<?php endif; ?>
 					</div>
 
-					<div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+					<div class="col-12 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
 						<div class="logos-wrapper">
 							<img class="logos lazy" data-src="<?php echo esc_attr( get_stylesheet_directory_uri() ); ?>/assets/img/insurance2.png" alt="Aetna, Anthem Blue Cross Blue Sheild, Cigna Heath Insurances">
 							<img class="logos lazy" data-src="<?php echo esc_attr( get_stylesheet_directory_uri() ); ?>/assets/img/insurance1.png" alt="Amerihealth, United Healthcare, Humana, Tricare and 43 More Insurances">
@@ -366,7 +366,7 @@ get_header();
 											<div class="author-info">
 												<div class="row">
 													<div class="col-md-auto align-self-center">
-														<img src="<?php echo esc_attr( $reviews->photo['image'] ); ?>" alt="<?php echo esc_attr( $reviews->photo['alt'] ); ?>">
+														<img class="lazy" data-src="<?php echo esc_attr( $reviews->photo['image'] ); ?>" alt="<?php echo esc_attr( $reviews->photo['alt'] ); ?>">
 													</div>
 
 													<div class="col-md-auto align-self-center">
@@ -381,7 +381,7 @@ get_header();
 
 													<?php if ( ! empty( $reviews->source_image['image'] ) ) : ?>
 														<div class="review-logo">
-															<img class="source-img" src="<?php echo esc_attr( $reviews->source_image['image'] ); ?>" alt="<?php echo esc_attr( $reviews->source_image['alt'] ); ?>">
+															<img class="source-img lazy" data-src="<?php echo esc_attr( $reviews->source_image['image'] ); ?>" alt="<?php echo esc_attr( $reviews->source_image['alt'] ); ?>">
 														</div>
 													<?php endif; ?>
 												</div>

@@ -24,16 +24,17 @@ font-family: $heading-font !important;
   max-width:350px;
   padding:5px;
   }
-  
+
  .modal-footer {
     border-top: none;
 	padding-top: 0;
 	padding-bottom: 0;
+	justify-content: inherit;
 	button {
 	margin: 0 auto;
 	padding: 10px 32px;
 	}
-	
+
 
 }
 .form-group {
@@ -41,7 +42,7 @@ font-family: $heading-font !important;
 }
 .modal-body {
 	padding: 1rem 1rem 0;
-	
+
 }
 .alert-success {
 	color:$secondary;
@@ -53,12 +54,12 @@ font-family: $heading-font !important;
 #steps {
        overflow: auto;
        padding: 0;
-    
+
 		.step.one {
 			background: gray;
 			color: #fff;
 			text-align: right;
-		} 
+		}
 		.step.one:after {
 			content: "";
 			position: absolute;
