@@ -271,7 +271,7 @@ get_header();
 			<div class="container">
 				<?php if ( isset( $location->bios->heading ) ) : ?>
 					<div class="heading">
-						<h3 class="h1"><?php echo esc_html( $location->bios->heading ); ?></h3>
+						<h3 class="h1"><?php echo wp_kses_post( $location->bios->heading ); ?></h3>
 					</div>
 				<?php endif; ?>
 
@@ -321,6 +321,90 @@ get_header();
 	<?php endif; ?>
 
 	<!-- /SECTION: Bios -->
+	
+		<!-- SECTION: Map -->
+
+	<?php if ( ! empty( $location->block4 ) ) : ?>
+		<section class="location-information">
+			<div class="row">
+				<div class="col-12">
+					<?php if ( $location->block4->location->title ) : ?>
+						<h2 class="h1 text-center"><?php echo wp_kses_post( $location->block4->location->title ); ?></h2>
+					<?php endif; ?>
+
+					<?php if ( $location->block4->location->subtitle ) : ?>
+						<h3 class="text-center"><?php echo wp_kses_post( $location->block4->location->subtitle ); ?></h3>
+					<?php endif; ?>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 col-lg-6">
+					<div class="map-wrapper">
+						<div class="capacity">
+							<?php
+								$location_status_data  = 'Only ' . $location->block4->location->status->availableRoomCount . ' ';
+								$location_status_data .= ( 1 === $location->block4->location->status->availableRoomCount ) ? 'spot' : 'spots';
+								$location_status_data .= ' available';
+							?>
+
+							<i class="fa fa-info-circle"></i> <b><?php echo wp_kses_post( $location_status_data ); ?></b>
+						</div>
+
+						<?php $address = rawurlencode( $location->block4->location->full_address ); ?>
+						<?php $address = preg_replace( '/\./', '', $address ); ?>
+
+						<div class="embed-responsive embed-responsive-16by9">
+							<iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDwoQ63Mff3mW9-u2fQUhnlMBmX752RKds&q=<?php echo esc_attr( $address ); ?>" allowfullscreen></iframe>
+						</div>
+
+						<div class="address-wrapper">
+							<?php if ( $location->block4->location->name ) : ?>
+								<h4><?php echo wp_kses_post( $location->block4->location->name ); ?></h4>
+							<?php endif; ?>
+
+							<?php if ( $location->block4->location->street_address ) : ?>
+								<p class="address-line">
+									<?php echo esc_html( $location->block4->location->street_address ); ?>
+									<?php echo esc_html( $location->block4->location->city ); ?>,
+									<?php echo esc_html( $location->block4->location->state ); ?>
+									<?php echo esc_html( $location->block4->location->zip ); ?>
+								</p>
+							<?php endif; ?>
+						</div>
+					</div>
+				</div>
+
+				<div class="details col-12 col-lg-6">
+					<?php if ( $location->block2->tag_sections ) : ?>
+						<?php foreach ( $location->block2->tag_sections as $section ) : ?>
+							<aside class="tag-list">
+								<?php if ( $section['heading'] ) : ?>
+									<span class="heading"><span><?php echo wp_kses_post( $section['heading'] ); ?></span></span>
+								<?php endif; ?>
+
+								<?php if ( $section['tags'] ) : ?>
+									<div class="row no-gutters">
+										<?php foreach ( $section['tags'] as $index => $_tag ) : ?>
+											<?php $tag_count = count( $section['tags'] ); ?>
+
+											<div class="col-6 col-lg-auto <?php echo ( ( $index + 1 ) === $tag_count && 0 !== $tag_count % 2 ) ? 'col-12' : ''; ?>">
+												<div class="tag default">
+													<?php echo wp_kses_post( $_tag['value'] ); ?>
+												</div>
+											</div>
+										<?php endforeach; ?>
+									</div>
+								<?php endif; ?>
+							</aside>
+						<?php endforeach; ?>
+					<?php endif; ?>
+				</div>
+			</div>
+		</section>
+	<?php endif; ?>
+
+	<!-- /SECTION: Map -->
 
 	<!-- SECTION: Reviews -->
 
@@ -408,89 +492,7 @@ get_header();
 
 	<!-- /SECTION: Reviews -->
 
-	<!-- SECTION: Map -->
 
-	<?php if ( ! empty( $location->block4 ) ) : ?>
-		<section class="location-information">
-			<div class="row">
-				<div class="col-12">
-					<?php if ( $location->block4->location->title ) : ?>
-						<h2 class="h1 text-center"><?php echo wp_kses_post( $location->block4->location->title ); ?></h2>
-					<?php endif; ?>
-
-					<?php if ( $location->block4->location->subtitle ) : ?>
-						<h3 class="text-center"><?php echo wp_kses_post( $location->block4->location->subtitle ); ?></h3>
-					<?php endif; ?>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-12 col-lg-6">
-					<div class="map-wrapper">
-						<div class="capacity">
-							<?php
-								$location_status_data  = 'Only ' . $location->block4->location->status->availableRoomCount . ' ';
-								$location_status_data .= ( 1 === $location->block4->location->status->availableRoomCount ) ? 'spot' : 'spots';
-								$location_status_data .= ' available';
-							?>
-
-							<i class="fa fa-info-circle"></i> <b><?php echo wp_kses_post( $location_status_data ); ?></b>
-						</div>
-
-						<?php $address = rawurlencode( $location->block4->location->full_address ); ?>
-						<?php $address = preg_replace( '/\./', '', $address ); ?>
-
-						<div class="embed-responsive embed-responsive-16by9">
-							<iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDwoQ63Mff3mW9-u2fQUhnlMBmX752RKds&q=<?php echo esc_attr( $address ); ?>" allowfullscreen></iframe>
-						</div>
-
-						<div class="address-wrapper">
-							<?php if ( $location->block4->location->name ) : ?>
-								<h4><?php echo wp_kses_post( $location->block4->location->name ); ?></h4>
-							<?php endif; ?>
-
-							<?php if ( $location->block4->location->street_address ) : ?>
-								<p class="address-line">
-									<?php echo esc_html( $location->block4->location->street_address ); ?>
-									<?php echo esc_html( $location->block4->location->city ); ?>,
-									<?php echo esc_html( $location->block4->location->state ); ?>
-									<?php echo esc_html( $location->block4->location->zip ); ?>
-								</p>
-							<?php endif; ?>
-						</div>
-					</div>
-				</div>
-
-				<div class="details col-12 col-lg-6">
-					<?php if ( $location->block2->tag_sections ) : ?>
-						<?php foreach ( $location->block2->tag_sections as $section ) : ?>
-							<aside class="tag-list">
-								<?php if ( $section['heading'] ) : ?>
-									<span class="heading"><span><?php echo wp_kses_post( $section['heading'] ); ?></span></span>
-								<?php endif; ?>
-
-								<?php if ( $section['tags'] ) : ?>
-									<div class="row no-gutters">
-										<?php foreach ( $section['tags'] as $index => $_tag ) : ?>
-											<?php $tag_count = count( $section['tags'] ); ?>
-
-											<div class="col-6 col-lg-auto <?php echo ( ( $index + 1 ) === $tag_count && 0 !== $tag_count % 2 ) ? 'col-12' : ''; ?>">
-												<div class="tag default">
-													<?php echo wp_kses_post( $_tag['value'] ); ?>
-												</div>
-											</div>
-										<?php endforeach; ?>
-									</div>
-								<?php endif; ?>
-							</aside>
-						<?php endforeach; ?>
-					<?php endif; ?>
-				</div>
-			</div>
-		</section>
-	<?php endif; ?>
-
-	<!-- /SECTION: Map -->
 
 	<!-- SECTION: Process -->
 
