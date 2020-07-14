@@ -3,7 +3,7 @@
 $(document).ready(function () {
 
 	// Add hidden button HTML to the body
-	var html = '<a class="mr-btn-wrapper-jp-text hide" href="tel:1-844-505-4799"><div class="mr-btn-wrapper-jp-text-top">Get Help Now!</div><div class="mr-btn-wrapper-jp-text-bottom"><i class="fas fa-phone-alt"></i> (844) 505-4799</div></a>';
+	var html = '<a class="mr-btn-wrapper-jp-text hide" href="tel:1-844-505-4799"><div class="mr-btn-wrapper-jp-text-top">Get Help Now!</div><div class="mr-btn-wrapper-jp-text-bottom"><i class="fas fa-phone-alt"></i><span class="call"> Call</span> (844) 505-4799</div></a>';
 	jQuery('body').append(html);
 
 	// IE
