@@ -416,8 +416,7 @@ get_header();
 	<section class="jp-op-section jp-op-location">
 		<div class="container">
 			<div class="row">
-
-							<div class="col-12 col-lg-7">
+				<div class="col-12 col-lg-7">
 					<div class="jp-op-location-content">
 						<div class="jp-op-location-header">
 							<h1 class="jp-op-location-title">You can do this!</h1>
@@ -427,6 +426,7 @@ get_header();
 						<div class="jp-op-location-card">
 							<h4 class="jp-op-location-card-title">1. Make the Call</h4>
 							<p class="jp-op-location-card-text">The first step is to call. You can finally talk honestly about what's going on with someone who's been there before too.</p>
+
 							<div class="jp-op-location-map-bottom">
 								<p class="jp-op-location-map-cta">Let's Talk Now</p>
 								<a class="jp-op-location-map-button hide-for-sm" href="tel:844-505-4799" title="Call (844) 505-4799 to talk now."><span class="fas fa-phone"></span> (844) 505-4799</a>
@@ -481,13 +481,35 @@ get_header();
 								<?php echo esc_html( $op->location->state ); ?>
 								<?php echo esc_html( $op->location->zip ); ?>
 							</p>
-
-
 						</div>
 					</div>
+
+					<?php if ( ! empty( $op->location->tag_sections ) ) : ?>
+						<div class="tag-list-wrapper">
+							<?php foreach ( $op->location->tag_sections as $section ) : ?>
+								<aside class="tag-list">
+									<?php if ( ! empty( $section['heading'] ) ) : ?>
+										<span class="heading"><span><?php echo wp_kses_post( $section['heading'] ); ?></span></span>
+									<?php endif; ?>
+
+									<?php if ( ! empty( $section['tags'] ) ) : ?>
+										<div class="row no-gutters">
+											<?php foreach ( $section['tags'] as $index => $_tag ) : ?>
+												<?php $tag_count = count( $section['tags'] ); ?>
+
+												<div class="col-6 col-lg-auto <?php echo ( ( $index + 1 ) === $tag_count && 0 !== $tag_count % 2 ) ? 'col-12' : ''; ?>">
+													<div class="tag default">
+														<?php echo wp_kses_post( $_tag['value'] ); ?>
+													</div>
+												</div>
+											<?php endforeach; ?>
+										</div>
+									<?php endif; ?>
+								</aside>
+							<?php endforeach; ?>
+						</div>
+					<?php endif; ?>
 				</div>
-
-
 			</div>
 		</div>
 	</section>

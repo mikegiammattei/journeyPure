@@ -193,6 +193,7 @@ class OP {
 				$this->fields['location']['state'] . ' ' .
 				$this->fields['location']['zip']
 				: null;
+			$this->location->tag_sections   = $this->fields['location']['aside_tags'];
 		}
 
 		if ( ! empty( $this->fields['location'] ) ) {
