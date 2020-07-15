@@ -326,7 +326,7 @@
 
 
 
-		// &-title {}
+		 // &-title {}
 
 		&-subtitle {
 			margin: 15px auto;
@@ -351,7 +351,8 @@
 			margin: 30px 0 0 0;
 			padding: 30px 15px;
 
-			// &-title {}
+			&-title {color: $secondary;
+			margin-bottom: 25px;}
 
 			&-text {
 				ul, ol {

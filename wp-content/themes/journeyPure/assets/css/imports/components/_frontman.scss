@@ -36,11 +36,11 @@
     flex-direction: column;
 	height: 65px;
     justify-content: center;
-    padding: 10px 8px 9px 66px;
+    padding: 10px 8px 9px 50px;
     position: fixed;
 	right: 0;
 	transition: all 150ms ease-in-out;
-    width: 322px;
+    width: 307px;
 	z-index: 2147482998;
 	border-radius: 40px 0 0 40px;
 
@@ -69,10 +69,14 @@
     margin-bottom: 0px;
     pointer-events: none;
 	line-height:17px;
+	    margin-right: 23px;
+    text-align: center;
+	font-weight: normal;
 
 	@media screen and (max-width: 767px) {
-		margin: 0 0 0 14%;
+		margin: 0 0 0 10%;
 		line-height:25px;
+		text-align:left;
 	}
 }
 
@@ -82,8 +86,8 @@
 	pointer-events: none;
 
 	@media screen and (max-width: 767px) {
-		font-size:17px;
-		margin: 0 0 0 13%;
+		font-size:19px;
+		margin: 0 0 0 10%;
 	}
 
 	i {

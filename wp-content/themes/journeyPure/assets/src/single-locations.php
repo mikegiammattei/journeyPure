@@ -124,7 +124,7 @@ get_header();
 												<div class="list-heading">
 													<div class="d-flex">
 														<div class="align-self-center"><i class="fas fa-check icon"></i></div>
-														<div class="align-self-center"><h5 class="item-title"><?php echo esc_html( $item['heading'] ); ?></h5></div>
+														<div class="align-self-center"><h5 class="item-title"><?php echo wp_kses_post( $item['heading'] ); ?></h5></div>
 													</div>
 												</div>
 											<?php endif; ?>
@@ -188,7 +188,7 @@ get_header();
 					<?php foreach ( $location->boxes->boxes as $box ) : ?>
 						<div class="col-12 col-md-6 col-lg-3">
 							<div class="jp-single-loc-boxes-box">
-								<h4 class="h5 jp-single-loc-boxes-box-title"><?php echo esc_html( $box['heading'] ); ?></h4>
+								<h4 class="h5 jp-single-loc-boxes-box-title"><?php echo wp_kses_post( $box['heading'] ); ?></h4>
 
 								<div class="jp-single-loc-boxes-box-text">
 									<?php echo wp_kses_post( $box['text'] ); ?>
