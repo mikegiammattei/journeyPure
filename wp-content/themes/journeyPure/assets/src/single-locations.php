@@ -120,7 +120,7 @@ get_header();
 								<?php foreach ( $location->block2->list as $index => $item ) : ?>
 									<div class="list-item">
 										<div class="row no-gutters">
-											<?php if ( $item['heading'] ) : ?>
+											<?php if ( ! empty( $item['heading'] ) ) : ?>
 												<div class="list-heading">
 													<div class="d-flex">
 														<div class="align-self-center"><i class="fas fa-check icon"></i></div>
@@ -130,9 +130,47 @@ get_header();
 											<?php endif; ?>
 										</div>
 
-										<?php if ( $item['content'] ) : ?>
+										<?php if ( ! empty( $item['content'] ) ) : ?>
 											<div class="content">
 												<?php echo wp_kses_post( $item['content'] ); ?>
+											</div>
+										<?php endif; ?>
+
+										<?php if ( ! empty( $item['review'] ) ) : ?>
+											<div class="review">
+												<blockquote class="review-text">
+													<?php echo wp_kses_post( $item['review']->review_text ); ?>
+												</blockquote>
+
+												<div class="review-author">
+													<div class="review-author-image">
+														<img class="lazy" src="<?php echo esc_attr( $item['review']->photo['image'] ); ?>" alt="<?php echo esc_attr( $item['review']->photo['alt'] ); ?>">
+													</div>
+
+													<div class="review-author-info">
+														<h5 class="review-author-title"><?php echo esc_html( $item['review']->heading ); ?></h5>
+
+														<div class="review-author-extra">
+															<div class="review-author-stars">
+																<?php for ( $i = 0; $i < $item['review']->star_rating; $i++ ) : ?>
+																	<i class="review-author-star fas fa-star"></i>
+																<?php endfor; ?>
+															</div>
+
+															<?php if ( ! empty( $item['review']->sober_since ) ) : ?>
+																<p class="review-author-sober-since">
+																	<?php echo wp_kses_post( $item['review']->sober_since ); ?>
+																</p>
+															<?php endif; ?>
+
+															<?php if ( ! empty( $item['review']->source_image['image'] ) ) : ?>
+																<div class="review-author-logo">
+																	<img class="review-author-source-image lazy" src="<?php echo esc_attr( $item['review']->source_image['image'] ); ?>" alt="<?php echo esc_attr( $item['review']->source_image['alt'] ); ?>">
+																</div>
+															<?php endif; ?>
+														</div>
+													</div>
+												</div>
 											</div>
 										<?php endif; ?>
 									</div>
@@ -321,8 +359,8 @@ get_header();
 	<?php endif; ?>
 
 	<!-- /SECTION: Bios -->
-	
-		<!-- SECTION: Map -->
+
+	<!-- SECTION: Map -->
 
 	<?php if ( ! empty( $location->block4 ) ) : ?>
 		<section class="location-information">
@@ -491,8 +529,6 @@ get_header();
 	<?php endif; ?>
 
 	<!-- /SECTION: Reviews -->
-
-
 
 	<!-- SECTION: Process -->
 

@@ -137,6 +137,19 @@ class Location {
 			'list'         => $this->fields['block_2']['list'],
 			'tag_sections' => $this->fields['block_2']['aside_tags'],
 		);
+
+		foreach ( $this->block2->list as $i => $item ) {
+			if ( ! empty( $item['review'] ) ) {
+				require_once get_stylesheet_directory() . '/classes/Reviews.php';
+				$reviews = new \Reviews\Reviews();
+
+				$reviews->setPostByPostId( array( $item['review'] ) );
+
+				$this->block2->list[ $i ]['review']       = $reviews->reviews[0];
+				$this->block2->list[ $i ]['review_avg']   = $reviews->getAvgRating();
+				$this->block2->list[ $i ]['review_total'] = $reviews->getTotalReviews();
+			}
+		}
 	}
 
 	/**

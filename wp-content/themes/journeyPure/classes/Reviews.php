@@ -52,7 +52,8 @@ class Reviews
 				'source_image' => null,
 				'heading' => $review['heading'],
 				'star_rating' => $review['star_rating'],
-				'review_text' => $review['review_text']
+				'review_text' => $review['review_text'],
+				'sober_since' => $review['sober_since']
 			);
 
 			if(isset($review['source_image'])){
