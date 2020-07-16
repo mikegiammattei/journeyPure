@@ -93,7 +93,7 @@
 			margin: 5px auto $lg-space ;
 		  }
 		  .name-text {
-			font-weight:bold;
+			font-weight:600;
 			color:black;
 		  }
 		  .bio-long {
@@ -111,7 +111,7 @@
 		  }
 		  .name-text {
 			color: black;
-			font-weight: bold;
+			font-weight: 600;
 			span {
 			  font-size: 17px;
 
@@ -119,8 +119,9 @@
 		  }
 
 		  .fa-ul{
-			margin-top: $lg-space;
+			margin-top: 15px;
 			margin-left:25px;
+			margin-bottom: 25px;
 			i{
 			  color: $secondary;
 			}
@@ -265,10 +266,10 @@
   }
   .block-4{
 	padding: $xl-space 0;
-	background-color: $primary;
+	background-color: $light-blue;
 	.heading{
 	  text-align: center;
-	  color:white;
+	  color:$primary;
 	}
 	.card {
 	border-radius:0 0 3px 3px !important;
@@ -313,12 +314,11 @@ h3 {
   .insurance-section{
 	padding: $lg-space 0 15px;
 	background:white;
-	background-image: url(/wp-content/themes/journeyPure/assets/img/background-diagmonds.png);
-	box-shadow: 0px 2px 4px rgba(0,0,0,.18);
-	border-top: 8px solid $primary;
+	background-image: url(/wp-content/uploads/sites/2/2020/03/jp-background.png);
+border-bottom: 8px solid #0033a1;	border-top: 8px solid $primary;
   }
   .ethics {
-	    background-image: url(/wp-content/themes/journeyPure/assets/img/background-diagmonds.png);
+	    background-image: url(/wp-content/uploads/sites/2/2020/03/jp-background.png);
 		border-top:8px solid $main-gray;
 	.container {
 		margin: 0 auto;

@@ -149,7 +149,11 @@ get_header();
 
 													<div class="review-author-info">
 														<h5 class="review-author-title"><?php echo esc_html( $item['review']->heading ); ?></h5>
-
+															<?php if ( ! empty( $item['review']->sober_since ) ) : ?>
+																<p class="review-author-sober-since">
+																	<?php echo wp_kses_post( $item['review']->sober_since ); ?>
+																</p>
+															<?php endif; ?>
 														<div class="review-author-extra">
 															<div class="review-author-stars">
 																<?php for ( $i = 0; $i < $item['review']->star_rating; $i++ ) : ?>
@@ -157,11 +161,7 @@ get_header();
 																<?php endfor; ?>
 															</div>
 
-															<?php if ( ! empty( $item['review']->sober_since ) ) : ?>
-																<p class="review-author-sober-since">
-																	<?php echo wp_kses_post( $item['review']->sober_since ); ?>
-																</p>
-															<?php endif; ?>
+
 
 															<?php if ( ! empty( $item['review']->source_image['image'] ) ) : ?>
 																<div class="review-author-logo">
@@ -575,7 +575,7 @@ get_header();
 									<div class="col-md-6">
 										<div class="design-process-content-inner">
 											<h5 class="semi-bold">1. Make The Call</h5>
-											<p>Even if you're not ready to commit to JourneyPure or not sure if you want treatment at all, talk about what's going on with someone that's been there before. You'll feel better and more informed after you call, I promise.</p>
+											<p>Because this location sometimes operates on a wait-list, it's best to call in as early as possible. You don't have to commit to coming here and you'll feel better after you talk to someone who actually understands.</p>
 											<div class="note-cta"><i class="fas fa-phone"></i> <?php echo esc_html( get_option( 'defaultPhone' ) ); ?></div>
 										</div>
 									</div>

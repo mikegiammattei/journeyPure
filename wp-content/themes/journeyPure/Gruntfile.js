@@ -14,13 +14,21 @@ module.exports = function(grunt){
                     dest: './',
                     ext: '.css'
                 },
-					{
-						expand: true,
-						cwd: './assets/css/imports/pages',
-						src: ['homepage.scss'],
-						dest: './css',
-						ext: '.min.css'
-					}
+                {
+                    expand: true,
+                    cwd: './assets/css/imports/pages',
+                    src: ['homepage.scss'],
+                    dest: './css',
+                    ext: '.min.css'
+                },
+
+                {
+                    expand: true,
+                    cwd: './assets/css/imports/pages',
+                    src: ['single-locations.scss'],
+                    dest: './css',
+                    ext: '.min.css'
+                }
                 ]
             }
         },

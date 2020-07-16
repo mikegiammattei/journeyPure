@@ -581,12 +581,12 @@
 	// Section Location
 
 	&-location {
-		background-color: #e2e7f6;
+		background-color: #EBEBEB;
 
 		// Map
 
 		&-map {
-			background-color: #f2f3f4;
+			background-color: #F3F3F3;
 			border-radius: 3px;
 			overflow: hidden;
 			padding: 15px 15px 0;
@@ -727,17 +727,15 @@
 
 		.tag {
 			border-radius: 3px;
-			padding: 15px;
-			background: #f3f3f3;
+			padding: 15px !important; 
+			background: #f3f3f3 !important;
 		}
 
 		.tag-list {
 			&-wrapper {
-				background-color: #f2f3f4;
-				border-radius: 3px;
 				margin-top: 15px;
 				overflow: hidden;
-				padding: 25px 15px 0;
+				padding: 15px 0 0;
 			}
 
 			.heading {

@@ -20,10 +20,8 @@ class Location {
 	 */
 	public function __construct() {
 		global $post;
-
 		$this->post   = $post;
 		$this->fields = get_fields();
-
 		$this->set_above_fold();
 		$this->set_gallery();
 		$this->set_bios();
@@ -31,6 +29,8 @@ class Location {
 		$this->set_block_2();
 		$this->set_block_4();
 		$this->set_boxes();
+		define("STYLESHEET_NAME", "single-locations");
+
 	}
 
 	/**
