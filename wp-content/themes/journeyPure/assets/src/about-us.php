@@ -14,63 +14,75 @@
 
  ?>
 <div id="about-us">
+	<!-- SECTION: Top Section (Above Fold / Masthead) -->
+
 	<section class="above-fold">
-		<div class="row no-gutters">
-			<div class="col-12 order-md-1 order-2">
-				<div style="background-image: url('/wp-content/uploads/2019/11/journeypure-about-us-equine-therapy.jpg')" class="img-container">
-				</div>
-				<div class="top-content">
-					<div class="container">
-						<div class="row justify-content-between">
-							<div class="col-md-6 order-xl-1 order-lg-1 order-md-1 order-sm-2 order-last align-self-md-center">
-							</div>
-							<div class="col-md-6 order-md-2 order-sm-1">
-								<?php if(isset($AboutUs->ratings)): ?>
-									<div class="rating-section">
-										<?php foreach ($AboutUs->ratings as $rating) : ?>
-											<div class="ratings default block">
-												<div class="row no-gutters align-items-center">
-													<div class="col-auto mr-2">
-														<img src="<?php echo $rating->image['sizes']['medium']; ?>" alt="<?php echo get_post_meta( $rating->image['ID'], '_wp_attachment_image_alt', true ); ?>">
-													</div>
-													<div class="col-auto">
-														<div class="content">
-															<?php if($rating->line_1): ?>
-																<p><?php echo $rating->line_1; ?></p>
-															<?php endif; ?>
-															<?php if($rating->controller == 'stars'): ?>
-																<?php for($i=0; $i < $rating->stars; $i++): ?>
-																	<i class="fas fa-star"></i>
-																<?php endfor; ?>
-																<span class="star-txt-color"><?php echo $rating->number_rating; ?></span>
-															<?php else: ?>
-																<p class="text-value"><?php echo $rating->line_2_text; ?></p>
-															<?php endif; ?>
-															<?php if($rating->line_3): ?>
-																<p class="sub"><?php echo $rating->line_3; ?></p>
-															<?php endif; ?>
+		<div class="default-container x-loc lazy" data-src="/wp-content/uploads/2019/11/journeypure-about-us-equine-therapy.jpg">
+			<div class="background-fade">
+				<div class="content">
+					<!-- <h1 class="heading-1">...</h1> -->
+					<h2 class="heading text-primary">Here, it's different.</h2>
+
+					<hr>
+
+					<div class="feature">
+						<div class="row">
+							<div class="col-lg-12 col-sm-12 top-text">
+								<div class="card transparent">
+									<div class="card-body">
+										<h3>Our mission is to help people become healthy and stay healthy. Patients here get evidence-based, dual-diagnosis addiction treatment and compassionate care.  Our high standards attract well-known behavioral health professionals from across the country.  Their commitments to ethics and patient success are backed by the highest accreditation and affiliations in the industry.</h3>
+									</div>
+
+									<?php if ( $AboutUs->ratings ) : ?>
+										<div class="rating-section">
+											<div class="row no-gutters">
+												<?php foreach ( $AboutUs->ratings as $rating ) : ?>
+													<div class="col-md-6 i-rating">
+														<div class="ratings default inline lineup">
+															<div class="row no-gutters align-items-center">
+																<div class="col-2">
+																	<img class="lazy" data-src="<?php echo esc_attr( $rating->image['sizes']['medium'] ); ?>" alt="<?php echo esc_attr( get_post_meta( $rating->image['ID'], '_wp_attachment_image_alt', true ) ); ?>">
+																</div>
+
+																<div class="col-10">
+																	<div class="content">
+																		<?php if ( $rating->line_1 ) : ?>
+																			<p><?php echo esc_html( $rating->line_1 ); ?></p>
+																		<?php endif; ?>
+
+																		<?php if ( 'stars' === $rating->controller ) : ?>
+																			<?php for ( $i = 0; $i < $rating->stars; $i++ ) : ?>
+																				<i class="fas fa-star"></i>
+																			<?php endfor; ?>
+
+																			<span class="star-txt-color"><?php echo esc_html( $rating->number_rating ); ?></span>
+																		<?php else : ?>
+																			<p class="text-value"><?php echo esc_html( $rating->line_2_text ); ?></p>
+																		<?php endif; ?>
+
+																		<?php if ( $rating->line_3 ) : ?>
+																			<p class="sub"><?php echo esc_html( $rating->line_3 ); ?></p>
+																		<?php endif; ?>
+																	</div>
+																</div>
+															</div>
 														</div>
 													</div>
-												</div>
+												<?php endforeach; ?>
 											</div>
-										<?php endforeach; ?>
-									</div>
-								<?php endif; ?>
+										</div>
+									<?php endif; ?>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-12 order-md-2 order-1">
-				<div class="container">
-					<div class="heading">
-						<h1 class="page-heading text-white">Here, it's different.</h1>
-						<h3 class="lead">Our mission is to help people become healthy and stay healthy. Patients here get evidence-based, dual-diagnosis addiction treatment and compassionate care.  Our high standards attract well-known behavioral health professionals from across the country.  Their commitments to ethics and patient success are backed by the highest accreditation and affiliations in the industry.</h3>
-					</div>
-				</div>
-			</div>
 		</div>
 	</section>
+
+	<!-- /SECTION: Top Section (Above Fold / Masthead) -->
+
 	<section class="bio-section">
 		<div class="container">
 			<div class="heading">
@@ -94,7 +106,7 @@
 							<?php echo ($bio->years) ? '<li><span class="fa-li"><i class="fas fa-clock"></i></span>' . $bio->years . ' years in the field</li>': ''; ?>
 							<?php echo ($bio->education) ? '<li><span class="fa-li"><i class="fas fa-graduation-cap"></i></span>' . $bio->education . '</li>': ''; ?>
 							<?php echo ($bio->specialty) ? '<li><span class="fa-li"><i class="fas fa-star"></i></span>' . $bio->specialty . '</li>': ''; ?>
-							
+
 							<?php
 							if(!empty($bio->recovery_status)):
 								switch ($bio->recovery_status):
@@ -107,7 +119,7 @@
 								endswitch;
 							endif;
 							?>
-							
+
 						</ul>
 						<span><?php echo ($bio->news_mentions) ? 'News Mentions': ''; ?></span>
 						<?php if(!empty($bio->news_mentions)): ?>
@@ -117,7 +129,7 @@
 										<?php if(!empty($news_mention['mention'])): ?>
 											<a href="<?php  echo  $news_mention['link_to_article']; ?>" target="_blank"><div class="content"><?php echo  $news_mention['mention']; ?></div></a>
 										<?php endif; ?>
-										
+
 									</div>
 								<?php endforeach; ?>
 							</div>
@@ -190,7 +202,7 @@
 							LegitScript is the authority on <b>ethical healthcare marketing</b>. Most other large providers in our industry do not meet these high standards. We were one of the first companies in the world to earn the LegitScript certification, which is backed by Visa, MasterCard, Google, Microsoft and Facebook. The certification assures what we say about ourselves and our facilities are <b>true and transparent</b>. It also ensures we do not accept any form of payment for referrals. Our status can be verified on <a href="https://www.legitscript.com/websites/?lookup_type=website_search&website=www.journeypure.com&product=" target="_blank">LegitScript.com</a>.
 
 						</p>
-						
+
 					</div>
 				</div>
 				<div class="card">
@@ -201,19 +213,19 @@
 							Blue Cross Blue Sheild is the largest health insurer in the U.S. The honor of Blue Distinction means we <i>"demonstrate quality care, treatment expertise and better overall patient results."</i> Learn how they separate <b>the top 1%</b> of specialty care providers on <a href="https://www.bcbs.com/sites/default/files/file-attachments/page/Substance_Use_Treatment_and_Recovery_Selection_Criteria.pdf" target="_blank">BCBS.com</a>. In addition, Optum is also using data and insights to categorize the effectiveness of treatment facilities. We earned the <b>highest Platinum status</b>. More information on the Optum tier system is available on <a href="https://cdn-aem.optum.com/content/dam/optum3/optum/en/resources/white-papers/OptumAchievementsinClinicalExcellenceforFacilitiesWhitePaper.pdf" target="_blank">Optum.com</a>.
 
 						</p>
-						
+
 					</div>
 				</div>
 			</div>
-			
+
 		</div>
 
 	</section>
-	
+
 	<section class="block-3 " style="background-image: url(''); "><div class="container">   <div class="content-section ">
 	<h5 class="h1">The Latest News
 <a href="https://www.facebook.com/journeypure" target="_blank"><i class="fab fa-facebook"></i></a><a href="https://www.linkedin.com/company/journeypure/about/" target="_blank"><i class="fab fa-linkedin-in"></i></a><a href="https://www.youtube.com/journeypure" target="_blank"><i class="fab fa-youtube"></i></a></h5>
-	<div class="row row-eq-height"> <div class="col-lg-6 d-flex align-items-stretch card-col"><div class="card default  effect-none"> <div class="card-body"><div class="card-text"> 
+	<div class="row row-eq-height"> <div class="col-lg-6 d-flex align-items-stretch card-col"><div class="card default  effect-none"> <div class="card-body"><div class="card-text">
 <ul>
 <li><h3>Official provider for retired NFL & MLB pro athletes.</h3><hr /> <div class="row"><div class="col-md-10 col-sm-12">We are the only addiction treatment provider approved by the NFL Player Care Foundation and the MLB BAT program.</div><div class="col-md-2 col-sm-12"><img src="/wp-content/uploads/2020/01/Player-Care-Foundation-500x342-1.png"></div></div>
 </li>

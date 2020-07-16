@@ -1,11 +1,144 @@
-#about-us{
+#about-us {
 
-  // Import above fold  styles that are global
-  @import "../page-parts/above-fold";
-  
-  
-  
-  
+	// Top Section (Above Fold / Masthead)
+
+	.above-fold {
+		.card-body {
+			padding: 1.25rem 1.25rem 1.1rem;
+		}
+
+		.default-container {
+			padding-top: 0;
+			padding-bottom: 0;
+
+			@media (max-width: 767px) {
+				padding-bottom: 0;
+			}
+		}
+
+		.background-fade {
+			background-color: rgba(255,255,255,0.6);
+			padding-top: 30px;
+
+			@media screen and (min-width: 768px) {
+				padding-top: 60px;
+			}
+		}
+
+		.heading {
+			margin: 0 auto;
+			max-width: 800px;
+
+			@media (max-width: 767px) {
+				padding: 0 25px;
+			}
+		}
+
+		.heading-1 {
+			color: #cacfdc;
+			font-size: 16px;
+			font-weight: 600;
+			letter-spacing: 0;
+			text-align: center;
+			margin-bottom: 5px;
+		}
+
+		hr {
+			display: none;
+
+			@media (max-width: 767px) {
+				background: #0033a1;
+				border: 0;
+				display: none;
+				height: 4px;
+				margin: 21px auto 0;
+				width: 60px;
+			}
+		}
+
+		.no-pad {
+			padding-bottom: 0;
+		}
+
+		.embed-responsive {
+			box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
+			@extend .jp-embed-responsive;
+		}
+
+		.feature {
+			margin: 20px auto 0;
+			max-width: 800px;
+			padding: 5px 65px 50px;
+			text-align: left;
+
+			@media (max-width: 767px) {
+				text-align: left;
+			}
+
+			@media (max-width: 800px) {
+				background-color: rgba(255, 255, 255, 0.3);
+				padding: 10px 0 30px;
+			}
+
+			.lineup {
+				box-shadow: 0px 2px 4px rgba(0,0,0,.18);
+			}
+
+			p {
+				text-shadow: 1px 1px #ffffff;
+			}
+
+			.row {
+				margin: 0 auto;
+				max-width: 1240px;
+			}
+
+			.lead {
+				font-size: 22px;
+				font-weight: 100;
+				font-style: italic;
+				font-family: $heading-style-1;
+				letter-spacing: 0;
+			}
+
+			.card {
+				&.transparent {
+					background-color: transparent;
+					border: none;
+
+					@media (max-width: 767px) {
+						display: block;
+					}
+				}
+			}
+
+			.rating-section {
+				margin: -2px $md-space 20px;
+
+				> .row > div {
+					@media (max-width: 767px) {
+						display: block;
+						margin-bottom: 10px;
+					}
+				}
+
+				.i-rating {
+					&:nth-child(even) {
+						.ratings {
+							@media (min-width: 767px) {
+								margin-left: 10px;
+							}
+						}
+					}
+
+					.content {
+						margin-left: 10px;
+					}
+				}
+			}
+		}
+	}
+
   .bio-section{
 	margin: $xl-space 0 $xl-space;
 
@@ -175,8 +308,8 @@
 	.see-more-btn {
 	  font-family: "Montserrat",sans-serif;
 	}
-	
-	
+
+
   }
   .page-quote{
 	padding: $lg-space 0 $xl-space;
@@ -194,11 +327,11 @@
 	  .lead{
 		@extend .h5;
 		color: $main-gray;
-		
+
 	  }
-	  
+
 	}
-	
+
 	.media-body  {
 	margin-top: $lg-space;
 	flex:none;
@@ -309,7 +442,7 @@ h3 {
 		margin-top: 25px;
 		display: block;
 	}
-	
+
   }
   .insurance-section{
 	padding: $lg-space 0 15px;
@@ -337,11 +470,11 @@ border-bottom: 8px solid #0033a1;	border-top: 8px solid $primary;
 	-o-background-size: cover;
 	background-size: cover;
 	padding: $xl-space;
-	
+
 	.card-body {
 	   padding: 0;
 	}
-	
+
 	.fab {
 	    font-family: "Font Awesome 5 Brands";
     padding-left: 13px;
@@ -356,9 +489,9 @@ border-bottom: 8px solid #0033a1;	border-top: 8px solid $primary;
 	    list-style-type: none;
     padding-left: 0;
 }
-	
+
 	li {
-	
+
 	margin-top:10px;
     padding: 17px;
 	background:$background-color;
