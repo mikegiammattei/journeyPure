@@ -61,7 +61,7 @@
 											<a href="/suboxone-clinics/">Suboxone Treatment</a>
 
                                         </div>
-									
+
 
                                     </div>
 
@@ -75,8 +75,9 @@
                     </div>
                 </footer>
 
-                <?php include_once(JOURNEY_PURE_DIR . 'assets/src/includes/components/cta-widget.php'); ?>
+                <?php // include_once(JOURNEY_PURE_DIR . 'assets/src/includes/components/cta-widget.php'); ?>
                 <?php include_once(get_stylesheet_directory()  . '/assets/src/not-ready.php'); ?>
+			    <?php include_once(JOURNEY_PURE_DIR . 'assets/src/includes/components/frontman.php'); ?>
 
             <?php endif; ?>
 

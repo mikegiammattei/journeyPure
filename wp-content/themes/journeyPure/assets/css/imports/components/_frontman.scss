@@ -33,7 +33,8 @@
     cursor: pointer;
     color: #fff;
     display: flex;
-    flex-direction: column;
+	flex-direction: column;
+	font-family: $heading-font;
 	height: 65px;
     justify-content: center;
     padding: 10px 8px 9px 32px;

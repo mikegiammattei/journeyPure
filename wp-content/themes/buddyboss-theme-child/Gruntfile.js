@@ -25,6 +25,7 @@ module.exports = function(grunt){
                         '../journeyPure/assets/js/custom/a_globals.js',
                         '../journeyPure/assets/js/custom/cta-widget.js',
                         '../journeyPure/assets/js/custom/user-question.js',
+                        '../journeyPure/assets/js/custom/frontman.js',
                         'assets/js/jp/src/*.js'
                     ],
 

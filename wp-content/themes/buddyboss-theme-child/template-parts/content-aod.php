@@ -8,7 +8,7 @@
  */
 ?>
 
-<?php 
+<?php
 global $post;
 ?>
 
@@ -18,14 +18,14 @@ global $post;
 		<div class="post-inner-wrap">
 	<?php } ?>
 
-	<?php 
+	<?php
 	if ( ( !is_single() || is_related_posts() ) && function_exists( 'buddyboss_theme_entry_header' ) ) {
 		buddyboss_theme_entry_header( $post );
-	} 
+	}
 	?>
 
 	<div class="entry-content-wrap">
-		<?php 
+		<?php
 		$featured_img_style = buddyboss_theme_get_option( 'blog_featured_img' );
 
 		if ( !empty( $featured_img_style ) && $featured_img_style == "full-fi-invert" ) {
@@ -68,7 +68,7 @@ global $post;
 
 			<?php if ( !is_singular() || is_related_posts() ) { ?>
 				<div class="entry-content">
-					<?php 
+					<?php
 					if( empty($post->post_excerpt) ) {
 						the_excerpt();
 					} else {
@@ -115,7 +115,7 @@ global $post;
 
 			<?php if ( !is_singular() || is_related_posts() ) { ?>
 				<div class="entry-content">
-					<?php 
+					<?php
 					if( empty($post->post_excerpt) ) { ?>
 
                         <?php  the_excerpt(); ?>
@@ -125,7 +125,7 @@ global $post;
 					}
 					?>
 <!--                    <div class="mt-4">-->
-<!--                        --><?php //echo do_shortcode('[likebtn theme="custom" f_size="17" icon_l_url="http://multi.journeypure.com/ask-our-doctors/wp-content/uploads/sites/2/2020/02/upvote-green-1.png#1701" icon_l_url_v="http://multi.journeypure.com/ask-our-doctors/wp-content/uploads/sites/2/2020/02/upvote-voted-green-1.png#1702" icon_d_url="http://multi.journeypure.com/ask-our-doctors/wp-content/uploads/sites/2/2020/02/downvote-1.png#1700" icon_d_url_v="http://multi.journeypure.com/ask-our-doctors/wp-content/uploads/sites/2/2020/02/downvote-comments-clicked-1.png#1750" label_c="#9a9c99" label_c_v="#00953b" counter_l_c="#9a9c99" bg_c="#ffffff" bg_c_v="#ffffff" brdr_c="#ffffff" f_family="Verdana" counter_type="subtract_dislikes" i18n_like="Upvote" white_label="1" addthis_service_codes="facebook,twitter,email,linkedin" bp_notify="0" bp_activity="1" bp_hide_sitewide="1"]'); ?>
+<!--                        --><?php //echo do_shortcode('[likebtn theme="custom" f_size="17" icon_l_url="https://www.journeypure.com/ask-our-doctors/wp-content/uploads/sites/2/2020/02/upvote-green-1.png#1701" icon_l_url_v="https://www.journeypure.com/ask-our-doctors/wp-content/uploads/sites/2/2020/02/upvote-voted-green-1.png#1702" icon_d_url="https://www.journeypure.com/ask-our-doctors/wp-content/uploads/sites/2/2020/02/downvote-1.png#1700" icon_d_url_v="https://www.journeypure.com/ask-our-doctors/wp-content/uploads/sites/2/2020/02/downvote-comments-clicked-1.png#1750" label_c="#9a9c99" label_c_v="#00953b" counter_l_c="#9a9c99" bg_c="#ffffff" bg_c_v="#ffffff" brdr_c="#ffffff" f_family="Verdana" counter_type="subtract_dislikes" i18n_like="Upvote" white_label="1" addthis_service_codes="facebook,twitter,email,linkedin" bp_notify="0" bp_activity="1" bp_hide_sitewide="1"]'); ?>
 <!--                    </div>-->
 				</div>
 			<?php } ?>
@@ -142,7 +142,7 @@ global $post;
 			<?php } ?>
 
 		<?php } ?>
-		
+
 		<?php if ( is_singular() && ! is_related_posts() ) { ?>
 			<div class="entry-content">
 			<?php

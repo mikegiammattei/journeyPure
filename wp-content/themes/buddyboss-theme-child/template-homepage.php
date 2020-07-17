@@ -53,7 +53,7 @@ get_header();
                                         <span class="d-block"><i class="fas fa-graduation-cap"></i> Doctorate-Level</span>
                                         <span class="d-block"><i class="fas fa-grin"></i> In Recovery</span>
                                     </div>
-									<?php 
+									<?php
 										echo do_shortcode('[wpw_follow_author_me author_id=5 disable_reload=true][/wpw_follow_author_me]');
 										?>
                                 </div>
@@ -101,7 +101,7 @@ get_header();
                                         <span class="d-block"><i class="fas fa-graduation-cap"></i> Doctorate-Level</span>
                                         <span class="d-block"><i class="fas fa-grin"></i> In Recovery</span>
                                     </div>
-									<?php 
+									<?php
 
 echo do_shortcode('[wpw_follow_author_me author_id=6 disable_reload=true][/wpw_follow_author_me]');
 
@@ -160,13 +160,13 @@ echo do_shortcode('[wpw_follow_author_me author_id=6 disable_reload=true][/wpw_f
                                 $id = get_the_ID();
                                 ?>
                             <?php if($count == 0): ?>
-                                <div class="header"> 
+                                <div class="header">
                                     <div class="d-flex">
                                         <h2 class="flex-grow-1  my-auto">
                                             The Top Questions
                                         </h2>
 
- 
+
                                     </div>
                                 </div>
                             <?php endif; $count++; ?>
@@ -175,7 +175,7 @@ echo do_shortcode('[wpw_follow_author_me author_id=6 disable_reload=true][/wpw_f
                                     <h3 class="title"><?php echo the_title();?></h3>
                                     <?php $post_custom = get_post_custom( get_the_ID() ); ?></a>
                                     <div class="vote-buttons-list"><?php
-                                        echo do_shortcode('[likebtn theme="custom" f_size="17" icon_l_url="https://multi.journeypure.com/ask-our-doctors/wp-content/uploads/sites/2/2020/02/upvote-green-1.png#1701" icon_l_url_v="https://multi.journeypure.com/ask-our-doctors/wp-content/uploads/sites/2/2020/02/upvote-voted-green-1.png#1702" icon_d_url="https://multi.journeypure.com/ask-our-doctors/wp-content/uploads/sites/2/2020/02/downvote-1.png#1700" icon_d_url_v="https://multi.journeypure.com/ask-our-doctors/wp-content/uploads/sites/2/2020/02/downvote-comments-clicked-1.png#1750" label_c="#9a9c99" label_c_v="#00953b" counter_l_c="#9a9c99" bg_c="#ffffff" bg_c_v="#ffffff" brdr_c="#ffffff" f_family="Verdana" counter_type="subtract_dislikes" i18n_like="Upvote" white_label="1" addthis_service_codes="facebook,twitter,email,linkedin" bp_notify="0" bp_activity="1" bp_hide_sitewide="1"]');
+                                        echo do_shortcode('[likebtn theme="custom" f_size="17" icon_l_url="https://www.journeypure.com/ask-our-doctors/wp-content/uploads/sites/2/2020/02/upvote-green-1.png#1701" icon_l_url_v="https://www.journeypure.com/ask-our-doctors/wp-content/uploads/sites/2/2020/02/upvote-voted-green-1.png#1702" icon_d_url="https://www.journeypure.com/ask-our-doctors/wp-content/uploads/sites/2/2020/02/downvote-1.png#1700" icon_d_url_v="https://www.journeypure.com/ask-our-doctors/wp-content/uploads/sites/2/2020/02/downvote-comments-clicked-1.png#1750" label_c="#9a9c99" label_c_v="#00953b" counter_l_c="#9a9c99" bg_c="#ffffff" bg_c_v="#ffffff" brdr_c="#ffffff" f_family="Verdana" counter_type="subtract_dislikes" i18n_like="Upvote" white_label="1" addthis_service_codes="facebook,twitter,email,linkedin" bp_notify="0" bp_activity="1" bp_hide_sitewide="1"]');
                                     ?></div>
                                     <div class="category-list">
                                         <?php
@@ -267,7 +267,7 @@ echo do_shortcode('[wpw_follow_author_me author_id=6 disable_reload=true][/wpw_f
         </div>
 
     </section>
-	
+
 </main>
 <div class="mission-container">
 	<div class="home-mission">
@@ -290,7 +290,7 @@ echo do_shortcode('[wpw_follow_author_me author_id=6 disable_reload=true][/wpw_f
 		<h3>What can I do on this site besides asking a question?</h3>
 			<p>You can use your struggles and experiences for good by leaving feedback on other people's questions. Your advice just might be the fresh perspective they need. Click around and leave feedback on as many questions as you can!</p>
 			<p>By just entering your email, you can "follow" a doctor or category to get notified when new questions are posted. No matter how much you follow, everything is in one personalized email sent only once a week and only if there's something new you will care about.  Following individual questions sends you an email when there is new feedback posted to the question from the doctors or community. It's also sent only once a week at max, so follow as many questions are you want! You don't have to sign up to the website to follow and you can unsubscribe any time.</p>
-			<p>If you do sign up though, you can add your story to your profile to remind those still struggling that they are not alone.</p> 
+			<p>If you do sign up though, you can add your story to your profile to remind those still struggling that they are not alone.</p>
 		<hr />
 		<h3>Do I still need to see a doctor?</h3>
 			<p>Yes! We recognize that you are going to reserach medical and clinical questions outside of seeking care. Being informed is a good thing! Ask Our Doctors exists to ensure your information is accruate, instead of coming from a random blog.</p>
@@ -298,7 +298,7 @@ echo do_shortcode('[wpw_follow_author_me author_id=6 disable_reload=true][/wpw_f
 			<hr />
 		<h3>Who can I contact about issues with this website?</h3>
 			<p>Thank you for taking the time to help us improve. Whether you want to point out a typo or something isn't working, we can help. Just email <a href="mailto:askourdoctors@journeyoure.com">AskOurDoctors@JourneyPure.com</a> and the team will get back to you. (You can reply to any email we send you too).</p>
-			<p>Please note – if you're looking for <a href="https://journeypure.com/">addiction treatment</a>, the text or call feature on the website is much quicker.</p> 
+			<p>Please note – if you're looking for <a href="https://journeypure.com/">addiction treatment</a>, the text or call feature on the website is much quicker.</p>
 </div>
 </div>
     <div class="bb-grid"><!-- bb required in footer  -->
@@ -306,4 +306,3 @@ echo do_shortcode('[wpw_follow_author_me author_id=6 disable_reload=true][/wpw_f
 <?php
 get_footer();
 ?>
-

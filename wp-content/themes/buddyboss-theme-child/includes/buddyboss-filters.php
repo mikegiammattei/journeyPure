@@ -67,6 +67,11 @@ function buddyboss_yoastseo_noindex_profile_pages( $robotsstr ) {
 		if ( empty( $id ) ) {
 			$robotsstr = 'noindex,nofollow';
 		}
+
+		// It's not a doctor (Doctors = 5 and 6).
+		if ( ! in_array( $bp->displayed_user->id, array( 5, 6 ), true ) ) {
+			$robotsstr = 'noindex,nofollow';
+		}
 	}
 
 	return $robotsstr;
@@ -118,10 +123,16 @@ function buddyboss_bp_get_the_profile_field_value( $value, $type, $id ) {
 	// My Story = 33.
 	// My Best Advice = 32.
 	// Bio = 22.
-	$field_ids = [ 22, 32, 33 ];
+	$field_ids = array( 22, 32, 33 );
 
 	if ( in_array( $id, $field_ids, true ) ) {
 		$value = buddyboss_add_oembed( $value );
+	}
+
+	// If it's not Bio field = 22.
+	if ( 22 !== $id ) {
+		$value = preg_replace( '/(<a [^>]*>)([^<]*)(<\/a>)/', '$2', $value );
+
 	}
 
 	return $value;
@@ -210,18 +221,22 @@ add_filter( 'bp_get_the_profile_field_value', 'buddyboss_bp_get_the_profile_fiel
  * @return array Upload Array.
  */
 function buddyboss_wp_handle_upload( $upload_array ) {
+	// phpcs:ignore WordPress.Security
 	if ( isset( $_POST['action'] ) && 'bp_avatar_upload' === $_POST['action'] ) {
 		$file = $upload_array['file'];
 		$type = exif_imagetype( $file );
 
 		switch ( $type ) {
 			case IMAGETYPE_GIF:
+				// phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged
 				$img = @imagecreatefromgif( $file );
 				break;
 			case IMAGETYPE_JPEG:
+				// phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged
 				$img = @imagecreatefromjpeg( $file );
 				break;
 			case IMAGETYPE_PNG:
+				// phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged
 				$img = @imagecreatefrompng( $file );
 				break;
 			default:
@@ -231,7 +246,7 @@ function buddyboss_wp_handle_upload( $upload_array ) {
 		$w = imagesx( $img );
 		$h = imagesy( $img );
 
-		if ( $w != $h ) {
+		if ( $w !== $h ) {
 			$dim  = min( $w, $h );
 			$img2 = buddyboss_crop_align( $img, $dim, $dim, 'center', 'middle' );
 
@@ -295,10 +310,10 @@ function buddyboss_calculate_pixels_for_align( $image_size, $crop_size, $align )
 	switch ( $align ) {
 		case 'left':
 		case 'top':
-			return [ 0, min( $crop_size, $image_size ) ];
+			return array( 0, min( $crop_size, $image_size ) );
 		case 'right':
 		case 'bottom':
-			return [ max( 0, $image_size - $crop_size ), min( $crop_size, $image_size ) ];
+			return array( max( 0, $image_size - $crop_size ), min( $crop_size, $image_size ) );
 		case 'center':
 		case 'middle':
 			return [
@@ -306,7 +321,7 @@ function buddyboss_calculate_pixels_for_align( $image_size, $crop_size, $align )
 				min( $crop_size, $image_size ),
 			];
 		default:
-			return [ 0, $image_size ];
+			return array( 0, $image_size );
 	}
 }
 
@@ -336,11 +351,13 @@ add_filter( 'bp_core_avatar_original_max_filesize', 'buddyboss_bp_core_avatar_or
  * @return string The login URL. Not HTML-encoded.
  */
 function wp_bp_login_and_register_url( $url ) {
+	// phpcs:ignore WordPress.Security
 	if ( ! empty( $_GET['modal'] ) ) {
 		$url = add_query_arg(
-			[
+			array(
+				// phpcs:ignore WordPress.Security
 				'modal' => sanitize_text_field( $_GET['modal'] ),
-			],
+			),
 			$url
 		);
 	}
@@ -358,6 +375,7 @@ add_filter( 'register_url', 'wp_bp_login_and_register_url', 10 );
  * @param WP_User $user       WP_User object of the logged-in user.
 */
 function wp_bp_wp_login( $user_login, $user ) {
+	// phpcs:ignore WordPress.Security
 	if ( ! empty( $_SERVER['HTTP_REFERER'] ) && false !== strpos( $_SERVER['HTTP_REFERER'], 'modal=1' ) ) {
 		die( '<script> if (parent) { parent.location.search = "?login-after-question=1" } </script>' );
 	}
@@ -369,7 +387,9 @@ add_action( 'wp_login', 'wp_bp_wp_login', 10, 2 );
  * Add QUESTION (post ID) on the registration form, if provided via query string.
  */
 function wp_bp_custom_signup_steps() {
+	// phpcs:ignore WordPress.Security
 	if ( ! empty( $_GET['question'] ) && ! empty( $_GET['modal'] ) ) {
+		// phpcs:ignore WordPress.Security
 		?><input type="hidden" name="question" value="<?php echo sanitize_text_field( $_GET['question'] ); ?>"><?php
 	}
 }
@@ -383,7 +403,9 @@ add_action( 'bp_custom_signup_steps', 'wp_bp_custom_signup_steps' );
  * @return array user meta.
  */
 function wp_bp_signup_usermeta( $usermeta ) {
+	// phpcs:ignore WordPress.Security
 	if ( ! empty( $_POST['question'] ) ) {
+		// phpcs:ignore WordPress.Security
 		$usermeta['question_id'] = $_POST['question'];
 	}
 
@@ -430,21 +452,25 @@ function wp_bp_core_activate_account( $user ) {
 	}
 
 	// Update post author.
-	wp_update_post( [
-		'ID'          => $meta['question_id'],
-		'post_author' => $user->ID,
-	] );
+	wp_update_post(
+		array(
+			'ID'          => $meta['question_id'],
+			'post_author' => $user->ID,
+		)
+	);
 
 	// Make the post author a follower to the post.
-	$followed_post_id = wp_insert_post( [
-		'post_title'		=> $user->ID,
-		'post_content'		=> '',
-		'post_status'		=> 'publish',
-		'post_type'			=> 'wpwfollowpost',
-		'post_parent'		=> $meta['question_id'],
-		'author'            => $user->ID,
-		'post_author'       => $user->ID,
-	] );
+	$followed_post_id = wp_insert_post(
+		array(
+			'post_title'   => $user->ID,
+			'post_content' => '',
+			'post_status'  => 'publish',
+			'post_type'    => 'wpwfollowpost',
+			'post_parent'  => $meta['question_id'],
+			'author'       => $user->ID,
+			'post_author'  => $user->ID,
+		)
+	);
 
 	if ( $followed_post_id ) {
 		// Update follow status.
@@ -470,6 +496,7 @@ function wp_bp_activation_page_redirect() {
 	}
 
 	// If the page is already open in a modal.
+	// phpcs:ignore WordPress.Security
 	if ( ! empty( $_GET['modal'] ) ) {
 		return;
 	}
@@ -478,11 +505,13 @@ function wp_bp_activation_page_redirect() {
 
 	$url = add_query_arg(
 		[
-			'activation_page' => urlencode( $_SERVER['REQUEST_URI'] ),
+			// phpcs:ignore WordPress.Security
+			'activation_page' => rawurlencode( $_SERVER['REQUEST_URI'] ),
 		],
 		get_home_url()
 	);
 
+	// phpcs:ignore WordPress.Security
 	wp_redirect( $url );
 	die();
 }
@@ -497,6 +526,7 @@ add_action( 'template_redirect', 'wp_bp_activation_page_redirect' );
  * @return WP_User object.
  */
 function wp_bp_activation_page_redirect_pos( $user ) {
+	// phpcs:ignore WordPress.Security
 	if ( ! empty( $_SERVER['HTTP_REFERER'] ) && false !== strpos( $_SERVER['HTTP_REFERER'], 'modal=1' ) ) {
 		die( '<script> if (parent) { parent.location.search = "?activation-after-question=1" } </script>' );
 	}
