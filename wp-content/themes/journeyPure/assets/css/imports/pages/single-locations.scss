@@ -37,6 +37,7 @@
 @import "../components/jp-embed-button";
 @import "../components/ask-a-question";
 @import "../components/frontman";
+@import "../components/tags";
 
 /** Pages using the slider: homepage, single-location */
 @import "../components/sliders/review-default";
@@ -108,12 +109,12 @@
 			max-width: 800px;
 
 			@media (max-width: 767px) {
-				padding: 0 25px;
+				padding: 0 15px;
 			}
 		}
 
 		.heading-1 {
-			color: #cacfdc;
+			color: #c1c1c187;
 			font-size: 16px;
 			font-weight: 600;
 			letter-spacing: 0;

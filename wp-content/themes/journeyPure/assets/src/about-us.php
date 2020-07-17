@@ -17,7 +17,7 @@
 	<!-- SECTION: Top Section (Above Fold / Masthead) -->
 
 	<section class="above-fold">
-		<div class="default-container x-loc lazy" data-src="/wp-content/uploads/2019/11/journeypure-about-us-equine-therapy.jpg">
+		<div class="default-container x-loc lazy" data-src="/wp-content/uploads/2020/07/journeypure-about-us.jpg">
 			<div class="background-fade">
 				<div class="content">
 					<!-- <h1 class="heading-1">...</h1> -->
@@ -30,7 +30,7 @@
 							<div class="col-lg-12 col-sm-12 top-text">
 								<div class="card transparent">
 									<div class="card-body">
-										<h3>Our mission is to help people become healthy and stay healthy. Patients here get evidence-based, dual-diagnosis addiction treatment and compassionate care.  Our high standards attract well-known behavioral health professionals from across the country.  Their commitments to ethics and patient success are backed by the highest accreditation and affiliations in the industry.</h3>
+										<h3 class="text-center">Our mission is to help people become healthy and stay healthy. Our high standards attract well-known behavioral health professionals from across the country.  Their commitments to ethics and patient success are backed by the highest accreditation in the industry.</h3>
 									</div>
 
 									<?php if ( $AboutUs->ratings ) : ?>
@@ -74,6 +74,13 @@
 									<?php endif; ?>
 								</div>
 							</div>
+							<div class="col-lg-12 col-sm-12 d-flex align-items-stretch">
+									<div class="card card-body h-100 justify-content-center transparent" style="width: 100%; ">
+										<div class="embed-responsive embed-responsive-16by9 youtube-video-place lazy" data-src='/wp-content/uploads/2020/07/SL4drwind.png' data-yt-url="https://www.youtube.com/embed/Gd1Dza355X8">
+											<span class="play-button"></span>
+										</div>
+									</div>
+								</div>
 						</div>
 					</div>
 				</div>
@@ -164,7 +171,8 @@
 	</section>
 	<section class="page-quote">
 		<div class="container">
-			<div class="container"><div class="header"><div class="lead">"In order to continuously improve, we believe in science, real-world analysis and teamwork. Yet, the driving force behind JourneyPure remains an eternal compassion to help."</div></div><div class="media d-inline-flex"> <img class="mr-3" src="/wp-content/uploads/2019/11/dr-stephen-loyd-journeypure-md.jpg" alt="Doctor Stephen Loyd Headhot as Drug Czar"><div class="media-body "><h5 class="mt-0">Dr. Stephen Loyd MD</h5><p>Chief Medical Officer</p></div></div></div>
+			<div class="container"><div class="header"><div class="lead">"Addiction treatment is not only science; it's also art. It deals with the processes of life. Our techniques are innovative, well-researched and comprehensive. But, people don't care how much we know until they see how much we care." 
+</div></div><div class="media d-inline-flex"> <img class="mr-3" src="/wp-content/uploads/2019/11/dr-stephen-loyd-journeypure-md.jpg" alt="Doctor Stephen Loyd Headhot as Drug Czar"><div class="media-body "><h5 class="mt-0">Dr. Stephen Loyd MD</h5><p>Chief Medical Officer</p></div></div></div>
 		</div>
 	</section>
 		<section class="ethics">
@@ -175,7 +183,7 @@
 
 		<div class="media media-number-list"><div class="align-self-start mr-3 list-number colored"><i class="fas fa-check"></i></div><div class="media-body"><h5 class="mt-0">Everyone can recover from addiction</h5></div></div>
 				<div class="media media-number-list"><div class="align-self-start mr-3 list-number colored"><i class="fas fa-check"></i></div><div class="media-body"><h5 class="mt-0">Every patient deserves respectful, compassionate care </h5></div></div>
-<div class="media media-number-list"><div class="align-self-start mr-3 list-number colored"><i class="fas fa-check"></i></div><div class="media-body"><h5 class="mt-0">Treatment providers are accountable for patient's lasting success</h5></div></div>
+<div class="media media-number-list"><div class="align-self-start mr-3 list-number colored"><i class="fas fa-check"></i></div><div class="media-body"><h5 class="mt-0">Treatment providers are accountable for patients' lasting success</h5></div></div>
 	</div>
 	</section>
 
@@ -231,7 +239,7 @@
 </li>
 <li><h3>We're in-network with new VA Choice insurance.</h3><hr /> Veteran care is a high priority here. We accept Tricare and have specialized programs led by veterans that include virtual reality technology in treatment.
 </li>
-<li><h3>All 14 outpatient locations across the country have launched.</h3><hr />  We're growing in our commitment to communities in <a href="/locations/tennessee/">Tennessee</a>, <a href="/locations/kentucky/">Kentucky</a> and <a href="/locations/florida/">Florida</a>. Offering both outpatient and inpatient care is the only way to meet each person where they're at.</li>
+<li><h3>All 14 outpatient locations offer virtual options.</h3><hr />  We're growing in our commitment to communities in <a href="/locations/tennessee/">Tennessee</a>, <a href="/locations/kentucky/">Kentucky</a> and <a href="/locations/florida/">Florida</a>. Across the state, you can get addiction care at home.</li>
 <li class="last-news"><h3>Current data shows 84% of alumni are sober six months after starting treatment here.</h3><hr /> We use our data and statistically-verified studies from others in the industry to adjust our programs in ways that have the biggest impact on individual success. </li>
 </ul>
 </div></div></div></div> <div class="col-lg-6 d-flex align-items-stretch card-col"><div class="card default  effect-none"> <div class="card-body"><div class="card-text">  <img class="featured" src="/wp-content/uploads/2019/11/journeypure-alumni-app-after-rehab-left.png" alt="JourneyPure Phone App Screenshot Listing Features"> </div></div></div></div> </div></div>  <div class="content-section top-lg"><div class="card default"><div class="card-body"> </div></div></div> </div></section>
