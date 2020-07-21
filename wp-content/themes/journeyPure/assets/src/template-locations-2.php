@@ -143,7 +143,7 @@ get_header();
 			<div class="row">
 				<div class="col-12 col-md-12">
 					<h3 class="jp-loc2-table-title">13 Outpatient &amp; Suboxone Clinics</h3>
-					<p class="jp-loc2-table-subtitle">Live your life, whily you also work to save it.</p>
+					<p class="jp-loc2-table-subtitle">Live your life, while you also work to save it.</p>
 				</div>
 			</div>
 

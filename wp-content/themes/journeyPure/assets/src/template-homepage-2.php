@@ -400,7 +400,7 @@ $footerVersion = 2;
 	<section class="review-section">
 		<div class="container">
 			<h2 class="h1 text-center">You can do this!</h2>
-			<h3 class="text-center">Whether Journeypure is your first (and last) treatment expereince, or you've spent decades in and out of other facilities...here's proof that you can feel better. There's no shame in getting help.</h3>
+			<h3 class="text-center">Whether Journeypure is your first (and last) treatment experience, or you've spent decades in and out of other facilities...here's proof that you can feel better. There's no shame in getting help.</h3>
 			<div class="parent">
 				<div class="content-container-left">
 					<div class="details">
@@ -540,8 +540,8 @@ $footerVersion = 2;
                 <div class="col-sm-12">
                   <div class="design-process-content-inner">
                     <h5 class="semi-bold">2. Discuss Any Costs</h5>
-                    <p>Insurance covers the majority of your cost here! How much you owe depends on deductable and co-insurance rates set by each policy. Don't worry, we'll get with your insruance company, then explain the details of your specific insurance policy. You can privately <a data-toggle="modal" data-target="#main-insurance-form" href="#">submit insurance information online</a>.</p>
-                    <p>(If you don't have insurance, you still have options. We can talk about that too.)</p>
+										<p>Insurance covers the majority of your cost here! How much you owe depends on your insurance policy's deductible and co-insurance rates. Don't worry, we'll confidentially look at your policy and explain everything. You can <a data-toggle="modal" data-target="#main-insurance-form" href="#">submit insurance information online</a>.</p>
+											<p>(If you don't have insurance, you still have options. We can talk about that).</p>
                   </div>
                 </div>
               </div>

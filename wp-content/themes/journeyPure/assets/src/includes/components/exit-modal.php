@@ -20,7 +20,7 @@
 					</p>
 					<p class="sub-text sm-width">
 						
-						Get support from someone that will listen without judgement.
+						Get support from someone that will listen without judgment.
 					
 					</p>
 				</div>
