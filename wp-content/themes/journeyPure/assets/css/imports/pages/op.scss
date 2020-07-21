@@ -158,7 +158,7 @@
 		}
 
 		.embed-responsive {
-			@extend .jp-embed-responsive;
+			@include jp-embed-responsive;
 		}
 	}
 
@@ -727,7 +727,7 @@
 
 		.tag {
 			border-radius: 3px;
-			padding: 15px !important; 
+			padding: 15px !important;
 			background: #f3f3f3 !important;
 		}
 

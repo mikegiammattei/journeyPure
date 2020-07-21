@@ -1,0 +1,136 @@
+@mixin jp-above-fold {
+	.card-body {
+		padding: 1.25rem 1.25rem 1.1rem;
+	}
+
+	.default-container {
+		padding-top: 0;
+		padding-bottom: 0;
+
+		@media (max-width: 767px) {
+			padding-bottom: 0;
+		}
+	}
+
+	.background-fade {
+		background-color: rgba(255,255,255,0.6);
+		padding-top: 30px;
+
+		@media screen and (min-width: 768px) {
+			padding-top: 60px;
+		}
+	}
+
+	.heading {
+		margin: 0 auto;
+		max-width: 800px;
+
+		@media (max-width: 767px) {
+			padding: 0 15px;
+		}
+	}
+
+	.heading-1 {
+		color: #c1c1c187;
+		font-size: 16px;
+		font-weight: 600;
+		letter-spacing: 0;
+		text-align: center;
+		margin-bottom: 5px;
+	}
+
+	hr {
+		display: none;
+
+		@media (max-width: 767px) {
+			background: #0033a1;
+			border: 0;
+			display: none;
+			height: 4px;
+			margin: 21px auto 0;
+			width: 60px;
+		}
+	}
+
+	.no-pad {
+		padding-bottom: 0;
+	}
+
+	.embed-responsive {
+		box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
+		@include jp-embed-responsive;
+	}
+
+	.feature {
+		margin: 20px auto 0;
+		max-width: 800px;
+		padding: 5px 65px 50px;
+		text-align: left;
+
+		@media (max-width: 767px) {
+			text-align: left;
+		}
+
+		@media (max-width: 800px) {
+			background-color: rgba(255, 255, 255, 0.3);
+			padding: 10px 0 30px;
+		}
+
+		.lineup {
+			box-shadow: 0px 2px 4px rgba(0,0,0,.18);
+		}
+
+		p {
+			text-shadow: 1px 1px #ffffff;
+		}
+
+		.row {
+			margin: 0 auto;
+			max-width: 1240px;
+		}
+
+		.lead {
+			font-size: 22px;
+			font-weight: 100;
+			font-style: italic;
+			font-family: $heading-style-1;
+			letter-spacing: 0;
+		}
+
+		.card {
+			&.transparent {
+				background-color: transparent;
+				border: none;
+
+				@media (max-width: 767px) {
+					display: block;
+				}
+			}
+		}
+
+		.rating-section {
+			margin: -2px $md-space 20px;
+
+			> .row > div {
+				@media (max-width: 767px) {
+					display: block;
+					margin-bottom: 10px;
+				}
+			}
+
+			.i-rating {
+				&:nth-child(even) {
+					.ratings {
+						@media (min-width: 767px) {
+							margin-left: 10px;
+						}
+					}
+				}
+
+				.content {
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+}

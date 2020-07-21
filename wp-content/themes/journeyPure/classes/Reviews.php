@@ -45,6 +45,7 @@ class Reviews
 			$review = get_fields($reviewPostsId);
 
 			$this->reviews[] = (object) array(
+				'identifier' => 'reviews_' . $reviewPostsId,
 				'photo' => array(
 					'image' => $review['image']['sizes']['medium'],
 					'alt' => $review['image']['alt']
@@ -97,13 +98,13 @@ class Reviews
 
 	}
 	public function setPostByPostId($posts){
-	$this->reviewPostsIds = wp_list_pluck( $posts, 'ID' );
+		$this->reviewPostsIds = wp_list_pluck( $posts, 'ID' );
 
-	if(!empty($this->reviewPostsIds)){
-		$this->setReviews();
+		if(!empty($this->reviewPostsIds)){
+			$this->setReviews();
+		}
+
 	}
-
-}
 	public function setPostTag($tagName){
 
 		$args=array(
@@ -129,5 +130,77 @@ class Reviews
 		}
 
 
+	}
+
+	/**
+	 * Set reviews excluding category/categories
+	 *
+	 * @param array $category_ids Category IDs.
+	 * @param int   $page Page.
+	 *
+	 * @return void
+	 */
+	public function set_post_by_category_id_exclude( $category_ids, $page, $orderby, $order ) {
+		if ( $category_ids && $page ) {
+			$args = array(
+				'posts_per_page'   => 10,
+				'paged'            => $page,
+				'post_type'        => 'reviews',
+				'category__not_in' => $category_ids,
+			);
+
+			if ( 'date' === $orderby ) {
+				$args['order']   = $order;
+				$args['orderby'] = $orderby;
+			} else {
+				$args['order']    = $order;
+				$args['orderby']  = 'meta_value_num';
+				$args['meta_key'] = $orderby; // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+			}
+
+			$wp_query = new \WP_Query( $args );
+			// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+			$this->reviewPostsIds = wp_list_pluck( $wp_query->posts, 'ID' );
+			$this->setReviews();
+
+			// Set total counters to be global and not filtered.
+			if ( 1 === $page || '1' === $page ) {
+				$this->set_global_counters();
+			}
+		}
+	}
+
+	/**
+	 * Set total counters to be global and not filtered
+	 *
+	 * @return void
+	 */
+	public function set_global_counters() {
+		global $wpdb;
+
+		// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		$this->reviewCount = wp_count_posts( 'reviews' )->publish;
+
+		// phpcs:ignore WordPress.DB.DirectDatabaseQuery
+		$star_rating = $wpdb->get_col(
+			$wpdb->prepare(
+				"
+					SELECT SUM(pm.meta_value) FROM {$wpdb->postmeta} pm
+					LEFT JOIN {$wpdb->posts} p ON p.ID = pm.post_id
+					WHERE pm.meta_key = %s
+					AND p.post_status = %s
+					AND p.post_type = %s
+				",
+				'star_rating',
+				'publish',
+				'reviews'
+			)
+		);
+
+		// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		$avg = $star_rating[0] / $this->reviewCount;
+		$avg = sprintf( '%0.1f', $avg );
+		// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		$this->avgRating = $avg;
 	}
 }

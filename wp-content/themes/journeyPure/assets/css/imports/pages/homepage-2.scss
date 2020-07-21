@@ -58,7 +58,7 @@
 	  }
 	  .embed-responsive {
 		box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
-		@extend .jp-embed-responsive;
+		@include jp-embed-responsive;
 	  }
 	  .feature {
 		margin: 20px auto 0;

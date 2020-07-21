@@ -848,27 +848,22 @@ $(document).ready(function () {
 });
 
 function jp_likes() {
-  var likeSelector = '[data-like-object]';
-
-  if ($(likeSelector).length > 0) {
-    $(likeSelector).on('click', function () {
-      var thisLike = $(this);
-      var likeIdentifier = thisLike.data('like-object');
-      var currentCountEl = thisLike.find('data');
-      var currentCount = currentCountEl.val();
-      $.post('/wp-admin/admin-ajax.php', {
-        'action': 'like_action_hok',
-        data: likeIdentifier
-      }, function (response) {
-        if (response) {
-          /** Increment Likes */
-          currentCount++;
-          currentCountEl.val(currentCount).text(" " + currentCount);
-          thisLike.tooltip('hide').attr('data-original-title', 'Liked!').tooltip('update').tooltip('show');
-        }
-      });
+  jQuery(document).on('click', '[data-like-object]', function () {
+    var thisLike = $(this);
+    var likeIdentifier = thisLike.data('like-object');
+    var currentCountEl = thisLike.find('data');
+    var currentCount = currentCountEl.val();
+    $.post('/wp-admin/admin-ajax.php', {
+      'action': 'like_action_hok',
+      'data': likeIdentifier
+    }, function (response) {
+      if (response) {
+        currentCount++;
+        currentCountEl.val(currentCount).text(" " + currentCount);
+        thisLike.tooltip('hide').attr('data-original-title', 'Liked!').tooltip('update').tooltip('show');
+      }
     });
-  }
+  });
 }
 "use strict";
 
@@ -1505,6 +1500,153 @@ $(document).ready(function () {
       $curr.prevAll().addClass("visited");
     }); // end  script for tab steps
   }
+});
+"use strict";
+
+jQuery(document).ready(function () {
+  // Videos section
+  // On square thumbnail click, replace/play the video on the placeholder
+  jQuery(document).on('click', '.jp-reviews-videos-video-image-wrapper', function () {
+    var _this = jQuery(this);
+
+    var youtubeId = _this.data('youtube-video-id');
+
+    var image = _this.data('image');
+
+    var placeholder = '.jp-reviews-videos-featured .embed-responsive';
+    var html = '<div class="embed-responsive embed-responsive-16by9 youtube-video-place" style="background-image: url(\'' + image + '\')" data-yt-url="https://www.youtube.com/embed/' + youtubeId + '"><span class="play-button"></span></div>';
+    jQuery(placeholder).replaceWith(html);
+    setTimeout(function () {
+      jQuery(placeholder).trigger('click');
+    }, 500);
+  }); // Videos section
+  // Slider
+
+  var slider = jQuery('.jp-reviews-videos-video-slider');
+  slider.each(function () {
+    var _this = jQuery(this);
+
+    var prevButton = _this.parent().find('.see-less-btn');
+
+    var nextButton = _this.parent().find('.see-more-btn');
+
+    var slidesLeft;
+
+    _this.on('init', function (event, slick) {
+      slidesLeft = slick.slideCount - slick.originalSettings.slidesToShow;
+      nextButton.find('data').val(slidesLeft).text(slidesLeft);
+    });
+
+    _this.slick({
+      dots: false,
+      centerMode: false,
+      arrows: true,
+      infinite: false,
+      adaptiveHeight: true,
+      autoplay: false,
+      prevArrow: prevButton,
+      nextArrow: nextButton,
+      slidesToShow: 1
+    }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+      var direction;
+
+      if (Math.abs(nextSlide - currentSlide) === 1) {
+        direction = nextSlide - currentSlide > 0 ? 'right' : 'left';
+      } else {
+        direction = nextSlide - currentSlide > 0 ? 'left' : 'right';
+      }
+
+      if (direction === 'right') {
+        if (slidesLeft !== 0) {
+          slidesLeft--;
+        }
+      } else {
+        slidesLeft++;
+      }
+
+      nextButton.find('data').val(slidesLeft).text(slidesLeft); // Toggle Prev Button
+
+      if (nextSlide > 0) {
+        prevButton.addClass('has-more');
+      } else {
+        prevButton.removeClass('has-more');
+      }
+    });
+  }); // Reviews section
+  // Read more
+
+  jQuery(document).on('click', '.jp-reviews-reviews-review-text-more', function () {
+    var _this = jQuery(this);
+
+    var shortText = _this.closest('.jp-reviews-reviews-review-text');
+
+    var longText = shortText.next('.jp-reviews-reviews-review-text');
+    shortText.addClass('hide');
+    longText.removeClass('hide');
+  }); // Reviews section
+  // Load more items
+
+  jQuery(document).on('click', '.jp-reviews-reviews-loading-button', function () {
+    window.reviewsLoadItems(false);
+  });
+  jQuery(document).on('change', '.jp-reviews-reviews-filter #sort', function () {
+    window.reviewsLoadItems(true);
+  });
+  jQuery('.jp-reviews-reviews-reviews').on('scroll', function () {
+    // Only desktop
+    if (jQuery(window).width() >= 1024) {
+      var _this = jQuery(this);
+
+      if (_this.scrollTop() + _this.innerHeight() >= this.scrollHeight) {
+        window.reviewsLoadItems(false);
+      }
+    }
+  });
+
+  window.reviewsLoadItems = function (reset) {
+    var box = jQuery('.jp-reviews-reviews-box');
+    var placeholder = jQuery('.jp-reviews-reviews-reviews-inner');
+    box.addClass('loading');
+    var page = parseInt(box.data('page')) + 1;
+    var sort = jQuery('#sort').val();
+    var url = box.data('url');
+    var nonce = box.data('nonce');
+    var documentScroll = jQuery(document).scrollTop();
+    var placeholderScroll = placeholder.parent().scrollTop();
+
+    if (reset) {
+      page = 1;
+      placeholderScroll = 0;
+    }
+
+    jQuery.post(url, {
+      'action': 'get_reviews',
+      'nonce': nonce,
+      'page': page,
+      'sort': sort
+    }, function (html) {
+      if (html != '') {
+        // Insert HTML
+        if (reset) {
+          placeholder.html(html);
+        } else {
+          placeholder.append(html);
+        } // Trigger tooltips (Bootstrap)
+
+
+        placeholder.find('[data-toggle="tooltip"]').tooltip(); // Fix scroll
+
+        jQuery(document).scrollTop(documentScroll);
+        placeholder.parent().scrollTop(placeholderScroll); // Update data
+
+        box.data('page', page);
+      } else {
+        box.removeClass('done');
+      }
+    }).always(function () {
+      box.removeClass('loading');
+    });
+  };
 });
 "use strict";
 

@@ -1,0 +1,66 @@
+@keyframes jp-loading-icon {
+	0% { transform: rotate(0) }
+	100% { transform: rotate(360deg) }
+}
+
+@mixin jp-loading-icon {
+	background: none;
+	display: inline-block;
+	height: 60px;
+	overflow: hidden;
+	width: 60px;
+
+	&-inner {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		transform: translateZ(0) scale(0.6);
+		backface-visibility: hidden;
+		transform-origin: 0 0;
+
+		div { box-sizing: border-box !important }
+
+		> div {
+			position: absolute;
+			width: 88px;
+			height: 88px;
+			top: 6px;
+			left: 6px;
+			border-radius: 50%;
+			border: 8px solid #000;
+			border-color: #0033a1 transparent #0033a1 transparent;
+			animation: jp-loading-icon 1.1111111111111112s linear infinite;
+		}
+
+		> div:nth-child(2) { border-color: transparent }
+
+		> div:nth-child(2) div {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			transform: rotate(45deg);
+		}
+
+		> div:nth-child(2) div:before,
+		> div:nth-child(2) div:after {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 8px;
+			height: 8px;
+			top: -8px;
+			left: 32px;
+			background: #0033a1;
+			border-radius: 50%;
+			box-shadow: 0 80px 0 0 #0033a1;
+		}
+
+		> div:nth-child(2) div:after {
+			left: -8px;
+			top: 32px;
+			box-shadow: 80px 0 0 0 #0033a1;
+		}
+
+		div { box-sizing: content-box; }
+	}
+}
