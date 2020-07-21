@@ -142,23 +142,28 @@ class Reviews
 	 */
 	public function set_post_by_category_id_exclude( $category_ids, $page, $orderby, $order ) {
 		if ( $category_ids && $page ) {
-			$args = array(
-				'posts_per_page'   => 10,
-				'paged'            => $page,
-				'post_type'        => 'reviews',
-				'category__not_in' => $category_ids,
-			);
-
-			if ( 'date' === $orderby ) {
-				$args['order']   = $order;
-				$args['orderby'] = $orderby;
+			if ( 'likes' === $orderby ) {
+				// @TODO cusom query.
 			} else {
-				$args['order']    = $order;
-				$args['orderby']  = 'meta_value_num';
-				$args['meta_key'] = $orderby; // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+				$args = array(
+					'posts_per_page'   => 10,
+					'paged'            => $page,
+					'post_type'        => 'reviews',
+					'category__not_in' => $category_ids,
+				);
+
+				if ( 'date' === $orderby ) {
+					$args['order']   = $order;
+					$args['orderby'] = $orderby;
+				} else {
+					$args['order']    = $order;
+					$args['orderby']  = 'meta_value_num';
+					$args['meta_key'] = $orderby; // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+				}
+
+				$wp_query = new \WP_Query( $args );
 			}
 
-			$wp_query = new \WP_Query( $args );
 			// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 			$this->reviewPostsIds = wp_list_pluck( $wp_query->posts, 'ID' );
 			$this->setReviews();

@@ -68,10 +68,10 @@ class ReviewPage2 {
 		$reviews = new \Reviews\Reviews();
 
 		switch ( $sort ) {
-			// case 'ml':
-			// 	$orderby = 'likes';
-			// 	$order   = 'DESC';
-			// 	break;
+			case 'ml':
+				$orderby = 'likes';
+				$order   = 'DESC';
+				break;
 
 			case 'lr':
 				$orderby = 'star_rating';
@@ -103,7 +103,7 @@ class ReviewPage2 {
 		$this->review_total = $reviews->getTotalReviews();
 
 		foreach ( $this->reviews as $i => $review ) {
-			$this->set_initial_likes_start( 54, 300 );
+			$this->set_initial_likes_start( 0, 0 );
 			$like_identifier                  = $review->identifier;
 			$this->reviews[ $i ]->total_likes = $this->set_likes( $like_identifier );
 		}
