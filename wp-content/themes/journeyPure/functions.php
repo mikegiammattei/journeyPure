@@ -140,3 +140,17 @@ if ( ! function_exists( 'jp_divider' ) ) :
         return $componentView;
     }
 endif;
+
+/**
+ * Get reviews (ajax)
+ *
+ * @return void
+ */
+function ajax_get_reviews() {
+	require_once get_stylesheet_directory() . '/classes/ReviewPage2.php';
+	$reviews = new Pages\ReviewPage2();
+	$reviews->ajax_get_reviews();
+}
+
+add_action( 'wp_ajax_get_reviews', 'ajax_get_reviews' );
+add_action( 'wp_ajax_nopriv_get_reviews', 'ajax_get_reviews' );
