@@ -1,9 +1,7 @@
-@mixin jp-faq {
-	margin: $xl-space;
+@import "jp-section";
 
-	@media (max-width: 767px) {
-		margin: 25px 15px 20px;
-	}
+@mixin jp-faq {
+	@include jp-section;
 
 	.heading {
 		margin: auto;
