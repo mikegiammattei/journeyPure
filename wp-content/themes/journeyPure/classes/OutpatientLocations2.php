@@ -62,41 +62,17 @@ class Outpatient2 {
 	 * @return void
 	 */
 	private function set_faq_section() {
-		/* LEGACY
-		require_once get_stylesheet_directory() . '/classes/FAQs.php';
-		$faqs = new \FAQs\FAQs();
-
-		$faqs->setFAQsByCatName( 'outpatient' );
-		$this->faq = $faqs->faqs;
-		*/
-
 		if ( ! empty( $this->fields['faq'] ) ) {
+			require_once get_stylesheet_directory() . '/classes/FAQs.php';
+			$faqs = new \FAQs\FAQs();
+
+			$faqs->setFAQsByCatName( 'outpatient' );
+
 			$this->faq = (object) array(
 				'heading'    => $this->fields['faq']['heading'],
 				'subheading' => $this->fields['faq']['subheading'],
+				'faqs'       => $faqs->faqs,
 			);
-		}
-
-		if ( ! empty( $this->fields['faq']['faq'] ) ) {
-			/*
-			require_once get_stylesheet_directory() . '/classes/FAQs.php';
-
-			$faqs              = new \FAQs\FAQs();
-			$faqs_category_ids = $this->fields['faq']['faq'];
-			$faqs->setFAQs( $faqs_category_ids );
-			*/
-
-			$faqs_category_ids = $this->fields['faq']['faq'];
-			$this->faq->faqs   = array();
-
-			foreach ( $faqs_category_ids as $faq_post_id ) {
-				$faq = get_fields( $faq_post_id );
-
-				$this->faq->faqs[] = (object) array(
-					'question' => $faq['question'],
-					'answer'   => $faq['answer'],
-				);
-			}
 		}
 	}
 
