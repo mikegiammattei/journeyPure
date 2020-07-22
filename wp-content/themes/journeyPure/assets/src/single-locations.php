@@ -111,7 +111,7 @@ get_header();
 			<div class="container">
 				<div class="row">
 					<div class="col-12 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
-						<?php if ( $location->block2->heading ) : ?>
+						<?php if ( ! empty( $location->block2->heading ) ) : ?>
 							<h2 class="h1"><?php echo wp_kses_post( $location->block2->heading ); ?></h2>
 						<?php endif; ?>
 
@@ -180,10 +180,12 @@ get_header();
 					</div>
 
 					<div class="col-12 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
-						<div class="logos-wrapper">
-							<img class="logos lazy" data-src="<?php echo esc_attr( get_stylesheet_directory_uri() ); ?>/assets/img/insurance2.png" alt="Aetna, Anthem Blue Cross Blue Sheild, Cigna Heath Insurances">
-							<img class="logos lazy" data-src="<?php echo esc_attr( get_stylesheet_directory_uri() ); ?>/assets/img/insurance1.png" alt="Amerihealth, United Healthcare, Humana, Tricare and 43 More Insurances">
-						</div>
+						<?php if ( true === $location->block2->show_insurance_logos ) : ?>
+							<div class="logos-wrapper">
+								<img class="logos lazy" data-src="<?php echo esc_attr( get_stylesheet_directory_uri() ); ?>/assets/img/insurance2.png" alt="Aetna, Anthem Blue Cross Blue Sheild, Cigna Heath Insurances">
+								<img class="logos lazy" data-src="<?php echo esc_attr( get_stylesheet_directory_uri() ); ?>/assets/img/insurance1.png" alt="Amerihealth, United Healthcare, Humana, Tricare and 43 More Insurances">
+							</div>
+						<?php endif; ?>
 
 						<div class="btn-wrapper">
 							<button type="button" data-toggle="modal" data-target="#main-insurance-form" class="btn btn-outline-secondary"><span class="fas fa-id-card"></span> Check Insurance</button>

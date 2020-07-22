@@ -133,9 +133,10 @@ class Location {
 	 */
 	private function set_block_2() {
 		$this->block2 = (object) array(
-			'heading'      => $this->fields['block_2']['heading'],
-			'list'         => $this->fields['block_2']['list'],
-			'tag_sections' => $this->fields['block_2']['aside_tags'],
+			'heading'              => $this->fields['block_2']['heading'],
+			'list'                 => $this->fields['block_2']['list'],
+			'tag_sections'         => $this->fields['block_2']['aside_tags'],
+			'show_insurance_logos' => $this->fields['block_2']['show_insurance_logos'],
 		);
 
 		foreach ( $this->block2->list as $i => $item ) {
