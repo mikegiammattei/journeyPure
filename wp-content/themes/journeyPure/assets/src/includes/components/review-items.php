@@ -48,7 +48,7 @@ global $_reviews;
 		</div>
 
 		<div data-like-object="<?php echo esc_attr( $review->identifier ); ?>" class="like-button" data-placement="top" data-toggle="tooltip" <?php echo $_reviews->is_liked_by_session( $review->identifier ) ? 'title="Already liked"' : 'title="Do you like?"'; ?>>
-			<i class="fas fa-thumbs-up"></i>
+			<i class="far fa-thumbs-up"></i>
 			<data value="<?php echo esc_attr( $review->total_likes ); ?>"> <?php echo esc_html( $review->total_likes ); ?></data>
 		</div>
 	</div>

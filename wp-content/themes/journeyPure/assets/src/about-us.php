@@ -17,7 +17,7 @@
 	<!-- SECTION: Top Section (Above Fold / Masthead) -->
 
 	<section class="above-fold">
-		<div class="default-container x-loc lazy" data-src="/wp-content/uploads/2020/07/journeypure-about-us.jpg">
+		<div class="default-container x-loc lazy" data-src="/wp-content/uploads/2020/07/about-journeypure-alcohol-rehab.jpg">
 			<div class="background-fade">
 				<div class="content">
 					<!-- <h1 class="heading-1">...</h1> -->
@@ -30,7 +30,7 @@
 							<div class="col-lg-12 col-sm-12 top-text">
 								<div class="card transparent">
 									<div class="card-body">
-										<h3 class="text-center">Our mission is to help people become healthy and stay healthy. Our high standards attract well-known behavioral health professionals from across the country.  Their commitments to ethics and patient success are backed by the highest accreditation in the industry.</h3>
+										<h3 class="text-center">Our mission is to help people become healthy and stay healthy. Our high standards attract well-known behavioral health professionals from across the country.  Their commitments to <u>ethics and patient success</u> are backed by the highest accreditation in the industry.</h3>
 									</div>
 
 									<?php if ( $AboutUs->ratings ) : ?>

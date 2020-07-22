@@ -91,7 +91,7 @@ get_header();
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
-						<h2 class="h1 text-center jp-reviews-videos-title">You can do this!</h2>
+						<h2 class="h1 text-center jp-reviews-videos-title">You Can Do This!</h2>
 						<h3 class="text-center jp-reviews-videos-subtitle">Whether Journeypure is your first (and last) treatment experience, or you've spent decades in and out of other facilities... here's proof that you can feel better. There's no shame in getting help.</h3>
 					</div>
 				</div>

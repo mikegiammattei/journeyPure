@@ -4,7 +4,7 @@
 	// Section
 
 	&-section {
-		padding: 30px 0;
+		padding: 50px 0;
 
 		@media screen and (min-width: 768px) {
 			padding: 60px 0;
@@ -16,6 +16,17 @@
 	.above-fold {
 		@import "../page-parts/jp-above-fold";
 		@include jp-above-fold;
+		.background-fade{
+		background-color: rgba(255,255,255,.8);}
+		.card-body{
+		padding: 0 1.25rem 45px;
+		}
+		.feature{
+		@media (max-width: 800px){
+			padding-top:0;
+		}
+		
+		}
 	}
 
 	// Videos Section
@@ -24,7 +35,7 @@
 		// &-title {}
 
 		&-subtitle {
-			margin: 15px auto 60px;
+			margin: 15px auto 50px;
 			max-width: 683px;
 		}
 
@@ -126,6 +137,7 @@
 	&-reviews {
 		background-color: #ffffff;
 		position: relative;
+		    padding-bottom: 50px;
 
 		&:before {
 			background-color: #e1e7f5;
@@ -146,7 +158,7 @@
 		// &-title {}
 
 		&-subtitle {
-			margin: 15px auto 60px;
+			margin: 15px auto 50px;
 			max-width: 683px;
 		}
 
@@ -283,8 +295,9 @@
 
 			&-image-google {
 				float: right;
-				height: 60px;
-				width: 60px;
+				height: 50px;
+				width: 50px;
+				margin-top: 7px;
 			}
 
 			&-text {
@@ -345,7 +358,7 @@
 			cursor: pointer;
 			display: inline-block;
 			font-size: 22px;
-			margin-top: 10px;
+			margin-top: 5px;
 
 			data {
 				font-size: 15px;
