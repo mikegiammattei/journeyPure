@@ -1,14 +1,20 @@
+/**
+ * Template Reviews 2
+ *
+ * @author   Fernando Tessmann
+ * @package  JourneyPure
+ */
+
+// Template Reviews 2
+
 .jp-reviews {
 	overflow: hidden;
 
 	// Section
 
 	&-section {
-		padding: 50px 0;
-
-		@media screen and (min-width: 768px) {
-			padding: 60px 0;
-		}
+		@import "../page-parts/jp-section";
+		@include jp-section;
 	}
 
 	// Top Section (Above Fold / Masthead)
@@ -16,16 +22,19 @@
 	.above-fold {
 		@import "../page-parts/jp-above-fold";
 		@include jp-above-fold;
-		.background-fade{
-		background-color: rgba(255,255,255,.8);}
-		.card-body{
-		padding: 0 1.25rem 45px;
+
+		.background-fade {
+			background-color: rgba(255,255,255,.8);
 		}
-		.feature{
-		@media (max-width: 800px){
-			padding-top:0;
+
+		.card-body {
+			padding: 0 1.25rem 45px;
 		}
-		
+
+		.feature {
+			@media (max-width: 800px) {
+				padding-top:0;
+			}
 		}
 	}
 

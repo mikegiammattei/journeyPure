@@ -13,14 +13,11 @@
 	// Section
 
 	&-section {
-		padding: 30px 0;
-
-		@media screen and (min-width: 768px) {
-			padding: 60px 0;
-		}
+		@import "../page-parts/jp-section";
+		@include jp-section;
 	}
 
-	// Section Masthead
+	// Masthead Section
 
 	&-masthead {
 		background-color: #ebebeb;
@@ -118,241 +115,21 @@
 		}
 	}
 
-	// Section Highlights
+	// Highlights Section
 
 	&-highlights {
-		background-color: #ffffff;
-
-		&-title {
-			@extend .h1;
-
-			font-style: unset;
-			margin-bottom: 20px;
-
-			@media screen and (min-width: 768px) {
-				margin-bottom: 40px;
-			}
-		}
-
-		&-list {
-			list-style: none;
-			margin-bottom: 20px;
-			padding-left: 0;
-
-			@media screen and (min-width: 768px) {
-				margin-bottom: 30px;
-			}
-
-			&-item {
-				margin-bottom: 20px;
-				position: relative;
-
-				@media screen and (min-width: 768px) {
-					margin-bottom: 30px;
-				}
-
-				&-icon {
-					color: #3b9541;
-					font-size: 25px;
-					left: 0;
-					position: absolute;
-					top: 5px;
-
-					@media screen and (min-width: 768px) {
-						font-size: 35px;
-					}
-				}
-
-				&-title {
-					@extend .h2;
-
-					display: block;
-					font-size: 24px;
-					margin-bottom: 0;
-    				margin-left: 35px;
-
-					@media screen and (min-width: 768px) {
-						margin-left: 45px;
-					}
-				}
-
-				&-text {
-					display: block;
-					margin-left: 35px;
-
-					@media screen and (min-width: 768px) {
-						margin-left: 45px;
-					}
-				}
-			}
-		}
-
-		&-img-logos {
-			filter: grayscale(100%);
-			width: 100%;
-
-			@media screen and (min-width: 992px) {
-				width: 50%;
-			}
-
-			&-wrapper {
-				margin-bottom: 20px;
-
-				@media screen and (min-width: 768px) {
-					padding-left: 30px;
-				}
-
-				@media screen and (min-width: 992px) {
-					display: flex;
-				}
-			}
-		}
-
-		&-img-faces {
-			margin-top: 20px;
-
-			@media screen and (min-width: 768px) {
-				margin-top: 0;
-			}
-		}
-
-		&-button {
-			background: #ffffff;
-			border: 2px solid #01389f;
-			border-radius: 5px;
-			color: #01389f;
-			display: inline-block;
-			font-family: $heading-style;
-			font-weight: bold;
-			padding: 6px 12px;
-			transition: all 250ms ease-in-out;
-
-			&:hover {
-				background: #01389f;
-				color: #ffffff;
-			}
-
-			&-wrapper {
-				padding-left: 35px;
-
-				@media screen and (min-width: 768px) {
-					padding-left: 45px;
-				}
-			}
-		}
+		@import "../page-parts/jp-highlights";
+		@include jp-highlights;
 	}
 
-	// Section Table
+	// Table Section
 
 	&-table {
-		background-color: #ffffff;
-		position: relative;
-
-		&:before {
-			background-color: #e1e7f5;
-			content: '';
-			height: 50%;
-			left: 0;
-			position: absolute;
-			right: 0;
-			top: 0;
-		}
-
-		.container {
-			max-width: 1024px;
-			position: relative;
-			z-index: 1;
-		}
-
-		.col-12 {
-			border-bottom: 1px solid #e1f1ff;
-
-			&:last-child {
-				border-bottom: none;
-			}
-
-			@media screen and (min-width: 992px) {
-				border-bottom: none;
-				border-right: 1px solid #e1f1ff;
-
-				&:last-child {
-					border-right: none;
-				}
-			}
-		}
-
-		&-title {
-			@extend .h1;
-
-			font-style: unset;
-			margin-bottom: 15px;
-			text-align: center;
-
-			span {
-				text-decoration: underline;
-			}
-		}
-
-		&-subtitle {
-			@extend .h3;
-
-			margin-bottom: 20px;
-			text-align: center;
-
-			@media screen and (min-width: 768px) {
-				margin-bottom: 40px;
-			}
-		}
-
-		&-cards {
-			background-color: #ffffff;
-			border-radius: 10px;
-			box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.08), 0px 20px 31px 3px rgba(0, 0, 0, 0.09), 0px 8px 20px 7px rgba(0, 0, 0, 0.02);
-			padding: 15px 25px;
-		}
-
-		&-card {
-			padding: 25px;
-
-			&-img {
-				display: block;
-				margin: 0 auto 25px;
-				max-width: 150px;
-			}
-
-			&-title {
-				margin-bottom: 20px;
-				font-size: 18px;
-    			font-weight: 700;
-				text-align: center;
-				text-transform: uppercase;
-				margin-top:35px;
-
-			}
-
-			&-list {
-				list-style: none;
-				margin-bottom: 0;
-				padding-left: 0;
-
-				&-item {
-					border-top: 1px solid #e1f1ff;
-					font-size: 14px;
-    				font-weight: 600;
-					line-height: 1.5;
-					padding: 15px 0;
-					text-align: center;
-					text-transform: uppercase;
-				}
-			}
-
-			&-info {
-				margin-left: 5px;
-			}
-		}
+		@import "../page-parts/jp-table";
+		@include jp-table;
 	}
 
-	// Section Components
+	// Components Section
 
 	&-components {
 		background-color: #ffffff;
@@ -479,7 +256,7 @@
 		}
 	}
 
-	// Section Cards
+	// Cards Section
 
 	&-cards {
 		background-color: #ffffff;
@@ -539,115 +316,14 @@
 		}
 	}
 
-	// Section Bios (copied from op.scss)
+	// Bios Section
 
 	.bio-section {
-		margin: $xl-space 0 $xl-space;
-
-		.h1 {
-			font-style: unset;
-			margin-bottom: 15px;
-		}
-
-		.heading,
-		.subheading {
-			text-align: left;
-			max-width: $lg-width;
-			margin: 0 auto;
-		}
-
-		.bio-slider {
-			margin-top: $lg-space;
-			visibility: hidden;
-
-			&.slick-initialized {
-				visibility: visible;
-				opacity: 1;
-				font-family: $heading-font;
-			}
-
-			.card {
-				margin: auto;
-
-				.bios {
-					.img {
-						background: no-repeat center;
-						background-size: cover;
-						width: 100px;
-						height: 100px;
-						border-radius: 50%;
-						display: block;
-						margin: 5px auto $lg-space;
-					}
-
-					.name-text {
-						font-weight: bold;
-						color: black;
-					}
-
-					.text {
-						padding-bottom: 0;
-						font-family: "Montserrat", sans-serif;
-
-						span {
-							font-size: 14px;
-							font-weight: normal;
-						}
-					}
-
-					/*
-					name-text {
-						color: black;
-						font-weight: bold;
-
-						span {
-							font-size: 14px;
-							font-weight: normal;
-							color: #333;
-						}
-					}
-					*/
-
-					.fa-ul {
-						margin-top: $lg-space;
-						margin-left: 25px;
-
-						i {
-							color: $secondary;
-						}
-					}
-				}
-			}
-		}
-
-		.see-less-btn {
-			&.has-more {
-				&:before {
-					content: '\f053'; // Fix global
-				}
-			}
-		}
-
-		.see-more-btn,
-		.see-less-btn {
-			margin-top: 0;
-			padding-bottom: 0;
-
-			&.has-more {
-				&:after,
-				&:before {
-					font-size: 28px;
-					vertical-align: middle;
-				}
-			}
-		}
-
-		.fa-li {
-			color: #3b9341;
-		}
+		@import "../page-parts/jp-bios";
+		@include jp-bios;
 	}
 
-	// Section Process
+	// Process Section
 
 	&-process {
 		background-color: $primary;
@@ -759,53 +435,10 @@
 		}
 	}
 
-	// Section FAQ (copied from op.scss)
+	// FAQ Section
 
-	.block-4 {
-		margin: $xl-space;
-
-		@media screen and (max-width: 767px) {
-			margin: 25px 15px 20px;
-		}
-
-		.heading {
-			margin: auto;
-			max-width: 1024px;
-			text-align: left;
-
-			.lead {
-				@extend .h3;
-
-				margin: 20px 0;
-
-				@media screen and (min-width: 768px) {
-					margin-bottom: 40px;
-				}
-			}
-		}
-
-		.faqs {
-			max-width: 800px;
-			margin: 0 auto;
-
-			.card {
-				border: none;
-
-				.card-header {
-					margin-bottom: 0;
-					cursor: pointer;
-					background-color: white;
-					padding: 22px 10px 12px;
-					border-color: #333;
-				}
-			}
-
-			.ask-a-question {
-				text-align: center;
-				margin: $lg-space auto;
-
-				// .link { }
-			}
-		}
+	&-faq {
+		@import "../page-parts/jp-faq";
+		@include jp-faq;
 	}
 }

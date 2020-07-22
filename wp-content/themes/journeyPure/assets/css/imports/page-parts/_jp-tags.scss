@@ -1,0 +1,46 @@
+@mixin jp-tags {
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&-wrapper {
+		margin-top: 15px;
+		overflow: hidden;
+		padding: 15px 0 0;
+	}
+
+	.tag {
+		border-radius: 3px;
+		padding: 15px !important;
+		background: #f3f3f3 !important;
+	}
+
+	.heading {
+		@media screen and (min-width: 768px) {
+			align-items: center;
+			display: flex;
+		}
+
+		span {
+			display: block;
+			font-size: 22px;
+			max-width: 100%;
+
+			@media screen and (min-width: 768px) {
+				flex: 0 0 auto;
+				width: auto;
+			}
+		}
+
+		&:after {
+			@media screen and (min-width: 768px) {
+				background-color: #CBCCCB;
+				content: '';
+				flex: 1 1 0px;
+				height: 2px;
+				margin-left: 10px;
+				width: auto;
+			}
+		}
+	}
+}

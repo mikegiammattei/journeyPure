@@ -1,0 +1,121 @@
+@mixin jp-highlights {
+	background-color: #ffffff;
+
+	&-title {
+		@extend .h1;
+
+		font-style: unset;
+		margin-bottom: 20px;
+
+		@media screen and (min-width: 768px) {
+			margin-bottom: 40px;
+		}
+	}
+
+	&-list {
+		list-style: none;
+		margin-bottom: 20px;
+		padding-left: 0;
+
+		@media screen and (min-width: 768px) {
+			margin-bottom: 0;
+		}
+
+		&-item {
+			margin-bottom: 20px;
+			position: relative;
+
+			@media screen and (min-width: 768px) {
+				margin-bottom: 30px;
+			}
+
+			&-icon {
+				color: #3b9541;
+				font-size: 25px;
+				left: 0;
+				position: absolute;
+				top: 5px;
+
+				@media screen and (min-width: 768px) {
+					font-size: 35px;
+				}
+			}
+
+			&-title {
+				@extend .h2;
+
+				display: block;
+				font-size: 24px;
+				margin-bottom: 0;
+				margin-left: 35px;
+
+				@media screen and (min-width: 768px) {
+					margin-left: 45px;
+				}
+			}
+
+			&-text {
+				display: block;
+				margin-left: 35px;
+
+				@media screen and (min-width: 768px) {
+					margin-left: 45px;
+				}
+			}
+		}
+	}
+
+	&-img-logos {
+		filter: grayscale(100%);
+		width: 100%;
+
+		@media screen and (min-width: 992px) {
+			width: 50%;
+		}
+
+		&-wrapper {
+			margin-bottom: 20px;
+
+			@media screen and (min-width: 768px) {
+				padding-left: 30px;
+			}
+
+			@media screen and (min-width: 992px) {
+				display: flex;
+			}
+		}
+	}
+
+	&-img-faces {
+		margin-top: 20px;
+
+		@media screen and (min-width: 768px) {
+			margin-top: 0;
+		}
+	}
+
+	&-button {
+		background: #ffffff;
+		border: 2px solid #01389f;
+		border-radius: 5px;
+		color: #01389f;
+		display: inline-block;
+		font-family: $heading-style;
+		font-weight: bold;
+		padding: 6px 12px;
+		transition: all 250ms ease-in-out;
+
+		&:hover {
+			background: #01389f;
+			color: #ffffff;
+		}
+
+		&-wrapper {
+			padding-left: 35px;
+
+			@media screen and (min-width: 768px) {
+				padding-left: 45px;
+			}
+		}
+	}
+}

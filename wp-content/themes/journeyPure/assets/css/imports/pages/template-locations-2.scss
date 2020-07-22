@@ -13,14 +13,11 @@
 	// Section
 
 	&-section {
-		padding: 30px 0;
-
-		@media screen and (min-width: 768px) {
-			padding: 60px 0;
-		}
+		@import "../page-parts/jp-section";
+		@include jp-section;
 	}
 
-	// Section Masthead
+	// Masthead Section
 
 	&-masthead {
 		background-position: center center;
@@ -77,7 +74,7 @@
 		}
 	}
 
-	// Section Cards
+	// Cards Section
 
 	&-cards {
 		background-color: #ededed;
@@ -176,192 +173,17 @@
 		margin: 0 auto;
 	}
 
-	// Section Table
+	// Table Section
 
 	&-table {
-		background-color: #ffffff;
-		position: relative;
-
-		&:before {
-			background-color: #e1e7f5;
-			content: '';
-			height: 50%;
-			left: 0;
-			position: absolute;
-			right: 0;
-			top: 0;
-		}
-
-		.container {
-			position: relative;
-			z-index: 1;
-		}
-
-		.col-12 {
-			border-bottom: 1px solid #e1f1ff;
-
-			&:last-child {
-				border-bottom: none;
-			}
-
-			@media screen and (min-width: 992px) {
-				border-bottom: none;
-				border-right: 1px solid #e1f1ff;
-
-				&:last-child {
-					border-right: none;
-				}
-			}
-		}
-
-		&-title {
-			@extend .h1;
-
-			font-style: unset;
-			margin-bottom: 15px;
-			text-align: center;
-
-			span {
-				text-decoration: underline;
-			}
-		}
-
-		&-subtitle {
-			@extend .h3;
-
-			margin-bottom: 20px;
-			text-align: center;
-
-			@media screen and (min-width: 768px) {
-				margin-bottom: 40px;
-			}
-		}
-
-		&-cards {
-			background-color: #ffffff;
-			border-radius: 10px;
-			box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.08), 0px 20px 31px 3px rgba(0, 0, 0, 0.09), 0px 8px 20px 7px rgba(0, 0, 0, 0.02);
-			padding: 15px 25px;
-			margin: 0 auto;
-			max-width: 1024px;
-		}
-
-		&-card {
-			padding: 25px;
-
-			&-img {
-				display: block;
-				margin: 0 auto 25px;
-				max-width: 110px;
-			}
-
-			&-title {
-				margin-bottom: 20px;
-				font-size: 18px;
-				font-weight: 800;
-				margin-top: 35px;
-				text-align: center;
-				text-transform: uppercase;
-			}
-
-			&-list {
-				list-style: none;
-				margin-bottom: 0;
-				padding-left: 0;
-
-				&-item {
-					border-top: 1px solid #e1f1ff;
-    				font-weight: 600;
-					line-height: 1.5;
-					padding: 15px 0;
-				}
-			}
-
-			&-place {
-				display: block;
-
-				&-title {
-					color: $primary;
-					margin-bottom: 5px;
-					font-size: 17px;
-					font-weight: 800;
-
-					.fas {
-						margin-left: 5px;
-					}
-				}
-
-				&-stars {
-					align-items: center;
-					color: #fadb8a;
-					display: flex;
-					margin-bottom: 3px;
-				}
-
-				&-star {
-					font-weight: 700;
-					margin-right: 5px;
-				}
-
-				&-count {
-					color: #333333;
-					margin-left: 5px;
-				}
-
-				&-address {
-					padding-bottom: 0;
-				}
-			}
-		}
+		@import "../page-parts/jp-table";
+		@include jp-table;
 	}
 
-	// Section FAQ (copied from op.scss)
+	// FAQ Section
 
-	.block-4 {
-		margin: $xl-space;
-
-		@media screen and (max-width: 767px) {
-			margin: 25px 15px 20px;
-		}
-
-		.heading {
-			margin: 0 auto 30px;
-			max-width: 1024px;
-			text-align: center;
-
-			.lead {
-				@extend .h3;
-
-				margin: 20px 0;
-
-				@media screen and (min-width: 768px) {
-					margin-bottom: 40px;
-				}
-			}
-		}
-
-		.faqs {
-			max-width: 800px;
-			margin: 0 auto;
-
-			.card {
-				border: none;
-
-				.card-header {
-					margin-bottom: 0;
-					cursor: pointer;
-					background-color: white;
-					padding: 22px 10px 12px;
-					border-color: #333;
-				}
-			}
-
-			.ask-a-question {
-				text-align: center;
-				margin: $lg-space auto;
-
-				// .link { }
-			}
-		}
+	&-faq {
+		@import "../page-parts/jp-faq";
+		@include jp-faq;
 	}
 }

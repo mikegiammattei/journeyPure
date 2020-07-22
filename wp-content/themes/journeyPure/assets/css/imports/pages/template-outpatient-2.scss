@@ -1,0 +1,141 @@
+/**
+ * Template Outpatient Location 2
+ *
+ * @author   Fernando Tessmann
+ * @package  JourneyPure
+ */
+
+// Template Outpatient Location 2
+
+.jp-outpatient2 {
+	overflow: hidden;
+
+	// Section
+
+	&-section {
+		@import "../page-parts/jp-section";
+		@include jp-section;
+	}
+
+	// Note box
+
+	.note-box {
+		@import "../page-parts/jp-note-box";
+		@include jp-note-box;
+	}
+
+	// Top Section (Above Fold / Masthead)
+
+	.above-fold {
+		@import "../page-parts/jp-above-fold";
+		@include jp-above-fold;
+	}
+
+	// Highlights Section
+
+	&-highlights {
+		@import "../page-parts/jp-highlights";
+		@include jp-highlights;
+	}
+
+	// Gray Section (LEGACY)
+
+	.block-4 {
+		padding: $xl-space 0;
+		background-color: $background-color;
+
+		.heading {
+			text-align: center;
+		}
+
+		.card {
+			border-radius: 0 0 3px 3px !important;
+			border: none;
+			box-shadow: 0px 2px 4px rgba(0,0,0,.18);
+		}
+
+		h3 {
+			margin: 0 auto $xl-space;
+		}
+
+		.card-deck {
+			@media(max-width:1200px) and (min-width:550px) {
+				display: block;
+			}
+
+			.card {
+				@media (max-width:1200px) and (min-width:550px) {
+					max-width: 500px;
+					display: block;
+					clear: both;
+					margin: 0 auto $lg-space;
+				}
+
+				.card-img-top {
+					width: 100%;
+					height: 200px;
+					object-fit: cover;
+					border-top: 8px solid $secondary;
+					border-radius: 0;
+				}
+
+				.card-title {
+					margin: 15px 0 35px;
+				}
+			}
+		}
+	}
+
+	// FAQ Section
+
+	&-faq {
+		@import "../page-parts/jp-faq";
+		@include jp-faq;
+	}
+
+	// Table Section
+
+	&-table {
+		@import "../page-parts/jp-table";
+		@include jp-table;
+	}
+
+	// Other Options Section (UNIQUE)
+
+	&-other-options {
+		&-title {
+			@extend .h1;
+
+			font-style: unset;
+			margin-bottom: 15px;
+			text-align: center;
+
+			span {
+				text-decoration: underline;
+			}
+		}
+
+		&-subtitle {
+			@extend .h3;
+
+			margin-bottom: 20px;
+			text-align: center;
+
+			@media screen and (min-width: 768px) {
+				margin-bottom: 40px;
+			}
+		}
+
+		// Tags
+
+		.tag-list {
+			@import "../page-parts/jp-tags";
+			@include jp-tags;
+
+			.row {
+				justify-content: center;
+			}
+		}
+	}
+
+}

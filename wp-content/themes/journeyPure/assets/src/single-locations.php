@@ -252,17 +252,19 @@ get_header();
 	<!-- SECTION: FAQ -->
 
 	<?php if ( ! empty( $location->block4 ) && ! empty( $location->block4->faqs ) ) : ?>
-		<section class="block-4">
+		<section class="jp-single-loc-section jp-single-loc-faq">
 			<div class="container">
-				<div class="heading">
-					<?php if ( isset( $location->block4->heading ) ) : ?>
-						<h2 class="h1 text-center"><?php echo esc_html( $location->block4->heading ); ?></h2>
-					<?php endif; ?>
+				<?php if ( ! empty( $location->block4->heading ) || ! empty( $location->block4->subheading ) ) : ?>
+					<div class="heading">
+						<span class="h1">
+							<?php echo esc_html( $location->block4->heading ); ?>
 
-					<?php if ( isset( $location->block4->subheading ) ) : ?>
-						<h3 class="h3 text-center"><?php echo esc_html( $location->block4->subheading ); ?></h3>
-					<?php endif; ?>
-				</div>
+							<?php if ( ! empty( $location->block4->subheading ) ) : ?>
+								<h2 class="lead"><?php echo esc_html( $location->block4->subheading ); ?></h2>
+							<?php endif; ?>
+						</span>
+					</div>
+				<?php endif; ?>
 
 				<?php if ( ! empty( $location->block4->faqs ) ) : ?>
 					<div class="faqs">

@@ -43,8 +43,23 @@
 /** Pages using the slider: homepage, single-location */
 @import "../components/sliders/review-default";
 
+/**
+ * Locations CPT
+ *
+ * @author   Fernando Tessmann
+ * @package  JourneyPure
+ */
+
+// Locations CTP template
+
 .jp-single-loc {
 
+	// Section
+
+	&-section {
+		@import "../page-parts/jp-section";
+		@include jp-section;
+	}
 	// Global .h1
 
 	.h1 {
@@ -55,29 +70,8 @@
 	// Note box
 
 	.note-box {
-		background-color:#fcf8e3;
-		margin-bottom: -15px;
-		padding: 20px 15px 30px;
-		text-align: center;
-
-		.note-cta {
-			border-radius: 4px;
-			border: 2px solid white;
-			color: #FBBC07 !important;
-			padding: 6px 12px;
-		}
-
-		p {
-			color: #FBBC07;
-			font-family: $heading-font;
-			margin: 0 0 5px;
-			padding: 0;
-			line-height: 1.2;
-		}
-
-		a {
-			color: #FBBC07;
-		}
+		@import "../page-parts/jp-note-box";
+		@include jp-note-box;
 	}
 
 	// Top Section (Above Fold / Masthead)
@@ -355,120 +349,24 @@
 		}
 	}
 
-	// FAQ
+	// FAQ Section
 
-	.block-4 {
-		padding: 10px 0 50px;
-
-		@media screen and (min-width: 768px) {
-			padding: 60px 0;
-		}
-
-		.heading {
-			margin: 0 auto 20px;
-			max-width: 800px;
-
-			@media (max-width: 767px) {
-				padding: 0 25px;
-			}
-		}
-
-		.faqs {
-			max-width: 800px;
-			margin: 0 auto;
-
-			.card {
-				border:none;
-
-				.card-header {
-					margin-bottom: 0;
-					cursor: pointer;
-					background-color: white;
-					padding: 22px 10px 12px;
-					border-color: #333;
-				}
-			}
-			.ask-a-question {
-				text-align: center;
-				margin: $lg-space auto 0;
-			}
-		}
+	&-faq {
+		@import "../page-parts/jp-faq";
+		@include jp-faq;
 	}
 
 	// Bios
 
 	.bio-section {
+		@import "../page-parts/jp-bios";
+		@include jp-bios;
+
 		background-color: $light-blue;
-		padding: 50px 0;
-
-		@media screen and (min-width: 768px) {
-			padding: 60px 0;
-		}
-
-		.heading,
-		.subheading {
-			max-width: $lg-width;
-		}
 
 		.bio-slider {
-			margin-top: $lg-space;
-			visibility: hidden;
-
-			&.slick-initialized {
-				visibility: visible;
-				opacity: 1;
-				font-family: $heading-font;
-			}
-
 			.card {
 				background-color: $light-blue;
-				margin: auto;
-
-				.bios {
-					.img {
-						background:  no-repeat center;
-						background-size: cover;
-						width: 100px;
-						height: 100px;
-						border-radius: 50%;
-						display: block;
-						margin: 5px auto $lg-space;
-					}
-
-					.name-text {
-						font-weight: 500;
-						color: black;
-					}
-
-					.text {
-						padding-bottom: 0;
-						font-family: $heading-font;
-
-						span {
-							font-size: 14px;
-							font-weight: normal;
-						}
-					}
-
-					// name-text {
-					// 	color: black;
-					// 	font-weight: bold;
-					// 	span {
-					// 		font-size: 14px;
-					// 		font-weight: normal;
-					// 		color: #333;
-					// 	}
-					// }
-
-					.fa-ul {
-						margin-top: $lg-space;
-						margin-left: 25px;
-
-						i {
-							color: $secondary;
-						}
-					}
-				}
 			}
 		}
 	}
@@ -646,41 +544,11 @@
 				margin-top: 15px;
 			}
 
-			.tag {
-				border-radius: 3px;
-				padding: 15px;
-				background: #f3f3f3;
-			}
+			// Tags
 
 			.tag-list {
-				.heading {
-					@media screen and (min-width: 768px) {
-						align-items: center;
-						display: flex;
-					}
-
-					span {
-						display: block;
-						font-size: 22px;
-						max-width: 100%;
-
-						@media screen and (min-width: 768px) {
-							flex: 0 0 auto;
-							width: auto;
-						}
-					}
-
-					&:after {
-						@media screen and (min-width: 768px) {
-							background-color: #CBCCCB;
-							content: '';
-							flex: 1 1 0px;
-							height: 2px;
-							margin-left: 10px;
-							width: auto;
-						}
-					}
-				}
+				@import "../page-parts/jp-tags";
+				@include jp-tags;
 			}
 		}
 	}

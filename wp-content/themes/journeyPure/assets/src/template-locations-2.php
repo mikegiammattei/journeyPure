@@ -305,7 +305,7 @@ get_header();
 	<!-- SECTION: FAQ -->
 
 	<?php if ( ! empty( $locations->faq ) ) : ?>
-		<section class="block-4">
+		<section class="jp-loc2-section jp-loc2-faq">
 			<div class="container">
 				<?php if ( ! empty( $locations->faq->heading ) || ! empty( $locations->faq->subheading ) ) : ?>
 					<div class="heading">

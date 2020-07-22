@@ -457,7 +457,7 @@ get_header();
 	<!-- SECTION: FAQ -->
 
 	<?php if ( ! empty( $virtual_rehab->faq ) ) : ?>
-		<section class="block-4">
+		<section class="jp-vr-section jp-vr-faq">
 			<div class="container">
 				<?php if ( ! empty( $virtual_rehab->faq->heading ) || ! empty( $virtual_rehab->faq->subheading ) ) : ?>
 					<div class="heading">

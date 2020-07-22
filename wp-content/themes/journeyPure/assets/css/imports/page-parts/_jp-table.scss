@@ -1,0 +1,147 @@
+@mixin jp-table {
+    background-color: #ffffff;
+    position: relative;
+
+    &:before {
+        background-color: #e1e7f5;
+        content: '';
+        height: 50%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    .col-12 {
+        border-bottom: 1px solid #e1f1ff;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        @media screen and (min-width: 992px) {
+            border-bottom: none;
+            border-right: 1px solid #e1f1ff;
+
+            &:last-child {
+                border-right: none;
+            }
+        }
+    }
+
+    &-title {
+        @extend .h1;
+
+        font-style: unset;
+        margin-bottom: 15px;
+        text-align: center;
+
+        span {
+            text-decoration: underline;
+        }
+    }
+
+    &-subtitle {
+        @extend .h3;
+
+        margin-bottom: 20px;
+        text-align: center;
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &-cards {
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.08), 0px 20px 31px 3px rgba(0, 0, 0, 0.09), 0px 8px 20px 7px rgba(0, 0, 0, 0.02);
+        padding: 15px 25px;
+        margin: 0 auto;
+        max-width: 1024px;
+    }
+
+    &-card {
+        padding: 25px;
+
+        &-img {
+            display: block;
+            margin: 0 auto 25px;
+            max-width: 125px;
+        }
+
+        &-title {
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: 35px;
+            text-align: center;
+            text-transform: uppercase;
+
+        }
+
+        &-list {
+            list-style: none;
+            margin-bottom: 0;
+            padding-left: 0;
+
+            &-item {
+                border-top: 1px solid #e1f1ff;
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 1.5;
+                padding: 15px 0;
+                text-align: center;
+                text-transform: uppercase;
+            }
+        }
+
+        &-info {
+            margin-left: 5px;
+        }
+
+		&-place {
+			display: block;
+			font-size: 17px;
+			text-align: left;
+			text-transform: none;
+
+			&-title {
+				color: $primary;
+				margin-bottom: 5px;
+				font-size: 17px;
+				font-weight: 800;
+
+				.fas {
+					margin-left: 5px;
+				}
+			}
+
+			&-stars {
+				align-items: center;
+				color: #fadb8a;
+				display: flex;
+				margin-bottom: 3px;
+			}
+
+			&-star {
+				font-weight: 700;
+				margin-right: 5px;
+			}
+
+			&-count {
+				color: #333333;
+				margin-left: 5px;
+			}
+
+			&-address {
+				padding-bottom: 0;
+			}
+		}
+    }
+}

@@ -18,14 +18,8 @@ get_header();
 
 	<!-- SECTION: Note Box -->
 
-	<!-- <div class="jp-op-section jp-op-note-box">
-		<div class="container">
-			<div class="row">
-				<div class="col-12 text-center">
-					<p>If you're looking for Suboxone-only treatment... <a href="/suboxone-clinics/" class="jp-op-note-box-btn">Click Here</a></p>
-				</div>
-			</div>
-		</div>
+	<!-- <div class="note-box">
+		<p>If you're looking for Suboxone-only treatment <a href="/suboxone-clinics/">click Here</a></p>
 	</div> -->
 
 	<!-- /SECTION: Note Box -->
@@ -519,7 +513,7 @@ get_header();
 	<!-- SECTION: FAQ -->
 
 	<?php if ( ! empty( $op->faq ) ) : ?>
-		<section class="block-4">
+		<section class="jp-op-section jp-op-faq">
 			<div class="container">
 				<?php if ( ! empty( $op->faq->heading ) || ! empty( $op->faq->subheading ) ) : ?>
 					<div class="heading">
