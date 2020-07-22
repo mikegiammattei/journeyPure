@@ -119,16 +119,16 @@ get_header();
 							<div class="list-container">
 								<?php foreach ( $location->block2->list as $index => $item ) : ?>
 									<div class="list-item">
-										<div class="row no-gutters">
-											<?php if ( ! empty( $item['heading'] ) ) : ?>
+										<?php if ( ! empty( $item['heading'] ) ) : ?>
+											<div class="row no-gutters">
 												<div class="list-heading">
 													<div class="d-flex">
 														<div class="align-self-center"><i class="fas fa-check icon"></i></div>
 														<div class="align-self-center"><h5 class="item-title"><?php echo wp_kses_post( $item['heading'] ); ?></h5></div>
 													</div>
 												</div>
-											<?php endif; ?>
-										</div>
+											</div>
+										<?php endif; ?>
 
 										<?php if ( ! empty( $item['content'] ) ) : ?>
 											<div class="content">
