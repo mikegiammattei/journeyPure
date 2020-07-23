@@ -695,7 +695,9 @@ $(document).ready(function () {
     })(window, document, 'script', 'dataLayer', 'GTM-NKJHBM9'); // ---
 
 
-    $(".ctm-call-widget").attr('src', $(".ctm-call-widget").data('url-value'));
+    $(".ctm-call-widget").each(function () {
+      $(this).attr('src', $(this).data('url-value'));
+    });
   }, 2000); // CTA Trigger
 
   var CTA_STATE = false;

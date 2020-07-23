@@ -22,7 +22,10 @@ $(document).ready(function () {
 
 		// ---
 
-		$(".ctm-call-widget").attr('src',$(".ctm-call-widget").data('url-value'));
+		$(".ctm-call-widget").each(function() {
+			$(this).attr('src', $(this).data('url-value'));
+		});
+
 	}, 2000);
 
 	// CTA Trigger
