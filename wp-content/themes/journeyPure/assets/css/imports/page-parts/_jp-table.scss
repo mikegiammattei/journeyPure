@@ -77,11 +77,7 @@
 
         &-title {
             margin-bottom: 20px;
-            font-size: 18px;
-            font-weight: 700;
-            margin-top: 35px;
             text-align: center;
-            text-transform: uppercase;
 
         }
 
@@ -137,6 +133,7 @@
 			&-count {
 				color: #333333;
 				margin-left: 5px;
+				font-weight: normal;
 			}
 
 			&-address {

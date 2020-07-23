@@ -17,7 +17,7 @@ get_header();
 <div id="jp-outpatient2" class="jp-outpatient2">
 
 	<div class="note-box note-box-alert">
-		<h3>Due to COVID-19, outpatient services (including Suboxone) are online-only.</h3>
+		<h5>Due to COVID-19, all Suboxone programs are online-only.</h5>
 		<p>See your doctor or therapist while at home using an app like FaceTime instead of coming in person. Doctors still prescribe medications. Call to schedule your virtual appointment.</p>
 		<span class="note-cta"><i class="fas fa-phone"></i> Call Now <?php echo esc_html( get_option( 'defaultPhone' ) ); ?></span>
 	</div>
@@ -25,7 +25,7 @@ get_header();
 	<!-- SECTION: Top Section (Above Fold / Masthead) -->
 
 	<section class="above-fold">
-		<div class="default-container x-loc lazy" data-src="/wp-content/uploads/2019/11/journeypure-outpatient-suboxone-clinic.jpg">
+		<div class="default-container x-loc lazy" data-src="/wp-content/uploads/2020/07/suboxone-clinic-background-iphone-1.png">
 			<div class="background-fade">
 				<div class="content">
 					<!-- <h1 class="heading-1">...</h1> -->
@@ -37,9 +37,7 @@ get_header();
 							<div class="col-lg-12 col-sm-12 top-text">
 								<div class="card transparent">
 									<div class="card-body text-center">
-										<h3>Locations Accross Tennessee, Kentucky & Florida or Online</h3>
-										<p>The science of addiction medicine has advanced exponentially in the last decade. We now understand what's going on at the brainwave level and how Suboxone stabilizes your mind and body to be able to function normally.</p>
-										<p><b>You can <u>live</u> without being sick, high or constantly distracted.</b></p>
+										<h3>The science of addiction medicine has advanced exponentially in the last decade. You can <b>live without feeling sick, high or constantly distracted</b>. Start Suboxone treatment today in Tennessee, Kentucky &amp; Florida or <u>fully virtual</u>.</h3>
 									</div>
 
 									<?php if ( $outpatient_locations->ratings ) : ?>
@@ -86,7 +84,7 @@ get_header();
 
 							<div class="col-lg-12 col-sm-12 d-flex align-items-stretch">
 								<div class="card card-body h-100 justify-content-center transparent" style="width: 100%; ">
-									<div class="embed-responsive embed-responsive-16by9 youtube-video-place lazy" data-src="/wp-content/uploads/2019/12/murfreesboro-rehab-testimonial-2.png" data-yt-url="https://www.youtube.com/embed/wA75f5aN-ow">
+									<div class="embed-responsive embed-responsive-16by9 youtube-video-place lazy" data-src="/wp-content/uploads/2020/07/SL4drhersh.png" data-yt-url="https://www.youtube.com/embed/PQG6dqjlKNI">
 										<span class="play-button"></span>
 									</div>
 								</div>
@@ -106,31 +104,31 @@ get_header();
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-md-6 col-lg-6 offset-lg-1">
-					<h3 class="jp-outpatient2-highlights-title">Clinic Highlights</h3>
+					<h3 class="jp-outpatient2-highlights-title">The <i>Easiest</i> Way to Start to Feel Better</h3>
 
 					<ul class="jp-outpatient2-highlights-list">
 						<li class="jp-outpatient2-highlights-list-item">
 							<span class="far fa-check-circle jp-outpatient2-highlights-list-item-icon"></span>
-							<span class="jp-outpatient2-highlights-list-item-title">Works with your schedule</span>
-							<p class="jp-outpatient2-highlights-list-item-text">Convenient morning and evening appointments</p>
+							<span class="jp-outpatient2-highlights-list-item-title">Fully Virtual Options</span>
+							<p class="jp-outpatient2-highlights-list-item-text">You never have to leave your house for an appointment.</p>
 						</li>
 
 						<li class="jp-outpatient2-highlights-list-item">
 							<span class="far fa-check-circle jp-outpatient2-highlights-list-item-icon"></span>
-							<span class="jp-outpatient2-highlights-list-item-title">95% satisfaction rating</span>
-							<p class="jp-outpatient2-highlights-list-item-text">And, <i>success rates 2x higher</i> than the national average</p>
+							<span class="jp-outpatient2-highlights-list-item-title">Low Commitments</span>
+							<p class="jp-outpatient2-highlights-list-item-text">Suboxone is the lowest level of addiction treatment and can involve 2 appointments a month.</p>
 						</li>
 
 						<li class="jp-outpatient2-highlights-list-item">
 							<span class="far fa-check-circle jp-outpatient2-highlights-list-item-icon"></span>
-							<span class="jp-outpatient2-highlights-list-item-title">A treatment team that puts you first</span>
-							<p class="jp-outpatient2-highlights-list-item-text">Attack clinical, brain and life issues with a full team that's in recovery too</p>
+							<span class="jp-outpatient2-highlights-list-item-title">Extra Support </span>
+							<p class="jp-outpatient2-highlights-list-item-text">Use the JourneyPure app and Alumni Coach to help.</p>
 						</li>
 
 						<li class="jp-outpatient2-highlights-list-item">
 							<span class="far fa-check-circle jp-outpatient2-highlights-list-item-icon"></span>
-							<span class="jp-outpatient2-highlights-list-item-title">In-network with almost every insurance</span>
-							<p class="jp-outpatient2-highlights-list-item-text">So any cost to you is as low as possible</p>
+							<span class="jp-outpatient2-highlights-list-item-title">In-Network with Insurances</span>
+							<p class="jp-outpatient2-highlights-list-item-text">Any cost to you is as low as possible. </p>
 						</li>
 					</ul>
 
@@ -157,8 +155,8 @@ get_header();
 
 	<section class="block-4">
 		<div class="container">
-			<h5 class="heading h1">The 3 Components of Treatment</h5>
-			<h3 class="heading">Get help with addiction that fits into your life.</h3>
+			<h2 class="heading h1">Suboxone Treatment (Online or In-Person)</h5>
+			<h3 class="heading">As much support as you want.</h3>
 
 			<div class="card-deck">
 				<div class="card">
@@ -166,28 +164,26 @@ get_header();
 
 					<div class="card-body">
 						<h5 class="card-title">Medications</h5>
-						<p class="card-text">Using medications in the treatment of drug addiction is recommended by nearly all healthcare authorities, including the World Health Organization and the National Institue of Health in the U.S. </p>
-						<p>In addition to Suboxone, medications for dual-diagnosis issues (like depression or anxiety) stabilize other imbalances in your brain that contribute to drug use. </p>
+						<p class="card-text">Using medications for drug addiction is recommended by all healthcare authorities - including the U.S. National Institue of Health. Beyond Suboxone, medications for dual-diagnosis issues (like antidepressants) stabilize other imbalances in the brain that contribute to the cycle of opiate use.</p>
 					</div>
 				</div>
 
 				<div class="card">
-					<img class="card-img-top lazy" data-src="/wp-content/uploads/2019/11/therapy-suboxone-clinic.jpg" alt="Therapy">
+					<img class="card-img-top lazy" data-src="/wp-content/uploads/2019/11/journeypure-app.jpg" alt="App Work">
 
 					<div class="card-body">
-						<h5 class="card-title">Therapy</h5>
-						<p class="card-text"> Therapy helps you look honestly at your life and motivations.  It shows you how to adjust your thinking to cope with stress, anxiety and pain without turning to drugs or alcohol.</p>
-						<p>In group therapy specifically, you’re challenged and supported by those who understand the heaviness you live with every day.  It only takes a few hours per week to learn to see things from a healthier perspective.  </p>
+						<h5 class="card-title">The App</h5>
+						<p class="card-text">Unlike other centers, you get access to powerful tools right in your pocket. Use it whenever you have time or are feeling triggered. The app helps you stay healthy long-term. You tackle pillars of general health (like sleep and nutrition), as well as mental health (like gratitude and medication reminders). </p>
 					</div>
 				</div>
 
 				<div class="card">
-					<img class="card-img-top lazy" data-src="/wp-content/uploads/2019/11/journeypure-app.jpg" alt=".App Work">
+										<img class="card-img-top lazy" data-src="/wp-content/uploads/2019/11/therapy-suboxone-clinic.jpg" alt="Support">
+
 
 					<div class="card-body">
-						<h5 class="card-title">App Work</h5>
-						<p class="card-text">The JourneyPure app gives you all the tools you need to stay healthy long-term.  Since it's on your phone, you have access whenever you have time or are feeling triggered.</p>
-						<p>You tackle the pillars of general health (like sleep and nutrition) and mental health (like gratitude and self-awareness).  You're also connected with your Recovery Coach to give you guidance — even after you finish treatment here.</p>
+						<h5 class="card-title">Support</h5>
+						<p class="card-text">The JourneyPure app connects to an Alumni Coach, who's in recovery too. Get advice anytime from someone who understands. Beyond medication, the clinics offer therapy options, including virtual sessions. JourneyPure also has the best in-network rehabs in Tennessee, Kentucky and Florida. You can get as much help as it takes.</p>
 					</div>
 				</div>
 			</div>
@@ -258,7 +254,7 @@ get_header();
 			<div class="row">
 				<div class="col-12 col-md-12">
 					<h3 class="jp-outpatient2-table-title">13 Outpatient &amp; Suboxone Clinics</h3>
-					<p class="jp-outpatient2-table-subtitle">If you prefer to come in person.</p>
+					<p class="jp-outpatient2-table-subtitle">If you prefer to come in-person.<br />(Therapy options also available at each location and virtually).</p>
 				</div>
 			</div>
 
@@ -267,14 +263,14 @@ get_header();
 					<div class="col-12 col-lg-4">
 						<div class="jp-outpatient2-table-card">
 							<img class="jp-outpatient2-table-card-img lazy" data-src="/wp-content/uploads/2020/07/jp-icon-KY-180x180-1.png" alt="<?php echo esc_attr( $outpatient_locations->cards_1_title ); ?>">
-							<h4 class="jp-outpatient2-table-card-title"><?php echo esc_html( $outpatient_locations->cards_1_title ); ?></h4>
+							<h5 class="jp-outpatient2-table-card-title"><?php echo esc_html( $outpatient_locations->cards_1_title ); ?></h5>
 
 							<ul class="jp-outpatient2-table-card-list">
 								<?php if ( ! empty( $outpatient_locations->cards_1 ) ) : ?>
 									<?php foreach ( $outpatient_locations->cards_1 as $card ) : ?>
 										<li class="jp-outpatient2-table-card-list-item">
 											<a class="jp-outpatient2-table-card-place" <?php if ( ! empty( $card['link'] ) ) echo ( 'href="' . esc_attr( $card['link'] ) . '"' ); ?>>
-												<h4 class="jp-outpatient2-table-card-place-title"><?php echo esc_html( $card['title'] ); ?> <span class="fas fa-info-circle"></span></h4>
+												<h5 class="jp-outpatient2-table-card-place-title"><?php echo esc_html( $card['title'] ); ?> <span class="fas fa-info-circle"></span></h5> 
 
 												<div class="jp-outpatient2-table-card-place-stars">
 													<span class="jp-outpatient2-table-card-place-star"><?php echo esc_html( $card['ratings']['number_rating'] ); ?></span>
@@ -316,14 +312,14 @@ get_header();
 					<div class="col-12 col-lg-4">
 						<div class="jp-outpatient2-table-card">
 							<img class="jp-outpatient2-table-card-img lazy" data-src="/wp-content/uploads/2020/07/jp-icon-TN-180x180-1.png" alt="<?php echo esc_attr( $outpatient_locations->cards_2_title ); ?>">
-							<h4 class="jp-outpatient2-table-card-title"><?php echo esc_html( $outpatient_locations->cards_2_title ); ?></h4>
+							<h5 class="jp-outpatient2-table-card-title"><?php echo esc_html( $outpatient_locations->cards_2_title ); ?></h5>
 
 							<ul class="jp-outpatient2-table-card-list">
 								<?php if ( ! empty( $outpatient_locations->cards_2 ) ) : ?>
 									<?php foreach ( $outpatient_locations->cards_2 as $card ) : ?>
 										<li class="jp-outpatient2-table-card-list-item">
 											<a class="jp-outpatient2-table-card-place" <?php if ( ! empty( $card['link'] ) ) echo ( 'href="' . esc_attr( $card['link'] ) . '"' ); ?>>
-												<h4 class="jp-outpatient2-table-card-place-title"><?php echo esc_html( $card['title'] ); ?> <span class="fas fa-info-circle"></span></h4>
+												<h5 class="jp-outpatient2-table-card-place-title"><?php echo esc_html( $card['title'] ); ?> <span class="fas fa-info-circle"></span></h5>
 
 												<div class="jp-outpatient2-table-card-place-stars">
 													<span class="jp-outpatient2-table-card-place-star"><?php echo esc_html( $card['ratings']['number_rating'] ); ?></span>
@@ -365,14 +361,14 @@ get_header();
 					<div class="col-12 col-lg-4">
 						<div class="jp-outpatient2-table-card">
 							<img class="jp-outpatient2-table-card-img lazy" data-src="/wp-content/uploads/2020/07/FLjp-icon-TN-180x180-1.png" alt="<?php echo esc_attr( $outpatient_locations->cards_3_title ); ?>">
-							<h4 class="jp-outpatient2-table-card-title"><?php echo esc_html( $outpatient_locations->cards_3_title ); ?></h4>
+							<h5 class="jp-outpatient2-table-card-title"><?php echo esc_html( $outpatient_locations->cards_3_title ); ?></h5>
 
 							<ul class="jp-outpatient2-table-card-list">
 								<?php if ( ! empty( $outpatient_locations->cards_3 ) ) : ?>
 									<?php foreach ( $outpatient_locations->cards_3 as $card ) : ?>
 										<li class="jp-outpatient2-table-card-list-item">
 											<a class="jp-outpatient2-table-card-place" <?php if ( ! empty( $card['link'] ) ) echo ( 'href="' . esc_attr( $card['link'] ) . '"' ); ?>>
-												<h4 class="jp-outpatient2-table-card-place-title"><?php echo esc_html( $card['title'] ); ?> <span class="fas fa-info-circle"></span></h4>
+												<h5 class="jp-outpatient2-table-card-place-title"><?php echo esc_html( $card['title'] ); ?> <span class="fas fa-info-circle"></span></h5>
 
 												<div class="jp-outpatient2-table-card-place-stars">
 													<span class="jp-outpatient2-table-card-place-star"><?php echo esc_html( $card['ratings']['number_rating'] ); ?></span>
@@ -423,8 +419,8 @@ get_header();
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-md-12">
-					<h3 class="jp-outpatient2-other-options-title">Other Options</h3>
-					<p class="jp-outpatient2-other-options-subtitle">Inpatient rehab is the most effective level of care. We offer the best in-network options in our states.</p>
+					<h5 class="text-center">Other Options</h5>
+					<p class="jp-outpatient2-other-options-subtitle">Inpatient rehab is the most effective level of care, if you're ready to do whatever it takes.</p>
 				</div>
 			</div>
 

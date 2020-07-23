@@ -4,13 +4,9 @@
 	padding: 20px 15px;
 	text-align: center;
 
-	h3 {
+	h5 {
 		color: #FBBC07;
-		font-family: $heading-font;
-		font-size: 20px;
-		font-style: normal;
-		font-weight: bold;
-		margin: 0 auto;
+		margin: 0 auto 20px;
 		max-width: 800px;
 	}
 
@@ -18,7 +14,6 @@
 		color: #FBBC07;
 		font-family: $heading-font;
 		margin: 0 auto;
-		line-height: 1.2;
 		max-width: 800px;
 		padding: 0;
 	}
