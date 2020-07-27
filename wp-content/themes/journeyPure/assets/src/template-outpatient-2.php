@@ -164,7 +164,7 @@ get_header();
 
 					<div class="card-body">
 						<h5 class="card-title">Medications</h5>
-						<p class="card-text">Using medications for drug addiction is recommended by all healthcare authorities - including the U.S. National Institue of Health. Beyond Suboxone, medications for dual-diagnosis issues (like antidepressants) stabilize other imbalances in the brain that contribute to the cycle of opiate use.</p>
+						<p class="card-text">Using medications for drug addiction is recommended by all healthcare authorities - including the U.S. National Institute of Health. Beyond Suboxone, medications for dual-diagnosis issues (like antidepressants) stabilize other imbalances in the brain that contribute to the cycle of opiate use.</p>
 					</div>
 				</div>
 

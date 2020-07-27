@@ -318,42 +318,37 @@ $footerVersion = 2;
             </div>
             <div class="p-2">
               <div class="h5">Evidence-Based Treatments</div>
-              <ul>
-                <li>All good treatment centers combine medical care, holistic healing and intense daily therapies. <b>Our success rates are better</b> because of how we execute and refine proven methods.</li>
-                <li>We incorporate the <b>latest advances in addiction science</b> and publish groundbreaking research with a focus on each individual success story.</li>
-              </ul>
+              <p>All good treatment centers combine medical care, holistic healing and intense daily therapies. <b>Our success rates are better</b> because of how we execute and refine proven methods.</p>
+                <p>We incorporate the <b>latest advances in addiction science</b> and publish groundbreaking research with a focus on each individual success story.</p>
             </div>
           </div>
-          <div class="d-sm-flex p-2 ml-auto why-point">
+		   <div class="d-sm-flex p-2 ml-auto why-point">
+            <div class="p-2 why-icon"><i class="fas fa-users"></i></div>
+            <div class="p-2">
+              <div class="h5">A Comprehensive Team</div>
+              <p>Effective treatment addresses the wide range of <b>issues that hide behind alcohol and drugs</b> - like trauma and anxiety. It takes a team of specialists to attack the disease at all angles.</p>
+                <p>If you've sought treatment before, you know how critical it is to get <b>individualized attention</b> from experienced professionals who actually care.</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="d-sm-flex">
+                   <div class="d-sm-flex p-2 why-point">
             <div class="p-2 why-icon"><i class="fas fa-hands-helping"></i></div>
             <div class="p-2">
               <div class="h5">Active Accountability</div>
-              <ul>
-                <li>Your Accountability Coach can be reached 24/7 through the <b>alumni app</b> – available to you forever for free. They've been where you are and can show you how to <b>stay on track </b>long after treatment here.</li>
-                <li>The app also has an 11-module <b>self-help course</b> and gives you real rewards for making healthy choices.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="d-sm-flex">
-          <div class="d-sm-flex p-2 why-point">
-            <div class="p-2 why-icon"><i class="fas fa-user-md"></i></div>
-            <div class="p-2">
-              <div class="h5">World-Renowned Experts</div>
-              <ul>
-                <li>Effective treatment addresses the wide range of <b>issues that hide behind alcohol and drugs</b> - like trauma and anxiety. It takes a team of specialists to attack the disease at all angles.</li>
-                <li>If you've sought treatment before, you know how critical it is to get <b>individualized attention</b> from experienced professionals who actually care.</li>
-              </ul>
+              <p>
+                Your Accountability Coach can be reached 24/7 through the <b>alumni app</b> – available to you forever for free. They've been where you are and can show you how to stay on track long after treatment here.</p>
+                <p>The app also has an 11-module <b>self-help course</b> and gives you real rewards for making healthy choices.</p>
+  
             </div>
           </div>
           <div class="d-sm-flex p-2 ml-auto why-point">
-            <div class="p-2 why-icon"><i class="fas fa-file-medical-alt"></i></div>
+            <div class="p-2 why-icon"><i class="fas fa-map-marked"></i></div>
             <div class="p-2">
               <div class="h5">Personalized Plans</div>
-              <ul>
-                <li>These issues are personal. Beyond cognitive behavior group and individual therapies, you need access to specific tools that <b>maximize your time here</b>. </li>
-                <li>From virtual-reality therapy for combat veterans to imago marriage counseling, we'll <b>do what it takes</b> to help you get healthy (and stay healthy).</li>
-              </ul>
+                <p>These issues are personal. Beyond cognitive behavior group and individual therapies, you need access to specific tools that <b>maximize your time here</b>. </p>
+                <p>From virtual-reality therapy for combat veterans to imago marriage counseling, we'll <b>do what it takes</b> to help you get healthy (and stay healthy).</p>
             </div>
           </div>
         </div>

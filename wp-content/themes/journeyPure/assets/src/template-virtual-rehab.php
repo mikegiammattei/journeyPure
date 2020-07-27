@@ -21,25 +21,28 @@ get_header();
 	<section class="jp-vr-section jp-vr-masthead">
 		<div class="container">
 			<div class="row">
-				<div class="col-12 col-lg-5 order-lg-2">
-					<div class="jp-vr-masthead-img-wrapper">
-						<img class="jp-vr-masthead-img lazy" data-src="/wp-content/uploads/2020/06/iphone-with-app.png" alt="Mobile">
-					</div>
-				</div>
+				
 
 				<div class="col-12 col-lg-7 order-lg-1">
 					<h1 class="jp-vr-masthead-title"><?php echo wp_kses_post( $virtual_rehab->masthead_title ); ?></h1>
-					<p class="jp-vr-masthead-subtitle"><?php echo esc_html( $virtual_rehab->masthead_subtitle ); ?></p>
-					<button type="button" class="btn btn-outline-secondary jp-vr-masthead-button">Get help</button>
-					<p class="jp-vr-masthead-text"><span class="fas fa-asterisk"></span> Backed by a <strong>real treatment center</strong> with <strong>real results</strong>.</p>
+					<p class="jp-vr-masthead-subtitle"><?php echo esc_html( $virtual_rehab->masthead_subtitle ); ?>
+															
+
+					</p>
+
+					<button type="button" class="btn btn-outline-secondary jp-vr-masthead-button"><span class="fas fa-comment"></span> Talk to a therapist now</button>
+					<p>40-minute session <del> $120 </del> <b>$45 limited time</b></p>
+				</div>
+				<div class="col-12 col-lg-5 order-lg-2 background-circle">
+					<div class="jp-vr-masthead-img-wrapper">
+						<img class="jp-vr-masthead-img lazy" data-src="/wp-content/uploads/2020/07/virutal_rehab-1.png" alt="Mobile">
+					</div>
+					<p class="jp-vr-masthead-text"><span class="fas fa-asterisk"></span> Backed by a real addiction treatment center with <strong>real results</strong>.</p>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<div class="jp-vr-masthead-divider-container">
-		<div class="jp-vr-masthead-divider"> </div>
-	</div>
 
 	<!-- /SECTION: Masthead -->
 
@@ -49,7 +52,7 @@ get_header();
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-md-6 col-lg-6 offset-lg-1">
-					<h3 class="jp-vr-highlights-title">Virtual Rehab Highlights</h3>
+					<h3 class="jp-vr-highlights-title">The Most Comprehensive AND Convenient Way to Get Help</h3>
 
 					<ul class="jp-vr-highlights-list">
 						<li class="jp-vr-highlights-list-item">
@@ -67,7 +70,7 @@ get_header();
 						<li class="jp-vr-highlights-list-item">
 							<span class="far fa-check-circle jp-vr-highlights-list-item-icon"></span>
 							<span class="jp-vr-highlights-list-item-title">Goes Beyond Therapy</span>
-							<span class="jp-vr-highlights-list-item-text">Includes medical appointments, peer support and life coaching</span>
+							<span class="jp-vr-highlights-list-item-text">Includes medications, accountability coaching and a self-help app.</span>
 						</li>
 
 						<!-- <li class="jp-vr-highlights-list-item">
@@ -102,8 +105,8 @@ get_header();
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
-					<h3 class="jp-vr-table-title">The Most Comprehensive AND Convenient Way to Get Help</h3>
-					<p class="jp-vr-table-subtitle">Get help from experts that actually understand drug and alcohol issues - without ever leaving your house.</p>
+					<h3 class="jp-vr-table-title">It's Time To Make A Change</h3>
+					<p class="jp-vr-table-subtitle">Get help from a full team of experts that actually understand drug and alcohol issues - without ever leaving your house.</p>
 				</div>
 			</div>
 
@@ -111,20 +114,20 @@ get_header();
 				<div class="row">
 					<div class="col-12 col-lg-4">
 						<div class="jp-vr-table-card">
-							<img class="jp-vr-table-card-img lazy" data-src="https://journeypure.com/wp-content/uploads/2020/06/jp-icon-online-services-180x180-1.png" alt="Other Online Services">
-							<h4 class="jp-vr-table-card-title">Virtual Rehab Vs. Other Online Services</h4>
+							<img class="jp-vr-table-card-img lazy" data-src="/wp-content/uploads/2020/07/virtual-therapy-options.png" alt="Other Online Services">
+							<h4 class="jp-vr-table-card-title">Virtual Rehab Vs. <b>Online Therapy</b></h4>
 
 							<ul class="jp-vr-table-card-list">
 								<li class="jp-vr-table-card-list-item">Understand & specialized in addiction</li>
-								<li class="jp-vr-table-card-list-item">Includes medical and life coaching to tackle the issues beyond therapy</li>
+								<li class="jp-vr-table-card-list-item">Includes medical and accountability coaching beyond therapy</li>
 							</ul>
 						</div>
 					</div>
 
 					<div class="col-12 col-lg-4">
 						<div class="jp-vr-table-card">
-							<img class="jp-vr-table-card-img lazy" data-src="https://journeypure.com/wp-content/uploads/2020/06/jp-icon-in-person-services-180x180-1.png" alt="Going In-person">
-							<h4 class="jp-vr-table-card-title">Virtual Rehab Vs. Going In-person</h4>
+							<img class="jp-vr-table-card-img lazy" data-src="/wp-content/uploads/2020/07/other-therapy-options.png" alt="Going In-person">
+							<h4 class="jp-vr-table-card-title">Virtual Rehab Vs. <b>Going In-person</b></h4>
 
 							<ul class="jp-vr-table-card-list">
 								<li class="jp-vr-table-card-list-item">Convenient</li>
@@ -136,12 +139,12 @@ get_header();
 
 					<div class="col-12 col-lg-4">
 						<div class="jp-vr-table-card">
-							<img class="jp-vr-table-card-img lazy" data-src="https://journeypure.com/wp-content/uploads/2020/06/jp-icon-no-services-180x180-1.png" alt="Doing Nothing">
-							<h4 class="jp-vr-table-card-title">Virtual Rehab Vs. Doing Nothing</h4>
+							<img class="jp-vr-table-card-img lazy" data-src="/wp-content/uploads/2020/07/no-rehab.png" alt="Doing Nothing">
+							<h4 class="jp-vr-table-card-title">Virtual Rehab Vs. <b>Doing Nothing</b></h4>
 
 							<ul class="jp-vr-table-card-list">
-								<li class="jp-vr-table-card-list-item">If you could "just stop" on your own, you wouldn't be on this site</li>
 								<li class="jp-vr-table-card-list-item">Drug &amp; alcohol issues get worse without treatment</li>
+								<li class="jp-vr-table-card-list-item">If you could really "just stop", you wouldn't be reading this</li>
 							</ul>
 						</div>
 					</div>
@@ -169,39 +172,39 @@ get_header();
 
 			<div class="row">
 				<div class="col-12 col-lg-5">
-					<img class="jp-vr-components-img lazy" data-src="https://journeypure.com/wp-content/uploads/2020/06/jp-brian-wind-signature.jpg" alt="Doctor">
+					<img class="jp-vr-components-img lazy" data-src="/wp-content/uploads/2020/06/jp-brian-wind-signature.png" alt="Dr. Brian Wind Chief Clinical Officer Virtual Rehab">
 				</div>
 
-				<div class="col-12 col-lg-7">
+				<div class="col-12 col-lg-6 offset-lg-1">
 					<div class="jp-vr-components-text">
-						<p>There are 100 years of research and millions of success stories behind the rehab treatment model. Yet, only 19% of Tenesseans that need help actually get it.</p>
-						<p>Dr. Brian Wind, Ph.D. has dedicated the last 20 years to understanding what makes treatment most successful and how those options can be made more accessible.</p>
-						<p>Using technology, Dr. Wind and his team created a comprehensive addiction treatment program that's packed into your mobile phone and accessible anytime, anywhere.</p>
+						<p>There are 100 years of research and millions of success stories behind the rehab treatment model. Yet, only 19% of people that need help actually get it.</p>
+						<p>Dr. Brian Wind, Ph.D. dedicated the last 20 years to understanding what makes treatment most successful and how those options can be made more accessible.</p>
+						<p>Using technology, Dr. Wind and his team created a comprehensive addiction treatment program packed into your mobile phone. Accessible anytime, anywhere.</p>
 
 						<ul>
 							<li>
 								<span class="fas fa-check"></span>
-								Individual One-on-One Therapy
+								Individual Therapy
 							</li>
 
 							<li>
 								<span class="fas fa-check"></span>
-								Medical Doctor Appoitments
+								Medication Appoitments
 							</li>
 
 							<li>
 								<span class="fas fa-check"></span>
-								Group Therapy Sessions
+								Group Therapy
 							</li>
 
 							<li>
 								<span class="fas fa-check"></span>
-								Online Peer Support Meetings
+								Peer Support Meetings
 							</li>
 
 							<li>
 								<span class="fas fa-check"></span>
-								Recovery Coaching (via Text)
+								Accountability Coaching
 							</li>
 
 							<li>
@@ -213,17 +216,17 @@ get_header();
 
 					<div class="jp-vr-components-counters">
 						<div class="jp-vr-components-counter">
-							<p class="jp-vr-components-counter-number">25</p>
-							<p class="jp-vr-components-counter-text">Group Hours Per Week</p>
+							<p class="h1">25</p>
+							<p class="jp-vr-components-counter-text">Group Sessions Per Week</p>
 						</div>
 
 						<div class="jp-vr-components-counter">
-							<p class="jp-vr-components-counter-number">5600</p>
-							<p class="jp-vr-components-counter-text">Online Sessions Delivered</p>
+							<p class="h1">5,600</p>
+							<p class="jp-vr-components-counter-text">Virtual Sessions Delivered</p>
 						</div>
 
 						<div class="jp-vr-components-counter">
-							<p class="jp-vr-components-counter-number">24</p>
+							<p class="h1">24</p>
 							<p class="jp-vr-components-counter-text">5-Star App Store Reviews</p>
 						</div>
 					</div>
@@ -263,7 +266,7 @@ get_header();
 							<h5 class="jp-vr-cards-card-title">Group Therapy</h5>
 
 							<div class="jp-vr-cards-card-text">
-								<p>Be held accountable by people that are going through the same thing, learn from their lessons and make a friend to support each other forever.</p>
+								<p>Be held accountable by people that are going through the same thing, learn from their lessons and make a friend to support you forever.</p>
 							</div>
 						</div>
 					</div>
@@ -277,7 +280,7 @@ get_header();
 							<h5 class="jp-vr-cards-card-title">Medications</h5>
 
 							<div class="jp-vr-cards-card-text">
-								<p>While not a cure, medications can be critical to rebalance your brain. Whether it's anti-cravings like Vivitrol or Suboxone or to address underlying issues like antidepressants. </p>
+								<p>While not a cure, medications rebalance your brain. Whether it's anti-cravings like Vivitrol or Suboxone or for underlying issues like antidepressants. </p>
 							</div>
 						</div>
 					</div>
@@ -291,7 +294,7 @@ get_header();
 							<h5 class="jp-vr-cards-card-title">Support Meetings</h5>
 
 							<div class="jp-vr-cards-card-text">
-								<p>Online meetings run 24/7. They are a way to ensure you have support if you feel triggered at 3 AM. </p>
+								<p>Free, online meetings run 24/7. They are a way to ensure you have somewhere to turn if you feel triggered at 3 AM. Get connected.</p>
 							</div>
 						</div>
 					</div>
@@ -302,10 +305,10 @@ get_header();
 								<i class="fas fa-hands-helping"></i>
 							</div>
 
-							<h5 class="jp-vr-cards-card-title">Recovery Coaching </h5>
+							<h5 class="jp-vr-cards-card-title">Life Coaching </h5>
 
 							<div class="jp-vr-cards-card-text">
-								<p>Your Recovery Life Coach helps you meet your goals. They've been there before and now what it takes to stay on track - available via text or calls.</p>
+								<p>Your Accountability Coach helps you meet your goals. They've been there before and now what it takes to stay on track - available via text or calls.</p>
 							</div>
 						</div>
 					</div>
@@ -319,7 +322,7 @@ get_header();
 							<h5 class="jp-vr-cards-card-title">Self-Help Course</h5>
 
 							<div class="jp-vr-cards-card-text">
-								<p>The JourneyPure app gives you personalized content and reminders that reward you for making healthy choices (with points exchanged for real gift cards).</p>
+								<p>The JourneyPure app gives you personalized content and reminders that reward you with real gift cards for making healthy choices.</p>
 							</div>
 						</div>
 					</div>
@@ -337,13 +340,13 @@ get_header();
 			<div class="container">
 				<?php if ( ! empty( $virtual_rehab->bios->heading ) ) : ?>
 					<div class="heading">
-						<h3 class="h1"><?php echo esc_html( $virtual_rehab->bios->heading ); ?></h3>
+						<h3 class="h1"><?php echo wp_kses_post( $virtual_rehab->bios->heading ); ?></h3>
 					</div>
 				<?php endif; ?>
 
 				<?php if ( ! empty( $virtual_rehab->bios->subheading ) ) : ?>
 					<div class="subheading">
-						<p><?php echo esc_html( $virtual_rehab->bios->subheading ); ?></p>
+						<h3><?php echo esc_html( $virtual_rehab->bios->subheading ); ?></h3>
 					</div>
 				<?php endif; ?>
 
@@ -393,66 +396,7 @@ get_header();
 
 	<!-- /SECTION: Bios -->
 
-	<!-- SECTION: Process -->
 
-	<section class="jp-vr-section jp-vr-process">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<span class="h1 jp-vr-process-title">The Process is <strong>Easy</strong></span>
-				</div>
-			</div>
-
-			<div class="jp-vr-process-grid">
-				<div class="row">
-					<div class="col-12 col-lg-4">
-						<div class="jp-vr-process-card">
-							<span class="jp-vr-process-card-counter">01.</span>
-							<h5 class="jp-vr-process-card-title">Schedule Online</h5>
-
-							<div class="jp-vr-process-card-text">
-								<p>Shedule your initial 60-minute therapy session with a few clicks and get a reminder via text. Connecting to your therapist is as easy as clicking a link or downloading an app.</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-12 col-lg-4">
-						<div class="jp-vr-process-card">
-							<span class="jp-vr-process-card-counter">02.</span>
-							<h5 class="jp-vr-process-card-title">Get Access</h5>
-
-							<div class="jp-vr-process-card-text">
-								<p>If it seems like online rehab could help you, we'll go over cost (insurance accepted) and get you full access to the mobile app. Including the calendar to schedule in the same day.</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-12 col-lg-4">
-						<div class="jp-vr-process-card">
-							<span class="jp-vr-process-card-counter">03.</span>
-							<h5 class="jp-vr-process-card-title">Stay Engaged</h5>
-
-							<div class="jp-vr-process-card-text">
-								<p>Control your therapy and medical appointments with a few clicks. You can also reach out to your Recovery Coach and work through the self-help course 24/7.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-12">
-					<button type="button" class="btn btn-outline-secondary jp-vr-process-button"><span class="fas fa-calendar-alt"></span> Schedule now</button>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<div class="jp-vr-process-divider-container">
-		<div class="jp-vr-process-divider"> </div>
-	</div>
-
-	<!-- /SECTION: Process -->
 
 	<!-- SECTION: FAQ -->
 
@@ -508,6 +452,66 @@ get_header();
 	<?php endif; ?>
 
 	<!-- /SECTION: FAQ -->
+	
+		<!-- SECTION: Process -->
+
+	<section class="jp-vr-section jp-vr-process">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<span class="h1 jp-vr-process-title">The Process is <strong>Easy</strong></span>
+				</div>
+			</div>
+
+			<div class="jp-vr-process-grid">
+				<div class="row">
+					<div class="col-12 col-lg-4">
+						<div class="jp-vr-process-card">
+							<span class="jp-vr-process-card-counter">01.</span>
+							<h5 class="jp-vr-process-card-title">Schedule Online</h5>
+
+							<div class="jp-vr-process-card-text">
+								<p>Schedule your initial 40-minute therapy session with a few clicks. Connecting to your therapist is as easy as downloading an app.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-12 col-lg-4">
+						<div class="jp-vr-process-card">
+							<span class="jp-vr-process-card-counter">02.</span>
+							<h5 class="jp-vr-process-card-title">Get Full Access</h5>
+
+							<div class="jp-vr-process-card-text">
+								<p>After your initial session, if it seems like virtual rehab could help you, we'll go over cost (insurance accepted) and get you full access to the mobile app.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-12 col-lg-4">
+						<div class="jp-vr-process-card">
+							<span class="jp-vr-process-card-counter">03.</span>
+							<h5 class="jp-vr-process-card-title">Stay Engaged</h5>
+
+							<div class="jp-vr-process-card-text">
+								<p>Reach out to your Accountability Coach and work through the self-help course 24/7 on the app in between scheduled therapy and medical sessions.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 cta-process">
+					<button type="button" class="btn btn-outline-secondary jp-vr-process-button"><span class="fas fa-comment"></span> Talk to a therapist now</button>
+					<p>40-minute session <del> $120 </del> <b>$45 limited time</b></p>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- /SECTION: Process -->
 
 	<!-- SECTION: What now? -->
 
@@ -517,11 +521,10 @@ get_header();
 
 			<div class="row">
 				<div class="col-12 text-center bottom-cta">
-					<span class="fas fa-calendar fas-vr"></span>
-					<h4>Schedule your first therapy session</h4>
-					<small class="drop">Appoitments available within the hour.</small>
-					<small class="drop">No commitment required beyond the<br>initial 60-minute session.</small>
-					<button type="button" class="btn btn-outline-secondary btn-outline-secondary-big"><span class="fas fa-comment"></span> Talk to a therapist now</button>
+					
+					<button type="button" class="btn btn-secondary btn-outline-secondary-big"><span class="fas fa-comment"></span> Talk to a therapist</button>
+										<p>40-minute session <del> $120 </del> <b>$45 limited time</b></p>
+					<small class="drop">No commitment</small>
 				</div>
 			</div>
 		</div>

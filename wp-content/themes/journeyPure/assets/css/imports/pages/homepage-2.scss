@@ -216,7 +216,6 @@
 
 	h5{
 		color:$primary;
-		font-weight:500;
 	}
 	p{
 		max-width: 635px;
@@ -390,6 +389,7 @@
 		padding-bottom: 25px;
 		h5 {
 		  margin-bottom: 10px;
+		  color:$secondary;
 		}
 	  }
 	}
@@ -486,13 +486,14 @@ b{
 
 	i {
 	background: $primary;
-	width: 50px;
-	height: 50px;
-	text-align: center;
-	padding-top: 12px;
-	border-radius: 5px;
-	color: $light-blue;
-		font-size: 28px;
+    text-align: center;
+    padding-top: 12px;
+    color: $light-blue;
+    font-size: 29px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    padding: 12px;
 
 	}
 
@@ -524,6 +525,10 @@ li {
 	font-family:$heading-style-1;
 	font-size:17px;
 }
+.bio-default {
+	margin-top:30px;
+}
+
 	}
 	.block-4 {
 	padding:60px 15px 25px;
@@ -577,8 +582,9 @@ li {
 
 	  .box {
 		text-align: center;
-		font-size: 22px;
-		padding: 40px;
+		font-size: 17px;
+		font-weight:800;
+		padding: 25px 40px 40px;
 		line-height:30px;
 
 		@media (max-width: 767px) {
@@ -586,10 +592,17 @@ li {
 		}
 
 		i {
-		  font-size: 42px;
-		  display: block;
-		  color: $primary;
-		  margin-bottom:20px;
+    font-size: 29px;
+    display: block;
+    color: #0033a1;
+    margin-bottom: 20px;
+    background: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    padding: 15px;
+    margin: 0 auto 11px;
+    opacity: 0.4;
 		}
 	  }
 	}
@@ -603,7 +616,7 @@ li {
 				margin-top:40px;
 			}
 		}
-		h3 {
+		h3.text-center {
 			margin: 15px auto 45px;
 			max-width: 683px;
 		}
@@ -765,6 +778,9 @@ li {
 	overflow:hidden;
 	.design-process-content-inner {
 		padding: 30px 15px 20px;
+		h5 {
+			color:$primary;
+		}
 	}
 	.note-cta {
 		border-radius: 4px;

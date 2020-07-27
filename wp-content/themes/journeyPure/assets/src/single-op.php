@@ -75,7 +75,7 @@ get_header();
 						<li class="jp-op-highlights-list-item">
 							<span class="far fa-check-circle jp-op-highlights-list-item-icon"></span>
 							<span class="jp-op-highlights-list-item-title">Works with your schedule</span>
-							<p class="jp-op-highlights-list-item-text">Convenient morning and evening appointments</p>
+							<p class="jp-op-highlights-list-item-text">Convenient morning, evening and <u>virtual</u> appointments</p>
 						</li>
 
 						<li class="jp-op-highlights-list-item">

@@ -72,6 +72,9 @@
 	.note-box {
 		@import "../page-parts/jp-note-box";
 		@include jp-note-box;
+		p{
+			max-width:none;
+		}
 	}
 
 	// Top Section (Above Fold / Masthead)
@@ -282,7 +285,7 @@
 		&:before {
 			background-color: #ebebeb;
 			content: '';
-			height: 350px;
+			height: 500px;
 			left: 0;
 			position: absolute;
 			right: 0;
@@ -290,7 +293,7 @@
 		}
 
 		.container {
-			max-width: 1341px;
+			max-width: 1356px;
 			position: relative;
 			z-index: 1;
 		}
@@ -388,7 +391,7 @@
 			}
 		}
 
-		h3 {
+		h3.text-center {
 			margin: 15px auto 45px;
 			max-width: 683px;
 		}
@@ -592,6 +595,9 @@
 
 		.design-process-content-inner {
 			padding: 30px 15px 20px;
+			h5{
+			color:$primary;
+			}
 		}
 
 		.note-cta {
