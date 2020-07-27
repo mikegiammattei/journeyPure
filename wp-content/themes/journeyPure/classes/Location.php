@@ -20,17 +20,19 @@ class Location {
 	 */
 	public function __construct() {
 		global $post;
-		$this->post   = $post;
+		$this->post = $post;
+
 		$this->fields = get_fields();
+
 		$this->set_above_fold();
 		$this->set_gallery();
 		$this->set_bios();
 		$this->set_reviews();
-		$this->set_block_2();
+		$this->set_highlights_v2();
 		$this->set_block_4();
 		$this->set_boxes();
-		define("STYLESHEET_NAME", "single-locations");
 
+		define( 'STYLESHEET_NAME', 'single-locations' );
 	}
 
 	/**
@@ -127,28 +129,30 @@ class Location {
 	}
 
 	/**
-	 * Set block 2
+	 * Set highlights v2 (legacy block 2)
 	 *
 	 * @return void
 	 */
-	private function set_block_2() {
-		$this->block2 = (object) array(
+	private function set_highlights_v2() {
+		$this->highlights_v2 = (object) array(
 			'heading'              => $this->fields['block_2']['heading'],
 			'list'                 => $this->fields['block_2']['list'],
 			'tag_sections'         => $this->fields['block_2']['aside_tags'],
 			'show_insurance_logos' => $this->fields['block_2']['show_insurance_logos'],
 		);
 
-		foreach ( $this->block2->list as $i => $item ) {
-			if ( ! empty( $item['review'] ) ) {
-				require_once get_stylesheet_directory() . '/classes/Reviews.php';
-				$reviews = new \Reviews\Reviews();
+		if ( ! empty( $this->highlights_v2->list ) ) {
+			foreach ( $this->highlights_v2->list as $i => $item ) {
+				if ( ! empty( $item['review'] ) ) {
+					require_once get_stylesheet_directory() . '/classes/Reviews.php';
+					$reviews = new \Reviews\Reviews();
 
-				$reviews->setPostByPostId( array( $item['review'] ) );
+					$reviews->setPostByPostId( array( $item['review'] ) );
 
-				$this->block2->list[ $i ]['review']       = $reviews->reviews[0];
-				$this->block2->list[ $i ]['review_avg']   = $reviews->getAvgRating();
-				$this->block2->list[ $i ]['review_total'] = $reviews->getTotalReviews();
+					$this->highlights_v2->list[ $i ]['review']       = $reviews->reviews[0];
+					$this->highlights_v2->list[ $i ]['review_avg']   = $reviews->getAvgRating();
+					$this->highlights_v2->list[ $i ]['review_total'] = $reviews->getTotalReviews();
+				}
 			}
 		}
 	}

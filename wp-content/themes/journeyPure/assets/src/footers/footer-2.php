@@ -41,31 +41,39 @@
 				<div class="last-tier">
 					<div class="container">
 						<div class="row justify-content-between align-items-center">
-							<div class="col-sm-6">
-								<div class="row">
-									<div class="col-sm-4">
-										<p class="link-list-header">Rehab Locations</p>
-										<a href="/locations/florida/" class="font-weight-bold">Florida<span class="hide-for-md-only"> Rehab</span></a><br />
-										<a href="/locations/tennessee/" class="font-weight-bold">Tennessee<span class="hide-for-md-only"> Rehab</span></a><br />
-										<a href="/locations/kentucky/" class="font-weight-bold">Kentucky<span class="hide-for-md-only"> Rehab</span></a><br />
-										<a href="/locations/military-program/" class="font-weight-bold">Veteran<span class="hide-for-md-only"> Rehab</span></a>
+							<?php if ( ! is_page_template( 'template-virtual-rehab.php' ) ) : ?>
+								<div class="col-12 col-sm-8 col-md-6">
+									<div class="row">
+										<div class="col-sm-4">
+											<p class="link-list-header">Rehab Locations</p>
+											<a href="/locations/florida/" class="font-weight-bold">Florida<span class="hide-for-md-only"> Rehab</span></a><br />
+											<a href="/locations/tennessee/" class="font-weight-bold">Tennessee<span class="hide-for-md-only"> Rehab</span></a><br />
+											<a href="/locations/kentucky/" class="font-weight-bold">Kentucky<span class="hide-for-md-only"> Rehab</span></a><br />
+											<a href="/locations/military-program/" class="font-weight-bold">Veteran<span class="hide-for-md-only"> Rehab</span></a>
+										</div>
+
+										<div class="col-sm-6">
+											<p class="link-list-header">Ask Our Doctors</p>
+											<a href="/ask-our-doctors/">Addiction Help</a><br />
+											<a href="/suboxone-clinics/">Suboxone Clinics</a><br />
+											<a href="/ask-our-doctors/alumni/what-do-i-do-if-i-relapse/">Relapse</a><br />
+											<a href="/ask-our-doctors/alcohol/what-is-wet-brain/">Wet Brain</a>
+										</div>
 									</div>
 
-									<div class="col-sm-6">
-										<p class="link-list-header">Ask Our Doctors</p>
-										<a href="/ask-our-doctors/">Addiction Help</a><br />
-										<a href="/suboxone-clinics/">Suboxone Clinics</a><br />
-										<a href="/ask-our-doctors/alumni/what-do-i-do-if-i-relapse/">Relapse</a><br />
-										<a href="/ask-our-doctors/alcohol/what-is-wet-brain/">Wet Brain</a>
+									<div class="copyright">
+										&copy; <?php echo date('Y'); ?> JourneyPure. All rights reserved | <a href="/terms-of-use/">Terms & Conditions</a> 	&middot;  <a href="/privacy-policy/">Privacy Policy</a>  &nbsp; <button class="btn btn-dark btn-sm " onclick="topFunction()"><i class="fas fa-chevron-up"></i> Back to Top</button>
 									</div>
 								</div>
 
-								<div class="copyright">
-									&copy; <?php echo date('Y'); ?> JourneyPure. All rights reserved | <a href="/terms-of-use/">Terms & Conditions</a> 	&middot;  <a href="/privacy-policy/">Privacy Policy</a>  &nbsp; <button class="btn btn-dark btn-sm " onclick="topFunction()"><i class="fas fa-chevron-up"></i> Back to Top</button>
+								<div class="col-12 col-sm-4 col-md-6"> </div>
+							<?php else : ?>
+								<div class="col-12 text-center">
+									<div class="copyright">
+										&copy; <?php echo date('Y'); ?> JourneyPure. All rights reserved | <a href="/terms-of-use/">Terms & Conditions</a> 	&middot;  <a href="/privacy-policy/">Privacy Policy</a>  &nbsp; <button class="btn btn-dark btn-sm " onclick="topFunction()"><i class="fas fa-chevron-up"></i> Back to Top</button>
+									</div>
 								</div>
-							</div>
-
-							<div class="col-sm-6"> </div>
+							<?php endif; ?>
 						</div>
 					</div>
 				</div>
@@ -80,6 +88,7 @@
 			<?php include_once(get_stylesheet_directory() . '/assets/src/includes/components/exit-modal.php'); ?>
 			<?php include_once(get_stylesheet_directory() . '/assets/src/includes/components/review-video-modal.php'); ?>
 			<?php include_once(get_stylesheet_directory() . '/assets/src/includes/components/frontman.php'); ?>
+			<?php include_once(get_stylesheet_directory() . '/assets/src/includes/components/virtual-rehab-modal.php'); ?>
 
 		</div> <?php /** end of main wrapper */ ?>
 
@@ -87,8 +96,8 @@
 				<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
 				<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script>
 				<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-				<script src="<?php echo get_stylesheet_directory_uri() . '/js/vendor.min.js?v=20200723'; ?>"></script>
-				<script src="<?php echo get_stylesheet_directory_uri() . '/js/custom.min.js?v=20200723'; ?>"></script>
+				<script src="<?php echo get_stylesheet_directory_uri() . '/js/vendor.min.js?v=20200727'; ?>"></script>
+				<script src="<?php echo get_stylesheet_directory_uri() . '/js/custom.min.js?v=20200727'; ?>"></script>
 			<?php endif; ?>
 
 			<?php wp_footer(); ?>

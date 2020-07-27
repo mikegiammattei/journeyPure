@@ -21,83 +21,119 @@ get_header();
 	<section class="jp-vr-section jp-vr-masthead">
 		<div class="container">
 			<div class="row">
-				
-
 				<div class="col-12 col-lg-7 order-lg-1">
 					<h1 class="jp-vr-masthead-title"><?php echo wp_kses_post( $virtual_rehab->masthead_title ); ?></h1>
-					<p class="jp-vr-masthead-subtitle"><?php echo esc_html( $virtual_rehab->masthead_subtitle ); ?>
-															
-
-					</p>
-
-					<button type="button" class="btn btn-outline-secondary jp-vr-masthead-button"><span class="fas fa-comment"></span> Talk to a therapist now</button>
+					<p class="jp-vr-masthead-subtitle"><?php echo esc_html( $virtual_rehab->masthead_subtitle ); ?></p>
+					<button type="button" data-toggle="modal" data-target="#virtual-rehab-modal" class="btn btn-outline-secondary jp-vr-masthead-button"><span class="fas fa-comment"></span> Talk to a therapist now</button>
 					<p>40-minute session <del> $120 </del> <b>$45 limited time</b></p>
 				</div>
+
 				<div class="col-12 col-lg-5 order-lg-2 background-circle">
 					<div class="jp-vr-masthead-img-wrapper">
 						<img class="jp-vr-masthead-img lazy" data-src="/wp-content/uploads/2020/07/virutal_rehab-1.png" alt="Mobile">
 					</div>
+
 					<p class="jp-vr-masthead-text"><span class="fas fa-asterisk"></span> Backed by a real addiction treatment center with <strong>real results</strong>.</p>
 				</div>
 			</div>
 		</div>
 	</section>
 
-
 	<!-- /SECTION: Masthead -->
 
-	<!-- SECTION: Highlights -->
+	<!-- SECTION: Highlights V2 -->
 
-	<section class="jp-vr-section jp-vr-highlights">
-		<div class="container">
-			<div class="row">
-				<div class="col-12 col-md-6 col-lg-6 offset-lg-1">
-					<h3 class="jp-vr-highlights-title">The Most Comprehensive AND Convenient Way to Get Help</h3>
+	<?php if ( isset( $virtual_rehab->highlights_v2 ) ) : ?>
+		<section class="jp-vr-section jp-vr-highlights-v2">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
+						<?php if ( ! empty( $virtual_rehab->highlights_v2->heading ) ) : ?>
+							<h2 class="h1"><?php echo wp_kses_post( $virtual_rehab->highlights_v2->heading ); ?></h2>
+						<?php endif; ?>
 
-					<ul class="jp-vr-highlights-list">
-						<li class="jp-vr-highlights-list-item">
-							<span class="far fa-check-circle jp-vr-highlights-list-item-icon"></span>
-							<span class="jp-vr-highlights-list-item-title">100% online</span>
-							<span class="jp-vr-highlights-list-item-text">Convenient to work around your schedule.</span>
-						</li>
+						<?php if ( $virtual_rehab->highlights_v2->list ) : ?>
+							<div class="list-container">
+								<?php foreach ( $virtual_rehab->highlights_v2->list as $index => $item ) : ?>
+									<div class="list-item">
+										<?php if ( ! empty( $item['heading'] ) ) : ?>
+											<div class="row no-gutters">
+												<div class="list-heading">
+													<div class="d-flex">
+														<div class="align-self-center"><i class="fas fa-check icon"></i></div>
+														<div class="align-self-center"><h5 class="item-title"><?php echo wp_kses_post( $item['heading'] ); ?></h5></div>
+													</div>
+												</div>
+											</div>
+										<?php endif; ?>
 
-						<li class="jp-vr-highlights-list-item">
-							<span class="far fa-check-circle jp-vr-highlights-list-item-icon"></span>
-							<span class="jp-vr-highlights-list-item-title">Created by Industry Pros</span>
-							<span class="jp-vr-highlights-list-item-text">JourneyPure has 6K+ success stories and 18 locations across the country.</span>
-						</li>
+										<?php if ( ! empty( $item['content'] ) ) : ?>
+											<div class="content">
+												<?php echo wp_kses_post( $item['content'] ); ?>
+											</div>
+										<?php endif; ?>
 
-						<li class="jp-vr-highlights-list-item">
-							<span class="far fa-check-circle jp-vr-highlights-list-item-icon"></span>
-							<span class="jp-vr-highlights-list-item-title">Goes Beyond Therapy</span>
-							<span class="jp-vr-highlights-list-item-text">Includes medications, accountability coaching and a self-help app.</span>
-						</li>
+										<?php if ( ! empty( $item['review'] ) ) : ?>
+											<div class="review">
+												<blockquote class="review-text">
+													<?php echo wp_kses_post( $item['review']->review_text ); ?>
+												</blockquote>
 
-						<!-- <li class="jp-vr-highlights-list-item">
-							<span class="far fa-check-circle jp-vr-highlights-list-item-icon"></span>
-							<span class="jp-vr-highlights-list-item-title">In-network with almost every insurance</span>
-							<span class="jp-vr-highlights-list-item-text">So any cost to you is as low as possible</span>
-						</li> -->
-					</ul>
+												<div class="review-author">
+													<div class="review-author-image">
+														<img class="lazy" data-src="<?php echo esc_attr( $item['review']->photo['image'] ); ?>" alt="<?php echo esc_attr( $item['review']->photo['alt'] ); ?>">
+													</div>
 
-					<!-- <div class="jp-vr-highlights-img-logos-wrapper">
-						<img class="jp-vr-highlights-img-logos lazy" data-src="<?php echo esc_attr( $virtual_rehab->highlights_insurers_image_1['url'] ); ?>" alt="<?php echo esc_attr( $virtual_rehab->highlights_insurers_image_1['alt'] ); ?>">
-						<img class="jp-vr-highlights-img-logos lazy" data-src="<?php echo esc_attr( $virtual_rehab->highlights_insurers_image_2['url'] ); ?>" alt="<?php echo esc_attr( $virtual_rehab->highlights_insurers_image_2['alt'] ); ?>">
-					</div> -->
+													<div class="review-author-info">
+														<h5 class="review-author-title"><?php echo esc_html( $item['review']->heading ); ?></h5>
 
-					<!-- <div class="jp-vr-highlights-button-wrapper">
-						<button type="button" data-toggle="modal" data-target="#main-insurance-form" class="jp-vr-highlights-button"><span class="fas fa-id-card"></span> Check Insurance</button>
-					</div> -->
-				</div>
+														<?php if ( ! empty( $item['review']->sober_since ) ) : ?>
+															<p class="review-author-sober-since">
+																<?php echo wp_kses_post( $item['review']->sober_since ); ?>
+															</p>
+														<?php endif; ?>
 
-				<div class="col-12 col-md-6 col-lg-4">
-					<img class="jp-vr-highlights-img-faces lazy" data-src="<?php echo esc_attr( $virtual_rehab->highlights_main_image['url'] ); ?>" alt="<?php echo esc_attr( $virtual_rehab->highlights_main_image['alt'] ); ?>">
+														<div class="review-author-extra">
+															<div class="review-author-stars">
+																<?php for ( $i = 0; $i < $item['review']->star_rating; $i++ ) : ?>
+																	<i class="review-author-star fas fa-star"></i>
+																<?php endfor; ?>
+															</div>
+
+															<?php if ( ! empty( $item['review']->source_image['image'] ) ) : ?>
+																<div class="review-author-logo">
+																	<img class="review-author-source-image lazy" data-src="<?php echo esc_attr( $item['review']->source_image['image'] ); ?>" alt="<?php echo esc_attr( $item['review']->source_image['alt'] ); ?>">
+																</div>
+															<?php endif; ?>
+														</div>
+													</div>
+												</div>
+											</div>
+										<?php endif; ?>
+									</div>
+								<?php endforeach; ?>
+							</div>
+						<?php endif; ?>
+					</div>
+
+					<div class="col-12 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
+						<?php if ( true === $virtual_rehab->highlights_v2->show_insurance_logos ) : ?>
+							<div class="logos-wrapper">
+								<img class="logos lazy" data-src="<?php echo esc_attr( get_stylesheet_directory_uri() ); ?>/assets/img/insurance2.png" alt="Aetna, Anthem Blue Cross Blue Sheild, Cigna Heath Insurances">
+								<img class="logos lazy" data-src="<?php echo esc_attr( get_stylesheet_directory_uri() ); ?>/assets/img/insurance1.png" alt="Amerihealth, United Healthcare, Humana, Tricare and 43 More Insurances">
+							</div>
+						<?php endif; ?>
+
+						<div class="btn-wrapper">
+							<button type="button" data-toggle="modal" data-target="#virtual-rehab-modal" class="btn btn-outline-secondary"><span class="fas fa-id-card"></span> Talk to a therapist</button>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
+	<?php endif; ?>
 
-	<!-- /SECTION: Highlights -->
+	<!-- /SECTION: Highlights V2 -->
 
 	<!-- SECTION: Table -->
 
@@ -396,8 +432,6 @@ get_header();
 
 	<!-- /SECTION: Bios -->
 
-
-
 	<!-- SECTION: FAQ -->
 
 	<?php if ( ! empty( $virtual_rehab->faq ) ) : ?>
@@ -452,8 +486,8 @@ get_header();
 	<?php endif; ?>
 
 	<!-- /SECTION: FAQ -->
-	
-		<!-- SECTION: Process -->
+
+	<!-- SECTION: Process -->
 
 	<section class="jp-vr-section jp-vr-process">
 		<div class="container">
@@ -502,14 +536,13 @@ get_header();
 
 			<div class="row">
 				<div class="col-12 cta-process">
-					<button type="button" class="btn btn-outline-secondary jp-vr-process-button"><span class="fas fa-comment"></span> Talk to a therapist now</button>
+					<button type="button" data-toggle="modal" data-target="#virtual-rehab-modal" class="btn btn-outline-secondary jp-vr-process-button"><span class="fas fa-comment"></span> Talk to a therapist now</button>
 					<p>40-minute session <del> $120 </del> <b>$45 limited time</b></p>
 
 				</div>
 			</div>
 		</div>
 	</section>
-
 
 	<!-- /SECTION: Process -->
 
@@ -521,10 +554,9 @@ get_header();
 
 			<div class="row">
 				<div class="col-12 text-center bottom-cta">
-					
-					<button type="button" class="btn btn-secondary btn-outline-secondary-big"><span class="fas fa-comment"></span> Talk to a therapist</button>
-										<p>40-minute session <del> $120 </del> <b>$45 limited time</b></p>
-					<small class="drop">No commitment</small>
+					<button type="button" data-toggle="modal" data-target="#virtual-rehab-modal" class="btn btn-secondary btn-outline-secondary-big"><span class="fas fa-comment"></span> Talk to a therapist</button>
+					<p>40-minute session <del> $120 </del> <b>$45 limited time</b></p>
+					<small class="drop" data-toggle="modal" data-target="#virtual-rehab-modal">No commitment</small>
 				</div>
 			</div>
 		</div>

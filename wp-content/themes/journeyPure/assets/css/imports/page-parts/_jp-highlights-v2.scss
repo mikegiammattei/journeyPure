@@ -1,0 +1,155 @@
+@mixin jp-highlights-v2 {
+	b, strong {
+		font-size: 1.25em;
+	}
+
+	.h3 {
+		margin-top: 20px;
+	}
+
+	li {
+		font-family: $heading-style-1;
+		margin-bottom: 20px;
+		font-size: 17px;
+	}
+
+	.list-container {
+		margin-top: 25px;
+
+		.list-item {
+			// margin-bottom: $md-space;
+
+			.list-heading {
+				margin-top: 30px;
+
+				.icon {
+					display: inline-block;
+					width: 34px;
+					height: 34px;
+					border-radius:50%;
+					background-color: $secondary;
+					color: $white;
+					text-align: center;
+					font-size: 18px;
+					line-height: 34px;
+					margin-right: 10px;
+					display:none;
+				}
+
+				.item-title {
+					margin-bottom: 0;
+					color:$secondary;
+				}
+			}
+
+			.content {
+				padding:10px 0;
+			}
+
+			.review {
+					margin-bottom:25px;
+
+				&-text {
+					border-left: 6px solid #3a943f;
+					font-style: italic;
+					margin-bottom: 7px;
+					margin-left: 17px;
+					padding-left: 17px;
+				}
+
+				&-author {
+					align-items: center;
+					display: flex;
+
+					&-image {
+						border-radius: 50%;
+						margin-right: 15px;
+						overflow: hidden;
+
+						img {
+							width: 40px;
+						}
+					}
+
+					// &-info {}
+
+					&-title {
+						font-size: 14px;
+						margin-bottom: 1px;
+						display:inline;
+					}
+
+					&-extra {
+						align-items: center;
+						display: flex;
+					}
+
+					&-stars {
+						color: #ffce5f;
+						font-size: 12px;
+					}
+
+					// &-star {}
+
+					&-sober-since {
+						color: #999;
+						font-family: $heading-font;
+						font-size: 12px;
+						font-weight: 500;
+						padding-bottom: 0;
+						padding-left: 5px;
+						display:inline;
+					}
+
+					&-logo {
+						padding-left: 5px;
+					}
+
+					&-source-image {
+						width: 15px;
+						margin-top: -3px;
+					}
+				}
+			}
+		}
+	}
+
+	.logos {
+		filter: grayscale(100%);
+		width: 100%;
+
+		@media screen and (min-width: 992px) {
+			width: 45%;
+		}
+
+		&-wrapper {
+			margin-bottom: 10px;
+
+			@media screen and (min-width: 992px) {
+				display: flex;
+				// margin-top: -35px;
+				margin-left: -17px;
+			}
+		}
+	}
+
+	.btn {
+		background: #ffffff;
+		border-color: #01389f;
+		color: #01389f;
+
+		&:focus, &:hover {
+			background: #01389f;
+			// border-color: #ffffff;
+			color: #ffffff;
+		}
+
+		&-wrapper {
+			text-align: center;
+
+			@media screen and (min-width: 768px) {
+				text-align: left;
+			}
+		}
+	}
+}

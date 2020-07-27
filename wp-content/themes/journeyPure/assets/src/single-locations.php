@@ -104,20 +104,20 @@ get_header();
 
 	<!-- /SECTION: Top Section (Above Fold / Masthead) -->
 
-	<!-- SECTION: White Section -->
+	<!-- SECTION: Highlights V2 -->
 
-	<?php if ( isset( $location->block2 ) ) : ?>
-		<section class="block-2">
+	<?php if ( isset( $location->highlights_v2 ) ) : ?>
+		<section class="jp-single-loc-section jp-single-loc-highlights-v2">
 			<div class="container">
 				<div class="row">
 					<div class="col-12 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
-						<?php if ( ! empty( $location->block2->heading ) ) : ?>
-							<h2 class="h1"><?php echo wp_kses_post( $location->block2->heading ); ?></h2>
+						<?php if ( ! empty( $location->highlights_v2->heading ) ) : ?>
+							<h2 class="h1"><?php echo wp_kses_post( $location->highlights_v2->heading ); ?></h2>
 						<?php endif; ?>
 
-						<?php if ( $location->block2->list ) : ?>
+						<?php if ( $location->highlights_v2->list ) : ?>
 							<div class="list-container">
-								<?php foreach ( $location->block2->list as $index => $item ) : ?>
+								<?php foreach ( $location->highlights_v2->list as $index => $item ) : ?>
 									<div class="list-item">
 										<?php if ( ! empty( $item['heading'] ) ) : ?>
 											<div class="row no-gutters">
@@ -149,19 +149,19 @@ get_header();
 
 													<div class="review-author-info">
 														<h5 class="review-author-title"><?php echo esc_html( $item['review']->heading ); ?></h5>
-															<?php if ( ! empty( $item['review']->sober_since ) ) : ?>
-																<p class="review-author-sober-since">
-																	<?php echo wp_kses_post( $item['review']->sober_since ); ?>
-																</p>
-															<?php endif; ?>
+
+														<?php if ( ! empty( $item['review']->sober_since ) ) : ?>
+															<p class="review-author-sober-since">
+																<?php echo wp_kses_post( $item['review']->sober_since ); ?>
+															</p>
+														<?php endif; ?>
+
 														<div class="review-author-extra">
 															<div class="review-author-stars">
 																<?php for ( $i = 0; $i < $item['review']->star_rating; $i++ ) : ?>
 																	<i class="review-author-star fas fa-star"></i>
 																<?php endfor; ?>
 															</div>
-
-
 
 															<?php if ( ! empty( $item['review']->source_image['image'] ) ) : ?>
 																<div class="review-author-logo">
@@ -180,7 +180,7 @@ get_header();
 					</div>
 
 					<div class="col-12 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
-						<?php if ( true === $location->block2->show_insurance_logos ) : ?>
+						<?php if ( true === $location->highlights_v2->show_insurance_logos ) : ?>
 							<div class="logos-wrapper">
 								<img class="logos lazy" data-src="<?php echo esc_attr( get_stylesheet_directory_uri() ); ?>/assets/img/insurance2.png" alt="Aetna, Anthem Blue Cross Blue Sheild, Cigna Heath Insurances">
 								<img class="logos lazy" data-src="<?php echo esc_attr( get_stylesheet_directory_uri() ); ?>/assets/img/insurance1.png" alt="Amerihealth, United Healthcare, Humana, Tricare and 43 More Insurances">
@@ -196,7 +196,7 @@ get_header();
 		</section>
 	<?php endif; ?>
 
-	<!-- /SECTION: White Section -->
+	<!-- /SECTION: Highlights V2 -->
 
 	<!-- SECTION: Photos -->
 
@@ -418,8 +418,8 @@ get_header();
 				</div>
 
 				<div class="details col-12 col-lg-6">
-					<?php if ( $location->block2->tag_sections ) : ?>
-						<?php foreach ( $location->block2->tag_sections as $section ) : ?>
+					<?php if ( $location->highlights_v2->tag_sections ) : ?>
+						<?php foreach ( $location->highlights_v2->tag_sections as $section ) : ?>
 							<aside class="tag-list">
 								<?php if ( $section['heading'] ) : ?>
 									<span class="heading"><span><?php echo wp_kses_post( $section['heading'] ); ?></span></span>

@@ -23,11 +23,11 @@
 		background-color: #ebebeb;
 		position: relative;
 
-		.background-circle{
-background: #d0d0d0;
-    border-radius: 100% 100% 50px 50px;
-    height: 100%;
-  padding: 10px 0 30px;
+		.background-circle {
+			background: #d0d0d0;
+			border-radius: 100% 100% 50px 50px;
+			height: 100%;
+			padding: 10px 0 30px;
 		}
 
 		&-img {
@@ -36,7 +36,6 @@ background: #d0d0d0;
 				display: flex;
 				justify-content: center;
 				opacity: .8;
-				
 			}
 		}
 
@@ -82,10 +81,10 @@ background: #d0d0d0;
 			color: $main-gray;
 			font-size: 20px;
 			padding-bottom: 0;
-			    margin-top: 17px;
-				max-width: 360px;
-    text-align: center;
-    margin: 0 auto;
+			margin-top: 17px;
+			max-width: 360px;
+			text-align: center;
+			margin: 0 auto;
 		}
 
 		&-divider {
@@ -127,11 +126,11 @@ background: #d0d0d0;
 		}
 	}
 
-	// Highlights Section
+	// Highlights V2
 
-	&-highlights {
-		@import "../page-parts/jp-highlights";
-		@include jp-highlights;
+	&-highlights-v2 {
+		@import "../page-parts/jp-highlights-v2";
+		@include jp-highlights-v2;
 	}
 
 	// Table Section
@@ -139,17 +138,17 @@ background: #d0d0d0;
 	&-table {
 		@import "../page-parts/jp-table";
 		@include jp-table;
-		
+
 		&-subtitle{
 			max-width:660px;
 			margin-left:auto;
 			margin-right:auto;
 		}
+
 		img {
 			max-width:60px !important;
 			opacity: .8;
 		}
-
 	}
 
 	// Components Section
@@ -157,9 +156,6 @@ background: #d0d0d0;
 	&-components {
 		background-color: #ffffff;
 		position: relative;
-
-		.container {
-		}
 
 		&-title {
 			@extend .h1;
@@ -299,14 +295,14 @@ background: #d0d0d0;
 		}
 
 		&-card {
-align-items: center;
-    background-color: #ebebeb;
-    border-top: 8px solid $primary;
-    border-radius: 0 0 3px 3px;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: 30px;
+			align-items: center;
+			background-color: #ebebeb;
+			border-top: 8px solid $primary;
+			border-radius: 0 0 3px 3px;
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			padding: 30px;
 
 			&-image {
 				align-items: center;
@@ -348,8 +344,9 @@ align-items: center;
 	.bio-section {
 		@import "../page-parts/jp-bios";
 		@include jp-bios;
-		background:#ebebeb;
-		.card-body{
+		background: #ebebeb;
+
+		.card-body {
 			background:#ebebeb;
 		}
 	}
@@ -359,10 +356,6 @@ align-items: center;
 	&-process {
 		background-color: $primary;
 		position: relative;
-
-		.container {
-			
-		}
 
 		&-title {
 			color: #ffffff;
@@ -425,10 +418,11 @@ align-items: center;
 				margin-right: 5px;
 			}
 		}
-		.cta-process{
-		p{
-			color:white;
-			margin-top:15px;
+
+		.cta-process {
+			p {
+				color: white;
+				margin-top: 15px;
 			}
 		}
 
@@ -477,17 +471,21 @@ align-items: center;
 		@import "../page-parts/jp-faq";
 		@include jp-faq;
 	}
-	.ask-a-question{
-		.h1{
+
+	// What now? Section
+
+	.ask-a-question {
+		.h1 {
 			margin-bottom:10px !important;
 		}
-		.btn{
+
+		.btn {
 			margin-bottom:20px;
 		}
-		p{
+
+		p {
 			text-transform:none;
 			padding-bottom: 10px;
 		}
-		
 	}
 }

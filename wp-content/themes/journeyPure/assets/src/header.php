@@ -43,7 +43,7 @@ if(isset($Location)){
 						<?php if ( ! is_page_template( 'template-virtual-rehab.php' ) ) : ?>
 							<figure class="mobile-trigger pull-right"></figure>
 						<?php else : ?>
-							<button type="button" class="btn btn-outline-secondary btn-outline-secondary-big">Talk to a therapist</button>
+							<button type="button" data-toggle="modal" data-target="#virtual-rehab-modal" class="btn btn-outline-secondary btn-outline-secondary-big">Talk to a therapist</button>
 						<?php endif; ?>
 					</div>
 				</div>
@@ -91,7 +91,7 @@ if(isset($Location)){
 								</ul>
 							</nav>
 						<?php else : ?>
-							<button type="button" class="btn btn-outline-secondary btn-outline-secondary-big"><span class="fas fa-comment"></span> Talk to a therapist now</button>
+							<button type="button" data-toggle="modal" data-target="#virtual-rehab-modal" class="btn btn-outline-secondary btn-outline-secondary-big"><span class="fas fa-comment"></span> Talk to a therapist now</button>
 						<?php endif; ?>
 					</div>
 				</div>

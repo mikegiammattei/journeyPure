@@ -25,9 +25,9 @@ class VirtualRehab {
 		$this->fields = get_fields();
 
 		$this->set_masthead_section();
-		$this->set_highlights_section();
 		$this->set_bios();
 		$this->set_faq();
+		$this->set_highlights_v2();
 	}
 
 	/**
@@ -38,17 +38,6 @@ class VirtualRehab {
 	private function set_masthead_section() {
 		$this->masthead_title    = $this->fields['title'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
 		$this->masthead_subtitle = $this->fields['subtitle'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
-	}
-
-	/**
-	 * Set Highlights section content
-	 *
-	 * @return void
-	 */
-	private function set_highlights_section() {
-		$this->highlights_insurers_image_1 = $this->fields['highlights']['highlights_insurers_image_1'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
-		$this->highlights_insurers_image_2 = $this->fields['highlights']['highlights_insurers_image_2'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
-		$this->highlights_main_image       = $this->fields['highlights']['highlights_main_image'] ?: null; // phpcs:ignore WordPress.PHP.DisallowShortTernary.Found
 	}
 
 	/**
@@ -106,6 +95,35 @@ class VirtualRehab {
 					'question' => $faq['question'],
 					'answer'   => $faq['answer'],
 				);
+			}
+		}
+	}
+
+	/**
+	 * Set highlights v2 (legacy block 2)
+	 *
+	 * @return void
+	 */
+	private function set_highlights_v2() {
+		$this->highlights_v2 = (object) array(
+			'heading'              => $this->fields['block_2']['heading'],
+			'list'                 => $this->fields['block_2']['list'],
+			// 'tag_sections'         => $this->fields['block_2']['aside_tags'],
+			'show_insurance_logos' => $this->fields['block_2']['show_insurance_logos'],
+		);
+
+		if ( ! empty( $this->highlights_v2->list ) ) {
+			foreach ( $this->highlights_v2->list as $i => $item ) {
+				if ( ! empty( $item['review'] ) ) {
+					require_once get_stylesheet_directory() . '/classes/Reviews.php';
+					$reviews = new \Reviews\Reviews();
+
+					$reviews->setPostByPostId( array( $item['review'] ) );
+
+					$this->highlights_v2->list[ $i ]['review']       = $reviews->reviews[0];
+					$this->highlights_v2->list[ $i ]['review_avg']   = $reviews->getAvgRating();
+					$this->highlights_v2->list[ $i ]['review_total'] = $reviews->getTotalReviews();
+				}
 			}
 		}
 	}
