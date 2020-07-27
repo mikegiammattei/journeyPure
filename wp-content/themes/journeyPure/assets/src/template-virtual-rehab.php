@@ -124,9 +124,9 @@ get_header();
 							</div>
 						<?php endif; ?>
 
-						<div class="btn-wrapper">
+						<!-- <div class="btn-wrapper">
 							<button type="button" data-toggle="modal" data-target="#virtual-rehab-modal" class="btn btn-outline-secondary"><span class="fas fa-id-card"></span> Talk to a therapist</button>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>
