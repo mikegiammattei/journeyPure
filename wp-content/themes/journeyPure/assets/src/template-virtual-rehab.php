@@ -508,6 +508,11 @@ get_header();
 								<p>Schedule your initial 40-minute therapy session with a few clicks. Connecting to your therapist is as easy as downloading an app.</p>
 							</div>
 						</div>
+
+						<div class="cta-process">
+							<button type="button" data-toggle="modal" data-target="#virtual-rehab-modal" class="btn btn-outline-secondary jp-vr-process-button"><span class="fas fa-comment"></span> Talk to a therapist now</button>
+							<p>40-minute session <del> $120 </del> <b>$45 limited time</b></p>
+						</div>
 					</div>
 
 					<div class="col-12 col-lg-4">
@@ -534,13 +539,12 @@ get_header();
 				</div>
 			</div>
 
-			<div class="row">
+			<!-- <div class="row">
 				<div class="col-12 cta-process">
 					<button type="button" data-toggle="modal" data-target="#virtual-rehab-modal" class="btn btn-outline-secondary jp-vr-process-button"><span class="fas fa-comment"></span> Talk to a therapist now</button>
 					<p>40-minute session <del> $120 </del> <b>$45 limited time</b></p>
-
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</section>
 

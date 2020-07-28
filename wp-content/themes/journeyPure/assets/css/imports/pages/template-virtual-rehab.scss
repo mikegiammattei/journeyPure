@@ -28,10 +28,10 @@
 			border-radius: 100% 100% 50px 50px;
 			height: 100%;
 			padding: 10px 0 30px;
-						@media screen and (max-width: 768px) {
-							margin-top:60px;
-						}
 
+			@media screen and (max-width: 768px) {
+				margin-top:60px;
+			}
 		}
 
 		&-img {
@@ -372,13 +372,15 @@
 			}
 		}
 
-		&-grid {
-			> .row > .col-12 {
-				margin-bottom: 30px;
-			}
-		}
+		// &-grid {
+		// 	> .row > .col-12 {
+		// 		margin-bottom: 30px;
+		// 	}
+		// }
 
 		&-card {
+			margin-bottom: 30px;
+
 			&-counter {
 				color: #ffffff;
 				font-size: 60px;

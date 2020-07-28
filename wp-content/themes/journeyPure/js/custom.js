@@ -966,7 +966,12 @@ if ($('#jp-op').length > 0) {
         responsive: [{
           breakpoint: 768,
           settings: {
-            slidesToShow: 2
+            slidesToShow: 1
+          }
+        }, {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 3
           }
         }]
       }).on('beforeChange', function (event, slick, current_slide, next_slide) {
@@ -1395,7 +1400,12 @@ $(document).ready(function () {
           responsive: [{
             breakpoint: 768,
             settings: {
-              slidesToShow: 2
+              slidesToShow: 1
+            }
+          }, {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 3
             }
           }]
         }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
@@ -1894,7 +1904,12 @@ if ($('#jp-vr').length > 0) {
         responsive: [{
           breakpoint: 768,
           settings: {
-            slidesToShow: 2
+            slidesToShow: 1
+          }
+        }, {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 3
           }
         }]
       }).on('beforeChange', function (event, slick, current_slide, next_slide) {
