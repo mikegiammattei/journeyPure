@@ -154,8 +154,8 @@ get_header();
 							<h4 class="jp-vr-table-card-title">Virtual Rehab Vs. <b>Online Therapy</b></h4>
 
 							<ul class="jp-vr-table-card-list">
-								<li class="jp-vr-table-card-list-item">Understand & specialized in addiction</li>
-								<li class="jp-vr-table-card-list-item">Includes medical and accountability coaching beyond therapy</li>
+								<li class="jp-vr-table-card-list-item">Specialized in addiction</li>
+								<li class="jp-vr-table-card-list-item">Medications and Accountability Coaching beyond therapy</li>
 							</ul>
 						</div>
 					</div>
@@ -179,8 +179,8 @@ get_header();
 							<h4 class="jp-vr-table-card-title">Virtual Rehab Vs. <b>Doing Nothing</b></h4>
 
 							<ul class="jp-vr-table-card-list">
-								<li class="jp-vr-table-card-list-item">Drug &amp; alcohol issues get worse without treatment</li>
-								<li class="jp-vr-table-card-list-item">If you could really "just stop", you wouldn't be reading this</li>
+								<li class="jp-vr-table-card-list-item">Issues get worse without treatment</li>
+								<li class="jp-vr-table-card-list-item">If you could "just stop", you wouldn't be reading this</li>
 							</ul>
 						</div>
 					</div>

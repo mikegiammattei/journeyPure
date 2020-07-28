@@ -18,6 +18,9 @@
 
 		.list-item {
 			// margin-bottom: $md-space;
+			background: #F7F7F7;
+    padding: 0 30px;
+    border-radius: 3px;
 
 			.list-heading {
 				margin-top: 30px;
@@ -48,9 +51,10 @@
 
 			.review {
 					margin-bottom:25px;
+					padding-bottom:25px;
 
 				&-text {
-					border-left: 6px solid #3a943f;
+					border-left: 6px solid $secondary;
 					font-style: italic;
 					margin-bottom: 7px;
 					margin-left: 17px;
