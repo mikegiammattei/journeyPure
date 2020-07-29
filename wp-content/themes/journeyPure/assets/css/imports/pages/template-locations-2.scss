@@ -29,6 +29,8 @@
 			background-image: none !important;
 			border-top: 10px solid #e0e7f5;
 		}
+		
+
 
 		&:before {
 			background-color: rgba($white, 0.6);
@@ -78,6 +80,12 @@
 
 	&-cards {
 		background-color: #ededed;
+		padding-bottom:40px;
+		
+		.container{
+			@media (min-width: 1200px) {
+    max-width: 1280px;}
+		}
 
 		&-title {
 			@extend .jp-loc2-masthead-title;
@@ -170,7 +178,7 @@
 	}
 
 	.extra-link {
-		margin: 0 auto;
+		margin: 0 auto 40px;
 	}
 
 	// Table Section

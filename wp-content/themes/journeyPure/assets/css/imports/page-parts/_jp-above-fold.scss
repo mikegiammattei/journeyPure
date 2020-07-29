@@ -31,7 +31,7 @@
 	}
 
 	.heading-1 {
-		color: #c1c1c187;
+		color: $light-blue;
 		font-size: 16px;
 		font-weight: 600;
 		letter-spacing: 0;
@@ -62,7 +62,7 @@
 	}
 
 	.feature {
-		margin: 20px auto 0;
+		margin: 5px auto 0;
 		max-width: 800px;
 		padding: 5px 65px 50px;
 		text-align: left;
@@ -80,6 +80,10 @@
 			box-shadow: 0px 2px 4px rgba(0,0,0,.18);
 		}
 
+		.h-100 {
+				padding:10px 15px;
+				
+		}
 		p {
 			text-shadow: 1px 1px #ffffff;
 		}
@@ -109,7 +113,7 @@
 		}
 
 		.rating-section {
-			margin: -2px $md-space 20px;
+			margin: -2px $md-space 0;
 
 			> .row > div {
 				@media (max-width: 767px) {

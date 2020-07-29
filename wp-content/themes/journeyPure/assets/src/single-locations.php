@@ -34,8 +34,6 @@ get_header();
 						<h2 class="heading text-primary"><?php echo wp_kses_post( $location->above_fold->heading ); ?></h2>
 					<?php endif; ?>
 
-					<hr>
-
 					<div class="feature">
 						<div class="row">
 							<div class="col-lg-12 col-sm-12 top-text">
@@ -356,8 +354,8 @@ get_header();
 					<?php endforeach; ?>
 				</div>
 
-				<p class="link see-less-btn">Previous</p>
-				<p class="link see-more-btn has-more"><data>Data Generated Via Script</data> More</p>
+				<p class="link see-less-btn"> </p>
+				<p class="link see-more-btn has-more">More</p>
 			</div>
 		</section>
 	<?php endif; ?>

@@ -2,6 +2,12 @@
 
 header{
 	font-family:$heading-font;
+	
+	  @media (max-width: 992px) {
+			border:none;
+	  }
+	
+	
   #mobile-element{
 	button{
 	  padding: 5px;
@@ -14,8 +20,8 @@ header{
 
 	.mobile-trigger{
 	  margin-left: $sm-space;
-	  border-top: 4px $main-gray solid;
-	  border-bottom: 4px $main-gray solid;
+	  border-top: 4px $light-blue solid;
+	  border-bottom: 4px $light-blue solid;
 	  height: 26px;
 	  cursor: pointer;
 	  display: inline-block;
@@ -30,7 +36,7 @@ header{
 		width: 100%;
 		height: 4px;
 		content: '';
-		background: $main-gray;
+		background: $light-blue;
 		margin-top:7px;
 		opacity: 1;
 	  }

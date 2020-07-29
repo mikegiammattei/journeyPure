@@ -24,7 +24,7 @@ get_header();
 				<div class="col-12 col-lg-8 offset-lg-2">
 					<div class="jp-loc2-masthead-content">
 						<h1 class="jp-loc2-masthead-title">18 Rehab &amp; Clinic Locations</h1>
-						<p class="jp-loc2-masthead-subtitle">Whether you're just realizing there's a problem or you've been in and out of other facilities for years, we can help. People come here from as far away as Alaksa and  Hawaii because treatment here works.</p>
+						<p class="jp-loc2-masthead-subtitle">Whether you're just realizing there's a problem or you've been in and out of other facilities for years, we can help. People come here from as far away as Alaska because treatment here works.</p>
 					</div>
 				</div>
 			</div>

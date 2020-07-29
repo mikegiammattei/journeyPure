@@ -15,7 +15,7 @@ $footerVersion = 2;
 ?>
 <div id="homepage" class="homepage-2">
 <div class="note-box">
-	<h3>We are accepting new inpatient admissions with additional pre-screening procedures. All outpatient services, family therapy and alumni meetings are running virtual-only until further notice.</h3>
+	<h3>Limited inpatient admissions with additional pre-screening procedures. Outpatient services, family therapy and alumni meetings are virtual-only.</h3>
 	<p>Learn More</p>
 		<span class="note-cta"><i class="fas fa-phone"></i> <?php echo get_option('defaultPhone'); ?></span>
 	</div>

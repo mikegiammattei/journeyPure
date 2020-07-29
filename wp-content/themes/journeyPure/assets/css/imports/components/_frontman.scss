@@ -4,6 +4,10 @@
 	@media screen and (min-width: 768px) {
 		right: 202px !important;
 	}
+		@media screen and (max-width: 767px) {
+		left: 178px !important;
+    bottom: -35px !important;
+	}
 }
 
 .mkosBTNContainer._widgetRight .mkosBTNFrame {
@@ -16,6 +20,7 @@
 	@media screen and (min-width: 768px) {
 		right: 265px !important;
 	}
+
 }
 
 .makerobos_containerMain._widgetRight._large .makerobos_containerIn {
@@ -48,13 +53,13 @@
 
 
 	@media screen and (max-width: 767px) {
-		left: 30px;
-		padding: 6px 0 7px 0;
-		right: 38px;
-		width: auto;
-		border-radius: 40px;
-		height: 74px;
-		bottom: 38px;
+		left: 0;
+		padding: 0 0 0 20px;
+		width: 259px;
+		border-radius: 0 40px 40px 0;
+		height: 68px;
+		bottom: 5px;
+		text-align:left;
 	}
 
 	&.msie {
@@ -75,7 +80,6 @@
 	font-weight: normal;
 
 	@media screen and (max-width: 767px) {
-		margin: 0 0 0 12%;
 		line-height:25px;
 		text-align:left;
 	}
@@ -88,7 +92,6 @@
 
 	@media screen and (max-width: 767px) {
 		font-size:19px;
-		margin: 0 0 0 12%;
 			text-align:left;
 	}
 
