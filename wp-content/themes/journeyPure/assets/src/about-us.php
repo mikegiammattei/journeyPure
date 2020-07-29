@@ -171,7 +171,7 @@
 	</section>
 	<section class="page-quote">
 		<div class="container">
-			<div class="container"><div class="header"><div class="lead">"Addiction treatment is not only science; it's also art. It deals with the processes of life. Our techniques are innovative, well-researched and comprehensive. But, people don't care how much we know until they see how much we care." 
+			<div class="container"><div class="header"><div class="lead">"Addiction treatment is not only science; it's also art. It deals with the processes of life. People need to see how much we care before they care how much we know." 
 </div></div><div class="media d-inline-flex"> <img class="mr-3" src="/wp-content/uploads/2019/11/dr-stephen-loyd-journeypure-md.jpg" alt="Doctor Stephen Loyd Headhot as Drug Czar"><div class="media-body "><h5 class="mt-0">Dr. Stephen Loyd MD</h5><p>Chief Medical Officer</p></div></div></div>
 		</div>
 	</section>

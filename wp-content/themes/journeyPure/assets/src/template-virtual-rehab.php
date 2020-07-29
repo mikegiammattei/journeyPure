@@ -168,7 +168,7 @@ get_header();
 							<ul class="jp-vr-table-card-list">
 								<li class="jp-vr-table-card-list-item">Convenient</li>
 								<li class="jp-vr-table-card-list-item">More affordable</li>
-								<li class="jp-vr-table-card-list-item">Less intemidating</li>
+								<li class="jp-vr-table-card-list-item">Less intimidating</li>
 							</ul>
 						</div>
 					</div>
@@ -225,7 +225,7 @@ get_header();
 
 							<li>
 								<span class="fas fa-check"></span>
-								Medication Appoitments
+								Medication Appointments
 							</li>
 
 							<li>
@@ -257,7 +257,7 @@ get_header();
 						</div>
 
 						<div class="jp-vr-components-counter">
-							<p class="h1">5,600</p>
+							<p class="h1">12,600</p>
 							<p class="jp-vr-components-counter-text">Virtual Sessions Delivered</p>
 						</div>
 
@@ -344,7 +344,7 @@ get_header();
 							<h5 class="jp-vr-cards-card-title">Life Coaching </h5>
 
 							<div class="jp-vr-cards-card-text">
-								<p>Your Accountability Coach helps you meet your goals. They've been there before and now what it takes to stay on track - available via text or calls.</p>
+								<p>Your Accountability Coach helps you meet your goals. They've been there before and know what it takes to stay on track - available via text or calls.</p>
 							</div>
 						</div>
 					</div>

@@ -26,9 +26,7 @@ $footerVersion = 2;
 				<div class="background-fade">
 					<div class="content">
 						<h1 class="heading text-primary">
-							Your #1 Choice for
-							<br class="hide-for-sm-only hide-for-xs-only">
-							Drug &amp; Alcohol Treatment
+							Get Your Life Back on Track
 						</h1>
 						<hr>
 						<div class="feature">
@@ -38,7 +36,7 @@ $footerVersion = 2;
 										<div class="card-body">
 											<h5>You deserve help that actually helps you – and a treatment team that listens and puts you first.</h5>
 
-											<p>These issues are complex and personal. But, you don't have to figure this out on your own. When you're ready for something to change, call to talk privately about your options and get information without commitment.</p>
+											<p>Drug and alcohol issues are complex and personal. But, you don't have to figure this out on your own. When you're ready for something to change, call to talk privately about your options and get information without commitment.</p>
 
 											<p><b>You can do this!</b></p>
 
