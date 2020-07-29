@@ -47,19 +47,19 @@
 
 		&-subtitle {
 			color: #ffffff;
+			font-size: 60px;
 			letter-spacing: -2px;
 			margin-bottom: 10px;
 			text-align: center;
 
-
 			@media screen and (min-width: 768px) {
-				font-size: 45px;
+				// font-size: 45px;
 				margin-bottom: 10px;
 			}
 
-			@media screen and (min-width: 992px) {
-				font-size: 60px;
-			}
+			// @media screen and (min-width: 992px) {
+			// 	font-size: 60px;
+			// }
 		}
 
 		&-content {

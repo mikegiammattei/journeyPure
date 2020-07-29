@@ -44,12 +44,12 @@
 		}
 
 		&-title {
-			font-size: 50px;
+			font-size: 70px; // 50px;
 			letter-spacing: -1px;
 			margin-bottom: 35px;
 
 			@media screen and (min-width: 768px) {
-				font-size: 70px;
+				// font-size: 70px;
 				margin-bottom: 50px;
 			}
 
@@ -64,11 +64,11 @@
 		}
 
 		&-subtitle {
-			font-size: 20px;
+			font-size: 26px; // 20px;
 			margin-bottom: 20px;
 
 			@media screen and (min-width: 768px) {
-				font-size: 26px;
+				// font-size: 26px;
 				margin-bottom: 15px;
 				max-width: 645px;
 			}

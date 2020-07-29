@@ -122,11 +122,11 @@ get_header();
 								<img class="logos lazy" data-src="<?php echo esc_attr( get_stylesheet_directory_uri() ); ?>/assets/img/insurance2.png" alt="Aetna, Anthem Blue Cross Blue Sheild, Cigna Heath Insurances">
 								<img class="logos lazy" data-src="<?php echo esc_attr( get_stylesheet_directory_uri() ); ?>/assets/img/insurance1.png" alt="Amerihealth, United Healthcare, Humana, Tricare and 43 More Insurances">
 							</div>
-						<?php endif; ?>
 
-						<!-- <div class="btn-wrapper">
-							<button type="button" data-toggle="modal" data-target="#virtual-rehab-modal" class="btn btn-outline-secondary"><span class="fas fa-id-card"></span> Talk to a therapist</button>
-						</div> -->
+							<!-- <div class="btn-wrapper">
+								<button type="button" data-toggle="modal" data-target="#virtual-rehab-modal" class="btn btn-outline-secondary"><span class="fas fa-id-card"></span> Talk to a therapist</button>
+							</div> -->
+						<?php endif; ?>
 					</div>
 				</div>
 			</div>

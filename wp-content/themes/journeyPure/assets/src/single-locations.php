@@ -185,11 +185,11 @@ get_header();
 								<img class="logos lazy" data-src="<?php echo esc_attr( get_stylesheet_directory_uri() ); ?>/assets/img/insurance2.png" alt="Aetna, Anthem Blue Cross Blue Sheild, Cigna Heath Insurances">
 								<img class="logos lazy" data-src="<?php echo esc_attr( get_stylesheet_directory_uri() ); ?>/assets/img/insurance1.png" alt="Amerihealth, United Healthcare, Humana, Tricare and 43 More Insurances">
 							</div>
-						<?php endif; ?>
 
-						<div class="btn-wrapper">
-							<button type="button" data-toggle="modal" data-target="#main-insurance-form" class="btn btn-outline-secondary"><span class="fas fa-id-card"></span> Check Insurance</button>
-						</div>
+							<div class="btn-wrapper">
+								<button type="button" data-toggle="modal" data-target="#main-insurance-form" class="btn btn-outline-secondary"><span class="fas fa-id-card"></span> Check Insurance</button>
+							</div>
+						<?php endif; ?>
 					</div>
 				</div>
 			</div>
