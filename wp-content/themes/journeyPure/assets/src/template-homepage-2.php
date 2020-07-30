@@ -15,7 +15,7 @@ $footerVersion = 2;
 ?>
 <div id="homepage" class="homepage-2">
 <div class="note-box">
-	<h3>Limited inpatient admissions with additional pre-screening procedures. Outpatient services, family therapy and alumni meetings are virtual-only.</h3>
+	<h3>We're accepting limited inpatient admissions with additional pre-screening procedures. Outpatient services, family therapy and alumni meetings are currently virtual-only.</h3>
 	<p>Learn More</p>
 		<span class="note-cta"><i class="fas fa-phone"></i> <?php echo get_option('defaultPhone'); ?></span>
 	</div>
@@ -79,9 +79,9 @@ $footerVersion = 2;
 										<?php endif; ?>
 									</div>
 								</div>
-								<div class="col-lg-12 col-sm-12 d-flex align-items-stretch">
+								<div class="col-lg-12 col-sm-12">
 									<div class="card card-body h-100 justify-content-center transparent" style="width: 100%; ">
-										<div class="embed-responsive embed-responsive-16by9 youtube-video-place lazy" data-src='/wp-content/uploads/2020/07/addiction-story-daniel.png' data-yt-url="https://www.youtube.com/embed/kNj08KeNbIA">
+										<div class="embed-responsive embed-responsive-16by9 youtube-video-place lazy" data-src='/wp-content/uploads/2020/07/rehab-testimonial-video-daniel.jpg' data-yt-url="https://www.youtube.com/embed/kNj08KeNbIA">
 											<span class="play-button"></span>
 										</div>
 									</div>
@@ -127,7 +127,7 @@ $footerVersion = 2;
 	<div class="row">
 		<div class="col-12">
 		<h5 class="center">Treatment Here is In-Network </h5>
-		<p>In-network with insurance companies means <i>any cost to you is as low as possible</i>. Get answers about your specific policy within 54 minutes.
+		<p>In-network with insurance companies means <i>any cost to you is as low as possible</i>. Get answers about your specific policy now.
 				<button type="button" data-toggle="modal" data-target="#main-insurance-form" class="btn btn-outline-secondary"><i class="fas fa-id-card"></i>Submit Your Insurance</button></p>
 		<br>
 
@@ -152,7 +152,7 @@ $footerVersion = 2;
 
 					<div class="bio-slider row" >
 						<?php foreach ($Homepage->bioSection->bios as $bio): ?>
-							<div class="col-md-3 col-sm-4 <?php echo in_array( $bio->name, [ 'Dr. Timothy Gooden', 'Maria Matty' ] ) ? 'hide-for-xs-only' : ''; ?>">
+							<div class="col-md-3 col-sm-4 <?php echo in_array( $bio->name, [ 'Dr. Timothy Gooden', 'Maria Matty', 'Heidi McCormack', 'Kayla Ehrhardt' ] ) ? 'hide-for-xs-only' : ''; ?>">
 								<div class="card default border-0">
 									<div class="card-body  bios">
 										<div class="img lazy" data-src="<?php echo $bio->photo['image']; ?>"></div>
@@ -364,7 +364,7 @@ $footerVersion = 2;
 									$likeIdentifier = $bio->identifier;
 									$totalLikes  = $Homepage->setLikes($likeIdentifier);
 									?>
-									<div class="col-md-3 <?php echo in_array( $bio->name, [ 'Caleb H.' ] ) ? 'hide-for-xs-only' : ''; ?>">
+									<div class="col-md-3 <?php echo in_array( $bio->name, [ 'Caleb H.', 'Peter K.' ] ) ? 'hide-for-xs-only' : ''; ?>">
 										<div class="bio">
 											<?php if ( ! empty( $bio->location ) ) : ?>
 												<a href="<?php echo esc_attr( $bio->location['link'] ); ?>" class="tophat"><?php echo esc_html( $bio->location['label'] ); ?></a>

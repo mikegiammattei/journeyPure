@@ -110,7 +110,7 @@ get_header();
 				<div class="row">
 					<div class="col-12 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
 						<?php if ( ! empty( $location->highlights_v2->heading ) ) : ?>
-							<h2 class="h1"><?php echo wp_kses_post( $location->highlights_v2->heading ); ?></h2>
+							<h2 class="h1 text-center"><?php echo wp_kses_post( $location->highlights_v2->heading ); ?></h2>
 						<?php endif; ?>
 
 						<?php if ( $location->highlights_v2->list ) : ?>
@@ -238,7 +238,8 @@ get_header();
 
 				<?php if ( ! empty( $location->boxes->image ) ) : ?>
 					<div class="row">
-						<div class="col-12">
+						<div class="col-12 graph">
+							<h5>A Visual Breakdown of What Happens Here</h5>
 							<img class="jp-single-loc-boxes-image lazy" data-src="<?php echo esc_attr( $location->boxes->image ); ?>" alt="<?php echo esc_attr( $location->boxes->heading ); ?>">
 						</div>
 					</div>

@@ -150,6 +150,11 @@
 			position: relative;
 			z-index: 1;
 		}
+		.graph {
+		
+			text-align:center;
+			margin: 60px 0 0;
+		}
 
 
 
@@ -166,7 +171,7 @@
 			max-width: 550px;
 
 			@media screen and (min-width: 768px) {
-				margin-top: 60px;
+				margin-top: 45px;
 			}
 		}
 

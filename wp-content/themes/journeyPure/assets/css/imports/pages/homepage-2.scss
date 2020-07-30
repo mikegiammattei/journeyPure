@@ -62,9 +62,12 @@
 		@include jp-embed-responsive;
 	  }
 	  .feature {
-		margin: 20px auto 0;
+		margin: 10px auto 0;
 		padding: 5px 65px 50px;
 		max-width:800px;
+		.h-100 {
+    padding: 10px 15px;
+}
 
 		.lineup{
 		box-shadow: 0px 2px 4px rgba(0,0,0,.18);
@@ -105,7 +108,7 @@
 		  }
 		}
 		.rating-section {
-		  margin: -2px $md-space 20px;
+		  margin: -2px $md-space 0;
 
 		  > .row > div {
 			@media (max-width: 767px) {
@@ -727,7 +730,7 @@ li {
 	  font-family: "Montserrat", sans-serif;
 	  font-style: normal;
 	  font-size: 20px;
-	  max-width: 897px;
+	  max-width: 705px;
 	  margin: 10px auto;
 	      padding: 0 15px;
 	}
@@ -742,6 +745,9 @@ li {
 	  color: #fbbb06 !important;
 	  margin: 0 0 5px;
 	  padding: 0;
+	}
+	a {
+		color: #fbbb06 !important;
 	}
 	}
 
