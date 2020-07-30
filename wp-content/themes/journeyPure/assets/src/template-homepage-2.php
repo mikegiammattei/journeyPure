@@ -47,7 +47,7 @@ $footerVersion = 2;
 												<div class="row no-gutters">
 													<?php foreach ($Homepage->ratings as $rating) : ?>
 														<div class="col-md-6 i-rating">
-															<div class="ratings default inline lineup">
+															<div class="ratings default inline lineup source-<?php echo esc_attr( sanitize_title( $rating->line_1 ) ); ?>">
 																<div class="row no-gutters align-items-center">
 																	<div class="col-2">
 																		<img class="lazy" data-src="<?php echo $rating->image['sizes']['medium']; ?>" alt="<?php echo get_post_meta( $rating->image['ID'], '_wp_attachment_image_alt', true ); ?>">
@@ -338,7 +338,7 @@ $footerVersion = 2;
               <p>
                 Your Accountability Coach can be reached 24/7 through the <b>alumni app</b> – available to you forever for free. They've been where you are and can show you how to stay on track long after treatment here.</p>
                 <p>The app also has an 11-module <b>self-help course</b> and gives you real rewards for making healthy choices.</p>
-  
+
             </div>
           </div>
           <div class="d-sm-flex p-2 ml-auto why-point">

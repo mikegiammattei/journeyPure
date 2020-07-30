@@ -38,7 +38,7 @@
 											<div class="row no-gutters">
 												<?php foreach ( $AboutUs->ratings as $rating ) : ?>
 													<div class="col-md-6 i-rating">
-														<div class="ratings default inline lineup">
+														<div class="ratings default inline lineup source-<?php echo esc_attr( sanitize_title( $rating->line_1 ) ); ?>">
 															<div class="row no-gutters align-items-center">
 																<div class="col-2">
 																	<img class="lazy" data-src="<?php echo esc_attr( $rating->image['sizes']['medium'] ); ?>" alt="<?php echo esc_attr( get_post_meta( $rating->image['ID'], '_wp_attachment_image_alt', true ) ); ?>">
@@ -171,7 +171,7 @@
 	</section>
 	<section class="page-quote">
 		<div class="container">
-			<div class="container"><div class="header"><div class="lead">"Addiction treatment is not only science; it's also art. It deals with the processes of life. People need to see how much we care before they care how much we know." 
+			<div class="container"><div class="header"><div class="lead">"Addiction treatment is not only science; it's also art. It deals with the processes of life. People need to see how much we care before they care how much we know."
 </div></div><div class="media d-inline-flex"> <img class="mr-3" src="/wp-content/uploads/2019/11/dr-stephen-loyd-journeypure-md.jpg" alt="Doctor Stephen Loyd Headhot as Drug Czar"><div class="media-body "><h5 class="mt-0">Dr. Stephen Loyd MD</h5><p>Chief Medical Officer</p></div></div></div>
 		</div>
 	</section>

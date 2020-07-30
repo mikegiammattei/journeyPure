@@ -89,6 +89,7 @@
 			<?php include_once(get_stylesheet_directory() . '/assets/src/includes/components/review-video-modal.php'); ?>
 			<?php include_once(get_stylesheet_directory() . '/assets/src/includes/components/frontman.php'); ?>
 			<?php include_once(get_stylesheet_directory() . '/assets/src/includes/components/virtual-rehab-modal.php'); ?>
+			<?php include_once(get_stylesheet_directory() . '/assets/src/includes/components/reviews-modal.php'); ?>
 
 		</div> <?php /** end of main wrapper */ ?>
 
@@ -96,8 +97,8 @@
 				<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
 				<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script>
 				<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-				<script src="<?php echo get_stylesheet_directory_uri() . '/js/vendor.min.js?v=20200729'; ?>"></script>
-				<script src="<?php echo get_stylesheet_directory_uri() . '/js/custom.min.js?v=20200729'; ?>"></script>
+				<script src="<?php echo get_stylesheet_directory_uri() . '/js/vendor.min.js?v=20200730'; ?>"></script>
+				<script src="<?php echo get_stylesheet_directory_uri() . '/js/custom.min.js?v=20200730'; ?>"></script>
 			<?php endif; ?>
 
 			<?php wp_footer(); ?>

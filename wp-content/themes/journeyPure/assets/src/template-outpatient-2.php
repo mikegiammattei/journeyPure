@@ -45,7 +45,7 @@ get_header();
 											<div class="row no-gutters">
 												<?php foreach ( $outpatient_locations->ratings as $rating ) : ?>
 													<div class="col-md-6 i-rating">
-														<div class="ratings default inline lineup">
+														<div class="ratings default inline lineup source-<?php echo esc_attr( sanitize_title( $rating->line_1 ) ); ?>">
 															<div class="row no-gutters align-items-center">
 																<div class="col-2">
 																	<img class="lazy" data-src="<?php echo esc_attr( $rating->image['sizes']['medium'] ); ?>" alt="<?php echo esc_attr( get_post_meta( $rating->image['ID'], '_wp_attachment_image_alt', true ) ); ?>">
@@ -270,7 +270,7 @@ get_header();
 									<?php foreach ( $outpatient_locations->cards_1 as $card ) : ?>
 										<li class="jp-outpatient2-table-card-list-item">
 											<a class="jp-outpatient2-table-card-place" <?php if ( ! empty( $card['link'] ) ) echo ( 'href="' . esc_attr( $card['link'] ) . '"' ); ?>>
-												<h5 class="jp-outpatient2-table-card-place-title"><?php echo esc_html( $card['title'] ); ?> <span class="fas fa-info-circle"></span></h5> 
+												<h5 class="jp-outpatient2-table-card-place-title"><?php echo esc_html( $card['title'] ); ?> <span class="fas fa-info-circle"></span></h5>
 
 												<div class="jp-outpatient2-table-card-place-stars">
 													<span class="jp-outpatient2-table-card-place-star"><?php echo esc_html( $card['ratings']['number_rating'] ); ?></span>

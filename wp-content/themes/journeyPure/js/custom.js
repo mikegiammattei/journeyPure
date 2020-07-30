@@ -733,6 +733,10 @@ $(document).ready(function () {
         slider.slick('setPosition');
       }
     };
+  }); // Reviews modal
+
+  jQuery('.ratings[class*="source-"][class*="-google"]').each(function () {
+    jQuery(this).attr('data-toggle', 'modal').attr('data-target', '#reviews-modal');
   });
 });
 "use strict";

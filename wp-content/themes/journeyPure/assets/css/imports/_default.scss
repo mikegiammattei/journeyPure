@@ -328,11 +328,11 @@ hr{
 
 	  .heading{
 		@extend .page-heading;
-		
+
 		@media screen and (max-width: 768px) {
 			font-size:45px;
 		}
-		
+
 	  }
 	  .lead{
 		@extend .h1;
@@ -462,6 +462,12 @@ figure{
 
 .modal{
   padding-right: 0px !important;
+
+  .modal-header {
+	  h5, .h5 {
+		margin-bottom: 0;
+	  }
+  }
 
   .modal-content{
 	border:none;

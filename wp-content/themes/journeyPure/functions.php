@@ -148,7 +148,7 @@ endif;
  */
 function ajax_get_reviews() {
 	require_once get_stylesheet_directory() . '/classes/ReviewPage2.php';
-	$reviews = new Pages\ReviewPage2();
+	$reviews = new Pages\ReviewPage2( true );
 	$reviews->ajax_get_reviews();
 }
 

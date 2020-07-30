@@ -67,4 +67,11 @@ $(document).ready(function () {
 		};
 	});
 
+	// Reviews modal
+	// (ON HOLD THIS CHANGE)
+
+	// jQuery('.ratings[class*="source-"][class*="-google"]').each(function() {
+	// 	jQuery(this).attr('data-toggle', 'modal').attr('data-target', '#reviews-modal');
+	// });
+
 });

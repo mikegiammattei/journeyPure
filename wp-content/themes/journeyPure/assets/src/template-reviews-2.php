@@ -39,7 +39,7 @@ get_header();
 											<div class="row no-gutters">
 												<?php foreach ( $reviews->ratings as $rating ) : ?>
 													<div class="col-md-6 i-rating">
-														<div class="ratings default inline lineup">
+														<div class="ratings default inline lineup source-<?php echo esc_attr( sanitize_title( $rating->line_1 ) ); ?>">
 															<div class="row no-gutters align-items-center">
 																<div class="col-2">
 																	<img class="lazy" data-src="<?php echo esc_attr( $rating->image['sizes']['medium'] ); ?>" alt="<?php echo esc_attr( get_post_meta( $rating->image['ID'], '_wp_attachment_image_alt', true ) ); ?>">

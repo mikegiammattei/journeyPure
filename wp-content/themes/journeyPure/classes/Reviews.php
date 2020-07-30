@@ -15,16 +15,16 @@ class Reviews
 {
 
 	public $reviews;
-	private $post;
-	private $fields = array();
+	// private $post;
+	// private $fields = array();
 	private $reviewPostsIds;
 	private $reviewCount;
 	private $avgRating;
 
 	public function __construct(){
-		global $post;
-		$this->post = $post;
-		$this->fields = get_fields($post->ID);
+		// global $post;
+		// $this->post = $post;
+		// $this->fields = get_fields($post->ID);
 
 	}
 	public function setAvgRating($reviews){
@@ -145,27 +145,34 @@ class Reviews
 			if ( 'likes' === $orderby ) {
 				// @TODO cusom query.
 			} else {
-				$args = array(
-					'posts_per_page'   => 10,
-					'paged'            => $page,
-					'post_type'        => 'reviews',
-					'category__not_in' => $category_ids,
-				);
+				$cache_key = 'reviews_' . implode( '_c', $category_ids ) . '_p' . $page . '_ob' . $orderby . '_o' . $order;
+				$reviews   = get_transient( $cache_key );
 
-				if ( 'date' === $orderby ) {
-					$args['order']   = $order;
-					$args['orderby'] = $orderby;
-				} else {
-					$args['order']    = $order;
-					$args['orderby']  = 'meta_value_num';
-					$args['meta_key'] = $orderby; // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+				if ( false === $reviews ) {
+					$args = array(
+						'posts_per_page'   => 10,
+						'paged'            => $page,
+						'post_type'        => 'reviews',
+						'category__not_in' => $category_ids,
+					);
+
+					if ( 'date' === $orderby ) {
+						$args['order']   = $order;
+						$args['orderby'] = $orderby;
+					} else {
+						$args['order']    = $order;
+						$args['orderby']  = 'meta_value_num';
+						$args['meta_key'] = $orderby; // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+					}
+
+					$wp_query = new \WP_Query( $args );
+					$reviews  = $wp_query->posts;
+					set_transient( $cache_key, $reviews, MINUTE_IN_SECONDS );
 				}
-
-				$wp_query = new \WP_Query( $args );
 			}
 
 			// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
-			$this->reviewPostsIds = wp_list_pluck( $wp_query->posts, 'ID' );
+			$this->reviewPostsIds = wp_list_pluck( $reviews, 'ID' );
 			$this->setReviews();
 
 			// Set total counters to be global and not filtered.
@@ -183,28 +190,48 @@ class Reviews
 	public function set_global_counters() {
 		global $wpdb;
 
-		// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
-		$this->reviewCount = wp_count_posts( 'reviews' )->publish;
+		// ---
 
-		// phpcs:ignore WordPress.DB.DirectDatabaseQuery
-		$star_rating = $wpdb->get_col(
-			$wpdb->prepare(
-				"
-					SELECT SUM(pm.meta_value) FROM {$wpdb->postmeta} pm
-					LEFT JOIN {$wpdb->posts} p ON p.ID = pm.post_id
-					WHERE pm.meta_key = %s
-					AND p.post_status = %s
-					AND p.post_type = %s
-				",
-				'star_rating',
-				'publish',
-				'reviews'
-			)
-		);
+		$cache_key    = 'reviews_review_count';
+		$review_count = get_transient( $cache_key );
+
+		if ( false === $review_count ) {
+			$review_count = wp_count_posts( 'reviews' )->publish;
+			set_transient( $cache_key, $review_count, MINUTE_IN_SECONDS );
+		}
 
 		// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
-		$avg = $star_rating[0] / $this->reviewCount;
+		$this->reviewCount = $review_count;
+
+		// ---
+
+		$cache_key   = 'reviews_avg_rating';
+		$star_rating = get_transient( $cache_key );
+
+		if ( false === $star_rating ) {
+			// phpcs:ignore WordPress.DB.DirectDatabaseQuery
+			$star_rating = $wpdb->get_col(
+				$wpdb->prepare(
+					"
+						SELECT SUM(pm.meta_value) FROM {$wpdb->postmeta} pm
+						LEFT JOIN {$wpdb->posts} p ON p.ID = pm.post_id
+						WHERE pm.meta_key = %s
+						AND p.post_status = %s
+						AND p.post_type = %s
+					",
+					'star_rating',
+					'publish',
+					'reviews'
+				)
+			);
+
+			set_transient( $cache_key, $star_rating, MINUTE_IN_SECONDS );
+		}
+
+		// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		$avg = $star_rating[0] / $review_count;
 		$avg = sprintf( '%0.1f', $avg );
+
 		// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 		$this->avgRating = $avg;
 	}

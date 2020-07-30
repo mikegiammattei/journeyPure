@@ -18,14 +18,17 @@ class ReviewPage2 {
 	 *
 	 * @return void
 	 */
-	public function __construct() {
-		global $post;
-		$this->post = $post;
+	public function __construct( $only_reviews = false ) {
+		if ( false === $only_reviews ) {
+			global $post;
+			$this->post = $post;
 
-		$this->fields = get_fields();
+			$this->fields = get_fields();
 
-		$this->set_ratings();
-		$this->set_videos();
+			$this->set_ratings();
+			$this->set_videos();
+		}
+
 		$this->set_reviews();
 	}
 
