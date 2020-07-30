@@ -412,6 +412,10 @@
   width: -webkit-max-content; /* Chrome */
   width: max-content;
     overflow: hidden;
+
+	@media (max-width: 991px) {
+	  width: calc(100% + 15px);
+	}
 	}
 
 	  @media (max-width: 991px) {
