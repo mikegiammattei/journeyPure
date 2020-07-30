@@ -60,6 +60,7 @@
 	  .embed-responsive {
 		box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
 		@include jp-embed-responsive;
+		border-top:8px solid $light-blue;
 	  }
 	  .feature {
 		margin: 10px auto 0;

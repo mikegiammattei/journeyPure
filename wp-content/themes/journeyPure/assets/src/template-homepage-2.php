@@ -38,7 +38,6 @@ $footerVersion = 2;
 
 											<p>Drug and alcohol issues are complex and personal. But, you don't have to figure this out on your own. When you're ready for something to change, call to talk privately about your options and get information without commitment.</p>
 
-											<p><b>You can do this!</b></p>
 
 
 										</div>
@@ -81,7 +80,7 @@ $footerVersion = 2;
 								</div>
 								<div class="col-lg-12 col-sm-12">
 									<div class="card card-body h-100 justify-content-center transparent" style="width: 100%; ">
-										<div class="embed-responsive embed-responsive-16by9 youtube-video-place lazy" data-src='/wp-content/uploads/2020/07/rehab-testimonial-video-daniel.jpg' data-yt-url="https://www.youtube.com/embed/kNj08KeNbIA">
+										<div class="embed-responsive embed-responsive-16by9 youtube-video-place lazy" data-src='/wp-content/uploads/2020/07/Copy-of-Copy-of-Color-Project-School-Photo-Collage-1.png' data-yt-url="https://www.youtube.com/embed/kNj08KeNbIA">
 											<span class="play-button"></span>
 										</div>
 									</div>
