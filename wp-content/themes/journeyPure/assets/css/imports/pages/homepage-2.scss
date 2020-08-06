@@ -370,7 +370,7 @@
 
 	.media-body{
 	    font-family: $heading-style-1;
-    	font-size: 17px;
+    	font-size: 19px;
 	}
 	.media-con {
 		// Hide last 2 icons on iPad pro
@@ -492,16 +492,15 @@ b{
 	}
 
 	.why-icon{
-
+background: #A0B6DE;
+    margin: -8px 15px -8px -8px;
+    padding: .5rem 0 0 !important;
+	width: 55px;
 	i {
-	background: $primary;
     text-align: center;
-    padding-top: 12px;
     color: $light-blue;
     font-size: 29px;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
+
     padding: 12px;
 
 	}
@@ -510,16 +509,21 @@ b{
 		display:none;
 	 }
 	 }
-	 .ml-auto{
-	 @media (max-width: 767px) {
-		margin-top:-16px;
-	 }
-	 }
-
+	
 
 	.why-point{
 	margin-bottom:20px;
-		max-width: 584px;
+    max-width: 645px;
+    background: #F5F7FC;
+    border-radius: 3px;
+	
+
+	.h5{
+		padding-top:9px;
+	}
+	u{
+		font-weight:bold;
+	}
 	}
 
 	.col-lg-11 {
@@ -536,6 +540,13 @@ li {
 }
 .bio-default {
 	margin-top:30px;
+	.no-gutters{
+		margin: 0 -17px;
+		@media (max-width: 767px) {
+			margin:0;
+		}
+		
+	}
 }
 
 	}
@@ -576,6 +587,10 @@ li {
     text-align: center;
     margin: 0 auto 32px;
 	  }
+	  h5{
+	  color: #A2B5DE;
+    margin-bottom: 0;
+	  }
 
 	  div[class*="col"] {
 		border-right: 2px dotted $primary;
@@ -592,7 +607,7 @@ li {
 	  .box {
 		text-align: center;
 		font-size: 17px;
-		padding: 25px 40px 40px;
+		padding: 25px 24px 40px;
 		line-height:30px;
 
 		@media (max-width: 767px) {
@@ -602,15 +617,15 @@ li {
 		i {
     font-size: 29px;
     display: block;
-    color: #0033a1;
+    color: #ffffffad;
     margin-bottom: 20px;
-    background: white;
+    background: #0033a147;
     border-radius: 50%;
     width: 60px;
     height: 60px;
     padding: 15px;
     margin: 0 auto 11px;
-    opacity: 0.4;
+
 		}
 	  }
 	}
@@ -800,6 +815,7 @@ li {
 		color:$primary;
 		display: inline-block;
 		margin-bottom: 12px;
+		    font-weight: 500;
 	}
 	.lazy {
 		@media screen and (max-width: 767px) {

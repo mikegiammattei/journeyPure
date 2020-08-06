@@ -198,7 +198,7 @@
 					<div class="card-body">
 						<h5 class="card-title">CARF Accredited </h5>
 						<p class="card-text">
-							While state licensing is mandatory, adhering to much <b>higher standards</b> from non-profit accrediting organizations is reserved only for providers with the commitment and capabilities to provide <b>better treatment</b>.  <i>The majority of addiction treatment providers are not accredited.</i> CARF is the highest level of accreditation in our industry.  The review process takes nine to 12 months. Only 20% of addiction treatment providers meet and maintain these <a href="http://www.carf.org/Accreditation/" target="_blank">strict criteria</a>.
+							While state licensing is mandatory, only for providers with the commitment and capabilities to provide <b>better treatment</b> adhere to much <b>higher standards</b> from non-profit accrediting organizations.  <i>The majority of addiction treatment providers are not accredited.</i> CARF is the highest level of accreditation in our industry.  The review process takes nine to 12 months. Only 20% of addiction treatment providers meet and maintain these <a href="http://www.carf.org/Accreditation/" target="_blank">strict criteria</a>.
 						</p>
 					</div>
 				</div>
@@ -207,7 +207,7 @@
 					<div class="card-body">
 						<h5 class="card-title">LegitScript Certified</h5>
 						<p class="card-text">
-							LegitScript is the authority on <b>ethical healthcare marketing</b>. Most other large providers in our industry do not meet these high standards. We were one of the first companies in the world to earn the LegitScript certification, which is backed by Visa, MasterCard, Google, Microsoft and Facebook. The certification assures what we say about ourselves and our facilities are <b>true and transparent</b>. It also ensures we do not accept any form of payment for referrals. Our status can be verified on <a href="https://www.legitscript.com/websites/?lookup_type=website_search&website=www.journeypure.com&product=" target="_blank">LegitScript.com</a>.
+							LegitScript is the authority on <b>ethical healthcare marketing</b>. Most large providers in our industry do not meet these high standards. We were one of the first in the world to earn the specialized certification, which is backed by Visa, Google, Microsoft and Facebook. It assures what we say about our facilities is true and transparent and that we don't accept any form of payment for referrals. Our status can be verified on  <a href="https://www.legitscript.com/websites/?lookup_type=website_search&website=www.journeypure.com&product=" target="_blank">LegitScript.com</a>.
 
 						</p>
 
@@ -216,9 +216,9 @@
 				<div class="card">
 					<img src="<?php echo WP_UPLOAD_PATH;?>/2020/01/BD-O-bg-fade-01.jpg" class="card-img-top" alt="...">
 					<div class="card-body">
-						<h5 class="card-title">Health Insurance Distinguished</h5>
+						<h5 class="card-title">Insurance Distinguished</h5>
 						<p class="card-text">
-							Blue Cross Blue Sheild is the largest health insurer in the U.S. The honor of Blue Distinction means we <i>"demonstrate quality care, treatment expertise and better overall patient results."</i> Learn how they separate <b>the top 1%</b> of specialty care providers on <a href="https://www.bcbs.com/sites/default/files/file-attachments/page/Substance_Use_Treatment_and_Recovery_Selection_Criteria.pdf" target="_blank">BCBS.com</a>. In addition, Optum is also using data and insights to categorize the effectiveness of treatment facilities. We earned the <b>highest Platinum status</b>. More information on the Optum tier system is available on <a href="https://cdn-aem.optum.com/content/dam/optum3/optum/en/resources/white-papers/OptumAchievementsinClinicalExcellenceforFacilitiesWhitePaper.pdf" target="_blank">Optum.com</a>.
+							Blue Cross Blue Sheild is the largest health insurer in the U.S. The honor of Blue Distinction means we <i>"demonstrate quality care, treatment expertise and better overall patient results."</i> Learn how they separate <b>the top 1%</b> of specialty care providers on <a href="https://www.bcbs.com/sites/default/files/file-attachments/page/Substance_Use_Treatment_and_Recovery_Selection_Criteria.pdf" target="_blank">BCBS.com</a>. In addition, Optum uses their data to categorize the effectiveness of treatment facilities. We earned the <b>highest Platinum status</b>. More information on the Optum tier system at <a href="https://cdn-aem.optum.com/content/dam/optum3/optum/en/resources/white-papers/OptumAchievementsinClinicalExcellenceforFacilitiesWhitePaper.pdf" target="_blank">Optum.com</a>.
 
 						</p>
 

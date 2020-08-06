@@ -4,14 +4,13 @@
 	box-shadow: 0px 2px 4px rgba(0,0,0,.18);
 	margin: 0 $md-space 30px;
 	overflow: hidden;
-	background: #ebebeb;
+	background: #F5F7FC;
 
 	@media (max-width: 767px) {
 				margin:0 0px 15px;
 			  }
 
 	.tophat {
-		box-shadow: 0px 2px 4px rgba(0,0,0,0.18);
 		position: absolute;
 		top: 7px;
 		background-color: $light-blue;

@@ -154,7 +154,7 @@ get_header();
 							<h4 class="jp-vr-table-card-title">Virtual Rehab Vs. <b>Online Therapy</b></h4>
 
 							<ul class="jp-vr-table-card-list">
-								<li class="jp-vr-table-card-list-item">Specialized in addiction</li>
+								<li class="jp-vr-table-card-list-item">Specialized in addiction and mental health</li>
 								<li class="jp-vr-table-card-list-item">Medications and Accountability Coaching beyond therapy</li>
 							</ul>
 						</div>
@@ -198,7 +198,7 @@ get_header();
 			<div class="row">
 				<div class="col-12">
 					<h3 class="jp-vr-components-title">The Same Components of Rehab</h3>
-					<p class="jp-vr-components-subtitle">Except, it's on your phone.</p>
+					<p class="jp-vr-components-subtitle">Except, it's on your phone (or computer).</p>
 
 					<div class="jp-vr-components-icon">
 						<span class="fas fa-mobile-alt"></span>

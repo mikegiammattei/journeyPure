@@ -99,22 +99,22 @@ $footerVersion = 2;
 					<div class="row">
 						<div class="col-md-3">
 							<div class="box">
-								<i class="fas fa-user-md"></i>  Medical Detox <p>It's nothing like doing it on your own.</p>
+								<i class="fas fa-user-md"></i>  <h5>Medical Detox</h5> <p>It's nothing like doing it on your own.</p>
 							</div>
 						</div>
 						<div class="col-md-3">
 							<div class="box">
-								<i class="fas fa-clinic-medical"></i>  Inpatient Rehabs <p>The most effective level of treatment.</p>
+								<i class="fas fa-clinic-medical"></i>  <h5>Inpatient Rehabs</h5> <p>The most effective level of treatment.</p>
 							</div>
 						</div>
 						<div class="col-md-3">
 							<div class="box">
-								<i class="fas fa-hotel"></i>  Outpatient Clinics <p>Treatment on your schedule.</p>
+								<i class="fas fa-hotel"></i>  <h5>Outpatient Clinics</h5> <p>Treatment on your schedule.</p>
 							</div>
 						</div>
 						<div class="col-md-3">
 							<div class="box last">
-								<i class="fas fa-mobile-alt"></i> App + Coaching <p>Free, life-long support and resources.</p>
+								<i class="fas fa-mobile-alt"></i> <h5>App + Coaching</h5> <p>Free, life-long support and resources.</p>
 							</div>
 						</div>
 					</div>
@@ -216,7 +216,7 @@ $footerVersion = 2;
 							);
 							$listItems[] = array(
 								'heading' => "Your treatment is backed by 6K+ success stories",
-								'content' => "We've helped thousands of people like you get healthy and stay healthy.  Don't let doubts hold you back. You've got this! (And, we're here to help)."
+								'content' => "We've helped thousands of people like you get healthy and stay healthy.  Don't let doubts hold you back. You can do this! (And, we're here to help)."
 							);
 							$listItems[] = array(
 								'heading' => "There's 95% you'll be happy with your care",
@@ -303,53 +303,10 @@ $footerVersion = 2;
 			</div>
 		</section>
 		<section class="block-3">
-      <div class="container">
-        <div class="heading">
-          <h5 class="h1">Why Treatment Here Works</h5>
-        </div>
-        <h3>Even if you've been to dozens of other facilities before, the treatment here is different.  We set industry standards and hold ourselves accountable for your long-term success.</h3>
-        <div class="d-sm-flex">
-          <div class="d-sm-flex p-2 why-point">
-            <div class="p-2 why-icon">
-              <i class="fas fa-microscope"></i>
-            </div>
-            <div class="p-2">
-              <div class="h5">Evidence-Based Treatments</div>
-              <p>All good treatment centers combine medical care, holistic healing and intense daily therapies. <b>Our success rates are better</b> because of how we execute and refine proven methods.</p>
-                <p>We incorporate the <b>latest advances in addiction science</b> and publish groundbreaking research with a focus on each individual success story.</p>
-            </div>
-          </div>
-		   <div class="d-sm-flex p-2 ml-auto why-point">
-            <div class="p-2 why-icon"><i class="fas fa-users"></i></div>
-            <div class="p-2">
-              <div class="h5">A Comprehensive Team</div>
-              <p>Effective treatment addresses the wide range of <b>issues that hide behind alcohol and drugs</b> - like trauma and anxiety. It takes a team of specialists to attack the disease at all angles.</p>
-                <p>If you've sought treatment before, you know how critical it is to get <b>individualized attention</b> from experienced professionals who actually care.</p>
-            </div>
-          </div>
-
-        </div>
-        <div class="d-sm-flex">
-                   <div class="d-sm-flex p-2 why-point">
-            <div class="p-2 why-icon"><i class="fas fa-hands-helping"></i></div>
-            <div class="p-2">
-              <div class="h5">Active Accountability</div>
-              <p>
-                Your Accountability Coach can be reached 24/7 through the <b>alumni app</b> – available to you forever for free. They've been where you are and can show you how to stay on track long after treatment here.</p>
-                <p>The app also has an 11-module <b>self-help course</b> and gives you real rewards for making healthy choices.</p>
-
-            </div>
-          </div>
-          <div class="d-sm-flex p-2 ml-auto why-point">
-            <div class="p-2 why-icon"><i class="fas fa-map-marked"></i></div>
-            <div class="p-2">
-              <div class="h5">Personalized Plans</div>
-                <p>These issues are personal. Beyond cognitive behavior group and individual therapies, you need access to specific tools that <b>maximize your time here</b>. </p>
-                <p>From virtual-reality therapy for combat veterans to imago marriage counseling, we'll <b>do what it takes</b> to help you get healthy (and stay healthy).</p>
-            </div>
-          </div>
-        </div>
-      </div>
+<div class="container"><div class="heading"><h5 class="h1">Why Treatment Here Works</h5></div><h3>Even if you've been to dozens of other facilities before, the treatment here is different. We set industry standards and hold ourselves accountable for your long-term success.</h3><div class="d-sm-flex"><div class="d-sm-flex p-2 why-point" style="
+"><div class="p-2 why-icon" style="
+"><i class="fas fa-microscope"></i></div><div class="p-2"><div class="h5">Evidence-Based Treatments</div><p>Effective treatment addresses the range of <u>issues that hide behind alcohol and drugs.</u> We incorporate the <i>latest advances in addiction science and mental wellness</i> and publish our own groundbreaking research.</p></div></div><div class="d-sm-flex p-2 ml-auto why-point"><div class="p-2 why-icon" style="
+"><i class="fas fa-users"></i></div><div class="p-2"><div class="h5">A Comprehensive Team</div><p>You deserve <u>individualized attention</u> from experienced professionals who <u>actually care</u>. Our reputation and success rates attract the country's leading experts - from medical doctors and psychologists to art and equine therapists.</p></div></div></div><div class="d-sm-flex"><div class="d-sm-flex p-2 why-point"><div class="p-2 why-icon"><i class="fas fa-hands-helping"></i></div><div class="p-2"><div class="h5">Active Accountability</div><p>Your <u>Accountability Coach</u> can be reached 24/7 through the <u>alumni app</u>. They've been where you are and can show you how to stay on track long after treatment here. The app also  rewards you for making healthy choices.</p></div></div><div class="d-sm-flex p-2 ml-auto why-point"><div class="p-2 why-icon"><i class="fas fa-map-marked"></i></div><div class="p-2"><div class="h5">Personalized Plans</div><p>Beyond cognitive behavior group and individual therapies, you need access to tools that <u>maximize your time here</u>. From virtual-reality therapy for combat veterans to imago marriage counseling, we do what it takes to keep you healthy.</p></div></div></div></div>
 
 	  <div class="bio-default container">
 							<div class="row no-gutters">
@@ -363,7 +320,7 @@ $footerVersion = 2;
 									$likeIdentifier = $bio->identifier;
 									$totalLikes  = $Homepage->setLikes($likeIdentifier);
 									?>
-									<div class="col-md-3 <?php echo in_array( $bio->name, [ 'Caleb H.', 'Peter K.' ] ) ? 'hide-for-xs-only' : ''; ?>">
+									<div class="col-md-3 <?php echo in_array( $bio->name, [ 'Caleb H.', 'Gregory C.' ] ) ? 'hide-for-xs-only' : ''; ?>">
 										<div class="bio">
 											<?php if ( ! empty( $bio->location ) ) : ?>
 												<a href="<?php echo esc_attr( $bio->location['link'] ); ?>" class="tophat"><?php echo esc_html( $bio->location['label'] ); ?></a>
