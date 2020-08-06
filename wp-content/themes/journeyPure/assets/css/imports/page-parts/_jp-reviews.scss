@@ -1,25 +1,35 @@
-// Reviews box modal
+@mixin jp-reviews {
+	background-color: #ffffff;
+	padding-bottom: 50px;
+	position: relative;
 
-.reviews-modal {
-	.modal-body {
-		padding: 0;
+	&:before {
+		background-color: #e1e7f5;
+		content: '';
+		height: 50%;
+		left: 0;
+		// max-height: 450px;
+		position: absolute;
+		right: 0;
+		top: 0;
+
+		body.home & {
+			background-color: #ebebeb;
+		}
 	}
-}
 
-// Reviews box CTA (to open modal)
-// (ON HOLD THIS CHANGE)
+	.container {
+		position: relative;
+		z-index: 1;
+	}
 
-// .ratings[class*="source-"][class*="-google"] {
-// 	cursor: pointer;
+	// &-title {}
 
-// 	.content p.sub {
-// 		color: $primary;
-// 	}
-// }
+	&-subtitle {
+		margin: 15px auto 50px;
+		max-width: 683px;
+	}
 
-// Reviews box (reviews page template and global modal)
-
-.jp-reviews-reviews {
 	&-box {
 		background-color: #ffffff;
 		border-radius: 10px;

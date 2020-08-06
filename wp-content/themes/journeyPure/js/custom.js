@@ -714,7 +714,6 @@ $(document).ready(function () {
 
   $(document).on('click', '.youtube-video-place', function () {
     var thisVidUrl = $(this);
-    console.log('test', thisVidUrl);
     thisVidUrl.html('<iframe allowfullscreen allow="autoplay; encrypted-media" frameborder="0" class="embed-responsive-item" src="' + thisVidUrl.data('yt-url') + '?rel=0&showinfo=0&autoplay=1&cc_load_policy=1"></iframe>');
     thisVidUrl.addClass('playing');
   }); // ---
@@ -733,11 +732,87 @@ $(document).ready(function () {
         slider.slick('setPosition');
       }
     };
-  }); // Reviews modal
+  }); // ---
+  // Reviews section
+  // Read more
 
-  jQuery('.ratings[class*="source-"][class*="-google"]').each(function () {
-    jQuery(this).attr('data-toggle', 'modal').attr('data-target', '#reviews-modal');
+  jQuery(document).on('click', '.jp-reviews-reviews-review-text-more', function () {
+    var _this = jQuery(this);
+
+    var shortText = _this.closest('.jp-reviews-reviews-review-text');
+
+    var longText = shortText.next('.jp-reviews-reviews-review-text');
+    shortText.addClass('hide');
+    longText.removeClass('hide');
+  }); // Reviews section
+  // Load more items
+
+  jQuery(document).on('click', '.jp-reviews-reviews-loading-button', function () {
+    window.reviewsLoadItems(false);
   });
+  jQuery(document).on('change', '.jp-reviews-reviews-filter #sort', function () {
+    window.reviewsLoadItems(true);
+  });
+  jQuery('.jp-reviews-reviews-reviews').on('scroll', function () {
+    // Only desktop
+    if (jQuery(window).width() >= 1024) {
+      var _this = jQuery(this);
+
+      if (_this.scrollTop() + _this.innerHeight() >= this.scrollHeight) {
+        window.reviewsLoadItems(false);
+      }
+    }
+  });
+
+  window.reviewsLoadItems = function (reset) {
+    var box = jQuery('.jp-reviews-reviews-box');
+    var placeholder = jQuery('.jp-reviews-reviews-reviews-inner');
+    box.addClass('loading');
+    var page = parseInt(box.data('page')) + 1;
+    var sort = jQuery('#sort').val();
+    var url = box.data('url');
+    var nonce = box.data('nonce');
+    var documentScroll = jQuery(document).scrollTop();
+    var placeholderScroll = placeholder.parent().scrollTop();
+
+    if (reset) {
+      page = 1;
+      placeholderScroll = 0;
+    }
+
+    jQuery.post(url, {
+      'action': 'get_reviews',
+      'nonce': nonce,
+      'page': page,
+      'sort': sort
+    }, function (html) {
+      if (html != '') {
+        // Insert HTML
+        if (reset) {
+          placeholder.html(html);
+        } else {
+          placeholder.append(html);
+        } // Fix scroll
+
+
+        jQuery(document).scrollTop(documentScroll);
+        placeholder.parent().scrollTop(placeholderScroll); // Trigger lazy load images (W3 Total Cache)
+
+        if (typeof window.w3tc_lazyload !== 'undefined') {
+          window.w3tc_lazyload.update();
+        } // Trigger tooltips (Bootstrap)
+
+
+        placeholder.find('[data-toggle="tooltip"]').tooltip(); // Update data
+
+        box.data('page', page);
+      } else {
+        box.removeClass('done');
+      }
+    }).always(function () {
+      box.removeClass('loading');
+    });
+  };
 });
 "use strict";
 
@@ -834,6 +909,33 @@ if ($('#homepage').length > 0) {
     $curr.addClass("active");
     $curr.prevAll().addClass("visited");
   }); // end  script for tab steps
+  // Multiple Videos Modal
+  // On square thumbnail click, replace/play the video on the placeholder
+
+  jQuery(document).on('click', '.jp-homepage-videos-modal-item-image-wrapper', function () {
+    var _this = jQuery(this);
+
+    var parent = _this.closest('.jp-homepage-videos-modal-item');
+
+    var youtubeId = _this.data('youtube-video-id');
+
+    var title = parent.find('.jp-homepage-videos-modal-item-title').html();
+    var text = parent.find('.jp-homepage-videos-modal-item-text').html();
+    var videoPlaceholder = '#jp-homepage-videos-modal .embed-responsive';
+    var titlePlaceholder = '#jp-homepage-videos-modal .modal-title';
+    var textPlaceholder = '#jp-homepage-videos-modal .modal-body-text';
+    var videoHtml = '<iframe allowfullscreen allow="autoplay; encrypted-media" frameborder="0" src="https://www.youtube.com/embed/' + youtubeId + '?rel=0&showinfo=0&autoplay=1&cc_load_policy=1"></iframe>';
+    jQuery(videoPlaceholder).html(videoHtml);
+    jQuery(videoPlaceholder).addClass('playing');
+    jQuery(titlePlaceholder).html(title);
+    jQuery(textPlaceholder).html(text);
+  }); // ---
+
+  $(document).on('click', '.jp-homepage-card-cta-button', function () {
+    var thisTrigger = $(this);
+    var thisVideContainerId = thisTrigger.data('target');
+    $(thisVideContainerId).find('.youtube-video-place').trigger('click');
+  });
 }
 "use strict";
 
@@ -1542,7 +1644,7 @@ jQuery(document).ready(function () {
   }); // Videos section
   // Slider
 
-  var slider = jQuery('.jp-reviews-videos-video-slider');
+  var slider = jQuery('.jp-reviews-videos-video-slider, .jp-homepage-videos-video-slider');
   slider.each(function () {
     var _this = jQuery(this);
 
@@ -1592,86 +1694,7 @@ jQuery(document).ready(function () {
         prevButton.removeClass('has-more');
       }
     });
-  }); // Reviews section
-  // Read more
-
-  jQuery(document).on('click', '.jp-reviews-reviews-review-text-more', function () {
-    var _this = jQuery(this);
-
-    var shortText = _this.closest('.jp-reviews-reviews-review-text');
-
-    var longText = shortText.next('.jp-reviews-reviews-review-text');
-    shortText.addClass('hide');
-    longText.removeClass('hide');
-  }); // Reviews section
-  // Load more items
-
-  jQuery(document).on('click', '.jp-reviews-reviews-loading-button', function () {
-    window.reviewsLoadItems(false);
   });
-  jQuery(document).on('change', '.jp-reviews-reviews-filter #sort', function () {
-    window.reviewsLoadItems(true);
-  });
-  jQuery('.jp-reviews-reviews-reviews').on('scroll', function () {
-    // Only desktop
-    if (jQuery(window).width() >= 1024) {
-      var _this = jQuery(this);
-
-      if (_this.scrollTop() + _this.innerHeight() >= this.scrollHeight) {
-        window.reviewsLoadItems(false);
-      }
-    }
-  });
-
-  window.reviewsLoadItems = function (reset) {
-    var box = jQuery('.jp-reviews-reviews-box');
-    var placeholder = jQuery('.jp-reviews-reviews-reviews-inner');
-    box.addClass('loading');
-    var page = parseInt(box.data('page')) + 1;
-    var sort = jQuery('#sort').val();
-    var url = box.data('url');
-    var nonce = box.data('nonce');
-    var documentScroll = jQuery(document).scrollTop();
-    var placeholderScroll = placeholder.parent().scrollTop();
-
-    if (reset) {
-      page = 1;
-      placeholderScroll = 0;
-    }
-
-    jQuery.post(url, {
-      'action': 'get_reviews',
-      'nonce': nonce,
-      'page': page,
-      'sort': sort
-    }, function (html) {
-      if (html != '') {
-        // Insert HTML
-        if (reset) {
-          placeholder.html(html);
-        } else {
-          placeholder.append(html);
-        } // Fix scroll
-
-
-        jQuery(document).scrollTop(documentScroll);
-        placeholder.parent().scrollTop(placeholderScroll); // Trigger lazy load images (W3 Total Cache)
-
-        if (typeof window.w3tc_lazyload !== 'undefined') {
-          window.w3tc_lazyload.update();
-        } // Trigger tooltips (Bootstrap)
-
-
-        placeholder.find('[data-toggle="tooltip"]').tooltip(); // Update data
-
-        box.data('page', page);
-      } else {
-        box.removeClass('done');
-      }
-    }).always(function () {
-      box.removeClass('loading');
-    });
-  };
 });
 "use strict";
 

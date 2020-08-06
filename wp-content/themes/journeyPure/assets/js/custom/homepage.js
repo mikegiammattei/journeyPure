@@ -1,4 +1,3 @@
-
 if($('#homepage').length > 0){
 	$(document).ready(function () {
 		setTimeout(function () {
@@ -105,5 +104,35 @@ if($('#homepage').length > 0){
 		$curr.prevAll().addClass("visited");
 	});
 	// end  script for tab steps
-}
 
+
+	// Multiple Videos Modal
+	// On square thumbnail click, replace/play the video on the placeholder
+
+	jQuery(document).on('click', '.jp-homepage-videos-modal-item-image-wrapper', function() {
+		const _this = jQuery(this);
+		const parent = _this.closest('.jp-homepage-videos-modal-item');
+		const youtubeId = _this.data('youtube-video-id');
+		const title = parent.find('.jp-homepage-videos-modal-item-title').html();
+		const text = parent.find('.jp-homepage-videos-modal-item-text').html();
+		let videoPlaceholder = '#jp-homepage-videos-modal .embed-responsive';
+		let titlePlaceholder = '#jp-homepage-videos-modal .modal-title';
+		let textPlaceholder = '#jp-homepage-videos-modal .modal-body-text';
+
+		const videoHtml = '<iframe allowfullscreen allow="autoplay; encrypted-media" frameborder="0" src="https://www.youtube.com/embed/' + youtubeId + '?rel=0&showinfo=0&autoplay=1&cc_load_policy=1"></iframe>';
+
+		jQuery(videoPlaceholder).html(videoHtml);
+		jQuery(videoPlaceholder).addClass('playing');
+
+		jQuery(titlePlaceholder).html(title);
+		jQuery(textPlaceholder).html(text);
+	});
+
+	// ---
+
+	$(document).on('click', '.jp-homepage-card-cta-button', function() {
+		let thisTrigger = $(this);
+		let thisVideContainerId = thisTrigger.data('target');
+		$(thisVideContainerId).find('.youtube-video-place').trigger('click');
+	});
+}

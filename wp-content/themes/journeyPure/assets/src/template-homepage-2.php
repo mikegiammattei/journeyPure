@@ -3,12 +3,16 @@
  * Template Name: Homepage 2
  */
 
-include_once(get_stylesheet_directory() . '/classes/Homepage.php');
+require_once get_stylesheet_directory() . '/classes/Homepage.php';
 $Homepage = new Homepage\Homepage();
+
+require_once get_stylesheet_directory() . '/classes/ReviewPage2.php';
+$reviews = new Pages\ReviewPage2( true );
 
 /** Page specific js*/
 $jsFile = 'homepage';
 get_header();
+
 /** Specify footer */
 $footerVersion = 2;
 
@@ -22,24 +26,35 @@ $footerVersion = 2;
 	<main>
 		<?php $restApiPath = 'http://journeypure.net/rest-api'; ?>
 		<section class="above-fold">
-			<div class="default-container x-loc lazy" data-src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/tennessee-background.jpg">
+			<div class="default-container x-loc lazy" data-src="/wp-content/uploads/2020/08/peace-after-rehab.jpg">
 				<div class="background-fade">
 					<div class="content">
-						<h1 class="heading text-primary">
-							Get Your Life Back on Track
-						</h1>
+						<h1 class="heading text-primary">Get Your Life Back on Track</h1>
 						<hr>
 						<div class="feature">
 							<div class="row">
 								<div class="col-lg-12 col-sm-12 top-text">
 									<div class="card transparent">
 										<div class="card-body">
-											<h5>You deserve help that actually helps you – and a treatment team that listens and puts you first.</h5>
+											<h3>"This place was exactly the change I needed. I've been to treatment before, but none approached the solution like this. It's not just what to do moving forward, but looking back at what alcohol and drugs were hiding."</h3>
+											<div class="jp-homepage-card-cta">
+												<div class="row">
+													<div class="col-auto align-self-center jp-homepage-card-cta-column-left">
+														<img class="jp-homepage-card-cta-image lazy" data-src="/wp-content/uploads/2020/07/daniel-video-review.jpg" alt="Daniel S.">
+													</div>
 
-											<p>Drug and alcohol issues are complex and personal. But, you don't have to figure this out on your own. When you're ready for something to change, call to talk privately about your options and get information without commitment.</p>
+													<div class="col-auto align-self-center jp-homepage-card-cta-column-right">
+														<h5 class="jp-homepage-card-cta-title">Daniel S.</h5>
+														<h6 class="jp-homepage-card-cta-subtitle">Sober Since March 2020</h6>
+													</div>
+												</div>
 
-
-
+												<div class="row">
+													<div class="col-12 align-self-center">
+														<a class="jp-homepage-card-cta-button btn btn-outline-secondary" href="#jp-homepage-videos-modal" data-toggle="modal" data-target="#jp-homepage-videos-modal"><i class="fas fa-play-circle"></i> Watch His Full Story</a>
+													</div>
+												</div>
+											</div>
 										</div>
 										<?php if($Homepage->ratings): ?>
 											<div class="rating-section">
@@ -76,13 +91,6 @@ $footerVersion = 2;
 												</div>
 											</div>
 										<?php endif; ?>
-									</div>
-								</div>
-								<div class="col-lg-12 col-sm-12">
-									<div class="card card-body h-100 justify-content-center transparent" style="width: 100%; ">
-										<div class="embed-responsive embed-responsive-16by9 youtube-video-place lazy" data-src='/wp-content/uploads/2020/07/Copy-of-Copy-of-Color-Project-School-Photo-Collage-1.png' data-yt-url="https://www.youtube.com/embed/kNj08KeNbIA">
-											<span class="play-button"></span>
-										</div>
 									</div>
 								</div>
 							</div>
@@ -345,87 +353,70 @@ $footerVersion = 2;
 
     </section>
 
+	<!-- SECTION: Reviews -->
 
-	<section class="review-section">
-		<div class="container">
-			<h2 class="h1 text-center">You can do this!</h2>
-			<h3 class="text-center">Whether Journeypure is your first (and last) treatment experience, or you've spent decades in and out of other facilities...here's proof that you can feel better. There's no shame in getting help.</h3>
-			<div class="parent">
-				<div class="content-container-left">
-					<div class="details">
-						<h5 class="video-ctas-title text-center">Video Stories</h5>
-						<!-- Review > Video CTAs -->
-						<div class="video-ctas text-center">
-							<!-- Review > Video CTA -->
-							<a class="video-cta" data-toggle="modal" data-target="#video-cta-1">
-								<!-- Image Wrapper -->
-								<div class="video-cta-image-wrapper">
-									<!-- Image -->
-									<img class="video-cta-image lazy" data-src="https://journeypure.com/wp-content/uploads/2020/05/jared-video-review.jpg" alt="Jared Lanpher">
-									<!-- Icon -->
-									<span class="play-button"></span>
-								</div>
-								<!-- Title -->
-								<h6 class="video-cta-title">Jared L.</h6>
-							</a>
-							<!-- Review > Video CTA -->
-							<a class="video-cta" data-toggle="modal" data-target="#video-cta-2">
-								<!-- Image Wrapper -->
-								<div class="video-cta-image-wrapper">
-									<!-- Image -->
-									<img class="video-cta-image lazy" data-src="https://journeypure.com/wp-content/uploads/2020/05/amber-video-review.jpg" alt="Amber F.">
-									<!-- Icon -->
-									<span class="play-button"></span>
-								</div>
-								<!-- Title -->
-								<h6 class="video-cta-title">Amber F.</h6>
-							</a>
-						</div>
+	<?php if ( ! empty( $reviews->reviews ) ) : ?>
+		<section class="jp-homepage-section jp-reviews-reviews">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<h2 class="h1 text-center jp-reviews-reviews-title">You can do this!</h2>
+						<h3 class="text-center jp-reviews-reviews-subtitle">Whether Journeypure is your first (and last) treatment experience, or you've spent decades in and out of other facilities...here's proof that you can feel better. There's no shame in getting help.</h3>
 					</div>
 				</div>
-				<div class="content-container-right">
-					<div class="review-slide-container <?php echo (count($Homepage->reviews) == 1) ? ' pb-5' : ''; ?>" >
-						<div class="review-slide" data-slick='{"slidesToShow": 1}' role="toolbar">
-							<?php foreach ($Homepage->reviews as $reviews) :   ?>
-								<div class="card">
-									<div class="card-body">
-										<div class="author-info">
-											<div class="row">
-												<div class="col-md-auto align-self-center">
-													<img class="lazy" data-src="<?php echo $reviews->photo['image']; ?>" alt="<?php echo $reviews->photo['alt']; ?>">
-												</div>
-												<div class="col-md-auto align-self-center">
-													<h5 class="card-title"><?php echo $reviews->heading; ?></h5>
-													<div class="stars">
-														<?php for($i=0; $i < $reviews->star_rating; $i++): ?>
-															<i class="fas fa-star"></i>
-														<?php endfor; ?>
-													</div>
-												</div>
-												<?php if(isset($reviews->source_image['image'])): ?>
-													<div class="review-logo">
-														<img class="source-img lazy" data-src="<?php echo $reviews->source_image['image']; ?>" alt="<?php echo $reviews->source_image['alt']; ?>">
-													</div>
-												<?php endif; ?>
-											</div>
-										</div>
-										<div class="review-text">
-											<?php echo $reviews->review_text; ?>
-										</div>
+
+				<div class="row">
+					<div class="col-12">
+						<div class="jp-reviews-reviews-box" data-page="1" data-url="<?php echo esc_attr( admin_url( 'admin-ajax.php' ) ); ?>" data-nonce="<?php echo esc_attr( wp_create_nonce( 'get_reviews' ) ); ?>">
+							<div class="jp-reviews-reviews-top">
+								<div class="jp-reviews-reviews-summary">
+									<p class="jp-reviews-reviews-summary-avg"><?php echo esc_html( $reviews->review_avg ); ?></p>
+
+									<div class="jp-reviews-reviews-summary-stars">
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
 									</div>
+
+									<p class="jp-reviews-reviews-summary-total"><?php echo esc_html( $reviews->review_total ); ?> reviews</p>
 								</div>
-							<?php endforeach; ?>
-						</div>
-						<div class="review-nav">
-							<p class="link see-less-btn">Previous</p>
-							<p class="link see-more-btn has-more"> Read More</p>
+
+								<div class="jp-reviews-reviews-filter">
+									<label for="sort">Sort by:</label>
+
+									<select id="sort">
+										<!-- <option value="ml">Most Liked</option> -->
+										<option value="n" selected="selected">Newest</option>
+										<option value="o">Oldest</option>
+										<option value="lr">Lowest Rated</option>
+										<option value="hr">Highest Rated</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="jp-reviews-reviews-reviews">
+								<div class="jp-reviews-reviews-reviews-inner">
+									<?php
+										global $_reviews;
+										$_reviews = $reviews;
+										require get_stylesheet_directory() . '/assets/src/includes/components/review-items.php';
+									?>
+								</div>
+
+								<button class="jp-reviews-reviews-loading-button btn btn-outline-secondary">Load more</button>
+							</div>
+
+							<?php require get_stylesheet_directory() . '/assets/src/includes/components/loading-icon.php'; ?>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
+	<?php endif; ?>
 
+	<!-- /SECTION: Reviews -->
 
 <section class="design-process-section" id="process-tab">
   <div class="container">

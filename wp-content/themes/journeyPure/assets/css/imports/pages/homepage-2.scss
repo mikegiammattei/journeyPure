@@ -1,3 +1,162 @@
+/**
+ * Template Homepage 2
+ *
+ * @author   Fernando Tessmann
+ * @package  JourneyPure
+ */
+
+// Template Homepage 2
+
+.jp-homepage {
+	overflow: hidden;
+
+	// Section
+
+	&-section {
+		@import "../page-parts/jp-section";
+		@include jp-section;
+	}
+
+	// Top Section (Above Fold / Masthead)
+
+	// Card CTA
+
+	&-card-cta {
+		margin: 30px auto;
+		max-width: 300px;
+
+		&-column-left {
+			padding-right: 0;
+		}
+
+		// &-column-right {}
+
+		&-image {
+			border-radius: 50%;
+			height: 50px;
+			width: 50px;
+		}
+
+		&-title {
+			font-size: 18px;
+			margin-bottom: 0;
+			text-align: left;
+		}
+
+		&-subtitle {
+			margin-bottom: 0;
+			text-align: left;
+		}
+
+		&-button {
+			background-color: transparent;
+			margin-top: 10px;
+			// background-color: rgba(white, 0.5);
+			// box-shadow: 0 1px 2px 0px black;
+			// border-color: #e0e7f5;
+			// color: #e0e7f5;
+			// text-shadow: 0 1px 2px black;
+
+			// &:hover, &:focus {
+			// 	background-color: #e0e7f5;
+			// 	border-color: #e0e7f5;
+			// 	color: white;
+			// }
+		}
+	}
+
+	// Multiple Videos Modal
+
+	&-videos-modal {
+		&-items {
+			display: flex;
+			justify-content: center;
+		}
+
+		&-title {
+			margin-bottom: 20px;
+		}
+
+		&-item {
+			cursor: pointer;
+			margin: 0 10px;
+
+			&-image-wrapper {
+				margin-bottom: 10px;
+				position: relative;
+
+				.play-button:after {
+					background: transparent url('/wp-content/themes/journeyPure/assets/img/play-circle-solid.svg') no-repeat center center;
+					background-size: 20px 20px;
+					content: '';
+					left: 50%;
+					height: 20px;
+					opacity: .7;
+					position: absolute;
+					top: 50%;
+					transform: translate(-50%, -50%);
+					transition: all 150ms ease-out;
+					width: 20px;
+					z-index: 2;
+				}
+
+				.play-button:before {
+					background-color: #fff;
+					border-radius: 50%;
+					content: '';
+					height: 24px;
+					left: 50%;
+					opacity: .7;
+					position: absolute;
+					top: 50%;
+					transform: translate(-50%, -50%);
+					transition: all 150ms ease-out;
+					width: 24px;
+					z-index: 1;
+				}
+			}
+
+			&:hover, &:focus {
+				.jp-homepage-videos-modal-item-image-wrapper {
+					.play-button:after {
+						opacity: 0.9;
+						// transform: translate(-50%, -50%) scale(1.1);
+					}
+
+					.play-button:before {
+						opacity: 0.9;
+						transform: translate(-50%, -50%) scale(1.1);
+					}
+				}
+			}
+
+			&-image {
+				border: 2px solid #e5e5e5;
+				border-radius: 5px;
+				height: auto;
+				width: 100%;
+			}
+
+			&-title {
+				text-align: center;
+			}
+
+			&-text {
+				display: none;
+			}
+		}
+	}
+}
+
+// Reviews Section
+
+.jp-reviews-reviews {
+	@import "../page-parts/jp-reviews";
+	@include jp-reviews;
+}
+
+// Legacy
+
 .homepage-2 {
 	overflow-x: hidden;
 
@@ -23,7 +182,7 @@
 	.default-container {
 	  padding-top: 0;
 	  padding-bottom: 0;
-	  background-position: center 50px;
+	  background-position: center top;
 	  @media (max-width: 767px) {
 		padding-bottom: 0;
 		.h3 {
@@ -509,14 +668,14 @@ background: #A0B6DE;
 		display:none;
 	 }
 	 }
-	
+
 
 	.why-point{
 	margin-bottom:20px;
     max-width: 645px;
     background: #F5F7FC;
     border-radius: 3px;
-	
+
 
 	.h5{
 		padding-top:9px;
@@ -545,7 +704,7 @@ li {
 		@media (max-width: 767px) {
 			margin:0;
 		}
-		
+
 	}
 }
 
@@ -629,103 +788,6 @@ li {
 		}
 	  }
 	}
-	}
-	.review-section {
-		margin-top:0;
-		padding-bottom:40px;
-		background-image:url(/wp-content/uploads/sites/2/2020/03/jp-background.png);
-		@media (max-width: 767px) {
-			.bio {
-				margin-top:40px;
-			}
-		}
-		h3.text-center {
-			margin: 15px auto 45px;
-			max-width: 683px;
-		}
-		// Review > Video CTAs
-		.video-ctas {
-			display: flex;
-			justify-content: center;
-			// Title
-			&-title {
-				margin-bottom: 20px;
-			}
-		}
-		// Review > Video CTA
-		.video-cta {
-			cursor: pointer;
-			margin: 0 10px;
-			// Image Wrapper
-			&-image-wrapper {
-				margin-bottom: 10px;
-				position: relative;
-				// Icon
-				.play-button:after {
-					background: transparent url('/wp-content/themes/journeyPure/assets/img/play-circle-solid.svg') no-repeat center center;
-					background-size: 20px 20px;
-					content: '';
-					left: 50%;
-					height: 20px;
-					opacity: .7;
-					position: absolute;
-					top: 50%;
-					transform: translate(-50%, -50%);
-					transition: all 150ms ease-out;
-					width: 20px;
-					z-index: 2;
-				}
-				.play-button:before {
-					background-color: #fff;
-					border-radius: 50%;
-					content: '';
-					height: 24px;
-					left: 50%;
-					opacity: .7;
-					position: absolute;
-					top: 50%;
-					transform: translate(-50%, -50%);
-					transition: all 150ms ease-out;
-					width: 24px;
-					z-index: 1;
-				}
-			}
-			// Hover
-			&:hover, &:focus {
-				.video-cta-image-wrapper {
-					.play-button:after {
-						opacity: 0.9;
-						// transform: translate(-50%, -50%) scale(1.1);
-					}
-					.play-button:before {
-						opacity: 0.9;
-						transform: translate(-50%, -50%) scale(1.1);
-					}
-				}
-			}
-			// Image
-			&-image {
-				border-radius: 5px;
-				height: auto;
-				width: 95px;
-				border: 2px solid #e5e5e5;
-
-			}
-			// Title
-			&-title {}
-		}
-	}
-	.review-logo {
-		position: absolute !important;
-		right: 15px;
-		top: 15px;
-		float: right;
-		display: inline;
-		img {
-			max-width: 60px;
-			height: auto;
-			border-radius: 0;
-		}
 	}
 
 	.faqs {

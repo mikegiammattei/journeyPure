@@ -144,34 +144,7 @@
 	// Reviews Section
 
 	&-reviews {
-		background-color: #ffffff;
-		position: relative;
-		    padding-bottom: 50px;
-
-		&:before {
-			background-color: #e1e7f5;
-			content: '';
-			height: 50%;
-			left: 0;
-			// max-height: 450px;
-			position: absolute;
-			right: 0;
-			top: 0;
-		}
-
-		.container {
-			position: relative;
-			z-index: 1;
-		}
-
-		// &-title {}
-
-		&-subtitle {
-			margin: 15px auto 50px;
-			max-width: 683px;
-		}
-
-		// Reviews box styles are living insice _reviews-modal.scss.
+		@import "../page-parts/jp-reviews";
+		@include jp-reviews;
 	}
-
 }
