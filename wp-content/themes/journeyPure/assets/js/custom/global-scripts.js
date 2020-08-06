@@ -158,4 +158,12 @@ $(document).ready(function () {
 		});
 	};
 
+	// Modals
+	// Remove the youtube iframe always the modal closes
+
+	jQuery('.modal').on('hidden.bs.modal', function() {
+		var _this = jQuery(this);
+		_this.find('.youtube-video-place').removeClass('playing').html('');
+	});
+
 });

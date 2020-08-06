@@ -25,35 +25,31 @@
 		margin: 30px auto 10px;
 		max-width: 300px;
 
-		&-column-left {
-			padding-right: 0;
-		}
-
-		// &-column-right {}
-
 		&-image {
 			border-radius: 50%;
 			height: 50px;
+			margin-bottom: 7px;
 			width: 50px;
 		}
 
-		&-title {
+		&-headings {
+			align-items: center;
+			display: flex;
+			justify-content: center;
+			margin-bottom: 3px;
+
+			&-separator {
+				color: #9a9c99;
+				margin: 0 5px;
+			}
+		}
+
+		&-title,
+		&-subtitle {
 			font-size: 17px;
 			margin-bottom: 0;
-			text-align: left;
-			color:#9a9c99;
+			color: #9a9c99;
 		}
-		h6{
-			font-size:17px;
-		}
-
-		&-subtitle {
-			margin-bottom: 0;
-			text-align: left;
-			color:#9a9c99;
-		}
-
-		
 	}
 
 	// Multiple Videos Modal
@@ -242,9 +238,6 @@
 				margin: 0 auto;
 		}
 		text-align: center;
-		@media (max-width: 767px) {
-			text-align: left;
-		}
 
 		.lead {
 		  font-size: 22px;

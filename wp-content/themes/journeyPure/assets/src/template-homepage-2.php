@@ -39,19 +39,14 @@ $footerVersion = 2;
 											<h3>"This place was exactly the change I needed. I tried treatment before, but none approached the solution like this. It's not just what to do moving forward, but looking back at what alcohol and drugs were hiding."</h3>
 											<div class="jp-homepage-card-cta">
 												<div class="row">
-													<div class="col-auto align-self-center jp-homepage-card-cta-column-left">
+													<div class="col-12">
 														<img class="jp-homepage-card-cta-image lazy" data-src="/wp-content/uploads/2020/07/daniel-video-review.jpg" alt="Daniel S.">
-													</div>
-
-													<div class="col-auto align-self-center jp-homepage-card-cta-column-right">
-														<h5 class="jp-homepage-card-cta-title">Daniel S.</h5>
-														<h6 class="jp-homepage-card-cta-subtitle">Sober March 2020</h6>
-													</div>
-												</div>
-
-												<div class="row">
-													<div class="col-12 align-self-center">
-														<a class="jp-homepage-card-cta-button btn btn-outline-secondary" href="#jp-homepage-videos-modal" data-toggle="modal" data-target="#jp-homepage-videos-modal"><i class="fas fa-play-circle"></i> Watch His Full Interview</a>
+														<div class="jp-homepage-card-cta-headings">
+															<h5 class="jp-homepage-card-cta-title">Daniel</h5>
+															<span class="jp-homepage-card-cta-headings-separator">•</span>
+															<h6 class="jp-homepage-card-cta-subtitle">Sober March 2020</h6>
+														</div>
+														<a class="jp-homepage-card-cta-button" href="#jp-homepage-videos-modal" data-toggle="modal" data-target="#jp-homepage-videos-modal">Watch His Full Interview</a>
 													</div>
 												</div>
 											</div>
@@ -342,7 +337,7 @@ $footerVersion = 2;
 												</div>
 												<span class="sub-caption">
 							 <figcaption class="name"><?php echo $bio->name; ?></figcaption>
-							 Sober <span class="text-uppercase"> <?php echo $bio->sober_since ?></span>
+							 Sober <span> <?php echo $bio->sober_since ?></span>
 						  </span>
 											<?php endif; ?>
 										</div>
