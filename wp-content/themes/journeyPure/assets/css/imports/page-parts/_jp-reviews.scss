@@ -14,7 +14,8 @@
 		top: 0;
 
 		body.home & {
-			background-color: #ebebeb;
+			background-color: $background-color;
+			height:100%;
 		}
 	}
 

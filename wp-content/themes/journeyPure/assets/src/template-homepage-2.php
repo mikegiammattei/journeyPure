@@ -19,7 +19,7 @@ $footerVersion = 2;
 ?>
 <div id="homepage" class="homepage-2">
 <div class="note-box">
-	<h3>We're accepting limited inpatient admissions with additional pre-screening procedures. Outpatient services, family therapy and alumni meetings are currently virtual-only.</h3>
+	<h3>We're accepting limited inpatient admissions with additional pre-screening procedures. Outpatient services, family therapy and alumni meetings are virtual-only.</h3>
 	<p>Learn More</p>
 		<span class="note-cta"><i class="fas fa-phone"></i> <?php echo get_option('defaultPhone'); ?></span>
 	</div>
@@ -36,7 +36,7 @@ $footerVersion = 2;
 								<div class="col-lg-12 col-sm-12 top-text">
 									<div class="card transparent">
 										<div class="card-body">
-											<h3>"This place was exactly the change I needed. I've been to treatment before, but none approached the solution like this. It's not just what to do moving forward, but looking back at what alcohol and drugs were hiding."</h3>
+											<h3>"This place was exactly the change I needed. I tried treatment before, but none approached the solution like this. It's not just what to do moving forward, but looking back at what alcohol and drugs were hiding."</h3>
 											<div class="jp-homepage-card-cta">
 												<div class="row">
 													<div class="col-auto align-self-center jp-homepage-card-cta-column-left">
@@ -45,13 +45,13 @@ $footerVersion = 2;
 
 													<div class="col-auto align-self-center jp-homepage-card-cta-column-right">
 														<h5 class="jp-homepage-card-cta-title">Daniel S.</h5>
-														<h6 class="jp-homepage-card-cta-subtitle">Sober Since March 2020</h6>
+														<h6 class="jp-homepage-card-cta-subtitle">Sober March 2020</h6>
 													</div>
 												</div>
 
 												<div class="row">
 													<div class="col-12 align-self-center">
-														<a class="jp-homepage-card-cta-button btn btn-outline-secondary" href="#jp-homepage-videos-modal" data-toggle="modal" data-target="#jp-homepage-videos-modal"><i class="fas fa-play-circle"></i> Watch His Full Story</a>
+														<a class="jp-homepage-card-cta-button btn btn-outline-secondary" href="#jp-homepage-videos-modal" data-toggle="modal" data-target="#jp-homepage-videos-modal"><i class="fas fa-play-circle"></i> Watch His Full Interview</a>
 													</div>
 												</div>
 											</div>
@@ -193,15 +193,15 @@ $footerVersion = 2;
 		<section class="block-1">
 			<div class="container">
 				<div class="header">
-					<div class="lead">
+					<h3 class="quote">
 						 "Everyone comes in overwhelmed, but looking to make big changes quickly. This is where it starts. Where you learn to harness and hold on to hope."
-					</div>
+					</h3>
 				</div>
 				<div class="media d-inline-flex">
 					<img class="mr-3 lazy" data-src="/wp-content/uploads/2019/11/kevin-lee.jpg" alt="Kevin Lee">
 					<div class="media-body ">
 						<h5>Kevin D. Lee</h5>
-						<p>CEO & Founder</p>
+						<h6>CEO & Founder</h6>
 					</div>
 				</div>
 			</div>

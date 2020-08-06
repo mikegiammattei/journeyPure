@@ -22,7 +22,7 @@
 	// Card CTA
 
 	&-card-cta {
-		margin: 30px auto;
+		margin: 30px auto 10px;
 		max-width: 300px;
 
 		&-column-left {
@@ -38,31 +38,22 @@
 		}
 
 		&-title {
-			font-size: 18px;
+			font-size: 17px;
 			margin-bottom: 0;
 			text-align: left;
+			color:#9a9c99;
+		}
+		h6{
+			font-size:17px;
 		}
 
 		&-subtitle {
 			margin-bottom: 0;
 			text-align: left;
+			color:#9a9c99;
 		}
 
-		&-button {
-			background-color: transparent;
-			margin-top: 10px;
-			// background-color: rgba(white, 0.5);
-			// box-shadow: 0 1px 2px 0px black;
-			// border-color: #e0e7f5;
-			// color: #e0e7f5;
-			// text-shadow: 0 1px 2px black;
-
-			// &:hover, &:focus {
-			// 	background-color: #e0e7f5;
-			// 	border-color: #e0e7f5;
-			// 	color: white;
-			// }
-		}
+		
 	}
 
 	// Multiple Videos Modal
@@ -155,6 +146,7 @@
 	@include jp-reviews;
 }
 
+
 // Legacy
 
 .homepage-2 {
@@ -177,7 +169,10 @@
 
 	.above-fold {
 	.card-body{
-	padding: 1.25rem 1.25rem 1.1rem;
+	padding: 1.25rem 1.25rem 1rem;
+	    background: #ffffffa3;
+		border-radius:3px;
+    margin: 15px;
 	}
 	.default-container {
 	  padding-top: 0;
@@ -391,8 +386,7 @@
 	}
 	}
 	.arrow-divider-container .arrow-divider hr:after {
-	background-image: url(/wp-content/uploads/sites/2/2020/03/jp-background.png);
-	background-color:#ebebeb;
+	background-color:#F7F7F7;
 	border-bottom: none;
 	border-right: none;
 	}
@@ -410,31 +404,28 @@
 	.block-1 {
 	padding: 30px 0 17px;
 	text-align: center;
-	background-image: url(/wp-content/uploads/sites/2/2020/03/jp-background.png);
-	background-color:#ebebeb;
+	background-color:#F7F7F7;
 
 	.header {
 	  margin: 0 auto $lg-space auto;
-	  max-width: 683px;
+	  max-width: 775px;
 	  .heading {
 		@extend .page-heading;
 	  }
-	  .lead {
-		@extend .h5;
+	  .quote {
 		color: $main-gray;
-		line-height:1.5;
 	  }
 	}
 
 	.media-body {
-	  margin-top: $lg-space;
+	  margin-top: 15px;
 	  h5 {
-		font-size: 17px;
+		font-size: 18px;
 		color: $main-gray;
 		line-height: 0;
+		margin-bottom:12px;
 	  }
-	  p {
-		font-family: $heading-font;
+	  h6 {
 		color: $main-gray;
 	  }
 	}
@@ -444,8 +435,8 @@
 	  text-align: left;
 	  min-width:230px;
 	  img {
-		width: 75px;
-		height: 75px;
+		width: 50px;
+		height: 50px;
 		border-radius: 50%;
 	  }
 	  a.btn {
@@ -651,7 +642,7 @@ b{
 	}
 
 	.why-icon{
-background: #A0B6DE;
+background: $background-color;
     margin: -8px 15px -8px -8px;
     padding: .5rem 0 0 !important;
 	width: 55px;
@@ -673,7 +664,7 @@ background: #A0B6DE;
 	.why-point{
 	margin-bottom:20px;
     max-width: 645px;
-    background: #F5F7FC;
+    background: white;
     border-radius: 3px;
 
 
@@ -747,7 +738,6 @@ li {
     margin: 0 auto 32px;
 	  }
 	  h5{
-	  color: #A2B5DE;
     margin-bottom: 0;
 	  }
 
@@ -802,7 +792,7 @@ li {
 	}
 	.note-box {
 	background-color: #fcf8e3;
-	padding: 20px 20px 50px;
+	padding: 15px 20px 45px;
 	margin: 0 -15px 20px;
 	display: block;
 	text-align: center;
@@ -811,8 +801,8 @@ li {
 	  color: #fbbb06;
 	  font-family: "Montserrat", sans-serif;
 	  font-style: normal;
-	  font-size: 20px;
-	  max-width: 705px;
+	  font-size: 19px;
+	  max-width: 892px;
 	  margin: 10px auto;
 	      padding: 0 15px;
 	}
@@ -821,12 +811,14 @@ li {
 	  border-radius: 4px;
 	  border: 2px solid #fbbb06;
 	  padding: 6px 12px;
+	  font-weight:bold;
 	}
 	p {
 	  font-family: "Montserrat", sans-serif;
 	  color: #fbbb06 !important;
 	  margin: 0 0 5px;
 	  padding: 0;
+	  font-size:17px;
 	}
 	a {
 		color: #fbbb06 !important;

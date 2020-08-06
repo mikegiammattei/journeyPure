@@ -27,7 +27,8 @@
 		padding-bottom: 0;
 		font-family: $heading-font;
 		font-size:17px;
-		color:black;
+		color: #333;
+		font-weight: 500;
 
 		&.sub{
 		  color: $main-gray;
@@ -38,7 +39,7 @@
 	  color:$stars;
 	  }
 	  .text-value{
-		color:$primary;
+		color:$secondary;
 		font-weight:500;
 	  }
 	}
