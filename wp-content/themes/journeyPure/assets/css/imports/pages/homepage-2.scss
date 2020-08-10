@@ -140,6 +140,7 @@
 .jp-reviews-reviews {
 	@import "../page-parts/jp-reviews";
 	@include jp-reviews;
+	padding-top: 0;
 }
 
 
@@ -229,9 +230,8 @@
 		}
 
 		@media (max-width: 800px) {
-		  margin: 15px -15px 0;
+		  margin: 0px -15px 0;
 		  padding: 10px 0 30px;
-		  background-color: rgba(255, 255, 255, 0.3);
 		}
 		.row {
 				max-width: 1240px;

@@ -30,7 +30,6 @@ $footerVersion = 2;
 				<div class="background-fade">
 					<div class="content">
 						<h1 class="heading text-primary">Get Your Life Back on Track</h1>
-						<hr>
 						<div class="feature">
 							<div class="row">
 								<div class="col-lg-12 col-sm-12 top-text">
