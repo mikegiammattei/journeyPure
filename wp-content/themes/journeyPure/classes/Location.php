@@ -194,6 +194,7 @@ class Location {
 			$this->block4->location->description = ( $this->fields['block_4']['location']['description'] ) ?: null;
 
 			$this->block4->location->full_address = ( $this->fields['block_4']['location']['street_address'] ) ?
+				$this->fields['block_4']['location']['name'] . ' ' .
 				$this->fields['block_4']['location']['street_address'] . ' ' .
 				$this->fields['block_4']['location']['city'] . ' ' .
 				$this->fields['block_4']['location']['state'] . ' ' .

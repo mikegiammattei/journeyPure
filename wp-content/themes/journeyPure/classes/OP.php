@@ -187,13 +187,16 @@ class OP {
 			$this->location->state          = $this->fields['location']['state'] ?: null;
 			$this->location->zip            = $this->fields['location']['zip'] ?: null;
 			$this->location->description    = $this->fields['location']['description'] ?: null;
-			$this->location->full_address   = $this->fields['location']['street_address'] ?
+
+			$this->location->full_address = $this->fields['location']['street_address'] ?
+				$this->fields['location']['name'] . ' ' .
 				$this->fields['location']['street_address'] . ' ' .
 				$this->fields['location']['city'] . ' ' .
 				$this->fields['location']['state'] . ' ' .
 				$this->fields['location']['zip']
 				: null;
-			$this->location->tag_sections   = $this->fields['location']['aside_tags'];
+
+			$this->location->tag_sections = $this->fields['location']['aside_tags'];
 		}
 
 		if ( ! empty( $this->fields['location'] ) ) {
