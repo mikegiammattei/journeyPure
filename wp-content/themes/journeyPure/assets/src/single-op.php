@@ -69,7 +69,7 @@ get_header();
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-md-6 col-lg-6 offset-lg-1">
-					<h3 class="jp-op-highlights-title">Clinic Highlights</h3>
+					<h2 class="jp-op-highlights-title">Clinic Highlights</h2>
 
 					<ul class="jp-op-highlights-list">
 						<li class="jp-op-highlights-list-item">
@@ -122,7 +122,7 @@ get_header();
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-md-12">
-					<h3 class="jp-op-table-title">Evidenced-based treatments for <span>all</span> the issues that hold you back.</h3>
+					<h2 class="jp-op-table-title">Evidenced-based treatments for <span>all</span> the issues that hold you back.</h2>
 					<p class="jp-op-table-subtitle">(including things like depression and anxiety)</p>
 				</div>
 			</div>
@@ -184,7 +184,7 @@ get_header();
 			<div class="container">
 				<?php if ( ! empty( $op->bios->heading ) ) : ?>
 					<div class="heading">
-						<h3 class="h1"><?php echo esc_html( $op->bios->heading ); ?></h3>
+						<h2><?php echo esc_html( $op->bios->heading ); ?></h2>
 					</div>
 				<?php endif; ?>
 
@@ -246,7 +246,7 @@ get_header();
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-md-12">
-					<h3 class="jp-op-reviews-title">You're TWICE as likely to get better here.</h3>
+					<h2 class="jp-op-reviews-title">You're TWICE as likely to get better here.</h2>
 					<p class="jp-op-reviews-subtitle">Your long-term success is what counts. Here are a few stories behind the data to prove that you can do this!</p>
 				</div>
 			</div>
@@ -413,8 +413,8 @@ get_header();
 				<div class="col-12 col-lg-7">
 					<div class="jp-op-location-content">
 						<div class="jp-op-location-header">
-							<h1 class="jp-op-location-title">You can do this!</h1>
-							<h3 class="jp-op-location-subtitle">Get information without commitment.</h3>
+							<h2 class="jp-op-location-title">You can do this!</h2>
+							<p class="h3 jp-op-location-subtitle">Get information without commitment.</p>
 						</div>
 
 						<div class="jp-op-location-card">
@@ -517,13 +517,13 @@ get_header();
 			<div class="container">
 				<?php if ( ! empty( $op->faq->heading ) || ! empty( $op->faq->subheading ) ) : ?>
 					<div class="heading">
-						<span class="h1">
+						<h2>
 							<?php echo esc_html( $op->faq->heading ); ?>
+						</h2>
 
-							<?php if ( ! empty( $op->faq->subheading ) ) : ?>
-								<h2 class="lead"><?php echo esc_html( $op->faq->subheading ); ?></h2>
-							<?php endif; ?>
-						</span>
+						<?php if ( ! empty( $op->faq->subheading ) ) : ?>
+							<p class="h3 lead"><?php echo esc_html( $op->faq->subheading ); ?></p>
+						<?php endif; ?>
 					</div>
 				<?php endif; ?>
 

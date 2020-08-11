@@ -13,8 +13,11 @@
 	.heading,
 	.subheading {
 		text-align: center;
-		max-width: $lg-width;
-		margin: 0 auto;
+	}
+
+	.h3 {
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.bio-slider {

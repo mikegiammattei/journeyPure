@@ -44,7 +44,9 @@
 		}
 
 		&-title {
+			color: #000;
 			font-size: 70px; // 50px;
+			font-weight: 400;
 			letter-spacing: -1px;
 			margin-bottom: 35px;
 
@@ -162,7 +164,7 @@
 		position: relative;
 
 		&-title {
-			@extend .h1;
+			@extend .h2;
 
 			font-style: unset;
 			margin-bottom: 15px;
@@ -171,9 +173,9 @@
 
 		&-subtitle {
 			@extend .h3;
-			margin-bottom: 0;
+			margin-left: auto;
+			margin-right: auto;
 			text-align: center;
-
 		}
 
 		&-icon {
@@ -364,6 +366,7 @@
 		&-title {
 			color: #ffffff;
 			display: block;
+			font-weight: 400;
 			letter-spacing: -2px;
 			margin-bottom: 20px;
 
@@ -481,7 +484,7 @@
 	// What now? Section
 
 	.ask-a-question {
-		.h1 {
+		h2 {
 			margin-bottom:10px !important;
 		}
 

@@ -28,6 +28,33 @@ $(document).ready(function () {
 
 	}, 2000);
 
+	// Workaround for localhost with no cache plugin installed
+
+	if (document.location.host === 'localhost:2022') {
+		jQuery('img.lazy').each(function() {
+			var _this = jQuery(this);
+			var imageUrl = _this.data('src');
+			if (/^\/wp-/gi.test(imageUrl)) {
+				var imageUrl = 'https://journeypure.com' + imageUrl;
+			}
+			if (imageUrl) {
+				_this.attr('src', imageUrl);
+				_this.addClass('loaded');
+			}
+		});
+		jQuery('div.lazy, section.lazy').each(function() {
+			var _this = jQuery(this);
+			var imageUrl = _this.data('src');
+			if (/^\/wp-/gi.test(imageUrl)) {
+				var imageUrl = 'https://journeypure.com' + imageUrl;
+			}
+			if (imageUrl) {
+				_this.attr('style', "background-image: url('" + imageUrl + "')");
+				_this.addClass('loaded');
+			}
+		});
+	}
+
 	// CTA Trigger
 
 	let CTA_STATE = false;

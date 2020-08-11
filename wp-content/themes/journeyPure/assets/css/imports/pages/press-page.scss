@@ -2,13 +2,13 @@
 
   // Import above fold  styles that are global
   @import "../page-parts/above-fold";
-  
+
   .press-contact-box{
   font-family:"Montserrat",sans-serif !important;
   color:red !important;
   }
-  
-  
+
+
   .bio-section{
 	margin: $xl-space 0 $xl-space;
 
@@ -178,8 +178,8 @@
 	.see-more-btn {
 	  font-family: "Montserrat",sans-serif;
 	}
-	
-	
+
+
   }
   .page-quote{
 	padding: $lg-space 0 $xl-space;
@@ -197,11 +197,11 @@
 	  .lead{
 		@extend .h5;
 		color: $main-gray;
-		
+
 	  }
-	  
+
 	}
-	
+
 	.media-body  {
 	margin-top: $lg-space;
 	flex:none;
@@ -312,7 +312,7 @@ h3 {
 		margin-top: 25px;
 		display: block;
 	}
-	
+
   }
   .insurance-section{
 	padding: $lg-space 0 15px;
@@ -341,11 +341,11 @@ h3 {
 	-o-background-size: cover;
 	background-size: cover;
 	padding: $xl-space;
-	
+
 	.card-body {
 	   padding: 0;
 	}
-	
+
 	.fab {
 	    font-family: "Font Awesome 5 Brands";
     padding-left: 13px;
@@ -355,14 +355,14 @@ h3 {
 	}
 
 	ul {
-    font-family: $heading-style-1;
+    font-family: $font-family-2;
     font-size: 17px;
 	    list-style-type: none;
     padding-left: 0;
 }
-	
+
 	li {
-	
+
 	margin-top:10px;
     padding: 17px;
 	background:$background-color;
@@ -416,7 +416,7 @@ h3 {
 	}
 	.card-header {
 	   font-size: 18px;
-       font-family: $heading-style-1;
+       font-family: $font-family-2;
        padding: 26px;
        font-weight: bold;
 	}

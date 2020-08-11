@@ -29,7 +29,7 @@ get_header();
 			<div class="background-fade">
 				<div class="content">
 					<!-- <h1 class="heading-1">...</h1> -->
-					<h2 class="heading text-primary">Suboxone Clinics</h2>
+					<h1 class="heading text-primary">Suboxone Clinics</h1>
 					<hr>
 
 					<div class="feature">
@@ -37,7 +37,7 @@ get_header();
 							<div class="col-lg-12 col-sm-12 top-text">
 								<div class="card transparent">
 									<div class="card-body text-center">
-										<h3>The science of addiction medicine has advanced exponentially in the last decade. You can <b>live without feeling sick, high or constantly distracted</b>. Start Suboxone treatment today in Tennessee, Kentucky &amp; Florida or <u>fully virtual</u>.</h3>
+										<p class="h3">The science of addiction medicine has advanced exponentially in the last decade. You can <b>live without feeling sick, high or constantly distracted</b>. Start Suboxone treatment today in Tennessee, Kentucky &amp; Florida or <u>fully virtual</u>.</p>
 									</div>
 
 									<?php if ( $outpatient_locations->ratings ) : ?>
@@ -104,7 +104,7 @@ get_header();
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-md-6 col-lg-6 offset-lg-1">
-					<h3 class="jp-outpatient2-highlights-title">The <i>Easiest</i> Way to Start to Feel Better</h3>
+					<h2 class="jp-outpatient2-highlights-title">The <i>Easiest</i> Way to Start to Feel Better</h2>
 
 					<ul class="jp-outpatient2-highlights-list">
 						<li class="jp-outpatient2-highlights-list-item">
@@ -155,8 +155,8 @@ get_header();
 
 	<section class="block-4">
 		<div class="container">
-			<h2 class="heading h1">Suboxone Treatment (Online or In-Person)</h5>
-			<h3 class="heading">As much support as you want.</h3>
+			<h2 class="heading">Suboxone Treatment (Online or In-Person)</h5>
+			<p class="h3 heading">As much support as you want.</p>
 
 			<div class="card-deck">
 				<div class="card">
@@ -199,13 +199,13 @@ get_header();
 			<div class="container">
 				<?php if ( ! empty( $outpatient_locations->faq->heading ) || ! empty( $outpatient_locations->faq->subheading ) ) : ?>
 					<div class="heading">
-						<span class="h1">
+						<h2>
 							<?php echo esc_html( $outpatient_locations->faq->heading ); ?>
+						</h2>
 
-							<?php if ( ! empty( $outpatient_locations->faq->subheading ) ) : ?>
-								<h2 class="lead"><?php echo esc_html( $outpatient_locations->faq->subheading ); ?></h2>
-							<?php endif; ?>
-						</span>
+						<?php if ( ! empty( $outpatient_locations->faq->subheading ) ) : ?>
+							<p class="h3 lead"><?php echo esc_html( $outpatient_locations->faq->subheading ); ?></p>
+						<?php endif; ?>
 					</div>
 				<?php endif; ?>
 
@@ -253,8 +253,8 @@ get_header();
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-md-12">
-					<h3 class="jp-outpatient2-table-title">13 Outpatient &amp; Suboxone Clinics</h3>
-					<p class="jp-outpatient2-table-subtitle">If you prefer to come in-person.<br />(Therapy options also available at each location and virtually).</p>
+					<h2 class="jp-outpatient2-table-title">13 Outpatient &amp; Suboxone Clinics</h2>
+					<p class="h3 jp-outpatient2-table-subtitle">If you prefer to come in-person.<br />(Therapy options also available at each location and virtually).</p>
 				</div>
 			</div>
 

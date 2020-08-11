@@ -1,11 +1,14 @@
 @mixin jp-highlights-v2 {
-	
-	.h3 {
-		margin-bottom: 50px;
+
+	h3, .h3 {
+		margin-bottom: 0;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
 	}
 
 	li {
-		font-family: $heading-style-1;
+		font-family: $font-family-2;
 		margin-bottom: 20px;
 		font-size: 17px;
 	}

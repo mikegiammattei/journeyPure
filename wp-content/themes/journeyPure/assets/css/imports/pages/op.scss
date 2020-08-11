@@ -47,19 +47,12 @@
 
 		&-subtitle {
 			color: #ffffff;
-			font-size: 60px;
-			letter-spacing: -2px;
 			margin-bottom: 10px;
 			text-align: center;
 
 			@media screen and (min-width: 768px) {
-				// font-size: 45px;
 				margin-bottom: 10px;
 			}
-
-			// @media screen and (min-width: 992px) {
-			// 	font-size: 60px;
-			// }
 		}
 
 		&-content {
@@ -97,7 +90,7 @@
 			border-radius: 5px;
 			color: #01389f;
 			display: inline-block;
-			font-family: $heading-style;
+			font-family: $heading-font;
 			padding: 6px 12px;
 			transition: all 250ms ease-in-out;
 
@@ -140,7 +133,7 @@
 		position: relative;
 
 		&-title {
-			@extend .h1;
+			@extend .h2;
 
 			font-style: unset;
 			margin-bottom: 15px;
@@ -268,7 +261,7 @@
 
 			&-cta {
 				color: #093aa3;
-				font-family: $heading-style;
+				font-family: $heading-font;
 				font-weight: 600;
 				padding-bottom: 5px;
 			}
@@ -280,7 +273,7 @@
 				border-radius: 5px;
 				color: #01389f;
 				display: inline-block;
-				font-family: $heading-style;
+				font-family: $heading-font;
 				padding: 6px 12px;
 				transition: all 250ms ease-in-out;
 
@@ -294,7 +287,7 @@
 
 			&-spots {
 				color: #f4ba20;
-				font-family: $heading-style;
+				font-family: $heading-font;
 				margin-top: 7px;
 				padding-bottom: 0;
 
@@ -336,7 +329,7 @@
 
 		&-subtitle {
 			color: #ffffff;
-			margin-bottom: 0;
+			margin-bottom: 0 !important;
 		}
 
 		// Card

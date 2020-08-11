@@ -35,7 +35,7 @@ $footerVersion = 2;
 								<div class="col-lg-12 col-sm-12 top-text">
 									<div class="card transparent">
 										<div class="card-body">
-											<h3>"This place was exactly the change I needed. I tried treatment before, but none approached the solution like this. It's not just what to do moving forward, but looking back at what alcohol and drugs were hiding."</h3>
+											<p class="h3">"This place was exactly the change I needed. I tried treatment before, but none approached the solution like this. It's not just what to do moving forward, but looking back at what alcohol and drugs were hiding."</p>
 											<div class="jp-homepage-card-cta">
 												<div class="row">
 													<div class="col-12">
@@ -97,7 +97,7 @@ $footerVersion = 2;
 		<section class="block-4">
 			<div class="container">
 				<div class="service-container">
-					<h5 class="heading">It's Time to Make a Change</h5>
+					<h2 class="heading">It's Time to Make a Change</h2>
 					<div class="row">
 						<div class="col-md-3">
 							<div class="box">
@@ -144,9 +144,9 @@ $footerVersion = 2;
 <?php if(isset($Homepage->bioSection)): ?>
 			<section class="bio-section">
 				<div class="container">
-						<div class="heading">
-							<h5 class="h1">You're Not Alone</h5>
-						</div>
+					<div class="heading">
+						<h2>You're Not Alone</h2>
+					</div>
 					<div class="subheading">
 						<p class="h3">It's the personal story of each person that walks through our doors that gets us up in the morning and keeps us up at night. Here are a few of the 40+ doctorate or master's-level professionals you'll meet here.</p>
 					</div>
@@ -208,7 +208,7 @@ $footerVersion = 2;
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6 col-sm-12">
-						<h5 class="heading-prime h1">Here Are The Facts</h5>
+						<h2 class="heading-prime">Here Are The Facts</h2>
 						<div class="details">
 							<?php
 							$listItems = array();
@@ -305,7 +305,7 @@ $footerVersion = 2;
 			</div>
 		</section>
 		<section class="block-3">
-<div class="container"><div class="heading"><h5 class="h1">Why Treatment Here Works</h5></div><h3>Even if you've been to dozens of other facilities before, the treatment here is different. We set industry standards and hold ourselves accountable for your long-term success.</h3><div class="d-sm-flex"><div class="d-sm-flex p-2 why-point" style="
+<div class="container"><div class="heading"><h2>Why Treatment Here Works</h2></div><p class="h3">Even if you've been to dozens of other facilities before, the treatment here is different. We set industry standards and hold ourselves accountable for your long-term success.</p><div class="d-sm-flex"><div class="d-sm-flex p-2 why-point" style="
 "><div class="p-2 why-icon" style="
 "><i class="fas fa-microscope"></i></div><div class="p-2"><div class="h5">Evidence-Based Treatments</div><p>Effective treatment addresses the range of <u>issues that hide behind alcohol and drugs.</u> We incorporate the <i>latest advances in addiction science and mental wellness</i> and publish our own groundbreaking research.</p></div></div><div class="d-sm-flex p-2 ml-auto why-point"><div class="p-2 why-icon" style="
 "><i class="fas fa-users"></i></div><div class="p-2"><div class="h5">A Comprehensive Team</div><p>You deserve <u>individualized attention</u> from experienced professionals who <u>actually care</u>. Our reputation and success rates attract the country's leading experts - from medical doctors and psychologists to art and equine therapists.</p></div></div></div><div class="d-sm-flex"><div class="d-sm-flex p-2 why-point"><div class="p-2 why-icon"><i class="fas fa-hands-helping"></i></div><div class="p-2"><div class="h5">Active Accountability</div><p>Your <u>Accountability Coach</u> can be reached 24/7 through the <u>alumni app</u>. They've been where you are and can show you how to stay on track long after treatment here. The app also  rewards you for making healthy choices.</p></div></div><div class="d-sm-flex p-2 ml-auto why-point"><div class="p-2 why-icon"><i class="fas fa-map-marked"></i></div><div class="p-2"><div class="h5">Personalized Plans</div><p>Beyond cognitive behavior group and individual therapies, you need access to tools that <u>maximize your time here</u>. From virtual-reality therapy for combat veterans to imago marriage counseling, we do what it takes to keep you healthy.</p></div></div></div></div>
@@ -354,8 +354,8 @@ $footerVersion = 2;
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
-						<h2 class="h1 text-center jp-reviews-reviews-title">You can do this!</h2>
-						<h3 class="text-center jp-reviews-reviews-subtitle">Whether Journeypure is your first (and last) treatment experience, or you've spent decades in and out of other facilities...here's proof that you can feel better. There's no shame in getting help.</h3>
+						<h2 class="text-center jp-reviews-reviews-title">You can do this!</h2>
+						<p class="h3 text-center jp-reviews-reviews-subtitle">Whether Journeypure is your first (and last) treatment experience, or you've spent decades in and out of other facilities...here's proof that you can feel better. There's no shame in getting help.</p>
 					</div>
 				</div>
 
@@ -418,7 +418,7 @@ $footerVersion = 2;
       <div class="col-12">
         <!-- design process steps-->
         <!-- Nav tabs -->
-		    <h5 class="h1">The Process is Simple</h5>
+		    <h2>The Process is Simple</h2>
         <ul class="nav nav-tabs process-model more-icon-preocess" role="tablist">
           <li role="presentation" class="active">
             <a href="#discover" aria-controls="discover" role="tab" data-toggle="tab"><i class="fas fa-mobile-alt" aria-hidden="true"></i>
@@ -534,7 +534,7 @@ $footerVersion = 2;
 
 		<section class="faqs">
 			<div class="container">
-				<h5 class="h1 text-center">What's holding you back?</h5>
+				<h2 class="text-center">What's holding you back?</h2>
 				<div class="accordion" id="location-faq-rehab">
 					<?php foreach ( $Homepage->faqs as $index => $faq) : ?>
 						<div class="card">

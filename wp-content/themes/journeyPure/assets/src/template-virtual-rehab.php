@@ -49,7 +49,7 @@ get_header();
 				<div class="row">
 					<div class="col-12 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
 						<?php if ( ! empty( $virtual_rehab->highlights_v2->heading ) ) : ?>
-							<h2 class="h1"><?php echo wp_kses_post( $virtual_rehab->highlights_v2->heading ); ?></h2>
+							<h2 class="text-center"><?php echo wp_kses_post( $virtual_rehab->highlights_v2->heading ); ?></h2>
 						<?php endif; ?>
 
 						<?php if ( $virtual_rehab->highlights_v2->list ) : ?>
@@ -141,7 +141,7 @@ get_header();
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
-					<h3 class="jp-vr-table-title">It's Time To Make A Change</h3>
+					<h2 class="jp-vr-table-title">It's Time To Make A Change</h2>
 					<p class="jp-vr-table-subtitle">Get help from a full team of experts that actually understand drug and alcohol issues - without ever leaving your house.</p>
 				</div>
 			</div>
@@ -197,7 +197,7 @@ get_header();
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
-					<h3 class="jp-vr-components-title">The Same Components of Rehab</h3>
+					<h2 class="jp-vr-components-title">The Same Components of Rehab</h2>
 					<p class="jp-vr-components-subtitle">Except, it's on your phone (or computer).</p>
 
 					<div class="jp-vr-components-icon">
@@ -376,13 +376,13 @@ get_header();
 			<div class="container">
 				<?php if ( ! empty( $virtual_rehab->bios->heading ) ) : ?>
 					<div class="heading">
-						<h3 class="h1"><?php echo wp_kses_post( $virtual_rehab->bios->heading ); ?></h3>
+						<h2><?php echo wp_kses_post( $virtual_rehab->bios->heading ); ?></h2>
 					</div>
 				<?php endif; ?>
 
 				<?php if ( ! empty( $virtual_rehab->bios->subheading ) ) : ?>
 					<div class="subheading">
-						<h3><?php echo esc_html( $virtual_rehab->bios->subheading ); ?></h3>
+						<p class="h3"><?php echo esc_html( $virtual_rehab->bios->subheading ); ?></p>
 					</div>
 				<?php endif; ?>
 
@@ -439,13 +439,13 @@ get_header();
 			<div class="container">
 				<?php if ( ! empty( $virtual_rehab->faq->heading ) || ! empty( $virtual_rehab->faq->subheading ) ) : ?>
 					<div class="heading">
-						<span class="h1">
+						<h2>
 							<?php echo esc_html( $virtual_rehab->faq->heading ); ?>
+						</h2>
 
-							<?php if ( ! empty( $virtual_rehab->faq->subheading ) ) : ?>
-								<h2 class="lead"><?php echo esc_html( $virtual_rehab->faq->subheading ); ?></h2>
-							<?php endif; ?>
-						</span>
+						<?php if ( ! empty( $virtual_rehab->faq->subheading ) ) : ?>
+							<p class="h3 lead"><?php echo esc_html( $virtual_rehab->faq->subheading ); ?></p>
+						<?php endif; ?>
 					</div>
 				<?php endif; ?>
 
@@ -493,7 +493,7 @@ get_header();
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
-					<span class="h1 jp-vr-process-title">The Process is <strong>Easy</strong></span>
+					<h2 class="jp-vr-process-title">The Process is <strong>Easy</strong></h2>
 				</div>
 			</div>
 
@@ -554,7 +554,7 @@ get_header();
 
 	<section class="ask-a-question">
 		<div class="container">
-			<h5 class="h1 text-center">What now?</h5>
+			<h2 class="text-center">What now?</h2>
 
 			<div class="row">
 				<div class="col-12 text-center bottom-cta">

@@ -201,7 +201,7 @@
 					}
 				}
 
-				
+
 			}
 		}
 	}
@@ -245,9 +245,9 @@
 			}
 		}
 
-		h3.text-center {
-			margin: 15px auto 45px;
-			max-width: 900px;
+		.h3 {
+			margin-left: auto;
+			margin-right: auto;
 		}
 
 		.video-ctas {
@@ -386,9 +386,9 @@
 			}
 		}
 
-		h3 {
-			margin: 15px auto 45px;
-			max-width: 900px;
+		.h3 {
+			margin-left: auto;
+			margin-right: auto;
 		}
 
 		.address-line {
@@ -421,7 +421,7 @@
 			padding: 60px 0;
 		}
 
-		.h1 {
+		h2 {
 			color: white;
 			text-align: center;
 		}

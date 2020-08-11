@@ -23,7 +23,7 @@ get_header();
 			<div class="background-fade">
 				<div class="content">
 					<!-- <h1 class="heading-1">...</h1> -->
-					<h2 class="heading text-primary">We've Helped 6K+ People Get Their Life Back on Track</h2>
+					<h1 class="heading text-primary">We've Helped 6K+ People Get Their Life Back on Track</h1>
 					<hr>
 
 					<div class="feature">
@@ -31,7 +31,7 @@ get_header();
 							<div class="col-lg-12 col-sm-12 top-text">
 								<div class="card transparent">
 									<div class="card-body">
-										<h3 class="text-center">Chance are, we can help you too.</h3>
+										<p class="h3 text-center">Chance are, we can help you too.</p>
 									</div>
 
 									<?php if ( $reviews->ratings ) : ?>
@@ -91,8 +91,8 @@ get_header();
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
-						<h2 class="h1 text-center jp-reviews-videos-title">You Can Do This!</h2>
-						<h3 class="text-center jp-reviews-videos-subtitle">Whether Journeypure is your first (and last) treatment experience, or you've spent decades in and out of other facilities... here's proof that you can feel better. There's no shame in getting help.</h3>
+						<h2 class="text-center jp-reviews-videos-title">You Can Do This!</h2>
+						<p class="h3 text-center jp-reviews-videos-subtitle">Whether Journeypure is your first (and last) treatment experience, or you've spent decades in and out of other facilities... here's proof that you can feel better. There's no shame in getting help.</p>
 					</div>
 				</div>
 
@@ -155,8 +155,8 @@ get_header();
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
-						<h2 class="h1 text-center jp-reviews-reviews-title">Hundreds of Positive Reviews</h2>
-						<h3 class="text-center jp-reviews-reviews-subtitle">The powerful reviews found on sites like Google, Facebook and Rehabs.com are a reflection of us not cutting corners and doing what's right for each person - no matter what.</h3>
+						<h2 class="text-center jp-reviews-reviews-title">Hundreds of Positive Reviews</h2>
+						<p class="h3 text-center jp-reviews-reviews-subtitle">The powerful reviews found on sites like Google, Facebook and Rehabs.com are a reflection of us not cutting corners and doing what's right for each person - no matter what.</p>
 					</div>
 				</div>
 

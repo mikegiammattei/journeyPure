@@ -30,7 +30,7 @@ $errorBg: #ff7564;
 $errorTxt: darken($errorBg,40%);
 $successBg: lighten($secondary,30%);;
 $successTxt: darken($successBg,40%);
-$main-font: #333333;
+$main-font: #000E2C;
 $main-gray: #9A9C99;
 $border-color:  #CBCCCB;
 $background-color: #f7f7f7;
@@ -49,7 +49,6 @@ $lg-width: 900px;
 $md-width: 700px;
 
 // Fonts
-$heading-font: 'Montserrat', sans-serif;
-$heading-style: 'Montserrat', sans-serif;
-$heading-style-1: Georgia, "Times New Roman", Times, serif;
+$heading-font: 'Poppins',sans-serif;
 $font-family-base: 'Montserrat', sans-serif;
+$font-family-2: $font-family-base; // Georgia, 'Times New Roman', Times, serif;

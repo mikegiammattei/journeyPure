@@ -110,7 +110,7 @@ get_header();
 				<div class="row">
 					<div class="col-12 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
 						<?php if ( ! empty( $location->highlights_v2->heading ) ) : ?>
-							<h2 class="h1 text-center"><?php echo wp_kses_post( $location->highlights_v2->heading ); ?></h2>
+							<h2 class="text-center"><?php echo wp_kses_post( $location->highlights_v2->heading ); ?></h2>
 						<?php endif; ?>
 
 						<?php if ( $location->highlights_v2->list ) : ?>
@@ -217,8 +217,8 @@ get_header();
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
-						<h2 class="h1 text-center jp-single-loc-boxes-title"><?php echo wp_kses_post( $location->boxes->heading ); ?></h2>
-						<h3 class="text-center jp-single-loc-boxes-subtitle"><?php echo wp_kses_post( $location->boxes->subheading ); ?></h3>
+						<h2 class="text-center jp-single-loc-boxes-title"><?php echo wp_kses_post( $location->boxes->heading ); ?></h2>
+						<p class="h3 text-center jp-single-loc-boxes-subtitle"><?php echo wp_kses_post( $location->boxes->subheading ); ?></p>
 					</div>
 				</div>
 
@@ -257,13 +257,13 @@ get_header();
 			<div class="container">
 				<?php if ( ! empty( $location->block4->heading ) || ! empty( $location->block4->subheading ) ) : ?>
 					<div class="heading">
-						<span class="h1">
+						<h2>
 							<?php echo esc_html( $location->block4->heading ); ?>
+						</h2>
 
-							<?php if ( ! empty( $location->block4->subheading ) ) : ?>
-								<h2 class="lead"><?php echo esc_html( $location->block4->subheading ); ?></h2>
-							<?php endif; ?>
-						</span>
+						<?php if ( ! empty( $location->block4->subheading ) ) : ?>
+							<p class="h3 lead"><?php echo esc_html( $location->block4->subheading ); ?></p>
+						<?php endif; ?>
 					</div>
 				<?php endif; ?>
 
@@ -312,7 +312,7 @@ get_header();
 			<div class="container">
 				<?php if ( isset( $location->bios->heading ) ) : ?>
 					<div class="heading">
-						<h3 class="h1"><?php echo wp_kses_post( $location->bios->heading ); ?></h3>
+						<h2><?php echo wp_kses_post( $location->bios->heading ); ?></h2>
 					</div>
 				<?php endif; ?>
 
@@ -370,11 +370,11 @@ get_header();
 			<div class="row">
 				<div class="col-12">
 					<?php if ( $location->block4->location->title ) : ?>
-						<h2 class="h1 text-center"><?php echo wp_kses_post( $location->block4->location->title ); ?></h2>
+						<h2 class="text-center"><?php echo wp_kses_post( $location->block4->location->title ); ?></h2>
 					<?php endif; ?>
 
 					<?php if ( $location->block4->location->subtitle ) : ?>
-						<h3 class="text-center"><?php echo wp_kses_post( $location->block4->location->subtitle ); ?></h3>
+						<p class="h3 text-center"><?php echo wp_kses_post( $location->block4->location->subtitle ); ?></p>
 					<?php endif; ?>
 				</div>
 			</div>
@@ -452,8 +452,8 @@ get_header();
 	<?php if ( ! empty( $location->reviews ) ) : ?>
 		<section class="review-section">
 			<div class="container">
-				<h2 class="h1 text-center">You Can Do This!</h2>
-				<h3 class="text-center">Whether Journeypure is your first (and last) treatment experience, or you've spent decades in and out of other facilities...here's proof that you can feel better. There's no shame in getting help.</h3>
+				<h2 class="text-center">You Can Do This!</h2>
+				<p class="h3 text-center">Whether Journeypure is your first (and last) treatment experience, or you've spent decades in and out of other facilities...here's proof that you can feel better. There's no shame in getting help.</p>
 
 				<div class="parent">
 					<div class="content-container-left">
@@ -539,7 +539,7 @@ get_header();
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
-					<h5 class="h1">The Process is Simple</h5>
+					<h2>The Process is Simple</h2>
 
 					<ul class="nav nav-tabs process-model more-icon-preocess" role="tablist">
 						<li role="presentation" class="active">

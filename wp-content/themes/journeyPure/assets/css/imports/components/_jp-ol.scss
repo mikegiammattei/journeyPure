@@ -7,10 +7,10 @@
 	&-counter-reset {
 		counter-reset: line;
 	}
-	
+
 	span {
 		font-size:22px;
-	}	
+	}
 
 	// <li>
 	&-li {
@@ -18,7 +18,7 @@
 		margin-bottom: 7px;
 		padding-left: 40px;
 		position: relative;
-		font-family: $heading-style-1;
+		font-family: $font-family-2;
 		font-size: 17px;
 
 		// Counter

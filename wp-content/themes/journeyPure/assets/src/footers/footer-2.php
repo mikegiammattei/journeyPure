@@ -6,7 +6,7 @@
 			<?php if ( ! is_page_template( 'template-virtual-rehab.php' ) ) : ?>
 				<div class="ask-a-question">
 					<div class="container">
-						<h5 class="h1 text-center">Still have questions?</h5>
+						<h2 class="text-center">Still have questions?</h2>
 
 						<div class="row">
 							<div class="col-xs-6 col-md-6 text-center bottom-cta">
@@ -97,8 +97,8 @@
 				<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
 				<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script>
 				<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-				<script src="<?php echo get_stylesheet_directory_uri() . '/js/vendor.min.js?v=20200806'; ?>"></script>
-				<script src="<?php echo get_stylesheet_directory_uri() . '/js/custom.min.js?v=20200806'; ?>"></script>
+				<script src="<?php echo get_stylesheet_directory_uri() . '/js/vendor.min.js?v=20200811'; ?>"></script>
+				<script src="<?php echo get_stylesheet_directory_uri() . '/js/custom.min.js?v=20200811'; ?>"></script>
 			<?php endif; ?>
 
 			<?php wp_footer(); ?>

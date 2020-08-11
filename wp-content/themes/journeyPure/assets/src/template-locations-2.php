@@ -18,13 +18,13 @@ get_header();
 
 	<!-- SECTION: Masthead -->
 
-	<section class="jp-loc2-section jp-loc2-masthead" style="background-image: url('/wp-content/uploads/2020/07/location-photos-KY-TN-FL.jpg');">
+	<section class="jp-loc2-section jp-loc2-masthead lazy" data-src="/wp-content/uploads/2020/07/location-photos-KY-TN-FL.jpg">
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-lg-8 offset-lg-2">
 					<div class="jp-loc2-masthead-content">
 						<h1 class="jp-loc2-masthead-title">18 Rehab &amp; Clinic Locations</h1>
-						<p class="jp-loc2-masthead-subtitle">Whether you're just realizing there's a problem or you've been in and out of other facilities for years, we can help. People come here from as far away as Alaska because treatment here works.</p>
+						<p class="h3 jp-loc2-masthead-subtitle">Whether you're just realizing there's a problem or you've been in and out of other facilities for years, we can help. People come here from as far away as Alaska because treatment here works.</p>
 					</div>
 				</div>
 			</div>
@@ -309,13 +309,13 @@ get_header();
 			<div class="container">
 				<?php if ( ! empty( $locations->faq->heading ) || ! empty( $locations->faq->subheading ) ) : ?>
 					<div class="heading">
-						<span class="h1">
+						<h2>
 							<?php echo esc_html( $locations->faq->heading ); ?>
+						</h2>
 
-							<?php if ( ! empty( $locations->faq->subheading ) ) : ?>
-								<h2 class="lead"><?php echo esc_html( $locations->faq->subheading ); ?></h2>
-							<?php endif; ?>
-						</span>
+						<?php if ( ! empty( $locations->faq->subheading ) ) : ?>
+							<p class="h3 lead"><?php echo esc_html( $locations->faq->subheading ); ?></p>
+						<?php endif; ?>
 					</div>
 				<?php endif; ?>
 

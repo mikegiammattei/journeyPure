@@ -2,7 +2,7 @@
 	background-color: #ffffff;
 
 	&-title {
-		@extend .h1;
+		@extend .h2;
 
 		font-style: unset;
 		margin-bottom: 20px;
@@ -101,7 +101,7 @@
 		border-radius: 5px;
 		color: #01389f;
 		display: inline-block;
-		font-family: $heading-style;
+		font-family: $heading-font;
 		font-weight: bold;
 		padding: 6px 12px;
 		transition: all 250ms ease-in-out;

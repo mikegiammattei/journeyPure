@@ -155,7 +155,7 @@
 		padding-right:30px;
 	}
 
-	.block-3 h5,.block-3 h3,.bio-section .h1, .bio-section .h3{
+	.block-3 h5,.block-3 .h3,.bio-section .h1, .bio-section .h3{
 		padding-left:15;
 		padding-right:15px;
 	}
@@ -175,24 +175,12 @@
 	  padding-top: 0;
 	  padding-bottom: 0;
 	  background-position: center top;
-	  @media (max-width: 767px) {
-		padding-bottom: 0;
-		.h3 {
-		  font-family: "Montserrat", sans-serif;
-		  font-size: 40px;
-		  line-height: 1.25;
-		  letter-spacing: -3px;
-		  font-style: normal;
-		  padding: 0 25px;
-		}
-	  }
 	  h1 {
 		margin: 0 auto;
 		max-width: 800px;
-		font-size:55px !important;
 		@media (max-width: 767px) {
 		    padding: 0 25px;
-			}
+		}
 	  }
 	  hr {
 		display: none;
@@ -243,7 +231,7 @@
 		  font-size: 22px;
 		  font-weight: 100;
 		  font-style: italic;
-		  font-family: $heading-style-1;
+		  font-family: $font-family-2;
 		  letter-spacing: 0;
 		}
 		.card {
@@ -512,7 +500,7 @@
 	}
 
 	.media-body{
-	    font-family: $heading-style-1;
+	    font-family: $font-family-2;
     	font-size: 19px;
 	}
 	.media-con {
@@ -625,11 +613,11 @@
 b{
 	font-size:1.25em;
 }
-	h3 {
-	  margin:15px auto 45px;
-		  max-width: 683px;
-		  text-align:center;
-		  @media (max-width: 767px) {
+	.h3 {
+		margin-left: auto;
+		margin-right: auto;
+		text-align:center;
+		@media (max-width: 767px) {
 			text-align:left;
 		}
 	}
@@ -678,7 +666,7 @@ background: $background-color;
 }
 li {
     margin-bottom: 15px;
-	font-family:$heading-style-1;
+	font-family:$font-family-2;
 	font-size:17px;
 }
 .bio-default {
@@ -721,8 +709,6 @@ li {
 		margin: -33px auto 0 auto;
 		position: relative;
 		top: -24px;
-		font-size: 40px;
-		font-weight: 400;
 	  }
 	  h3 {
 
@@ -825,7 +811,7 @@ li {
 	background-color:$primary;
 	padding:50px 0 55px;
 
-	.h1 {
+	h2 {
 	text-align:center;
 	color:white;
 	}

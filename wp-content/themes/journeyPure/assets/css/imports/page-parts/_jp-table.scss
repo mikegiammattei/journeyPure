@@ -35,7 +35,7 @@
     }
 
     &-title {
-        @extend .h1;
+        @extend .h2;
 
         font-style: unset;
         margin-bottom: 15px;
@@ -49,12 +49,9 @@
     &-subtitle {
         @extend .h3;
 
-        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
         text-align: center;
-
-        @media screen and (min-width: 768px) {
-            margin-bottom: 40px;
-        }
     }
 
     &-cards {

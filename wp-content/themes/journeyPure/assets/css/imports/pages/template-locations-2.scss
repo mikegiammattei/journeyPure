@@ -29,7 +29,7 @@
 			background-image: none !important;
 			border-top: 10px solid #e0e7f5;
 		}
-		
+
 
 
 		&:before {
@@ -55,25 +55,10 @@
 		}
 
 		&-title {
-			font-family: $heading-style;
-			font-size: 45px; // 40px;
-			line-height: 1.1;
-			margin-bottom: 20px;
-			letter-spacing: -3px;
-			font-weight: normal;
-
-			// @media screen and (min-width: 768px) {
-			// 	font-size: 45px;
-			// }
+			color: $main-font;
 		}
 
-		&-subtitle {
-			font-size: 22px;
-			font-weight: 100;
-			font-style: italic;
-			font-family: $heading-style-1;
-			padding-bottom: 0;
-		}
+		// &-subtitle {}
 	}
 
 	// Cards Section
@@ -81,14 +66,14 @@
 	&-cards {
 		background-color: #ededed;
 		padding-bottom:40px;
-		
+
 		.container{
 			@media (min-width: 1200px) {
     max-width: 1280px;}
 		}
 
 		&-title {
-			@extend .jp-loc2-masthead-title;
+			// @extend .jp-loc2-masthead-title;
 
 			@media screen and (min-width: 768px) {
 				text-align: center;

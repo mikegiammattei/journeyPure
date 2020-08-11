@@ -21,7 +21,7 @@
 			<div class="background-fade">
 				<div class="content">
 					<!-- <h1 class="heading-1">...</h1> -->
-					<h2 class="heading text-primary">Here, it's different.</h2>
+					<h1 class="heading text-primary">Here, it's different.</h1>
 
 					<hr>
 
@@ -30,7 +30,7 @@
 							<div class="col-lg-12 col-sm-12 top-text">
 								<div class="card transparent">
 									<div class="card-body">
-										<h3 class="text-center">Our mission is to help people become healthy and stay healthy. Our high standards attract well-known behavioral health professionals from across the country.  Their commitments to <u>ethics and patient success</u> are backed by the highest accreditation in the industry.</h3>
+										<p class="h3 text-center">Our mission is to help people become healthy and stay healthy. Our high standards attract well-known behavioral health professionals from across the country.  Their commitments to <u>ethics and patient success</u> are backed by the highest accreditation in the industry.</p>
 									</div>
 
 									<?php if ( $AboutUs->ratings ) : ?>
@@ -93,7 +93,7 @@
 	<section class="bio-section">
 		<div class="container">
 			<div class="heading">
-				<h2 class="h1">The Leadership Team</h2>
+				<h2>The Leadership Team</h2>
 			</div>
 			<div id="about-bio-slider" class="about-bio-slider" data-slick='{"slidesToShow":<?php echo (count($AboutUs->bios->bios) < 3) ? count($AboutUs->bios->bios) : 3; ?>}'>
 				<?php  foreach ($AboutUs->bios->bios as $index => $bio): ?>
@@ -177,7 +177,7 @@
 	</section>
 		<section class="ethics">
 		<div class="container">
-		<h2 class="h1">Founding Principles</h2>
+		<h2 class="text-center">Founding Principles</h2>
 				<div class="media media-number-list"><div class="align-self-start mr-3 list-number colored"><i class="fas fa-check"></i></div><div class="media-body"><h5 class="mt-0">Addiction is a disease that can be treated with evidence-based and research-backed treatments</h5></div></div>
 		<div class="media media-number-list"><div class="align-self-start mr-3 list-number colored"><i class="fas fa-check"></i></div><div class="media-body"><h5 class="mt-0">Any co-occurring mental health conditions must be treated along with the addictive behaviors to achieve long-term healing </h5></div></div>
 
@@ -190,8 +190,8 @@
 
 	<section class="block-4">
 		<div class="container">
-			<h5 class="heading h1">Third-Party Vetted</h5>
-				<h3 class="heading">Our treatment is monitored by all the leading addiction healthcare organizations.</h3>
+			<h2 class="heading">Third-Party Vetted</h2>
+				<p class="h3 heading">Our treatment is monitored by all the leading addiction healthcare organizations.</p>
 			<div class="card-deck">
 				<div class="card">
 					<img src="/wp-content/uploads/2019/11/carf-bg-fade-02.jpg" class="card-img-top" alt="...">
@@ -231,8 +231,8 @@
 	</section>
 
 	<section class="block-3 " style="background-image: url(''); "><div class="container">   <div class="content-section ">
-	<h5 class="h1">The Latest News
-<a href="https://www.facebook.com/journeypure" target="_blank"><i class="fab fa-facebook"></i></a><a href="https://www.linkedin.com/company/journeypure/about/" target="_blank"><i class="fab fa-linkedin-in"></i></a><a href="https://www.youtube.com/journeypure" target="_blank"><i class="fab fa-youtube"></i></a></h5>
+	<h2>The Latest News
+<a href="https://www.facebook.com/journeypure" target="_blank"><i class="fab fa-facebook"></i></a><a href="https://www.linkedin.com/company/journeypure/about/" target="_blank"><i class="fab fa-linkedin-in"></i></a><a href="https://www.youtube.com/journeypure" target="_blank"><i class="fab fa-youtube"></i></a></h2>
 	<div class="row row-eq-height"> <div class="col-lg-6 d-flex align-items-stretch card-col"><div class="card default  effect-none"> <div class="card-body"><div class="card-text">
 <ul>
 <li><h3>Official provider for retired NFL & MLB pro athletes.</h3><hr /> <div class="row"><div class="col-md-10 col-sm-12">We are the only addiction treatment provider approved by the NFL Player Care Foundation and the MLB BAT program.</div><div class="col-md-2 col-sm-12"><img src="/wp-content/uploads/2020/01/Player-Care-Foundation-500x342-1.png"></div></div>
