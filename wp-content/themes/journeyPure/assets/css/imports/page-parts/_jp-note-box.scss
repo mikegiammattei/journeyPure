@@ -24,7 +24,11 @@
 		&:last-child {
 			margin-bottom: 0;
 		}
+		
 	}
+	.no-margin{
+			margin-bottom:0;
+		}
 
 	.note-cta {
 		border-radius: 4px;
@@ -35,7 +39,6 @@
 	}
 
 	a {
-		border-bottom: 2px dotted;
 		color: #FBBC07;
 
 		&:hover {

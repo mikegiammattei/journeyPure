@@ -12,7 +12,8 @@
 
 	<div class="note-box">
 		<p>We're accepting limited inpatient admissions with additional pre-screening procedures. Outpatient services, family therapy and alumni meetings are virtual-only.</p>
-		<span class="note-cta"><i class="fas fa-phone"></i> Learn More <?php echo esc_html( get_option( 'defaultPhone' ) ); ?></span>
+		<p class="no-margin">Learn More</p>
+		<span class="note-cta"><i class="fas fa-phone"></i> <?php echo esc_html( get_option( 'defaultPhone' ) ); ?></span>
 	</div>
 
 <?php elseif ( is_page_template( 'template-outpatient-2.php' ) ) : ?>

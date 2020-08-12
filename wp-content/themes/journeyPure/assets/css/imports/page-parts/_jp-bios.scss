@@ -97,10 +97,11 @@
 		background: #C5D1EB;
 		border-radius: 30px;
 		color: rgb(224, 231, 245);
-		margin-top: -176px;
+		margin-top: -34px;
 		padding: 2px 10px;
 		position: relative;
 		z-index: 99999;
+		top:5px;
 
 		&.has-more {
 			&:after,

@@ -24,13 +24,14 @@ $footerVersion = 2;
 			<div class="default-container x-loc lazy" data-src="/wp-content/uploads/2020/08/peace-after-rehab.jpg">
 				<div class="background-fade">
 					<div class="content">
-						<h1 class="heading text-primary">Get Your Life Back on Track</h1>
 						<div class="feature">
 							<div class="row">
 								<div class="col-lg-12 col-sm-12 top-text">
 									<div class="card transparent">
 										<div class="card-body">
-											<p class="h3">"This place was exactly the change I needed. I tried treatment before, but none approached the solution like this. It's not just what to do moving forward, but looking back at what alcohol and drugs were hiding."</p>
+																<h1 class="heading text-primary">Get Your Life Back on Track</h1>
+
+											<p class="h3"><i>"This place was exactly the change I needed. I tried treatment before, but none approached the solution like this. It's not just what to do moving forward, but looking back at what alcohol and drugs were hiding."</i></p>
 											<div class="jp-homepage-card-cta">
 												<div class="row">
 													<div class="col-12">
@@ -38,7 +39,7 @@ $footerVersion = 2;
 														<div class="jp-homepage-card-cta-headings">
 															<h5 class="jp-homepage-card-cta-title">Daniel</h5>
 															<span class="jp-homepage-card-cta-headings-separator">•</span>
-															<h6 class="jp-homepage-card-cta-subtitle">Sober March 2020</h6>
+															<h6 class="jp-homepage-card-cta-subtitle">Sober October 2019</h6>
 														</div>
 														<a class="jp-homepage-card-cta-button" href="#jp-homepage-videos-modal" data-toggle="modal" data-target="#jp-homepage-videos-modal">Watch His Full Interview</a>
 													</div>
@@ -124,7 +125,7 @@ $footerVersion = 2;
 		<div class="col-12">
 		<h5 class="center">Treatment Here is In-Network </h5>
 		<p>In-network with insurance companies means <i>any cost to you is as low as possible</i>. Get answers about your specific policy now.
-				<button type="button" data-toggle="modal" data-target="#main-insurance-form" class="btn btn-outline-secondary"><i class="fas fa-id-card"></i>Submit Your Insurance</button></p>
+				<button type="button" data-toggle="modal" data-target="#main-insurance-form" class="btn btn-secondary"><i class="fas fa-id-card"></i>Submit Your Insurance</button></p>
 		<br>
 
 			<img class="lazy" data-src="<?php echo  get_stylesheet_directory_uri(); ?>/assets/img/insurance2.png" alt="Aetna, Anthem Blue Cross Blue Sheild, Cigna Heath Insurances">
@@ -216,7 +217,7 @@ $footerVersion = 2;
 								'content' => "We've helped thousands of people like you get healthy and stay healthy.  Don't let doubts hold you back. You can do this! (And, we're here to help)."
 							);
 							$listItems[] = array(
-								'heading' => "There's 95% you'll be happy with your care",
+								'heading' => "There's 95% you'll be satisfied",
 								'content' => "You deserve care that listens and constantly improves.  As of " . date('F Y') . ", the satisfaction rate here has never dropped below 95%."
 							);
 							?>

@@ -166,10 +166,10 @@
 
 	.above-fold {
 	.card-body{
-	padding: 1.25rem 1.25rem 1rem;
+	padding: 1.5rem 1.25rem 1.25rem;
 	    background: #ffffffa3;
 		border-radius:3px;
-    margin: 15px;
+    margin: 0 15px 15px;
 	}
 	.default-container {
 	  padding-top: 0;
@@ -204,7 +204,7 @@
 	  .feature {
 		margin: 10px auto 0;
 		padding: 5px 65px 50px;
-		max-width:800px;
+		max-width:850px;
 		.h-100 {
     padding: 10px 15px;
 }
@@ -358,8 +358,9 @@
 		color:$primary;
 	}
 	p{
-		max-width: 635px;
+		max-width: 600px;
 		margin: 0 auto;
+		font-size:20px;
 	}
 	a {
 	color:$secondary;
@@ -493,7 +494,7 @@
 	}
 	}
 	.block-2 {
-	padding: 55px 0 0;
+	padding: 50px 0 0;
 
 	.container {
 	  max-width: 1241px;
@@ -501,7 +502,7 @@
 
 	.media-body{
 	    font-family: $font-family-2;
-    	font-size: 19px;
+    	font-size: 20px;
 	}
 	.media-con {
 		// Hide last 2 icons on iPad pro
@@ -532,7 +533,7 @@
 
 	.facility-photos {
 	  height: 100%;
-    margin: -95px 0;
+    margin: -85px 0;
     padding-left: 75px;
 
 	img {
@@ -694,13 +695,13 @@ li {
 
 	}
 	.service-container {
-	  border: 2px solid $primary;
+	  border: 2px solid $medium-blue;
 	  margin-top: $lg-space;
 	  border-radius: 20px;
 	  padding: $lg-space;
 
 	  .heading {
-		color: $primary;
+		color: $medium-blue;
 		text-align: center;
 		background: $light-blue;
 		padding: 0 30px;
@@ -718,10 +719,11 @@ li {
 	  }
 	  h5{
     margin-bottom: 0;
+	color:$medium-blue;
 	  }
 
 	  div[class*="col"] {
-		border-right: 2px dotted $primary;
+		border-right: 2px dotted $medium-blue;
 
 		@media (max-width: 767px) {
 		  border-right: 0;
