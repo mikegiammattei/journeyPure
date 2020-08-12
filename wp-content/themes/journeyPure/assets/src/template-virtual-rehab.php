@@ -47,7 +47,7 @@ get_header();
 		<section class="jp-vr-section jp-vr-highlights-v2">
 			<div class="container">
 				<div class="row">
-					<div class="col-12 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
+					<div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
 						<?php if ( ! empty( $virtual_rehab->highlights_v2->heading ) ) : ?>
 							<h2 class="text-center"><?php echo wp_kses_post( $virtual_rehab->highlights_v2->heading ); ?></h2>
 						<?php endif; ?>
@@ -56,22 +56,17 @@ get_header();
 							<div class="list-container">
 								<?php foreach ( $virtual_rehab->highlights_v2->list as $index => $item ) : ?>
 									<div class="list-item">
-										<?php if ( ! empty( $item['heading'] ) ) : ?>
-											<div class="row no-gutters">
-												<div class="list-heading">
-													<div class="d-flex">
-														<div class="align-self-center"><i class="fas fa-check icon"></i></div>
-														<div class="align-self-center"><h5 class="item-title"><?php echo wp_kses_post( $item['heading'] ); ?></h5></div>
-													</div>
-												</div>
-											</div>
-										<?php endif; ?>
+										<div class="content">
+											<div class="content-inner">
+												<?php if ( ! empty( $item['heading'] ) ) : ?>
+													<h5 class="item-title"><?php echo wp_kses_post( $item['heading'] ); ?></h5>
+												<?php endif; ?>
 
-										<?php if ( ! empty( $item['content'] ) ) : ?>
-											<div class="content">
-												<?php echo wp_kses_post( $item['content'] ); ?>
+												<?php if ( ! empty( $item['content'] ) ) : ?>
+													<?php echo wp_kses_post( $item['content'] ); ?>
+												<?php endif; ?>
 											</div>
-										<?php endif; ?>
+										</div>
 
 										<?php if ( ! empty( $item['review'] ) ) : ?>
 											<div class="review">
@@ -116,18 +111,33 @@ get_header();
 						<?php endif; ?>
 					</div>
 
-					<div class="col-12 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
-						<?php if ( true === $virtual_rehab->highlights_v2->show_insurance_logos ) : ?>
-							<div class="logos-wrapper">
-								<img class="logos lazy" data-src="<?php echo esc_attr( get_stylesheet_directory_uri() ); ?>/assets/img/insurance2.png" alt="Aetna, Anthem Blue Cross Blue Sheild, Cigna Heath Insurances">
-								<img class="logos lazy" data-src="<?php echo esc_attr( get_stylesheet_directory_uri() ); ?>/assets/img/insurance1.png" alt="Amerihealth, United Healthcare, Humana, Tricare and 43 More Insurances">
-							</div>
+					<?php if ( true === $virtual_rehab->highlights_v2->show_insurance_logos ) : ?>
+						<div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+							<div class="list-container">
+								<div class="list-item">
+									<div class="content">
+										<div class="content-inner">
+											<h5 class="item-title">Plus, We're In-Network with Insurance</h5>
+											<p>We're trusted by all the big health insurance companies and policies as small as the Coushatta Tribe of Louisiana. Any cost to you is as low as possible.</p>
+										</div>
+									</div>
 
-							<!-- <div class="btn-wrapper">
-								<button type="button" data-toggle="modal" data-target="#virtual-rehab-modal" class="btn btn-outline-secondary"><span class="fas fa-id-card"></span> Talk to a therapist</button>
-							</div> -->
-						<?php endif; ?>
-					</div>
+									<div class="review">
+										<div class="review-inner">
+											<div class="logos-wrapper">
+												<img class="logos lazy" data-src="<?php echo esc_attr( get_stylesheet_directory_uri() ); ?>/assets/img/insurance2.png" alt="Aetna, Anthem Blue Cross Blue Sheild, Cigna Heath Insurances">
+												<img class="logos lazy" data-src="<?php echo esc_attr( get_stylesheet_directory_uri() ); ?>/assets/img/insurance1.png" alt="Amerihealth, United Healthcare, Humana, Tricare and 43 More Insurances">
+											</div>
+
+											<!-- <div class="btn-wrapper">
+												<button type="button" data-toggle="modal" data-target="#virtual-rehab-modal" class="btn btn-outline-secondary"><span class="fas fa-id-card"></span> Talk to a therapist</button>
+											</div> -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					<?php endif; ?>
 				</div>
 			</div>
 		</section>

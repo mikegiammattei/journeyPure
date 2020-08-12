@@ -6,20 +6,24 @@
 
 	h5 {
 		color: #FBBC07;
-		margin: 0 auto 20px;
+		margin: 0 auto 15px;
 		max-width: 800px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
 
 	p {
 		color: #FBBC07;
 		font-family: $heading-font;
-		margin: 0 auto;
+		margin: 0 auto 15px;
 		max-width: 800px;
 		padding: 0;
-	}
 
-	h3 + p {
-		margin-top: 15px;
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
 
 	.note-cta {
@@ -28,10 +32,6 @@
 		color: #FBBC07 !important;
 		display: inline-block;
 		padding: 6px 12px;
-	}
-
-	p + .note-cta {
-		margin-top: 20px;
 	}
 
 	a {
@@ -46,16 +46,6 @@
 	// Alert style
 
 	&.note-box-alert {
-		// background-color: rgb(251,188,6);
 		padding: 30px 15px;
-
-		// .note-cta {
-		// 	border-color: #ffffff;
-		// 	color: #ffffff !important;
-		// }
-
-		// h3, p, a {
-		// 	color: #ffffff;
-		// }
 	}
 }

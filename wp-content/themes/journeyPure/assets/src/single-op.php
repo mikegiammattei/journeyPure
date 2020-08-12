@@ -16,14 +16,6 @@ get_header();
 
 <div id="jp-op" class="jp-op">
 
-	<!-- SECTION: Note Box -->
-
-	<!-- <div class="note-box">
-		<p>If you're looking for Suboxone-only treatment <a href="/suboxone-clinics/">click Here</a></p>
-	</div> -->
-
-	<!-- /SECTION: Note Box -->
-
 	<!-- SECTION: Masthead -->
 
 	<section class="jp-op-section jp-op-masthead">

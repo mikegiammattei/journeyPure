@@ -94,13 +94,13 @@
 
 	.see-more-btn,
 	.see-less-btn {
-		    margin-top: -176px;
-    z-index: 99999;
-    position: relative;
-    background: #C5D1EB;
-    color: rgb(224, 231, 245);
-    padding: 2px 10px;
-    border-radius: 30px;
+		background: #C5D1EB;
+		border-radius: 30px;
+		color: rgb(224, 231, 245);
+		margin-top: -176px;
+		padding: 2px 10px;
+		position: relative;
+		z-index: 99999;
 
 		&.has-more {
 			&:after,
@@ -113,5 +113,43 @@
 
 	.fa-li {
 		color: #3b9341;
+	}
+
+	// Layout V2
+
+	&.bio-section-v2 {
+		background-color: #e2e7f5; // $light-blue;
+
+		.bio-slider {
+			.card {
+				background-color: transparent; // $light-blue;
+				padding: 0 10px;
+				width: 100%;
+
+				.bios {
+					background-color: #eef2fa;
+					border-radius: 20px;
+
+					.name-text {
+						color: $primary;
+					}
+
+					.text {
+						text-align: center;
+
+						span {
+							color: $main-font;
+							display: block;
+						}
+					}
+
+					.fa-ul {
+						i {
+							color: $primary;
+						}
+					}
+				}
+			}
+		}
 	}
 }

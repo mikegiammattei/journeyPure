@@ -18,12 +18,7 @@ $footerVersion = 2;
 
 ?>
 <div id="homepage" class="homepage-2">
-<div class="note-box">
-	<h3>We're accepting limited inpatient admissions with additional pre-screening procedures. Outpatient services, family therapy and alumni meetings are virtual-only.</h3>
-	<p>Learn More</p>
-		<span class="note-cta"><i class="fas fa-phone"></i> <?php echo get_option('defaultPhone'); ?></span>
-	</div>
-	<main>
+<main>
 		<?php $restApiPath = 'http://journeypure.net/rest-api'; ?>
 		<section class="above-fold">
 			<div class="default-container x-loc lazy" data-src="/wp-content/uploads/2020/08/peace-after-rehab.jpg">

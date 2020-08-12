@@ -16,12 +16,6 @@ get_header();
 
 <div id="jp-outpatient2" class="jp-outpatient2">
 
-	<div class="note-box note-box-alert">
-		<h5>Due to COVID-19, all Suboxone programs are online-only.</h5>
-		<p>See your doctor or therapist while at home using an app like FaceTime instead of coming in person. Doctors still prescribe medications. Call to schedule your virtual appointment.</p>
-		<span class="note-cta"><i class="fas fa-phone"></i> Call Now <?php echo esc_html( get_option( 'defaultPhone' ) ); ?></span>
-	</div>
-
 	<!-- SECTION: Top Section (Above Fold / Masthead) -->
 
 	<section class="above-fold">

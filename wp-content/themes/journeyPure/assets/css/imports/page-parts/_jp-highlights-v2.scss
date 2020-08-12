@@ -1,4 +1,6 @@
 @mixin jp-highlights-v2 {
+	background-color: #f7f7f7;
+	overflow: hidden;
 
 	h3, .h3 {
 		margin-bottom: 0;
@@ -14,56 +16,95 @@
 	}
 
 	.list-container {
-		margin-top: 25px;
+		margin-top: 30px;
 
 		.list-item {
-			// margin-bottom: $md-space;
-			background: #F7F7F7;
-			padding: 0 30px;
-			border-radius: 3px;
+			margin-top: 30px;
 
-			.list-heading {
-				margin-top: 30px;
-
-				.icon {
-					display: inline-block;
-					width: 34px;
-					height: 34px;
-					border-radius:50%;
-					background-color: $secondary;
-					color: $white;
-					text-align: center;
-					font-size: 18px;
-					line-height: 34px;
-					margin-right: 10px;
-					display:none;
-				}
-
-				.item-title {
-					margin-bottom: 0;
-					color:$secondary;
-				}
+			&:first-child {
+				margin-top: 0;
 			}
 
 			.content {
-				padding:10px 0;
+				@media screen and (min-width: 768px) {
+					padding: 0 25px;
+				}
+			}
+
+			.content-inner {
+				background-color: #ffffff;
+				padding: 15px;
+
+				@media screen and (min-width: 768px) {
+					border-radius: 3px;
+					padding: 30px 40px 15px;
+				}
+			}
+
+			.item-title {
+				color: $primary;
 			}
 
 			.review {
-					margin-bottom:25px;
-					padding-bottom:25px;
+				background-color: #e2e7f5;
+				padding: 15px;
+				position: relative;
+
+				@media screen and (min-width: 768px) {
+					border-radius: 3px;
+					box-shadow: 0px 2px 4px rgba(0,0,0,.18);
+					display: flex;
+					margin-top: -3px;
+					min-height: 144px;
+					padding: 30px 40px;
+
+					&:before,
+					&:after {
+						background: transparent url('/wp-content/themes/journeyPure/assets/img/section-dots.png') repeat-x center center;
+						bottom: 0;
+						content: '';
+						position: absolute;
+						top: 0;
+						width: 9999px;
+					}
+
+					&:before {
+						background-position: right center;
+						left: -9999px;
+					}
+
+					&:after {
+						background-position: left 12px center;
+						right: -9999px;
+					}
+				}
 
 				&-text {
-					border-left: 6px solid $secondary;
+					align-items: center;
+					display: flex;
 					font-style: italic;
-					margin-bottom: 7px;
-					margin-left: 17px;
-					padding-left: 17px;
+					margin-bottom: 5px;
+
+					@media screen and (min-width: 768px) {
+						flex: 1 1 0px;
+						margin-bottom: 0;
+						width: auto;
+					}
+
+					p:last-child {
+						padding-bottom: 0;
+					}
 				}
 
 				&-author {
 					align-items: center;
 					display: flex;
+
+					@media screen and (min-width: 768px) {
+						flex: 0 0 auto;
+						padding-left: 20px;
+    					width: auto;
+					}
 
 					&-image {
 						border-radius: 50%;
@@ -79,8 +120,7 @@
 
 					&-title {
 						font-size: 14px;
-						display: inline;
-						margin-bottom: 1px;
+						margin-bottom: 3px;
 					}
 
 					&-extra {
@@ -97,12 +137,10 @@
 
 					&-sober-since {
 						color: #999;
-						display: inline;
 						font-family: $heading-font;
 						font-size: 12px;
 						font-weight: 500;
 						padding-bottom: 0;
-						padding-left: 5px;
 					}
 
 					&-logo {

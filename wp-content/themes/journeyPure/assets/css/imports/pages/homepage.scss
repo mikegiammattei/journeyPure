@@ -46,7 +46,9 @@
 /** Pages using the slider: homepage, single-location */
 @import "../components/sliders/review-default";
 
-.homepage-1{
+@import "homepage-2";
+
+/*.homepage-1{
 overflow-x: hidden;
   .above-fold{
 	.default-container{
@@ -458,6 +460,4 @@ margin:0 0 5px;
 padding:0;
 }
 }
-}
-
-@import "homepage-2";
+}*/

@@ -350,6 +350,7 @@
 	.bio-section {
 		@import "../page-parts/jp-bios";
 		@include jp-bios;
+
 		background: #ebebeb;
 
 		.card-body {

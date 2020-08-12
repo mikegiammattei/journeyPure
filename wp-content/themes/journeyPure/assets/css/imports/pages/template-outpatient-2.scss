@@ -17,13 +17,6 @@
 		@include jp-section;
 	}
 
-	// Note box
-
-	.note-box {
-		@import "../page-parts/jp-note-box";
-		@include jp-note-box;
-	}
-
 	// Top Section (Above Fold / Masthead)
 
 	.above-fold {

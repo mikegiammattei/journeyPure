@@ -17,13 +17,6 @@
 		@include jp-section;
 	}
 
-	// Note Box
-
-	.note-box {
-		@import "../page-parts/jp-note-box";
-		@include jp-note-box;
-	}
-
 	// Masthead Section
 
 	&-masthead {

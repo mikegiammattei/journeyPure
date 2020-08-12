@@ -26,6 +26,9 @@ if(isset($Location)){
 		$UploaderReview->process();
 	endif;*/
 ?>
+
+<?php require_once get_stylesheet_directory() . '/includes/components/note-box.php'; ?>
+
 <header>
 	<div class="container ">
 		<div class="row align-items-center justify-content-between">

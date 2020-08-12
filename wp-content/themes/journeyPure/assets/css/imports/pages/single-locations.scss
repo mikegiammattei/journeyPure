@@ -68,18 +68,6 @@
 		margin-bottom: 15px;
 	}
 
-	// Note box
-
-	.note-box {
-		@import "../page-parts/jp-note-box";
-		@include jp-note-box;
-
-		p {
-			max-width: none;
-			line-height:1.25;
-		}
-	}
-
 	// Top Section (Above Fold / Masthead)
 
 	.above-fold {
@@ -99,7 +87,6 @@
 	&-highlights-v2 {
 		@import "../page-parts/jp-highlights-v2";
 		@include jp-highlights-v2;
-		background: #f7f7f7;
 	}
 
 	// Photos
@@ -218,14 +205,6 @@
 	.bio-section {
 		@import "../page-parts/jp-bios";
 		@include jp-bios;
-
-		background-color: $light-blue;
-
-		.bio-slider {
-			.card {
-				background-color: $light-blue;
-			}
-		}
 	}
 
 	// Reviews

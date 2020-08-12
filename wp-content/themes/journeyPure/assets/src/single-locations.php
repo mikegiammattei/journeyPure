@@ -16,10 +16,6 @@ get_header();
 
 <div id="single-location" class="jp-single-loc">
 
-	<div class="note-box">
-		<p>This location is accepting limited admissions with additional pre-screening procedures. To learn more, call <?php echo esc_html( get_option( 'defaultPhone' ) ); ?>.</p>
-	</div>
-
 	<!-- SECTION: Top Section (Above Fold / Masthead) -->
 
 	<section class="above-fold">
@@ -38,7 +34,7 @@ get_header();
 						<div class="row">
 							<div class="col-lg-12 col-sm-12 top-text">
 								<div class="card transparent">
-									<div class="card-body">
+									<div class="card-body text-center">
 										<?php echo wp_kses_post( $location->above_fold->subheading ); ?>
 									</div>
 
@@ -108,7 +104,7 @@ get_header();
 		<section class="jp-single-loc-section jp-single-loc-highlights-v2">
 			<div class="container">
 				<div class="row">
-					<div class="col-12 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
+					<div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
 						<?php if ( ! empty( $location->highlights_v2->heading ) ) : ?>
 							<h2 class="text-center"><?php echo wp_kses_post( $location->highlights_v2->heading ); ?></h2>
 						<?php endif; ?>
@@ -117,22 +113,17 @@ get_header();
 							<div class="list-container">
 								<?php foreach ( $location->highlights_v2->list as $index => $item ) : ?>
 									<div class="list-item">
-										<?php if ( ! empty( $item['heading'] ) ) : ?>
-											<div class="row no-gutters">
-												<div class="list-heading">
-													<div class="d-flex">
-														<div class="align-self-center"><i class="fas fa-check icon"></i></div>
-														<div class="align-self-center"><h5 class="item-title"><?php echo wp_kses_post( $item['heading'] ); ?></h5></div>
-													</div>
-												</div>
-											</div>
-										<?php endif; ?>
+										<div class="content">
+											<div class="content-inner">
+												<?php if ( ! empty( $item['heading'] ) ) : ?>
+													<h5 class="item-title"><?php echo wp_kses_post( $item['heading'] ); ?></h5>
+												<?php endif; ?>
 
-										<?php if ( ! empty( $item['content'] ) ) : ?>
-											<div class="content">
-												<?php echo wp_kses_post( $item['content'] ); ?>
+												<?php if ( ! empty( $item['content'] ) ) : ?>
+													<?php echo wp_kses_post( $item['content'] ); ?>
+												<?php endif; ?>
 											</div>
-										<?php endif; ?>
+										</div>
 
 										<?php if ( ! empty( $item['review'] ) ) : ?>
 											<div class="review">
@@ -142,7 +133,7 @@ get_header();
 
 												<div class="review-author">
 													<div class="review-author-image">
-														<img class="lazy" src="<?php echo esc_attr( $item['review']->photo['image'] ); ?>" alt="<?php echo esc_attr( $item['review']->photo['alt'] ); ?>">
+														<img class="lazy" data-src="<?php echo esc_attr( $item['review']->photo['image'] ); ?>" alt="<?php echo esc_attr( $item['review']->photo['alt'] ); ?>">
 													</div>
 
 													<div class="review-author-info">
@@ -163,7 +154,7 @@ get_header();
 
 															<?php if ( ! empty( $item['review']->source_image['image'] ) ) : ?>
 																<div class="review-author-logo">
-																	<img class="review-author-source-image lazy" src="<?php echo esc_attr( $item['review']->source_image['image'] ); ?>" alt="<?php echo esc_attr( $item['review']->source_image['alt'] ); ?>">
+																	<img class="review-author-source-image lazy" data-src="<?php echo esc_attr( $item['review']->source_image['image'] ); ?>" alt="<?php echo esc_attr( $item['review']->source_image['alt'] ); ?>">
 																</div>
 															<?php endif; ?>
 														</div>
@@ -177,18 +168,33 @@ get_header();
 						<?php endif; ?>
 					</div>
 
-					<div class="col-12 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
-						<?php if ( true === $location->highlights_v2->show_insurance_logos ) : ?>
-							<div class="logos-wrapper">
-								<img class="logos lazy" data-src="<?php echo esc_attr( get_stylesheet_directory_uri() ); ?>/assets/img/insurance2.png" alt="Aetna, Anthem Blue Cross Blue Sheild, Cigna Heath Insurances">
-								<img class="logos lazy" data-src="<?php echo esc_attr( get_stylesheet_directory_uri() ); ?>/assets/img/insurance1.png" alt="Amerihealth, United Healthcare, Humana, Tricare and 43 More Insurances">
-							</div>
+					<?php if ( true === $location->highlights_v2->show_insurance_logos ) : ?>
+						<div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+							<div class="list-container">
+								<div class="list-item">
+									<div class="content">
+										<div class="content-inner">
+											<h5 class="item-title">Plus, We're In-Network with Insurance</h5>
+											<p>We're trusted by all the big health insurance companies and policies as small as the Coushatta Tribe of Louisiana. Any cost to you is as low as possible.</p>
+										</div>
+									</div>
 
-							<div class="btn-wrapper">
-								<button type="button" data-toggle="modal" data-target="#main-insurance-form" class="btn btn-outline-secondary"><span class="fas fa-id-card"></span> Check Insurance</button>
+									<div class="review">
+										<div class="review-inner">
+											<div class="logos-wrapper">
+												<img class="logos lazy" data-src="<?php echo esc_attr( get_stylesheet_directory_uri() ); ?>/assets/img/insurance2.png" alt="Aetna, Anthem Blue Cross Blue Sheild, Cigna Heath Insurances">
+												<img class="logos lazy" data-src="<?php echo esc_attr( get_stylesheet_directory_uri() ); ?>/assets/img/insurance1.png" alt="Amerihealth, United Healthcare, Humana, Tricare and 43 More Insurances">
+											</div>
+
+											<div class="btn-wrapper">
+												<button type="button" data-toggle="modal" data-target="#main-insurance-form" class="btn btn-outline-secondary"><span class="fas fa-id-card"></span> Check Insurance</button>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
-						<?php endif; ?>
-					</div>
+						</div>
+					<?php endif; ?>
 				</div>
 			</div>
 		</section>
@@ -262,7 +268,7 @@ get_header();
 						</h2>
 
 						<?php if ( ! empty( $location->block4->subheading ) ) : ?>
-							<p class="h3 lead"><?php echo esc_html( $location->block4->subheading ); ?></p>
+							<p class="h3 lead"><?php echo wp_kses_post( $location->block4->subheading ); ?></p>
 						<?php endif; ?>
 					</div>
 				<?php endif; ?>
@@ -308,7 +314,7 @@ get_header();
 	<!-- SECTION: Bios -->
 
 	<?php if ( isset( $location->bios ) && is_array( $location->bios->bios ) ) : ?>
-		<section class="bio-section">
+		<section class="bio-section bio-section-v2">
 			<div class="container">
 				<?php if ( isset( $location->bios->heading ) ) : ?>
 					<div class="heading">
@@ -318,7 +324,7 @@ get_header();
 
 				<?php if ( isset( $location->bios->subheading ) ) : ?>
 					<div class="subheading">
-						<p class="h3"><?php echo esc_html( $location->bios->subheading ); ?></p>
+						<p class="h3"><?php echo wp_kses_post( $location->bios->subheading ); ?></p>
 					</div>
 				<?php endif; ?>
 
@@ -328,7 +334,7 @@ get_header();
 							<div class="card default border-0">
 								<div class="card-body  bios">
 									<div class="img" style='background-image: url("<?php echo esc_attr( $bio->photo['image'] ); ?>");'></div>
-									<p class="text name-text"><?php echo esc_html( $bio->name ); ?> <span class="text"> • <?php echo esc_html( $bio->credentials ); ?></span></p>
+									<p class="text name-text"><?php echo esc_html( $bio->name ); ?> <span class="text"><?php echo esc_html( $bio->credentials ); ?></span></p>
 									<p class="text"><?php echo esc_html( $bio->title ); ?></p>
 
 									<ul class="fa-ul">
