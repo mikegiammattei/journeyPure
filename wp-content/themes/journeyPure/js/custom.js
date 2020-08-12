@@ -804,6 +804,7 @@ $(document).ready(function () {
     box.addClass('loading');
     var page = parseInt(box.data('page')) + 1;
     var sort = jQuery('#sort').val();
+    var cat = box.data('cat');
     var url = box.data('url');
     var nonce = box.data('nonce');
     var documentScroll = jQuery(document).scrollTop();
@@ -818,7 +819,8 @@ $(document).ready(function () {
       'action': 'get_reviews',
       'nonce': nonce,
       'page': page,
-      'sort': sort
+      'sort': sort,
+      'cat': cat
     }, function (html) {
       if (html != '') {
         // Insert HTML

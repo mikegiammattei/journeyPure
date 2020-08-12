@@ -9,6 +9,11 @@
 require_once get_stylesheet_directory() . '/classes/Location.php';
 $location = new Locations\Location();
 
+$reviews_category_ids = get_field( 'reviews_category' );
+require_once get_stylesheet_directory() . '/classes/ReviewPage2.php';
+
+$reviews = new Pages\ReviewPage2( true, $reviews_category_ids );
+
 get_header();
 ?>
 
@@ -176,11 +181,7 @@ get_header();
 										<div class="content-inner">
 											<h5 class="item-title">Plus, We're In-Network with Insurance</h5>
 											<p>We're trusted by all the big health insurance companies and policies as small as the Coushatta Tribe of Louisiana. Any cost to you is as low as possible.</p>
-										</div>
-									</div>
 
-									<div class="review">
-										<div class="review-inner">
 											<div class="logos-wrapper">
 												<img class="logos lazy" data-src="<?php echo esc_attr( get_stylesheet_directory_uri() ); ?>/assets/img/insurance2.png" alt="Aetna, Anthem Blue Cross Blue Sheild, Cigna Heath Insurances">
 												<img class="logos lazy" data-src="<?php echo esc_attr( get_stylesheet_directory_uri() ); ?>/assets/img/insurance1.png" alt="Amerihealth, United Healthcare, Humana, Tricare and 43 More Insurances">
@@ -244,9 +245,11 @@ get_header();
 
 				<?php if ( ! empty( $location->boxes->image ) ) : ?>
 					<div class="row">
-						<div class="col-12 graph">
-							<h5>A Visual Breakdown of What Happens Here</h5>
-							<img class="jp-single-loc-boxes-image lazy" data-src="<?php echo esc_attr( $location->boxes->image ); ?>" alt="<?php echo esc_attr( $location->boxes->heading ); ?>">
+						<div class="col-12">
+							<div class="graph">
+								<h5>A Visual Breakdown of What Happens Here</h5>
+								<img class="jp-single-loc-boxes-image lazy" data-src="<?php echo esc_attr( $location->boxes->image ); ?>" alt="<?php echo esc_attr( $location->boxes->heading ); ?>">
+							</div>
 						</div>
 					</div>
 				<?php endif; ?>
@@ -259,7 +262,11 @@ get_header();
 	<!-- SECTION: FAQ -->
 
 	<?php if ( ! empty( $location->block4 ) && ! empty( $location->block4->faqs ) ) : ?>
-		<section class="jp-single-loc-section jp-single-loc-faq">
+		<div class="arrow-divider-container arrow-divider-container-v2">
+			<div class="arrow-divider"><hr></div>
+		</div>
+
+		<section class="jp-single-loc-section jp-single-loc-faq jp-single-loc-faq-v2">
 			<div class="container">
 				<?php if ( ! empty( $location->block4->heading ) || ! empty( $location->block4->subheading ) ) : ?>
 					<div class="heading">
@@ -270,6 +277,8 @@ get_header();
 						<?php if ( ! empty( $location->block4->subheading ) ) : ?>
 							<p class="h3 lead"><?php echo wp_kses_post( $location->block4->subheading ); ?></p>
 						<?php endif; ?>
+
+						<img class="icon lazy" data-src="/wp-content/themes/journeyPure/assets/img/faq-icon.png">
 					</div>
 				<?php endif; ?>
 
@@ -369,6 +378,73 @@ get_header();
 
 	<!-- /SECTION: Bios -->
 
+	<!-- SECTION: Reviews -->
+
+	<?php if ( ! empty( $reviews->reviews ) ) : ?>
+		<section class="jp-single-loc-section jp-reviews-reviews jp-reviews-reviews-v2">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<h5 class="text-center jp-reviews-reviews-title">6,000+ Success Stories</h5>
+						<p class="h3 text-center jp-reviews-reviews-subtitle">Whether Journeypure is your first (and last) treatment experience, or you've spent decades in and out of other facilities...here's proof that you can feel better.</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-12">
+						<div class="jp-reviews-reviews-box" data-page="1" data-cat="<?php echo esc_attr( $reviews_category_ids ); ?>" data-url="<?php echo esc_attr( admin_url( 'admin-ajax.php' ) ); ?>" data-nonce="<?php echo esc_attr( wp_create_nonce( 'get_reviews' ) ); ?>">
+							<div class="jp-reviews-reviews-box-inner">
+								<div class="jp-reviews-reviews-top">
+									<div class="jp-reviews-reviews-summary">
+										<p class="jp-reviews-reviews-summary-avg"><?php echo esc_html( $reviews->review_avg ); ?></p>
+
+										<div class="jp-reviews-reviews-summary-stars">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+										</div>
+
+										<p class="jp-reviews-reviews-summary-total"><?php echo esc_html( $reviews->review_total ); ?> reviews</p>
+									</div>
+
+									<div class="jp-reviews-reviews-filter">
+										<label for="sort">Sort by:</label>
+
+										<select id="sort">
+											<!-- <option value="ml">Most Liked</option> -->
+											<option value="n" selected="selected">Newest</option>
+											<option value="o">Oldest</option>
+											<option value="lr">Lowest Rated</option>
+											<option value="hr">Highest Rated</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="jp-reviews-reviews-reviews">
+									<div class="jp-reviews-reviews-reviews-inner">
+										<?php
+											global $_reviews;
+											$_reviews = $reviews;
+											require get_stylesheet_directory() . '/assets/src/includes/components/review-items.php';
+										?>
+									</div>
+
+									<button class="jp-reviews-reviews-loading-button btn btn-outline-secondary">Load more</button>
+								</div>
+
+								<?php require get_stylesheet_directory() . '/assets/src/includes/components/loading-icon.php'; ?>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	<?php endif; ?>
+
+	<!-- /SECTION: Reviews -->
+
 	<!-- SECTION: Map -->
 
 	<?php if ( ! empty( $location->block4 ) ) : ?>
@@ -452,92 +528,6 @@ get_header();
 	<?php endif; ?>
 
 	<!-- /SECTION: Map -->
-
-	<!-- SECTION: Reviews -->
-
-	<?php if ( ! empty( $location->reviews ) ) : ?>
-		<section class="review-section">
-			<div class="container">
-				<h2 class="text-center">You Can Do This!</h2>
-				<p class="h3 text-center">Whether Journeypure is your first (and last) treatment experience, or you've spent decades in and out of other facilities...here's proof that you can feel better. There's no shame in getting help.</p>
-
-				<div class="parent">
-					<div class="content-container-left">
-						<div class="details">
-							<h5 class="video-ctas-title text-center">Video Stories</h5>
-
-							<div class="video-ctas text-center">
-								<a class="video-cta" data-toggle="modal" data-target="#video-cta-1">
-									<div class="video-cta-image-wrapper">
-										<img class="video-cta-image lazy" data-src="https://journeypure.com/wp-content/uploads/2020/05/jared-video-review.jpg" alt="Jared Lanpher">
-										<span class="play-button"></span>
-									</div>
-
-									<h6 class="video-cta-title">Jared L.</h6>
-								</a>
-
-								<a class="video-cta" data-toggle="modal" data-target="#video-cta-3">
-									<div class="video-cta-image-wrapper">
-										<img class="video-cta-image lazy" data-src="https://journeypure.com/wp-content/uploads/2020/07/daniel-video-review.jpg" alt="Daniel S.">
-										<span class="play-button"></span>
-									</div>
-
-									<h6 class="video-cta-title">Daniel S.</h6>
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="content-container-right">
-						<div class="review-slide-container <?php echo ( 1 === count( $location->reviews ) ) ? ' pb-5' : ''; ?>" >
-							<div class="review-slide" data-slick='{"slidesToShow": 1}' role="toolbar">
-								<?php foreach ( $location->reviews as $reviews ) : ?>
-									<div class="card">
-										<div class="card-body">
-											<div class="author-info">
-												<div class="row">
-													<div class="col-md-auto align-self-center">
-														<img class="lazy" data-src="<?php echo esc_attr( $reviews->photo['image'] ); ?>" alt="<?php echo esc_attr( $reviews->photo['alt'] ); ?>">
-													</div>
-
-													<div class="col-md-auto align-self-center">
-														<h5 class="card-title"><?php echo esc_html( $reviews->heading ); ?></h5>
-
-														<div class="stars">
-															<?php for ( $i = 0; $i < $reviews->star_rating; $i++ ) : ?>
-																<i class="fas fa-star"></i>
-															<?php endfor; ?>
-														</div>
-													</div>
-
-													<?php if ( ! empty( $reviews->source_image['image'] ) ) : ?>
-														<div class="review-logo">
-															<img class="source-img lazy" data-src="<?php echo esc_attr( $reviews->source_image['image'] ); ?>" alt="<?php echo esc_attr( $reviews->source_image['alt'] ); ?>">
-														</div>
-													<?php endif; ?>
-												</div>
-											</div>
-
-											<div class="review-text">
-												<?php echo wp_kses_post( $reviews->review_text ); ?>
-											</div>
-										</div>
-									</div>
-								<?php endforeach; ?>
-							</div>
-
-							<div class="review-nav">
-								<p class="link see-less-btn">Previous</p>
-								<p class="link see-more-btn has-more"> Read More</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-	<?php endif; ?>
-
-	<!-- /SECTION: Reviews -->
 
 	<!-- SECTION: Process -->
 

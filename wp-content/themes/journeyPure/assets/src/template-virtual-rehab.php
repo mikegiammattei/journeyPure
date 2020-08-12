@@ -119,11 +119,7 @@ get_header();
 										<div class="content-inner">
 											<h5 class="item-title">Plus, We're In-Network with Insurance</h5>
 											<p>We're trusted by all the big health insurance companies and policies as small as the Coushatta Tribe of Louisiana. Any cost to you is as low as possible.</p>
-										</div>
-									</div>
 
-									<div class="review">
-										<div class="review-inner">
 											<div class="logos-wrapper">
 												<img class="logos lazy" data-src="<?php echo esc_attr( get_stylesheet_directory_uri() ); ?>/assets/img/insurance2.png" alt="Aetna, Anthem Blue Cross Blue Sheild, Cigna Heath Insurances">
 												<img class="logos lazy" data-src="<?php echo esc_attr( get_stylesheet_directory_uri() ); ?>/assets/img/insurance1.png" alt="Amerihealth, United Healthcare, Humana, Tricare and 43 More Insurances">

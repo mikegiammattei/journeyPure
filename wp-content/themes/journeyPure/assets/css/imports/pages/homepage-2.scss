@@ -770,6 +770,14 @@ li {
 	  text-align: center;
 	  margin-bottom: $md-space;
 	}
+	.card {
+		.card-header {
+			.card-title {
+				line-height: 1.15;
+				margin-left: 10px;
+			}
+		}
+	}
 	}
 
 	.design-process-section {

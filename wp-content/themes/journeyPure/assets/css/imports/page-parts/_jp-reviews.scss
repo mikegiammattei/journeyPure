@@ -8,14 +8,17 @@
 		content: '';
 		height: 50%;
 		left: 0;
-		// max-height: 450px;
 		position: absolute;
 		right: 0;
 		top: 0;
 
 		body.home & {
-			height:100%;
+			height: 100%;
 		}
+	}
+
+	&.jp-reviews-reviews-v2:before {
+		height: 100%;
 	}
 
 	.container {
@@ -43,20 +46,51 @@
 			padding: 50px;
 		}
 
-		&:before {
-			background-color: rgba($white, 0.5);
-			bottom: 0;
-			content: '';
-			display: none;
-			left: 0;
-			position: absolute;
-			right: 0;
-			top: 0;
-			z-index: 1;
+		.jp-reviews-reviews-v2 & {
+			@media screen and (min-width: 768px) {
+				&:before,
+				&:after {
+					background-image: radial-gradient(#ebeff8 50%, transparent 54%);
+					background-size: 50px 50px;
+					bottom: 0;
+					content: '';
+					height: 200px;
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					width: 2000px;
+				}
+
+				&:before {
+					background-position: right top;
+					left: -2005px;
+				}
+
+				&:after {
+					background-position: left top;
+					right: -2005px;
+				}
+			}
 		}
 
-		&.loading:before {
-			display: block;
+		&-inner {
+			position: relative;
+
+			&:before {
+				background-color: rgba($white, 0.5);
+				bottom: 0;
+				content: '';
+				display: none;
+				left: 0;
+				position: absolute;
+				right: 0;
+				top: 0;
+				z-index: 1;
+			}
+
+			.jp-reviews-reviews-box.loading &:before {
+				display: block;
+			}
 		}
 	}
 

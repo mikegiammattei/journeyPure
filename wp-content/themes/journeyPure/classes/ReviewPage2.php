@@ -18,7 +18,7 @@ class ReviewPage2 {
 	 *
 	 * @return void
 	 */
-	public function __construct( $only_reviews = false ) {
+	public function __construct( $only_reviews = false, $category_ids = array() ) {
 		if ( false === $only_reviews ) {
 			global $post;
 			$this->post = $post;
@@ -29,7 +29,7 @@ class ReviewPage2 {
 			$this->set_videos();
 		}
 
-		$this->set_reviews();
+		$this->set_reviews( 1, 'n', $category_ids );
 	}
 
 	/**
@@ -66,7 +66,7 @@ class ReviewPage2 {
 	 *
 	 * @return void
 	 */
-	private function set_reviews( $page = 1, $sort = 'n' ) {
+	private function set_reviews( $page = 1, $sort = 'n', $category_ids = array() ) {
 		require_once get_stylesheet_directory() . '/classes/Reviews.php';
 		$reviews = new \Reviews\Reviews();
 
@@ -99,7 +99,7 @@ class ReviewPage2 {
 		}
 
 		// 16 = not-ready.
-		$reviews->set_post_by_category_id_exclude( array( 16 ), $page, $orderby, $order );
+		$reviews->set_post_by_category( $category_ids, array( 16 ), $page, $orderby, $order );
 
 		$this->reviews      = $reviews->reviews;
 		$this->review_avg   = $reviews->getAvgRating();
@@ -124,8 +124,9 @@ class ReviewPage2 {
 
 		// Get parameters and process reviews.
 
-		$page   = 1;
-		$sortby = 'n';
+		$page     = 1;
+		$sortby   = 'n';
+		$category = array();
 
 		if ( ! empty( $_REQUEST['page'] ) ) {
 			$page = sanitize_text_field( wp_unslash( $_REQUEST['page'] ) );
@@ -135,7 +136,11 @@ class ReviewPage2 {
 			$sort = sanitize_text_field( wp_unslash( $_REQUEST['sort'] ) );
 		}
 
-		$this->set_reviews( $page, $sort );
+		if ( ! empty( $_REQUEST['cat'] ) ) {
+			$category = sanitize_text_field( wp_unslash( $_REQUEST['cat'] ) );
+		}
+
+		$this->set_reviews( $page, $sort, $category );
 
 		// HTML output.
 

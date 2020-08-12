@@ -137,6 +137,7 @@ $(document).ready(function () {
 
 		let page = parseInt(box.data('page')) + 1;
 		let sort = jQuery('#sort').val();
+		let cat = box.data('cat');
 		let url = box.data('url');
 		let nonce = box.data('nonce');
 
@@ -153,6 +154,7 @@ $(document).ready(function () {
 			'nonce': nonce,
 			'page': page,
 			'sort': sort,
+			'cat': cat,
 		}, function(html) {
 			if (html != '') {
 				// Insert HTML

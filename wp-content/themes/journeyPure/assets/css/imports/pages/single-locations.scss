@@ -51,10 +51,10 @@
  */
 
 // Locations CTP template
-	.note-box p{max-width:none;} 
+
+.note-box p { max-width:none; }
 
 .jp-single-loc {
-
 
 	// Section
 
@@ -140,25 +140,50 @@
 			position: relative;
 			z-index: 1;
 		}
-		.graph {
 
-			text-align:center;
-			    max-width: 653px;
-    background: white;
-    margin: 35px auto;
-    border-top: 10px solid $primary;
-    padding: 35px 0;
-    box-shadow: 0px 2px 4px rgba(0,0,0,.18);
-	
-	h5{
-		color:$primary;
-		margin-bottom: 40px;
-	}
+		.graph {
+			text-align: center;
+			background: white;
+			margin: 35px auto;
+			border-top: 10px solid $primary;
+			padding: 35px 15px;
+			box-shadow: 0px 2px 4px rgba(0,0,0,.18);
+
+			@media screen and (min-width: 768px) {
+				max-width: calc(50% - 15px);
+				position: relative;
+
+				&:before,
+				&:after {
+					background-image: radial-gradient(#f1f4f8 50%, transparent 54%);
+					background-size: 50px 50px;
+					bottom: 0;
+					content: '';
+					height: 300px;
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					width: 2000px;
+				}
+
+				&:before {
+					background-position: right top;
+					left: -2005px;
+				}
+
+				&:after {
+					background-position: left top;
+					right: -2005px;
+				}
+			}
+
+			h5 {
+				color: $primary;
+				margin-bottom: 40px;
+			}
 		}
 
-
-
-		 // &-title {}
+		// &-title {}
 
 		&-subtitle {
 			margin: 15px auto;
@@ -168,8 +193,7 @@
 		&-image {
 			display: block;
 			margin: 25px auto 0;
-			max-width: 550px;
-
+			max-width: 90%;
 		}
 
 		&-box {
@@ -179,15 +203,17 @@
 			height: calc(100% - 30px);
 			margin: 30px 0 0 0;
 			padding: 30px 15px;
-			
+
 			img {
 				width: 111%;
 				margin-left: -15px;
 				margin-bottom: -47px;
 			}
 
-			&-title {color: $primary;
-			margin-bottom: 25px;}
+			&-title {
+				color: $primary;
+				margin-bottom: 25px;
+			}
 
 			&-text {
 				ul, ol {
@@ -218,6 +244,7 @@
 		@include jp-faq;
 		background:#f7f7f7;
 	}
+
 	.jp-single-loc-faq .faqs .card .card-header {
 		background:#f7f7f7;
 	}
@@ -227,115 +254,6 @@
 	.bio-section {
 		@import "../page-parts/jp-bios";
 		@include jp-bios;
-	}
-
-	// Reviews
-
-	.review-section {
-		background-image: url('/wp-content/uploads/sites/2/2020/03/jp-background.png');
-		margin-top: 0;
-		padding: 50px 0;
-
-		@media screen and (min-width: 768px) {
-			padding: 60px 0;
-		}
-
-		@media (max-width: 767px) {
-			.bio {
-				margin-top:40px;
-			}
-		}
-
-		.h3 {
-			margin-left: auto;
-			margin-right: auto;
-		}
-
-		.video-ctas {
-			display: flex;
-			justify-content: center;
-
-			&-title {
-				margin-bottom: 20px;
-			}
-		}
-
-		.video-cta {
-			cursor: pointer;
-			margin: 0 10px;
-
-			&-image-wrapper {
-				margin-bottom: 10px;
-				position: relative;
-
-				.play-button:after {
-					background: transparent url('/wp-content/themes/journeyPure/assets/img/play-circle-solid.svg') no-repeat center center;
-					background-size: 20px 20px;
-					content: '';
-					left: 50%;
-					height: 20px;
-					opacity: .7;
-					position: absolute;
-					top: 50%;
-					transform: translate(-50%, -50%);
-					transition: all 150ms ease-out;
-					width: 20px;
-					z-index: 2;
-				}
-
-				.play-button:before {
-					background-color: #fff;
-					border-radius: 50%;
-					content: '';
-					height: 24px;
-					left: 50%;
-					opacity: .7;
-					position: absolute;
-					top: 50%;
-					transform: translate(-50%, -50%);
-					transition: all 150ms ease-out;
-					width: 24px;
-					z-index: 1;
-				}
-			}
-
-			&:hover, &:focus {
-				.video-cta-image-wrapper {
-					.play-button:after {
-						opacity: 0.9;
-						// transform: translate(-50%, -50%) scale(1.1);
-					}
-
-					.play-button:before {
-						opacity: 0.9;
-						transform: translate(-50%, -50%) scale(1.1);
-					}
-				}
-			}
-
-			&-image {
-				border: 2px solid #e5e5e5;
-				border-radius: 5px;
-				height: auto;
-				width: 95px;
-			}
-
-			// &-title {}
-		}
-	}
-
-	.review-logo {
-		display: inline;
-		float: right;
-		position: absolute !important;
-		right: 15px;
-		top: 15px;
-
-		img {
-			border-radius: 0;
-			height: auto;
-			max-width: 60px;
-		}
 	}
 
 	// Map
@@ -619,4 +537,12 @@
 			border-color: #e5e5e5;
 		}
 	}
+}
+
+// Reviews Section
+
+.jp-reviews-reviews {
+	@import "../page-parts/jp-reviews";
+	@include jp-reviews;
+	padding-top: 0;
 }

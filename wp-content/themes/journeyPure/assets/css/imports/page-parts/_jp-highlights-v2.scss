@@ -60,22 +60,25 @@
 
 					&:before,
 					&:after {
-						background: transparent url('/wp-content/themes/journeyPure/assets/img/section-dots.png') repeat-x center center;
+						background-image: radial-gradient(#f1f4f8 50%, transparent 54%);
+						background-size: 50px 50px;
 						bottom: 0;
 						content: '';
+						height: 150px;
 						position: absolute;
-						top: 0;
-						width: 9999px;
+						top: 50%;
+						transform: translateY(-50%);
+						width: 2000px;
 					}
 
 					&:before {
-						background-position: right center;
-						left: -9999px;
+						background-position: right top;
+						left: -2005px;
 					}
 
 					&:after {
-						background-position: left 12px center;
-						right: -9999px;
+						background-position: left top;
+						right: -2005px;
 					}
 				}
 
@@ -161,18 +164,16 @@
 		width: 100%;
 
 		@media screen and (min-width: 992px) {
-			width: 45%;
+			width: 50%;
 		}
 
 		&-wrapper {
-			margin-bottom: 10px;
+			margin-bottom: 15px;
 			margin-top: 15px;
 
 			@media screen and (min-width: 992px) {
 				display: flex;
 				justify-content: center;
-				// margin-top: -35px;
-				margin-left: -17px;
 			}
 		}
 	}
@@ -184,11 +185,11 @@
 
 		&:focus, &:hover {
 			background: #01389f;
-			// border-color: #ffffff;
 			color: #ffffff;
 		}
 
 		&-wrapper {
+			margin-bottom: 10px;
 			text-align: center;
 		}
 	}

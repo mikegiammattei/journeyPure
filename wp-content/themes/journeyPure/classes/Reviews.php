@@ -140,21 +140,49 @@ class Reviews
 	 *
 	 * @return void
 	 */
-	public function set_post_by_category_id_exclude( $category_ids, $page, $orderby, $order ) {
-		if ( $category_ids && $page ) {
+	public function set_post_by_category( $category_ids, $category_ids_exclude, $page, $orderby, $order ) {
+		if ( $page ) {
 			if ( 'likes' === $orderby ) {
 				// @TODO cusom query.
 			} else {
-				$cache_key = 'reviews_' . implode( '_c', $category_ids ) . '_p' . $page . '_ob' . $orderby . '_o' . $order;
-				$reviews   = get_transient( $cache_key );
+				$cache_key = 'reviews_p' . $page . '_ob' . $orderby . '_o' . $order;
+
+				if ( ! empty( $category_ids ) ) {
+					if ( is_array( $category_ids ) ) {
+						foreach ( $category_ids as $i => $cat ) {
+							$cache_key .= '_ci' . $cat;
+						}
+					} else {
+						$cache_key .= '_ci' . (string) $category_ids;
+					}
+				}
+
+				if ( ! empty( $category_ids_exclude ) ) {
+					if ( is_array( $category_ids_exclude ) ) {
+						foreach ( $category_ids_exclude as $i => $cat ) {
+							$cache_key .= '_cni' . $cat;
+						}
+					} else {
+						$cache_key .= '_cni' . (string) $category_ids_exclude;
+					}
+				}
+
+				$reviews = get_transient( $cache_key );
 
 				if ( false === $reviews ) {
 					$args = array(
-						'posts_per_page'   => 10,
-						'paged'            => $page,
-						'post_type'        => 'reviews',
-						'category__not_in' => $category_ids,
+						'posts_per_page' => 10,
+						'paged'          => $page,
+						'post_type'      => 'reviews',
 					);
+
+					if ( ! empty( $category_ids ) ) {
+						$args['category__in'] = $category_ids;
+					}
+
+					if ( ! empty( $category_ids_exclude ) ) {
+						$args['category__not_in'] = $category_ids_exclude;
+					}
 
 					if ( 'date' === $orderby ) {
 						$args['order']   = $order;

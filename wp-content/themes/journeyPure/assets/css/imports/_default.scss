@@ -489,7 +489,6 @@ figure{
 	border-top: 7px solid $color;
 	z-index: 3;
 
-
 	hr{
 	  position: relative;
 	  @include make-container();
@@ -540,6 +539,32 @@ figure{
 	  }
 	}
   }
+}
+
+/** Arrow Divider V2 **/
+.arrow-divider-container.arrow-divider-container-v2 {
+	background-color: #f7f7f7;
+
+	.arrow-divider {
+		$color: white !default;
+		$BackgroundColor: #f7f7f7 !default;
+
+		border-top: 7px solid $color;
+
+		hr {
+			&:before {
+				border-bottom: 7px $color solid;
+				border-right: 7px $color solid;
+				background-color: $color;
+			}
+
+			&:after {
+				border-bottom: 7px $BackgroundColor solid;
+				border-right: 7px $BackgroundColor solid;
+				background-color: $BackgroundColor;
+			}
+		}
+	}
 }
 
 /* New modal overlay */

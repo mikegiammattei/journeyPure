@@ -27,7 +27,6 @@ class Location {
 		$this->set_above_fold();
 		$this->set_gallery();
 		$this->set_bios();
-		$this->set_reviews();
 		$this->set_highlights_v2();
 		$this->set_block_4();
 		$this->set_boxes();
@@ -105,26 +104,6 @@ class Location {
 				'subheading' => $this->fields['bios']['subheading'],
 				'bios'       => $this->bios,
 			);
-		}
-	}
-
-	/**
-	 * Set reviews
-	 *
-	 * @return void
-	 */
-	private function set_reviews() {
-		if ( isset( $this->fields['reviews'] ) ) {
-			require_once get_stylesheet_directory() . '/classes/Reviews.php';
-			$reviews = new \Reviews\Reviews();
-
-			$reviews_category_ids = $this->fields['reviews'];
-
-			$reviews->setPostByPostId( $reviews_category_ids );
-
-			$this->reviews      = $reviews->reviews;
-			$this->review_avg   = $reviews->getAvgRating();
-			$this->review_total = $reviews->getTotalReviews();
 		}
 	}
 

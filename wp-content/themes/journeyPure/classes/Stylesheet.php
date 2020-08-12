@@ -37,7 +37,7 @@ class Stylesheet
 			$path = THEME_DIR . '/css/' . $filename .'.min.css';
 		}
 
-		$returnValue = '<link rel="stylesheet" type="text/css" href="'.$path.'?v=20200812">';
+		$returnValue = '<link rel="stylesheet" type="text/css" href="'.$path.'?v=20200812_4">';
 		echo $returnValue;
 
 	}

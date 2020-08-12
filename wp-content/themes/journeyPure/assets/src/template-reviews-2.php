@@ -162,48 +162,50 @@ get_header();
 
 				<div class="row">
 					<div class="col-12">
-						<div class="jp-reviews-reviews-box" data-page="1" data-url="<?php echo esc_attr( admin_url( 'admin-ajax.php' ) ); ?>" data-nonce="<?php echo esc_attr( wp_create_nonce( 'get_reviews' ) ); ?>">
-							<div class="jp-reviews-reviews-top">
-								<div class="jp-reviews-reviews-summary">
-									<p class="jp-reviews-reviews-summary-avg"><?php echo esc_html( $reviews->review_avg ); ?></p>
+						<div class="jp-reviews-reviews-box" data-page="1" data-cat="" data-url="<?php echo esc_attr( admin_url( 'admin-ajax.php' ) ); ?>" data-nonce="<?php echo esc_attr( wp_create_nonce( 'get_reviews' ) ); ?>">
+							<div class="jp-reviews-reviews-box-inner">
+								<div class="jp-reviews-reviews-top">
+									<div class="jp-reviews-reviews-summary">
+										<p class="jp-reviews-reviews-summary-avg"><?php echo esc_html( $reviews->review_avg ); ?></p>
 
-									<div class="jp-reviews-reviews-summary-stars">
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
+										<div class="jp-reviews-reviews-summary-stars">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+										</div>
+
+										<p class="jp-reviews-reviews-summary-total"><?php echo esc_html( $reviews->review_total ); ?> reviews</p>
 									</div>
 
-									<p class="jp-reviews-reviews-summary-total"><?php echo esc_html( $reviews->review_total ); ?> reviews</p>
+									<div class="jp-reviews-reviews-filter">
+										<label for="sort">Sort by:</label>
+
+										<select id="sort">
+											<!-- <option value="ml">Most Liked</option> -->
+											<option value="n" selected="selected">Newest</option>
+											<option value="o">Oldest</option>
+											<option value="lr">Lowest Rated</option>
+											<option value="hr">Highest Rated</option>
+										</select>
+									</div>
 								</div>
 
-								<div class="jp-reviews-reviews-filter">
-									<label for="sort">Sort by:</label>
+								<div class="jp-reviews-reviews-reviews">
+									<div class="jp-reviews-reviews-reviews-inner">
+										<?php
+											global $_reviews;
+											$_reviews = $reviews;
+											require get_stylesheet_directory() . '/assets/src/includes/components/review-items.php';
+										?>
+									</div>
 
-									<select id="sort">
-										<!-- <option value="ml">Most Liked</option> -->
-										<option value="n" selected="selected">Newest</option>
-										<option value="o">Oldest</option>
-										<option value="lr">Lowest Rated</option>
-										<option value="hr">Highest Rated</option>
-									</select>
+									<button class="jp-reviews-reviews-loading-button btn btn-outline-secondary">Load more</button>
 								</div>
+
+								<?php require get_stylesheet_directory() . '/assets/src/includes/components/loading-icon.php'; ?>
 							</div>
-
-							<div class="jp-reviews-reviews-reviews">
-								<div class="jp-reviews-reviews-reviews-inner">
-									<?php
-										global $_reviews;
-										$_reviews = $reviews;
-										require get_stylesheet_directory() . '/assets/src/includes/components/review-items.php';
-									?>
-								</div>
-
-								<button class="jp-reviews-reviews-loading-button btn btn-outline-secondary">Load more</button>
-							</div>
-
-							<?php require get_stylesheet_directory() . '/assets/src/includes/components/loading-icon.php'; ?>
 						</div>
 					</div>
 				</div>
