@@ -552,16 +552,20 @@ figure{
 		border-top: 7px solid $color;
 
 		hr {
+			width: 40px;
+
 			&:before {
 				border-bottom: 7px $color solid;
 				border-right: 7px $color solid;
 				background-color: $color;
+		  		margin-left: 0;
 			}
 
 			&:after {
 				border-bottom: 7px $BackgroundColor solid;
 				border-right: 7px $BackgroundColor solid;
 				background-color: $BackgroundColor;
+				margin-left: 15px;
 			}
 		}
 	}

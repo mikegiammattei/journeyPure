@@ -151,6 +151,28 @@
 					}
 				}
 			}
+
+			// Slick slider // Columns with same height
+
+			.slick-track {
+				display: flex;
+
+				.slick-slide {
+					height: inherit;
+
+					& > div {
+						height: 100%;
+
+						.card-col {
+							height: 100%;
+
+							.card {
+								height: 100%;
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }

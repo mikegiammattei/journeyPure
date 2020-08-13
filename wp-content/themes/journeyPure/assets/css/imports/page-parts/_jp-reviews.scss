@@ -47,6 +47,8 @@
 		}
 
 		.jp-reviews-reviews-v2 & {
+			overflow: hidden;
+
 			@media screen and (min-width: 768px) {
 				&:before,
 				&:after {
