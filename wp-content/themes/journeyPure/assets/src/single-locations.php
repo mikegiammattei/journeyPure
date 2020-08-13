@@ -188,7 +188,7 @@ get_header();
 											</div>
 
 											<div class="btn-wrapper">
-												<button type="button" data-toggle="modal" data-target="#main-insurance-form" class="btn btn-outline-secondary"><span class="fas fa-id-card"></span> Check Insurance</button>
+												<button type="button" data-toggle="modal" data-target="#main-insurance-form" class="btn btn-secondary"><span class="fas fa-id-card"></span> Check Insurance</button>
 											</div>
 										</div>
 									</div>

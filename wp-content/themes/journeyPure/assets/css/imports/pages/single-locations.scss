@@ -89,6 +89,7 @@
 	&-highlights-v2 {
 		@import "../page-parts/jp-highlights-v2";
 		@include jp-highlights-v2;
+		padding-bottom:0px;
 	}
 
 	// Photos
@@ -155,7 +156,7 @@
 
 				&:before,
 				&:after {
-					background-image: radial-gradient(#f1f4f8 50%, transparent 54%);
+					background-image: radial-gradient(#e2e7f56b 50%, transparent 54%);
 					background-size: 50px 50px;
 					bottom: 0;
 					content: '';
@@ -220,7 +221,6 @@
 					margin-bottom: 0;
 					padding-bottom: 0;
 					padding-left: 15px;
-					font-family: georgia;
 					font-size: 17px;
 
 					li {
