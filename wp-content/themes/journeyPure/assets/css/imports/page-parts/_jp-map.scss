@@ -1,0 +1,94 @@
+@import "jp-section";
+
+@mixin jp-map {
+	@include jp-section;
+	background: #ebebeb;
+
+	// Grid
+
+	& > .container {
+		max-width: none;
+		padding-left: 0;
+		padding-right: 0;
+
+		& > .row {
+			margin-right: 0;
+			margin-left: 0;
+
+			& > .col-12 {
+				padding-right: 0;
+				padding-left: 0;
+			}
+		}
+	}
+
+	// Title
+
+	&-title {}
+
+	// Subtitle
+
+	&-subtitle {}
+
+	// Embed
+
+	&-embed {
+		position: relative;
+
+		// Wrapper
+
+		&-wrapper {
+			position: relative;
+
+			&:before,
+			&:after {
+				content: '';
+				height: 50px;
+				left: 0;
+				pointer-events: none;
+				position: absolute;
+				right: 0;
+				z-index: 1;
+
+				@media screen and (min-width: 768px) {
+					height: 100px;
+				}
+
+				@media screen and (min-width: 992px) {
+					height: 150px;
+				}
+			}
+
+			&:before {
+				background-image: linear-gradient(rgba(#ebebeb, 1), rgba(#ebebeb, 0));
+				top: 0;
+			}
+
+			&:after {
+				background-image: linear-gradient(rgba(#ebebeb, 0), rgba(#ebebeb, 1));
+				bottom: 0;
+			}
+		}
+
+		// Box
+
+		&-box {
+			background-color: $white;
+			border-top: 4px solid #3a943f;
+			border-radius: 4px;
+			box-shadow: 0px 2px 4px rgba(0,0,0,.18);
+			display: inline-block;
+			padding: 15px 18px;
+
+			// Wrapper
+
+			&-wrapper {
+				left: 0;
+				position: absolute;
+				right: 0;
+				top: 0;
+				z-index: 2;
+			}
+		}
+	}
+}

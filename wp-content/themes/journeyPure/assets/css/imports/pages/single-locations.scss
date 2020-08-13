@@ -257,77 +257,11 @@
 		@include jp-bios;
 	}
 
-	// Map
+	// FAQ Section
 
-	.location-information {
-		padding: 50px 0 30px;
-		background: #ebebeb;
-
-		@media screen and (min-width: 768px) {
-			padding: 60px 0;
-		}
-
-		.row {
-			margin-right: auto !important;
-			margin-left: auto !important;
-			max-width: 1260px
-		}
-
-		.map-wrapper {
-			background: #f3f3f3;
-			border-radius: 2px;
-			padding: 15px;
-		}
-
-		.address-wrapper {
-			padding: 18px 15px 5px;
-		}
-
-		.capacity {
-			background: #FFF2AF;
-			border-left: 6px #FABB05 solid;
-			color: #FABB05;
-			font-size: 18px;
-			letter-spacing: 0;
-			padding: $md-space;
-			margin-bottom: 0;
-
-			i {
-				display: inline-block;
-				font-size: 28px;
-				margin-right: 5px;
-				vertical-align: middle;
-			}
-
-			span {
-				display: block;
-				font-size: 18px;
-				margin-left: 35px;
-			}
-		}
-
-		.h3 {
-			margin-left: auto;
-			margin-right: auto;
-		}
-
-		.address-line {
-			font-family: $heading-font;
-			padding-bottom: 0;
-		}
-
-		.details {
-			@media (max-width: 991px) {
-				margin-top: 15px;
-			}
-
-			// Tags
-
-			.tag-list {
-				@import "../page-parts/jp-tags";
-				@include jp-tags;
-			}
-		}
+	&-map {
+		@import "../page-parts/jp-map";
+		@include jp-map;
 	}
 
 	// Process

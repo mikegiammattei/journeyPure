@@ -30,6 +30,11 @@ h3, .h3 {
 		margin-bottom: 40px;
 		margin-top: 15px;
 		max-Width: 600px;
+
+		&.text-center {
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 }
 h5, .h5 {

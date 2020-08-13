@@ -448,80 +448,41 @@ get_header();
 	<!-- SECTION: Map -->
 
 	<?php if ( ! empty( $location->block4 ) ) : ?>
-		<section class="location-information">
-			<div class="row">
-				<div class="col-12">
-					<?php if ( $location->block4->location->title ) : ?>
-						<h2 class="text-center"><?php echo wp_kses_post( $location->block4->location->title ); ?></h2>
-					<?php endif; ?>
+		<section class="jp-single-loc-section jp-single-loc-map">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<?php if ( $location->block4->location->title ) : ?>
+							<h2 class="text-center jp-single-loc-map-title"><?php echo wp_kses_post( $location->block4->location->title ); ?></h2>
+						<?php endif; ?>
 
-					<?php if ( $location->block4->location->subtitle ) : ?>
-						<p class="h3 text-center"><?php echo wp_kses_post( $location->block4->location->subtitle ); ?></p>
-					<?php endif; ?>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-12 col-lg-6">
-					<div class="map-wrapper">
-						<div class="capacity">
-							<?php
-								$location_status_data  = 'Only ' . $location->block4->location->status->availableRoomCount . ' ';
-								$location_status_data .= ( 1 === $location->block4->location->status->availableRoomCount ) ? 'spot' : 'spots';
-								$location_status_data .= ' available';
-							?>
-
-							<i class="fa fa-info-circle"></i> <b><?php echo wp_kses_post( $location_status_data ); ?></b>
-						</div>
+						<?php if ( $location->block4->location->subtitle ) : ?>
+							<p class="h3 text-center jp-single-loc-map-subtitle"><?php echo wp_kses_post( $location->block4->location->subtitle ); ?></p>
+						<?php endif; ?>
 
 						<?php $address = rawurlencode( $location->block4->location->full_address ); ?>
 						<?php $address = preg_replace( '/\./', '', $address ); ?>
 
-						<div class="embed-responsive embed-responsive-16by9">
-							<iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDwoQ63Mff3mW9-u2fQUhnlMBmX752RKds&q=<?php echo esc_attr( $address ); ?>" allowfullscreen></iframe>
-						</div>
+						<div class="jp-single-loc-map-embed-wrapper">
+							<div class="embed-responsive embed-responsive-16by9 jp-single-loc-map-embed">
+								<!-- <iframe src="https://www.google.com/maps/embed/v1/search?key=AIzaSyDwoQ63Mff3mW9-u2fQUhnlMBmX752RKds&q=<?php echo esc_attr( $address ); ?>" allowfullscreen></iframe> -->
+								<!-- <iframe src="https://www.google.com/maps/embed/v1/view?key=AIzaSyDwoQ63Mff3mW9-u2fQUhnlMBmX752RKds&center=36.969885,-86.479614&zoom=17" allowfullscreen></iframe> -->
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3187.6721993789183!2d-86.48180268376159!3d36.96988497991408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDU4JzExLjYiTiA4NsKwMjgnNDYuNiJX!5e0!3m2!1sen!2sus!4v1597347983043!5m2!1sen!2sus" allowfullscreen></iframe>
+							</div>
 
-						<div class="address-wrapper">
-							<?php if ( $location->block4->location->name ) : ?>
-								<h4><?php echo wp_kses_post( $location->block4->location->name ); ?></h4>
-							<?php endif; ?>
-
-							<?php if ( $location->block4->location->street_address ) : ?>
-								<p class="address-line">
-									<?php echo esc_html( $location->block4->location->street_address ); ?>
-									<?php echo esc_html( $location->block4->location->city ); ?>,
-									<?php echo esc_html( $location->block4->location->state ); ?>
-									<?php echo esc_html( $location->block4->location->zip ); ?>
-								</p>
-							<?php endif; ?>
+							<div class="jp-single-loc-map-embed-box-wrapper">
+								<div class="container">
+									<div class="row">
+										<div class="col-12">
+											<div class="jp-single-loc-map-embed-box">
+												TEST
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
-				</div>
-
-				<div class="details col-12 col-lg-6">
-					<?php if ( $location->highlights_v2->tag_sections ) : ?>
-						<?php foreach ( $location->highlights_v2->tag_sections as $section ) : ?>
-							<aside class="tag-list">
-								<?php if ( $section['heading'] ) : ?>
-									<span class="heading"><span><?php echo wp_kses_post( $section['heading'] ); ?></span></span>
-								<?php endif; ?>
-
-								<?php if ( $section['tags'] ) : ?>
-									<div class="row no-gutters">
-										<?php foreach ( $section['tags'] as $index => $_tag ) : ?>
-											<?php $tag_count = count( $section['tags'] ); ?>
-
-											<div class="col-6 col-lg-auto <?php echo ( ( $index + 1 ) === $tag_count && 0 !== $tag_count % 2 ) ? 'col-12' : ''; ?>">
-												<div class="tag default">
-													<?php echo wp_kses_post( $_tag['value'] ); ?>
-												</div>
-											</div>
-										<?php endforeach; ?>
-									</div>
-								<?php endif; ?>
-							</aside>
-						<?php endforeach; ?>
-					<?php endif; ?>
 				</div>
 			</div>
 		</section>
