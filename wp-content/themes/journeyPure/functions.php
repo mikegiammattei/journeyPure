@@ -161,8 +161,11 @@ add_action( 'wp_ajax_nopriv_get_reviews', 'ajax_get_reviews' );
  * @return boolean
  */
 function jp_is_bot() {
-	return (
-		isset( $_SERVER['HTTP_USER_AGENT'] )
-		&& preg_match( '/gtmetrix|lighthouse|googlebot|bot|crawl|bingbot|mediapartners/i', $_SERVER['HTTP_USER_AGENT'] )
-	);
+	// Show everything for BOTs, like for users.
+	return false;
+
+	// return (
+	// 	isset( $_SERVER['HTTP_USER_AGENT'] )
+	// 	&& preg_match( '/pagespeed|yslow|gtmetrix|lighthouse|googlebot|bot|crawl|bingbot|mediapartners/i', $_SERVER['HTTP_USER_AGENT'] )
+	// );
 }

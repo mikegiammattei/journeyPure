@@ -450,7 +450,7 @@ get_header();
 						?>
 
 						<div class="jp-op-location-map-embed embed-responsive embed-responsive-16by9">
-							<iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDwoQ63Mff3mW9-u2fQUhnlMBmX752RKds&q=<?php echo esc_html( $address ); ?>" allowfullscreen></iframe>
+							<iframe class="iframe-to-load" data-url-value="https://www.google.com/maps/embed/v1/place?key=AIzaSyDwoQ63Mff3mW9-u2fQUhnlMBmX752RKds&q=<?php echo esc_html( $address ); ?>" allowfullscreen></iframe>
 						</div>
 
 						<div class="jp-op-location-map-content">
