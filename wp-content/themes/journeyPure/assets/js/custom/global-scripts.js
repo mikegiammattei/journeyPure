@@ -22,7 +22,7 @@ $(document).ready(function () {
 
 		// ---
 
-		$(".ctm-call-widget").each(function() {
+		$('.ctm-call-widget, .iframe-to-load').each(function() {
 			$(this).attr('src', $(this).data('url-value'));
 		});
 

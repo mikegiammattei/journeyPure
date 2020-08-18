@@ -699,7 +699,7 @@ $(document).ready(function () {
     })(window, document, 'script', 'dataLayer', 'GTM-NKJHBM9'); // ---
 
 
-    $(".ctm-call-widget").each(function () {
+    $('.ctm-call-widget, .iframe-to-load').each(function () {
       $(this).attr('src', $(this).data('url-value'));
     });
   }, 2000); // Workaround for localhost with no cache plugin installed

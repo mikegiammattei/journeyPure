@@ -10,7 +10,7 @@
 			</div>
 
 			<div class="modal-body">
-				<iframe src="https://www.timetap.com/embed/journeypure" frameborder="0" width="840" height="500" style="max-width: 100%;"></iframe>
+				<iframe class="iframe-to-load" data-url-value="https://www.timetap.com/embed/journeypure" frameborder="0" width="840" height="500" style="max-width: 100%;"></iframe>
 			</div>
 		</div>
 	</div>

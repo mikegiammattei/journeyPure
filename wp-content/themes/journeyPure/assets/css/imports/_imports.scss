@@ -44,16 +44,16 @@
 @import "migrate-styles";
 
 // Sliders
-/** Pages using the slider: homepage */
-@import "components/sliders/multi-gallery";
 
-/** Pages using the slider: homepage, single-location */
+// @import "components/sliders/multi-gallery";
+
 @import "components/sliders/review-default";
 
 // Pages
 @import "pages/homepage";
 @import "pages/about-us";
 @import "pages/press-page";
+
 // Redesigned
 @import "pages/single-locations";
 @import "pages/template-reviews-2";
