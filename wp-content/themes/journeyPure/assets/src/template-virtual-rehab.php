@@ -263,7 +263,7 @@ get_header();
 						</div>
 
 						<div class="jp-vr-components-counter">
-							<p class="h1">12,600</p>
+							<p class="h1">14K</p>
 							<p class="jp-vr-components-counter-text">Virtual Sessions Delivered</p>
 						</div>
 
