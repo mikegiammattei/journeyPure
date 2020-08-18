@@ -154,3 +154,15 @@ function ajax_get_reviews() {
 
 add_action( 'wp_ajax_get_reviews', 'ajax_get_reviews' );
 add_action( 'wp_ajax_nopriv_get_reviews', 'ajax_get_reviews' );
+
+/**
+ * If it's a bot
+ *
+ * @return boolean
+ */
+function jp_is_bot() {
+	return (
+		isset( $_SERVER['HTTP_USER_AGENT'] )
+		&& preg_match( '/gtmetrix|lighthouse|googlebot|bot|crawl|bingbot|mediapartners/i', $_SERVER['HTTP_USER_AGENT'] )
+	);
+}

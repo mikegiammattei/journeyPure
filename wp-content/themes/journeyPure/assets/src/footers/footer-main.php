@@ -49,23 +49,30 @@
 				</div>
 			</footer>
 
-			<?php // include_once(get_stylesheet_directory() . '/assets/src/includes/components/cta-widget.php'); ?>
+			<?php if ( ! is_page_template( 'template-virtual-rehab.php' ) ) : ?>
+				<?php // include_once(get_stylesheet_directory() . '/assets/src/includes/components/cta-widget.php'); ?>
+			<?php endif; ?>
+
+			<?php if ( is_page_template( 'template-virtual-rehab.php' ) ) : ?>
+				<?php include_once(get_stylesheet_directory() . '/assets/src/includes/components/virtual-rehab-modal.php'); ?>
+			<?php endif; ?>
+
 			<?php include_once(get_stylesheet_directory() . '/assets/src/includes/components/leave-a-review.php'); ?>
 			<?php include_once(get_stylesheet_directory() . '/assets/src/includes/components/not-ready-component.php'); ?>
 			<?php include_once(get_stylesheet_directory() . '/assets/src/includes/components/exit-modal.php'); ?>
 			<?php include_once(get_stylesheet_directory() . '/assets/src/includes/components/review-video-modal.php'); ?>
 			<?php include_once(get_stylesheet_directory() . '/assets/src/includes/components/review-video-multiple-modal.php'); ?>
 			<?php // include_once(get_stylesheet_directory() . '/assets/src/includes/components/frontman.php'); ?>
-			<?php include_once(get_stylesheet_directory() . '/assets/src/includes/components/virtual-rehab-modal.php'); ?>
 
 		</div> <?php /** end of main wrapper */ ?>
 
 		<?php if ( ! isset( $_GET['DEV'] ) ) : ?>
+			<script> window.JP_IS_BOT = <?php echo jp_is_bot() ? 'true' : 'false'; ?>; </script>
 			<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
 			<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script>
 			<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-			<script src="<?php echo get_stylesheet_directory_uri() . '/js/vendor.min.js?v=20200817'; ?>" defer></script>
-			<script src="<?php echo get_stylesheet_directory_uri() . '/js/custom.min.js?v=20200817'; ?>" defer></script>
+			<script src="<?php echo get_stylesheet_directory_uri() . '/js/vendor.min.js?v=20200818'; ?>" defer></script>
+			<script src="<?php echo get_stylesheet_directory_uri() . '/js/custom.min.js?v=20200818'; ?>" defer></script>
 		<?php endif; ?>
 
 		<?php wp_footer(); ?>

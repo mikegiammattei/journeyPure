@@ -17,13 +17,6 @@
 <!--[if IE 8]>    <html class="no-js ie8 oldie" <?php language_attributes(); ?>> <![endif]-->
 <!--[if gt IE 8]><!--> <html <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
-<!-- Anti-flicker snippet (recommended)  -->
-<style>.async-hide { opacity: 0 !important} </style>
-<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
-h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
-(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
-})(window,document.documentElement,'async-hide','dataLayer',8000,
-{'GTM-NKJHBM9':true});</script>
 
 	<!--=== META TAGS ===-->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -68,12 +61,14 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 
 </head>
 <body <?php body_class(); ?>>
-<noscript>
-	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKJHBM9" height="0" width="0" style="display:none; visibility:hidden"></iframe>
-</noscript>
-<?php //echo addslashes($ThirdPartyScripts->getBodyNoScripts(THIRD_PARTY_SCRIPTS)) ?>
-<?php
-	require_once(get_stylesheet_directory() . "/classes/Schema.php");
-	$Schema = new Schema();
-	$Schema->getMarkup();
-?>
+	<?php if ( ! jp_is_bot() ) : ?>
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKJHBM9" height="0" width="0" style="display:none; visibility:hidden"></iframe>
+		</noscript>
+	<?php endif; ?>
+	<?php //echo addslashes($ThirdPartyScripts->getBodyNoScripts(THIRD_PARTY_SCRIPTS)) ?>
+	<?php
+		require_once(get_stylesheet_directory() . "/classes/Schema.php");
+		$Schema = new Schema();
+		$Schema->getMarkup();
+	?>
