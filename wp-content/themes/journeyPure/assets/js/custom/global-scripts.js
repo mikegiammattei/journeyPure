@@ -1,10 +1,8 @@
 
 $(document).ready(function () {
 
-	if (window.JP_IS_BOT === false) {
-		// 1s delay
-		setTimeout(function () {
-
+	setTimeout(function () {
+		if (window.JP_IS_BOT === false) {
 			$.getScript("//130400.tctm.co/t.js");
 
 			// ---
@@ -23,8 +21,13 @@ $(document).ready(function () {
 				f.parentNode.insertBefore(j, f);
 			})(window, document, 'script', 'dataLayer', 'GTM-NKJHBM9');
 
-		}, 1000);
-	}
+			// ---
+
+			$('.ctm-call-widget, .iframe-to-load').each(function() {
+				$(this).attr('src', $(this).data('url-value'));
+			});
+		}
+	}, 2000);
 
 	// Workaround for localhost with no cache plugin installed
 

@@ -681,9 +681,8 @@ jQuery(document).ready(function () {
 "use strict";
 
 $(document).ready(function () {
-  if (window.JP_IS_BOT === false) {
-    // 1s delay
-    setTimeout(function () {
+  setTimeout(function () {
+    if (window.JP_IS_BOT === false) {
       $.getScript("//130400.tctm.co/t.js"); // ---
 
       (function (w, d, s, l, i) {
@@ -698,10 +697,14 @@ $(document).ready(function () {
         j.async = true;
         j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
         f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-NKJHBM9');
-    }, 1000);
-  } // Workaround for localhost with no cache plugin installed
+      })(window, document, 'script', 'dataLayer', 'GTM-NKJHBM9'); // ---
 
+
+      $('.ctm-call-widget, .iframe-to-load').each(function () {
+        $(this).attr('src', $(this).data('url-value'));
+      });
+    }
+  }, 2000); // Workaround for localhost with no cache plugin installed
 
   if (document.location.host === 'localhost:2022') {
     jQuery('img.lazy').each(function () {
