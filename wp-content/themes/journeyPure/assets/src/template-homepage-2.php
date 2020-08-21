@@ -324,7 +324,7 @@ $footerVersion = 2;
 												<a href="<?php echo esc_attr( $bio->location['link'] ); ?>" class="tophat"><?php echo esc_html( $bio->location['label'] ); ?></a>
 											<?php endif; ?>
 											<!-- <img class="lazy" data-src="<?php echo $bio->photo['image']; ?>" /> -->
-											<img src="<?php echo $bio->photo['image']; ?>" />
+											<img class="lazy" data-src="<?php echo $bio->photo['image']; ?>" />
 											<?php if($bio->sober_since): ?>
 												<div data-like-object="<?php echo $likeIdentifier; ?>" class="like-button"  data-placement="top" data-toggle="tooltip" <?php echo ($Homepage->isLikedBySession($likeIdentifier)) ? 'title="Already liked"' : 'title="Do you like?"'; ?>>
 													<i class="fas fa-thumbs-up"></i>
@@ -465,7 +465,7 @@ $footerVersion = 2;
               <div class="row">
                 <!--<div class="col-md-6 order-md-2">
                   <div class="lazy" data-src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg">
-                    <img src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg" alt="Call JourneyPure">
+                    <img class="lazy" data-src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg" alt="Call JourneyPure">
                   </div>
                 </div>
                 <div class="col-md-6 order-md-1">-->
@@ -484,7 +484,7 @@ $footerVersion = 2;
               <div class="row">
                 <!--<div class="col-md-6 order-md-2">
                   <div class="lazy" data-src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg">
-                    <img src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg" alt="Call JourneyPure">
+                    <img class="lazy" data-src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg" alt="Call JourneyPure">
                   </div>
                 </div>
                 <div class="col-md-6 order-md-1">-->
@@ -503,7 +503,7 @@ $footerVersion = 2;
               <div class="row">
                 <!--<div class="col-md-6 order-md-2">
                   <div class="lazy" data-src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg">
-                    <img src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg" alt="Call JourneyPure">
+                    <img class="lazy" data-src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg" alt="Call JourneyPure">
                   </div>
                 </div>
                 <div class="col-md-6 order-md-1">-->

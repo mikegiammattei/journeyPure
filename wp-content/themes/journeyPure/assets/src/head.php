@@ -38,7 +38,6 @@
 	<?php if ( ! jp_is_bot() ) : ?>
 		<link rel="preconnect" href="https://chatservice.makerobos.com">
 	<?php endif; ?>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
 
 	<!-- https://web.dev/uses-rel-preload/ -->
 	<link rel="preload" as="font" href="<?php echo THEME_DIR; ?>/fonts/Montserrat-Thin.otf" type="font/otf" crossorigin="anonymous">
@@ -53,13 +52,32 @@
 	<link rel="preload" as="font" href="<?php echo THEME_DIR; ?>/fonts/webfonts/fa-solid-900.woff2" type="font/woff2" crossorigin="anonymous">
 	<link rel="preload" as="font" href="<?php echo THEME_DIR; ?>/fonts/webfonts/fa-regular-400.woff2" type="font/woff2" crossorigin="anonymous">
 
-	<!-- FONTS -->
-	<link rel="stylesheet" rel="preload" type="text/css" href="//fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
-
+	<!-- GOOGLE FONTS -->
 	<?php
-		// Stylesheet Handler
-		$pageStylesheet = (defined('STYLESHEET_NAME') ? STYLESHEET_NAME :'style' );
-		Stylesheet::setMainPath($pageStylesheet);
+		$cache_key             = 'styles-google-fonts';
+		$google_fonts_css_body = get_transient( $cache_key );
+
+		if ( false === $google_fonts_css_body ) {
+			$google_fonts_css = wp_remote_get( 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap' );
+
+			if ( ! is_wp_error( $google_fonts_css ) && ! empty( $google_fonts_css ) ) {
+				$google_fonts_css_body = wp_remote_retrieve_body( $google_fonts_css );
+				$google_fonts_css_body = trim( preg_replace( '/\s+/', ' ', $google_fonts_css_body ) );
+				set_transient( $cache_key, $google_fonts_css_body, DAY_IN_SECONDS );
+			}
+		}
+
+		if ( false !== $google_fonts_css_body ) {
+			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo '<style id="' . $cache_key . '">' . $google_fonts_css_body . '</style>';
+		}
+	?>
+
+	<!-- PAGE STYLE -->
+	<?php
+		$page_stylesheet = ( defined( 'STYLESHEET_NAME' ) ? STYLESHEET_NAME : 'style' );
+		// Stylesheet::set_main_path( $page_stylesheet );
+		Stylesheet::set_main_path_inline( $page_stylesheet );
 	?>
 </head>
 <body <?php body_class(); ?>>

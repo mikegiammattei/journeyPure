@@ -22,7 +22,20 @@ class Outpatient2 {
 		global $post;
 		$this->post = $post;
 
-		$this->fields = get_fields();
+		// Cache the fields.
+
+		$cache_key    = 'class-fields-' . $this->post->ID;
+		$this->fields = get_transient( $cache_key );
+
+		if ( false === $this->fields ) {
+			$this->fields = get_fields();
+
+			if ( ! is_wp_error( $this->fields ) && ! empty( $this->fields ) ) {
+				set_transient( $cache_key, $this->fields, HOUR_IN_SECONDS );
+			}
+		}
+
+		// END Cache the fields.
 
 		$this->set_ratings();
 		$this->set_highlights_section();

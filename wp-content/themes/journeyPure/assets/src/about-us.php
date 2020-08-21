@@ -172,7 +172,7 @@
 	<section class="page-quote">
 		<div class="container">
 			<div class="container"><div class="header"><div class="lead">"Addiction treatment is not only science; it's also art. It deals with the processes of life. People need to see how much we care before they care how much we know."
-</div></div><div class="media d-inline-flex"> <img class="mr-3" src="/wp-content/uploads/2019/11/dr-stephen-loyd-journeypure-md.jpg" alt="Doctor Stephen Loyd Headhot as Drug Czar"><div class="media-body "><h5 class="mt-0">Dr. Stephen Loyd MD</h5><p>Chief Medical Officer</p></div></div></div>
+</div></div><div class="media d-inline-flex"> <img class="mr-3 lazy" data-src="/wp-content/uploads/2019/11/dr-stephen-loyd-journeypure-md.jpg" alt="Doctor Stephen Loyd Headhot as Drug Czar"><div class="media-body "><h5 class="mt-0">Dr. Stephen Loyd MD</h5><p>Chief Medical Officer</p></div></div></div>
 		</div>
 	</section>
 		<section class="ethics">
@@ -194,7 +194,7 @@
 				<p class="h3 heading">Our treatment is monitored by all the leading addiction healthcare organizations.</p>
 			<div class="card-deck">
 				<div class="card">
-					<img src="/wp-content/uploads/2019/11/carf-bg-fade-02.jpg" class="card-img-top" alt="...">
+					<img class="card-img-top lazy" data-src="/wp-content/uploads/2019/11/carf-bg-fade-02.jpg" alt="...">
 					<div class="card-body">
 						<h5 class="card-title">CARF Accredited </h5>
 						<p class="card-text">
@@ -203,7 +203,7 @@
 					</div>
 				</div>
 				<div class="card">
-					<img src="/wp-content/uploads/2019/11/legitscripts-bg-fade-01.jpg" class="card-img-top" alt="...">
+					<img class="card-img-top lazy" data-src="/wp-content/uploads/2019/11/legitscripts-bg-fade-01.jpg" alt="...">
 					<div class="card-body">
 						<h5 class="card-title">LegitScript Certified</h5>
 						<p class="card-text">
@@ -214,7 +214,7 @@
 					</div>
 				</div>
 				<div class="card">
-					<img src="<?php echo WP_UPLOAD_PATH;?>/2020/01/BD-O-bg-fade-01.jpg" class="card-img-top" alt="...">
+					<img class="card-img-top lazy" data-src="<?php echo WP_UPLOAD_PATH;?>/2020/01/BD-O-bg-fade-01.jpg" alt="...">
 					<div class="card-body">
 						<h5 class="card-title">Insurance Distinguished</h5>
 						<p class="card-text">
@@ -235,14 +235,14 @@
 <a href="https://www.facebook.com/journeypure" target="_blank"><i class="fab fa-facebook"></i></a><a href="https://www.linkedin.com/company/journeypure/about/" target="_blank"><i class="fab fa-linkedin-in"></i></a><a href="https://www.youtube.com/journeypure" target="_blank"><i class="fab fa-youtube"></i></a></h2>
 	<div class="row row-eq-height"> <div class="col-lg-6 d-flex align-items-stretch card-col"><div class="card default  effect-none"> <div class="card-body"><div class="card-text">
 <ul>
-<li><h3>Official provider for retired NFL & MLB pro athletes.</h3><hr /> <div class="row"><div class="col-md-10 col-sm-12">We are the only addiction treatment provider approved by the NFL Player Care Foundation and the MLB BAT program.</div><div class="col-md-2 col-sm-12"><img src="/wp-content/uploads/2020/01/Player-Care-Foundation-500x342-1.png"></div></div>
+<li><h3>Official provider for retired NFL & MLB pro athletes.</h3><hr /> <div class="row"><div class="col-md-10 col-sm-12">We are the only addiction treatment provider approved by the NFL Player Care Foundation and the MLB BAT program.</div><div class="col-md-2 col-sm-12"><img class="lazy" data-src="/wp-content/uploads/2020/01/Player-Care-Foundation-500x342-1.png"></div></div>
 </li>
 <li><h3>We're in-network with new VA Choice insurance.</h3><hr /> Veteran care is a high priority here. We accept Tricare and have specialized programs led by veterans that include virtual reality technology in treatment.
 </li>
 <li><h3>All 14 outpatient locations offer virtual options.</h3><hr />  We're growing in our commitment to communities in <a href="/locations/tennessee/">Tennessee</a>, <a href="/locations/kentucky/">Kentucky</a> and <a href="/locations/florida/">Florida</a>. Across the state, you can get addiction care at home.</li>
 <li class="last-news"><h3>Current data shows 84% of alumni are sober six months after starting treatment here.</h3><hr /> We use our data and statistically-verified studies from others in the industry to adjust our programs in ways that have the biggest impact on individual success. </li>
 </ul>
-</div></div></div></div> <div class="col-lg-6 d-flex align-items-stretch card-col"><div class="card default  effect-none"> <div class="card-body"><div class="card-text">  <img class="featured" src="/wp-content/uploads/2019/11/journeypure-alumni-app-after-rehab-left.png" alt="JourneyPure Phone App Screenshot Listing Features"> </div></div></div></div> </div></div>  <div class="content-section top-lg"><div class="card default"><div class="card-body"> </div></div></div> </div></section>
+</div></div></div></div> <div class="col-lg-6 d-flex align-items-stretch card-col"><div class="card default  effect-none"> <div class="card-body"><div class="card-text">  <img class="featured lazy" data-src="/wp-content/uploads/2019/11/journeypure-alumni-app-after-rehab-left.png" alt="JourneyPure Phone App Screenshot Listing Features"> </div></div></div></div> </div></div>  <div class="content-section top-lg"><div class="card default"><div class="card-body"> </div></div></div> </div></section>
 
 	<section class="insurance-section">
 		<div class="container">

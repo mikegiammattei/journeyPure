@@ -71,7 +71,20 @@ class OP {
 		global $post;
 		$this->post = $post;
 
-		$this->fields = get_fields();
+		// Cache the fields.
+
+		$cache_key    = 'class-fields-' . $this->post->ID;
+		$this->fields = get_transient( $cache_key );
+
+		if ( false === $this->fields ) {
+			$this->fields = get_fields();
+
+			if ( ! is_wp_error( $this->fields ) && ! empty( $this->fields ) ) {
+				set_transient( $cache_key, $this->fields, HOUR_IN_SECONDS );
+			}
+		}
+
+		// END Cache the fields.
 
 		$this->set_core_fields();
 		$this->set_masthead_section();
@@ -163,7 +176,20 @@ class OP {
 			$this->faq->faqs   = array();
 
 			foreach ( $faqs_category_ids as $faq_post_id ) {
-				$faq = get_fields( $faq_post_id );
+				// Cache the fields.
+
+				$cache_key = 'class-fields-' . $faq_post_id;
+				$faq       = get_transient( $cache_key );
+
+				if ( false === $faq ) {
+					$faq = get_fields( $faq_post_id );
+
+					if ( ! is_wp_error( $faq ) && ! empty( $faq ) ) {
+						set_transient( $cache_key, $faq, HOUR_IN_SECONDS );
+					}
+				}
+
+				// END Cache the fields.
 
 				$this->faq->faqs[] = (object) array(
 					'question' => $faq['question'],

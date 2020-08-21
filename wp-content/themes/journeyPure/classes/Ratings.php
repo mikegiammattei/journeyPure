@@ -10,25 +10,53 @@
  */
 
 namespace Ratings;
+
 error_reporting(0);
 
-class Ratings
-{
+class Ratings {
 
 	public $ratings;
 	private $post;
 	private $fields = array();
 	private $ratingPostsIds;
 
-	public function __construct(){
+	public function __construct() {
 		global $post;
 		$this->post = $post;
-		$this->fields = get_fields($post->ID);
-	}
-	private function setRatings(){
 
+		// Cache the fields.
+
+		$cache_key    = 'class-fields-' . $this->post->ID;
+		$this->fields = get_transient( $cache_key );
+
+		if ( false === $this->fields ) {
+			$this->fields = get_fields();
+
+			if ( ! is_wp_error( $this->fields ) && ! empty( $this->fields ) ) {
+				set_transient( $cache_key, $this->fields, HOUR_IN_SECONDS );
+			}
+		}
+
+		// END Cache the fields.
+	}
+
+	private function setRatings() {
 		foreach ($this->ratingPostsIds as $index => $ratingPostsId){
-			$rating = get_fields($ratingPostsId);
+			// Cache the fields.
+
+			$cache_key = 'class-fields-' . $ratingPostsId;
+			$rating    = get_transient( $cache_key );
+
+			if ( false === $rating ) {
+				$rating = get_fields( $ratingPostsId );
+
+				if ( ! is_wp_error( $rating ) && ! empty( $rating ) ) {
+					set_transient( $cache_key, $rating, HOUR_IN_SECONDS );
+				}
+			}
+
+			// END Cache the fields.
+
 			@$this->ratings[$index] = (object) array(
 				'image' => $rating['image'],
 				'line_1' => $rating['line_1'],
@@ -38,6 +66,7 @@ class Ratings
 				'number_rating' => null,
 				'line_3' => $rating['line_3'],
 			);
+
 			if(isset($rating['line_2']) && $rating['line_2'] == 'stars' ){
 
 				if(isset($rating['number_rating'])){
@@ -47,11 +76,9 @@ class Ratings
 				}
 			}
 		}
-
-
 	}
-	public function setPostByCategoryId($categoryIDs){
 
+	public function setPostByCategoryId($categoryIDs) {
 		/** Get ratings if there are any associated with the post rating category */
 		if($categoryIDs){
 			// Get rating post by the categories ID
@@ -67,7 +94,6 @@ class Ratings
 
 			$this->setRatings();
 		}
-
 	}
 
 }

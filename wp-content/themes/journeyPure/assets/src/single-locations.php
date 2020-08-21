@@ -209,7 +209,7 @@ get_header();
 		<div class="image-gallery" data-slick='{"slidesToShow": <?php echo count( $location->gallery ); ?>}' role="toolbar">
 			<?php foreach ( $location->gallery as $index => $gallery ) : ?>
 				<figure>
-					<img src="<?php echo esc_attr( $gallery->medium ); ?>" alt="<?php echo esc_attr( $gallery->alt ); ?>">
+					<img class="lazy" data-src="<?php echo esc_attr( $gallery->medium ); ?>" alt="<?php echo esc_attr( $gallery->alt ); ?>">
 				</figure>
 			<?php endforeach; ?>
 		</div>
@@ -342,7 +342,7 @@ get_header();
 						<div class="d-flex align-items-stretch card-col">
 							<div class="card default border-0">
 								<div class="card-body  bios">
-									<div class="img" style='background-image: url("<?php echo esc_attr( $bio->photo['image'] ); ?>");'></div>
+									<div class="img lazy" data-src="<?php echo $bio->photo['image']; ?>"></div>
 									<p class="text name-text"><?php echo esc_html( $bio->name ); ?> <span class="text"><?php echo esc_html( $bio->credentials ); ?></span></p>
 									<p class="text"><?php echo esc_html( $bio->title ); ?></p>
 
@@ -581,7 +581,7 @@ get_header();
 
 									<div class="col-md-6 d-none d-sm-block">
 										<div class="lazy" data-src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg">
-											<img src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg" alt="Call JourneyPure">
+											<img class="lazy" data-src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg" alt="Call JourneyPure">
 										</div>
 									</div>
 								</div>
@@ -593,7 +593,7 @@ get_header();
 								<div class="row">
 									<!--<div class="col-md-6 order-md-2">
 										<div class="lazy" data-src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg">
-											<img src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg" alt="Call JourneyPure">
+											<img class="lazy" data-src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg" alt="Call JourneyPure">
 										</div>
 									</div>
 
@@ -614,7 +614,7 @@ get_header();
 								<div class="row">
 									<!--<div class="col-md-6 order-md-2">
 										<div class="lazy" data-src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg">
-											<img src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg" alt="Call JourneyPure">
+											<img class="lazy" data-src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg" alt="Call JourneyPure">
 										</div>
 									</div>
 
@@ -635,7 +635,7 @@ get_header();
 								<div class="row">
 									<!--<div class="col-md-6 order-md-2">
 										<div class="lazy" data-src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg">
-											<img src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg" alt="Call JourneyPure">
+											<img class="lazy" data-src="/wp-content/uploads/2020/05/call-journeypure-rehab-now-invert.jpg" alt="Call JourneyPure">
 										</div>
 									</div>
 

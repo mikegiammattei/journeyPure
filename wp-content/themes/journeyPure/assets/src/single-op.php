@@ -252,7 +252,7 @@ get_header();
 									<div class="col-md-9 col-8">
 										<div class="row">
 											<div class="col-lg-auto col-md-3 col-4 align-self-center">
-												<img class="jp-op-reviews-card-image lazy" data-src="/wp-content/uploads/reviews/generic-profile-1.png" alt="Stephanie C.">
+												<img class="jp-op-reviews-card-image lazy" data-src="/wp-content/uploads/2019/11/reviewer-300x300.jpg" alt="Stephanie C.">
 											</div>
 
 											<div class="col-lg-auto col-md-9 col-8 align-self-center">
@@ -288,7 +288,7 @@ get_header();
 									<div class="col-md-9 col-8">
 										<div class="row">
 											<div class="col-lg-auto col-md-3 col-4 align-self-center">
-												<img class="jp-op-reviews-card-image lazy" data-src="/wp-content/uploads/reviews/generic-profile-1.png" alt="Bree M.">
+												<img class="jp-op-reviews-card-image lazy" data-src="/wp-content/uploads/2019/11/reviewer-300x300.jpg" alt="Bree M.">
 											</div>
 
 											<div class="col-lg-auto col-md-9 col-8 align-self-center">
@@ -326,7 +326,7 @@ get_header();
 									<div class="col-md-9 col-8">
 										<div class="row">
 											<div class="col-lg-auto col-md-3 col-4 align-self-center">
-												<img class="jp-op-reviews-card-image lazy" data-src="/wp-content/uploads/reviews/generic-profile-1.png" alt="John B.">
+												<img class="jp-op-reviews-card-image lazy" data-src="/wp-content/uploads/2019/11/reviewer-300x300.jpg" alt="John B.">
 											</div>
 
 											<div class="col-lg-auto col-md-9 col-8 align-self-center">
@@ -362,7 +362,7 @@ get_header();
 									<div class="col-md-9 col-8">
 										<div class="row">
 											<div class="col-lg-auto col-md-3 col-4 align-self-center">
-												<img class="jp-op-reviews-card-image lazy" data-src="/wp-content/uploads/reviews/generic-profile-1.png" alt="Chris B.">
+												<img class="jp-op-reviews-card-image lazy" data-src="/wp-content/uploads/2019/11/reviewer-300x300.jpg" alt="Chris B.">
 											</div>
 
 											<div class="col-lg-auto col-md-9 col-8 align-self-center">

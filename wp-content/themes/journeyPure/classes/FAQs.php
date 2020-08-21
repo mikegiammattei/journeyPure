@@ -1,5 +1,4 @@
 <?php
-
 /**
  * FileName: FAQs.php
  * Description:
@@ -11,23 +10,49 @@
 
 namespace FAQs;
 
+class FAQs {
 
-class FAQs
-{
 	public $faqs;
 	private $post;
 	private $fields = array();
 
-	public function __construct(){
+	public function __construct() {
 		global $post;
 		$this->post = $post;
-		$this->fields = get_fields($post->ID);
-	}
-	public function setFAQs($faqsCategoryIDs){
 
+		// Cache the fields.
+
+		$cache_key    = 'class-fields-' . $this->post->ID;
+		$this->fields = get_transient( $cache_key );
+
+		if ( false === $this->fields ) {
+			$this->fields = get_fields();
+
+			if ( ! is_wp_error( $this->fields ) && ! empty( $this->fields ) ) {
+				set_transient( $cache_key, $this->fields, HOUR_IN_SECONDS );
+			}
+		}
+
+		// END Cache the fields.
+	}
+
+	public function setFAQs($faqsCategoryIDs) {
 		if(is_array($this->fields['photo_gallery'])):
 			foreach ($faqsCategoryIDs as $faqPostsId){
-				$faq = get_fields($faqPostsId);
+				// Cache the fields.
+
+				$cache_key = 'class-fields-' . $faqPostsId;
+				$faq       = get_transient( $cache_key );
+
+				if ( false === $faq ) {
+					$faq = get_fields( $faqPostsId );
+
+					if ( ! is_wp_error( $faq ) && ! empty( $faq ) ) {
+						set_transient( $cache_key, $faq, HOUR_IN_SECONDS );
+					}
+				}
+
+				// END Cache the fields.
 
 				$this->faqs[] = (object) array(
 					'question' => $faq['question'],
@@ -36,8 +61,8 @@ class FAQs
 			}
 		endif;
 	}
-	public function setFAQsByCatName($name){
 
+	public function setFAQsByCatName($name) {
 		/** Get bios if there are any associated with the post bio category */
 		if($name){
 			// Get bio post by the categories ID
@@ -52,7 +77,20 @@ class FAQs
 			$postIds = wp_list_pluck( $wp_query->posts, 'ID' );
 
 			foreach ($postIds as $faqPostsId){
-				$faq = get_fields($faqPostsId);
+				// Cache the fields.
+
+				$cache_key = 'class-fields-' . $faqPostsId;
+				$faq       = get_transient( $cache_key );
+
+				if ( false === $faq ) {
+					$faq = get_fields( $faqPostsId );
+
+					if ( ! is_wp_error( $faq ) && ! empty( $faq ) ) {
+						set_transient( $cache_key, $faq, HOUR_IN_SECONDS );
+					}
+				}
+
+				// END Cache the fields.
 
 				$this->faqs[] = (object) array(
 					'question' => $faq['question'],
@@ -60,6 +98,6 @@ class FAQs
 				);
 			}
 		}
-
 	}
+
 }

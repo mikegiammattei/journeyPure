@@ -25,13 +25,31 @@ class Homepage
 	private $fields;
 
 	public function __construct(){
-		$this->fields = get_fields();
+		global $post;
+		$this->post = $post;
+
+		// Cache the fields.
+
+		$cache_key    = 'class-fields-' . $this->post->ID;
+		$this->fields = get_transient( $cache_key );
+
+		if ( false === $this->fields ) {
+			$this->fields = get_fields();
+
+			if ( ! is_wp_error( $this->fields ) && ! empty( $this->fields ) ) {
+				set_transient( $cache_key, $this->fields, HOUR_IN_SECONDS );
+			}
+		}
+
+		// END Cache the fields.
+
 		$this->setRatings();
 		$this->setReviews();
 		$this->setBios();
 		$this->setBioSection();
 		$this->setFAQs();
-		define("STYLESHEET_NAME", "homepage");
+
+		define( 'STYLESHEET_NAME', 'homepage' );
 	}
 	private function setRatings(){
 		require_once(get_stylesheet_directory() . '/classes/Ratings.php');

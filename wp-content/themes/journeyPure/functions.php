@@ -169,3 +169,28 @@ function jp_is_bot() {
 	// 	&& preg_match( '/pagespeed|yslow|gtmetrix|lighthouse|googlebot|bot|crawl|bingbot|mediapartners/i', $_SERVER['HTTP_USER_AGENT'] )
 	// );
 }
+
+/**
+ * Clear transients on post/page update.
+ *
+ * @return void
+ */
+function js_refresh_transients( $post_ID ) {
+	$transient = 'class-fields-' . $post_ID;
+	delete_transient( $transient );
+
+	global $wpdb;
+	$sql = "SELECT `option_name` AS `name`, `option_value` AS `value`
+			FROM {$wpdb->options}
+			WHERE `option_name` LIKE '%_transient_styles-%'
+			ORDER BY `option_name`";
+
+	$results = $wpdb->get_results( $sql );
+
+	foreach ( $results as $result ) {
+		$transient = str_replace( '_transient_', '', $result->name );
+		delete_transient( $transient );
+	}
+}
+
+add_action( 'save_post', 'js_refresh_transients' );

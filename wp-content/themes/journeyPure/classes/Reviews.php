@@ -1,5 +1,4 @@
 <?php
-
 /**
  * FileName: Reviews.php
  * Description:
@@ -11,23 +10,16 @@
 
 namespace Reviews;
 
-class Reviews
-{
+class Reviews {
 
 	public $reviews;
-	// private $post;
-	// private $fields = array();
 	private $reviewPostsIds;
 	private $reviewCount;
 	private $avgRating;
 
-	public function __construct(){
-		// global $post;
-		// $this->post = $post;
-		// $this->fields = get_fields($post->ID);
+	public function __construct() { }
 
-	}
-	public function setAvgRating($reviews){
+	public function setAvgRating($reviews) {
 		$total = 0;
 		foreach ($reviews as $rating):
 			$total = $total + $rating->star_rating;
@@ -38,11 +30,24 @@ class Reviews
 
 		$this->avgRating = $avg;
 	}
-	private function setReviews(){
 
+	private function setReviews() {
 		$this->reviews  = array();
 		foreach ($this->reviewPostsIds as $index => $reviewPostsId){
-			$review = get_fields($reviewPostsId);
+			// Cache the fields.
+
+			$cache_key = 'class-fields-' . $reviewPostsId;
+			$review    = get_transient( $cache_key );
+
+			if ( false === $review ) {
+				$review = get_fields( $reviewPostsId );
+
+				if ( ! is_wp_error( $review ) && ! empty( $review ) ) {
+					set_transient( $cache_key, $review, HOUR_IN_SECONDS );
+				}
+			}
+
+			// END Cache the fields.
 
 			$this->reviews[] = (object) array(
 				'identifier' => 'reviews_' . $reviewPostsId,
@@ -54,7 +59,7 @@ class Reviews
 				'heading' => $review['heading'],
 				'star_rating' => $review['star_rating'],
 				'review_text' => $review['review_text'],
-				'sober_since' => $review['sober_since']
+				'sober_since' => empty( $review['sober_since'] ) ? null : $review['sober_since'],
 			);
 
 			if ( isset( $review['image'] ) ) {
@@ -76,16 +81,17 @@ class Reviews
 		$this->reviewCount = count($this->reviewPostsIds);
 
 		$this->setAvgRating($this->reviews);
-
 	}
-	public function getAvgRating(){
+
+	public function getAvgRating() {
 		return $this->avgRating;
 	}
-	public function getTotalReviews(){
+
+	public function getTotalReviews() {
 		return $this->reviewCount;
 	}
-	public function setPostByCategoryId($categoryIDs){
 
+	public function setPostByCategoryId($categoryIDs) {
 		/** Get reviews if there are any associated with the post review category */
 		if($categoryIDs){
 			// Get review post by the categories ID
@@ -99,21 +105,19 @@ class Reviews
 			// Get just Post IDs
 			$this->reviewPostsIds = wp_list_pluck( $wp_query->posts, 'ID' );
 
-
 			$this->setReviews();
 		}
-
 	}
-	public function setPostByPostId($posts){
+
+	public function setPostByPostId($posts) {
 		$this->reviewPostsIds = wp_list_pluck( $posts, 'ID' );
 
 		if(!empty($this->reviewPostsIds)){
 			$this->setReviews();
 		}
-
 	}
-	public function setPostTag($tagName){
 
+	public function setPostTag($tagName) {
 		$args=array(
 			'posts_per_page' => 100,
 			'post_type' => 'reviews',
@@ -135,8 +139,6 @@ class Reviews
 		if(!empty($this->reviewPostsIds)){
 			$this->setReviews();
 		}
-
-
 	}
 
 	/**
@@ -202,7 +204,7 @@ class Reviews
 
 					$wp_query = new \WP_Query( $args );
 					$reviews  = $wp_query->posts;
-					set_transient( $cache_key, $reviews, MINUTE_IN_SECONDS );
+					set_transient( $cache_key, $reviews, HOUR_IN_SECONDS );
 				}
 			}
 
@@ -232,7 +234,7 @@ class Reviews
 
 		if ( false === $review_count ) {
 			$review_count = wp_count_posts( 'reviews' )->publish;
-			set_transient( $cache_key, $review_count, MINUTE_IN_SECONDS );
+			set_transient( $cache_key, $review_count, HOUR_IN_SECONDS );
 		}
 
 		// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
@@ -260,7 +262,7 @@ class Reviews
 				)
 			);
 
-			set_transient( $cache_key, $star_rating, MINUTE_IN_SECONDS );
+			set_transient( $cache_key, $star_rating, HOUR_IN_SECONDS );
 		}
 
 		// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
