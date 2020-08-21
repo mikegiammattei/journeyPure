@@ -47,8 +47,8 @@ class Reviews
 			$this->reviews[] = (object) array(
 				'identifier' => 'reviews_' . $reviewPostsId,
 				'photo' => array(
-					'image' => $review['image']['sizes']['medium'],
-					'alt' => $review['image']['alt']
+					'image' => '/wp-content/uploads/2019/11/reviewer.jpg',
+					'alt'   => 'Reviewer',
 				),
 				'source_image' => null,
 				'heading' => $review['heading'],
@@ -56,6 +56,13 @@ class Reviews
 				'review_text' => $review['review_text'],
 				'sober_since' => $review['sober_since']
 			);
+
+			if ( isset( $review['image'] ) ) {
+				$this->reviews[ $index ]->photo = array(
+					'image' => $review['image']['sizes']['medium'] ?: '/wp-content/uploads/2019/11/reviewer.jpg',
+					'alt'   => $review['image']['alt'] ?: 'Reviewer',
+				);
+			}
 
 			if(isset($review['source_image'])){
 				$this->reviews[$index]->source_image = array(
