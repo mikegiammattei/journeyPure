@@ -540,10 +540,3 @@
 	}
 }
 
-// Reviews Section
-
-.jp-reviews-reviews {
-	@import "../page-parts/jp-reviews";
-	@include jp-reviews;
-	padding-top: 0;
-}

@@ -180,23 +180,6 @@ $footerVersion = 2;
 		<?php endif; ?>
 
 
-		<section class="block-1">
-			<div class="container">
-				<div class="header">
-					<h3 class="quote">
-						 "Everyone comes in overwhelmed, but looking to make big changes quickly. This is where it starts. Where you learn to harness and hold on to hope."
-					</h3>
-				</div>
-				<div class="media d-inline-flex">
-					<img class="mr-3 lazy" data-src="/wp-content/uploads/2019/11/kevin-lee.jpg" alt="Kevin Lee">
-					<div class="media-body ">
-						<h5>Kevin D. Lee</h5>
-						<h6>CEO & Founder</h6>
-					</div>
-				</div>
-			</div>
-		</section>
-
 
 
 		<?php echo jp_divider() ?>
@@ -351,7 +334,7 @@ $footerVersion = 2;
 				<div class="row">
 					<div class="col-12">
 						<h2 class="text-center jp-reviews-reviews-title">You can do this!</h2>
-						<p class="h3 text-center jp-reviews-reviews-subtitle">Whether Journeypure is your first (and last) treatment experience, or you've spent decades in and out of other facilities...here's proof that you can feel better. There's no shame in getting help.</p>
+						<p class="h3 text-center jp-reviews-reviews-subtitle">Whether JourneyPure is your first (and last) treatment experience, or you've spent decades in and out of other facilities...here's proof that you can feel better. There's no shame in getting help.</p>
 					</div>
 				</div>
 

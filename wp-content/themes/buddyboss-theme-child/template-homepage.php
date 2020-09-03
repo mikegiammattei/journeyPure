@@ -277,7 +277,7 @@ echo do_shortcode('[wpw_follow_author_me author_id=6 disable_reload=true][/wpw_f
 		The heart of Ask Our Doctors is questions — questions that help us be proactive about our well-being and the well-being of those around us. Ask Our Doctors encourages you to weigh in on every question. Your unique perspective is so valuable and can literally change someone's life. The more we make Ask Our Doctors a conversation, the better able we are to help the 20K+ people that visit the website every month. </p></div>
 
 		<h3>What happens when I ask a question?</h3>
-			<p>First, you'll be asked to sign up. This protects against spammers and helps you find value in this community way beyond asking one question. (Don't worry, the form is only three questions). </p>
+			<p>First, you'll be asked to sign up. This protects against spam and helps you find value in this community way beyond asking one question. (Don't worry, the form is only three questions). </p>
 			<p>Your email is never shown publicly and your profile is not connected to your question. You can use initials or just your first name to be anonymous. </p>
 			<p>Once signed up, the doctors get an email with your question and try to answer you within 72 hours. When your answer goes live on the website, you'll get an email. Any time feedback from the community is posted, you'll get an email too, though you can unsubscribe.</p>
 			<p>In some cases, questions are not appropriate or repetitive. If that happens, the team will email you.</p>
@@ -293,7 +293,7 @@ echo do_shortcode('[wpw_follow_author_me author_id=6 disable_reload=true][/wpw_f
 			<p>If you do sign up though, you can add your story to your profile to remind those still struggling that they are not alone.</p>
 		<hr />
 		<h3>Do I still need to see a doctor?</h3>
-			<p>Yes! We recognize that you are going to reserach medical and clinical questions outside of seeking care. Being informed is a good thing! Ask Our Doctors exists to ensure your information is accruate, instead of coming from a random blog.</p>
+			<p>Yes! We recognize that you are going to research medical and clinical questions outside of seeking care. Being informed is a good thing! Ask Our Doctors exists to ensure your information is accurate, instead of coming from a random blog.</p>
 			<p>That said, this website is for informational purposes only. It's not intended to be a substitute for professional medical advice, diagnosis or treatment. Always seek the advice of your physician or other qualified health provider with any questions regarding a medical condition. Never disregard professional medical advice or delay seeking it because of something you have read on the Ask Our Doctor's Site.</p>
 			<hr />
 		<h3>Who can I contact about issues with this website?</h3>
