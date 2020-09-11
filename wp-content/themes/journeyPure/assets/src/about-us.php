@@ -31,6 +31,7 @@
 								<div class="card transparent">
 									<div class="card-body">
 										<p class="h3 text-center">Our mission is to help people become healthy and stay healthy. Our high standards attract well-known behavioral health professionals from across the country.  Their commitments to <u>ethics and patient success</u> are backed by the highest accreditation in the industry.</p>
+										<p class="text-center"><a href="https://journeypure.com/wp-content/uploads/2020/09/jp-virtual-rehab-flyer-WEB.pdf" target="_blank">Become a JourneyPure Virtual  Therapist</a></p>
 									</div>
 
 									<?php if ( $AboutUs->ratings ) : ?>

@@ -26,6 +26,8 @@ get_header();
 					<p class="jp-vr-masthead-subtitle"><?php echo esc_html( $virtual_rehab->masthead_subtitle ); ?></p>
 					<button type="button" data-toggle="modal" data-target="#virtual-rehab-modal" class="btn btn-outline-secondary jp-vr-masthead-button"><span class="fas fa-comment"></span> Talk to a therapist now</button>
 					<p>40-minute session <del> $120 </del> <b>$45 limited time</b></p>
+					<div class="virtual-phone"><span>—— OR ——</span></div>
+					<p>Talk to A Representive First: (844) 505-4799</p>
 				</div>
 
 				<div class="col-12 col-lg-5 order-lg-2 background-circle">

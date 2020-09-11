@@ -10,7 +10,7 @@
 						<h5 class="text-center">It's just a short, simple conversion to see if we'd be a good fit.</h5>
 
 						<div class="row">
-							<div class="col-xs-6 col-md-6 text-center bottom-cta">
+							<div class="col-xs-4 col-md-4 text-center bottom-cta">
 								<a href="tel:+1-844-505-4799"><i class="fas fa-phone"></i><h4>Call us: (844) 505-4799</h4></a>
 								<input id="_1" type="checkbox">
 								<label class="drop" for="_1">Or, Get a Call Back »</label>
@@ -19,20 +19,21 @@
 									<p>Enter your phone number and get a call usually within 5 minutes.</p>
 								</div>
 							</div>
+							
+							<div class="col-xs-4 col-md-4 text-center bottom-cta" style=""><a href="#" class="frontman-cta-insurance" style="display:none;"><i class="fas fa-laptop-medical"></i><h4>Talk to a Therapist Now Virutally</h4>
+							<p>40-minute session <del>$120</del> <b>$45 limited time</b></p>
+							</a></div>
 
-							<div class="col-xs-6 col-md-4 text-center bottom-cta" style="display:none;">
-								<a data-toggle="modal" data-target="#main-insurance-form" href="#"><i class="fas fa-id-card"></i> <h4>Submit Insurance</h4></a>
-							</div>
-
-							<div class="col-xs-6 col-md-6 text-center bottom-cta">
+							
+							<div class="col-xs-4 col-md-4 text-center bottom-cta">
 								<a href="sms:+18445054799"><i class="fas fa-mobile-alt"></i><h4>Text us: (844) 505-4799</h4></a>
 								<a data-toggle="modal" data-target="#main-insurance-form" href="#" class="insurance-link" style="display:none;">Or, Submit Insurance »</a>
 							</div>
 
-							<div class="col-xs-6 col-md-3 text-center bottom-cta" style="display:none;">
-								<i class="fas fa-phone"></i>
-								<h4 class="oswald-med-uppercase jc-blue-dark tablet-desktop"><a href="#" class="track jc-blue-dark" rel="contact endcap: FAQ">FAQ</a></h4>
+							<div class="col-xs-4 col-md-4 text-center bottom-cta" style="display:none;">
+								<a data-toggle="modal" data-target="#main-insurance-form" href="#"><i class="fas fa-id-card"></i> <h4>Submit Insurance</h4></a>
 							</div>
+
 						</div>
 					</div>
 				</div>
