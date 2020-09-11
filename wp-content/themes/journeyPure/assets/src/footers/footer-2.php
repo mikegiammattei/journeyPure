@@ -19,12 +19,15 @@
 									<p>Enter your phone number and get a call usually within 5 minutes.</p>
 								</div>
 							</div>
-							
-							<div class="col-xs-4 col-md-4 text-center bottom-cta" style=""><a href="#" class="frontman-cta-insurance" style="display:none;"><i class="fas fa-laptop-medical"></i><h4>Talk to a Therapist Now Virutally</h4>
-							<p>40-minute session <del>$120</del> <b>$45 limited time</b></p>
-							</a></div>
 
-							
+							<div class="col-xs-4 col-md-4 text-center bottom-cta">
+								<a href="#" data-toggle="modal" data-target="#virtual-rehab-modal">
+									<i class="fas fa-laptop-medical"></i>
+									<h4>Talk to a Therapist Now Virutally</h4>
+									<p>40-minute session <del>$120</del> <b>$45 limited time</b></p>
+								</a>
+							</div>
+
 							<div class="col-xs-4 col-md-4 text-center bottom-cta">
 								<a href="sms:+18445054799"><i class="fas fa-mobile-alt"></i><h4>Text us: (844) 505-4799</h4></a>
 								<a data-toggle="modal" data-target="#main-insurance-form" href="#" class="insurance-link" style="display:none;">Or, Submit Insurance »</a>
@@ -33,7 +36,6 @@
 							<div class="col-xs-4 col-md-4 text-center bottom-cta" style="display:none;">
 								<a data-toggle="modal" data-target="#main-insurance-form" href="#"><i class="fas fa-id-card"></i> <h4>Submit Insurance</h4></a>
 							</div>
-
 						</div>
 					</div>
 				</div>
@@ -81,13 +83,13 @@
 				</div>
 			</footer>
 
-			<?php if ( ! is_page_template( 'template-virtual-rehab.php' ) ) : ?>
+			<?php // if ( ! is_page_template( 'template-virtual-rehab.php' ) ) : ?>
 				<?php // include_once(get_stylesheet_directory() . '/assets/src/includes/components/cta-widget.php'); ?>
-			<?php endif; ?>
+			<?php // endif; ?>
 
-			<?php if ( is_page_template( 'template-virtual-rehab.php' ) ) : ?>
+			<?php // if ( is_page_template( 'template-virtual-rehab.php' ) ) : ?>
 				<?php include_once(get_stylesheet_directory() . '/assets/src/includes/components/virtual-rehab-modal.php'); ?>
-			<?php endif; ?>
+			<?php // endif; ?>
 
 			<?php include_once(get_stylesheet_directory() . '/assets/src/includes/components/leave-a-review.php'); ?>
 			<?php include_once(get_stylesheet_directory() . '/assets/src/includes/components/not-ready-component.php'); ?>
@@ -98,15 +100,15 @@
 
 		</div> <?php /** end of main wrapper */ ?>
 
-			<?php if ( ! isset( $_GET['DEV'] ) ) : ?>
-				<script> window.JP_IS_BOT = <?php echo jp_is_bot() ? 'true' : 'false'; ?>; </script>
-				<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
-				<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script>
-				<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-				<script src="<?php echo get_stylesheet_directory_uri() . '/js/vendor.min.js?v=20200820'; ?>" defer></script>
-				<script src="<?php echo get_stylesheet_directory_uri() . '/js/custom.min.js?v=20200820'; ?>" defer></script>
-			<?php endif; ?>
+		<?php if ( ! isset( $_GET['DEV'] ) ) : ?>
+			<script> window.JP_IS_BOT = <?php echo jp_is_bot() ? 'true' : 'false'; ?>; </script>
+			<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+			<script src="<?php echo get_stylesheet_directory_uri() . '/js/vendor.min.js?v=20200911'; ?>" defer></script>
+			<script src="<?php echo get_stylesheet_directory_uri() . '/js/custom.min.js?v=20200911'; ?>" defer></script>
+		<?php endif; ?>
 
-			<?php wp_footer(); ?>
-			</body>
-			</html>
+		<?php wp_footer(); ?>
+	</body>
+</html>

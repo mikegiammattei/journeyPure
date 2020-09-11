@@ -43,7 +43,7 @@ class Stylesheet {
 			$path = THEME_DIR . '/css/' . $filename . '.min.css';
 		}
 
-		$return_value = '<link rel="stylesheet" rel="preload" type="text/css" href="' . $path . '?v=20200820">';
+		$return_value = '<link rel="stylesheet" rel="preload" type="text/css" href="' . $path . '?v=20200911">';
 		echo $return_value;
 	}
 
