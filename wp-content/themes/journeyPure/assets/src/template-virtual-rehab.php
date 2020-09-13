@@ -24,9 +24,9 @@ get_header();
 				<div class="col-12 col-lg-7 order-lg-1">
 					<h1 class="jp-vr-masthead-title"><?php echo wp_kses_post( $virtual_rehab->masthead_title ); ?></h1>
 					<p class="jp-vr-masthead-subtitle"><?php echo esc_html( $virtual_rehab->masthead_subtitle ); ?></p>
-					<button type="button" data-toggle="modal" data-target="#virtual-rehab-modal" class="btn btn-outline-secondary jp-vr-masthead-button"><span class="fas fa-comment"></span> Talk to a therapist now</button>
+					<button type="button" data-toggle="modal" data-target="#virtual-rehab-modal" class="btn btn-secondary jp-vr-masthead-button"><span class="fas fa-comment"></span> Talk to a therapist now</button>
 					<p>40-minute session <del> $120 </del> <b>$45 limited time</b></p>
-					<div class="virtual-phone jp-vr-masthead-subtitle">—— OR ——</br>
+					<div class="virtual-phone">—— OR ——</br>
 					Call for more information: (844) 505-4799</div>
 				</div>
 
@@ -518,9 +518,9 @@ get_header();
 						</div>
 
 						<div class="cta-process">
-							<button type="button" data-toggle="modal" data-target="#virtual-rehab-modal" class="btn btn-outline-secondary jp-vr-process-button"><span class="fas fa-comment"></span> Talk to a therapist now</button>
+							<button type="button" data-toggle="modal" data-target="#virtual-rehab-modal" class="btn btn-secondary jp-vr-process-button"><span class="fas fa-comment"></span> Talk to a therapist now</button>
 							<p>40-minute session <del> $120 </del> <b>$45 limited time</b></p>
-							<div class="virtual-phone jp-vr-masthead-subtitle">—— OR ——</br>
+							<div class="virtual-phone">—— OR ——</br>
 					Call for more information:<br/>(844) 505-4799</div>
 						</div>
 					</div>
@@ -566,13 +566,10 @@ get_header();
 		<div class="container">
 			<h2 class="text-center">What now?</h2>
 
-			<div class="row">
-				<div class="col-12 text-center bottom-cta">
-					<button type="button" data-toggle="modal" data-target="#virtual-rehab-modal" class="btn btn-secondary btn-outline-secondary-big"><span class="fas fa-comment"></span> Talk to a therapist</button>
-					<p>40-minute session <del> $120 </del> <b>$45 limited time</b></p>
-					<small class="drop" data-toggle="modal" data-target="#virtual-rehab-modal">No commitment</small>
-				</div>
-			</div>
+<div class="row"><div class="col-2 text-center bottom-cta"></div><div class="col-4 text-center bottom-cta"> <button type="button" data-toggle="modal" data-target="#virtual-rehab-modal" class="btn btn-secondary jp-vr-process-button"><span class="fas fa-comment"></span> Talk to a therapist</button><p>40-minute session <del>$120</del> <b>$45 limited time</b></p> <small class="drop" data-toggle="modal" data-target="#virtual-rehab-modal">No commitment</small></div>
+<div class="col-4 text-center bottom-cta"> <a href="tel:8445054799"><button type="button" class="btn btn-secondary jp-vr-process-button"><span class="fas fa-phone"></span> Call (844) 505-4799</button></a><p>For more information </p> <small class="drop" data-toggle="modal" data-target="#virtual-rehab-modal" style="
+    display: none;
+">No commitment</small></div></div>
 		</div>
 	</section>
 
