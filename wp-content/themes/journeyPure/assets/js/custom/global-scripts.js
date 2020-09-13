@@ -26,6 +26,12 @@ $(document).ready(function () {
 			$('.ctm-call-widget, .iframe-to-load').each(function() {
 				$(this).attr('src', $(this).data('url-value'));
 			});
+
+			// On page load, check hash to open Virtual Rehab modal
+
+			if (document.location.hash === '#schedule') {
+				jQuery('#virtual-rehab-modal').modal('show');
+			}
 		}
 	}, 2000);
 
