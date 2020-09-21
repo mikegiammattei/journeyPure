@@ -1,5 +1,4 @@
 @mixin jp-highlights-v2 {
-	background-color: #f7f7f7;
 	overflow: hidden;
 
 	h3, .h3 {
@@ -61,7 +60,7 @@
 					&:before,
 					&:after {
 						background-image: radial-gradient(#e2e7f56b 50%, transparent 54%);
-						background-size: 50px 50px;
+						background-size: 19px 19px;
 						bottom: 0;
 						content: '';
 						height: 150px;

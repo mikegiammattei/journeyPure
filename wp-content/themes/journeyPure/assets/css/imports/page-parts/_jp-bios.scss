@@ -37,8 +37,8 @@
 				.img {
 					background: no-repeat center;
 					background-size: cover;
-					width: 100px;
-					height: 100px;
+					width: 117px;
+					height: 117px;
 					border-radius: 50%;
 					display: block;
 					margin: 5px auto $lg-space;
@@ -119,7 +119,6 @@
 	// Layout V2
 
 	&.bio-section-v2 {
-		background-color: #e2e7f5; // $light-blue;
 
 		.bio-slider {
 			.card {
@@ -128,7 +127,10 @@
 				width: 100%;
 
 				.bios {
-					background-color: #eef2fa;
+									background: rgba(0, 51, 161, 0.03);
+border: 1px solid #EAEAEA;
+box-sizing: border-box;
+border-radius: 20px;
 					border-radius: 20px;
 
 					.name-text {

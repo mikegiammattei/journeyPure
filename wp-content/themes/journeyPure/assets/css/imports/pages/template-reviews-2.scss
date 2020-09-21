@@ -23,9 +23,6 @@
 		@import "../page-parts/jp-above-fold";
 		@include jp-above-fold;
 
-		.background-fade {
-			background-color: rgba(255,255,255,.8);
-		}
 
 		.card-body {
 			padding: 0 1.25rem 45px;

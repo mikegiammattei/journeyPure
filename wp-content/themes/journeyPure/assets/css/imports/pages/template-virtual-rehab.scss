@@ -503,5 +503,8 @@
 		color: $main-gray;
 		margin-top:5px;
 		font-size: 26px;
+		a {
+			color: $main-gray !important;
+		}
 	}
 }

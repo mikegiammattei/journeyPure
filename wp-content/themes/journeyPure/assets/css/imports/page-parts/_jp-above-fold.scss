@@ -13,7 +13,7 @@
 	}
 
 	.background-fade {
-		background-color: #f7f7f7bd;
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0.48) 0%, #FFFFFF 91.58%) no-repeat center;
 		padding-top: 30px;
 
 		@media screen and (min-width: 768px) {
@@ -31,12 +31,12 @@
 	}
 
 	.heading-1 {
-		color: $light-blue;
+		color: $main-font;
 		font-size: 16px;
 		font-weight: 600;
 		letter-spacing: 0;
 		text-align: center;
-		margin-bottom: 5px;
+		margin-bottom: 10px;
 	}
 
 	hr {
@@ -72,7 +72,7 @@
 		}
 
 		@media (max-width: 800px) {
-			background-color: rgba(255, 255, 255, 0.3);
+			background-color: rgba(255, 255, 255, 0.2);
 			padding: 10px 0 30px;
 		}
 
@@ -111,7 +111,7 @@
 		}
 
 		.rating-section {
-			margin: -2px $md-space 0;
+			margin: 10px $md-space 0;
 
 			> .row > div {
 				@media (max-width: 767px) {

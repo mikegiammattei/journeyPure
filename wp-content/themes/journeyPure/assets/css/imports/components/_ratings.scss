@@ -1,11 +1,10 @@
 .ratings{
   &.default{
 	background: white;
-	padding: $md-space;
-	border-top: 8px solid $light-blue;
+	padding: $md-space $md-space $md-space 25px;
 	margin-bottom: 10px;
 	display: block;
-	border-radius: 0 0 2px 2px;
+	border-radius: 5px; 
 
 
 	&.lineup{
@@ -31,7 +30,6 @@
 		font-weight: 500;
 
 		&.sub{
-		  color: $main-gray;
 		  font-size: 13px;
 		}
 	  }
@@ -40,7 +38,7 @@
 	  }
 	  .text-value{
 		font-weight:500;
-		color:$main-gray;
+		color:$dark-yellow;
 	  }
 	}
   }

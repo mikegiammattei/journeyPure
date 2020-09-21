@@ -24,7 +24,7 @@
 								<a href="#" data-toggle="modal" data-target="#virtual-rehab-modal">
 									<i class="fas fa-laptop-medical"></i>
 									<h4>Talk to a Therapist Now Virutally</h4>
-									<p>40-minute session <del>$120</del> <b>$45 limited time</b></p>
+									<p>40-minute session <del>$120</del> <b>FREE limited time</b></p>
 								</a>
 							</div>
 

@@ -25,9 +25,12 @@ get_header();
 					<h1 class="jp-vr-masthead-title"><?php echo wp_kses_post( $virtual_rehab->masthead_title ); ?></h1>
 					<p class="jp-vr-masthead-subtitle"><?php echo esc_html( $virtual_rehab->masthead_subtitle ); ?></p>
 					<button type="button" data-toggle="modal" data-target="#virtual-rehab-modal" class="btn btn-secondary jp-vr-masthead-button"><span class="fas fa-comment"></span> Talk to a therapist now</button>
-					<p>40-minute session <del> $120 </del> <b>$45 limited time</b></p>
+					<p>40-minute session <del> $120 </del> <b>FREE limited time</b><br />
+					If you want more, insurance is accepted.
+					</p>
 					<div class="virtual-phone">—— OR ——</br>
-					Call for more information: (844) 505-4799</div>
+					Call for more information: (844) 505-4799
+					</div>
 				</div>
 
 				<div class="col-12 col-lg-5 order-lg-2 background-circle">
@@ -338,7 +341,7 @@ get_header();
 							<h5 class="jp-vr-cards-card-title">Support Meetings</h5>
 
 							<div class="jp-vr-cards-card-text">
-								<p>Free, online meetings run 24/7. They are a way to ensure you have somewhere to turn if you feel triggered at 3 AM. Get connected.</p>
+								<p>Weekly virtual Alumni meetings ensure you have somewhere to turn in between therapy or even years later. Stay connected.</p>
 							</div>
 						</div>
 					</div>
@@ -352,7 +355,7 @@ get_header();
 							<h5 class="jp-vr-cards-card-title">Life Coaching </h5>
 
 							<div class="jp-vr-cards-card-text">
-								<p>Your Accountability Coach helps you meet your goals. They've been there before and know what it takes to stay on track - available via text or calls.</p>
+								<p>Your Accountability Coach helps you meet your goals. They've been there  and know what it takes to stay on track - available via text or calls.</p>
 							</div>
 						</div>
 					</div>
@@ -360,10 +363,10 @@ get_header();
 					<div class="col-12 col-md-6 col-lg-4">
 						<div class="jp-vr-cards-card">
 							<div class="jp-vr-cards-card-image">
-								<i class="fas fa-book"></i>
+								<i class="fas fa-mobile"></i>
 							</div>
 
-							<h5 class="jp-vr-cards-card-title">Self-Help Course</h5>
+							<h5 class="jp-vr-cards-card-title">Phone App</h5>
 
 							<div class="jp-vr-cards-card-text">
 								<p>The JourneyPure app gives you personalized content and reminders that reward you with real gift cards for making healthy choices.</p>
@@ -519,7 +522,7 @@ get_header();
 
 						<div class="cta-process">
 							<button type="button" data-toggle="modal" data-target="#virtual-rehab-modal" class="btn btn-secondary jp-vr-process-button"><span class="fas fa-comment"></span> Talk to a therapist now</button>
-							<p>40-minute session <del> $120 </del> <b>$45 limited time</b></p>
+							<p>40-minute session <del> $120 </del> <b>FREE limited time</b></p>
 							<div class="virtual-phone">—— OR ——</br>
 					Call for more information:<br/>(844) 505-4799</div>
 						</div>
@@ -566,10 +569,8 @@ get_header();
 		<div class="container">
 			<h2 class="text-center">What now?</h2>
 
-<div class="row"><div class="col-2 text-center bottom-cta"></div><div class="col-4 text-center bottom-cta"> <button type="button" data-toggle="modal" data-target="#virtual-rehab-modal" class="btn btn-secondary jp-vr-process-button"><span class="fas fa-comment"></span> Talk to a therapist</button><p>40-minute session <del>$120</del> <b>$45 limited time</b></p> <small class="drop" data-toggle="modal" data-target="#virtual-rehab-modal">No commitment</small></div>
-<div class="col-4 text-center bottom-cta"> <a href="tel:8445054799"><button type="button" class="btn btn-secondary jp-vr-process-button"><span class="fas fa-phone"></span> Call (844) 505-4799</button></a><p>For more information </p> <small class="drop" data-toggle="modal" data-target="#virtual-rehab-modal" style="
-    display: none;
-">No commitment</small></div></div>
+<div class="row"><div class="d-none d-lg-block col-lg-2 text-center bottom-cta"></div><div class="col-6 col-lg-4 text-center bottom-cta"> <button type="button" data-toggle="modal" data-target="#virtual-rehab-modal" class="btn btn-secondary jp-vr-process-button"><span class="fas fa-comment"></span> Talk to a therapist</button><p>40-minute session <del>$120</del> <b>FREE limited time</b></p> <small class="drop" data-toggle="modal" data-target="#virtual-rehab-modal">No commitment</small></div>
+<div class="col-6 col-lg-4 text-center bottom-cta"> <a href="tel:8445054799"><button type="button" class="btn btn-secondary jp-vr-process-button"><span class="fas fa-phone"></span> Call (844) 505-4799</button></a><p>Get more information </p> <small class="drop" data-toggle="modal" data-target="#virtual-rehab-modal">In-Network with Insurance</small></div></div>
 		</div>
 	</section>
 
