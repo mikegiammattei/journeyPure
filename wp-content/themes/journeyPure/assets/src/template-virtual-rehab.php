@@ -24,9 +24,20 @@ get_header();
 				<div class="col-12 col-lg-7 order-lg-1">
 					<h1 class="jp-vr-masthead-title"><?php echo wp_kses_post( $virtual_rehab->masthead_title ); ?></h1>
 					<p class="jp-vr-masthead-subtitle"><?php echo esc_html( $virtual_rehab->masthead_subtitle ); ?></p>
-					<button type="button" data-toggle="modal" data-target="#virtual-rehab-modal" class="btn btn-secondary jp-vr-masthead-button"><span class="fas fa-comment"></span> Talk to a therapist now</button>
-					<p>40-minute session <del> $120 </del> <b>FREE limited time</b><br />
-					If you want more, insurance is accepted.
+					
+					
+					
+					<!-- Calendly link widget begin -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+<a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/journeypurevirtualrehab/initial-session?hide_event_type_details=1&text_color=000e2c&primary_color=0033a1'});return false;"><button type="button" class="btn btn-secondary jp-vr-masthead-button"><span class="fas fa-comment"></span> Talk to a therapist now</button></a>
+<!-- Calendly link widget end -->
+					
+					
+					
+					
+					<p>40-minute session — <b>FREE limited time</b><br />
+					If you want more, <i>insurance is accepted</i>.
 					</p>
 					<div class="virtual-phone">—— OR ——</br>
 					Call for more information: (844) 505-4799
@@ -521,8 +532,11 @@ get_header();
 						</div>
 
 						<div class="cta-process">
-							<button type="button" data-toggle="modal" data-target="#virtual-rehab-modal" class="btn btn-secondary jp-vr-process-button"><span class="fas fa-comment"></span> Talk to a therapist now</button>
-							<p>40-minute session <del> $120 </del> <b>FREE limited time</b></p>
+					<!-- Calendly link widget begin -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+<a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/journeypurevirtualrehab/initial-session?hide_event_type_details=1&text_color=000e2c&primary_color=0033a1'});return false;"><button type="button" class="btn btn-secondary jp-vr-masthead-button"><span class="fas fa-comment"></span> Talk to a therapist now</button></a>
+<!-- Calendly link widget end -->							<p>40-minute session — <b>FREE limited time</b></p>
 							<div class="virtual-phone">—— OR ——</br>
 					Call for more information:<br/>(844) 505-4799</div>
 						</div>
@@ -569,7 +583,13 @@ get_header();
 		<div class="container">
 			<h2 class="text-center">What now?</h2>
 
-<div class="row"><div class="d-none d-lg-block col-lg-2 text-center bottom-cta"></div><div class="col-6 col-lg-4 text-center bottom-cta"> <button type="button" data-toggle="modal" data-target="#virtual-rehab-modal" class="btn btn-secondary jp-vr-process-button"><span class="fas fa-comment"></span> Talk to a therapist</button><p>40-minute session <del>$120</del> <b>FREE limited time</b></p> <small class="drop" data-toggle="modal" data-target="#virtual-rehab-modal">No commitment</small></div>
+<div class="row"><div class="d-none d-lg-block col-lg-2 text-center bottom-cta"></div><div class="col-6 col-lg-4 text-center bottom-cta"> 
+					<!-- Calendly link widget begin -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+<a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/journeypurevirtualrehab/initial-session?hide_event_type_details=1&text_color=000e2c&primary_color=0033a1'});return false;"><button type="button" class="btn btn-secondary jp-vr-masthead-button"><span class="fas fa-comment"></span> Talk to a therapist</button></a>
+<!-- Calendly link widget end -->
+<p>40-minute session — <b>FREE limited time</b></p> <small class="drop" data-toggle="modal" data-target="#virtual-rehab-modal">No commitment</small></div>
 <div class="col-6 col-lg-4 text-center bottom-cta"> <a href="tel:8445054799"><button type="button" class="btn btn-secondary jp-vr-process-button"><span class="fas fa-phone"></span> Call (844) 505-4799</button></a><p>Get more information </p> <small class="drop" data-toggle="modal" data-target="#virtual-rehab-modal">In-Network with Insurance</small></div></div>
 		</div>
 	</section>

@@ -60,8 +60,9 @@
 			}
 
 			span {
-				color: #00389f;
+				color: $primary;
 				font-weight: 800;
+				font-size:50px;
 			}
 		}
 
@@ -506,5 +507,8 @@
 		a {
 			color: $main-gray !important;
 		}
+	}
+	.calendly-popup {
+		max-height:0;
 	}
 }

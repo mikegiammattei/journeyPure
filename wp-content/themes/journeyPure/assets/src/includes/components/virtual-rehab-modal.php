@@ -10,7 +10,10 @@
 			</div>
 
 			<div class="modal-body">
-				<iframe class="iframe-to-load" data-url-value="https://www.timetap.com/embed/journeypure" frameborder="0" width="840" height="500"></iframe>
+				<!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/journeypurevirtualrehab/initial-session?hide_event_type_details=1&text_color=000e2c&primary_color=0033a1" style="min-width:320px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+<!-- Calendly inline widget end -->
 			</div>
 		</div>
 	</div>
