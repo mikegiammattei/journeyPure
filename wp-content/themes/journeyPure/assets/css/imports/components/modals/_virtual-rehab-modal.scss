@@ -5,6 +5,10 @@
  * @package  JourneyPure
  */
 
+.calendly-overlay {
+	z-index: 2147483000 !important; // Bigger than CTA
+}
+
 .modal.virtual-rehab-modal {
 	z-index: 2147483000; // Bigger than CTA
 
